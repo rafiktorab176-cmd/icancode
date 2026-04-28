@@ -1,57 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span class="badge">Student Project</span>
+        <h1>RaFik Torab</h1>
+      </header>
 
-<header class="main-section">
-<h1> Rafik Torab </h1>
-<p>  Engineer Programming Software</p>
-<div class="image-placeholder">
-<img src="تنزيل.jpg" alt="Profile Picture" width="200">
-</div>
-</header>
-<section class="main-section">
-<h2>about me</h2>
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. , temporibus labore quis.</p>
-</section>
-<table border="1">
-<tr>
-<th>skill</th>
-<th>level</th>
-</tr>
-<tr>
-<td>html/css</td>
-<td>intermediate</td>
-</tr>
-<tr>
-<td>c++</td>
-<td>advanced</td>
-</tr>
-</table>
-<section>
-<section class="main-section">
-<h2>contact me</h2>
-<form>
-<input type=" text" placeholder="Email">
-<br>
-<input type="password" placeholder="password">
-<br>
-<button type="submit">sign in</button>
-</form>
-<section/>
+      <div class="profil-img container">
+        <img src="im.jpg" alt="profile image" class="profile-img" />
+      </div>
 
-<section>
-<h2>connect with me</h2>
-<ul>    
-<li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a></li>
-<li><a href="https://www.w3schools.com/css/css_background.asp" target="_blank">CSS</a></li>
-<li><a href="https://www.w3schools.com/java/default.asp" target="_blank">Java</a></li>
-</ul>
-</section>
-</body>
+      <hr />
+      <section class="about">
+        <h2>About Me</h2>
+        <p>
+          Welcome to my web project! I am a student working on this exciting
+          endeavor.
+        </p>
+      </section>
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <table>
+            <tr>
+              <th>Language</th>
+              <th>Expertise</th>
+            </tr>
+          </td>
+          <tbody>
+            <tr>
+              <td>HTML / CSS</td>
+              <td>Intermediate</td>
+            </tr>
+            <tr>
+              <td>C++ / Algorithmic</td>
+              <td>advanced</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="links">
+        <h2>Find Me Online</h2>
+        <ul>
+          <li><a href="https://github.com" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section class="connect">
+        <h2>Get in Touch</h2>
+        <form action="">
+          <input type="text" placeholder="Your Name" required />
+          <br>
+          <input type="email" placeholder="your email address" required />
+          <br>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </body>
 </html>
