@@ -3,59 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bebas Neue</title>
+    <title>FIXED BRO -صيانه معتمدة</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="s.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="profile header">
-        <div class="avatar-circle">
-          <img src="avatar.webp" alt="avatar.webp" />
+    <header class="dark-header">
+      <div class="logo container">
+        <i class="fas fa-tools logo-icon"></i>
+        <span class="logo-text">FIXED BRO</span>
+      </div>
+      <p class="tagline">Trusted maintenance experts in your area</p>
+    </header>
+    <section class="gallery">
+      <div class="container gallery-flex">
+        <div class="image-box">
+          <img src="rafik.jpg" alt="Image 1" />
         </div>
-        <h1>FONT USED: BEBAS NEUA</h1>
-        <p class="subtitle">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-          molestias modi, esse corrupti cum debitis consequuntur voluptate
-          deserunt dolorum, nisi sequi maiores! Nihil vero odit nostrum
-          assumenda molestiae? Voluptatibus, laudantium.
-        </p>
+        <div class="image-box">
+          <img src="rafik.jpg" alt="Image 2" />
+        </div>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>LOREM</th>
-            <th>IPSUM</th>
-            <th>DOLOR</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Sit amet</td>
-            <td>Consectetur</td>
-            <td>Adipiscing</td>
-          </tr>
-          <tr>
-            <td>Elit sed</td>
-            <td>Do eiusmod</td>
-            <td>Tempor</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="main-image">
-        <img src="90.jpg" alt="car image" />
+    </section>
+    <section class="rates">
+      <div class="container">
+        <h2 class="section-title">OUR Services Rates</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Service Type</th>
+                <th>Inspection Fee</th>
+                <th>Labor (per hr)</th>
+                <th>Parts Warranty</th>
+                <th>Turnaround Time</th>
+                <th>Express Option</th>
+                <th>Home Service</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Phone Repair</td>
+                <td>$20</td>
+                <td>$45</td>
+                <td>90 Days</td>
+                <td>1-2 Days</td>
+                <td>Available</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Laptop Repair</td>
+                <td>$40</td>
+                <td>$65</td>
+                <td>180 Days</td>
+                <td>3-5 Days</td>
+                <td>Available</td>
+                <td>No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="contact section">
-        <h3>Contact Lorem</h3>
-        <form>
-          <input type="text" placeholder="lorem name" />
-          <textarea placeholder="ipsum message content..."></textarea>
-          <button type="submit">submit lorem</button>
+    </section>
+    <section class="contact-form">
+      <div class="container">
+        <h2 class="section-title">send Us a Message</h2>
+        <form class="message-form">
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" placeholder="Enter your name" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" placeholder="Enter your email" required />
+          </div>
+          <div class="input-group">
+            <label for="issue description">Issue Description</label>
+            <textarea
+              placeholder="Describe the problem..."
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-submit">submit request</button>
         </form>
       </div>
-    </div>
+    </section>
+    <footer>
+      <p>@ 2026 FixIt Pro Maintenance. All rights reserved.</p>
+    </footer>
   </body>
 </html>
