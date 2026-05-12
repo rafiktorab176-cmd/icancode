@@ -1,0 +1,41 @@
+body {
+  background-image: linear-gradient(to left, pink, purple);
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  margin: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 100px;
+  color: white;
+  text-shadow: 5px 5px 10px black;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 20px;
+}
+h1:hover {
+  transform: scale(2.2);
+}
+p {
+  font-size: medium;
+  color: white;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.button {
+  border: 3px white solid;
+  color: white;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 30px 45px;
+}
+.button:hover {
+  background-color: white;
+  transform: scale(1.1);
+  color: purple;
+}
