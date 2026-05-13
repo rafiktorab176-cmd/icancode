@@ -4,8 +4,7 @@ body {
   height: 100vh;
   margin: 0px;
   align-items: center;
-  display: flex;
-  flex-direction: column;
+ 
 }
 h1 {
   font-size: 100px;
@@ -33,6 +32,9 @@ p {
   cursor: pointer;
   transition: 0.3s ease;
   padding: 30px 45px;
+  display:block;
+  margin-left:auto;
+  margin-raight:auto;
 }
 .button:hover {
   background-color: white;
