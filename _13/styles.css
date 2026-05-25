@@ -76,7 +76,6 @@ section {
   align-items: flex-start;
   text-align: center;
   width: 100%;
-  direction: rtl;
 }
 .header h1 {
   font-weight: 700;
@@ -100,7 +99,7 @@ section {
 .container img {
   max-width: 500px;
   height: auto;
-  display: block;
+
 }
 .button {
   background-color: green;
