@@ -34,14 +34,14 @@
 .nav-links li a:hover {
   color: #000000;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .navbar {
     flex-direction: column;
     padding: 15px 20px;
   }
 
   .nav-links {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 15px;
   }
 }
