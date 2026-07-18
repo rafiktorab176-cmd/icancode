@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>DOM Workshop - Completed Solution</title>
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 20px;
+                background: #fafafa;
+            }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                display: flex;
+                gap: 20px;
+            }
+
+            /* Simple Form Layout */
+            form {
+                flex: 1;
+                background: white;
+                padding: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: fit-content;
+            }
+            .form-group {
+                margin-bottom: 12px;
+            }
+            label {
+                display: block;
+                margin-bottom: 4px;
+                font-weight: bold;
+                font-size: 0.9rem;
+            }
+            input,
+            textarea {
+                width: 100%;
+                padding: 6px;
+                box-sizing: border-box;
+            }
+            button {
+                width: 100%;
+                padding: 8px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Form Side -->
+            <form id="item-form">
+                <h2 id="form-heading">Add Item</h2>
+                <input type="hidden" id="edit-id" />
+                <!-- extract -->
+                <div class="form-group">
+                    <label for="item-name">Name</label>
+                    <input type="text" id="item-name" required />
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="url" id="item-image" required />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="item-desc" rows="3" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Save</button>
+            </form>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
