@@ -14,16 +14,24 @@
     <title>RaFik-Service</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav class="nav">
       <div class="logo-container">
         <img src="./assets/raf.jpg" width="60" alt="" />
       </div>
-      <div class="links-container">
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="links-container" id="links-container">
         <ul class="links">
           <li><a href="" class="active"> الرئيسية</a></li>
           <li><a href="">من نحن </a></li>
           <li class="dropdown">
-            <a href="">خدماتنا</a>
+            <a>خدماتنا</a>
             <ul class="dropdown-menu">
               <li>صيانه الاجهزه المنزليه</li>
               <li>قطع الغيار</li>
@@ -35,13 +43,18 @@
         </ul>
       </div>
     </nav>
+    <!-- END NAVBAR -->
+
+    <!-- CALL US FIXED BUTTON -->
+
     <button class="call-us">
-      <img src="./assets/phone.png" alt="phone icon" />
+      <a href="tel:19580">
+        <img src="./assets/phone.png" alt="phone icon" />
+      </a>
     </button>
 
-    <a href="tel:01010672799" class="fixed-contact-link phone-link">
-      <i class="fas fa-phone-alt"></i>
-    </a>
+    <!-- END CALL US FIXED BUTTON -->
+    <!-- WHATSAPP FIXED BUTTON -->
     <a
       href="https://wa.me/201095095090"
       class="fixed-contact-link whatsapp-link"
@@ -49,6 +62,8 @@
     >
       <img src="./assets/apple.png" alt="WhatsApp" />
     </a>
+    <!-- END WHATSAPP FIXED BUTTON -->
+
     <section class="hero-section">
       <div class="hero-section-img">
         <img src="./assets/mo.jpg" alt="photo-hero section" />
@@ -67,6 +82,7 @@
         </div>
       </div>
     </section>
+
     <section class="main-section">
       <div class="flex-container">
         <div class="main-card">
@@ -106,8 +122,239 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2>خدماتنا المتكاملة</h2>
+    <!-- SERVICES SECTION -->
+    <section class="services-section">
+      <div class="services-container">
+        <h2 class="services-main-title">خدماتنا المتكاملة</h2>
+
+        <div class="services-grid">
+          <!-- الكارد الأول: صيانة تلاجات -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card1.jpg" alt="صيانة تلاجات" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة تلاجات</h3>
+              <p class="service-desc">
+                نصلح أعطال الثلاجات بسرعة فائقة مع فنيين محترفين وتوفير قطع غيار
+                أصلية وضمان ممتد.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد الثاني: صيانة غسالات الملابس -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card2.jpg" alt="صيانة غسالات الملابس" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة غسالات الملابس</h3>
+              <p class="service-desc">
+                خدمة صيانة غسالات الملابس بجميع أنواعها، إصلاح فوري في المنزل
+                باستخدام قطع غيار أصلية وضمان شامل.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد الثالث: صيانة غسالات الأطباق -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card4.jpg" alt="صيانة غسالات الأطباق" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة غسالات الأطباق</h3>
+              <p class="service-desc">
+                إصلاح جميع أعطال غسالات الصحون بسرعة وكفاءة في منزلك، مع توفير
+                قطع غيار أصلية وضمان رسمي.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد الرابع: صيانة ديب فريزر -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card3.jpg" alt="صيانة ديب فريزر" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة ديب فريزر</h3>
+              <p class="service-desc">
+                خدمة صيانة الديب فريزر المنزلية والعمودية، حلول فورية للأعطال
+                وضمان على جميع قطع الغيار.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد الخامس: صيانة شاشات -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card6.jpg" alt="صيانة شاشات" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة شاشات التلفزيون</h3>
+              <p class="service-desc">
+                فريق متخصص لصيانة شاشات التلفزيون LED وLCD، بجميع المقاسات
+                والماركات، مع توفير الضمان والدقة في الإصلاح.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد السادس: صيانة الميكرويف -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card5.jpg" alt="صيانة الميكرويف" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة الميكرويف</h3>
+              <p class="service-desc">
+                نُصلح أعطال الميكروويف بجميع أنواعه في المنزل، مع ضمان شامل
+                وسرعة في التنفيذ.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد السابع: صيانة المجفف -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card7.jpg" alt="صيانة الدراير(المجفف)" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة الدراير (المجفف)</h3>
+              <p class="service-desc">
+                نقدم صيانة احترافية لمجففات الملابس بجميع الماركات، مع مهندسين
+                معتمدين وضمان على الخدمة وقطع الغيار الأصلية.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+
+          <!-- الكارد الثامن: صيانة التكيفات -->
+          <div class="service-card">
+            <div class="service-img-wrapper">
+              <img src="./assets/card8jpg.jpg" alt="صيانة التكيفات" />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">صيانة التكيفات</h3>
+              <p class="service-desc">
+                فحص وصيانة أجهزة التكييف بأحدث التقنيات، مع تعبئة فريون وضمان
+                تشغيل مثالي صيفاً وشتاءً.
+              </p>
+              <a href="#" class="service-btn">
+                <span>طلب الخدمة</span>
+                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="textservice">
+        كل خدمة تشمل تشخيصاً دقيقاً للأعطال، استبدال القطع التالفة بقطع أصلية،
+        وضبط الجهاز ليعمل بكفاءة عالية مجدداً.
+      </p>
+    </section>
+    <!-- END SERVICES SECTION -->
+    <!-- WHY CHOOSE US SECTION -->
+    <section class="why-us-section">
+      <div class="why-us-container">
+        <!-- الجانب الأيمن: النصوص والكروت -->
+        <div class="why-us-content">
+          <div class="why-us-header">
+            <div class="why-us-badge">
+              <img src="./assets/development.png" alt="مميزاتنا" />
+              <span>مميزاتنا</span>
+            </div>
+            <h2 class="why-us-title">لماذا تختارون رفيق للصيانة ؟  </h2>
+          </div>
+
+          <!-- شبكة الكروت -->
+          <div class="why-us-grid">
+            <!-- الصف الأول: 3 كروت -->
+            <div class="why-card">
+              <div class="why-card-icon">
+                <img src="./assets/car.png" alt="" />
+              </div>
+              <h3>صيانة فورية في جميع المحافظات</h3>
+              <p>
+                فريقنا موزع في كافة أنحاء مصر لتقديم خدمة عاجلة تصل إليكم خلال
+                ساعات قليلة من الاتصال.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card-icon">
+                <img src="./assets/electrician.png" alt="" />
+              </div>
+              <h3>مهندسين معتمدون وضمان قطع أصلية</h3>
+              <p>
+                نضمن لكم العمل مع أفضل الخبراء واستبدال القطع التالفة بقطع غيار
+                أصلية مع شهادة ضمان.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card-icon">
+                <img src="./assets/24-hours.png" alt="" />
+              </div>
+              <h3>دعم فني على مدار الساعة</h3>
+              <p>
+                متواجدون للاستشارات الفنية وحجز مواعيد الصيانة على مدار 24 ساعة.
+              </p>
+            </div>
+
+            <!-- الصف الثاني: كاردين عراض (نصف ونصف) -->
+            <div class="why-card why-card-bottom">
+              <div class="why-card-icon">
+                <img src="./assets/quality-service.png" alt="" />
+              </div>
+              <h3>تغطية شاملة لجميع الماركات</h3>
+              <p>
+                نتمتع بخبرة واسعة في صيانة أجهزة جميع الماركات العالمية مثل
+                سامسونج، إل جي، بيكو، وايت ويل، توشيبا، زانوسي، وغيرها.
+              </p>
+            </div>
+
+            <div class="why-card why-card-bottom">
+              <div class="why-card-icon">
+                <img src="./assets/home-repair.png" alt="" />
+              </div>
+              <h3>الراحة في منزلكم</h3>
+              <p>لا حاجة لنقل الأجهزة؛ نخدمكم في المنزل بكل احترافية وسرعة.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- الجانب الأيسر: الصورة (موجودة بعد المحتوى في الـ HTML لتظهر على اليسار مع الـ RTL) -->
+        <div class="why-us-image-wrapper">
+          <img src="./assets/why.webp" alt="صيانة رفيق" />
+        </div>
+      </div>
     </section>
   </body>
+  <script src="script.js"></script>
 </html>

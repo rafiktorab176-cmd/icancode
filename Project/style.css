@@ -7,6 +7,7 @@
 
 /* #0d2644 */
 /* #69727d */
+
 body {
   background-color: #ffffff;
   position: relative;
@@ -18,7 +19,8 @@ body {
   background: #ffffff;
   color: #49b1ea;
   display: flex;
-  position: relative;
+  /* position: relative; */
+  position: fixed;
   top: 0px;
   width: 100%;
   /* gap: 20px; */
@@ -69,6 +71,80 @@ body {
   border-radius: 8px;
 }
 
+/* --- HAMBURGER BUTTON STYLES --- */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  z-index: 11;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #023b5a;
+  transition: 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger to 'X' animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.links-container {
+  transition: all 0.3s ease;
+}
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 1100px) {
+  .nav {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo-container {
+    position: static;
+    transform: none;
+  }
+
+  .hamburger {
+    display: flex; /* Show on mobile */
+  }
+
+  .links-container {
+    display: none; /* Hide menu by default on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 1); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #5780a9 50%, #c4ab98 100%);
+  }
+
+  .links-container.active {
+    display: block; /* Show menu when toggled */
+  }
+
+  .links {
+    flex-direction: column;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --- END HAMBURGER BUTTON STYLES --- */
+
 /* DROPDOWN MENU IN NAVBAR */
 .dropdown {
   position: relative;
@@ -89,24 +165,6 @@ body {
   display: block;
   color: #0d5ec7;
 }
-@media (max-width: 768px) {
-  .links {
-    flex-direction: column;
-    /* gab: 10px; */
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-  }
-  .logo-container {
-    position: static;
-    transform: none;
-    margin-bottom: 10px;
-  }
-  .logo-container img {
-    height: 45px;
-    width: 45px;
-  }
-}
 
 /* FIXED CALL US BUTTON */
 
@@ -121,18 +179,22 @@ body {
   font-size: 15px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  color: #ffffff;
+
   transition: all 0.3s ease;
   border: none;
+  a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #ffffff;
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+  }
 }
-.call-us img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
+
 .call-us:hover {
   background-color: #24a62f;
   transform: scale(1.05);
@@ -175,9 +237,12 @@ body {
     height: 40px;
   }
 }
+
+/* HERO SECTION */
 .hero-section {
   position: relative;
-  min-height: 85vh;
+  min-height: 92vh;
+  margin-top: 8vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -368,4 +433,294 @@ h2 {
   color: #184c8f;
   font-weight: 600;
   font-size: 2.26rem;
+}
+/* ==================== SERVICES SECTION STYLES ==================== */
+
+.services-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f0f1f5 55%, #9eacb4 100%);
+  direction: rtl;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-main-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #184c8f;
+  font-weight: 700;
+  font-size: 2.26rem;
+  margin-bottom: 45px;
+}
+
+/* التقسيم: 4 كروت في السطر على الشاشات الكبيرة */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* تصميم الكارد */
+.service-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e1e8ed;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #75c1de;
+  box-shadow: 0 10px 22px rgba(11, 76, 102, 0.12);
+}
+
+/* حاوية صورة الكارد */
+.service-img-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f1f3f9;
+}
+
+.service-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* محتوى الكارد النصي */
+.service-content {
+  padding: 20px 18px 25px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.service-title {
+  font-size: 1.15rem;
+  color: #184c8f;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-size: 0.9rem;
+  color: #1f1e1e;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* زر طلب الخدمة */
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #1b477a;
+  color: #ffffff;
+  padding: 9px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+  background-color: #126ca0;
+  transform: scale(1.03);
+}
+
+/* صورة الأيقونة داخل الزرار */
+.service-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.service-btn:hover img {
+  transform: translateX(-3px);
+}
+
+/* تجاوب الشاشات */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.textservice {
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto 20px auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #091a21;
+}
+/* ==================== WHY CHOOSE US SECTION ==================== */
+
+.why-us-section {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #0d5c75; 
+}
+
+.why-us-container {
+  display: flex;
+  gap: 40px;
+   margin: 0 auto;
+  align-items: stretch;
+  max-width: 1500px;
+}
+
+/* القسم الأيمن (الكروت والنصوص) */
+.why-us-content {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-us-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  /* font-size: xx-small; */
+}
+
+.why-us-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.why-us-badge img {
+  width: 25px;
+  height:25px;
+}
+
+.why-us-title {
+  color: #ffffff;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* شبكة الكروت بـ CSS Grid لتوزيع 6 أعمدة متساوية */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+.why-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  grid-column: span 2;
+}
+.why-card:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+.why-card.why-card-bottom {
+  grid-column: span 3;
+}
+
+.why-card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.why-card h3 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.why-card p {
+  color: #8fc8e7;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.why-us-image-wrapper {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.why-us-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .why-us-container {
+    flex-direction: column;
+  }
+  .why-us-image-wrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-card,
+  .why-card.why-card-bottom {
+    grid-column: span 1;
+  }
 }
