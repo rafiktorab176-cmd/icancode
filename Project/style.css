@@ -589,13 +589,13 @@ h2 {
 .why-us-section {
   width: 100%;
   padding: 50px 20px;
-  background-color: #0d5c75; 
+  background-color: #0d5c75;
 }
 
 .why-us-container {
   display: flex;
   gap: 40px;
-   margin: 0 auto;
+  margin: 0 auto;
   align-items: stretch;
   max-width: 1500px;
 }
@@ -629,7 +629,7 @@ h2 {
 
 .why-us-badge img {
   width: 25px;
-  height:25px;
+  height: 25px;
 }
 
 .why-us-title {
