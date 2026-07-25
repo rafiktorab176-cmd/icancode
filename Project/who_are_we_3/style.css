@@ -244,508 +244,289 @@ body {
     height: 40px;
   }
 }
-
-/* HERO SECTION */
-.hero-section {
-  position: relative;
-  min-height: 92vh;
-  margin-top: 8vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  direction: rtl;
-  padding: 40px 60px;
-  overflow: hidden;
-}
-.hero-section-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.hero-section-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.57) 35%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-}
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3;
-}
-.hero-content {
-  max-width: 650px;
-  color: #ffffff;
-}
-.hero-text {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  line-height: 1.4;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-.hero-content p {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #e5e5e5;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-.btn-hero {
-  background-color: #133874;
-  color: #ffffff;
-  padding: 10px 30px;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.btn-hero:hover {
-  background-color: #126ca0;
-}
-@media (max-width: 768px) {
-  .hero-section {
-    justify-content: center;
-    padding: 30px 20px;
-  }
-  .hero-content {
-    text-align: center;
-    .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.65);
-    }
-    .hero-text {
-      font-size: 2.2rem;
-    }
-    .hero-content p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-  }
-}
-.main-section {
-  width: 100%;
-  padding: 40px 0;
-  background-color: #ffffff;
-  direction: rtl;
-}
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 20px;
-  width: 100%;
-  max-width: 90%;
-  margin: 0 auto;
+/* ==========================================
+   1. التنسيقات العامة (General Styles)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-.main-card {
-  background: linear-gradient(to bottom, #f1f3f9 55%, #1591d4 100%);
-  border: 1px solid #0b4c66;
-  border-radius: 24px;
-  flex: 1;
-  padding: 35px 15px 25px 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 3px 10px rgba(11, 76, 102, 0.02);
-  box-sizing: border-box;
-}
-.card-icon-placeholder {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.card-icon-placeholder img,
-.card-icon-placeholder i {
-  width: 100%;
-  height: 100%;
-  font-size: 36px;
-  color: #0a394c;
-  object-fit: contain;
-}
-.main-card h3 {
-  font-size: 16.5px;
-  color: #151414;
-  font-weight: 700;
-  margin-bottom: 12px;
-  line-height: 1.9;
-}
-.main-card p {
-  font-size: 14.5px;
-  color: #151414;
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
   line-height: 1.6;
-  font-weight: bold;
-  /* margin: 0; */
 }
-.main-card {
-  transition: all 0.3s ease-in-out;
-}
-.main-card:hover {
-  transform: translateY(-8px);
-  border-color: #75c1de;
-  box-shadow: 0 10px 20px rgba(18, 18, 18, 0.12);
-  cursor: pointer;
-}
-.main-card:hover .card-icon-placeholder img,
-.main-card:hover .card-icon-placeholder i {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-@media (max-width: 992px) {
-  .flex-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 95%;
-  }
-  .main-card {
-    flex: unset;
-    width: 45%;
-  }
-}
-@media (max-width: 576px) {
-  .main-card {
-    width: 100%;
-  }
-}
-h2 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #184c8f;
-  font-weight: 600;
-  font-size: 2.26rem;
-}
-/* ==================== SERVICES SECTION STYLES ==================== */
 
-.services-section {
-  width: 100%;
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #f0f1f5 55%, #9eacb4 100%);
+/* ==========================================
+   2. قسم المدونة (Blog Section)
+   ========================================== */
+.blog-section {
+  padding: 40px 20px 60px;
   direction: rtl;
+  margin-top: 70px;
 }
 
-.services-container {
-  width: 100%;
+.blog-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.services-main-title {
-  display: flex;
-  justify-content: center;
+/* الهيدر والعنوان */
+.blog-header {
   text-align: center;
-  color: #184c8f;
-  font-weight: 700;
-  font-size: 2.26rem;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
-/* التقسيم: 4 كروت في السطر على الشاشات الكبيرة */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-/* تصميم الكارد */
-.service-card {
-  background-color: #ffffff;
+.blog-header .section-tag {
+  color: #0b4553;
+  font-weight: bold;
+  font-size: 0.95rem;
+  background-color: #e0f2fe;
+  padding: 6px 18px;
   border-radius: 20px;
-  border: 1px solid #e1e8ed;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: #75c1de;
-  box-shadow: 0 10px 22px rgba(11, 76, 102, 0.12);
-}
-
-/* حاوية صورة الكارد */
-.service-img-wrapper {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  background-color: #f1f3f9;
-}
-
-.service-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-.service-card:hover .service-img-wrapper img {
-  transform: scale(1.05);
-}
-
-/* محتوى الكارد النصي */
-.service-content {
-  padding: 20px 18px 25px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.service-title {
-  font-size: 1.15rem;
-  color: #184c8f;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.service-desc {
-  font-size: 0.9rem;
-  color: #1f1e1e;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  flex-grow: 1;
-}
-
-/* زر طلب الخدمة */
-.service-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: #1b477a;
-  color: #ffffff;
-  padding: 9px 22px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.service-btn:hover {
-  background-color: #126ca0;
-  transform: scale(1.03);
-}
-
-/* صورة الأيقونة داخل الزرار */
-.service-btn img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.3s ease;
-  color: white;
-}
-
-.service-btn:hover img {
-  transform: translateX(-3px);
-}
-
-/* تجاوب الشاشات */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.textservice {
-  text-align: center;
-  max-width: 800px;
-  margin: 50px auto 20px auto;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.8;
-  color: #091a21;
-}
-/* ========================================================= */
-/* ==================== WHY CHOOSE US SECTION ==================== */
-/* ========================================================= */
-
-.why-us-section {
-  width: 100%;
-  padding: 50px 20px;
-  background-color: #0d5c75;
-}
-
-.why-us-container {
-  display: flex;
-  gap: 40px;
-  margin: 0 auto;
-  align-items: stretch;
-  max-width: 1500px;
-}
-
-/* القسم الأيمن (الكروت والنصوص) */
-.why-us-content {
-  flex: 1.4;
-  display: flex;
-  flex-direction: column;
-}
-
-.why-us-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 25px;
-  /* font-size: xx-small; */
-}
-
-.why-us-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 1.3rem;
+.blog-header h2 {
+  color: #0f172a;
+  font-size: 2.2rem;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
-.why-us-badge img {
-  width: 25px;
-  height: 25px;
+.blog-header p {
+  color: #64748b;
+  font-size: 1.05rem;
 }
 
-.why-us-title {
-  color: #ffffff;
-  font-size: 2.1rem;
-  font-weight: 800;
-  margin: 0;
-}
-
-/* شبكة الكروت بـ CSS Grid لتوزيع 6 أعمدة متساوية */
-.why-us-grid {
+/* شبكة الكروت (Grid System) */
+.blog-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
 }
-.why-card {
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  padding: 20px 15px;
+
+/* ==========================================
+   3. كارت المقال وتأثيرات الهوفر (Blog Card)
+   ========================================== */
+.blog-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: all 0.3s ease;
-  grid-column: span 2;
-}
-.why-card:hover {
-  background-color: rgba(255, 255, 255, 0.14);
-}
-.why-card.why-card-bottom {
-  grid-column: span 3;
 }
 
-.why-card-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* تأثير الهوفر على الكارت */
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(11, 69, 83, 0.12);
+  border-color: #cbd5e1;
 }
 
-.why-card-icon img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.why-card h3 {
-  color: #ffffff;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  line-height: 1.3;
-}
-
-.why-card p {
-  color: #8fc8e7;
-  font-size: 0.82rem;
-  line-height: 1.5;
-}
-
-.why-us-image-wrapper {
-  flex: 1;
-  border-radius: 20px;
+/* منطقة الصورة */
+.card-image {
+  position: relative;
+  height: 200px;
   overflow: hidden;
 }
 
-.why-us-image-wrapper img {
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.6s ease;
 }
 
-@media (max-width: 1024px) {
-  .why-us-container {
-    flex-direction: column;
-  }
-  .why-us-image-wrapper {
-    height: 350px;
-  }
+/* تكبير الصورة عند الهوفر */
+.blog-card:hover .card-image img {
+  transform: scale(1.08);
 }
 
-@media (max-width: 768px) {
-  .why-us-grid {
-    grid-template-columns: 1fr;
-  }
-  .why-card,
-  .why-card.why-card-bottom {
-    grid-column: span 1;
-  }
+/* الشارة فوق الصورة */
+.card-image .badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #0b4553;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-.disclaimer {
-  text-align: center;
-  background-color: #2a5360;
-  /* border-radius: 20px; */
-  padding: 3vh 0px;
-  font-size: 1.5rem;
+
+/* تفاصيل النص */
+.card-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.card-content h3 {
+  color: #1e293b;
+  font-size: 1.15rem;
   font-weight: 700;
-  line-height: 1.8;
-  color: #fbf7f7;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
+
+.blog-card:hover .card-content h3 {
+  color: #0b4553;
+}
+
+.card-content p {
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* زر قراءة المقال */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #0b4553;
+  font-weight: bold;
+  font-size: 0.92rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .read-more-btn {
+  color: #0284c7;
+}
+
+.blog-card:hover .read-more-btn i {
+  transform: translateX(-6px);
+}
+
+/* ==========================================
+   4. النافذة المنبثقة (Modal Pop-up)
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(5px);
+  display: none; /* مخفية افتراضياً */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  padding: 35px 30px;
+  position: relative;
+  direction: rtl;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: modalFade 0.3s ease-out;
+}
+
+@keyframes modalFade {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+/* تنسيق المحتوى داخل النافذة المنبثقة */
+#modalBody h2 {
+  color: #0b4553;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+#modalBody h3 {
+  color: #1e293b;
+  margin: 20px 0 10px;
+  font-size: 1.15rem;
+}
+
+#modalBody p {
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  font-size: 0.98rem;
+}
+
+#modalBody ul {
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+#modalBody li {
+  margin-bottom: 8px;
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* تجاوب الشاشات الصغيره */
 @media (max-width: 768px) {
-  .disclaimer {
-    font-size: 0.7rem;
+  .blog-header h2 {
+    font-size: 1.7rem;
+  }
+  .modal-content {
+    padding: 25px 20px;
   }
 }
 /* تنسيقات الفوتر العامة */

@@ -244,102 +244,98 @@ body {
     height: 40px;
   }
 }
-
-/* HERO SECTION */
-.hero-section {
-  position: relative;
-  min-height: 92vh;
-  margin-top: 8vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+/* ==========================================
+   قسم عن الشركة - About Section
+   ========================================== */
+.about-section {
+  padding: 40px 20px;
+  background-color: #7daedc;
   direction: rtl;
-  padding: 40px 60px;
-  overflow: hidden;
 }
-.hero-section-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.hero-section-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.57) 35%,
-    rgba(0, 0, 0, 0.25) 100%
-  );
-}
-.container {
-  width: 100%;
+
+.about-container {
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 3;
+  background-color: #e5e9f0;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
-.hero-content {
-  max-width: 650px;
-  color: #ffffff;
+
+/* عمود المحتوى */
+.about-content {
+  flex: 1;
+  text-align: right;
 }
-.hero-text {
-  font-size: 3rem;
+
+/* الشارة الصغيرة العلوية */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0b4553;
+  font-size: 0.95rem;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+/* العنوان الرئيسي */
+.about-content h2 {
+  color: #103943;
+  font-size: 2rem;
+  font-weight: 800;
   line-height: 1.4;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
 }
-.hero-content p {
-  font-size: 1.15rem;
+
+/* النص الوصفي */
+.about-content p {
+  color: #090909;
+  font-size: 1.05rem;
   line-height: 1.8;
-  color: #e5e5e5;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.btn-hero {
-  background-color: #133874;
-  color: #ffffff;
-  padding: 10px 30px;
-  border: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+
+/* عمود الصورة */
+.about-image {
+  flex: 1.1;
+  display: flex;
+  justify-content: center;
 }
-.btn-hero:hover {
-  background-color: #126ca0;
+
+.about-image img {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
 }
-@media (max-width: 768px) {
-  .hero-section {
-    justify-content: center;
-    padding: 30px 20px;
-  }
-  .hero-content {
+
+/* ==========================================
+   التجاوب مع الشاشات الصغيرة والموبايل (Responsive)
+   ========================================== */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column-reverse; /* الصورة أولاً أو النص أولاً */
     text-align: center;
-    .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.65);
-    }
-    .hero-text {
-      font-size: 2.2rem;
-    }
-    .hero-content p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
+    gap: 30px;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-tag {
+    justify-content: center;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
   }
 }
 .main-section {
@@ -441,160 +437,6 @@ h2 {
   font-weight: 600;
   font-size: 2.26rem;
 }
-/* ==================== SERVICES SECTION STYLES ==================== */
-
-.services-section {
-  width: 100%;
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #f0f1f5 55%, #9eacb4 100%);
-  direction: rtl;
-}
-
-.services-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.services-main-title {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #184c8f;
-  font-weight: 700;
-  font-size: 2.26rem;
-  margin-bottom: 45px;
-}
-
-/* التقسيم: 4 كروت في السطر على الشاشات الكبيرة */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-/* تصميم الكارد */
-.service-card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: 1px solid #e1e8ed;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: #75c1de;
-  box-shadow: 0 10px 22px rgba(11, 76, 102, 0.12);
-}
-
-/* حاوية صورة الكارد */
-.service-img-wrapper {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  background-color: #f1f3f9;
-}
-
-.service-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-.service-card:hover .service-img-wrapper img {
-  transform: scale(1.05);
-}
-
-/* محتوى الكارد النصي */
-.service-content {
-  padding: 20px 18px 25px 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.service-title {
-  font-size: 1.15rem;
-  color: #184c8f;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.service-desc {
-  font-size: 0.9rem;
-  color: #1f1e1e;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  flex-grow: 1;
-}
-
-/* زر طلب الخدمة */
-.service-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: #1b477a;
-  color: #ffffff;
-  padding: 9px 22px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.service-btn:hover {
-  background-color: #126ca0;
-  transform: scale(1.03);
-}
-
-/* صورة الأيقونة داخل الزرار */
-.service-btn img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.3s ease;
-  color: white;
-}
-
-.service-btn:hover img {
-  transform: translateX(-3px);
-}
-
-/* تجاوب الشاشات */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.textservice {
-  text-align: center;
-  max-width: 800px;
-  margin: 50px auto 20px auto;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.8;
-  color: #091a21;
-}
-/* ========================================================= */
-/* ==================== WHY CHOOSE US SECTION ==================== */
-/* ========================================================= */
-
 .why-us-section {
   width: 100%;
   padding: 50px 20px;
