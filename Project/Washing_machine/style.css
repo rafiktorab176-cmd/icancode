@@ -1,29 +1,26 @@
+/* #region GLOBAL  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "cairo", sans-serif;
 }
-
-/* #0d2644 */
-/* #69727d */
+/* region ==> منطقه */
 
 body {
   background-color: #ffffff;
   position: relative;
 }
+/* #endregion   */
 
-/* NAVBAR */
+/* #region NAVBAR */
 .nav {
-  /* تدرج لوني بين درجتين أزرق عشان يديك نفس الإيحاء المقسوم أو المجسم */
   background: #ffffff;
   color: #49b1ea;
   display: flex;
-  /* position: relative; */
   position: fixed;
   top: 0px;
   width: 100%;
-  /* gap: 20px; */
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
@@ -104,6 +101,7 @@ body {
 .links-container {
   transition: all 0.3s ease;
 }
+
 /* --- MOBILE RESPONSIVE STYLES --- */
 @media (max-width: 1100px) {
   .nav {
@@ -126,7 +124,6 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    /* background-color: rgba(255, 255, 255, 1); */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to bottom, #5780a9 50%, #c4ab98 100%);
   }
@@ -149,12 +146,46 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
+  text-align: center;
 }
 .dropdown-menu {
   display: none;
   position: absolute;
+  top: 100%;
+  right: -100%;
   background-color: #f9f9f9;
-  min-width: 250px;
+  min-width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  text-decoration: none;
+  list-style: none;
+  li {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #0d5ec7;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  color: #0d5ec7;
+}
+/* SECOND DROPDOWN MENU IN NAVBAR */
+.dropdown_2 {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu_2 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  background-color: #f9f9f9;
+  min-width: 240px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
@@ -163,16 +194,20 @@ body {
   li {
     padding: 10px;
     text-align: center;
-  }
-  li:nth-child(1) {
     border-bottom: 1px solid #0d5ec7;
   }
+  li:last-child {
+    border-bottom: none;
+  }
 }
-.dropdown:hover .dropdown-menu {
+.dropdown_2:hover .dropdown-menu_2 {
   display: block;
   color: #0d5ec7;
 }
 
+/* #endregion */
+
+/*#region fixed buttons */
 /* FIXED CALL US BUTTON */
 
 .call-us {
@@ -244,291 +279,425 @@ body {
     height: 40px;
   }
 }
+
+/* #endregion */
 /* ==========================================
-   1. التنسيقات العامة (General Styles)
-   ========================================== */
-* {
+   HERO SERVICE SECTION (WASHING MACHINES)
+========================================== */
+
+/* ==========================================
+   GLOBAL RESET & BASE FIXES
+========================================== */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden; /* يمنع ظهور السكرول الأفقي نهائياً */
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8fafc;
-  color: #334155;
-  line-height: 1.6;
-}
-
 /* ==========================================
-   2. قسم المدونة (Blog Section)
-   ========================================== */
-.blog-section {
-  padding: 40px 20px 60px;
-  direction: rtl;
-  margin-top: 70px;
-}
-
-.blog-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* الهيدر والعنوان */
-.blog-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.blog-header .section-tag {
-  color: #0b4553;
-  font-weight: bold;
-  font-size: 0.95rem;
-  background-color: #e0f2fe;
-  padding: 6px 18px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 30px;
-}
-
-.blog-header h2 {
-  color: #0f172a;
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.blog-header p {
-  color: #64748b;
-  font-size: 1.05rem;
-}
-
-/* شبكة الكروت (Grid System) */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 30px;
-}
-
-/* ==========================================
-   3. كارت المقال وتأثيرات الهوفر (Blog Card)
-   ========================================== */
-.blog-card {
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  display: flex;
-  flex-direction: column;
-}
-
-/* تأثير الهوفر على الكارت */
-.blog-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(11, 69, 83, 0.12);
-  border-color: #cbd5e1;
-}
-
-/* منطقة الصورة */
-.card-image {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-/* تكبير الصورة عند الهوفر */
-.blog-card:hover .card-image img {
-  transform: scale(1.08);
-}
-
-/* الشارة فوق الصورة */
-.card-image .badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #0b4553;
+   1. HERO SERVICE SECTION
+========================================== */
+.hero-service-section {
+  background-color: #0b4c75;
   color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 5px 12px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  direction: rtl;
+  width: 100%;
+  padding-top: 130px;
+  padding-bottom: 60px;
 }
 
-/* تفاصيل النص */
-.card-content {
-  padding: 22px;
+.hero-service-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.card-meta {
-  display: flex;
+  align-items: center;
   justify-content: space-between;
-  font-size: 0.82rem;
-  color: #94a3b8;
-  margin-bottom: 12px;
+  gap: 40px;
 }
 
-.card-content h3 {
-  color: #1e293b;
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
+.hero-service-text-content {
+  flex: 1;
+  max-width: 580px;
+  width: 100%;
+  text-align: right;
 }
 
-.blog-card:hover .card-content h3 {
-  color: #0b4553;
-}
-
-.card-content p {
-  color: #64748b;
-  font-size: 0.92rem;
-  line-height: 1.6;
+.hero-service-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
   margin-bottom: 20px;
-  flex-grow: 1;
+  line-height: 1.2;
 }
 
-/* زر قراءة المقال */
-.read-more-btn {
-  background: none;
-  border: none;
-  color: #0b4553;
+.hero-service-description {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 35px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.hero-service-description strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.hero-service-description .phone-link {
+  color: #ffffff;
   font-weight: bold;
-  font-size: 0.92rem;
-  cursor: pointer;
+  text-decoration: underline;
+}
+
+.booking-action-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 0;
-  font-family: inherit;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #0b4c75;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  max-width: 100%;
 }
 
-.read-more-btn i {
+.booking-action-link:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.booking-action-link .action-icon {
+  font-size: 1.1rem;
+  transform: rotate(-10deg);
+}
+
+.hero-service-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 520px;
+  width: 100%;
+}
+
+.hero-service-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================
+   2. COMMON FAULTS SECTION
+========================================== */
+.common-faults-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  direction: rtl;
+}
+
+.common-faults-section .section-title {
+  color: #2b3940;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.fault-card {
+  background-color: #eaf3f8;
+  border-radius: 20px;
+  padding: 35px 25px;
+  flex: 1 1 280px; /* استخدام المرونة الصح */
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s ease;
 }
 
-.blog-card:hover .read-more-btn {
-  color: #0284c7;
+.fault-card:hover {
+  transform: translateY(-5px);
 }
 
-.blog-card:hover .read-more-btn i {
-  transform: translateX(-6px);
+.fault-card h3 {
+  color: #0b4c75;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.fault-card p {
+  color: #667085;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ==========================================
-   4. النافذة المنبثقة (Modal Pop-up)
-   ========================================== */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(5px);
-  display: none; /* مخفية افتراضياً */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 20px;
-}
-
-.modal-content {
-  background: #ffffff;
-  width: 100%;
-  max-width: 700px;
-  max-height: 85vh;
-  overflow-y: auto;
-  border-radius: 20px;
-  padding: 35px 30px;
-  position: relative;
+   3. SOLUTIONS SECTION
+========================================== */
+.solutions-section {
+  background-color: #0a2540;
+  color: #ffffff;
+  padding: 50px 20px 60px 20px;
+  text-align: center;
   direction: rtl;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  animation: modalFade 0.3s ease-out;
 }
 
-@keyframes modalFade {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.solutions-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.close-btn {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #94a3b8;
-  cursor: pointer;
-  transition: color 0.2s;
+.pill-header {
+  background-color: #ffffff;
+  color: #0a2540;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 35px auto;
+  padding: 12px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.close-btn:hover {
-  color: #ef4444;
+.pill-header h2 {
+  margin: 0;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
 }
 
-/* تنسيق المحتوى داخل النافذة المنبثقة */
-#modalBody h2 {
-  color: #0b4553;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  line-height: 1.4;
+.solutions-body h3 {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #e2e8f0;
 }
 
-#modalBody h3 {
-  color: #1e293b;
-  margin: 20px 0 10px;
-  font-size: 1.15rem;
+.solutions-body h3 strong {
+  color: #ffffff;
 }
 
-#modalBody p {
-  color: #475569;
-  line-height: 1.8;
+.solutions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px auto;
+  display: inline-block;
+  text-align: right;
+  max-width: 100%;
+}
+
+.solutions-list li {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
   margin-bottom: 12px;
-  font-size: 0.98rem;
+  position: relative;
+  padding-right: 25px;
+  color: #ffffff;
 }
 
-#modalBody ul {
-  margin-right: 20px;
-  margin-bottom: 15px;
+.solutions-list li::before {
+  content: "•";
+  color: #ffffff;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: -4px;
 }
 
-#modalBody li {
-  margin-bottom: 8px;
-  color: #334155;
-  line-height: 1.7;
+.call-text {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  margin-bottom: 30px;
+  color: #e2e8f0;
 }
 
-/* تجاوب الشاشات الصغيره */
-@media (max-width: 768px) {
-  .blog-header h2 {
-    font-size: 1.7rem;
+.call-text a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.booking-btn {
+  background-color: #124d77;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+.booking-btn:hover {
+  background-color: #1a6296;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   4. FEATURES SECTION
+========================================== */
+.features-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  direction: rtl;
+}
+
+.features-section .section-title {
+  color: #2b3940;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: #0b4c75;
+  color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 50px;
+  flex: 1 1 220px;
+  max-width: 270px;
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   5. WARRANTY SECTION
+========================================== */
+.warranty-section {
+  background-color: #0a2540;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  direction: rtl;
+}
+
+.warranty-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.warranty-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.warranty-text {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.warranty-text strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* ==========================================
+   ALL MEDIA QUERIES (MOBILE & TABLET)
+========================================== */
+@media (max-width: 992px) {
+  .hero-service-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
-  .modal-content {
-    padding: 25px 20px;
+
+  .hero-service-container {
+    flex-direction: column-reverse; /* الصورة أولاً ثم النص */
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .hero-service-text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-service-image-box {
+    max-width: 100%;
+  }
+
+  .hero-service-img {
+    max-width: 360px;
+  }
+
+  .fault-card,
+  .feature-card {
+    max-width: 100%; /* الكروت بتاخد كامل العرض على الشاشات الصغير */
+  }
+
+  .feature-card {
+    border-radius: 25px; /* تنعيم الحواف للموبايل */
   }
 }
+
+@media (max-width: 480px) {
+  .booking-action-link,
+  .booking-btn {
+    width: 100%;
+    padding: 12px 15px;
+  }
+}
+/* #region FOOTER */
 /* تنسيقات الفوتر العامة */
 .site-footer {
   color: #ffffff;
@@ -686,3 +855,4 @@ body {
     justify-content: center;
   }
 }
+/* #endregion */
