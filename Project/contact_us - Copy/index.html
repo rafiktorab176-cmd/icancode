@@ -1,0 +1,218 @@
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- روابط خط Cairo من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>RaFik-Service</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="logo-container">
+        <img src="../assets/raf.jpg" width="60" alt="" />
+      </div>
+
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="links-container" id="links-container">
+        <ul class="links">
+          <li><a href="../"> الرئيسية</a></li>
+          <li><a href="../who_are_we/">من نحن </a></li>
+          <li class="dropdown">
+            <a>خدماتنا</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../parts"> قطع الغيار</a>
+              </li>
+              <li class="dropdown_2">
+                <a>صيانه الاجهزه المنزليه</a>
+                <ul class="dropdown-menu_2">
+                  <li><a href="../Fridge_Repair/">صيانه تلاجات </a></li>
+                  <li><a href="../Washing_machine/">صيانه غسالات الملابس</a></li>
+                  <li><a href="../Dishwashers/">صيانه غسالات اطباق</a></li>
+                  <li><a href="../D_freezer/">صيانه ديب فريزر</a></li>
+                  <li><a href="../tv/">صيانه شاشات التلفزيون</a></li>
+                  <li><a href="../Microwave/">صيانه الميكرويف</a></li>
+                  <li><a href="../Clothes_Dryer/">صيانه الدراير</a></li>
+                  <li><a href="../Air_conditioner/">صيانه التكيفات</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="../reviews/">اراء العملاء</a></li>
+          <li><a href="../blog/">المدونة</a></li>
+          <li><a class="active">تواصل بنا</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+    <!-- CALL US FIXED BUTTON -->
+
+    <button class="call-us">
+      <a href="tel:19580">
+        <img src="../assets/phone.png" alt="phone icon" />
+      </a>
+    </button>
+    <!-- END CALL US FIXED BUTTON -->
+    <!-- WHATSAPP FIXED BUTTON -->
+    <a
+      href="https://wa.me/201289966660"
+      class="fixed-contact-link whatsapp-link"
+      target="_blank"
+    >
+      <img src="../assets/apple.png" alt="WhatsApp" />
+    </a>
+    <!-- END WHATSAPP FIXED BUTTON -->
+    <section class="contact-numbers-section">
+      <div class="numbers-container">
+        <h2 class="section-title">أرقام التواصل والخدمة السريعة</h2>
+        <p class="section-subtitle">
+          نحن هنا لخدمتك على مدار الساعة، اختر الرقم المناسب للتواصل معنا
+        </p>
+
+        <div class="cards-grid">
+          <!-- الخط الساخن -->
+          <a href="tel:19580" class="number-card hotline">
+            <div class="card-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">الخط الساخن الرئيسي</span>
+              <span class="phone-number">19580</span>
+            </div>
+            <span class="hover-badge">اتصل الآن</span>
+          </a>
+
+          <!-- الخط الساخن الثاني -->
+          <a href="tel:15607" class="number-card secondary-hotline">
+            <div class="card-icon">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">خدمة العملاء والصيانة</span>
+              <span class="phone-number">15607</span>
+            </div>
+            <span class="hover-badge">اتصل الآن</span>
+          </a>
+
+          <!-- رقم موبايل 1 -->
+          <a href="tel:01289966660" class="number-card mobile">
+            <div class="card-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">موبايل </span>
+              <span class="phone-number">01289966660</span>
+            </div>
+            <span class="hover-badge">اتصل الآن</span>
+          </a>
+
+          <!-- رقم موبايل 2 / واتساب -->
+          <a
+            href="https://wa.me/201063646662"
+            target="_blank"
+            class="number-card whatsapp"
+          >
+            <div class="card-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="card-info">
+              <span class="card-label">واتساب للدعم المباشر</span>
+              <span class="phone-number">01063646662</span>
+            </div>
+            <span class="hover-badge">مراسلة فورية</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <!-- الشريط العرضي العلوي -->
+
+      <!-- محتوى الفوتر الرئيسي -->
+      <div class="footer-container">
+        <!-- العمود الأول: الشعار والوصف -->
+        <div class="footer-col footer-about">
+          <div class="footer-logo">
+            <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
+            <img src="../assets/raf.jpg" alt="Logo" />
+          </div>
+          <p class="about-text">
+            متخصصون في صيانة جميع الأجهزة المنزلية من الغسالات والثلاجات
+            والتكيفات وشاشات التلفزيون والميكروفات مع أفضل فنيين الصيانة في مصر.
+          </p>
+        </div>
+
+        <!-- العمود الثاني: روابط سريعة -->
+        <div class="footer-col footer-links">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="../Project/index.html">الرئيسية</a></li>
+            <li><a href="../Project/who_are_we/">عن الشركة</a></li>
+            <li><a href="../Project/parts/">خدماتنا</a></li>
+            <li><a href="../Project/reviews/">آراء العملاء</a></li>
+            <li><a href="../Project/blog/">المدونة</a></li>
+            <li><a href="../Project/contact_us/">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث: تواصل معنا -->
+        <div class="footer-col footer-contact">
+          <h3>تواصل معنا</h3>
+          <ul class="contact-info">
+            <!-- خط ساخن 1 -->
+            <li>
+              <i class="fa-solid fa-headset"></i>
+              <span>الخط الساخن: <a href="tel:19580">19580</a></span>
+            </li>
+            <!-- خط ساخن 2 -->
+            <li>
+              <i class="fa-solid fa-phone-flip"></i>
+              <span>الخط الساخن: <a href="tel:16507">16507</a></span>
+            </li>
+            <!-- واتساب -->
+            <li>
+              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+              <span
+                >واتساب:
+                <a href="https://wa.me/201289966660" target="_blank"
+                  >01289966660</a
+                ></span
+              >
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+              <span
+                >واتساب:
+                <a href="https://wa.me/201063646662" target="_blank"
+                  >01063646662</a
+                ></span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- الشريط السفلي للحقوق -->
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
