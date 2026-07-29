@@ -2,10 +2,7 @@
 <html dir="rtl" lang="ar">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- روابط خط Cairo من جوجل -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,23 +10,19 @@
             href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
             rel="stylesheet"
         />
-
-        <!-- مكتبة Font Awesome للأيقونات -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../globals/style.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         />
-
-        <!-- ملف الـ CSS -->
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="../globals/style.css" />
         <title>RaFik-Service</title>
     </head>
     <body>
         <!-- NAVBAR -->
         <nav class="nav">
             <div class="logo-container">
-                <img src="../assets/raf.webp" width="60" alt="Logo" />
+                <img src="../assets/raf.webp" width="60" alt="" />
             </div>
 
             <button class="hamburger" id="hamburger">
@@ -40,19 +33,21 @@
 
             <div class="links-container" id="links-container">
                 <ul class="links">
-                    <li><a href="../">الرئيسية</a></li>
-                    <li><a href="../who_are_we/">من نحن</a></li>
+                    <li><a href="../"> الرئيسية</a></li>
+                    <li><a href="../who_are_we/">من نحن </a></li>
                     <li class="dropdown">
-                        <a class="active">خدماتنا</a>
+                        <a>خدماتنا</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../parts">قطع الغيار</a></li>
+                            <li>
+                                <a href="../parts"> قطع الغيار</a>
+                            </li>
                             <li class="dropdown_2">
-                                <a class="active" >صيانه الاجهزه المنزليه</a>
+                                <a>صيانه الاجهزه المنزليه</a>
                                 <ul class="dropdown-menu_2">
                                     <li>
                                         <a href="../Fridge_Repair/"
-                                            >صيانه تلاجات</a
-                                        >
+                                            >صيانه تلاجات
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="../Washing_machine/"
@@ -60,7 +55,9 @@
                                         >
                                     </li>
                                     <li>
-                                        <a class="active">صيانه غسالات اطباق</a>
+                                        <a href="../Dishwashers/"
+                                            >صيانه غسالات اطباق</a
+                                        >
                                     </li>
                                     <li>
                                         <a href="../D_freezer/"
@@ -94,20 +91,21 @@
                     <li><a href="../reviews/">اراء العملاء</a></li>
                     <li><a href="../blog/">المدونة</a></li>
                     <li><a href="../contact_us/">تواصل بنا</a></li>
-                    <li><a href="../privacy/">سياسة الخصوصية</a></li>
+                    <li><a class="active">سياسة الخصوصية</a></li>
                 </ul>
             </div>
         </nav>
         <!-- END NAVBAR -->
 
         <!-- CALL US FIXED BUTTON -->
+
         <button class="call-us">
             <a href="tel:19580">
                 <img src="../assets/phone.webp" alt="phone icon" />
             </a>
         </button>
-        <!-- END CALL US FIXED BUTTON -->
 
+        <!-- END CALL US FIXED BUTTON -->
         <!-- WHATSAPP FIXED BUTTON -->
         <a
             href="https://wa.me/201289966660"
@@ -117,146 +115,7 @@
             <img src="../assets/16.webp" alt="WhatsApp" />
         </a>
         <!-- END WHATSAPP FIXED BUTTON -->
-        <section class="service-section">
-            <div class="container">
-                <!-- قسم النصوص والزر -->
-                <div class="content-box">
-                    <h2 class="title">صيانة غسالات الأطباق</h2>
-                    <p class="description">
-                        الحياة من غير غسالة أطباق شغالة كويس بتبقى صعبة، خصوصًا
-                        مع ضغط الشغل وروتين البيت. علشان كده، وجود خدمة متخصصة
-                        في صيانة غسالات أطباق بقى ضروري جدًا. إحنا مركزنا
-                        المعتمد بنقدملك كل اللي محتاجه من تصليح غسالات أطباق
-                        وإصلاح غسالات أطباق بخبرة سنين. اتصل بينا على
-                        <span class="phone-number">19580</span> وهتلاقي الحل
-                        السريع لأي مشكلة.
-                    </p>
-                    <a href="tel:19580" class="cta-button">
-                        <i class="fa-solid fa-phone-flip"></i>
-                        حجز موعد صيانة الآن
-                    </a>
-                </div>
 
-                <!-- قسم الصورة -->
-                <div class="image-box">
-                    <img src="../assets/w3.webp" alt="صيانة غسالات الأطباق" />
-                </div>
-            </div>
-        </section>
-        <div class="main-container">
-            <!-- قسم أهم الأعطال الشائعة -->
-            <section class="common-faults">
-                <h2 class="section-title">أهم الأعطال الشائعة</h2>
-
-                <div class="cards-grid">
-                    <!-- الكارت الأول -->
-                    <div class="card">
-                        <h3>مشاكل التشغيل</h3>
-                        <p>
-                            كتير من العملاء بيلاحظوا إن غسالة الأطباق مش بتشتغل
-                            خالص أو بتفصل فجأة، هنا لازم تدخل فوري من متخصص في
-                            صيانة غسالة أطباق...
-                        </p>
-                    </div>
-
-                    <!-- الكارت الثاني -->
-                    <div class="card">
-                        <h3>مشكلة التنظيف</h3>
-                        <p>
-                            لو الأطباق بتطلع مش نظيفة زي الأول، ده معناه إن فيه
-                            عطل محتاج تصليح غسالة أطباق أو إصلاح شامل للرشاشات
-                            أو الفلاتر.
-                        </p>
-                    </div>
-
-                    <!-- الكارت الثالث -->
-                    <div class="card">
-                        <h3>أعطال التصريف</h3>
-                        <p>
-                            أحيانًا غسالة الأطباق بتحتفظ بالميه ومبتصرفش وده
-                            يستدعي تصليح غسالة أطباق في أسرع وقت.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- قسم الحلول المقدمة -->
-            <section class="solutions-section">
-                <div class="pill-header">الحلول المقدمة</div>
-
-                <p class="intro-text">
-                    إحنا في <strong>مركز صيانة غسالات أطباق</strong> بنعتمد على
-                    خبرة ومهارة فريقنا:
-                </p>
-
-                <ul class="features-list">
-                    <li>تصليح غسالات أطباق في المنزل بدون ما تتعب.</li>
-                    <li>تشخيص دقيق لكل غسالة أطباق لتحديد سبب العطل.</li>
-                    <li>إصلاح بجودة عالية وبقطع غيار أصلية.</li>
-                </ul>
-
-                <p class="call-text">
-                    متترددش، كلمنا دلوقتي على
-                    <span class="phone">19580</span> وخلي جهازك يرجع يشتغل زي
-                    الجديد.
-                </p>
-
-                <div class="btn-container">
-                    <a href="tel:19580" class="cta-btn">
-                        <i class="fa-solid fa-phone-flip"></i>
-                        حجز موعد صيانة الآن
-                    </a>
-                </div>
-            </section>
-        </div>
-        <div class="features-wrapper">
-            <!-- قسم مميزات مركز الصيانة -->
-            <section class="features-section">
-                <h2 class="section-title">مميزات مركز الصيانة</h2>
-
-                <div class="features-cards">
-                    <!-- الكارت الأول -->
-                    <div class="feature-card">
-                        <p>
-                            ثقة آلاف العملاء دليل نجاحنا في صيانة غسالة أطباق
-                            وتصليح غسالة أطباق.
-                        </p>
-                    </div>
-
-                    <!-- الكارت الثاني -->
-                    <div class="feature-card">
-                        <p>
-                            فريق معتمد يقدم لك إصلاح غسالات أطباق بكفاءة وسرعة.
-                        </p>
-                    </div>
-
-                    <!-- الكارت الثالث -->
-                    <div class="feature-card">
-                        <p>
-                            خدمة عملاء متاحة 24 ساعة لاستقبال استفسارك عن تصليح
-                            غسالات أطباق.
-                        </p>
-                    </div>
-
-                    <!-- الكارت الرابع -->
-                    <div class="feature-card">
-                        <p>
-                            خبرة طويلة في صيانة غسالات أطباق بأنواعها المختلفة.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- قسم الضمان وقطع الغيار -->
-            <section class="guarantee-section">
-                <h2 class="guarantee-title">الضمان وقطع الغيار</h2>
-                <p class="guarantee-text">
-                    بعد أي إصلاح غسالة أطباق أو صيانة غسالة أطباق، هتاخد ضمان
-                    مكتوب يطمنك. كمان، كل قطع الغيار اللي بنستخدمها أصلية 100%،
-                    عشان تضمن إن غسالة الأطباق تشتغل بكفاءة بعد التصليح.
-                </p>
-            </section>
-        </div>
         <footer class="site-footer">
             <!-- الشريط العرضي العلوي -->
 

@@ -1,281 +1,327 @@
 <!doctype html>
 <html dir="rtl" lang="ar">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- روابط خط Cairo من جوجل -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>RaFik-Service</title>
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav class="nav">
-      <div class="logo-container">
-        <img src="../assets/raf.webp" width="60" alt="" />
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- روابط خط Cairo من جوجل -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../globals/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <title>RaFik-Service</title>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="../assets/raf.webp" width="60" alt="" />
+            </div>
 
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      <div class="links-container" id="links-container">
-        <ul class="links">
-          <li><a href="../"> الرئيسية</a></li>
-          <li><a href="../who_are_we/">من نحن </a></li>
-          <li class="dropdown">
-            <a>خدماتنا</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="../parts"> قطع الغيار</a>
-              </li>
-              <li class="dropdown_2">
-                <a>صيانه الاجهزه المنزليه</a>
-                <ul class="dropdown-menu_2">
-                  <li><a href="../Fridge_Repair/">صيانه تلاجات </a></li>
-                  <li>
-                    <a href="../Washing_machine/">صيانه غسالات الملابس</a>
-                  </li>
-                  <li><a href="../Dishwashers/">صيانه غسالات اطباق</a></li>
-                  <li><a href="../D_freezer/">صيانه ديب فريزر</a></li>
-                  <li><a href="../tv/">صيانه شاشات التلفزيون</a></li>
-                  <li><a href="../Microwave/">صيانه الميكرويف</a></li>
-                  <li><a class="active">صيانه الدراير</a></li>
-                  <li><a href="../Air_conditioner/">صيانه التكيفات</a></li>
+            <div class="links-container" id="links-container">
+                <ul class="links">
+                    <li><a href="../"> الرئيسية</a></li>
+                    <li><a href="../who_are_we/">من نحن </a></li>
+                    <li class="dropdown">
+                        <a class="active">خدماتنا</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../parts"> قطع الغيار</a>
+                            </li>
+                            <li class="dropdown_2">
+                                <a class="active" >صيانه الاجهزه المنزليه</a>
+                                <ul class="dropdown-menu_2">
+                                    <li>
+                                        <a href="../Fridge_Repair/"
+                                            >صيانه تلاجات
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../Washing_machine/"
+                                            >صيانه غسالات الملابس</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../Dishwashers/"
+                                            >صيانه غسالات اطباق</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../D_freezer/"
+                                            >صيانه ديب فريزر</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../tv/"
+                                            >صيانه شاشات التلفزيون</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../Microwave/"
+                                            >صيانه الميكرويف</a
+                                        >
+                                    </li>
+                                    <li><a class="active">صيانه الدراير</a></li>
+                                    <li>
+                                        <a href="../Air_conditioner/"
+                                            >صيانه التكيفات</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../reviews/">اراء العملاء</a></li>
+                    <li><a href="../blog/">المدونة</a></li>
+                    <li><a href="../contact_us/">تواصل بنا</a></li>
+                    <li><a href="../privacy/">سياسة الخصوصية</a></li>
                 </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="../reviews/">اراء العملاء</a></li>
-          <li><a href="../blog/">المدونة</a></li>
-          <li><a href="../contact_us/">تواصل بنا</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- END NAVBAR -->
-    <!-- CALL US FIXED BUTTON -->
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- CALL US FIXED BUTTON -->
 
-    <button class="call-us">
-      <a href="tel:19580">
-        <img src="../assets/phone.webp" alt="phone icon" />
-      </a>
-    </button>
-    <!-- END CALL US FIXED BUTTON -->
-    <!-- WHATSAPP FIXED BUTTON -->
-    <a
-      href="https://wa.me/201289966660"
-      class="fixed-contact-link whatsapp-link"
-      target="_blank"
-    >
-      <img src="../assets/apple.png" alt="WhatsApp" />
-    </a>
-    <!-- END WHATSAPP FIXED BUTTON -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <!-- قسم المحتوى والنص -->
-        <div class="hero-text">
-          <h1 class="hero-title">صيانة مجففات الملابس</h1>
-          <p class="hero-description">
-            الراحة اليومية مش بتكمل غير بوجود مجفف شغّال بكفاءة، وأي عطل فيه
-            بيكون مزعج جداً خصوصاً في الشتاء أو مع ضغط الشغل. علشان كده، وجود
-            خبرة في صيانة مجففات بقى ضروري في كل بيت. إحنا عندنا فريق متخصص في
-            تصليح مجففات بأنواعها المختلفة. وبنوفملك خدمة شاملة من خلال مركز
-            صيانة مجففات معتمد. كلمنا على
-            <span class="phone">19580</span> وهتلاقي الحل السريع اللي يريحك.
-          </p>
-          <a href="tel:19580" class="hero-btn">
-            <i class="fa-solid fa-phone-flip"></i>
-            حجز موعد صيانة الآن
-          </a>
+        <button class="call-us">
+            <a href="tel:19580">
+                <img src="../assets/phone.webp" alt="phone icon" />
+            </a>
+        </button>
+        <!-- END CALL US FIXED BUTTON -->
+        <!-- WHATSAPP FIXED BUTTON -->
+        <a
+            href="https://wa.me/201289966660"
+            class="fixed-contact-link whatsapp-link"
+            target="_blank"
+        >
+            <img src="../assets/16.webp" alt="WhatsApp" />
+        </a>
+        <!-- END WHATSAPP FIXED BUTTON -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <!-- قسم المحتوى والنص -->
+                <div class="hero-text">
+                    <h1 class="hero-title">صيانة مجففات الملابس</h1>
+                    <p class="hero-description">
+                        الراحة اليومية مش بتكمل غير بوجود مجفف شغّال بكفاءة، وأي
+                        عطل فيه بيكون مزعج جداً خصوصاً في الشتاء أو مع ضغط
+                        الشغل. علشان كده، وجود خبرة في صيانة مجففات بقى ضروري في
+                        كل بيت. إحنا عندنا فريق متخصص في تصليح مجففات بأنواعها
+                        المختلفة. وبنوفملك خدمة شاملة من خلال مركز صيانة مجففات
+                        معتمد. كلمنا على
+                        <span class="phone">19580</span> وهتلاقي الحل السريع
+                        اللي يريحك.
+                    </p>
+                    <a href="tel:19580" class="hero-btn">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        حجز موعد صيانة الآن
+                    </a>
+                </div>
+
+                <!-- قسم الصورة -->
+                <div class="hero-image">
+                    <img src="../assets/w7.webp" alt="صيانة مجففات الملابس" />
+                </div>
+            </div>
+        </section>
+        <div class="dryer-issues-wrapper">
+            <!-- قسم أهم الأعطال الشائعة -->
+            <section class="common-faults">
+                <h2 class="section-title">أهم الأعطال الشائعة</h2>
+
+                <div class="cards-grid">
+                    <!-- الكارت الأول -->
+                    <div class="card">
+                        <h3>مشكلة التسخين</h3>
+                        <p>
+                            أحياناً المجفف بيشتغل لكن من غير حرارة كافية، هنا
+                            لازم تدخل فوري من خبير في إصلاح مجففات.
+                        </p>
+                    </div>
+
+                    <!-- الكارت الثاني -->
+                    <div class="card">
+                        <h3>توقف المجفف فجأة</h3>
+                        <p>
+                            لو لقيت إن مجفف الملابس بيقف من غير سبب، فده بيحتاج
+                            صيانة مجفف دقيقة وتشخيص للمشكلة.
+                        </p>
+                    </div>
+
+                    <!-- الكارت الثالث -->
+                    <div class="card">
+                        <h3>صوت عالي أو اهتزاز</h3>
+                        <p>
+                            كتير من العملاء بيشتكوا من صوت غريب، في الحالة دي،
+                            لازم تصليح مجفف فوراً علشان ماينحصلش عطل أكبر.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم الحلول المقدمة -->
+            <section class="solutions-section">
+                <div class="pill-header">
+                    <h2>الحلول المقدمة</h2>
+                </div>
+
+                <p class="intro-text">
+                    إحنا بنقدملك حلول عملية وسريعة من خلال
+                    <strong>مركز صيانة مجففات متخصص</strong>:
+                </p>
+
+                <ul class="features-list">
+                    <li>تصليح مجففات في البيت من غير مشاوير.</li>
+                    <li>فحص شامل لكل مجفف وتحديد سبب العطل.</li>
+                    <li>إصلاح بأعلى جودة مع ضمان على الخدمة.</li>
+                </ul>
+
+                <p class="call-text">
+                    اتصل دلوقتي على <span class="phone">19580</span> وخلي جهازك
+                    يرجع يشتغل بكفاءة.
+                </p>
+
+                <div class="btn-container">
+                    <a href="tel:19580" class="cta-btn">
+                        <i class="fa-solid fa-phone-flip"></i>
+                        حجز موعد صيانة الآن
+                    </a>
+                </div>
+            </section>
         </div>
+        <div class="dryer-features-wrapper">
+            <!-- قسم مميزات مركز الصيانة -->
+            <section class="features-section">
+                <h2 class="section-title">مميزات مركز الصيانة</h2>
 
-        <!-- قسم الصورة -->
-        <div class="hero-image">
-          <img src="../assets/w7.webp" alt="صيانة مجففات الملابس" />
+                <div class="features-cards">
+                    <!-- الكارت الأول -->
+                    <div class="feature-card">
+                        <p>
+                            التزام كامل باستخدام قطع غيار أصلية عند كل اصلاح
+                            مجفف.
+                        </p>
+                    </div>
+
+                    <!-- الكارت الثاني -->
+                    <div class="feature-card">
+                        <p>فريق بيقدملك تصليح مجففات بمهنية عالية.</p>
+                    </div>
+
+                    <!-- الكارت الثالث -->
+                    <div class="feature-card">
+                        <p>سرعة في الاستجابة وخدمة عملاء طول اليوم.</p>
+                    </div>
+
+                    <!-- الكارت الرابع -->
+                    <div class="feature-card">
+                        <p>خبرة معتمدة في صيانة مجففات لجميع الموديلات.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- قسم الضمان وقطع الغيار -->
+            <section class="guarantee-section">
+                <h2 class="guarantee-title">الضمان وقطع الغيار</h2>
+                <p class="guarantee-text">
+                    بعد أي تصليح مجفف أو صيانة مجفف، هتاخد ضمان مكتوب يطمنك.
+                    وكمان، كل القطع اللي بنركبها أصلية 100% علشان تضمن إن المجفف
+                    يشتغل بأعلى كفاءة بعد الإصلاح.
+                </p>
+            </section>
         </div>
-      </div>
-    </section>
-    <div class="dryer-issues-wrapper">
-      <!-- قسم أهم الأعطال الشائعة -->
-      <section class="common-faults">
-        <h2 class="section-title">أهم الأعطال الشائعة</h2>
+        <!-- ربط ملف الـ JS -->
+        <footer class="site-footer">
+            <!-- الشريط العرضي العلوي -->
 
-        <div class="cards-grid">
-          <!-- الكارت الأول -->
-          <div class="card">
-            <h3>مشكلة التسخين</h3>
-            <p>
-              أحياناً المجفف بيشتغل لكن من غير حرارة كافية، هنا لازم تدخل فوري
-              من خبير في إصلاح مجففات.
-            </p>
-          </div>
+            <!-- محتوى الفوتر الرئيسي -->
+            <div class="footer-container">
+                <!-- العمود الأول: الشعار والوصف -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
+                        <img src="../assets/raf.webp" alt="Logo" />
+                    </div>
+                    <p class="about-text">
+                        تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة
+                        المنزلية لمختلف العلامات التجارية، ونلتزم بتقديم أعلى
+                        مستويات الجودة من خلال استخدام قطع غيار أصلية وفنيين
+                        متخصصين مع توفير ضمان على جميع الخدمات المقدمة من
+                        خلالنا. ، ولا تربطنا بها أي علاقة رسمية أو شراكة تجارية.
+                        كما أن استخدام بعض المصطلحات مثل “التوكيل” أو “مركز
+                        الصيانة” يأتي لأغراض وصفية وتنظيمية فقط، بهدف تسهيل وصول
+                        العملاء إلى خدمات الصيانة والدعم الفني المناسبة عبر
+                        محركات البحث والمنصات الإلكترونية. ونعتز بثقة عملائنا
+                        ونسعى دائمًا لتقديم خدمات صيانة مستقلة تتميز بالمصداقية
+                        والكفاءة. مركز رفيق للصيانة وقطع الغيار مركز خدمة مستقل
+                        وغير خاضع للعلامات التجاريه .
+                    </p>
+                </div>
 
-          <!-- الكارت الثاني -->
-          <div class="card">
-            <h3>توقف المجفف فجأة</h3>
-            <p>
-              لو لقيت إن مجفف الملابس بيقف من غير سبب، فده بيحتاج صيانة مجفف
-              دقيقة وتشخيص للمشكلة.
-            </p>
-          </div>
+                <!-- العمود الثاني: روابط سريعة -->
+                <div class="footer-col footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li>
+                            <a href="../who_are_we/index.html">عن الشركة</a>
+                        </li>
+                        <li><a href="../parts/index.html">خدماتنا</a></li>
+                        <li>
+                            <a href="../reviews/index.html">آراء العملاء</a>
+                        </li>
+                        <li><a href="../blog/index.html">المدونة</a></li>
+                        <li>
+                            <a href="../contact_us/index.html">تواصل معنا</a>
+                        </li>
+                    </ul>
+                </div>
 
-          <!-- الكارت الثالث -->
-          <div class="card">
-            <h3>صوت عالي أو اهتزاز</h3>
-            <p>
-              كتير من العملاء بيشتكوا من صوت غريب، في الحالة دي، لازم تصليح مجفف
-              فوراً علشان ماينحصلش عطل أكبر.
-            </p>
-          </div>
-        </div>
-      </section>
+                <!-- العمود الثالث: تواصل معنا -->
+                <div class="footer-col footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <ul class="contact-info">
+                        <!-- خط ساخن 1 -->
+                        <li>
+                            <i class="fa-solid fa-headset"></i>
+                            <span
+                                >الخط الساخن:
+                                <a href="tel:19580">19580</a></span
+                            >
+                        </li>
 
-      <!-- قسم الحلول المقدمة -->
-      <section class="solutions-section">
-        <div class="pill-header">
-          <h2>الحلول المقدمة</h2>
-        </div>
-
-        <p class="intro-text">
-          إحنا بنقدملك حلول عملية وسريعة من خلال
-          <strong>مركز صيانة مجففات متخصص</strong>:
-        </p>
-
-        <ul class="features-list">
-          <li>تصليح مجففات في البيت من غير مشاوير.</li>
-          <li>فحص شامل لكل مجفف وتحديد سبب العطل.</li>
-          <li>إصلاح بأعلى جودة مع ضمان على الخدمة.</li>
-        </ul>
-
-        <p class="call-text">
-          اتصل دلوقتي على <span class="phone">19580</span> وخلي جهازك يرجع يشتغل
-          بكفاءة.
-        </p>
-
-        <div class="btn-container">
-          <a href="tel:19580" class="cta-btn">
-            <i class="fa-solid fa-phone-flip"></i>
-            حجز موعد صيانة الآن
-          </a>
-        </div>
-      </section>
-    </div>
-    <div class="dryer-features-wrapper">
-      <!-- قسم مميزات مركز الصيانة -->
-      <section class="features-section">
-        <h2 class="section-title">مميزات مركز الصيانة</h2>
-
-        <div class="features-cards">
-          <!-- الكارت الأول -->
-          <div class="feature-card">
-            <p>التزام كامل باستخدام قطع غيار أصلية عند كل اصلاح مجفف.</p>
-          </div>
-
-          <!-- الكارت الثاني -->
-          <div class="feature-card">
-            <p>فريق بيقدملك تصليح مجففات بمهنية عالية.</p>
-          </div>
-
-          <!-- الكارت الثالث -->
-          <div class="feature-card">
-            <p>سرعة في الاستجابة وخدمة عملاء طول اليوم.</p>
-          </div>
-
-          <!-- الكارت الرابع -->
-          <div class="feature-card">
-            <p>خبرة معتمدة في صيانة مجففات لجميع الموديلات.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- قسم الضمان وقطع الغيار -->
-      <section class="guarantee-section">
-        <h2 class="guarantee-title">الضمان وقطع الغيار</h2>
-        <p class="guarantee-text">
-          بعد أي تصليح مجفف أو صيانة مجفف، هتاخد ضمان مكتوب يطمنك. وكمان، كل
-          القطع اللي بنركبها أصلية 100% علشان تضمن إن المجفف يشتغل بأعلى كفاءة
-          بعد الإصلاح.
-        </p>
-      </section>
-    </div>
-    <!-- ربط ملف الـ JS -->
-    <footer class="site-footer">
-      <!-- الشريط العرضي العلوي -->
-
-      <!-- محتوى الفوتر الرئيسي -->
-      <div class="footer-container">
-        <!-- العمود الأول: الشعار والوصف -->
-        <div class="footer-col footer-about">
-          <div class="footer-logo">
-            <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
-            <img src="../assets/raf.webp" alt="Logo" />
-          </div>
-          <p class="about-text">
-            تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة المنزلية لمختلف
-            العلامات التجارية، ونلتزم بتقديم أعلى مستويات الجودة من خلال استخدام
-            قطع غيار أصلية وفنيين متخصصين مع توفير ضمان على جميع الخدمات المقدمة
-            من خلالنا. ، ولا تربطنا بها أي علاقة رسمية أو شراكة تجارية. كما أن
-            استخدام بعض المصطلحات مثل “التوكيل” أو “مركز الصيانة” يأتي لأغراض
-            وصفية وتنظيمية فقط، بهدف تسهيل وصول العملاء إلى خدمات الصيانة والدعم
-            الفني المناسبة عبر محركات البحث والمنصات الإلكترونية. ونعتز بثقة
-            عملائنا ونسعى دائمًا لتقديم خدمات صيانة مستقلة تتميز بالمصداقية
-            والكفاءة. مركز رفيق للصيانة وقطع الغيار مركز خدمة مستقل وغير خاضع
-            للعلامات التجاريه .
-          </p>
-        </div>
-
-        <!-- العمود الثاني: روابط سريعة -->
-        <div class="footer-col footer-links">
-          <h3>روابط سريعة</h3>
-          <ul>
-            <li><a href="../index.html">الرئيسية</a></li>
-            <li><a href="../who_are_we/index.html">عن الشركة</a></li>
-            <li><a href="../parts/index.html">خدماتنا</a></li>
-            <li><a href="../reviews/index.html">آراء العملاء</a></li>
-            <li><a href="../blog/index.html">المدونة</a></li>
-            <li><a href="../contact_us/index.html">تواصل معنا</a></li>
-          </ul>
-        </div>
-
-        <!-- العمود الثالث: تواصل معنا -->
-        <div class="footer-col footer-contact">
-          <h3>تواصل معنا</h3>
-          <ul class="contact-info">
-            <!-- خط ساخن 1 -->
-            <li>
-              <i class="fa-solid fa-headset"></i>
-              <span>الخط الساخن: <a href="tel:19580">19580</a></span>
-            </li>
-
-            <!-- واتساب -->
-            <li>
-              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-              <span
-                >واتساب:
-                <a href="https://wa.me/201289966660" target="_blank"
-                  >01289966660</a
-                ></span
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- الشريط السفلي للحقوق -->
-      <div class="footer-bottom">
-        <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+                        <!-- واتساب -->
+                        <li>
+                            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                            <span
+                                >واتساب:
+                                <a
+                                    href="https://wa.me/201289966660"
+                                    target="_blank"
+                                    >01289966660</a
+                                ></span
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- الشريط السفلي للحقوق -->
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
+            </div>
+        </footer>
+        <script src="../globals/script.js"></script>
+    </body>
 </html>

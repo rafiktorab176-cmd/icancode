@@ -1,387 +1,463 @@
 <!doctype html>
 <html dir="rtl" lang="ar">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- روابط خط Cairo من جوجل -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>RaFik-Service</title>
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav class="nav">
-      <div class="logo-container">
-        <img src="../assets/raf.webp" width="60" alt="" />
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- روابط خط Cairo من جوجل -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../globals/style.css" />
+        <title>RaFik-Service</title>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="../assets/raf.webp" width="60" alt="" />
+            </div>
 
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      <div class="links-container" id="links-container">
-        <ul class="links">
-          <li><a href="../"> الرئيسية</a></li>
-          <li><a href="../who_are_we/">من نحن </a></li>
-          <li class="dropdown">
-            <a>خدماتنا</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="../parts"> قطع الغيار</a>
-              </li>
-              <li class="dropdown_2">
-                <a>صيانه الاجهزه المنزليه</a>
-                <ul class="dropdown-menu_2">
-                  <li><a href="../Fridge_Repair/">صيانه تلاجات </a></li>
-                  <li>
-                    <a href="../Washing_machine/">صيانه غسالات الملابس</a>
-                  </li>
-                  <li><a href="../Dishwashers/">صيانه غسالات اطباق</a></li>
-                  <li><a href="../D_freezer/">صيانه ديب فريزر</a></li>
-                  <li><a href="../tv/">صيانه شاشات التلفزيون</a></li>
-                  <li><a href="../Microwave/">صيانه الميكرويف</a></li>
-                  <li><a href="../Clothes_Dryer/">صيانه الدراير</a></li>
-                  <li><a href="../Air_conditioner/">صيانه التكيفات</a></li>
+            <div class="links-container" id="links-container">
+                <ul class="links">
+                    <li><a href="../"> الرئيسية</a></li>
+                    <li><a href="../who_are_we/">من نحن </a></li>
+                    <li class="dropdown">
+                        <a>خدماتنا</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../parts"> قطع الغيار</a>
+                            </li>
+                            <li class="dropdown_2">
+                                <a>صيانه الاجهزه المنزليه</a>
+                                <ul class="dropdown-menu_2">
+                                    <li>
+                                        <a href="../Fridge_Repair/"
+                                            >صيانه تلاجات
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../Washing_machine/"
+                                            >صيانه غسالات الملابس</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../Dishwashers/"
+                                            >صيانه غسالات اطباق</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../D_freezer/"
+                                            >صيانه ديب فريزر</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../tv/"
+                                            >صيانه شاشات التلفزيون</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../Microwave/"
+                                            >صيانه الميكرويف</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../Clothes_Dryer/"
+                                            >صيانه الدراير</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="../Air_conditioner/"
+                                            >صيانه التكيفات</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="active">اراء العملاء</a></li>
+                    <li><a href="../blog/">المدونة</a></li>
+                    <li><a href="../contact_us/">تواصل بنا</a></li>
+                    <li><a href="../privacy/">سياسة الخصوصية</a></li>
                 </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a class="active">اراء العملاء</a></li>
-          <li><a href="../blog/">المدونة</a></li>
-          <li><a href="../contact_us/">تواصل بنا</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- END NAVBAR -->
-
-    <!-- قسم آراء العملاء -->
-    <div class="testimonials-wrapper">
-      <!-- الحاوية الأولى -->
-      <div class="testimonial-card">
-        <div class="card-inner">
-          <!-- الوجه الأول (الافتراضي) -->
-          <div class="card-front">
-            <p class="testimonial-content">
-              "تعاملت مع مراكز كتير، بس مركزكم يتميز بالاحترافية في تشخيص أعطال
-              الغسالات، والأسعار كانت مناسبة جداً مقارنة بجودة الخدمة."
-            </p>
-            <div class="customer-info">
-              <div class="customer-icon-container">
-                <i class="fa-solid fa-user-tie"></i>
-              </div>
-              <div class="customer-details">
-                <span class="customer-name">المهندس أحمد علي</span>
-                <span class="customer-location">(الإسكندرية)</span>
-              </div>
             </div>
-          </div>
-          <!-- الوجه الثاني (يظهر مع الوقوف بالماوس) -->
-          <div class="card-back">
-            <p class="testimonial-content">
-              "شكراً جداً لسرعة الاستجابة والدقة في المواعيد، الصيانة تمت في نفس
-              اليوم والأجهزة شغال تمام."
-            </p>
-            <div class="customer-info">
-              <div class="customer-icon-container">
-                <i class="fa-solid fa-user-large"></i>
-              </div>
-              <div class="customer-details">
-                <span class="customer-name">مدام سلوى ممدوح</span>
-                <span class="customer-location">(حلوان)</span>
-              </div>
+        </nav>
+        <!-- END NAVBAR -->
+
+        <!-- قسم آراء العملاء -->
+        <div class="testimonials-wrapper">
+            <!-- الحاوية الأولى -->
+            <div class="testimonial-card">
+                <div class="card-inner">
+                    <!-- الوجه الأول (الافتراضي) -->
+                    <div class="card-front">
+                        <p class="testimonial-content">
+                            "تعاملت مع مراكز كتير، بس مركزكم يتميز بالاحترافية
+                            في تشخيص أعطال الغسالات، والأسعار كانت مناسبة جداً
+                            مقارنة بجودة الخدمة."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-icon-container">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="customer-details">
+                                <span class="customer-name"
+                                    >المهندس أحمد علي</span
+                                >
+                                <span class="customer-location"
+                                    >(الإسكندرية)</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- الوجه الثاني (يظهر مع الوقوف بالماوس) -->
+                    <div class="card-back">
+                        <p class="testimonial-content">
+                            "شكراً جداً لسرعة الاستجابة والدقة في المواعيد،
+                            الصيانة تمت في نفس اليوم والأجهزة شغال تمام."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-icon-container">
+                                <i class="fa-solid fa-user-large"></i>
+                            </div>
+                            <div class="customer-details">
+                                <span class="customer-name"
+                                    >مدام سلوى ممدوح</span
+                                >
+                                <span class="customer-location">(حلوان)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- الحاوية الثانية -->
-      <div class="testimonial-card">
-        <div class="card-inner">
-          <!-- الوجه الأول -->
-          <div class="card-front">
-            <p class="testimonial-content">
-              "خدمة العملاء تابعت معايا بعد الزيارة عشان يتأكدوا إن الثلاجة
-              شغالة تمام، وده بيبين إنهم مهتمين برضا العميل فعلاً."
-            </p>
-            <div class="customer-info">
-              <div class="customer-icon-container">
-                <i class="fa-solid fa-user-tie"></i>
-              </div>
-              <div class="customer-details">
-                <span class="customer-name">أستاذ هاني يوسف</span>
-                <span class="customer-location">(القليوبية - بنها)</span>
-              </div>
+            <!-- الحاوية الثانية -->
+            <div class="testimonial-card">
+                <div class="card-inner">
+                    <!-- الوجه الأول -->
+                    <div class="card-front">
+                        <p class="testimonial-content">
+                            "خدمة العملاء تابعت معايا بعد الزيارة عشان يتأكدوا
+                            إن الثلاجة شغالة تمام، وده بيبين إنهم مهتمين برضا
+                            العميل فعلاً."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-icon-container">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="customer-details">
+                                <span class="customer-name"
+                                    >أستاذ هاني يوسف</span
+                                >
+                                <span class="customer-location"
+                                    >(القليوبية - بنها)</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <!-- الوجه الثاني -->
+                    <div class="card-back">
+                        <p class="testimonial-content">
+                            "قطع غيار أصلية بضمان حقيقي، والمهندس كان فاهم جداً
+                            وشرحلي سبب المشكلة بكل أمانة."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-icon-container">
+                                <i class="fa-solid fa-user-large"></i>
+                            </div>
+                            <div class="customer-details">
+                                <span class="customer-name"
+                                    >دكتورة إيناس محمود</span
+                                >
+                                <span class="customer-location">(الجيزة)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- الوجه الثاني -->
-          <div class="card-back">
-            <p class="testimonial-content">
-              "قطع غيار أصلية بضمان حقيقي، والمهندس كان فاهم جداً وشرحلي سبب
-              المشكلة بكل أمانة."
-            </p>
-            <div class="customer-info">
-              <div class="customer-icon-container">
-                <i class="fa-solid fa-user-large"></i>
-              </div>
-              <div class="customer-details">
-                <span class="customer-name">دكتورة إيناس محمود</span>
-                <span class="customer-location">(الجيزة)</span>
-              </div>
+
+            <!-- الحاوية الثالثة -->
+            <div class="testimonial-card">
+                <div class="card-inner">
+                    <!-- الوجه الأول -->
+                    <div class="card-front">
+                        <p class="testimonial-content">
+                            "خدمة ممتازة وسعر الزيارة والقطع معقول جداً، صلحولي
+                            الثلاجة في البيت ووفروا عليا تعب النقل."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-icon-container">
+                                <i class="fa-solid fa-user-large"></i>
+                            </div>
+                            <div class="customer-details">
+                                <span class="customer-name"
+                                    >مدام سلوى ممدوح</span
+                                >
+                                <span class="customer-location">(حلوان)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- الوجه الثاني -->
+                    <div class="card-back">
+                        <p class="testimonial-content">
+                            "تجربة رائعة من أول مكالمة لخدمة العملاء لحد ما
+                            الفني أتم الصيانة، بنصح أي حد يتعامل معاهم."
+                        </p>
+                        <div class="customer-info">
+                            <div class="customer-icon-container">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="customer-details">
+                                <span class="customer-name"
+                                    >الأستاذ محمود مصطفى</span
+                                >
+                                <span class="customer-location">(القاهرة)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+        <section class="why-choose-us">
+            <div class="container">
+                <!-- القسم الأول -->
+                <p class="intro-text">
+                    <strong
+                        >لماذا يختار آلاف العملاء مركز صيانة المعتمد؟</strong
+                    >
+                    لأننا لسنا مجرد مركز صيانة، بل نحن شركاؤك في الحفاظ على
+                    أجهزتك المنزلية. نحن نفخر بكوننا الوكيل المعتمد الذي يقدم
+                    حلولاً متكاملة للصيانة بأعلى معايير الجودة العالمية.
+                </p>
 
-      <!-- الحاوية الثالثة -->
-      <div class="testimonial-card">
-        <div class="card-inner">
-          <!-- الوجه الأول -->
-          <div class="card-front">
-            <p class="testimonial-content">
-              "خدمة ممتازة وسعر الزيارة والقطع معقول جداً، صلحولي الثلاجة في
-              البيت ووفروا عليا تعب النقل."
-            </p>
-            <div class="customer-info">
-              <div class="customer-icon-container">
-                <i class="fa-solid fa-user-large"></i>
-              </div>
-              <div class="customer-details">
-                <span class="customer-name">مدام سلوى ممدوح</span>
-                <span class="customer-location">(حلوان)</span>
-              </div>
+                <ul class="features-list">
+                    <li>
+                        <strong>خبرة تمتد لسنوات:</strong> نمتلك فريقاً من أمهر
+                        المهندسين والفنيين المدربين على التعامل مع أعقد الأعطال
+                        بدقة واحترافية.
+                    </li>
+                    <li>
+                        <strong>قطع غيار أصلية 100%:</strong> لا نساوم أبداً على
+                        الجودة؛ لذلك نستخدم فقط قطع الغيار الأصلية التي تضمن
+                        إطالة عمر جهازك وكفاءته.
+                    </li>
+                    <li>
+                        <strong>سرعة استجابة فائقة:</strong> نحن نقدر وقتك؛ لذا
+                        نضمن لك زيارة منزلية فورية في أغلب الأحيان فور اتصالك
+                        بخطنا الساخن 19580.
+                    </li>
+                    <li>
+                        <strong>ضمان حقيقي ومعتمد:</strong> نقدم لعملائنا شهادة
+                        ضمان معتمدة على أعمال الصيانة وقطع الغيار، مما يمنحك
+                        راحة البال التامة.
+                    </li>
+                    <li>
+                        <strong>تغطية شاملة:</strong> أينما كنت في القاهرة،
+                        الجيزة، الإسكندرية أو الدلتا، ففريقنا مستعدون للوصول
+                        إليك وتقديم الخدمة في منزلك دون الحاجة لنقل الجهاز.
+                    </li>
+                </ul>
+
+                <p class="conclusion-text">
+                    نحن نؤمن بأن ثقة العميل هي رأس مالنا الحقيقي، ولذلك يسعى
+                    فريقنا دائماً لتقديم تجربة صيانة مريحة، شفافة، وبأسعار
+                    تنافسية تناسب الجميع.
+                </p>
+
+                <!-- العنوان الرئيسي والفقرة الفرعية -->
+                <h2 class="section-title">
+                    لماذا يضع آلاف العملاء ثقتهم في مركزنا؟
+                </h2>
+
+                <p class="section-subtitle">
+                    <strong>نحن لا نصلح أجهزة... نحن نعيد الأمان لبيتك</strong>
+                    على مدار سنوات من العمل الشاق والالتزام، نجحنا في تحويل
+                    مركزنا من مجرد مركز صيانة إلى صرح فني يثق به العملاء في كل
+                    أنحاء مصر. نحن ندرك أن تعطل جهاز منزلي يعني توقف الحياة في
+                    البيت، ولذلك جعلنا "السرعة" و"الدقة" هما شعارنا الدائم.
+                </p>
+
+                <!-- قائمة النقاط الرئيسية -->
+                <ul class="features-list">
+                    <li>
+                        <strong>خبرة مؤسسية عريقة:</strong> مركزنا ليس مجرد
+                        فنيين، بل هو منظومة متكاملة من المهندسين الاستشاريين
+                        والفنيين الذين تدربوا على التعامل مع أدق التفاصيل
+                        التقنية لمختلف الأجهزة.
+                    </li>
+                    <li>
+                        <strong>ثقة متبادلة:</strong> نحن نفخر بأن قاعدة عملائنا
+                        تتخطى الآلاف، والذين يوصون بخدماتنا لأصدقائهم وعائلاتهم
+                        بناءً على تجاربهم الواقعية مع أمانتنا واحترافيتنا.
+                    </li>
+                    <li>
+                        <strong>الريادة في الدعم الفني:</strong> نوفر أحدث
+                        المعدات وأجهزة الفحص الدقيق لضمان تشخيص العطل من المرة
+                        الأولى، مما يوفر عليك الوقت والمال.
+                    </li>
+                    <li>
+                        <strong>الالتزام الأخلاقي قبل المهني:</strong> في
+                        مركزنا، الأمانة هي الأساس؛ لا نغير إلا ما يحتاج للتغيير
+                        فعلاً، ونستخدم أفضل البدائل المعتمدة لضمان أداء الجهاز
+                        لسنوات طويلة.
+                    </li>
+                    <li>
+                        <strong>سرعة الانتشار والوصول:</strong> أسطول سياراتنا
+                        مجهز دائماً للتحرك في أسرع وقت، لنصل إليك أينما كنت
+                        بنغطية تشمل القاهرة والجيزة والإسكندرية والدلتا.
+                    </li>
+                    <li>
+                        <strong>خدمة ما بعد الصيانة:</strong> علاقتنا بك لا
+                        تنتهي بمجرد الإصلاح؛ فريق الدعم الفني يتابع معك للتأكد
+                        من استقرار أداء الجهاز ورضاك التام عن الخدمة المقدمة.
+                    </li>
+                </ul>
+
+                <!-- قسم القيم الأساسية -->
+                <h3 class="values-title">قيمنا الأساسية:</h3>
+
+                <ul class="features-list values-list">
+                    <li>
+                        <strong>الشفافية المطلقة:</strong> نؤمن بأن الصدق مع
+                        العميل هو أساس النجاح؛ لذا نوضح طبيعة العطل وتكلفة
+                        الإصلاح الحقيقية قبل البدء في أي عمل.
+                    </li>
+                    <li>
+                        <strong>الجودة الفائقة:</strong> لا نقبل بأنصاف الحلول؛
+                        نستخدم قطع الغيار المعتمدة فقط ونتبع أدق المعايير الفنية
+                        في كل عملية صيانة.
+                    </li>
+                    <li>
+                        <strong>احترام الوقت:</strong> ندرك قيمة وقت عملائنا؛
+                        لذلك نلتزم بمواعيدنا بدقة ونوفر أسطولاً مجهزاً للتحرك
+                        السريع في كل المحافظات.
+                    </li>
+                    <li>
+                        <strong>الأمانة والمسؤولية:</strong> نتعامل مع أجهزة
+                        عملائنا وكأنها ملكنا الخاص، ونقدم ضماناً حقيقياً يحمي
+                        حقوق العميل ويضمن رضاه التام.
+                    </li>
+                </ul>
             </div>
-          </div>
-          <!-- الوجه الثاني -->
-          <div class="card-back">
-            <p class="testimonial-content">
-              "تجربة رائعة من أول مكالمة لخدمة العملاء لحد ما الفني أتم الصيانة،
-              بنصح أي حد يتعامل معاهم."
-            </p>
-            <div class="customer-info">
-              <div class="customer-icon-container">
-                <i class="fa-solid fa-user-tie"></i>
-              </div>
-              <div class="customer-details">
-                <span class="customer-name">الأستاذ محمود مصطفى</span>
-                <span class="customer-location">(القاهرة)</span>
-              </div>
+        </section>
+        <!-- CALL US FIXED BUTTON -->
+
+        <button class="call-us">
+            <a href="tel:19580">
+                <img src="../assets/phone.webp" alt="phone icon" />
+            </a>
+        </button>
+
+        <!-- END CALL US FIXED BUTTON -->
+        <!-- WHATSAPP FIXED BUTTON -->
+        <a
+            href="https://wa.me/201289966660"
+            class="fixed-contact-link whatsapp-link"
+            target="_blank"
+        >
+            <img src="../assets/16.webp" alt="WhatsApp" />
+        </a>
+        <!-- END WHATSAPP FIXED BUTTON -->
+
+        <footer class="site-footer">
+            <!-- الشريط العرضي العلوي -->
+
+            <!-- محتوى الفوتر الرئيسي -->
+            <div class="footer-container">
+                <!-- العمود الأول: الشعار والوصف -->
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
+                        <img src="../assets/raf.webp" alt="Logo" />
+                    </div>
+                    <p class="about-text">
+                        تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة
+                        المنزلية لمختلف العلامات التجارية، ونلتزم بتقديم أعلى
+                        مستويات الجودة من خلال استخدام قطع غيار أصلية وفنيين
+                        متخصصين مع توفير ضمان على جميع الخدمات المقدمة من
+                        خلالنا. ، ولا تربطنا بها أي علاقة رسمية أو شراكة تجارية.
+                        كما أن استخدام بعض المصطلحات مثل “التوكيل” أو “مركز
+                        الصيانة” يأتي لأغراض وصفية وتنظيمية فقط، بهدف تسهيل وصول
+                        العملاء إلى خدمات الصيانة والدعم الفني المناسبة عبر
+                        محركات البحث والمنصات الإلكترونية. ونعتز بثقة عملائنا
+                        ونسعى دائمًا لتقديم خدمات صيانة مستقلة تتميز بالمصداقية
+                        والكفاءة. مركز رفيق للصيانة وقطع الغيار مركز خدمة مستقل
+                        وغير خاضع للعلامات التجاريه .
+                    </p>
+                </div>
+
+                <!-- العمود الثاني: روابط سريعة -->
+                <div class="footer-col footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li>
+                            <a href="../who_are_we/index.html">عن الشركة</a>
+                        </li>
+                        <li><a href="../parts/index.html">خدماتنا</a></li>
+                        <li>
+                            <a href="../reviews/index.html">آراء العملاء</a>
+                        </li>
+                        <li><a href="../blog/index.html">المدونة</a></li>
+                        <li>
+                            <a href="../contact_us/index.html">تواصل معنا</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- العمود الثالث: تواصل معنا -->
+                <div class="footer-col footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <ul class="contact-info">
+                        <!-- خط ساخن 1 -->
+                        <li>
+                            <i class="fa-solid fa-headset"></i>
+                            <span
+                                >الخط الساخن:
+                                <a href="tel:19580">19580</a></span
+                            >
+                        </li>
+
+                        <!-- واتساب -->
+                        <li>
+                            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                            <span
+                                >واتساب:
+                                <a
+                                    href="https://wa.me/201289966660"
+                                    target="_blank"
+                                    >01289966660</a
+                                ></span
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="why-choose-us">
-      <div class="container">
-        <!-- القسم الأول -->
-        <p class="intro-text">
-          <strong>لماذا يختار آلاف العملاء مركز صيانة المعتمد؟</strong> لأننا
-          لسنا مجرد مركز صيانة، بل نحن شركاؤك في الحفاظ على أجهزتك المنزلية. نحن
-          نفخر بكوننا الوكيل المعتمد الذي يقدم حلولاً متكاملة للصيانة بأعلى
-          معايير الجودة العالمية.
-        </p>
 
-        <ul class="features-list">
-          <li>
-            <strong>خبرة تمتد لسنوات:</strong> نمتلك فريقاً من أمهر المهندسين
-            والفنيين المدربين على التعامل مع أعقد الأعطال بدقة واحترافية.
-          </li>
-          <li>
-            <strong>قطع غيار أصلية 100%:</strong> لا نساوم أبداً على الجودة؛
-            لذلك نستخدم فقط قطع الغيار الأصلية التي تضمن إطالة عمر جهازك
-            وكفاءته.
-          </li>
-          <li>
-            <strong>سرعة استجابة فائقة:</strong> نحن نقدر وقتك؛ لذا نضمن لك
-            زيارة منزلية فورية في أغلب الأحيان فور اتصالك بخطنا الساخن 19580.
-          </li>
-          <li>
-            <strong>ضمان حقيقي ومعتمد:</strong> نقدم لعملائنا شهادة ضمان معتمدة
-            على أعمال الصيانة وقطع الغيار، مما يمنحك راحة البال التامة.
-          </li>
-          <li>
-            <strong>تغطية شاملة:</strong> أينما كنت في القاهرة، الجيزة،
-            الإسكندرية أو الدلتا، ففريقنا مستعدون للوصول إليك وتقديم الخدمة في
-            منزلك دون الحاجة لنقل الجهاز.
-          </li>
-        </ul>
+            <!-- الشريط السفلي للحقوق -->
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
+            </div>
+        </footer>
 
-        <p class="conclusion-text">
-          نحن نؤمن بأن ثقة العميل هي رأس مالنا الحقيقي، ولذلك يسعى فريقنا دائماً
-          لتقديم تجربة صيانة مريحة، شفافة، وبأسعار تنافسية تناسب الجميع.
-        </p>
-
-        <!-- العنوان الرئيسي والفقرة الفرعية -->
-        <h2 class="section-title">لماذا يضع آلاف العملاء ثقتهم في مركزنا؟</h2>
-
-        <p class="section-subtitle">
-          <strong>نحن لا نصلح أجهزة... نحن نعيد الأمان لبيتك</strong> على مدار
-          سنوات من العمل الشاق والالتزام، نجحنا في تحويل مركزنا من مجرد مركز
-          صيانة إلى صرح فني يثق به العملاء في كل أنحاء مصر. نحن ندرك أن تعطل
-          جهاز منزلي يعني توقف الحياة في البيت، ولذلك جعلنا "السرعة" و"الدقة"
-          هما شعارنا الدائم.
-        </p>
-
-        <!-- قائمة النقاط الرئيسية -->
-        <ul class="features-list">
-          <li>
-            <strong>خبرة مؤسسية عريقة:</strong> مركزنا ليس مجرد فنيين، بل هو
-            منظومة متكاملة من المهندسين الاستشاريين والفنيين الذين تدربوا على
-            التعامل مع أدق التفاصيل التقنية لمختلف الأجهزة.
-          </li>
-          <li>
-            <strong>ثقة متبادلة:</strong> نحن نفخر بأن قاعدة عملائنا تتخطى
-            الآلاف، والذين يوصون بخدماتنا لأصدقائهم وعائلاتهم بناءً على تجاربهم
-            الواقعية مع أمانتنا واحترافيتنا.
-          </li>
-          <li>
-            <strong>الريادة في الدعم الفني:</strong> نوفر أحدث المعدات وأجهزة
-            الفحص الدقيق لضمان تشخيص العطل من المرة الأولى، مما يوفر عليك الوقت
-            والمال.
-          </li>
-          <li>
-            <strong>الالتزام الأخلاقي قبل المهني:</strong> في مركزنا، الأمانة هي
-            الأساس؛ لا نغير إلا ما يحتاج للتغيير فعلاً، ونستخدم أفضل البدائل
-            المعتمدة لضمان أداء الجهاز لسنوات طويلة.
-          </li>
-          <li>
-            <strong>سرعة الانتشار والوصول:</strong> أسطول سياراتنا مجهز دائماً
-            للتحرك في أسرع وقت، لنصل إليك أينما كنت بنغطية تشمل القاهرة والجيزة
-            والإسكندرية والدلتا.
-          </li>
-          <li>
-            <strong>خدمة ما بعد الصيانة:</strong> علاقتنا بك لا تنتهي بمجرد
-            الإصلاح؛ فريق الدعم الفني يتابع معك للتأكد من استقرار أداء الجهاز
-            ورضاك التام عن الخدمة المقدمة.
-          </li>
-        </ul>
-
-        <!-- قسم القيم الأساسية -->
-        <h3 class="values-title">قيمنا الأساسية:</h3>
-
-        <ul class="features-list values-list">
-          <li>
-            <strong>الشفافية المطلقة:</strong> نؤمن بأن الصدق مع العميل هو أساس
-            النجاح؛ لذا نوضح طبيعة العطل وتكلفة الإصلاح الحقيقية قبل البدء في أي
-            عمل.
-          </li>
-          <li>
-            <strong>الجودة الفائقة:</strong> لا نقبل بأنصاف الحلول؛ نستخدم قطع
-            الغيار المعتمدة فقط ونتبع أدق المعايير الفنية في كل عملية صيانة.
-          </li>
-          <li>
-            <strong>احترام الوقت:</strong> ندرك قيمة وقت عملائنا؛ لذلك نلتزم
-            بمواعيدنا بدقة ونوفر أسطولاً مجهزاً للتحرك السريع في كل المحافظات.
-          </li>
-          <li>
-            <strong>الأمانة والمسؤولية:</strong> نتعامل مع أجهزة عملائنا وكأنها
-            ملكنا الخاص، ونقدم ضماناً حقيقياً يحمي حقوق العميل ويضمن رضاه التام.
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- CALL US FIXED BUTTON -->
-
-    <button class="call-us">
-      <a href="tel:19580">
-        <img src="../assets/phone.webp" alt="phone icon" />
-      </a>
-    </button>
-
-    <!-- END CALL US FIXED BUTTON -->
-    <!-- WHATSAPP FIXED BUTTON -->
-    <a
-      href="https://wa.me/201289966660"
-      class="fixed-contact-link whatsapp-link"
-      target="_blank"
-    >
-      <img src="../assets/16.webp" alt="WhatsApp" />
-    </a>
-    <!-- END WHATSAPP FIXED BUTTON -->
-
-    <footer class="site-footer">
-      <!-- الشريط العرضي العلوي -->
-
-      <!-- محتوى الفوتر الرئيسي -->
-      <div class="footer-container">
-        <!-- العمود الأول: الشعار والوصف -->
-        <div class="footer-col footer-about">
-          <div class="footer-logo">
-            <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
-            <img src="../assets/raf.webp" alt="Logo" />
-          </div>
-          <p class="about-text">
-            تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة المنزلية لمختلف
-            العلامات التجارية، ونلتزم بتقديم أعلى مستويات الجودة من خلال استخدام
-            قطع غيار أصلية وفنيين متخصصين مع توفير ضمان على جميع الخدمات المقدمة
-            من خلالنا. ، ولا تربطنا بها أي علاقة رسمية أو شراكة تجارية. كما أن
-            استخدام بعض المصطلحات مثل “التوكيل” أو “مركز الصيانة” يأتي لأغراض
-            وصفية وتنظيمية فقط، بهدف تسهيل وصول العملاء إلى خدمات الصيانة والدعم
-            الفني المناسبة عبر محركات البحث والمنصات الإلكترونية. ونعتز بثقة
-            عملائنا ونسعى دائمًا لتقديم خدمات صيانة مستقلة تتميز بالمصداقية
-            والكفاءة. مركز رفيق للصيانة وقطع الغيار مركز خدمة مستقل وغير خاضع
-            للعلامات التجاريه .
-          </p>
-        </div>
-
-        <!-- العمود الثاني: روابط سريعة -->
-        <div class="footer-col footer-links">
-          <h3>روابط سريعة</h3>
-          <ul>
-            <li><a href="../index.html">الرئيسية</a></li>
-            <li><a href="../who_are_we/index.html">عن الشركة</a></li>
-            <li><a href="../parts/index.html">خدماتنا</a></li>
-            <li><a href="../reviews/index.html">آراء العملاء</a></li>
-            <li><a href="../blog/index.html">المدونة</a></li>
-            <li><a href="../contact_us/index.html">تواصل معنا</a></li>
-          </ul>
-        </div>
-
-        <!-- العمود الثالث: تواصل معنا -->
-        <div class="footer-col footer-contact">
-          <h3>تواصل معنا</h3>
-          <ul class="contact-info">
-            <!-- خط ساخن 1 -->
-            <li>
-              <i class="fa-solid fa-headset"></i>
-              <span>الخط الساخن: <a href="tel:19580">19580</a></span>
-            </li>
-
-            <!-- واتساب -->
-            <li>
-              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-              <span
-                >واتساب:
-                <a href="https://wa.me/201289966660" target="_blank"
-                  >01289966660</a
-                ></span
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- الشريط السفلي للحقوق -->
-      <div class="footer-bottom">
-        <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
-      </div>
-    </footer>
-
-    <!-- مكتبة الأيقونات (Font Awesome) ضع هذا السطر في <head> للموقع إذا لم تكن مضافة -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script src="script.js"></script>
-  </body>
+        <!-- مكتبة الأيقونات (Font Awesome) ضع هذا السطر في <head> للموقع إذا لم تكن مضافة -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="../globals/script.js"></script>
+    </body>
 </html>
