@@ -1,201 +1,297 @@
 <!doctype html>
 <html dir="rtl" lang="ar">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- روابط خط Cairo من جوجل -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="../globals/style.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <title>RaFik-Service</title>
-    </head>
-    <body>
-        <!-- NAVBAR -->
-        <nav class="nav">
-            <div class="logo-container">
-                <img src="../assets/raf.webp" width="60" alt="" />
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- روابط خط Cairo من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../globals/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>RaFik-Service</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="logo-container">
+        <img src="../assets/raf.webp" width="60" alt="" />
+      </div>
 
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <div class="links-container" id="links-container">
-                <ul class="links">
-                    <li><a href="../"> الرئيسية</a></li>
-                    <li><a href="../who_are_we/">من نحن </a></li>
-                    <li class="dropdown">
-                        <a>خدماتنا</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../parts"> قطع الغيار</a>
-                            </li>
-                            <li class="dropdown_2">
-                                <a>صيانه الاجهزه المنزليه</a>
-                                <ul class="dropdown-menu_2">
-                                    <li>
-                                        <a href="../Fridge_Repair/"
-                                            >صيانه تلاجات
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="../Washing_machine/"
-                                            >صيانه غسالات الملابس</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="../Dishwashers/"
-                                            >صيانه غسالات اطباق</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="../D_freezer/"
-                                            >صيانه ديب فريزر</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="../tv/"
-                                            >صيانه شاشات التلفزيون</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="../Microwave/"
-                                            >صيانه الميكرويف</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="../Clothes_Dryer/"
-                                            >صيانه الدراير</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="../Air_conditioner/"
-                                            >صيانه التكيفات</a
-                                        >
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="../reviews/">اراء العملاء</a></li>
-                    <li><a href="../blog/">المدونة</a></li>
-                    <li><a href="../contact_us/">تواصل بنا</a></li>
-                    <li><a class="active">سياسة الخصوصية</a></li>
+      <div class="links-container" id="links-container">
+        <ul class="links">
+          <li><a href="../"> الرئيسية</a></li>
+          <li><a href="../who_are_we/">من نحن </a></li>
+          <li class="dropdown">
+            <a>خدماتنا</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../parts"> قطع الغيار</a>
+              </li>
+              <li class="dropdown_2">
+                <a>صيانه الاجهزه المنزليه</a>
+                <ul class="dropdown-menu_2">
+                  <li>
+                    <a href="../Fridge_Repair/">صيانه تلاجات </a>
+                  </li>
+                  <li>
+                    <a href="../Washing_machine/">صيانه غسالات الملابس</a>
+                  </li>
+                  <li>
+                    <a href="../Dishwashers/">صيانه غسالات اطباق</a>
+                  </li>
+                  <li>
+                    <a href="../D_freezer/">صيانه ديب فريزر</a>
+                  </li>
+                  <li>
+                    <a href="../tv/">صيانه شاشات التلفزيون</a>
+                  </li>
+                  <li>
+                    <a href="../Microwave/">صيانه الميكرويف</a>
+                  </li>
+                  <li>
+                    <a href="../Clothes_Dryer/">صيانه الدراير</a>
+                  </li>
+                  <li>
+                    <a href="../Air_conditioner/">صيانه التكيفات</a>
+                  </li>
                 </ul>
-            </div>
-        </nav>
-        <!-- END NAVBAR -->
+              </li>
+            </ul>
+          </li>
+          <li><a href="../reviews/">اراء العملاء</a></li>
+          <li><a href="../blog/">المدونة</a></li>
+          <li><a href="../contact_us/">تواصل بنا</a></li>
+          <li><a class="active">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
 
-        <!-- CALL US FIXED BUTTON -->
+    <!-- CALL US FIXED BUTTON -->
 
-        <button class="call-us">
-            <a href="tel:19580">
-                <img src="../assets/phone.webp" alt="phone icon" />
-            </a>
-        </button>
+    <button class="call-us">
+      <a href="tel:19580">
+        <img src="../assets/phone.webp" alt="phone icon" />
+      </a>
+    </button>
 
-        <!-- END CALL US FIXED BUTTON -->
-        <!-- WHATSAPP FIXED BUTTON -->
-        <a
-            href="https://wa.me/201289966660"
-            class="fixed-contact-link whatsapp-link"
-            target="_blank"
-        >
-            <img src="../assets/16.webp" alt="WhatsApp" />
-        </a>
-        <!-- END WHATSAPP FIXED BUTTON -->
+    <!-- END CALL US FIXED BUTTON -->
+    <!-- WHATSAPP FIXED BUTTON -->
+    <a
+      href="https://wa.me/201289966660"
+      class="fixed-contact-link whatsapp-link"
+      target="_blank"
+    >
+      <img src="../assets/16.webp" alt="WhatsApp" />
+    </a>
+    <!-- END WHATSAPP FIXED BUTTON -->
+    <div class="main-wrapper">
+      <div class="container">
+        <!-- كارت سياسة الخصوصية -->
+        <div class="card">
+          <h2>🔒 سياسة الخصوصية (Privacy Policy)</h2>
 
-        <footer class="site-footer">
-            <!-- الشريط العرضي العلوي -->
+          <!-- 1. المقدمة -->
+          <section class="section-block">
+            <h3>1. المقدمة</h3>
+            <p>
+              مرحباً بك في موقعنا. تهدف هذه السياسة إلى توضيح كيفية جمع واستخدام
+              وحماية بياناتك الشخصية عند استخدامك للموقع أو الخدمات المتاحة
+              عليه.
+            </p>
+          </section>
 
-            <!-- محتوى الفوتر الرئيسي -->
-            <div class="footer-container">
-                <!-- العمود الأول: الشعار والوصف -->
-                <div class="footer-col footer-about">
-                    <div class="footer-logo">
-                        <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
-                        <img src="../assets/raf.webp" alt="Logo" />
-                    </div>
-                    <p class="about-text">
-                        تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة
-                        المنزلية لمختلف العلامات التجارية، ونلتزم بتقديم أعلى
-                        مستويات الجودة من خلال استخدام قطع غيار أصلية وفنيين
-                        متخصصين مع توفير ضمان على جميع الخدمات المقدمة من
-                        خلالنا. ، ولا تربطنا بها أي علاقة رسمية أو شراكة تجارية.
-                        كما أن استخدام بعض المصطلحات مثل “التوكيل” أو “مركز
-                        الصيانة” يأتي لأغراض وصفية وتنظيمية فقط، بهدف تسهيل وصول
-                        العملاء إلى خدمات الصيانة والدعم الفني المناسبة عبر
-                        محركات البحث والمنصات الإلكترونية. ونعتز بثقة عملائنا
-                        ونسعى دائمًا لتقديم خدمات صيانة مستقلة تتميز بالمصداقية
-                        والكفاءة. مركز رفيق للصيانة وقطع الغيار مركز خدمة مستقل
-                        وغير خاضع للعلامات التجاريه .
-                    </p>
-                </div>
+          <!-- 2. جمع البيانات -->
+          <section class="section-block">
+            <h3>2. جمع البيانات</h3>
+            <p>
+              قد نجمع بعض المعلومات الشخصية والتقنية عند استخدامك للموقع، وتشمل:
+            </p>
+            <ul>
+              <li>
+                الاسم الشخصي ومعلومات التواصل مثل البريد الإلكتروني ورقم الهاتف.
+              </li>
+              <li>
+                عنوان بروتوكول الإنترنت (IP Address) ونوع المتصفح ونظام التشغيل.
+              </li>
+            </ul>
+          </section>
 
-                <!-- العمود الثاني: روابط سريعة -->
-                <div class="footer-col footer-links">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="../index.html">الرئيسية</a></li>
-                        <li>
-                            <a href="../who_are_we/index.html">عن الشركة</a>
-                        </li>
-                        <li><a href="../parts/index.html">خدماتنا</a></li>
-                        <li>
-                            <a href="../reviews/index.html">آراء العملاء</a>
-                        </li>
-                        <li><a href="../blog/index.html">المدونة</a></li>
-                        <li>
-                            <a href="../contact_us/index.html">تواصل معنا</a>
-                        </li>
-                    </ul>
-                </div>
+          <!-- 3. استخدام البيانات -->
+          <section class="section-block">
+            <h3>3. استخدام البيانات</h3>
+            <p>نستخدم البيانات التي نجمعها للأغراض التالية:</p>
+            <ul>
+              <li>تقديم الخدمات وتلبية طلبات الاستفسار والصيانة بشكل كفء.</li>
+              <li>تحسين وتطوير أداء الموقع وتجربة المستخدم بشكل مستمر.</li>
+              <li>متابعة الدعم الفني والتواصل المباشر مع الزوار.</li>
+            </ul>
+          </section>
 
-                <!-- العمود الثالث: تواصل معنا -->
-                <div class="footer-col footer-contact">
-                    <h3>تواصل معنا</h3>
-                    <ul class="contact-info">
-                        <!-- خط ساخن 1 -->
-                        <li>
-                            <i class="fa-solid fa-headset"></i>
-                            <span
-                                >الخط الساخن:
-                                <a href="tel:19580">19580</a></span
-                            >
-                        </li>
+          <!-- 4. مشاركة البيانات -->
+          <section class="section-block">
+            <h3>4. مشاركة البيانات</h3>
+            <p>
+              نحن نلتزم بعدم بيع أو تأجير أو مشاركة بياناتك الشخصية مع أي أطراف
+              ثالثة أو شركات إعلانية، إلا في الحالات التي يتطلبها القانون أو
+              لتقديم الخدمة المطلوبة بموافقتك.
+            </p>
+          </section>
 
-                        <!-- واتساب -->
-                        <li>
-                            <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-                            <span
-                                >واتساب:
-                                <a
-                                    href="https://wa.me/201289966660"
-                                    target="_blank"
-                                    >01289966660</a
-                                ></span
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          <!-- 5. ملفات تعريف الارتباط (Cookies) -->
+          <section class="section-block">
+            <h3>5. ملفات تعريف الارتباط (Cookies)</h3>
+            <p>
+              يستخدم الموقع ملفات تعريف الارتباط لتخزين تفضيلات الزوار وتسهيل
+              عملية التصفح وتسريع تحميل الصفحات. يمكنك تعطيل هذه الملفات من
+              إعدادات متصفحك في أي وقت.
+            </p>
+          </section>
 
-            <!-- الشريط السفلي للحقوق -->
-            <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
-            </div>
-        </footer>
-        <script src="../globals/script.js"></script>
-    </body>
+          <!-- 6. حماية البيانات -->
+          <section class="section-block">
+            <h3>6. حماية البيانات</h3>
+            <p>
+              نطبق معايير أمان وتقنيات تشفير مناسبة لحماية معلوماتك الشخصية من
+              الوصول غير المصرح به، أو التعديل، أو الإفصاح، أو الإتلاف.
+            </p>
+          </section>
+
+          <!-- 7. حقوق المستخدم -->
+          <section class="section-block">
+            <h3>7. حقوق المستخدم</h3>
+            <p>
+              يحق لك في أي وقت طلب الوصول إلى بياناتك الشخصية المخزنة لدينا، أو
+              تعديلها، أو طلب حذفها نهائياً من سجلاتنا.
+            </p>
+          </section>
+
+          <!-- 8. معلومات الاتصال -->
+          <section class="section-block">
+            <h3>8. معلومات الاتصال</h3>
+            <p>
+              إذا كان لديك أي استفسار أو طلب يتعلق بسياسة الخصوصية وحماية
+              البيانات، يمكنك التواصل مع إدارة الموقع مباشرة عبر البريد
+              الإلكتروني الخاص بالدعم.
+            </p>
+          </section>
+        </div>
+
+        <!-- كارت إخلاء المسؤولية -->
+        <div class="card disclaimer">
+          <h2>⚖️ إخلاء المسؤولية (Disclaimer)</h2>
+          <p>
+            يرجى قراءة التنبيهات التالية بعناية قبل الاعتماد على أي خدمات أو
+            معلومات معروضة داخل الموقع:
+          </p>
+
+          <ul>
+            <li>
+              <strong>طبيعة المحتوى:</strong> جميع المعلومات الواردة في الموقع
+              هي لغرض التوعية والتعريف بالخدمات فقط، ولا تُعتبر استشارة قانونية
+              أو مالية ملزمة.
+            </li>
+            <li>
+              <strong>الخدمات الميدانية:</strong> يتم الاتفاق على تفاصيل الصيانة
+              والتكاليف النهائية بشكل مباشر مع الفنيين بناءً على المعاينة
+              الفعلية.
+            </li>
+            <li>
+              <strong>التعديلات:</strong> نحتفظ بحق تعديل أو تحديث هذه الشروط في
+              أي وقت وفقاً لمتطلبات الخدمة دون إشعار مسبق.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <!-- الشريط العرضي العلوي -->
+
+      <!-- محتوى الفوتر الرئيسي -->
+      <div class="footer-container">
+        <!-- العمود الأول: الشعار والوصف -->
+        <div class="footer-col footer-about">
+          <div class="footer-logo">
+            <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
+            <img src="../assets/raf.webp" alt="Logo" />
+          </div>
+          <p class="about-text">
+            تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة المنزلية لمختلف
+            العلامات التجارية، ونلتزم بتقديم أعلى مستويات الجودة من خلال استخدام
+            قطع غيار أصلية وفنيين متخصصين مع توفير ضمان على جميع الخدمات المقدمة
+            من خلالنا. ، ولا تربطنا بها أي علاقة رسمية أو شراكة تجارية. كما أن
+            استخدام بعض المصطلحات مثل “التوكيل” أو “مركز الصيانة” يأتي لأغراض
+            وصفية وتنظيمية فقط، بهدف تسهيل وصول العملاء إلى خدمات الصيانة والدعم
+            الفني المناسبة عبر محركات البحث والمنصات الإلكترونية. ونعتز بثقة
+            عملائنا ونسعى دائمًا لتقديم خدمات صيانة مستقلة تتميز بالمصداقية
+            والكفاءة. مركز رفيق للصيانة وقطع الغيار مركز خدمة مستقل وغير خاضع
+            للعلامات التجاريه .
+          </p>
+        </div>
+
+        <!-- العمود الثاني: روابط سريعة -->
+        <div class="footer-col footer-links">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li>
+              <a href="../who_are_we/index.html">عن الشركة</a>
+            </li>
+            <li><a href="../parts/index.html">خدماتنا</a></li>
+            <li>
+              <a href="../reviews/index.html">آراء العملاء</a>
+            </li>
+            <li><a href="../blog/index.html">المدونة</a></li>
+            <li>
+              <a href="../contact_us/index.html">تواصل معنا</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث: تواصل معنا -->
+        <div class="footer-col footer-contact">
+          <h3>تواصل معنا</h3>
+          <ul class="contact-info">
+            <!-- خط ساخن 1 -->
+            <li>
+              <i class="fa-solid fa-headset"></i>
+              <span>الخط الساخن: <a href="tel:19580">19580</a></span>
+            </li>
+
+            <!-- واتساب -->
+            <li>
+              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+              <span
+                >واتساب:
+                <a href="https://wa.me/201289966660" target="_blank"
+                  >01289966660</a
+                ></span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- الشريط السفلي للحقوق -->
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
+      </div>
+    </footer>
+    <script src="../globals/script.js"></script>
+  </body>
 </html>
