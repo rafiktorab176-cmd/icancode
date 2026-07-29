@@ -282,12 +282,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 110vh;
+  min-height: 105vh;
 }
 
 .hero-container {
   max-width: 1200px;
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;

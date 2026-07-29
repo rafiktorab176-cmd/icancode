@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- مكتبة الأيقونات (Font Awesome) ضع هذا السطر في <head> للموقع إذا لم تكن مضافة -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>RaFik-Service</title>
   </head>
@@ -17,7 +22,7 @@
     <!-- NAVBAR -->
     <nav class="nav">
       <div class="logo-container">
-        <img src="./assets/raf.jpg" width="60" alt="" />
+        <img src="./assets/raf.webp" width="60" alt="" />
       </div>
 
       <button class="hamburger" id="hamburger">
@@ -63,7 +68,7 @@
 
     <button class="call-us">
       <a href="tel:19580">
-        <img src="./assets/phone.png" alt="phone icon" />
+        <img src="./assets/phone.webp" alt="phone icon" />
       </a>
     </button>
 
@@ -74,13 +79,13 @@
       class="fixed-contact-link whatsapp-link"
       target="_blank"
     >
-      <img src="./assets/apple.png" alt="WhatsApp" />
+      <img src="./assets/16.webp" alt="WhatsApp" />
     </a>
     <!-- END WHATSAPP FIXED BUTTON -->
 
     <section class="hero-section">
       <div class="hero-section-img">
-        <img src="./assets/mo.jpg" alt="photo-hero section" />
+        <img src="./assets/mo.webp" alt="photo-hero section" />
       </div>
       <div class="hero-overlay"></div>
       <div class="container">
@@ -92,7 +97,9 @@
             الأجهزة المنزلية. مهمتنا تقديم خدمات صيانة فورية وموثوقة مع ضمان قطع
             الغيار الأصلية ودعم فني متواصل على مدار الساعة.
           </p>
-          <button class="btn-hero">اتصل بنا</button>
+          <button class="call-us-b">
+            <a href="tel:19580"> اتصل بنا</a>
+          </button>
         </div>
       </div>
     </section>
@@ -101,35 +108,38 @@
       <div class="flex-container">
         <div class="main-card">
           <div class="card-icon-placeholder">
-            <img src="./assets/quality-assurance.png" alt="مركز معتمد " />
+            <img src="./assets/quality-assurance.webp" alt="مركز معتمد " />
           </div>
           <h3>مركز صيانة معتمد</h3>
           <p>جميع فروعنا مرخصة لضمان أعلى معايير الخدمة.</p>
         </div>
         <div class="main-card">
           <div class="card-icon-placeholder">
-            <img src="./assets/plumber.png" alt="فنين اعلي كفاءه" />
+            <img src="./assets/plumber.webp" alt="فنين اعلي كفاءه" />
           </div>
           <h3>مهندسون معتمدون</h3>
           <p>نخبة من الـخبراء المدربين على الصيانة المنزلية.</p>
         </div>
         <div class="main-card">
           <div class="card-icon-placeholder">
-            <img src="./assets/service-center.png" alt="خدمه من المنزل" />
+            <img src="./assets/service-center.webp" alt="خدمه من المنزل" />
           </div>
           <h3>خدمة من المنزل</h3>
           <p>نصلك حتى باب منزلك دون حاجة لنقل الجهاز.</p>
         </div>
         <div class="main-card">
           <div class="card-icon-placeholder">
-            <img src="./assets/product-management.png" alt="ضمان علي الصيانه" />
+            <img
+              src="./assets/product-management.webp"
+              alt="ضمان علي الصيانه"
+            />
           </div>
           <h3>ضمان شامل</h3>
           <p>نقدم ضماناً حقيقياً على الصيانة وقطع الغيار.</p>
         </div>
         <div class="main-card">
           <div class="card-icon-placeholder">
-            <img src="./assets/24.png" alt="خدمة من المنزل" />
+            <img src="./assets/24.webp" alt="خدمة من المنزل" />
           </div>
           <h3>اتصل بنا</h3>
           <p>دعم فني فوري واستشارات على مدار الساعة.</p>
@@ -145,7 +155,7 @@
           <!-- الكارد الأول: صيانة تلاجات -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card1.jpg" alt="صيانة تلاجات" />
+              <img src="./assets/card1.webp" alt="صيانة تلاجات" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة تلاجات</h3>
@@ -155,7 +165,7 @@
               </p>
               <a href="../Project/Fridge_Repair/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -163,7 +173,7 @@
           <!-- الكارد الثاني: صيانة غسالات الملابس -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card2.jpg" alt="صيانة غسالات الملابس" />
+              <img src="./assets/card2.webp" alt="صيانة غسالات الملابس" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة غسالات الملابس</h3>
@@ -173,7 +183,7 @@
               </p>
               <a href="../Project/Washing_machine/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -181,7 +191,7 @@
           <!-- الكارد الثالث: صيانة غسالات الأطباق -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card4.jpg" alt="صيانة غسالات الأطباق" />
+              <img src="./assets/card4.webp" alt="صيانة غسالات الأطباق" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة غسالات الأطباق</h3>
@@ -191,7 +201,7 @@
               </p>
               <a href="../Project/Dishwashers/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -199,7 +209,7 @@
           <!-- الكارد الرابع: صيانة ديب فريزر -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card3.jpg" alt="صيانة ديب فريزر" />
+              <img src="./assets/card3.webp" alt="صيانة ديب فريزر" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة ديب فريزر</h3>
@@ -209,7 +219,7 @@
               </p>
               <a href="../Project/D_freezer/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -217,7 +227,7 @@
           <!-- الكارد الخامس: صيانة شاشات -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card6.jpg" alt="صيانة شاشات" />
+              <img src="./assets/card6.webp" alt="صيانة شاشات" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة شاشات التلفزيون</h3>
@@ -227,7 +237,7 @@
               </p>
               <a href="../Project/tv/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -235,7 +245,7 @@
           <!-- الكارد السادس: صيانة الميكرويف -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card5.jpg" alt="صيانة الميكرويف" />
+              <img src="./assets/card5.webp" alt="صيانة الميكرويف" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة الميكرويف</h3>
@@ -245,7 +255,7 @@
               </p>
               <a href="../Project/Microwave/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -253,7 +263,7 @@
           <!-- الكارد السابع: صيانة المجفف -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card7.jpg" alt="صيانة الدراير(المجفف)" />
+              <img src="./assets/card7.webp" alt="صيانة الدراير(المجفف)" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة الدراير (المجفف)</h3>
@@ -263,7 +273,7 @@
               </p>
               <a href="../Project/Clothes_Dryer/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -271,7 +281,7 @@
           <!-- الكارد الثامن: صيانة التكيفات -->
           <div class="service-card">
             <div class="service-img-wrapper">
-              <img src="./assets/card8jpg.jpg" alt="صيانة التكيفات" />
+              <img src="./assets/card8jpg.webp" alt="صيانة التكيفات" />
             </div>
             <div class="service-content">
               <h3 class="service-title">صيانة التكيفات</h3>
@@ -281,7 +291,7 @@
               </p>
               <a href="../Project/Air_conditioner/" class="service-btn">
                 <span>طلب الخدمة</span>
-                <img src="./assets/left.png" alt="ايقونه طلب الخدمة" />
+                <img src="./assets/11.webp" alt="ايقونه طلب الخدمة" />
               </a>
             </div>
           </div>
@@ -300,7 +310,7 @@
         <div class="why-us-content">
           <div class="why-us-header">
             <div class="why-us-badge">
-              <img src="./assets/development.png" alt="مميزاتنا" />
+              <img src="./assets/development.webp" alt="مميزاتنا" />
               <span>مميزاتنا</span>
             </div>
             <!-- <h2 class="why-us-title">لماذا تختارون رفيق للصيانة ؟  </h2> -->
@@ -311,7 +321,7 @@
             <!-- الصف الأول: 3 كروت -->
             <div class="why-card">
               <div class="why-card-icon">
-                <img src="./assets/car.png" alt="" />
+                <img src="./assets/car.webp" alt="icon" />
               </div>
               <h3>صيانة فورية في جميع المحافظات</h3>
               <p>
@@ -322,7 +332,7 @@
 
             <div class="why-card">
               <div class="why-card-icon">
-                <img src="./assets/electrician.png" alt="" />
+                <img src="./assets/electrician.webp" alt="icon" />
               </div>
               <h3>مهندسين معتمدون وضمان قطع أصلية</h3>
               <p>
@@ -333,7 +343,7 @@
 
             <div class="why-card">
               <div class="why-card-icon">
-                <img src="./assets/24-hours.png" alt="" />
+                <img src="./assets/24-hours.webp" alt="icon" />
               </div>
               <h3>دعم فني على مدار الساعة</h3>
               <p>
@@ -344,7 +354,7 @@
             <!-- الصف الثاني: كاردين عراض (نصف ونصف) -->
             <div class="why-card why-card-bottom">
               <div class="why-card-icon">
-                <img src="./assets/quality-service.png" alt="" />
+                <img src="./assets/quality-service.webp" alt="icon" />
               </div>
               <h3>تغطية شاملة لجميع الماركات</h3>
               <p>
@@ -355,7 +365,7 @@
 
             <div class="why-card why-card-bottom">
               <div class="why-card-icon">
-                <img src="./assets/home-repair.png" alt="" />
+                <img src="./assets/home-repair.webp" alt="icon" />
               </div>
               <h3>الراحة في منزلكم</h3>
               <p>لا حاجة لنقل الأجهزة؛ نخدمكم في المنزل بكل احترافية وسرعة.</p>
@@ -381,7 +391,7 @@
         <div class="footer-col footer-about">
           <div class="footer-logo">
             <!-- استبدل logo.png بمسار اللوجو الخاص بك -->
-            <img src="assets/raf.jpg" alt="Logo" />
+            <img src="assets/raf.webp" alt="Logo" />
           </div>
           <p class="about-text">
             تنويه هام: نحن شركة مستقلة متخصصة في خدمات الصيانة المنزلية لمختلف
@@ -420,10 +430,7 @@
               <span>الخط الساخن: <a href="tel:19580">19580</a></span>
             </li>
             <!-- خط ساخن 2 -->
-            <li>
-              <i class="fa-solid fa-phone-flip"></i>
-              <span>الخط الساخن: <a href="tel:15607">16507</a></span>
-            </li>
+
             <!-- واتساب -->
             <li>
               <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
@@ -434,30 +441,14 @@
                 ></span
               >
             </li>
-            <li>
-              <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-              <span
-                >واتساب:
-                <a href="https://wa.me/201063646662" target="_blank"
-                  >01063646662</a
-                ></span
-              >
-            </li>
           </ul>
         </div>
       </div>
-
       <!-- الشريط السفلي للحقوق -->
       <div class="footer-bottom">
         <p>جميع الحقوق محفوظة © RaFik-Service 2026</p>
       </div>
     </footer>
-
-    <!-- مكتبة الأيقونات (Font Awesome) ضع هذا السطر في <head> للموقع إذا لم تكن مضافة -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
