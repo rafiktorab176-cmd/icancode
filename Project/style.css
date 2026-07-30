@@ -59,7 +59,7 @@
 .hero-content p {
   font-size: 1.3rem;
   line-height: 1.8;
-  color: #222222 !important; /* أو #1a1a1a لقراءة مريحة وتباين ممتاز */
+  color: #f3eeee !important; /* أو #1a1a1a لقراءة مريحة وتباين ممتاز */
   margin-bottom: 30px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
@@ -388,7 +388,7 @@ h2 {
 .why-us-section {
   width: 100%;
   padding: 50px 20px;
-  background-color: #ffffff; /* خلفية بيضاء نقية */
+  background-color: #1c749d; /* خلفية بيضاء نقية */
 }
 
 .why-us-container {
@@ -445,7 +445,7 @@ h2 {
   gap: 15px;
 }
 .why-card {
-  background-color: #ffffff; /* خلفية بيضاء نقية */
+  background-color: #e1eff3; /* خلفية بيضاء نقية */
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   padding: 20px 15px;
