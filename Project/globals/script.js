@@ -1,5 +1,5 @@
-const hamburger = document.getElementById("hamburger");
-const linksContainer = document.getElementById("links-container");
+const hamburger = document.getElementById("hamburger-nav");
+const linksContainer = document.getElementById("links-container-nav");
 
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("active");
