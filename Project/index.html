@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/mo.webp"
+      fetchpriority="high"
+    />
     <meta
       name="description"
       content="شركة متخصصة في صيانة الأجهزة المنزلية بخدمة سريعة وموثوقة داخل المنزل، مع فنيين خبراء وقطع غيار أصلية وضمان على الخدمة."
@@ -33,7 +39,9 @@
     <!-- مكتبة الأيقونات (Font Awesome) ضع هذا السطر في <head> للموقع إذا لم تكن مضافة -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/.../all.min.css"
+      media="print"
+      onload="this.media = 'all'"
     />
     <meta
       name="google-site-verification"
@@ -50,7 +58,7 @@
         <img src="./assets/raf.webp" width="60" alt="" />
       </div>
 
-      <button class="hamburger" id="hamburger-nav">
+      <button class="hamburger" id="hamburger-nav" aria-label="فتح القائمة">
         <span></span>
         <span></span>
         <span></span>
@@ -127,7 +135,11 @@
 
     <section class="hero-section">
       <div class="hero-section-img">
-        <img src="./assets/mo.webp" alt="photo-hero section" />
+        <img
+          src="./assets/mo.webp"
+          alt="photo-hero section"
+          fetchpriority="high"
+        />
       </div>
       <div class="hero-overlay"></div>
       <div class="container">
