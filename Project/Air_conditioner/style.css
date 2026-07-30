@@ -1,355 +1,360 @@
 /* السكشن الرئيسي */
 .hero-section {
-    background-color: #1d5275; /* لون الخلفية الأزرق التركوازي الداكن */
-    color: #ffffff;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 110vh;
+  background-color: #1d5275; /* لون الخلفية الأزرق التركوازي الداكن */
+  color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
 }
 
 .hero-container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
 }
 
 /* تنسيق النصوص */
 .hero-text {
-    flex: 1;
-    max-width: 580px;
+  flex: 1;
+  max-width: 580px;
 }
 
 .hero-title {
-    font-size: 2.3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #ffffff;
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: #e2f1f5;
-    margin-bottom: 35px;
-    text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #e2f1f5;
+  margin-bottom: 35px;
+  text-align: justify;
 }
 
 .hero-description .phone {
-    direction: ltr;
-    display: inline-block;
-    font-weight: bold;
-    color: #ffffff;
+  direction: ltr;
+  display: inline-block;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 /* زر حجز الموعد */
 .hero-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #ffffff;
-    color: #0b5c73;
-    padding: 12px 32px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #0b5c73;
+  padding: 12px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
-    background-color: #f0f8fa;
-    transform: translateY(-2px);
+  background-color: #f0f8fa;
+  transform: translateY(-2px);
 }
 
 /* تنسيق الصورة */
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 25px; /* الانحناء الحاد للزوايا زي الصورة */
-    object-fit: cover;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 25px; /* الانحناء الحاد للزوايا زي الصورة */
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive للشاشات الصغيرة */
 @media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 
-    .hero-text {
-        max-width: 100%;
-    }
+  .hero-text {
+    max-width: 100%;
+  }
 
-    .hero-description {
-        text-align: center;
-    }
+  .hero-description {
+    text-align: center;
+  }
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    direction: rtl;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
 }
 
 .ac-issues-wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 /* ------------ 1. قسم الأعطال الشائعة ------------ */
 .common-faults {
-    background-color: #dbe4e9; /* لون الخلفية الفاتح */
-    padding: 60px 5%;
-    text-align: center;
+  background-color: #dbe4e9; /* لون الخلفية الفاتح */
+  padding: 60px 5%;
+  text-align: center;
 }
 
 .section-title {
-    color: #2b4c5e;
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 40px;
+  color: #2b4c5e;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
 }
 
 .cards-grid {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.45);
-    border-radius: 16px;
-    padding: 30px 20px;
-    flex: 1 1 280px;
-    max-width: 360px;
-    text-align: center;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  padding: 30px 20px;
+  flex: 1 1 280px;
+  max-width: 360px;
+  text-align: center;
 }
 
 .card h3 {
-    color: #2b4c5e;
-    font-size: 1.35rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+  color: #2b4c5e;
+  font-size: 1.35rem;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .card p {
-    color: #556b78;
-    font-size: 0.98rem;
-    line-height: 1.8;
+  color: #556b78;
+  font-size: 0.98rem;
+  line-height: 1.8;
 }
 
 /* ------------ 2. قسم الحلول المقدمة ------------ */
 .solutions-section {
-    background-color: #0b2239; /* الأزرق الكحلي الداكن */
-    color: #ffffff;
-    padding: 50px 5% 60px;
-    text-align: center;
+  background-color: #0b2239; /* الأزرق الكحلي الداكن */
+  color: #ffffff;
+  padding: 50px 5% 60px;
+  text-align: center;
 }
 
 /* الشريط البيضاوي العلوي */
 .pill-header {
-    background-color: #ffffff;
-    color: #2b4c5e;
-    max-width: 950px;
-    margin: 0 auto 35px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  color: #2b4c5e;
+  max-width: 950px;
+  margin: 0 auto 35px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .pill-header h2 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-align: center;
-    padding-left: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding-left: 20px;
 }
 
 .intro-text {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    color: #e0eaf0;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #e0eaf0;
 }
 
 .features-list {
-    list-style: none;
-    max-width: 650px;
-    margin: 0 auto 25px;
-    text-align: center;
-    display: inline-block;
+  list-style: none;
+  max-width: 650px;
+  margin: 0 auto 25px;
+  text-align: center;
+  display: inline-block;
 }
 
 .features-list li {
-    font-size: 1.05rem;
-    margin-bottom: 12px;
-    position: relative;
-    padding-right: 22px;
-    color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  position: relative;
+  padding-right: 22px;
+  color: #ffffff;
 }
 
 .features-list li::before {
-    content: "•";
-    color: #ffffff;
-    font-size: 1.5rem;
-    position: absolute;
-    right: 0;
-    top: -4px;
+  content: "•";
+  color: #ffffff;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: -4px;
 }
 
 .call-text {
-    font-size: 1.05rem;
-    margin-bottom: 30px;
-    color: #e0eaf0;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  color: #e0eaf0;
 }
 
 .phone {
-    direction: ltr;
-    display: inline-block;
-    font-weight: bold;
+  direction: ltr;
+  display: inline-block;
+  font-weight: bold;
 }
 
 /* زر حجز الموعد */
 .btn-container {
-    display: flex;
-    justify-content: center;
-    max-width: 950px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .cta-btn {
-    background-color: #1a4261;
-    color: #ffffff;
-    padding: 12px 35px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s;
+  background-color: #1a4261;
+  color: #ffffff;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s;
 }
 
 .cta-btn:hover {
-    background-color: #24577f;
+  background-color: #24577f;
 }
 
 /* Responsive للشاشات الصغيرة */
 @media (max-width: 768px) {
-    .pill-header h2 {
-        text-align: center;
-        padding-left: 0;
-    }
+  .pill-header h2 {
+    text-align: center;
+    padding-left: 0;
+  }
 
-    .btn-container {
-        justify-content: center;
-    }
+  .btn-container {
+    justify-content: center;
+  }
 }
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    direction: rtl;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
 }
 
 .features-warranty-wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 /* ------------ 1. قسم مميزات مركز الصيانة ------------ */
 .features-section {
-    background-color: #dbe4e9; /* لون الخلفية الفاتح المتناسق مع السكشن السابق */
-    padding: 60px 5%;
-    text-align: center;
+  background-color: #dbe4e9; /* لون الخلفية الفاتح المتناسق مع السكشن السابق */
+  padding: 60px 5%;
+  text-align: center;
 }
 
 .section-title {
-    color: #2b4c5e;
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 40px;
+  color: #2b4c5e;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
 }
 
 .features-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 /* شكل الأزرار / الكبسولات المنحنية للمميزات */
 .feature-pill {
-    background-color: #a9c2d1; /* لون خلفية الكبسولة الفاتح الظاهر في الصورة */
-    border-radius: 20px;
-    padding: 25px 20px;
-    flex: 1 1 220px;
-    max-width: 270px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #a9c2d1; /* لون خلفية الكبسولة الفاتح الظاهر في الصورة */
+  border-radius: 20px;
+  padding: 25px 20px;
+  flex: 1 1 220px;
+  max-width: 270px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .feature-pill p {
-    color: #1b3646;
-    font-size: 0.95rem;
-    font-weight: 700;
-    line-height: 1.6;
+  color: #1b3646;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 /* ------------ 2. قسم الضمان وقطع الغيار ------------ */
 .warranty-section {
-    background-color: #0b2239; /* الأزرق الكحلي الداكن المماثل للفوتر */
-    color: #ffffff;
-    padding: 50px 5% 60px;
-    text-align: center;
+  background-color: #0b2239; /* الأزرق الكحلي الداكن المماثل للفوتر */
+  color: #ffffff;
+  padding: 50px 5% 60px;
+  text-align: center;
 }
 
 .warranty-title {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .warranty-text {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    max-width: 900px;
-    margin: 0 auto;
-    color: #d8e6ef;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #d8e6ef;
 }
 
 /* Responsive للشاشات الصغيرة */
 @media (max-width: 768px) {
-    .features-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .feature-pill {
-        max-width: 100%;
-        width: 100%;
-    }
+  .feature-pill {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

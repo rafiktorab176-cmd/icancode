@@ -8,409 +8,414 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
 html {
-    overflow-x: hidden; /* يمنع ظهور السكرول الأفقي نهائياً */
-    margin: 0;
-    padding: 0;
+  overflow-x: hidden; /* يمنع ظهور السكرول الأفقي نهائياً */
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================
    1. HERO SERVICE SECTION
 ========================================== */
 .hero-service-section {
-    background-color: #0b4c75;
-    color: #ffffff;
-    direction: rtl;
-    width: 100%;
-    padding-top: 130px;
-    padding-bottom: 60px;
+  background-color: #0b4c75;
+  color: #ffffff;
+  direction: rtl;
+  width: 100%;
+  padding-top: 130px;
+  padding-bottom: 60px;
 }
 
 .hero-service-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .hero-service-text-content {
-    flex: 1;
-    max-width: 580px;
-    width: 100%;
-    text-align: right;
+  flex: 1;
+  max-width: 580px;
+  width: 100%;
+  text-align: right;
 }
 
 .hero-service-title {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 20px;
-    line-height: 1.2;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hero-service-description {
-    font-size: clamp(0.95rem, 2vw, 1.1rem);
-    line-height: 1.8;
-    color: #e2e8f0;
-    margin-bottom: 35px;
-    font-weight: 400;
-    overflow-wrap: break-word;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 35px;
+  font-weight: 400;
+  overflow-wrap: break-word;
 }
 
 .hero-service-description strong {
-    color: #ffffff;
-    font-weight: 700;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .hero-service-description .phone-link {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: underline;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .booking-action-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: #ffffff;
-    color: #0b4c75;
-    padding: 12px 32px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.05rem;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #0b4c75;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  max-width: 100%;
 }
 
 .booking-action-link:hover {
-    background-color: #f1f5f9;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background-color: #f1f5f9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .booking-action-link .action-icon {
-    font-size: 1.1rem;
-    transform: rotate(-10deg);
+  font-size: 1.1rem;
+  transform: rotate(-10deg);
 }
 
 .hero-service-image-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 520px;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 520px;
+  width: 100%;
 }
 
 .hero-service-img {
-    width: 100%;
-    height: auto;
-    max-height: 420px;
-    border-radius: 30px;
-    object-fit: cover;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* ==========================================
    2. COMMON FAULTS SECTION
 ========================================== */
 .common-faults-section {
-    background-color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-    direction: rtl;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  direction: rtl;
 }
 
 .common-faults-section .section-title {
-    color: #2b3940;
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 800;
-    margin-bottom: 40px;
+  color: #2b3940;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 40px;
 }
 
 .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    max-width: 1150px;
-    width: 100%;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .fault-card {
-    background-color: #eaf3f8;
-    border-radius: 20px;
-    padding: 35px 25px;
-    flex: 1 1 280px; /* استخدام المرونة الصح */
-    max-width: 350px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease;
+  background-color: #eaf3f8;
+  border-radius: 20px;
+  padding: 35px 25px;
+  flex: 1 1 280px; /* استخدام المرونة الصح */
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
 }
 
 .fault-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .fault-card h3 {
-    color: #0b4c75;
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+  color: #0b4c75;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .fault-card p {
-    color: #667085;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin: 0;
+  color: #667085;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ==========================================
    3. SOLUTIONS SECTION
 ========================================== */
 .solutions-section {
-    background-color: #0a2540;
-    color: #ffffff;
-    padding: 50px 20px 60px 20px;
-    text-align: center;
-    direction: rtl;
+  background-color: #0a2540;
+  color: #ffffff;
+  padding: 50px 20px 60px 20px;
+  text-align: center;
+  direction: rtl;
 }
 
 .solutions-container {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .pill-header {
-    background-color: #ffffff;
-    color: #0a2540;
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto 35px auto;
-    padding: 12px 15px;
-    border-radius: 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #0a2540;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 35px auto;
+  padding: 12px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pill-header h2 {
-    margin: 0;
-    font-size: clamp(1.3rem, 3vw, 1.8rem);
-    font-weight: 700;
+  margin: 0;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
 }
 
 .solutions-body h3 {
-    font-size: clamp(0.95rem, 2vw, 1.1rem);
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #e2e8f0;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #e2e8f0;
 }
 
 .solutions-body h3 strong {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .solutions-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 25px auto;
-    display: inline-block;
-    text-align: right;
-    max-width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 25px auto;
+  display: inline-block;
+  text-align: right;
+  max-width: 100%;
 }
 
 .solutions-list li {
-    font-size: clamp(0.9rem, 2vw, 1.05rem);
-    margin-bottom: 12px;
-    position: relative;
-    padding-right: 25px;
-    color: #ffffff;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  margin-bottom: 12px;
+  position: relative;
+  padding-right: 25px;
+  color: #ffffff;
 }
 
 .solutions-list li::before {
-    content: "•";
-    color: #ffffff;
-    font-size: 1.5rem;
-    position: absolute;
-    right: 0;
-    top: -4px;
+  content: "•";
+  color: #ffffff;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: -4px;
 }
 
 .call-text {
-    font-size: clamp(0.9rem, 2vw, 1.05rem);
-    margin-bottom: 30px;
-    color: #e2e8f0;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  margin-bottom: 30px;
+  color: #e2e8f0;
 }
 
 .call-text a {
-    color: #ffffff;
-    text-decoration: underline;
-    font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .booking-btn {
-    background-color: #124d77;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 35px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
+  background-color: #124d77;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
 }
 
 .booking-btn:hover {
-    background-color: #1a6296;
-    transform: translateY(-2px);
+  background-color: #1a6296;
+  transform: translateY(-2px);
 }
 
 /* ==========================================
    4. FEATURES SECTION
 ========================================== */
 .features-section {
-    background-color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-    direction: rtl;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  direction: rtl;
 }
 
 .features-section .section-title {
-    color: #2b3940;
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 800;
-    margin-bottom: 40px;
+  color: #2b3940;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 40px;
 }
 
 .features-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .feature-card {
-    background-color: #0b4c75;
-    color: #ffffff;
-    padding: 20px 25px;
-    border-radius: 50px;
-    flex: 1 1 220px;
-    max-width: 270px;
-    width: 100%;
-    font-size: 0.95rem;
-    font-weight: 600;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background-color: #0b4c75;
+  color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 50px;
+  flex: 1 1 220px;
+  max-width: 270px;
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 /* ==========================================
    5. WARRANTY SECTION
 ========================================== */
 .warranty-section {
-    background-color: #0a2540;
-    color: #ffffff;
-    padding: 50px 20px;
-    text-align: center;
-    direction: rtl;
+  background-color: #0a2540;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  direction: rtl;
 }
 
 .warranty-container {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .warranty-title {
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #ffffff;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .warranty-text {
-    font-size: clamp(0.95rem, 2vw, 1.05rem);
-    line-height: 1.8;
-    color: #e2e8f0;
-    margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin: 0;
 }
 
 .warranty-text strong {
-    color: #ffffff;
-    font-weight: bold;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 /* ==========================================
    ALL MEDIA QUERIES (MOBILE & TABLET)
 ========================================== */
 @media (max-width: 992px) {
-    .hero-service-section {
-        padding-top: 100px;
-        padding-bottom: 40px;
-    }
+  .hero-service-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
 
-    .hero-service-container {
-        flex-direction: column-reverse; /* الصورة أولاً ثم النص */
-        gap: 30px;
-        padding: 0 15px;
-    }
+  .hero-service-container {
+    flex-direction: column-reverse; /* الصورة أولاً ثم النص */
+    gap: 30px;
+    padding: 0 15px;
+  }
 
-    .hero-service-text-content {
-        max-width: 100%;
-        text-align: center;
-    }
+  .hero-service-text-content {
+    max-width: 100%;
+    text-align: center;
+  }
 
-    .hero-service-image-box {
-        max-width: 100%;
-    }
+  .hero-service-image-box {
+    max-width: 100%;
+  }
 
-    .hero-service-img {
-        max-width: 360px;
-    }
+  .hero-service-img {
+    max-width: 360px;
+  }
 
-    .fault-card,
-    .feature-card {
-        max-width: 100%; /* الكروت بتاخد كامل العرض على الشاشات الصغير */
-    }
+  .fault-card,
+  .feature-card {
+    max-width: 100%; /* الكروت بتاخد كامل العرض على الشاشات الصغير */
+  }
 
-    .feature-card {
-        border-radius: 25px; /* تنعيم الحواف للموبايل */
-    }
+  .feature-card {
+    border-radius: 25px; /* تنعيم الحواف للموبايل */
+  }
 }
 
 @media (max-width: 480px) {
-    .booking-action-link,
-    .booking-btn {
-        width: 100%;
-        padding: 12px 15px;
-    }
+  .booking-action-link,
+  .booking-btn {
+    width: 100%;
+    padding: 12px 15px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

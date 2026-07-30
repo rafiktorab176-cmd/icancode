@@ -2,105 +2,105 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 .contact-numbers-section {
-    padding: 60px 20px;
-    background: linear-gradient(
-        135deg,
-        #0f2027,
-        #203a43,
-        #2c5364
-    ); /* خلفية مدرجة فخمة */
-    direction: rtl;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    margin-top: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* خلفية مدرجة فخمة */
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  margin-top: 80px;
 }
 
 .numbers-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
 }
 
 .section-subtitle {
-    color: #b0bec5;
-    font-size: 1.05rem;
-    margin-bottom: 40px;
+  color: #b0bec5;
+  font-size: 1.05rem;
+  margin-bottom: 40px;
 }
 
 /* شبكة الكروت */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
 }
 
 /* كارت الرقم الأساسي */
 .number-card {
-    position: relative;
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(12px); /* تأثير الزجاج Glassmorphism */
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    text-decoration: none;
-    color: #fff;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px); /* تأثير الزجاج Glassmorphism */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* الأيقونة */
 .card-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    transition: all 0.4s ease;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: all 0.4s ease;
 }
 
 .card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .card-label {
-    font-size: 0.9rem;
-    color: #cfd8dc;
+  font-size: 0.9rem;
+  color: #cfd8dc;
 }
 
 .phone-number {
-    font-size: 1.6rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .hover-badge {
-    font-size: 0.85rem;
-    padding: 6px 16px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    opacity: 0.8;
-    transition: all 0.3s ease;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 /* ==========================================
@@ -108,66 +108,71 @@
    ========================================== */
 
 .number-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* ألوان مخصصة لكل نوع عند الهوفر */
 
 /* 1. الخط الساخن الأول */
 .number-card.hotline:hover {
-    border-color: #ff4e50;
-    box-shadow: 0 10px 25px rgba(255, 78, 80, 0.3);
+  border-color: #ff4e50;
+  box-shadow: 0 10px 25px rgba(255, 78, 80, 0.3);
 }
 .number-card.hotline:hover .card-icon {
-    background: #ff4e50;
-    color: #fff;
-    transform: rotate(-12deg) scale(1.1);
+  background: #ff4e50;
+  color: #fff;
+  transform: rotate(-12deg) scale(1.1);
 }
 
 /* 2. الخط الساخن الثاني */
 .number-card.secondary-hotline:hover {
-    border-color: #00c6ff;
-    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.3);
+  border-color: #00c6ff;
+  box-shadow: 0 10px 25px rgba(0, 198, 255, 0.3);
 }
 .number-card.secondary-hotline:hover .card-icon {
-    background: #00c6ff;
-    color: #fff;
-    transform: rotate(12deg) scale(1.1);
+  background: #00c6ff;
+  color: #fff;
+  transform: rotate(12deg) scale(1.1);
 }
 
 /* 3. رقم الموبايل */
 .number-card.mobile:hover {
-    border-color: #f7b731;
-    box-shadow: 0 10px 25px rgba(247, 183, 49, 0.3);
+  border-color: #f7b731;
+  box-shadow: 0 10px 25px rgba(247, 183, 49, 0.3);
 }
 .number-card.mobile:hover .card-icon {
-    background: #f7b731;
-    color: #fff;
-    transform: scale(1.15);
+  background: #f7b731;
+  color: #fff;
+  transform: scale(1.15);
 }
 
 /* 4. الواتساب */
 .number-card.whatsapp:hover {
-    border-color: #25d366;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  border-color: #25d366;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
 }
 .number-card.whatsapp:hover .card-icon {
-    background: #25d366;
-    color: #fff;
-    transform: scale(1.15);
+  background: #25d366;
+  color: #fff;
+  transform: scale(1.15);
 }
 
 .number-card:hover .hover-badge {
-    background: #ffffff;
-    color: #111;
-    font-weight: bold;
-    opacity: 1;
+  background: #ffffff;
+  color: #111;
+  font-weight: bold;
+  opacity: 1;
 }
 
 /* تجاوب الشاشات الصغيره */
 @media (max-width: 600px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

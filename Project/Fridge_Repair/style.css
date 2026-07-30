@@ -2,457 +2,462 @@
    HERO SERVICE SECTION
 ========================================== */
 .hero-service-section {
-    background-color: #0d4b75;
-    color: #ffffff;
-    direction: rtl;
-    width: 100%;
-    box-sizing: border-box; /* تم تصحيح الكلمة الإملائية هنا */
-    padding-top: 130px;
-    padding-bottom: 30px;
+  background-color: #0d4b75;
+  color: #ffffff;
+  direction: rtl;
+  width: 100%;
+  box-sizing: border-box; /* تم تصحيح الكلمة الإملائية هنا */
+  padding-top: 130px;
+  padding-bottom: 30px;
 }
 
 .hero-service-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .hero-service-text-content {
-    flex: 1;
-    max-width: 550px;
+  flex: 1;
+  max-width: 550px;
 }
 
 .hero-service-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
-    line-height: 1.2;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hero-service-description {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #e2e8f0;
-    margin-bottom: 30px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  margin-bottom: 30px;
 }
 
 .hero-service-description strong {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .hero-service-description .phone-link {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration-color: #24a62f;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration-color: #24a62f;
 }
 
 .booking-action-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #ffffff;
-    color: #0d4b75;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1rem;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #0d4b75;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .booking-action-link:hover {
-    background-color: #f1f5f9;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .booking-action-link .action-icon {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .hero-service-image-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    max-width: 500px;
-    width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
 }
 
 .hero-service-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
 }
 
 /* ==========================================
    COMMON FAULTS SECTION
 ========================================== */
 .common-faults-section {
-    padding: 50px 20px;
-    text-align: center;
+  padding: 50px 20px;
+  text-align: center;
 }
 
 .common-faults-section .section-title {
-    color: #333333;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 35px;
+  color: #333333;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 35px;
 }
 
 .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    padding-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
 }
 
 .fault-card {
-    background-color: #eaf4f8;
-    border-radius: 16px;
-    padding: 25px 20px;
-    flex: 1;
-    min-width: 280px;
-    max-width: 340px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-    text-align: center;
+  background-color: #eaf4f8;
+  border-radius: 16px;
+  padding: 25px 20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 340px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  text-align: center;
 }
 
 .fault-card h3 {
-    color: #0b4c75;
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 12px;
+  color: #0b4c75;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .fault-card p {
-    color: #666666;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ==========================================
    SOLUTIONS SECTION
 ========================================== */
 .solutions-section {
-    background-color: #0d3859;
-    color: #ffffff;
-    padding: 40px 20px 50px 20px;
-    text-align: center;
+  background-color: #0d3859;
+  color: #ffffff;
+  padding: 40px 20px 50px 20px;
+  text-align: center;
 }
 
 .solutions-container {
-    max-width: 950px;
-    margin: 0 auto;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
 .pill-header {
-    background-color: #ffffff;
-    color: #0d3859;
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    padding: 10px 0;
-    border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  color: #0d3859;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  padding: 10px 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .pill-header h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .solutions-body h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 18px;
 }
 
 .solutions-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 20px auto;
-    display: inline-block;
-    text-align: right;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  display: inline-block;
+  text-align: right;
 }
 
 .solutions-list li {
-    font-size: 15px;
-    margin-bottom: 10px;
-    position: relative;
-    padding-right: 18px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 18px;
 }
 
 .solutions-list li::before {
-    content: "•";
-    color: #ffffff;
-    font-size: 18px;
-    position: absolute;
-    right: 0;
-    top: -2px;
+  content: "•";
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: -2px;
 }
 
 .call-text {
-    font-size: 15px;
-    margin-bottom: 25px;
+  font-size: 15px;
+  margin-bottom: 25px;
 }
 
 .call-text a {
-    color: #ffffff;
-    text-decoration: underline;
-    font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .booking-btn {
-    background-color: #1d71ad;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.3s;
+  background-color: #1d71ad;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
 }
 
 .booking-btn:hover {
-    background-color: #2681c2;
+  background-color: #2681c2;
 }
 
 /* ==========================================
    FEATURES SECTION
 ========================================== */
 .features-section {
-    background-color: #e5ecf0;
-    padding: 30px 20px;
-    text-align: center;
+  background-color: #e5ecf0;
+  padding: 30px 20px;
+  text-align: center;
 }
 
 .features-container {
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .features-section .section-title {
-    color: #333333;
-    font-size: 26px;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 25px;
+  color: #333333;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 .features-grid {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .feature-card {
-    background-color: #1d71ad;
-    color: #ffffff;
-    border-radius: 12px;
-    padding: 20px 15px;
-    flex: 1;
-    font-size: 13px;
-    line-height: 1.5;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  background-color: #1d71ad;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 15px;
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================
    WARRANTY SECTION
 ========================================== */
 .warranty-section {
-    background-color: #0d3859;
-    color: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: #0d3859;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .warranty-container {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .warranty-container h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .warranty-container p {
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 0;
-    color: #e0e8ef;
-    font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  color: #e0e8ef;
+  font-weight: 700;
 }
 
 /* ==========================================
    COMPLETE MOBILE RESPONSIVE MEDIA QUERIES
 ========================================== */
 @media (max-width: 1100px) {
-    /* Navbar Adjustments */
-    .nav {
-        justify-content: space-between;
-        padding: 10px 15px;
-    }
+  /* Navbar Adjustments */
+  .nav {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
 
-    .logo-container {
-        position: static;
-        transform: none;
-    }
+  .logo-container {
+    position: static;
+    transform: none;
+  }
 
-    .hamburger {
-        display: flex;
-    }
+  .hamburger {
+    display: flex;
+  }
 
-    .links-container {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(to bottom, #5780a9 50%, #c4ab98 100%);
-    }
+  .links-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #5780a9 50%, #c4ab98 100%);
+  }
 
-    .links-container.active {
-        display: block;
-    }
+  .links-container.active {
+    display: block;
+  }
 
-    .links {
-        flex-direction: column;
-        padding: 15px 0;
-        width: 100%;
-        text-align: center;
-    }
+  .links {
+    flex-direction: column;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
 
-    /* Hero Section Responsiveness */
-    .hero-service-section {
-        padding-top: 90px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+  /* Hero Section Responsiveness */
+  .hero-service-section {
+    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-    .hero-service-container {
-        flex-direction: column-reverse; /* الصورة أولاً ثم النص تحته */
-        text-align: center;
-        gap: 25px;
-    }
+  .hero-service-container {
+    flex-direction: column-reverse; /* الصورة أولاً ثم النص تحته */
+    text-align: center;
+    gap: 25px;
+  }
 
-    .hero-service-text-content,
-    .hero-service-image-box {
-        max-width: 100%;
-        width: 100%;
-    }
+  .hero-service-text-content,
+  .hero-service-image-box {
+    max-width: 100%;
+    width: 100%;
+  }
 
-    .hero-service-title {
-        font-size: 1.6rem;
-    }
+  .hero-service-title {
+    font-size: 1.6rem;
+  }
 
-    .hero-service-description {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
+  .hero-service-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 
-    .hero-service-img {
-        max-width: 320px;
-        margin: 0 auto;
-    }
+  .hero-service-img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 
-    /* Faults Section */
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
+  /* Faults Section */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .fault-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: unset;
-    }
+  .fault-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
 
-    /* Solutions Section */
-    .pill-header {
-        width: 100%;
-        border-radius: 12px;
-        padding: 8px 10px;
-    }
+  /* Solutions Section */
+  .pill-header {
+    width: 100%;
+    border-radius: 12px;
+    padding: 8px 10px;
+  }
 
-    .pill-header h2 {
-        font-size: 18px;
-    }
+  .pill-header h2 {
+    font-size: 18px;
+  }
 
-    .solutions-list {
-        display: block;
-        text-align: center;
-    }
+  .solutions-list {
+    display: block;
+    text-align: center;
+  }
 
-    .solutions-list li {
-        padding-right: 0;
-    }
+  .solutions-list li {
+    padding-right: 0;
+  }
 
-    .solutions-list li::before {
-        display: none;
-    }
+  .solutions-list li::before {
+    display: none;
+  }
 
-    /* Features Grid */
-    .features-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+  /* Features Grid */
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .feature-card {
-        width: 100%;
-        max-width: 100%;
-    }
+  .feature-card {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    /* Floating Buttons Fix */
-    .call-us {
-        bottom: 15px;
-        left: 15px;
-        font-size: 13px;
-    }
+  /* Floating Buttons Fix */
+  .call-us {
+    bottom: 15px;
+    left: 15px;
+    font-size: 13px;
+  }
 
-    .call-us a img,
-    .whatsapp-link img {
-        width: 42px;
-        height: 42px;
-    }
+  .call-us a img,
+  .whatsapp-link img {
+    width: 42px;
+    height: 42px;
+  }
 
-    .whatsapp-link {
-        bottom: 15px;
-        right: 15px;
-    }
+  .whatsapp-link {
+    bottom: 15px;
+    right: 15px;
+  }
 
-    .warranty-container h2 {
-        font-size: 22px;
-    }
+  .warranty-container h2 {
+    font-size: 22px;
+  }
 
-    .warranty-container p {
-        font-size: 14px;
-    }
+  .warranty-container p {
+    font-size: 14px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

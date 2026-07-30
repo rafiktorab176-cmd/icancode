@@ -1,171 +1,176 @@
 /* حاوية تجمع الـ 3 كروت تحت بعض مع مسافة عن الناف بار والفوتر */
 .testimonials-wrapper {
-    width: 100%;
-    max-width: 900px;
-    margin: 100px auto 80px auto; /* مسافة من فوق وتحت */
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* مسافة بين الكارت والتاني */
-    direction: rtl;
+  width: 100%;
+  max-width: 900px;
+  margin: 100px auto 80px auto; /* مسافة من فوق وتحت */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* مسافة بين الكارت والتاني */
+  direction: rtl;
 }
 
 /* الكارت الخارجي مع تفعيل منظور الـ 3D */
 .testimonial-card {
-    background-color: transparent;
-    width: 100%;
-    height: 180px; /* ارتفاع مناسب للحاوية */
-    perspective: 1000px; /* يعطي تأثير عمق للتقليب */
-    cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+  height: 180px; /* ارتفاع مناسب للحاوية */
+  perspective: 1000px; /* يعطي تأثير عمق للتقليب */
+  cursor: pointer;
 }
 
 /* الجزء الداخلي الذي يدور */
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
 }
 
 /* التبديل للوجه الثاني عند الوقوف بالماوس */
 .testimonial-card:hover .card-inner {
-    transform: rotateX(
-        180deg
-    ); /* أو يمكنك تغييرها لـ rotateY(180deg) للتقليب الجانبي */
+  transform: rotateX(
+    180deg
+  ); /* أو يمكنك تغييرها لـ rotateY(180deg) للتقليب الجانبي */
 }
 
 /* الوجهين الأمامي والخلفي */
 .card-front,
 .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 12px;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #f1f3f9 55%, #3eb3f3 100%);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #f1f3f9 55%, #3eb3f3 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* الوجه الخلفي يكون مقلوب افتراضياً */
 .card-back {
-    transform: rotateX(180deg); /* يتوافق مع rotateX أعلاه */
-    background-color: #fafafa; /* لون مختلف بسيط للتفرقة */
+  transform: rotateX(180deg); /* يتوافق مع rotateX أعلاه */
+  background-color: #fafafa; /* لون مختلف بسيط للتفرقة */
 }
 
 /* نص الرأي */
 .testimonial-content {
-    font-size: 1.1rem;
-    color: #4a4a4a;
-    line-height: 1.6;
-    margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
 }
 
 /* تفاصيل العميل */
 .customer-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .customer-icon-container {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: #89a2b6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    color: #555;
-    font-size: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #89a2b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  color: #555;
+  font-size: 20px;
 }
 
 .customer-details {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 .customer-name {
-    font-weight: bold;
-    font-size: 0.95rem;
-    color: #2c3e50;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #2c3e50;
 }
 
 .customer-location {
-    font-size: 0.8rem;
-    color: #7f8c8d;
+  font-size: 0.8rem;
+  color: #7f8c8d;
 }
 /* #endregion */
 /* إعدادات وتنسيقات القسم بالكامل */
 .why-choose-us {
-    background-color: #f7f7f7; /* نفس لون خلفية الموقع في الصورة */
-    padding: 50px 20px;
-    direction: rtl; /* اتجاه الكتابة عربي */
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #444;
-    line-height: 1.8;
+  background-color: #f7f7f7; /* نفس لون خلفية الموقع في الصورة */
+  padding: 50px 20px;
+  direction: rtl; /* اتجاه الكتابة عربي */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #444;
+  line-height: 1.8;
 }
 
 .why-choose-us .container {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* النصوص التمهيدية والخواتيم */
 .intro-text,
 .section-subtitle,
 .conclusion-text {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    color: #555;
-    text-align: justify;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: justify;
 }
 
 /* العنوان الرئيسي */
 .section-title {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #2c3e50;
-    margin: 40px 0 20px 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 40px 0 20px 0;
 }
 
 /* عنوان قيمنا الأساسية */
 .values-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 30px;
-    margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 /* القوائم المُنقطة */
 .features-list {
-    list-style-type: disc;
-    padding-right: 20px;
-    margin-bottom: 25px;
+  list-style-type: disc;
+  padding-right: 20px;
+  margin-bottom: 25px;
 }
 
 .features-list li {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-    color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #444;
 }
 
 .features-list li strong {
-    color: #222;
+  color: #222;
 }
 
 .values-list {
-    margin-bottom: 0;
+  margin-bottom: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }

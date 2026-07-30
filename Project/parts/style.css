@@ -1,153 +1,153 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 header h1 {
-    font-size: 2rem;
-    color: #1a365d;
-    margin-bottom: 8px;
+  font-size: 2rem;
+  color: #1a365d;
+  margin-bottom: 8px;
 }
 
 header p {
-    color: #718096;
-    font-size: 1rem;
+  color: #718096;
+  font-size: 1rem;
 }
 
 /* Tabs Navigation */
 .tabs-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 12px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 12px;
+  width: 100%;
 }
 
 .tab-btn {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 9px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #2d3748;
-    transition: all 0.25s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .tab-btn:hover {
-    border-color: #2b6cb0;
-    color: #2b6cb0;
+  border-color: #2b6cb0;
+  color: #2b6cb0;
 }
 
 .tab-btn.active {
-    background-color: #2b6cb0;
-    color: white;
-    border-color: #2b6cb0;
-    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+  background-color: #2b6cb0;
+  color: white;
+  border-color: #2b6cb0;
+  box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
 }
 
 /* Tab Content */
 .tab-content {
-    display: none;
-    animation: fadeIn 0.3s ease-in-out;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .tab-content.active {
-    display: block;
+  display: block;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border-top: 5px solid #2b6cb0;
-    margin-bottom: 25px;
-    width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #2b6cb0;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #e2e8f0;
-    flex-wrap: wrap; /* يمنع تداخل النص مع العداد في الموبايل */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap; /* يمنع تداخل النص مع العداد في الموبايل */
 }
 
 .section-header h2 {
-    color: #1a365d;
-    font-size: 1.35rem;
-    line-height: 1.4;
+  color: #1a365d;
+  font-size: 1.35rem;
+  line-height: 1.4;
 }
 
 .items-count {
-    color: #718096;
-    font-size: 0.88rem;
-    white-space: nowrap;
+  color: #718096;
+  font-size: 0.88rem;
+  white-space: nowrap;
 }
 
 /* الشبكة المتجاوبة للكروت */
 .parts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
-    gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 12px;
 }
 
 .part-item {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition:
-        transform 0.2s,
-        box-shadow 0.2s;
-    word-break: break-word;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  word-break: break-word;
 }
 
 .part-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-    border-color: #319795;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  border-color: #319795;
 }
 
 .part-item .badge {
-    width: 8px;
-    height: 8px;
-    background-color: #319795;
-    border-radius: 50%;
-    flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #319795;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 /* ==========================================
@@ -155,48 +155,53 @@ header p {
    ========================================== */
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
+  header h1 {
+    font-size: 1.5rem;
+  }
 
-    header p {
-        font-size: 0.9rem;
-    }
+  header p {
+    font-size: 0.9rem;
+  }
 
-    .tabs-nav {
-        justify-content: flex-start;
-        overflow-x: auto; /* يسمح بسحب التبويبات أفقياً باللمس */
-        flex-wrap: nowrap;
-        padding-bottom: 10px;
-        -webkit-overflow-scrolling: touch;
-    }
+  .tabs-nav {
+    justify-content: flex-start;
+    overflow-x: auto; /* يسمح بسحب التبويبات أفقياً باللمس */
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    .tab-btn {
-        font-size: 0.85rem;
-        padding: 7px 12px;
-        flex-shrink: 0;
-    }
+  .tab-btn {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+    flex-shrink: 0;
+  }
 
-    .section-card {
-        padding: 15px;
-    }
+  .section-card {
+    padding: 15px;
+  }
 
-    .section-header h2 {
-        font-size: 1.15rem;
-    }
+  .section-header h2 {
+    font-size: 1.15rem;
+  }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 10px 5px;
-    }
+  body {
+    padding: 10px 5px;
+  }
 
-    .parts-grid {
-        grid-template-columns: 1fr; /* كارت واحد في السطر */
-    }
+  .parts-grid {
+    grid-template-columns: 1fr; /* كارت واحد في السطر */
+  }
 
-    .part-item {
-        font-size: 0.85rem;
-        padding: 8px 12px;
-    }
+  .part-item {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
