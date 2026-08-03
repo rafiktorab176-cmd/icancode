@@ -1,6 +1,6 @@
 // قاعدة بيانات نصوص المقالات الكاملة
 const articlesData = {
-    "article-fridge": `
+  "article-fridge": `
     <h2>دليل الأعطال الشائعة للثلاجات والديب فريزر وكيفية الحفاظ عليها</h2>
     <p>تعتبر الثلاجة والديب فريزر من أهم الأجهزة المنزلية التي تعمل على مدار 24 ساعة دون توقف. الحفاظ على كفاءتهما يضمن سلامة الأطعمة وتوفير استهلاك الكهرباء.</p>
     
@@ -19,7 +19,7 @@ const articlesData = {
     </ul>
   `,
 
-    "article-washers": `
+  "article-washers": `
     <h2>أسرار الصيانة الدورية للغسالات وغسالات الأطباق وتجنب الأعطال</h2>
     <p>تتعرض الغسالات وغسالات الأطباق لرواسب الصابون والأملاح بشكل مستمر، مما يؤثر على كفاءتها التشغيلية وقدرتها على التنظيف.</p>
 
@@ -38,7 +38,7 @@ const articlesData = {
     </ul>
   `,
 
-    "article-screens": `
+  "article-screens": `
     <h2>كيف تحمي شاشتك Smart / LED من الأعطال المفاجئة؟</h2>
     <p>الشاشات الحديثة أجهزة إلكترونية دقيقة جداً وتحتاج إلى تعامل خاص لحماية كروت التشغيل ولوحة العرض (البانل).</p>
 
@@ -57,7 +57,7 @@ const articlesData = {
     </ul>
   `,
 
-    "article-ac": `
+  "article-ac": `
     <h2>دليل تجهيز التكييف للعمل بكفاءة عالية وتوفير استهلاك الكهرباء</h2>
     <p>التكييف هو المنقذ الأول في فصل الصيف، ولكن إهمال صيانته يقلل من قدرة التبريد ويزيد من فاتورة الكهرباء بشكل ملحوظ.</p>
 
@@ -79,28 +79,28 @@ const articlesData = {
 
 // وظيفة فتح النافذة المنبثقة بحسب اسم المقال
 function openArticle(articleKey) {
-    const modal = document.getElementById("articleModal");
-    const modalBody = document.getElementById("modalBody");
+  const modal = document.getElementById("articleModal");
+  const modalBody = document.getElementById("modalBody");
 
-    if (articlesData[articleKey]) {
-        modalBody.innerHTML = articlesData[articleKey];
-        modal.style.display = "flex";
-        document.body.style.overflow =
-            "hidden"; /* منع التمرير في خلفية الصفحة عند فتح النافذة */
-    }
+  if (articlesData[articleKey]) {
+    modalBody.innerHTML = articlesData[articleKey];
+    modal.style.display = "flex";
+    document.body.style.overflow =
+      "hidden"; /* منع التمرير في خلفية الصفحة عند فتح النافذة */
+  }
 }
 
 // وظيفة إغلاق النافذة المنبثقة
 function closeArticle() {
-    const modal = document.getElementById("articleModal");
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
+  const modal = document.getElementById("articleModal");
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
 }
 
 // إغلاق النافذة عند النقر خارج المحتوى
 window.onclick = function (event) {
-    const modal = document.getElementById("articleModal");
-    if (event.target === modal) {
-        closeArticle();
-    }
+  const modal = document.getElementById("articleModal");
+  if (event.target === modal) {
+    closeArticle();
+  }
 };

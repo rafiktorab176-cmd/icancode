@@ -1,0 +1,1034 @@
+/* === Reset & Variables === */
+:root {
+  --primary-color: #284995;
+  --primary-hover: #fefeff;
+  --secondary-color: #2b2d42;
+  --bg-light: #f8f9fa;
+  --text-dark: #1d3557;
+  --text-light: #6c757d;
+  --white: #ffffff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Header & Navigation === */
+/* === Header & Navigation (الشاشات الكبيرة) === */
+
+/* === Header & Navigation === */
+header {
+  background-color: var(--white, #ffffff);
+  box-shadow: var(--shadow, 0 2px 10px rgba(0, 0, 0, 0.1));
+  position: sticky;
+  top: 0;
+  z-index: 9999 !important; /* رفعه لأعلى طبقة بالكامل */
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-color, #284995);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color, #284995);
+}
+
+/* ==========================================
+   تنسيقات الموبايل (أقل من 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column !important;
+    align-items: flex-start !important; /* محاذاة للشمال عشان التمرير يبدأ مظبوط */
+    gap: 12px !important;
+    padding: 12px 10px !important;
+  }
+
+  .nav-links {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    overflow-x: auto !important; /* السحب الأفقي */
+    padding: 5px 5px 10px 5px !important; /* مساحة تحت للـ scroll */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links li {
+    flex-shrink: 0 !important; /* 🔴 يمنع ضغط الكلمات وتقطيعها */
+  }
+
+  .nav-links li a {
+    background-color: #f0f4f9 !important;
+    color: var(--primary-color, #284995) !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+    white-space: nowrap !important; /* 🔴 يمنع نزول الكلمة في سطر جديد */
+  }
+}
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(135deg, var(--secondary-color), #111827);
+  color: var(--white);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.hotline-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffbc00;
+}
+
+/* Hotlines Box */
+.hotlines-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.hotline-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(217, 4, 41, 0.4);
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.hotline-btn:hover {
+  background-color: #19419c;
+  transform: translateY(-3px);
+}
+
+/* === Services Section === */
+.services {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border-bottom: 4px solid var(--primary-color);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+}
+
+.service-card p {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+/* === Features Section === */
+.features {
+  background-color: var(--white);
+  padding: 50px 20px;
+  box-shadow: var(--shadow);
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.feature-box h4 {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+/* === SEO Content Section === */
+.seo-content {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.seo-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+}
+
+.seo-card h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.seo-card p,
+.seo-card ul {
+  color: #4b5563;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.seo-card ul {
+  padding-right: 20px;
+}
+
+.seo-card ul li {
+  margin-bottom: 8px;
+}
+
+/* === Fixed Mobile Call Bar === */
+.mobile-call-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.mobile-call-bar a {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+/* === SEO Keywords Special Section Styles === */
+.seo-keywords-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.seo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.main-seo-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.main-seo-title::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background-color: var(--primary-color);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.seo-keyword-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  border-right: 5px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.seo-keyword-card:hover {
+  transform: translateY(-3px);
+}
+
+.seo-keyword-card h3 {
+  font-size: 22px;
+  color: var(--secondary-color);
+  margin-bottom: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.seo-keyword-card p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.seo-keyword-card p:last-child {
+  margin-bottom: 0;
+}
+
+.seo-keyword-card strong {
+  color: #111827;
+  font-weight: 700;
+  background-color: #fff3f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .seo-keyword-card {
+    padding: 20px;
+  }
+
+  .main-seo-title {
+    font-size: 22px;
+  }
+
+  .seo-keyword-card h3 {
+    font-size: 18px;
+  }
+
+  .seo-keyword-card p {
+    font-size: 14px;
+  }
+}
+/* === Trouble Guide Section Styles === */
+.trouble-guide-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.guide-header h2 {
+  font-size: 28px;
+  color: var(--secondary-color);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.guide-header p {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 25px;
+}
+
+.guide-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--primary-color);
+  position: relative;
+}
+
+.card-badge {
+  display: inline-block;
+  background-color: #ffe5e8;
+  color: var(--primary-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.guide-card h3 {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 10px;
+}
+
+.issue-box {
+  background-color: #f9fafb;
+  border-right: 3px solid var(--secondary-color);
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.issue-box:last-child {
+  margin-bottom: 0;
+}
+
+.issue-box h4 {
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.issue-box p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+/* Banner Box */
+.guide-banner {
+  background: linear-gradient(135deg, var(--secondary-color), #1f2937);
+  color: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: var(--shadow);
+}
+
+.guide-banner p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.banner-buttons a {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.banner-buttons a:hover {
+  background-color: #19419c;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+  .accordion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-header h2 {
+    font-size: 22px;
+  }
+
+  .guide-card {
+    padding: 18px;
+  }
+
+  .banner-buttons a {
+    width: 100%;
+  }
+}
+/* === FAQ Section Styles === */
+.faq-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-header h2 {
+  font-size: 28px;
+  color: var(--secondary-color);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.faq-header p {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 25px;
+  box-shadow: var(--shadow);
+  border-right: 5px solid var(--primary-color);
+  transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translateX(-4px);
+}
+
+.faq-question {
+  font-size: 18px;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.faq-answer p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.faq-answer strong {
+  color: var(--primary-color);
+}
+
+/* Callout Box */
+.faq-callout {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radius);
+  padding: 25px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.faq-callout p {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.faq-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.faq-buttons a {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.faq-buttons a:hover {
+  background-color: #19419c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-header h2 {
+    font-size: 22px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-buttons a {
+    width: 100%;
+  }
+}
+/* === Policy & Disclaimer Section === */
+.policy-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.policy-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.policy-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.policy-header h2 {
+  font-size: 28px;
+  color: var(--secondary-color, #2b2d42);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.policy-header p {
+  font-size: 15px;
+  color: var(--text-light, #6c757d);
+}
+
+.policy-card {
+  background-color: var(--white, #ffffff);
+  border-radius: var(--radius, 12px);
+  padding: 30px;
+  box-shadow: var(--shadow, 0 4px 15px rgba(0, 0, 0, 0.08));
+  border-right: 5px solid var(--primary-color, #284995);
+}
+
+.disclaimer-card {
+  border-right-color: #d90429; /* لون أحمر/تحذيري لإخلاء المسؤولية */
+}
+
+.policy-card h3 {
+  font-size: 20px;
+  color: var(--secondary-color, #2b2d42);
+  margin-bottom: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.disclaimer-card h3 {
+  color: #d90429;
+}
+
+.policy-card p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.policy-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.policy-card ul li {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  position: relative;
+  padding-right: 20px;
+}
+
+.policy-card ul li::before {
+  content: "•";
+  color: var(--primary-color, #284995);
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+
+.disclaimer-card ul li::before {
+  color: #d90429;
+}
+
+.policy-card ul li strong {
+  color: #111827;
+}
+
+.policy-footer-note {
+  background-color: #f0f4f9;
+  border-radius: var(--radius, 12px);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-dark, #1d3557);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .policy-card {
+    padding: 20px;
+  }
+
+  .policy-header h2 {
+    font-size: 22px;
+  }
+
+  .policy-card h3 {
+    font-size: 18px;
+  }
+}
+/* ==========================================
+   6. الفوتر (Footer)
+   ========================================== */
+.site-footer {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 50px 0 20px 0;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-about h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.footer-about p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #eff1f3;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 2px solid #1e293b;
+  padding-bottom: 10px;
+  font-size: 15px;
+  color: #b6babe;
+}
+
+/* ==========================================
+   شريط التواصل الثابت أسفل الشاشة
+   ========================================== */
+.fixed-contact-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  gap: 15px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 10px 16px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: rotate(30deg);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.contact-btn:hover::after {
+  opacity: 1;
+  left: 100%;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn .icon {
+  font-size: 18px;
+}
+
+.contact-btn .text-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: right;
+}
+
+html[dir="ltr"] .contact-btn .text-info {
+  text-align: left;
+}
+
+.contact-btn small {
+  font-size: 10px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.contact-btn strong {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.btn-hotline-primary {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+.btn-hotline-secondary {
+  background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+.btn-hotline-tertiary {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.btn-whatsapp-fixed {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.btn-whatsapp-fixed .whatsapp-icon {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ==========================================
+   تنسيقات تجاوب الفوتر وشريط الاتصال (Responsive)
+   ========================================== */
+
+@media screen and (max-width: 992px) {
+  /* جعل أعمدة الفوتر تنزل تحت بعض بدلاً من 3 أعمدة */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .contact-btn .text-info,
+  html[dir="ltr"] .contact-btn .text-info {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 1. إضافة padding لأسفل الفوتر عشان شريط الاتصال الثابت ما يغطي على الحقوق */
+  .site-footer {
+    padding-bottom: 90px;
+  }
+
+  /* 2. ضبط شريط الاتصال الثابت في الموبايل */
+  .fixed-contact-bar {
+    bottom: 10px;
+    width: 95%; /* أخذ معظم عرض الشاشة */
+    max-width: 480px;
+    padding: 8px 10px;
+    gap: 8px;
+    justify-content: space-around;
+  }
+
+  .contact-btn {
+    padding: 6px 10px;
+    gap: 6px;
+    flex: 1; /* توزيع الأزرار بالتساوي */
+    justify-content: center;
+  }
+
+  .contact-btn strong {
+    font-size: 13px; /* تصغير خط الرقم يناسب الشاشة الصغيرة */
+  }
+
+  .contact-btn small {
+    display: none; /* إخفاء النص الفرعي الصغير لتوفير مساحة للأرقام */
+  }
+
+  .contact-btn .icon {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* للهواتف الصغرى جداً */
+  .contact-btn strong {
+    font-size: 11px;
+  }
+
+  .fixed-contact-bar {
+    padding: 6px 6px;
+    gap: 4px;
+  }
+}
