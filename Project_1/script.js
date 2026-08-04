@@ -547,3 +547,81 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+let allCodes = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tableBody = document.getElementById("tableBody");
+  const searchInput = document.getElementById("searchInput");
+  const applianceFilter = document.getElementById("applianceFilter");
+  const noResults = document.getElementById("noResults");
+
+  // جلب البيانات من ملف JSON الخارجي
+  fetch("codes.json")
+    .then((response) => response.json())
+    .then((data) => {
+      allCodes = data;
+      renderTable(allCodes);
+    })
+    .catch((error) => {
+      console.error("حدث خطأ في تحميل الأكواد:", error);
+    });
+
+  // طباعة البيانات في الجدول
+  function renderTable(data) {
+    tableBody.innerHTML = "";
+
+    if (data.length === 0) {
+      noResults.style.display = "block";
+      return;
+    } else {
+      noResults.style.display = "none";
+    }
+
+    data.forEach((item) => {
+      const row = document.createElement("tr");
+
+      let dangerBadge = "";
+      if (item.danger === "high")
+        dangerBadge = '<span class="badge priority-high">عالي</span>';
+      else if (item.danger === "med")
+        dangerBadge = '<span class="badge priority-med">متوسط</span>';
+      else dangerBadge = '<span class="badge priority-low">منخفض</span>';
+
+      row.innerHTML = `
+                <td><span class="code-badge">${item.code}</span></td>
+                <td>${item.brand}</td>
+                <td>${item.problem}</td>
+                <td>${item.cause}</td>
+                <td>${item.solution}</td>
+                <td>${dangerBadge}</td>
+            `;
+
+      tableBody.appendChild(row);
+    });
+  }
+
+  // تصفية الأكواد والبحث الفوري
+  function filterCodes() {
+    const query = searchInput.value.toLowerCase().trim();
+    const selectedAppliance = applianceFilter.value;
+
+    const filtered = allCodes.filter((item) => {
+      const matchQuery =
+        item.code.toLowerCase().includes(query) ||
+        item.brand.toLowerCase().includes(query) ||
+        item.problem.toLowerCase().includes(query) ||
+        item.cause.toLowerCase().includes(query) ||
+        item.solution.toLowerCase().includes(query);
+
+      const matchAppliance =
+        selectedAppliance === "all" || item.appliance === selectedAppliance;
+
+      return matchQuery && matchAppliance;
+    });
+
+    renderTable(filtered);
+  }
+
+  searchInput.addEventListener("input", filterCodes);
+  applianceFilter.addEventListener("change", filterCodes);
+});

@@ -2222,6 +2222,46 @@
             </div>
           </div>
         </div>
+        <div class="table-container">
+          <div class="table-header">
+            <h2>المكتبة الشاملة لأكواد الأعطال (ثلاجات وغسالات)</h2>
+
+            <div class="filter-box">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="اكتب كود العطل (مثال: E1, OE, LE) أو الماركة (سامسونج, توشيبا, إل جي)..."
+              />
+
+              <select id="applianceFilter">
+                <option value="all">جميع الأجهزة</option>
+                <option value="fridge">ثلاجات وديب فريزر</option>
+                <option value="washer">غسالات أوتوماتيك</option>
+              </select>
+            </div>
+          </div>
+
+          <table id="errorCodeTable">
+            <thead>
+              <tr>
+                <th>كود العطل</th>
+                <th>الجهاز والماركة</th>
+                <th>طبيعة المشكلة</th>
+                <th>السبب المحتمل</th>
+                <th>طريقة التعامل والحل الفني</th>
+                <th>مستوى الخطر</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- سيتم تحميل الأكواد تلقائياً من ملف JSON -->
+            </tbody>
+          </table>
+
+          <div id="noResults" class="no-results" style="display: none">
+            لم يتم العثور على أية أكواد تطابق بحثك. يمكنك إضافة الكود في ملف
+            codes.json مجاناً.
+          </div>
+        </div>
       </section>
 
       <!-- =========================================================
