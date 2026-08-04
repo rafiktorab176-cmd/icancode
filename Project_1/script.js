@@ -625,3 +625,12 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("input", filterCodes);
   applianceFilter.addEventListener("change", filterCodes);
 });
+// مثال داخل الدالة التي تعرض الأكواد من JSON
+row.innerHTML = `
+  <td data-label="كود العطل"><span class="code-badge">${item.code}</span></td>
+  <td data-label="الجهاز والماركة">${item.brand}</td>
+  <td data-label="طبيعة المشكلة">${item.problem}</td>
+  <td data-label="السبب المحتمل">${item.cause}</td>
+  <td data-label="طريقة التعامل">${item.solution}</td>
+  <td data-label="مستوى الخطر"><span class="badge ${item.priorityClass}">${item.priorityText}</span></td>
+`;

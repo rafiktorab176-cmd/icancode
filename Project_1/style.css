@@ -722,6 +722,10 @@ html[dir="ltr"] .experience-badge {
     padding: 6px 12px;
   }
 }
+/* ==========================================
+   تنسيقات الجدول الأساسية (معدلة للتجاوُب)
+   ========================================== */
+
 .table-container {
   max-width: 1200px;
   margin: 20px auto;
@@ -762,13 +766,20 @@ html[dir="ltr"] .experience-badge {
 
 .filter-box input {
   flex: 3;
-  min-width: 280px;
+  min-width: 200px; /* تقليل الحد الأدنى ليتناسب مع الموبايل */
 }
 
 .filter-box select {
   flex: 1;
-  min-width: 180px;
+  min-width: 150px;
   cursor: pointer;
+}
+
+/* إضافة حاوي للتمرير الأفقي للجدول عند الحجم المتوسط */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -833,6 +844,68 @@ tr:hover {
   padding: 30px;
   color: #64748b;
   font-size: 16px;
+}
+
+/* ==========================================
+   قواعد التجاوُب مع الشاشات الصغيرة (Media Queries)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+  .table-header h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .filter-box input,
+  .filter-box select {
+    width: 100%;
+    flex: 1 1 100%; /* جعل خانة البحث والاختيار بعرض الصفحة كاملاً */
+  }
+
+  /* تحويل الجدول إلى بطاقات سريعة القراءة في الموبايل */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none; /* إخفاء الهيدر في الموبايل */
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 10px 5px;
+    text-align: left;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  /* إضافة اسم العمود تلقائياً من خلال HTML أو الـ JS */
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #475569;
+    margin-left: 10px;
+    text-align: right;
+  }
 }
 /* =========================================================
    تنسيق النافذة المنبثقة (Blog Modal Pop-up)
