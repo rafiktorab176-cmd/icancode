@@ -1768,7 +1768,6 @@ html[dir="ltr"] .faq-question {
   color: white;
   margin-top: 0;
   margin-bottom: 16px;
-  
 }
 
 .footer-links ul {
@@ -1787,6 +1786,15 @@ html[dir="ltr"] .faq-question {
   text-decoration: none;
   transition: color 0.2s;
   font-size: 14px;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* مسافة بين كل سطر والتاني */
+}
+
+.footer-contact a {
+  display: block;
 }
 
 .footer-links a:hover,
