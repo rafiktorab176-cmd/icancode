@@ -2,23 +2,19 @@ let currentLang = "ar";
 
 // دالة التبديل بين العربي والإنجليزي
 function toggleLanguage() {
-  // تبديل اللغة الحالية
   currentLang = currentLang === "ar" ? "en" : "ar";
 
-  // 1. تحديث جذر الـ HTML (بأمان)
   const htmlRoot =
     document.getElementById("html-root") || document.documentElement;
   htmlRoot.setAttribute("lang", currentLang);
   htmlRoot.setAttribute("dir", currentLang === "ar" ? "rtl" : "ltr");
 
-  // 2. تحديث الـ Navbar (لو العنصر موجود)
   const navContainer = document.getElementById("nav-container");
   if (navContainer) {
     navContainer.style.flexDirection =
       currentLang === "ar" ? "row-reverse" : "row";
   }
 
-  // 3. تحديث الـ Banner (لو العنصر موجود)
   const bannerBox = document.getElementById("hero");
   const bannerGradient = document.getElementById("banner-gradient");
   if (bannerBox) {
@@ -31,26 +27,25 @@ function toggleLanguage() {
         : "linear-gradient(to right, rgba(3, 7, 18, 0.9), rgba(15, 23, 42, 0.7), transparent)";
   }
 
-  // 4. تحديث نص زر اللغة (لو العنصر موجود)
   const langBtnText = document.getElementById("lang-btn-text");
   if (langBtnText) {
     langBtnText.innerText = currentLang === "ar" ? "English 🌐" : "عربي 🌐";
   }
 
-  // 5. تحديث نصوص العناصر ذات attribute data-ar / data-en (المحافظات، الماركات، المدونة، وغيرها)
   document.querySelectorAll("[data-ar]").forEach((el) => {
     const text = el.getAttribute(`data-${currentLang}`);
     if (text) {
       el.innerHTML = text;
     }
   });
-}
 
-// تحديث الـ Placeholders
-document.querySelectorAll("[data-ar-placeholder]").forEach((input) => {
-  const placeholderText = input.getAttribute(`data-${currentLang}-placeholder`);
-  if (placeholderText) input.setAttribute("placeholder", placeholderText);
-});
+  document.querySelectorAll("[data-ar-placeholder]").forEach((input) => {
+    const placeholderText = input.getAttribute(
+      `data-${currentLang}-placeholder`,
+    );
+    if (placeholderText) input.setAttribute("placeholder", placeholderText);
+  });
+}
 
 // معالجة إرسال نموذج الحجز وإرساله مباشرة للواتساب
 function handleBooking(event) {
@@ -86,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.classList.toggle("active");
     });
 
-    // إغلاق قائمة الموبايل عند الضغط على أي رابط
     document.querySelectorAll(".nav-links a").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("open");
@@ -104,29 +98,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 3. تحديث رابط النافبار النشط (.active) أثناء التمرير
+  // 3. تحديث رابط النافبار النشط (.active) بدون تسبيب Forced Synchronous Layout
   const sections = document.querySelectorAll("section[id], footer[id]");
   const navItems = document.querySelectorAll(".nav-links a");
 
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - 150) {
-        current = section.getAttribute("id");
-      }
-    });
+  if (sections.length > 0 && navItems.length > 0) {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px", // يحدد المنطقة النشطة في الشاشة
+      threshold: 0,
+    };
 
-    navItems.forEach((item) => {
-      item.classList.remove("active");
-      if (item.getAttribute("href") === `#${current}`) {
-        item.classList.add("active");
-      }
-    });
-  });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute("id");
+          navItems.forEach((item) => {
+            if (item.getAttribute("href") === `#${currentId}`) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+  }
 });
-// قاعدة البيانات الشاملة والموسعة لمقالات المدونة (25 ماركة)
+
+// قاعدة البيانات الشاملة للمقالات
 const blogArticlesData = {
   kiriazi: {
     content: `
@@ -518,7 +520,6 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // التمرير الناعم عند الضغط على أزرار التنقل بين الماركات
   const brandLinks = document.querySelectorAll(".brand-link-pill");
 
   brandLinks.forEach((link) => {
@@ -533,7 +534,6 @@ document.addEventListener("DOMContentLoaded", () => {
           block: "start",
         });
 
-        // تأثير إضاءة بسيط ومؤقت للبطاقة المستهدفة للتنبيه
         targetElement.style.transition =
           "box-shadow 0.4s ease, border-color 0.4s ease";
         targetElement.style.borderColor = "#0d6efd";
@@ -547,6 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 let allCodes = [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -555,7 +556,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const applianceFilter = document.getElementById("applianceFilter");
   const noResults = document.getElementById("noResults");
 
-  // جلب البيانات من ملف JSON الخارجي
   fetch("codes.json")
     .then((response) => response.json())
     .then((data) => {
@@ -566,41 +566,46 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("حدث خطأ في تحميل الأكواد:", error);
     });
 
-  // طباعة البيانات في الجدول
+  // طباعة البيانات في الجدول تحسين الأداء بـ DocumentFragment
   function renderTable(data) {
     tableBody.innerHTML = "";
 
     if (data.length === 0) {
-      noResults.style.display = "block";
+      if (noResults) noResults.style.display = "block";
       return;
     } else {
-      noResults.style.display = "none";
+      if (noResults) noResults.style.display = "none";
     }
+
+    const fragment = document.createDocumentFragment();
 
     data.forEach((item) => {
       const row = document.createElement("tr");
 
       let dangerBadge = "";
-      if (item.danger === "high")
+      if (item.danger === "high") {
         dangerBadge = '<span class="badge priority-high">عالي</span>';
-      else if (item.danger === "med")
+      } else if (item.danger === "med") {
         dangerBadge = '<span class="badge priority-med">متوسط</span>';
-      else dangerBadge = '<span class="badge priority-low">منخفض</span>';
+      } else {
+        dangerBadge = '<span class="badge priority-low">منخفض</span>';
+      }
 
       row.innerHTML = `
-                <td><span class="code-badge">${item.code}</span></td>
-                <td>${item.brand}</td>
-                <td>${item.problem}</td>
-                <td>${item.cause}</td>
-                <td>${item.solution}</td>
-                <td>${dangerBadge}</td>
-            `;
+        <td data-label="كود العطل"><span class="code-badge">${item.code}</span></td>
+        <td data-label="الجهاز والماركة">${item.brand}</td>
+        <td data-label="طبيعة المشكلة">${item.problem}</td>
+        <td data-label="السبب المحتمل">${item.cause}</td>
+        <td data-label="طريقة التعامل">${item.solution}</td>
+        <td data-label="مستوى الخطر">${dangerBadge}</td>
+      `;
 
-      tableBody.appendChild(row);
+      fragment.appendChild(row);
     });
+
+    tableBody.appendChild(fragment);
   }
 
-  // تصفية الأكواد والبحث الفوري
   function filterCodes() {
     const query = searchInput.value.toLowerCase().trim();
     const selectedAppliance = applianceFilter.value;
@@ -622,52 +627,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTable(filtered);
   }
 
-  searchInput.addEventListener("input", filterCodes);
-  applianceFilter.addEventListener("change", filterCodes);
+  if (searchInput) searchInput.addEventListener("input", filterCodes);
+  if (applianceFilter) applianceFilter.addEventListener("change", filterCodes);
 });
-// مثال داخل الدالة التي تعرض الأكواد من JSON
-row.innerHTML = `
-  <td data-label="كود العطل"><span class="code-badge">${item.code}</span></td>
-  <td data-label="الجهاز والماركة">${item.brand}</td>
-  <td data-label="طبيعة المشكلة">${item.problem}</td>
-  <td data-label="السبب المحتمل">${item.cause}</td>
-  <td data-label="طريقة التعامل">${item.solution}</td>
-  <td data-label="مستوى الخطر"><span class="badge ${item.priorityClass}">${item.priorityText}</span></td>
-`;
-// إنشاء عنصر script مخصص للسكيما
-const schemaScript = document.createElement("script");
-schemaScript.type = "application/ld+json";
-
-// كتابة بيانات السكيما
-const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "مركز خدمة الصيانة المنزلية المعتمد",
-  image: "assets/og-image.jpg",
-  telephone: ["19580", "17718", "15607"],
-  priceRange: "$$",
-  description:
-    "مركز خدمة الصيانة المنزلية المعتمد لصيانة الغسالات، الثلاجات، والديب فريزر بقطع غيار أصلية وضمان معتمد.",
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "EG",
-  },
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: "19580",
-      contactType: "customer service",
-      availableLanguage: ["Arabic&English"],
-    },
-    {
-      "@type": "ContactPoint",
-      telephone: "+01289966660",
-      contactType: "customer service",
-      description: "WhatsApp Support",
-    },
-  ],
-};
-
-// تحويل الكائن إلى JSON وإضافته لـ head
-schemaScript.textContent = JSON.stringify(schemaData);
-document.head.appendChild(schemaScript);
