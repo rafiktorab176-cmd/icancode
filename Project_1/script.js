@@ -634,3 +634,82 @@ row.innerHTML = `
   <td data-label="طريقة التعامل">${item.solution}</td>
   <td data-label="مستوى الخطر"><span class="badge ${item.priorityClass}">${item.priorityText}</span></td>
 `;
+// إنشاء عنصر script مخصص للسكيما
+const schemaScript = document.createElement("script");
+schemaScript.type = "application/ld+json";
+
+// كتابة بيانات السكيما المكتملة والمعدلة
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: "مركز خدمة الصيانة المنزلية المعتمد",
+  image: "assets/og-image.jpg",
+  telephone: ["19580", "17718", "15607"],
+  priceRange: "$$",
+  description:
+    "مركز خدمة الصيانة المنزلية المعتمد لصيانة الغسالات، الثلاجات، والديب فريزر بقطع غيار أصلية وضمان معتمد.",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "EG",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "19580",
+      contactType: "customer service",
+      contactOption: "TollFree",
+      availableLanguage: ["Arabic", "English"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "17718",
+      contactType: "customer service",
+      availableLanguage: ["Arabic", "English"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "15607",
+      contactType: "customer service",
+      availableLanguage: ["Arabic", "English"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+201289966660",
+      contactType: "customer service",
+      description: "WhatsApp Support",
+    },
+  ],
+};
+
+// تحويل الكائن إلى JSON وإضافته لـ head
+schemaScript.textContent = JSON.stringify(schemaData);
+document.head.appendChild(schemaScript);
+// سكيما الأسئلة الشائعة
+const faqScript = document.createElement("script");
+faqScript.type = "application/ld+json";
+
+const faqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "ما هي الأجهزة التي يتم صيانتها؟",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "نقدم خدمة صيانة معتمدة لجميع أنواع الغسالات، الثلاجات، والديب فريزر بقطع غيار أصلية وضمان معتمد.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "هل توجد فترة ضمان على الصيانة؟",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "نعم، نقدم ضماناً معتمداً على قطع الغيار الأصلية وعملية الصيانة المنجزة.",
+      },
+    },
+  ],
+};
+
+faqScript.textContent = JSON.stringify(faqData);
+document.head.appendChild(faqScript);
