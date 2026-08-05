@@ -974,9 +974,10 @@ html[dir="ltr"] .contact-btn .text-info {
 @media screen and (max-width: 992px) {
   /* جعل أعمدة الفوتر تنزل تحت بعض بدلاً من 3 أعمدة */
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
   }
 
   .contact-btn .text-info,

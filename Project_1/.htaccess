@@ -1,0 +1,14 @@
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # تخزين الصور لمدة سنة
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # تخزين ملفات التنسيق والسكربتات لمدة شهر
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

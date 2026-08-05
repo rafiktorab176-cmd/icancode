@@ -30,6 +30,12 @@
     />
     <meta name="twitter:image" content="assets/og-image.jpg" />
     <!-- خط كاييرو -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
       rel="stylesheet"
@@ -199,9 +205,12 @@
         <div class="about-card">
           <div class="about-image-box">
             <img
-              src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQmmcgz1pLnqbdA26hJgb1CSaW0rjaGj4mCBaG0GBvIeCPrNqmgrRBLlSzEtK9sRQnRLcwBUyDpc-xaebA"
+              src="assets/1_.jpg"
               alt="فني صيانة منزلية متخصص"
               class="about-img"
+              fetchpriority="high"
+              width="569"
+              height="284"
             />
             <div class="experience-badge">
               <strong>+15</strong>
@@ -2279,6 +2288,20 @@
             لم يتم العثور على أية أكواد تطابق بحثك. يمكنك إضافة الكود في ملف
             codes.json مجاناً.
           </div>
+        </div>
+        <table id="codesTable">
+          <thead>
+            <!-- عناوين الجدول -->
+          </thead>
+          <tbody id="tableBody">
+            <!-- هينزل هنا العناصر ديناميكياً -->
+          </tbody>
+        </table>
+        <!-- أزرار التنقل بين الصفحات -->
+        <div class="pagination-container">
+          <button id="prevBtn" onclick="changePage(-1)">السابق</button>
+          <span id="pageIndicator">صفحة 1</span>
+          <button id="nextBtn" onclick="changePage(1)">التالي</button>
         </div>
       </section>
 

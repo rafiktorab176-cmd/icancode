@@ -638,7 +638,7 @@ row.innerHTML = `
 const schemaScript = document.createElement("script");
 schemaScript.type = "application/ld+json";
 
-// كتابة بيانات السكيما المكتملة والمعدلة
+// كتابة بيانات السكيما
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
@@ -657,24 +657,11 @@ const schemaData = {
       "@type": "ContactPoint",
       telephone: "19580",
       contactType: "customer service",
-      contactOption: "TollFree",
-      availableLanguage: ["Arabic", "English"],
+      availableLanguage: ["Arabic&English"],
     },
     {
       "@type": "ContactPoint",
-      telephone: "17718",
-      contactType: "customer service",
-      availableLanguage: ["Arabic", "English"],
-    },
-    {
-      "@type": "ContactPoint",
-      telephone: "15607",
-      contactType: "customer service",
-      availableLanguage: ["Arabic", "English"],
-    },
-    {
-      "@type": "ContactPoint",
-      telephone: "+201289966660",
+      telephone: "+01289966660",
       contactType: "customer service",
       description: "WhatsApp Support",
     },
@@ -684,32 +671,3 @@ const schemaData = {
 // تحويل الكائن إلى JSON وإضافته لـ head
 schemaScript.textContent = JSON.stringify(schemaData);
 document.head.appendChild(schemaScript);
-// سكيما الأسئلة الشائعة
-const faqScript = document.createElement("script");
-faqScript.type = "application/ld+json";
-
-const faqData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "ما هي الأجهزة التي يتم صيانتها؟",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "نقدم خدمة صيانة معتمدة لجميع أنواع الغسالات، الثلاجات، والديب فريزر بقطع غيار أصلية وضمان معتمد.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "هل توجد فترة ضمان على الصيانة؟",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "نعم، نقدم ضماناً معتمداً على قطع الغيار الأصلية وعملية الصيانة المنجزة.",
-      },
-    },
-  ],
-};
-
-faqScript.textContent = JSON.stringify(faqData);
-document.head.appendChild(faqScript);
