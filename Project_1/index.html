@@ -30,25 +30,16 @@
     />
     <meta name="twitter:image" content="assets/og-image.webp" />
 
-    <!-- روابط Google Fonts الصحيحة بدون مشاكل CORS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=اسم_الخط:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- تحميل الـ CSS بدون حظر الشاشة -->
     <link
       rel="preload"
-      href="style.css"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
+      href="https://fonts.gstatic.com/..."
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- الشريط العلوي -->
