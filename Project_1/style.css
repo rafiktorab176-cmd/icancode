@@ -25,17 +25,17 @@ html {
   scroll-padding-top: 80px;
 }
 
+@font-face {
+  font-family: "اسم الخط الخاص بك";
+  src: url("https://fonts.gstatic.com/...") format("woff2");
+  font-display: swap;
+}
 body {
-  @font-face {
-    font-family: "اسم الخط الخاص بك";
-    src: url("https://fonts.gstatic.com/...") format("woff2");
-    font-display: swap;
-    background-color: #f8fafc;
-    color: #1e293b;
-    margin: 0;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+  background-color: #f8fafc;
+  color: #1e293b;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .container {
   margin: 0 auto;
