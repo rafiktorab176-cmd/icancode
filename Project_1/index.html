@@ -30,13 +30,31 @@
     />
     <meta name="twitter:image" content="assets/og-image.webp" />
 
-    <!-- استدعاء خط Cairo مع الخاصية التي تمنع تعارض CORS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
+    <!-- الاتصال المسبق -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- استدعاء الخط بدون حظر العرض مع خاصية التبديل الفوري -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      />
+    </noscript>
+    <!-- التنزيل المسبق لملف الخط الأساسي -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpcKmzrUA.woff2"
+      crossorigin
+    />
     <!-- تحميل style.css بدون حظر عرض الصفحة -->
     <link
       rel="preload"
@@ -2349,7 +2367,13 @@
             <!-- 1. Kiriazi -->
             <article class="blog-card" id="blog-kiriazi">
               <div class="blog-card-img-wrapper">
-                <img src="./assets/1.jpeg" alt="صيانة ثلاجات كريازي" />
+                <img
+                  src="./assets/1.jpeg"
+                  alt="صيانة ثلاجات كريازي"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                />
               </div>
               <div class="blog-card-tag">Kiriazi</div>
               <h3
