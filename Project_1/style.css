@@ -24,18 +24,18 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
-@font-face {
-  font-family: "اسم الخط الخاص بك";
-  src: url("https://fonts.gstatic.com/...") format("woff2");
-  font-display: swap;
-}
+
 body {
-  font-family: Cairo, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
-  margin: 0;
-  flex-direction: column;
-  min-height: 100vh;
+  @font-face {
+    font-family: "اسم الخط الخاص بك";
+    src: url("https://fonts.gstatic.com/...") format("woff2");
+    font-display: swap;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 .container {
   margin: 0 auto;
@@ -567,6 +567,7 @@ th {
 }
 .table-container {
   max-width: 1200px;
+  min-height: 400px;
   margin: 20px auto;
   background-color: #fff;
   border-radius: 10px;

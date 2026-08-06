@@ -30,13 +30,11 @@
     />
     <meta name="twitter:image" content="assets/og-image.webp" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- السطر الذي يستدعي ملف CSS الخاص بالخط من جوجل -->
+    <!-- استدعاء خط Cairo مع الخاصية التي تمنع تعارض CORS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
 
     <!-- تحميل style.css بدون حظر عرض الصفحة -->
@@ -213,8 +211,8 @@
           <div class="about-image-box">
             <img
               src="assets/2-.webp"
-              width="569"
-              height="492"
+              width="180"
+              height="60"
               fetchpriority="high"
               alt="فني صيانة منزلية متخصص"
               class="about-img"
