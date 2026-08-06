@@ -1,3 +1,4 @@
+// 1. تعريف المتغيرات العامة في البداية لتجنب خطأ ReferenceError
 let currentLang = "ar";
 
 // دالة التبديل بين العربي والإنجليزي
@@ -51,11 +52,11 @@ function toggleLanguage() {
 function handleBooking(event) {
   event.preventDefault();
 
-  const name = document.getElementById("client-name").value;
-  const phone = document.getElementById("client-phone").value;
-  const appliance = document.getElementById("appliance-type").value;
-  const address = document.getElementById("client-address").value;
-  const description = document.getElementById("issue-description").value;
+  const name = document.getElementById("client-name")?.value || "";
+  const phone = document.getElementById("client-phone")?.value || "";
+  const appliance = document.getElementById("appliance-type")?.value || "";
+  const address = document.getElementById("client-address")?.value || "";
+  const description = document.getElementById("issue-description")?.value || "";
 
   const whatsappNumber = "201289966660";
   const message = `طلب حجز صيانة جديد:%0A- الاسم: ${name}%0A- الهاتف: ${phone}%0A- الجهاز: ${appliance}%0A- العنوان: ${address}%0A- التفاصيل: ${description || "لا يوجد"}`;
@@ -98,14 +99,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 3. تحديث رابط النافبار النشط (.active) بدون تسبيب Forced Synchronous Layout
+  // 3. تحديث رابط النافبار النشط (.active) باستخدام IntersectionObserver لمنع Forced Reflow
   const sections = document.querySelectorAll("section[id], footer[id]");
   const navItems = document.querySelectorAll(".nav-links a");
 
   if (sections.length > 0 && navItems.length > 0) {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -70% 0px", // يحدد المنطقة النشطة في الشاشة
+      rootMargin: "-20% 0px -70% 0px",
       threshold: 0,
     };
 
@@ -170,7 +171,7 @@ const blogArticlesData = {
       </ul>
       <h3 class="article-section-title">🧊 4. ديب فريزر LG:</h3>
       <ul class="article-list">
-        <li><strong>الحل:</strong> إعادة ضبط وظيفة Express Freeze واختبار سنسور درجة الحرارة الرقمي.</li>
+        <li><strong>الحل:</strong> إعادة ضبط وظيفة Express Freeze وااختبار سنسور درجة الحرارة الرقمي.</li>
       </ul>
     `,
   },
@@ -548,6 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// إدارة جدول الأعطال
 let allCodes = [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -556,8 +558,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const applianceFilter = document.getElementById("applianceFilter");
   const noResults = document.getElementById("noResults");
 
+  // جلب ملف الـ JSON دون تكرار
   fetch("codes.json")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error("فشل تحميل ملف codes.json");
+      return response.json();
+    })
     .then((data) => {
       allCodes = data;
       renderTable(allCodes);
@@ -568,6 +574,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // طباعة البيانات في الجدول تحسين الأداء بـ DocumentFragment
   function renderTable(data) {
+    if (!tableBody) return;
     tableBody.innerHTML = "";
 
     if (data.length === 0) {
@@ -607,8 +614,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function filterCodes() {
-    const query = searchInput.value.toLowerCase().trim();
-    const selectedAppliance = applianceFilter.value;
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+    const selectedAppliance = applianceFilter ? applianceFilter.value : "all";
 
     const filtered = allCodes.filter((item) => {
       const matchQuery =
@@ -629,49 +636,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (searchInput) searchInput.addEventListener("input", filterCodes);
   if (applianceFilter) applianceFilter.addEventListener("change", filterCodes);
-});
-// متغيرات الجدول
-const INITIAL_ITEMS_LIMIT = 10;
-let displayedCount = INITIAL_ITEMS_LIMIT;
-let errorCodesData = [];
-let currentFilteredData = [];
-
-// دالة جلب البيانات من ملف JSON الخارجي
-async function loadErrorCodes() {
-  try {
-    const response = await fetch("./error-codes.json");
-    errorCodesData = await response.json();
-    currentFilteredData = [...errorCodesData];
-
-    // رندر أول 10 عناصر فور وصول البيانات
-    renderTableData(currentFilteredData, INITIAL_ITEMS_LIMIT);
-  } catch (error) {
-    console.error("خطأ في تحميل بيانات الأعطال:", error);
-  }
-}
-
-// استدعاء دالة التحميل عند تجهيز الصفحة
-document.addEventListener("DOMContentLoaded", function () {
-  // تحميل ملف الـ JSON
-  loadErrorCodes();
-
-  // ربط الفلاتر والبحث
-  document
-    .getElementById("searchInput")
-    ?.addEventListener("input", filterErrorCodes);
-  document
-    .getElementById("brandFilter")
-    ?.addEventListener("change", filterErrorCodes);
-  document
-    .getElementById("applianceFilter")
-    ?.addEventListener("change", filterErrorCodes);
-});
-// ❌ خطأ: قراءة ثم تعديل ثم قراءة (يسبب Forced Reflow)
-element.style.width = "100px";
-let w = element.offsetWidth; // ريفلو إجباري!
-
-// ✅ صح: فصل القراءة والتحديث
-requestAnimationFrame(() => {
-  let w = element.offsetWidth; // القراءة أولاً
-  element.style.width = w + 10 + "px"; // التعديل ثانياً
 });

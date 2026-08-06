@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- عنوان الصفحة المعتمد -->
     <title>مركز خدمة الصيانة المنزلية المعتمد</title>
 
@@ -11,6 +12,31 @@
       name="description"
       content="مركز خدمة الصيانة المنزلية المعتمد لصيانة الغسالات، الثلاجات، والديب فريزر بقطع غيار أصلية وضمان معتمد."
     />
+
+    <!-- 1. تسريع الاتصال بالخوادم الخارجية قبل أي تحميل (Preconnect أولاً) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 2. التحميل المسبق للصورة الرئيسية (LCP) لسرعة الظهور -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/2-.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <!-- 3. رابط الخط مع خاصية display=swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 4. ملف الاستايل الرئيسي -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- 5. أيقونة الموقع (Favicon) -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 
     <!-- إعدادات مشاركة الرابط على الواتساب والفيسبوك (Open Graph) -->
     <meta property="og:type" content="website" />
@@ -29,44 +55,6 @@
       content="مركز خدمة الصيانة المنزلية المعتمد لصيانة الغسالات، الثلاجات، والديب فريزر بقطع غيار أصلية وضمان معتمد."
     />
     <meta name="twitter:image" content="assets/og-image.webp" />
-
-    <!-- 1. الاتصال المسبق بسيرفرات الخطوط (غيابه سبب التأخير الكامل) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- 2. تنزيل ملف الخط الأساسي مباشرة بالتوازي -->
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpcKmzrUA.woff2"
-      crossorigin
-    />
-
-    <!-- 3. استدعاء الخط بدون حظر العرض -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
-      />
-    </noscript>
-    <!-- تحميل style.css بدون حظر عرض الصفحة -->
-    <link
-      rel="preload"
-      href="style.css"
-      as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
-    />
-    <noscript><link rel="stylesheet" href="style.css" /></noscript>
   </head>
   <body>
     <!-- الشريط العلوي -->
