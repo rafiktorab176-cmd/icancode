@@ -1,9 +1,3 @@
-.logo-box,
-.nav-links,
-.phone-box,
-body {
-  display: flex;
-}
 .brand-link-pill,
 .btn-call,
 .btn-whatsapp,
@@ -15,6 +9,12 @@ body {
 .service-link,
 a[href^="tel:"] {
   text-decoration: none;
+}
+.logo-box,
+.nav-links,
+.phone-box,
+body {
+  display: flex;
 }
 * {
   box-sizing: border-box;
@@ -30,14 +30,7 @@ html {
   font-display: swap;
 }
 body {
-  font-family:
-    "اسم الخط المخصص",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
+  font-family: Cairo, sans-serif;
   background-color: #f8fafc;
   color: #1e293b;
   margin: 0;
@@ -69,6 +62,10 @@ table {
   padding: 10px 0;
   font-size: 19px;
 }
+.phone-box,
+.phone-box a {
+  color: #fbbf24;
+}
 .nav-flex,
 .top-bar .container {
   display: flex;
@@ -79,14 +76,10 @@ table {
   align-items: center;
   gap: 8px;
   font-weight: 700;
-  color: #fbbf24;
 }
 .banner,
 .logo-box {
   align-items: center;
-}
-.phone-box a {
-  color: #fbbf24;
 }
 .lang-btn {
   background-color: #334155;
@@ -596,7 +589,9 @@ th {
   flex-wrap: wrap;
 }
 .badge,
-.code-badge {
+.btn-submit span,
+.code-badge,
+a[href^="tel:"] {
   display: inline-block;
 }
 .filter-box input,
@@ -1164,13 +1159,16 @@ html[dir="ltr"] .input-wrapper textarea {
   gap: 12px;
   margin-bottom: 12px;
 }
+.gov-icon,
+.policy-card h3 {
+  display: flex;
+  align-items: center;
+}
 .gov-icon {
   font-size: 1.5rem;
   background: #f1f5f9;
   width: 44px;
   height: 44px;
-  display: flex;
-  align-items: center;
   justify-content: center;
   border-radius: 12px;
   transition: background 0.3s;
@@ -1297,8 +1295,6 @@ html[dir="ltr"] .faq-question {
   color: var(--secondary-color, #2b2d42);
   margin-bottom: 15px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
   gap: 10px;
 }
 .disclaimer-card h3,
@@ -1377,13 +1373,10 @@ html[dir="ltr"] .faq-question {
   font-size: 14px;
 }
 .footer-contact a {
-  display: inline-block;
   min-width: 40px;
   min-height: 40px;
   padding: 8px 12px;
   margin-bottom: 5px;
-}
-.footer-contact a {
   display: block;
 }
 .footer-contact a:hover,
@@ -1414,7 +1407,6 @@ html[dir="ltr"] .faq-question {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 .contact-btn {
   display: flex !important;
   flex-direction: row-reverse;
@@ -1430,7 +1422,6 @@ html[dir="ltr"] .faq-question {
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
-  text-decoration: none;
 }
 .contact-btn::after {
   content: "";
@@ -1518,14 +1509,17 @@ html[dir="ltr"] .faq-question {
   }
 }
 @media (max-width: 768px) {
+  .nav-links,
   .nav-links.active {
-    display: flex !important;
-    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
     background-color: #fff;
+    width: 100%;
+  }
+  .nav-links.active {
+    display: flex !important;
+    flex-direction: column;
     padding: 20px 0;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -1564,15 +1558,10 @@ html[dir="ltr"] .faq-question {
     display: flex;
   }
   .nav-links {
-    position: absolute;
-    top: 100%;
     right: 0;
-    left: 0;
-    background-color: #fff;
     flex-direction: column;
     align-items: center;
     gap: 0;
-    width: 100%;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
@@ -1631,10 +1620,6 @@ html[dir="ltr"] .faq-question {
   .contact-btn strong {
     font-size: 12px;
   }
-}
-.btn-submit span,
-a[href^="tel:"] {
-  display: inline-block;
 }
 .container {
   max-width: 1350px;

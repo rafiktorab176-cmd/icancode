@@ -1,17 +1,25 @@
 <IfModule mod_expires.c>
   ExpiresActive On
+  ExpiresDefault "access plus 1 month"
 
   # تخزين الصور لمدة سنة
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
 
-  # تخزين ملفات التنسيق والسكربتات لمدة شهر
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  # تخزين ملفات التنسيق والسكريبتات لمدة سنة
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
 </IfModule>
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,7}\s/(.*)/index\.html[\s?] [NC]
+RewriteRule ^(.*)/?index\.html$ /$1 [L,R=301,NC]</IfModule>
 RewriteEngine On
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,7}\s/(.*)/index\.html[\s?] [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301,NC]
