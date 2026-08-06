@@ -12,3 +12,6 @@
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,7}\s/(.*)/index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301,NC]

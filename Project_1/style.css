@@ -456,7 +456,7 @@ html[dir="ltr"] .experience-badge {
   font-size: 24px;
 }
 
-.feature-item h4 {
+.feature-item h3 {
   margin: 0;
   font-size: 14px;
   color: #1e293b;
@@ -2304,4 +2304,14 @@ html[dir="ltr"] .contact-btn .text-info {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+}
+/* توسيع مساحة اللمس لجميع روابط الاتصال */
+a[href^="tel:"] {
+  display: inline-block;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 12px 16px;
+  margin: 6px 0;
+  line-height: 1.5;
+  text-decoration: none;
 }
