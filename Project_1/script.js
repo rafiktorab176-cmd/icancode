@@ -666,3 +666,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("applianceFilter")
     ?.addEventListener("change", filterErrorCodes);
 });
+// ❌ خطأ: قراءة ثم تعديل ثم قراءة (يسبب Forced Reflow)
+element.style.width = "100px";
+let w = element.offsetWidth; // ريفلو إجباري!
+
+// ✅ صح: فصل القراءة والتحديث
+requestAnimationFrame(() => {
+  let w = element.offsetWidth; // القراءة أولاً
+  element.style.width = w + 10 + "px"; // التعديل ثانياً
+});

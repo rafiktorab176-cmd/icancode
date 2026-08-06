@@ -1748,3 +1748,17 @@ html[dir="ltr"] .faq-question {
   justify-content: center;
   gap: 12px;
 }
+.about-image-box {
+  min-height: 250px;
+  contain: layout;
+}
+
+.fixed-contact-bar {
+  contain: layout paint;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 180 / 60;
+}
