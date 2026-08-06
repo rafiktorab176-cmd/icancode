@@ -630,3 +630,34 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchInput) searchInput.addEventListener("input", filterCodes);
   if (applianceFilter) applianceFilter.addEventListener("change", filterCodes);
 });
+let currentPage = 1;
+const itemsPerPage = 10;
+let allCodesData = [];
+
+// دالة جلب البيانات وطباعة أول 10 عناصر فقط
+fetch("codes.json")
+  .then((res) => res.json())
+  .then((data) => {
+    allCodesData = data;
+    renderTablePage(1);
+  });
+
+function renderTablePage(page) {
+  const tableBody = document.getElementById("tableBody");
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageData = allCodesData.slice(start, end);
+
+  const fragment = document.createDocumentFragment();
+  pageData.forEach((item) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${item.brand || ""}</td>
+      <td>${item.code || ""}</td>
+      <td>${item.description || ""}</td>
+    `;
+    fragment.appendChild(tr);
+  });
+
+  tableBody.appendChild(fragment);
+}
