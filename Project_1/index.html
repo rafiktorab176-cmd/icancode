@@ -30,10 +30,32 @@
     />
     <meta name="twitter:image" content="assets/og-image.webp" />
 
+    <!-- 1. الاتصال المسبق بسيرفرات الخطوط (غيابه سبب التأخير الكامل) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 2. تنزيل ملف الخط الأساسي مباشرة بالتوازي -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=optional"
-      rel="stylesheet"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpcKmzrUA.woff2"
+      crossorigin
     />
+
+    <!-- 3. استدعاء الخط بدون حظر العرض -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      />
+    </noscript>
     <!-- تحميل style.css بدون حظر عرض الصفحة -->
     <link
       rel="preload"
@@ -2384,7 +2406,13 @@
             <!-- 2. LG -->
             <article class="blog-card" id="blog-lg">
               <div class="blog-card-img-wrapper">
-                <img src="./assets/2.webp" alt="أكواد أعطال LG" />
+                <img
+                  src="./assets/2.webp"
+                  alt="أكواد أعطال LG"
+                  width="400"
+                  height="250"
+                  loading="lazy"
+                />
               </div>
               <div class="blog-card-tag">LG Inverter</div>
               <h3

@@ -630,34 +630,39 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchInput) searchInput.addEventListener("input", filterCodes);
   if (applianceFilter) applianceFilter.addEventListener("change", filterCodes);
 });
-let currentPage = 1;
-const itemsPerPage = 10;
-let allCodesData = [];
+// متغيرات الجدول
+const INITIAL_ITEMS_LIMIT = 10;
+let displayedCount = INITIAL_ITEMS_LIMIT;
+let errorCodesData = [];
+let currentFilteredData = [];
 
-// دالة جلب البيانات وطباعة أول 10 عناصر فقط
-fetch("codes.json")
-  .then((res) => res.json())
-  .then((data) => {
-    allCodesData = data;
-    renderTablePage(1);
-  });
+// دالة جلب البيانات من ملف JSON الخارجي
+async function loadErrorCodes() {
+  try {
+    const response = await fetch("./error-codes.json");
+    errorCodesData = await response.json();
+    currentFilteredData = [...errorCodesData];
 
-function renderTablePage(page) {
-  const tableBody = document.getElementById("tableBody");
-  const start = (page - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const pageData = allCodesData.slice(start, end);
-
-  const fragment = document.createDocumentFragment();
-  pageData.forEach((item) => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${item.brand || ""}</td>
-      <td>${item.code || ""}</td>
-      <td>${item.description || ""}</td>
-    `;
-    fragment.appendChild(tr);
-  });
-
-  tableBody.appendChild(fragment);
+    // رندر أول 10 عناصر فور وصول البيانات
+    renderTableData(currentFilteredData, INITIAL_ITEMS_LIMIT);
+  } catch (error) {
+    console.error("خطأ في تحميل بيانات الأعطال:", error);
+  }
 }
+
+// استدعاء دالة التحميل عند تجهيز الصفحة
+document.addEventListener("DOMContentLoaded", function () {
+  // تحميل ملف الـ JSON
+  loadErrorCodes();
+
+  // ربط الفلاتر والبحث
+  document
+    .getElementById("searchInput")
+    ?.addEventListener("input", filterErrorCodes);
+  document
+    .getElementById("brandFilter")
+    ?.addEventListener("change", filterErrorCodes);
+  document
+    .getElementById("applianceFilter")
+    ?.addEventListener("change", filterErrorCodes);
+});
