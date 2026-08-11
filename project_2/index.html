@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة - ثلاجات - غسالات - ديب فريزر - غسالات أطباق
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="index.html" class="nav-link">الرئيسية</a>
+          <a href="./about/index.html" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="fridge-repair.html" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="washing-repair.html" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="deep-freezer-repair.html" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="dishwasher-repair.html" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="screen-repair.html" class="dropdown-item">صيانة شاشات</a>
+              <a href="microwave-repair.html" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="./faq/index.html" class="nav-link">الأسئلة الشائعة</a>
+          <a href="./blog/index.html" class="nav-link">المدونة</a>
+          <a href="./contact/index.html" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <button
+          type="button"
+          class="hamburger-btn"
+          aria-label="Toggle Navigation Menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="./index.html" class="mobile-link">الرئيسية</a>
+        <a href="./about/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="fridge-repair.html" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="washing-repair.html" class="mobile-sublink"
+              >صيانة غسالات</a
+            >
+            <a href="deep-freezer-repair.html" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="dishwasher-repair.html" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="screen-repair.html" class="mobile-sublink">صيانة شاشات</a>
+            <a href="microwave-repair.html" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="./faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="./Blog/" class="mobile-link">المدونة</a>
+        <a href="./contact/" class="mobile-link">اتصل بنا</a>
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Floating Sticky Actions (Hotlines + WhatsApp) -->
+    <div class="floating-contact-bar">
+      <!-- الخط الساخن 1 -->
+      <a
+        href="tel:19580"
+        class="float-btn hotline-btn"
+        title="الخط الساخن 19580"
+      >
+        <div class="btn-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
+          </svg>
+        </div>
+        <span class="btn-text">19580</span>
+      </a>
+
+      <!-- الخط الساخن 2 -->
+      <a
+        href="tel:17718"
+        class="float-btn hotline-btn"
+        title="الخط الساخن 17718"
+      >
+        <div class="btn-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
+          </svg>
+        </div>
+        <span class="btn-text">17718</span>
+      </a>
+
+      <!-- الخط الساخن 3 -->
+      <a
+        href="tel:15607"
+        class="float-btn hotline-btn"
+        title="الخط الساخن 15607"
+      >
+        <div class="btn-icon">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
+          </svg>
+        </div>
+        <span class="btn-text">15607</span>
+      </a>
+
+      <!-- واتساب -->
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="float-btn whatsapp-btn"
+        title="تواصل عبر واتساب"
+      >
+        <div class="btn-icon">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006L2 22l5.129-1.337c1.464.798 3.116 1.218 4.881 1.218h.004c5.506 0 9.989-4.478 9.99-9.984 0-2.667-1.039-5.174-2.927-7.06A9.918 9.918 0 0012.012 2zm5.836 14.159c-.244.688-1.427 1.314-1.96 1.385-.505.067-1.157.098-1.867-.129-.432-.138-1.002-.325-1.728-.638-3.045-1.314-5.028-4.398-5.18-4.601-.152-.203-1.237-1.645-1.237-3.138 0-1.493.777-2.228 1.052-2.527.275-.298.601-.373.801-.373.2 0 .401.002.576.012.186.01.436-.07.683.522.254.608.868 2.118.943 2.271.075.153.125.331.025.53-.1.2-.15.324-.298.498-.15.175-.315.391-.45.525-.15.15-.307.313-.132.613.175.3.777 1.28 1.668 2.073 1.144 1.019 2.11 1.333 2.41 1.483.3.15.476.125.651-.075.175-.2.75-.873.95-1.173.2-.3.4-.25.675-.15.275.1 1.751.826 2.051.976.3.15.5.225.575.35.075.125.075.725-.169 1.413z"
+            />
+          </svg>
+        </div>
+        <span class="btn-text">واتساب</span>
+      </a>
+    </div>
+
+    <!-- Hero Section Start -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-container">
+        <!-- Unified Brand Badge -->
+        <div class="hero-brand-badge">
+          <div class="brand-logo-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14.7 9.30005C15.1 8.90005 15.7 8.90005 16.1 9.30005C16.5 9.70005 16.5 10.3 16.1 10.7L12.4 14.4C12 14.8 11.4 14.8 11 14.4L8.9 12.3C8.5 11.9 8.5 11.3 8.9 10.9C9.3 10.5 9.9 10.5 10.3 10.9L11.7 12.3L14.7 9.30005Z"
+                fill="currentColor"
+              />
+              <circle cx="12" cy="8" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="brand-badge-info">
+            <span class="brand-title">المركز المعتمد</span>
+            <span class="brand-hotlines-tag"
+              >أرقام خط ساخن مباشر: 19580 - 17718 - 15607</span
+            >
+          </div>
+        </div>
+
+        <h1 class="hero-title">المركز المعتمد لصيانة الأجهزة المنزلية</h1>
+        <h2 class="hero-subtitle">
+          خدمة صيانة فورية بمعايير عالمية وقطع غيار أصلية مع ضمان معتمد في جميع
+          المحافظات
+        </h2>
+
+        <div class="hero-buttons">
+          <a href="tel:19580" class="btn-hotline-glowing btn-featured">
+            <svg
+              class="phone-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              />
+            </svg>
+            <span>الخط الساخن: 19580</span>
+          </a>
+
+          <a href="tel:17718" class="btn-hotline-glowing">
+            <svg
+              class="phone-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              />
+            </svg>
+            <span>الخط الساخن: 17718</span>
+          </a>
+
+          <a href="tel:15607" class="btn-hotline-glowing">
+            <svg
+              class="phone-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              />
+            </svg>
+            <span>الخط الساخن: 15607</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Services Section Start -->
+    <section class="services-section">
+      <div class="services-container">
+        <!-- Section Header -->
+        <div class="services-header">
+          <span class="section-tag">خدماتنا المتميزة</span>
+          <h2 class="section-title">صيانة متخصصة لجميع الأجهزة المنزلية</h2>
+          <p class="section-subtitle">
+            نوفر لك حلول صيانة متكاملة وقطع غيار أصلية بضمان معتمد وفنيين
+            محترفين حتى باب المنزل
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <!-- Service Card 1: Refrigerator -->
+          <a href="fridge-repair.html" class="service-card">
+            <div class="service-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                <line x1="5" y1="10" x2="19" y2="10"></line>
+                <line x1="9" y1="5" x2="9" y2="7"></line>
+                <line x1="9" y1="14" x2="9" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">صيانة الثلاجات</h3>
+            <p class="service-description">
+              إصلاح شامل لكافة أعطال التبريد، شحن تسريب الفريون، تغيير الكمبروسر
+              (الموتور)، وضبط الكروت الإلكترونية بقطع غيار أصلية.
+            </p>
+            <ul class="service-list">
+              <li>معالجة ضعف التبريد وتسريب المياه</li>
+              <li>إصلاح أعطال النوفروست وتراكم الثلج</li>
+              <li>قطع غيار أصلية مع الضمان</li>
+            </ul>
+            <span class="service-link-btn">عرض التفاصيل &larr;</span>
+          </a>
+
+          <!-- Service Card 2: Washing Machine -->
+          <a href="washing-repair.html" class="service-card">
+            <div class="service-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <circle cx="12" cy="13" r="5"></circle>
+                <path d="M12 10a3 3 0 0 1 3 3"></path>
+                <circle cx="7" cy="6" r="1" fill="currentColor"></circle>
+                <circle cx="10" cy="6" r="1" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">صيانة الغسالات</h3>
+            <p class="service-description">
+              صيانة كافة غسالات الملابس الأوتوماتيك والفل أوتوماتيك، معالجة
+              اهتزاز العصر، تغيير الرولمان بلي، وأعطال طلمبة السحب والتصريف.
+            </p>
+            <ul class="service-list">
+              <li>إصلاح البرامج والكروت الذكية</li>
+              <li>تغيير الموتور والمساعدين وموانع التسريب</li>
+              <li>فحص وشامل وبرمجة فورية</li>
+            </ul>
+            <span class="service-link-btn">عرض التفاصيل &larr;</span>
+          </a>
+
+          <!-- Service Card 3: Dishwasher -->
+          <a href="dishwasher-repair.html" class="service-card">
+            <div class="service-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <path d="M7 14c2-1 4 1 6 0s4-1 4 0"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">صيانة غسالات الأطباق</h3>
+            <p class="service-description">
+              حلول متكاملة لضعف تنظيف الأطباق، انسداد الرشاشات، تسريب المياه，
+              وأعطال السخان وتأخير دورات الغسيل.
+            </p>
+            <ul class="service-list">
+              <li>تنظيف وتسليك الممرات والرشاشات</li>
+              <li>تغيير هيتر التسخين وطلمبة الضخ</li>
+              <li>معالجة أعطال كود الأخطاء الإلكتروني</li>
+            </ul>
+            <span class="service-link-btn">عرض التفاصيل &larr;</span>
+          </a>
+
+          <!-- Service Card 4: Deep Freezer -->
+          <a href="deep-freezer-repair.html" class="service-card">
+            <div class="service-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <line x1="8" y1="7" x2="10" y2="7"></line>
+                <path d="M12 14v4M10 16h4"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">صيانة الديب فريزر</h3>
+            <p class="service-description">
+              خدمة صيانة متخصصة للديب فريزر الرأسي والأفقي، صيانة دورات التجميد
+              السريع، ومعالجة توقف التجميد التام.
+            </p>
+            <ul class="service-list">
+              <li>إصلاح وتسريب دائرة التبريد المغلقة</li>
+              <li>تغيير الترموستات والحساسات الرقمية</li>
+              <li>ضمان على عمليات الشحن والموتور</li>
+            </ul>
+            <span class="service-link-btn">عرض التفاصيل &larr;</span>
+          </a>
+
+          <!-- Service Card 5: TV Screens -->
+          <a href="screen-repair.html" class="service-card">
+            <div class="service-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">صيانة الشاشات والتلفزيونات</h3>
+            <p class="service-description">
+              إصلاح شاشات LED وOLED وSmart، معالجة الأعطال الصوتية بدون صورة،
+              تغيير الليدات الأصلية، وصيانة كروت الباور والماين برود.
+            </p>
+            <ul class="service-list">
+              <li>تغيير مساطر الليدات الأصلية بالضمان</li>
+              <li>إصلاح أعطال الباور وانقطاع الصورة</li>
+              <li>صيانة البوردة وتحديث الأنظمة الذكية</li>
+            </ul>
+            <span class="service-link-btn">عرض التفاصيل &larr;</span>
+          </a>
+
+          <!-- Service Card 6: Microwave -->
+          <a href="microwave-repair.html" class="service-card">
+            <div class="service-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <rect x="5" y="7" width="10" height="10" rx="1"></rect>
+                <circle cx="18" cy="8" r="1" fill="currentColor"></circle>
+                <circle cx="18" cy="11" r="1" fill="currentColor"></circle>
+                <line x1="17" y1="15" x2="19" y2="15"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">صيانة الميكروويف</h3>
+            <p class="service-description">
+              صيانة سريعة لأعطال عدم التسخين، إشرار الداخلي، توقف الطبق الدوار،
+              وتغيير قطع الميجرترون والترانس بالضمان.
+            </p>
+            <ul class="service-list">
+              <li>تغيير قطع التوليد الحراري (الميجرترون)</li>
+              <li>إصلاح تاتش التحكم ولوحة التوقيت</li>
+              <li>معالجة الشرار وعيوب العزل الداخلي</li>
+            </ul>
+            <span class="service-link-btn">عرض التفاصيل &larr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+    <!-- ================= SECTION 1: FAULTS GUIDE SEO CONTENT ================= -->
+    <section class="faults-guide-section">
+      <div class="guide-container">
+        <!-- Title & Subtitle -->
+        <div class="main-heading">
+          <span class="badge">الدليل الشامل المعتمد لخدمات الصيانة</span>
+          <h1 class="main-title">
+            دليل أعطال الأجهزة المنزلية الشائعة وطرق الإصلاح المعتمدة
+            <a href="tel:19580" class="hotline-link">19580</a> -
+            <a href="tel:17718" class="hotline-link">17718</a> -
+            <a href="tel:15607" class="hotline-link">15607</a>
+          </h1>
+
+          <p class="main-description">
+            دليلك المتكامل لفهم مشكلات الأجهزة الكهربائية المنزلية، رموز الخطأ，
+            وخطوات المعالجة الفنية الفورية. للتواصل السريع مع مركز الخدمة
+            المعتمد اتصل على الخطوط الساخنة:
+          </p>
+        </div>
+
+        <!-- Article Content Body -->
+        <div class="content-body">
+          <!-- Introduction -->
+          <h2 class="section-subtitle">
+            أولاً: أسباب الأعطال الشائعة في الثلاجات والغسالات والديب فريزر
+          </h2>
+          <p>
+            تتعرض الأجهزة المنزلية بمختلف أنواعها وأحجامها إلى ضغوط تشغيلية
+            مستمرة على مدار اليوم، مما يجعلها عرضة لبعض المشاكل الميكانيكية
+            والكهربائية نتيجة الاستخدام اليومي أو تغيرات الفولت الكهربائي. إن
+            إدراك أسباب العطل المباشرة يساهم بشكل كبير في حماية المكونات
+            الداخلية للجهاز ومنع تفاقم المشكلة.
+          </p>
+
+          <p>
+            تتمثل أبرز المشاكل في الثلاجات والديب فريزر في ضعف كفاءة التبريد
+            داخل الكابينة أو الفريزر. ويعود السبب الرئيسي في ذلك إلى انسداد
+            المكثف الخلفي بسبب تراكم الأتربة، أو نتيجة جفاف وتآكل الإطار
+            المغناطيسي (كاوتش الباب) مما يسبب تسريب الهواء البارد ودخول الرطوبة،
+            وهو ما ينتهي بتكون الثلج بكثافة فوق كويل المبخر وتعطيل دائرة الإذابة
+            (الديفروست).
+          </p>
+
+          <p>
+            أما في غسالات الملابس وغسالات الأطباق، فتظهر الأعطال غالباً في صورة
+            عدم طرد المياه وتوقف البرنامج قبل العصر، وهو ما يرتبط المباشرة
+            بانسداد الفلتر السفلي أو وجود أجمال أقمشة ورواسب داخل طلمبة الصرف.
+            بالإضافة إلى ذلك، فإن حدوث اهتزاز شديد أو إصدار أصوات عالية أثناء
+            العصر يشير إلى تآكل رولمان بلي الموتور أو تلف مساعدين الحلة.
+          </p>
+
+          <!-- Detailed Brands SEO Section -->
+          <h2 class="section-subtitle">
+            ثانياً: الدليل التفصيلي لأعطال وصيانة الـ 21 ماركة للأجهزة المنزلية
+          </h2>
+          <p>
+            فيما يلي استعراض تفصيلي وشامل لكافة المشاكل الرقمية والأعطال الفنية
+            الخاصة بأشهر 21 ماركة عالمية ومحلية في السوق المصري، لمساعدتك في
+            تحديد العطل الظاهر على شاشة أجهزتك بدقة:
+          </p>
+
+          <!-- Brand 1 -->
+          <h3 class="brand-title">1. أعطال صيانة ال جي (LG)</h3>
+          <p>
+            تتميز أجهزة ال جي بالتكنولوجيا الذكية ومحركات الانفرتر والدفع
+            المباشر. يظهر كود العطل <strong>OE</strong> عند وجودانسداد في خرطوم
+            أو طلمبة طرد المياه مما يمنع تفريغ الغسالة، بينما يشير كود
+            <strong>LE</strong> إلى تسريع زائد أو قفل ميكانيكي في محرك الغسالة.
+            في ثلاجات LG، يعبر رمز <strong>Er FF</strong> عن تعطل محرك مروحة
+            الفريزر أو انسداد مسار توزيع الهواء بالثلج، ويمكّنك كود
+            <strong>Er dH</strong> من معرفة وجود خلل بداخل سخان الديفروست.
+          </p>
+
+          <!-- Brand 2 -->
+          <h3 class="brand-title">2. أعطال صيانة سامسونج (Samsung)</h3>
+          <p>
+            تعتمد أجهزة سامسونج على منظومة حساسات دقيقة للتنبيه بالأعطال. يُشير
+            كود <strong>4E / 4C</strong> في غسالات سامسونج إلى مشكلة في سحب
+            المياه نتيجة انسداد صمام الدخول أو انخفاض ضغط المياه، بينما يعبر كود
+            <strong>5E / 5C</strong> عن فشل الغسالة في صرف المياه. وفي ثلاجات
+            سامسونج، يدل رمز <strong>22E</strong> على عطل في مروحة كويل التبريد،
+            في حين يشير كود <strong>5E</strong> إلى عدم كفاءة حساس الإذابة.
+          </p>
+
+          <!-- Brand 3 -->
+          <h3 class="brand-title">3. أعطال صيانة كريازي (Kiriazi)</h3>
+          <p>
+            تعتبر ثلاجات وديب فريزر كريازي من الأجهزة الأكثر انتشاراً. ترتبط
+            أغلب أعطال ثلاجات كريازي بضعف التبريد في الجزء السفلي بسبب انسداد
+            فتحات النوفروست بالثلج نتيجة عطل تايمر الإذابة أو الثرموديسك. وفي
+            شاشات العرض الرقمية لكريازي، يعبر كود <strong>E1</strong> عن تلف
+            حساس درجة حرارة الكابينة، بينما يشير كود <strong>E2</strong> إلى
+            وجود خلل في حساس الفريزر.
+          </p>
+
+          <!-- Brand 4 -->
+          <h3 class="brand-title">4. أعطال صيانة بيكو (Beko)</h3>
+          <p>
+            تتأثر غسالات وثلاجات بيكو بالتغيرات الكهربائية أو الترسبات الكلسية.
+            يشير كود <strong>E4</strong> في غسالات بيكو إلى عدم قدرة الجهاز على
+            تسخين المياه بسبب تلف السخان الداخلي (الهيتر)، بينما يرمز كود
+            <strong>E1</strong> إلى وجود مشكلة في مستشعر الحرارة. في ثلاجات
+            بيكو، يعبر رمز التنبيه الأحمر أو العلامة التعجبية عن ارتفاع درجة
+            الحرارة نتيجة عطل في دائرة النوفروست.
+          </p>
+
+          <!-- Brand 5 -->
+          <h3 class="brand-title">5. أعطال صيانة فريش (Fresh)</h3>
+          <p>
+            تتمركز مشاكل ديب فريزر وغسالات فريش في عدم استقرار الفولت الكهربائي،
+            مما يسبب توقف كومبريسور التبريد عن العمل وإعطاء إنذار تنبيه بدرجة
+            الحرارة. وفي غسالات فريش الفوق أوتوماتيك، ترتبط أغلب الأعطال بتوقف
+            مفتاح اتزان الباب (Door Switch) مما يؤدي لتوقف الغسالة وإظهار كود
+            خطأ أثناء مرحلة التنشيف والعصر.
+          </p>
+
+          <!-- Brand 6 -->
+          <h3 class="brand-title">6. أعطال صيانة الكتروستار (Electrostar)</h3>
+          <p>
+            تتركز أعطال الكتروستار في ثلاجات وديب فريزر الشركة على مكونات دائرة
+            التبريد الميكانيكية. يؤدي تلف التايمر الخارجي أو سخان الإذابة إلى
+            تراكم الثلج خلف الظهر وتوقف التبريد تماماً عن الغرفة السفلية، إضافة
+            إلى مشكلة جفاف الكاوتش المطاطي الذي يحتاج لتمرير ماء دافئ لإعادة
+            المرونة.
+          </p>
+
+          <!-- Brand 7 -->
+          <h3 class="brand-title">7. أعطال صيانة يونيفرسال (Universal)</h3>
+          <p>
+            تظهر مشاكل غسالات يونيفرسال بوضوح عبر شاشات التحكم الرقمية؛ حيث يعبر
+            كود <strong>E2</strong> عن بطء وتوقف طرد المياه، ويرمز كود
+            <strong>E3</strong> إلى عدم اتزان حمولة الغسيل داخل الحلة أثناء
+            العصر. أما في سخانات يونيفرسال، فتتسبب الرواسب الكلسية في انسداد
+            الحساسات وتوقف شعلة التسخين.
+          </p>
+
+          <!-- Brand 8 -->
+          <h3 class="brand-title">
+            8. أعطال صيانة وايت بوينت العبد (White Point)
+          </h3>
+          <p>
+            تستخدم غسالات وايت بوينت نظام تكواد قياسي للأعطال؛ إذ تشير الشاشة
+            إلى كود <strong>E01</strong> عند وجود عطل في قفل الباب الكهربائي
+            (Door Lock)، بينما يظهر كود <strong>E02</strong> عند وجود مشكلة في
+            مستوى المياه وسحبها. تتطلب هذه الأعطال صيانة فلاتر صمام الدخول وتفقد
+            طلمبة الطرد المباشرة.
+          </p>
+
+          <!-- Brand 9 -->
+          <h3 class="brand-title">9. أعطال صيانة وايت ويل (White Whale)</h3>
+          <p>
+            تتميز أجهزة وايت ويل بالكفاءة العالية، ولكن عند تذبذب التيار
+            الكهربائي قد تتأثر كارتة التحكم الإلكترونية. تشمل الأعطال الشائعة
+            توقف مروحة التبريد الداخلية أو توقف كومبريسور الثلاجة عن البدء نتيجة
+            عطل بمجموعة الإقلاع (الريليه والأوفرلود)، مما يتطلب فحصاً فنياً
+            معتمداً.
+          </p>
+
+          <!-- Brand 10 -->
+          <h3 class="brand-title">
+            10. أعطال صيانة وايت وستنجهاوس (Westinghouse)
+          </h3>
+          <p>
+            تعتمد أجهزة وايت وستنجهاوس الأمريكية على محركات ومكونات ثقيلة. تتلخص
+            أبرز الأعطال في الغسالات في اهتزاز الحلة وتآكل رولمان البلي نتيجة
+            الأحمال الزائدة، في حين ترتبط مشاكل الثلاجات بتراكم الأتربة على مكثف
+            الفريون الخلفي مما يسبب سخونة الموتور وتوقفه عن التبريد.
+          </p>
+
+          <!-- Brand 11 -->
+          <h3 class="brand-title">11. أعطال صيانة بوش (Bosch)</h3>
+          <p>
+            تتمتع أجهزة بوش بإنذارات أمان متطورة جداً. يظهر كود
+            <strong>E18</strong> في غسالات بوش لتنبيه المستخدم بوجود انسداد كامل
+            في مضخة التصريف، بينما يرمز كود <strong>E23</strong> إلى تفعيل نظام
+            الحماية ضد التسريب (AquaStop)، ويعبر كود <strong>E10</strong> عن
+            وجود خلل في محرك الغسالة الرئيسي.
+          </p>
+
+          <!-- Brand 12 -->
+          <h3 class="brand-title">12. أعطال صيانة هوفر (Hoover)</h3>
+          <p>
+            تشمل أعطال غسالات هوفر ظهور كود <strong>E03</strong> الذي يشير إلى
+            تأخر الغسالة في تفريغ المياه خلال الوقت المحدد، وكود
+            <strong>E07</strong> الذي يدل على وجود مشكلة في موتور التشغيل أو
+            مستشعر السرعة (التاكو)، مما يتطلب فحص التوصيلات الكهربائية للكارتة
+            الرئيسية.
+          </p>
+
+          <!-- Brand 13 -->
+          <h3 class="brand-title">13. أعطال صيانة توشيبا العربي (Toshiba)</h3>
+          <p>
+            تعتبر أجهزة توشيبا العربي من الماركات الأكثر اعتمادية في مصر. يظهر
+            كود <strong>E21</strong> في الغسالات عند فتح الباب أو عدم إغلاقه
+            بإحكام أثناء برنامج العصر، بينما يعبر كود <strong>E2</strong> عن
+            وجود مشكلة بمفتاح الاتزان. وفي ثلاجات توشيبا، يسبب انسداد مجرى الصرف
+            الداخلي تسريب المياه تحت أدراج الخضروات.
+          </p>
+
+          <!-- Brand 14 -->
+          <h3 class="brand-title">14. أعطال صيانة تورنيدو (Tornado)</h3>
+          <p>
+            تتشارك أجهزة تورنيدو نفس خطوط التكنولوجيا المعتمدة في توشيبا. تظهر
+            المشاكل عادة عند ضعف ضغط المياه الداخلي مما يؤخر ملء الحلة ويتسبب في
+            توقف الغسالة، أو عند تراكم الثلج في الديب فريزر نتيجة ترك الباب
+            مفتوحاً لفترات طويلة.
+          </p>
+
+          <!-- Brand 15 -->
+          <h3 class="brand-title">15. أعطال صيانة زانوسي (Zanussi)</h3>
+          <p>
+            تشتهر غسالات زانوسي وإيديال بكود العطل <strong>E20</strong> والذي
+            يعني تعذر طرد المياه بسبب وجود انسداد في الفلتر السفلي أو تلف مضخة
+            الصرف، بينما يدل كود <strong>E10</strong> على عدم وصول المياه إلى
+            الغسالة. يُنصح دائماً بفحص خرطوم السحب والتصريف بانتظام.
+          </p>
+
+          <!-- Brand 16 -->
+          <h3 class="brand-title">16. أعطال صيانة هيتاشي (Hitachi)</h3>
+          <p>
+            تعتمد ثلاجات هيتاشي على تقنيات تبريد مروحة المزدوجة. من أبرز المشاكل
+            التي قد تظهر كود <strong>F3 01</strong> والذي يشير إلى خلل في حساس
+            الفريزر، أو كود <strong>F1 04</strong> المعبر عن عطل في دائرة تذويب
+            الثلج، مما يتطلب استبدال الحساسات التالفة بقطع غيار أصلية.
+          </p>
+
+          <!-- Brand 17 -->
+          <h3 class="brand-title">17. أعطال صيانة اريستون (Ariston)</h3>
+          <p>
+            تستخدم غسالات وثلاجات اريستون كارتات تحكم رقمية حساسة. يظهر كود
+            <strong>F05</strong> في غسالات اريستون للرد على وجودانسداد بمضخة
+            الصرف، ويرمز كود <strong>F01</strong> إلى توقف المحرك نتيجة قصور في
+            دائرة التوصيل الكهربائي، بينما يعبر كود <strong>F12</strong> عن
+            انقطاع الاتصال بين لوحة التحكم والشاشة.
+          </p>
+
+          <!-- Brand 18 -->
+          <h3 class="brand-title">18. أعطال صيانة الاسكا (Alaska)</h3>
+          <p>
+            تتمركز معظم أعطال ديب فريزر وفريزر الأسكا في تسريب الفريون نتيجة
+            وجود ثقوب صغيرة في مواسير التبريد الداخلية، أو تلف الترموستات
+            الميكانيكي المسؤول عن إعطاء أمر التشغيل والفصل للكومبريسور، مما يسبب
+            استمرار عمل الموتور دون توقف أو ضعف التبريد.
+          </p>
+
+          <!-- Brand 19 -->
+          <h3 class="brand-title">19. أعطال صيانة شارب (Sharp)</h3>
+          <p>
+            تتميز ثلاجات وغسالات شارب بتكنولوجيا البلازما كلاستر الانفرتر. تتلخص
+            الأعطال في توقف مروحة توزيع الهواء البارد بداخل الكابينة، أو ظهور
+            رموز خطأ على الشاشة عند حدوث انخفاض أو ارتفاع مفاجئ في التيار
+            الكهربائي لحماية أجزاء الكارتة الإلكترونية.
+          </p>
+
+          <!-- Brand 20 -->
+          <h3 class="brand-title">20. أعطال صيانة ويرلبول (Whirlpool)</h3>
+          <p>
+            تعرض غسالات ويرلبول الأمريكية رموز خطأ محددة؛ حيث يشير كود
+            <strong>F06</strong> إلى وجود خلل في حساس سرعة الموتور (التاكو)،
+            بينما يدل كود <strong>F13</strong> على عدم انغلاق قفل الباب
+            الكهربائي بشكل صحيح. تتطلب الثلاجات فحصاً دورياً لمكثف الفريون
+            والمروحة الخلفية.
+          </p>
+
+          <!-- Brand 21 -->
+          <h3 class="brand-title">21. أعطال صيانة دايو (Daewoo)</h3>
+          <p>
+            تشمل أعطال غسالات دايو كود <strong>IE</strong> الذي يرمز إلى مشكلة
+            سحب المياه، وكود <strong>OE</strong> المعبر عن انسداد مسار طرد
+            المياه، بالإضافة إلى كود <strong>E8</strong> الذي يشير إلى وجود عطل
+            في مستشعر محرك الغسالة أو حمل غير متوازن للحلة.
+          </p>
+
+          <!-- Hotline Callout Box -->
+          <div class="hotline-box">
+            <h3 class="hotline-title">هل يواجه جهازك عطلاً غير مفهوم؟</h3>
+            <p class="hotline-text">
+              فريق الصيانة الفورية المعتمد جاهز لاستقبال بلاغات الأعطال وتقديم
+              الدعم الفني المباشر عبر الأرقام التالية:
+            </p>
+            <div class="hotline-buttons">
+              <a href="tel:19580" class="btn-hotline">19580</a>
+              <a href="tel:17718" class="btn-hotline">17718</a>
+              <a href="tel:15607" class="btn-hotline">15607</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

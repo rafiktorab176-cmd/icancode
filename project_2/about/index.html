@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة - ثلاجات - غسالات - ديب فريزر - غسالات أطباق
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="fridge-repair.html" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="washing-repair.html" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="deep-freezer-repair.html" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="dishwasher-repair.html" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="screen-repair.html" class="dropdown-item">صيانة شاشات</a>
+              <a href="microwave-repair.html" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/index.html" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="fridge-repair.html" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="washing-repair.html" class="mobile-sublink"
+              >صيانة غسالات</a
+            >
+            <a href="deep-freezer-repair.html" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="dishwasher-repair.html" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="screen-repair.html" class="mobile-sublink">صيانة شاشات</a>
+            <a href="microwave-repair.html" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/index.html" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../Blog/index.html" class="mobile-link">المدونة</a>
+        <a href="../contact/index.html" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- About Section Start -->
+    <section class="about-section">
+      <div class="about-container">
+        <!-- 1. قسم الصور (في بداية السيكشن) -->
+        <div class="about-images-wrapper">
+          <div class="image-card primary-image">
+            <img
+              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+              alt="فريق عمل صيانة الأجهزة المنزلية"
+              class="about-img"
+            />
+            <div class="image-badge">
+              <span class="badge-number">+15</span>
+              <span class="badge-text">عاماً من الخبرة</span>
+            </div>
+          </div>
+
+          <div class="image-card secondary-image">
+            <img
+              src="../assets/1.jpg"
+              alt="مركز صيانة معتمد"
+              class="about-img"
+            />
+          </div>
+        </div>
+
+        <!-- 2. محتوى قسم من نحن -->
+        <div class="about-content">
+          <div class="section-tag">رواد صيانة الأجهزة المنزلية</div>
+          <h2 class="about-title">
+            المركز المعتمد للصيانة.. جودة تثق بها وخدمة تفوق التوقعات
+          </h2>
+
+          <p class="about-description">
+            نحن لسنا مجرد مركز صيانة تقليدي، بل نحن شريكك الموثوق للحفاظ على
+            كفاءة أجهزتك المنزلية بأعلى معايير الجودة العالمية. نتميز بفريق عمل
+            من مهندسين وفنيين متخصصين ومدربين على أحدث تقنيات الفحص والدعم الفني
+            للثلاجات، الغسالات، الديب فريزر، غسالات الأطباق، والشاشات.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4>قطع غيار أصلية 100%</h4>
+                <p>نضمن لك تركيب القطع الأصلية بالكامل مع ضمان معتمد.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4>سرعة استجابة فورية</h4>
+                <p>خدمة صيانة منزلية سريعة تغطي جميع المحافظات خلال 24 ساعة.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. كروت أرقام الخط الساخن الثلاثة -->
+          <div class="hotlines-container">
+            <h3 class="hotlines-title">
+              تواصل معنا فوراً عبر أرقام الخط الساخن:
+            </h3>
+            <div class="hotlines-grid">
+              <a href="tel:19580" class="hotline-card">
+                <div class="phone-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="hotline-info">
+                  <span class="hotline-label">الخط الساخن الرئيسي</span>
+                  <span class="hotline-number">19580</span>
+                </div>
+              </a>
+
+              <a href="tel:17718" class="hotline-card">
+                <div class="phone-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="hotline-info">
+                  <span class="hotline-label">الدعم الفني والخدمات</span>
+                  <span class="hotline-number">17718</span>
+                </div>
+              </a>
+
+              <a href="tel:15607" class="hotline-card">
+                <div class="phone-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="hotline-info">
+                  <span class="hotline-label">حجز البلاغات والشكاوى</span>
+                  <span class="hotline-number">15607</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+    <!-- Testimonials & Why Choose Us Section Start -->
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <!-- هيدر السيكشن -->
+        <div class="testimonials-header">
+          <div class="section-tag">ثقة وتجربة</div>
+          <h2 class="section-main-title">
+            لماذا يختارنا العملاء ويتحدثون عنا؟
+          </h2>
+          <p class="section-subtitle">
+            استطعنا على مدار سنوات أن نكسب ثقة الآلاف من العملاء بفضل الالتزام
+            والجودة الملموسة. إليك أبرز ما يقوله عملاؤنا عنا ولماذا نكون الخيار
+            الأول دائماً.
+          </p>
+        </div>
+
+        <!-- شبكة أسباب اختيارنا -->
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3>سرعة واستجابة فورية</h3>
+            <p>
+              نصلك في نفس اليوم أو خلال 24 ساعة كحد أقصى لضمان عدم تعطل يومك أو
+              تلف أطعمتك.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h3>ضمان معتمد شامِل</h3>
+            <p>
+              نمنحك شهادة ضمان معتمدة على قطع الغيار الأصلية وأعمال الصيانة التي
+              تم تنفيذها.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3>أسعار عادلة وشفافية</h3>
+            <p>
+              تحديد التكلفة وفحص الجهاز قبل البدء في الصيانة بدون أي مصاريف أو
+              رسوم خفية.
+            </p>
+          </div>
+        </div>
+
+        <!-- كروت آراء العملاء -->
+        <div class="testimonials-grid">
+          <!-- رأي 1 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "من أسرع المراكز اللي تعاملت معاها. الثلاجة كانت فاصلة تبريد
+              تماماً وجاء المهندس في نفس اليوم وغير قطعة الغيار بالضمان، والشغل
+              ممتاز جداً."
+            </p>
+            <div class="client-info">
+              <div class="client-avatar">أ</div>
+              <div>
+                <h4 class="client-name">أحمد محمود</h4>
+                <span class="client-service">صيانة ثلاجة</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- رأي 2 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "احترام في المواعيد وأمانة عالية في الفحص. المهندس وضح لي المشكلة
+              بوضوح وما طلبش غير القطعة التالفة بس. شكراً جزيلاً لفريق الدعم."
+            </p>
+            <div class="client-info">
+              <div class="client-avatar">م</div>
+              <div>
+                <h4 class="client-name">المهندس محمد حسام</h4>
+                <span class="client-service">صيانة غسالة أوتوماتيك</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- رأي 3 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "خدمة ممتازة وخدمة العملاء متابعين معايا حتى بعد الصيانة عشان
+              يتأكدوا إن الجهاز شغال تمام. أكيد هتعامل معاهم تاني."
+            </p>
+            <div class="client-info">
+              <div class="client-avatar">س</div>
+              <div>
+                <h4 class="client-name">سارة السيد</h4>
+                <span class="client-service">صيانة ديب فريزر</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- إضافة كروت الخطوط الساخنة في نهاية السيكشن -->
+        <div class="hotlines-container section-footer-hotlines">
+          <h3 class="hotlines-title">
+            لا تتردد في التواصل معنا مباشرة عبر أرقام الخط الساخن:
+          </h3>
+          <div class="hotlines-grid">
+            <a href="tel:19580" class="hotline-card">
+              <div class="phone-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="hotline-info">
+                <span class="hotline-label">الخط الساخن الرئيسي</span>
+                <span class="hotline-number">19580</span>
+              </div>
+            </a>
+
+            <a href="tel:17718" class="hotline-card">
+              <div class="phone-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="hotline-info">
+                <span class="hotline-label">الدعم الفني والخدمات</span>
+                <span class="hotline-number">17718</span>
+              </div>
+            </a>
+
+            <a href="tel:15607" class="hotline-card">
+              <div class="phone-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="hotline-info">
+                <span class="hotline-label">حجز البلاغات والشكاوى</span>
+                <span class="hotline-number">15607</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials & Why Choose Us Section End -->
+    <script src="script.js"></script>
+  </body>
+</html>
