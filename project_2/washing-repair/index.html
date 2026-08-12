@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد للصيانة - ثلاجات، غسالات، ديب فريزر، غسالات أطباق
+    </title>
+
+    <!-- خط Cairo ورابط FontAwesome للأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/index.html" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn" aria-expanded="false">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="../fridge-repair/" class="dropdown-item">صيانة ثلاجات</a>
+              <a href="../washing-repair/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../deep-freezer-repair/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../dishwasher-repair/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../screen-repair/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../microwave-repair/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">
+            <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+          </a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="hamburger-btn"
+          aria-label="افتح القائمة"
+        >
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/" class="mobile-link">من نحن</a>
+
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu">
+            <a href="../fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../washing-repair/" class="mobile-sublink">صيانة غسالات</a>
+            <a href="../deep-freezer-repair/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../dishwasher-repair/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../screen-repair/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../microwave-repair/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../blog/" class="mobile-link">المدونة</a>
+        <a href="../contact/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">
+          <i class="fa-solid fa-phone-volume"></i> الخط الساخن: 19580
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Header & Main Title -->
+    <header class="main-header">
+      <div class="container">
+        <h1>
+          <i class="fa-solid fa-gears"></i> المركز المعتمد لصيانة وتجهيز غسالات
+          الملابس
+        </h1>
+        <p class="subtitle">
+          مركز متكامل متخصص في التعامل مع أعطال الدوائر الإلكترونية ورولمان
+          البلي ومحركات الغسالات الذكية
+        </p>
+
+        <!-- Hotlines Bar -->
+        <div class="hotlines-header">
+          <div class="hotline-badge">
+            <i class="fa-solid fa-headset"></i>
+            <span>غرفة أرقام الحجز: <strong>19580</strong></span>
+          </div>
+          <div class="hotline-badge">
+            <i class="fa-solid fa-bolt"></i>
+            <span>الطوارئ الفورية: <strong>17718</strong></span>
+          </div>
+          <div class="hotline-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>متابعة الضمان والجودة: <strong>15607</strong></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <!-- Section 1: Intro & Features -->
+      <section class="content-block">
+        <h2>النهج المطور داخل المركز المعتمد لصيانة أجهزة الغسيل</h2>
+        <p>
+          نعلم تماماً مدى الإرباك الذي يسببه عطل غسالة الملابس في المنزل، لذلك
+          نعتمد فلسفة صيانة قائمة على الفحص الشامل وليس مجرد العلاج المؤقت
+          للعطل. يتعامل مهندسونا مع كبرى تقنيات الغسالات الحديثة (الإنفرتر
+          والتحميل الأمامي والعلوي) بهدف إعادة الجهاز ليعمل بنفس مستويات استهلاك
+          الطاقة والهدوء الأصلية.
+        </p>
+        <p>
+          باستخدام وحدات التشخيص المحمولة، يستطيع فريق الخدمة قراءة السجلات
+          البرمجية المخزنة داخل لوحة التحكم (Main PCB)، مما يساعد في اكتشاف
+          مشاكل تسريب التيار الكهربائي، انسداد حساسات مستوى المياه (Pressure
+          Switch)، أو تآكل فحمات المحرك قبل أن تتسبب في توقف تام للجهاز.
+        </p>
+
+        <h3>مبادرة الإحلال والتدوير الشامل للغسالات</h3>
+        <p>
+          إذا كانت غسالتك القديمة تتطلب تكاليف إصلاح مرتفعة أو أصبحت غير موفرة
+          للكهرباء، يمكنك الاستفادة من خيار التبديل المباشر؛ حيث نقوم بتقييم
+          حالتها الفنية وتوفير بدائل حديثة من الطرازات الموفرة للطاقة مع إمكانية
+          استخدام قيمة غسالتك القديمة كخصم مباشر على تكاليف الصيانة أو شراء
+          الأجهزة الأخرى كالشورات والديب فريزر والمجففات.
+        </p>
+      </section>
+
+      <!-- Section 2: Steps of Inspection -->
+      <section class="content-block">
+        <h2>بروتوكول الفحص الفني داخل الموقع</h2>
+        <ul class="styled-list">
+          <li>
+            تغطية سريعة لبلاغات الصيانة داخل نطاق المحافظات خلال 24 ساعة لضمان
+            عدم تراكم الغسيل وتلف المكونات الداخلية.
+          </li>
+          <li>
+            إجراء قياس دقيق لجهد الكهرباء الواصل للغسالة وفحص سلامة صمام دخول
+            المياه وطلمبة الصرف قبل البدء في أي تفكيك.
+          </li>
+          <li>
+            إطلاع العميل على بيان تفصيلي للتكلفة والقطع المطلوبة بأسعار معتمدة
+            رسمياً، مع إتاحة خيار إلغاء الصيانة واكتفاء بدفع رسوم الفحص
+            القياسية.
+          </li>
+          <li>
+            إجراء معظم العمرات الميكانيكية وتغيير المساعدين والسير في منزل
+            العميل دون الحاجة لنقل الجهاز إلا في حالات صيانة الحلة الداخلية
+            المعقدة.
+          </li>
+          <li>
+            تقديم وثيقة ضمان مطبوعة ومسجلة بالسيريال نمبر تحتوي على فترة ضمان
+            تصل إلى 12 شهراً على القطع المستبدلة.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 3: Importance & Brands -->
+      <section class="content-block">
+        <h2>لماذا نصرّ على القطع المعتمدة والمطابقة للمواصفات؟</h2>
+        <p>
+          إن تركيبة الغسالات الحديثة تعتمد على الاتزان الحراري والميكانيكي؛
+          استخدام مساعدين غير أصلية أو سير غير مطابق يؤدي لزيادة الحمل على
+          رولمان البلي وبالتالي اهتزاز وتلف جدار الغسالة الخارجي. نضمن لك دائماً
+          قطع غيار أصلية تأتي في عبواتها المعتمدة لضمان عمر افتراضي طويل.
+        </p>
+
+        <h3>تغطية شاملة للماركات والسعات المتنوعة</h3>
+        <p>
+          نملك حلولاً مخصصة لكافة الأحجام بدءاً من غسالات الأطفال وغسالات الـ 5
+          كيلو الاقتصادية، حتى الموديلات الفاخرة ذات سعة 15 و 20 كيلو المزودة
+          بنظام التجفيف الحراري والملاحة الذكية. أرقام التواصل المباشرة المتاحة:
+          <strong>19580 - 17718 - 15607</strong>.
+        </p>
+
+        <div class="highlight-box">
+          <h4>منظومة القطع المتوفرة بالشرائح المختلفة:</h4>
+          <p>
+            نوفر أقفال الأبواب الإلكترونية (Door Lock)، السخانات الاستانلس
+            المقاومة للتكلس، محركات Direct Drive، حساسات الحرارة NTC، وجميع
+            كارتات تشغيل الماركات الأوروبية والكورية واليابانية.
+          </p>
+        </div>
+      </section>
+
+      <!-- Hero Card Section with Image Top -->
+      <article class="hero-card">
+        <div class="image-wrapper">
+          <img
+            src="../assets/imagess.jpg"
+            alt="خدمات إصلاح الغسالات المعتمدة"
+            class="hero-image"
+          />
+        </div>
+
+        <div class="content-box">
+          <span class="badge">دليل الدعم الوقائي</span>
+          <h1>كيف تحمي غسالتك من الأعطال المفاجئة؟</h1>
+
+          <p class="intro-text">
+            العناية الدورية البسيطة توفر عليك أكثر من 60% من مصاريف الصيانة
+            وتمنع الروائح الكريهة وتلف الملابس.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <h3>أشهر مؤشرات الأعطال</h3>
+              <p>
+                ظهور كود عطل على الشاشة، توقف برنامج العصر، تجميع المياه داخل
+                الحلة أثناء إيقاف الغسالة، وسماع صوت حشرجة قوي أثناء التجفيف.
+              </p>
+            </div>
+
+            <div class="info-item">
+              <h3>خطوات الوقاية الذاتية</h3>
+              <p>
+                إزالة الأجسام الصلبة من الجيوب قبل الغسيل، تنظيف جلبة الباب
+                المطاطية بعد كل غسلة، وتفريغ الفلتر السفلي بشكل منتظم.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 4: Maintenance Tips & Guides -->
+      <section class="content-block">
+        <h2>الإجراء الفوري عند ملاحظة تسريب مياه أو شرار</h2>
+        <p>
+          توقف مباشرة عن استخدام الجهاز عند ملاحظة تسريب مياه من الأسفل أو صدور
+          صوت غير طبيعي من الموتور، وقم بالاتصال على
+          <strong>خطوط الصيانة المباشرة (19580 / 17718 / 15607)</strong>.
+        </p>
+
+        <ul class="styled-list">
+          <li>
+            افصل القابس الكهربائي الرئيسي وأغلق محبس المياه لتجنب حدوث تماس
+            كهربائي أو ماس في لوحة التحكم.
+          </li>
+          <li>
+            تجنب محاولة فتح الباب بالقوة في حال احتجاز الملابس بالداخل لتجنب كسر
+            مقبض الباب أو تلف الحساس الميكانيكي.
+          </li>
+        </ul>
+
+        <!-- Hotlines Bar Inside Section -->
+        <div class="hotlines-section">
+          <h2 class="section-title">ارقام التواصل المباشر والسريع</h2>
+          <div class="hotlines-grid">
+            <div class="hotline-card">
+              <div class="hotline-info">
+                <strong>بلاغات الأعطال المنزلية</strong>
+                <small>استجابة وسيارات مجهزة</small>
+              </div>
+              <a href="tel:19111" class="call-btn">📞 19111</a>
+            </div>
+            <div class="hotline-card">
+              <div class="hotline-info">
+                <strong>طوارئ تسريب وطرد المياه</strong>
+                <small>دعم فني متواصل 24/7</small>
+              </div>
+              <a href="tel:19222" class="call-btn">📞 19222</a>
+            </div>
+            <div class="hotline-card">
+              <div class="hotline-info">
+                <strong>استفسارات قطع الغيار</strong>
+                <small>قطع أصلية بالضمان</small>
+              </div>
+              <a href="tel:19333" class="call-btn">📞 19333</a>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 25px">قواعد تشغيلية لتفادي صدمات الموتور</h3>
+        <ul class="styled-list">
+          <li>
+            عدم تشغيل الغسالة لعدة دورات متتالية دون ترك فترة راحة تتراوح بين 30
+            إلى 45 دقيقة لترديد حرارة الموتور.
+          </li>
+          <li>
+            استخدام كميات معتدلة من مساحيق الغسيل لمنع ترسبات الصابون داخل
+            المجاري الداخلية للحلة وعلى أجهزة الحساسات.
+          </li>
+          <li>
+            التأكد من استواء أرضية الغسالة واستخدام أرجل الضبط المطاطية لمنع
+            الاهتزاز والضوضاء الزائدة.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Working Hours & Branch Address -->
+      <section class="content-block address-section">
+        <h2>
+          <i class="fa-solid fa-map-pin"></i> مراكز الخدمة ومواعيد تلقي الطلبات
+        </h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fa-regular fa-clock"></i>
+            <h4>فترات العمل اليومية</h4>
+            <p>
+              تتلقى الأطقم الفنية وخدمة العملاء الاتصالات يومياً من
+              <strong>9:00 صباحاً حتى 10:00 مساءً</strong> شاملة العطلات
+              الرسمية.
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-building"></i>
+            <h4>انتشار الفروع</h4>
+            <p>
+              تغطي شبكة الخدمة محافظات القاهرة الكبرى، الإسكندرية، وجه بحري،
+              ومدن القناة والصعيد عبر مراكز الدعم الفني.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

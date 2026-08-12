@@ -1,0 +1,726 @@
+/* ==========================================================================
+   1. Reset & Global Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ==========================================================================
+   2. Navbar Styles
+   ========================================================================== */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  color: #1e3a8a;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo-container:hover .logo-icon {
+  color: #2563eb;
+  transform: scale(1.08);
+}
+
+.logo-text {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+  color: #2563eb;
+}
+
+.desktop-only {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  gap: 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  padding: 10px 0;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: color 0.25s ease;
+}
+
+.dropdown-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-btn {
+  color: #2563eb;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 230px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  transform: translateX(-4px);
+}
+
+.btn-hotline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-hotline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+/* Mobile Navbar Styles */
+.hamburger-btn {
+  display: none;
+  color: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+.hamburger-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  padding: 14px 20px 20px;
+}
+
+.mobile-menu.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.mobile-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.mobile-dropdown-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  color: #1e293b;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.mobile-dropdown-menu {
+  display: none;
+  padding-right: 12px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.mobile-dropdown-menu.active {
+  display: block;
+}
+
+.mobile-sublink {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.btn-hotline-mobile {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   3. Main Layout & Page Content
+   ========================================================================== */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.badge-certified {
+  display: inline-block;
+  background-color: #e7f1ff;
+  color: #1e3a8a;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  border: 1px solid #b6d4fe;
+}
+
+.header h1 {
+  color: #1e3a8a;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.header p {
+  color: #475569;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #1e3a8a;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.info-icon {
+  width: 45px;
+  height: 45px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: #2563eb;
+  color: #fff;
+}
+
+.info-content strong {
+  display: block;
+  color: #0f172a;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.hotline-card-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.hotline-card-item:hover {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  transform: translateX(-5px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+.hotline-icon {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.hotline-card-item:hover .hotline-icon {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+/* محاذاة النصوص والأرقام لليمين بالكامل */
+.hotline-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  gap: 3px;
+  width: 100%;
+}
+
+.hotline-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  text-align: right;
+}
+
+.hotline-number {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  direction: ltr;
+  unicode-bidi: embed;
+  text-align: right;
+  align-self: flex-start;
+}
+
+.hotline-card-item:hover .hotline-number {
+  color: #2563eb;
+}
+
+/* ==========================================================================
+   تنسيق خاص بكارت الواتساب
+   ========================================================================== */
+.whatsapp-card-item {
+  border-color: #cbd5e1;
+}
+
+.whatsapp-card-item:hover {
+  border-color: #25d366;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.15);
+}
+
+.whatsapp-icon-box {
+  background: #25d366;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-btn-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #128c7e;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.whatsapp-card-item:hover .whatsapp-btn-text {
+  color: #075e54;
+}
+
+/* ==========================================================================
+   ساعات العمل
+   ========================================================================== */
+.info-item-clock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 18px;
+  margin-top: 6px;
+}
+
+.clock-icon {
+  width: 46px;
+  height: 46px;
+  background-color: #f1f5f9;
+  color: #64748b;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.info-content-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.info-content-clock strong {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.info-content-clock p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f8fafc;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* ==========================================================================
+   4. Glassmorphism Floating Button (الزر الشفاف العائم)
+   ========================================================================== */
+.glass-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 999;
+  text-decoration: none;
+}
+
+.glass-btn-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 22px;
+  background: rgba(0, 44, 147, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  color: #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glass-btn-content:hover {
+  background: rgba(118, 135, 171, 0.8);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 40px 0 rgba(37, 99, 235, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.glass-btn-text {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.2px;
+}
+
+.pulse-icon {
+  font-size: 1.1rem;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   5. Media Queries
+   ========================================================================== */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .glass-floating-btn {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .glass-btn-content {
+    padding: 10px 18px;
+  }
+
+  .glass-btn-text {
+    font-size: 0.88rem;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

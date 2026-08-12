@@ -1346,3 +1346,314 @@ button {
 .faults-guide-section .btn-hotline:hover {
   background-color: #dc2626;
 }
+/* Container & Section Setup */
+.appliances-section {
+  padding: 50px 15px;
+  background-color: #f8fafc;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+
+.appliances-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  color: #1e3a8a;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  min-width: 950px;
+}
+
+.responsive-table thead {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+}
+
+.responsive-table th {
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.responsive-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.25s ease;
+}
+
+.responsive-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.responsive-table td {
+  padding: 16px 20px;
+  vertical-align: top;
+}
+
+/* Device Cell Styling */
+.device-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.device-icon {
+  font-size: 1.4rem;
+  background: #eff6ff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.device-name {
+  font-weight: 800;
+  color: #1e293b;
+  font-size: 1.05rem;
+}
+
+/* Brands Tags */
+.brands-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 250px;
+}
+
+.tag {
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+}
+
+/* Error Codes Badges */
+.error-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 220px;
+}
+
+.code-badge {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px dashed #fca5a5;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: monospace, sans-serif;
+  cursor: help;
+}
+
+.code-badge:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-style: solid;
+}
+
+/* Solution List Column */
+.solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 280px;
+}
+
+.solution-list li {
+  font-size: 0.84rem;
+  color: #334155;
+  margin-bottom: 8px;
+  line-height: 1.45;
+  position: relative;
+  padding-right: 14px;
+}
+
+.solution-list li::before {
+  content: "•";
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+
+.solution-list li:last-child {
+  margin-bottom: 0;
+}
+
+.solution-list strong {
+  color: #0f172a;
+}
+/* Brands Section Base */
+.brands-section {
+  padding: 60px 15px;
+  background-color: #ffffff;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+
+.brands-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  color: #1e3a8a;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, transparent);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.section-title p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Brands Grid Layout - Equal Columns */
+.brands-grid {
+  display: grid;
+  /* تقسيم الصف إلى 4 أعمدة متساوية تماماً */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Individual Brand Card Link */
+.brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.brand-icon {
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hover Effects */
+.brand-card:hover {
+  background-color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+.brand-card:hover .brand-icon {
+  transform: scale(1.15) rotate(6deg);
+  background-color: #eff6ff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة للشاشات المتوسطة */
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr); /* عمودين للشاشات الصغيرة */
+    gap: 12px;
+  }
+
+  .brand-card {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+
+  .brand-icon {
+    font-size: 1.1rem;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* عمودين للهواتف المحمولة لجعلها متناسقة */
+  }
+}

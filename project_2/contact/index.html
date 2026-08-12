@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد للصيانة - ثلاجات، غسالات، ديب فريزر، غسالات أطباق
+    </title>
+
+    <!-- خط Cairo ورابط FontAwesome للأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/index.html" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn" aria-expanded="false">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="../fridge-repair/" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="../washing-repair/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../deep-freezer-repair/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../dishwasher-repair/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../screen-repair/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../microwave-repair/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">
+            <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+          </a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="hamburger-btn"
+          aria-label="افتح القائمة"
+        >
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/" class="mobile-link">من نحن</a>
+
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu">
+            <a href="../fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../washing-repair/" class="mobile-sublink">صيانة غسالات</a>
+            <a href="../deep-freezer-repair/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../dishwasher-repair/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../screen-repair/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../microwave-repair/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../blog/" class="mobile-link">المدونة</a>
+        <a href="../contact/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">
+          <i class="fa-solid fa-phone-volume"></i> الخط الساخن: 19580
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="container main-content">
+      <!-- الهيدر الرئيسي -->
+      <header class="header">
+        <span class="badge-certified">
+          <i class="fa-solid fa-circle-check"></i> المركز المعتمد للصيانة
+        </span>
+        <h1>تواصل معنا وحجز الصيانة</h1>
+        <p>
+          نحن هنا لمساعدتك! تواصل معنا عبر الخط الساخن أو الواتساب، أو املأ
+          نموذج حجز الصيانة وسنقوم بالرد عليك في أقرب وقت ممكن.
+        </p>
+      </header>
+
+      <div class="grid-container">
+        <!-- كارت بيانات الاتصال -->
+        <section class="card card-info">
+          <h2><i class="fa-solid fa-headset"></i> قنوات التواصل السريعة</h2>
+
+          <!-- الخط الساخن 1 -->
+          <a href="tel:19580" class="hotline-card-item">
+            <div class="hotline-icon">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="hotline-info-text">
+              <span class="hotline-title"
+                >للحجز السريع يرجى الاتصال بنا على:</span
+              >
+              <span class="hotline-number">19580</span>
+            </div>
+          </a>
+
+          <!-- الخط الساخن 2 -->
+          <a href="tel:17718" class="hotline-card-item">
+            <div class="hotline-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="hotline-info-text">
+              <span class="hotline-title"
+                >الخط الساخن للدعم المباشر والاستفسار:</span
+              >
+              <span class="hotline-number">17718</span>
+            </div>
+          </a>
+
+          <!-- الخط الساخن 3 -->
+          <a href="tel:15607" class="hotline-card-item">
+            <div class="hotline-icon">
+              <i class="fa-solid fa-phone-flip"></i>
+            </div>
+            <div class="hotline-info-text">
+              <span class="hotline-title"
+                >للحجز والاستعلام والشكاوى يرجى الاتصال بنا:</span
+              >
+              <span class="hotline-number">15607</span>
+            </div>
+          </a>
+
+          <!-- الواتساب (تمت إضافة عنصر الواتساب بصيغة كارت موحد) -->
+          <a
+            href="https://wa.me/201289966660"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hotline-card-item whatsapp-card-item"
+          >
+            <div class="hotline-icon whatsapp-icon-box">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="hotline-info-text">
+              <span class="hotline-title"
+                >الدعم الفني والخدمة المباشرة عبر الواتساب:</span
+              >
+              <span class="whatsapp-btn-text"
+                >تواصل معنا عبر الواتساب <i class="fa-solid fa-arrow-left"></i
+              ></span>
+            </div>
+          </a>
+
+          <!-- ساعات العمل -->
+          <div class="info-item-clock">
+            <div class="clock-icon">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div class="info-content-clock">
+              <strong>ساعات العمل الرسمية:</strong>
+              <p>يومياً من الساعة 9:00 صباحاً حتى 10:00 مساءً</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- كارت نموذج حجز الصيانة -->
+        <section class="card card-form">
+          <h2><i class="fa-solid fa-wrench"></i> طلب حجز صيانة</h2>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="fullname">الاسم بالكامل *</label>
+              <input
+                type="text"
+                id="fullname"
+                class="form-control"
+                name="fullname"
+                required
+                placeholder="أدخل اسمك بالكامل"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">رقم الهاتف *</label>
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                name="phone"
+                required
+                placeholder="أدخل رقم المحمول"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="appliance">نوع الجهاز *</label>
+              <select
+                id="appliance"
+                class="form-control"
+                name="appliance"
+                required
+              >
+                <option value="">اختر نوع الجهاز</option>
+                <option value="غسالة">غسالة</option>
+                <option value="ثلاجة">ثلاجة</option>
+                <option value="تكييف">تكييف</option>
+                <option value="شاشة">شاشة</option>
+                <option value="ميكروويف">ميكروويف</option>
+                <option value="أخرى">جهاز آخر</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="address">العنوان التفصيلي *</label>
+              <input
+                type="text"
+                id="address"
+                class="form-control"
+                name="address"
+                required
+                placeholder="المركز / المدينة / الشارع"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="details">وصف العطل (اختياري)</label>
+              <textarea
+                id="details"
+                class="form-control"
+                name="details"
+                placeholder="اكتب تفاصيل العطل إن وجدت..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-paper-plane"></i> إرسال طلب الحجز
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <!-- الزر الشفاف العائم (Glassmorphism Quick Call / Contact) -->
+    <a href="tel:19580" class="glass-floating-btn" aria-label="اتصل بنا الآن">
+      <div class="glass-btn-content">
+        <i class="fa-solid fa-phone-flip pulse-icon"></i>
+        <span class="glass-btn-text">اتصل بنا الآن</span>
+      </div>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
