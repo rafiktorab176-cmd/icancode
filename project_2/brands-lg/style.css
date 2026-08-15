@@ -1,0 +1,596 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ==========================================================================
+   2. Navbar Styles
+   ========================================================================== */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  color: #1e3a8a;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo-container:hover .logo-icon {
+  color: #2563eb;
+  transform: scale(1.08);
+}
+
+.logo-text {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+  color: #2563eb;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  padding: 10px 0;
+}
+
+.dropdown-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.dropdown:hover .dropdown-btn {
+  color: #2563eb;
+}
+
+.dropdown:hover .dropdown-btn::after {
+  width: 100%;
+}
+
+.dropdown-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 230px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  transform: translateX(-4px);
+}
+
+/* Navbar Hotline Button */
+.btn-hotline {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-hotline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+/* ==========================================================================
+   Mobile Menu Styles
+   ========================================================================== */
+
+/* زرار الهامبرجر */
+.hamburger-btn {
+  display: none;
+  color: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+.hamburger-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* القائمة الرئيسية للموبايل (مخفية افتراضياً) */
+.mobile-menu {
+  display: none;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  padding: 14px 20px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+/* القائمة الفرعية لـ (خدماتنا) - مخفية افتراضياً */
+.mobile-dropdown-menu {
+  display: none; /* إخفاء افتراضي حاسم */
+  padding-right: 12px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 6px 0;
+}
+
+/* إظهار القوائم عند تفعيل كلاس active أو فتح الهامبرجر */
+.mobile-menu.active,
+.mobile-dropdown-menu.active {
+  display: block !important;
+}
+
+/* روابط وحركات الموبايل */
+.mobile-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding-right: 18px;
+}
+
+.mobile-dropdown-btn {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown-btn:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.mobile-sublink {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #475569;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.mobile-sublink:hover {
+  background-color: #e2e8f0;
+  color: #1e3a8a;
+  padding-right: 16px;
+}
+
+.btn-hotline-mobile {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-top: 14px;
+}
+
+/* تدوير السهم عند فتح قائمة خدماتنا */
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* إظهار زر الهامبرجر في الشاشات الصغيرة */
+@media (max-width: 992px) {
+  .nav-links,
+  .btn-hotline {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: block !important;
+  }
+}
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header Section */
+.page-header {
+  background-color: #ffffff;
+  padding: 30px 0 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.main-title {
+  color: #0b4a8b;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.lead-text,
+.description-text,
+.support-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.hero-hotlines-box {
+  background: #f0f4f8;
+  border: 1px dashed #0b4a8b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.hero-hotlines-box h3 {
+  font-size: 1.1rem;
+  color: #0b4a8b;
+  margin-bottom: 10px;
+}
+
+.hotlines-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-hotline {
+  background-color: #0b4a8b;
+  color: #ffffff;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-hotline:hover {
+  background-color: #062e58;
+}
+
+/* Images Grid */
+.images-section {
+  margin: 20px 0;
+}
+
+.image-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.responsive-img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Blue Title Banner */
+.blue-banner {
+  background-color: #0b4a8b;
+  color: #ffffff;
+  padding: 12px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blue-banner h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.flex-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.banner-contacts {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  color: #0b4a8b;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* Two Columns Text Grid */
+.text-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.feature-col h3 {
+  color: #0b4a8b;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.feature-col p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* Accordion FAQ Section */
+.faq-accordion-section {
+  margin: 30px 0 50px;
+}
+
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-item {
+  background-color: #0b4a8b;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  color: #ffffff;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  list-style: none; /* إخفاء السهم الافتراضي */
+}
+
+.accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+details[open] .accordion-header::after {
+  content: "-";
+}
+
+.accordion-content {
+  background-color: #ffffff;
+  color: #333;
+  padding: 15px 20px;
+  border: 1px solid #0b4a8b;
+  border-top: none;
+  font-size: 0.9rem;
+}
+
+.accordion-content p {
+  margin-bottom: 8px;
+}
+
+/* Responsive Media Queries (للموبايل والشاشات الصغيرة) */
+@media (max-width: 768px) {
+  .image-grid-2col,
+  .text-grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .responsive-img {
+    height: 200px;
+  }
+
+  .main-title {
+    font-size: 1.4rem;
+  }
+
+  .flex-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hotlines-list {
+    flex-direction: column;
+  }
+
+  .btn-hotline {
+    width: 100%;
+    text-align: center;
+  }
+}

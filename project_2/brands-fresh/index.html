@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة - ثلاجات - غسالات - ديب فريزر - غسالات أطباق
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../fridge-repair/" class="dropdown-item">صيانة ثلاجات</a>
+              <a href="../washing-repair/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../deep-freezer-repair/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../dishwasher-repair/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../screen-repair/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../microwave-repair/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../washing-repair/" class="mobile-sublink">صيانة غسالات</a>
+            <a href="../deep-freezer-repair/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../dishwasher-repair/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../screen-repair/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../microwave-repair/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../Blog/" class="mobile-link">المدونة</a>
+        <a href="../contact/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Hero Section -->
+    <header class="brand-hero fresh-theme">
+      <div class="container">
+        <div class="hero-content">
+          <div class="brand-badge">
+            <span class="brand-icon">❄️</span>
+            <h1>دليل صيانة وأكواد أعطال أجهزة وشاشات فريش (Fresh)</h1>
+          </div>
+          <p class="hero-description">
+            المرجع الفني الشامل لتشخيص وإصلاح أجهزة وشاشات فريش. نوفر تحليلاً
+            هندسياً دقيقاً لأعطال التكييفات، الغسالات، الثلاجات، أجهزة المطبخ
+            والشاشات الذكية المعتمدة على أنظمة Smart Inverter، Bio Cooling،
+            وMulti Air Flow مع خطوات التست مود والفحص الإلكتروني بدقة.
+          </p>
+          <div class="hero-actions">
+            <a href="tel:19580" class="btn btn-primary">📞 الخط الساخن 19580</a>
+            <a
+              href="https://wa.me/201289966660"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+              >💬 استشارة مهندس صيانة</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3 Hotlines Contact Bar -->
+    <section class="hotlines-section">
+      <div class="container">
+        <h2 class="section-title text-center">
+          ☎️ أرقام الخط الساخن والدعم الفني المباشر
+        </h2>
+        <p class="section-subtitle text-center">
+          لطلب الصيانة الفورية لأجهزة فريش والحصول على قطع الغيار الأصلية
+          المعتمدة
+        </p>
+        <div class="hotlines-grid">
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>19580</h3>
+            <p>الخط الساخن الرئيسي لصيانة فريش</p>
+            <a href="tel:19580" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>17718</h3>
+            <p>مركز بلاغات الأعطال السريعة</p>
+            <a href="tel:17718" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>15607</h3>
+            <p>الدعم الفني والخدمات المعتمدة</p>
+            <a href="tel:15607" class="hotline-btn">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container brand-page-master">
+      <!-- 1. الشرح التكنيكي الممتد لأنظمة فريش -->
+      <section class="brand-overview-card">
+        <div class="overview-header">
+          <h2>
+            1. الهندسة الإلكترونية ودوائر التحكم الرقمية لأجهزة فريش (Fresh
+            Architecture)
+          </h2>
+        </div>
+        <div class="overview-body">
+          <p>
+            تعتمد أجهزة وشاشات <strong>فريش (Fresh)</strong> على كارتات
+            إلكترونية ولوحات رقمية متطورة مصممة لتحمل ظروف التشغيل الصعبة وتوفير
+            الطاقة. تضمن نظم التحكم الرقمية معالجة الحساسات في أجهزة التكييف
+            والغسالات والثلاجات وإظهار تشخيص الأعطال ذاتياً.
+          </p>
+
+          <h3>أولاً: تقنيات تكييفات وثلاجات فريش</h3>
+          <p>
+            تعتمد تكييفات وثلاجات فريش على تقنيات التبريد السريع والحماية من
+            التذبذب الكهربائي:
+          </p>
+          <div class="tech-features-grid">
+            <div class="tech-item">
+              <h4>تقنية الإنفرتر الذكي (Smart Inverter)</h4>
+              <p>
+                تعديل سرعة الضاغط للحد من استهلاك الطاقة وتقليل الجهد على
+                الدائرة الميكانيكية للكمبروسر.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>توزيع الهواء المباشر (Multi Air Flow)</h4>
+              <p>
+                فتحات تهوية متعددة لضمان توزيع التبريد المتساوي داخل الثلاجات
+                والتكييفات.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>نظام البلازما وتنقية الهواء (Plasma System)</h4>
+              <p>
+                فلترة الهواء وتنقيتها عبر أجهزة تأيين متطورة متصلة بالكارتة
+                الرئيسية.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>شاشات فريش الذكية (Smart Android TV)</h4>
+              <p>
+                لوحات رئيسية (Mainboards) مدعومة بأنظمة تشغيل سريعة مع دوائر
+                حماية لليد الخلفي.
+              </p>
+            </div>
+          </div>
+
+          <h3>ثانياً: تقنيات الغسالات والأجهزة المنزلية من فريش</h3>
+          <p>
+            تتميز غسالات وسخانات فريش بوجود حساسات للضغط والحرارة لمنع ارتفاع
+            درجة الحرارة وحماية الأجزاء الداخلية مع إظهار رموز الأعطال على
+            الشاشات الرقمية.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. خطوات التست مود واختبار المكونات -->
+      <section class="test-mode-card">
+        <h3 style="margin-bottom: 12px">
+          ⚙️ كيفية دخول القائمة السرية (Service Menu / Test Mode) لأجهزة وشاشات
+          فريش
+        </h3>
+        <p>
+          تتيح أجهزة وشاشات فريش الدخول إلى وضع السيرفيس مود أو التست مود لإعادة
+          الضبط واختبار المكونات عبر الخطوات التالية:
+        </p>
+        <ol class="steps-list">
+          <li>
+            <strong>في تكييفات فريش:</strong> اضغط مع الاستمرار على زر
+            <strong>Display</strong> أو <strong>Turbo</strong> 5 مرات متتالية من
+            الريموت للدخول لوضع فحص الحساسات.
+          </li>
+          <li>
+            <strong>في غسالات فريش الفوق أوتوماتيك والأوتوماتيك:</strong> اضغط
+            مع الاستمرار على زري <strong>Temp</strong> +
+            <strong>Spin</strong> مع الضغط على زر <strong>Power</strong>.
+          </li>
+          <li>
+            ستدخل الغسالة في وضع الفحص المباشر لاختبار صمام المياه، الموتور،
+            وطلمبة الصرف بالتتابع.
+          </li>
+          <li>
+            <strong>في شاشات فريش:</strong> اضغط على زر
+            <strong>Source</strong> ثم ادخل الكود السري <strong>2580</strong> أو
+            <strong>1147</strong>.
+          </li>
+          <li>
+            لإلغاء وضع الفحص أو الخروج من القائمة السرية، افصل التيار الكهربائي
+            أو اضغط زر Exit.
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. جدول أكواد الأعطال الشامل -->
+      <section class="detailed-errors-section">
+        <h3>📋 دليل أكواد أعطال فريش الشامل (Fresh Error Codes & Status)</h3>
+        <p class="section-desc">
+          ابحث عن كود العطل لمعرفة السبب الفني وطريقة الإصلاح المباشرة:
+        </p>
+        <div class="search-filter-box">
+          <input
+            type="text"
+            id="errorSearchInput"
+            placeholder="🔍 ابحث عن الكود أو الجهاز (مثال: E1, E3, E5, تكييف, غسالة)..."
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="master-table" id="freshErrorsTable">
+            <thead>
+              <tr>
+                <th>كود العطل / الحالة</th>
+                <th>الجهاز</th>
+                <th>السبب الفني المباشر</th>
+                <th>طريقة الفحص والحل التكنيكي</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-badge">E1</code></td>
+                <td>تكييف فريش</td>
+                <td>عطل حساس حرارة الغرفة الداخلي (Room Temperature Sensor)</td>
+                <td>
+                  قياس مقاومة الحساس بالأفوميتر والتأكد من توصيل السوكت بالكارتة
+                  واستبداله عند الخلل.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E2</code></td>
+                <td>تكييف فريش</td>
+                <td>عطل حساس المبخر الداخلي (Indoor Pipe Sensor)</td>
+                <td>
+                  قياس مقاومة الحساس، وفحص سلامة التوصيلات واللوحة الإلكترونية
+                  الرئيسية.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E3</code></td>
+                <td>تكييف فريش</td>
+                <td>
+                  عطل حساس الوحدة الخارجية أو انخفاض ضغط الفريون (Outdoor Sensor
+                  / Low Gas)
+                </td>
+                <td>
+                  فحص شحنة الفريون للتأكد من عدم التسريب وقياس مقاومة الحساس
+                  الخارجي.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E4</code></td>
+                <td>تكييف فريش</td>
+                <td>
+                  عطل محرك البلاور الداخلي أو التاكو (Indoor Fan Motor Fault)
+                </td>
+                <td>
+                  قياس محرك البلاور، تفقد كبستر التشغيل بالكارتة وفحص السرعات.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E5</code></td>
+                <td>تكييف / غسالة</td>
+                <td>
+                  عطل في الاتصال بين اللوحات أو تذبذب التيار (Communication
+                  Error)
+                </td>
+                <td>
+                  مراجعة أسطح التوصيل والكابلات بين الوحدة الداخلية والخارجية
+                  وثبات مصدر الفولت.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E1 / E01</code></td>
+                <td>غسالة فريش</td>
+                <td>
+                  عطل في عدم غلق الباب أو مفتاح الأمان (Door Switch Error)
+                </td>
+                <td>
+                  التأكد من إغلاق الباب جيداً، وقياس ميكروسويتش الباب وتوصيلاته
+                  بالكارتة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E2 / E02</code></td>
+                <td>غسالة فريش</td>
+                <td>
+                  مشكلة في سحب المياه أو انخفاض الضغط (Water Intake Fault)
+                </td>
+                <td>
+                  تنظيف فلتر خرطوم السحب، قياس صمام دخول المياه واختبار خرج
+                  الكارتة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E3 / E03</code></td>
+                <td>غسالة فريش</td>
+                <td>
+                  عطل طلمبة الصرف أو انسداد خرطوم الصرف (Drain Pump Error)
+                </td>
+                <td>
+                  تنظيف الفلتر السفلي للطلمبة، التأكد من عدم انثناء خرطوم الصرف
+                  واستبدال الطلمبة إن لزم.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E4 / E04</code></td>
+                <td>غسالة فريش</td>
+                <td>
+                  خلل بالحساس أو انحراف مستوى المياه (Pressure Switch Fault)
+                </td>
+                <td>
+                  فحص خرطوم التنسيم الخاص بميزان الماء، واختبار أو استبدال حساس
+                  مستوى الماء.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">Red Light Flashing</code></td>
+                <td>شاشة فريش</td>
+                <td>
+                  توقف بوردة الباور أو دخول نظام الحماية (Power Protection Mode)
+                </td>
+                <td>
+                  قياس جهود الباور (12V / 5V) وفحص مكثفات كارتة الباور والمين
+                  بورد.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. أعطال شائعة وتصرفات ميكانيكية بدون أكواد -->
+      <section class="symptoms-section">
+        <h3>🔍 أعطال فريش الشائعة بدون رموز أخطاء وطريقة إصلاحها</h3>
+        <div class="symptoms-grid">
+          <div class="symptom-box">
+            <h4>1. ضعف التبريد في الوحدة الداخلية للتكييف</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد الفلاتر الداخلية بالأتربة أو
+              اتساخ كويل الوحدة الخارجية.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تنظيف الفلاتر بالماء، وغسيل المكثف
+              الخارجي بضغاط المياه لرفع الكفاءة.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>2. تسريب مياه من تكييف فريش الداخلي</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد مسار وحوض خرطوم الصرف
+              بالترسبات.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تسليك خرطوم الصرف وتنظيف حوض التكثيف
+              الداخلي.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>3. ضعف التبريد في الجزء السفلي للثلاجة</h4>
+            <p>
+              <strong>السبب الفني:</strong> تراكم الثلج على كويل الفريزر بسبب
+              عطل في دائرة التذويب (Defrost).
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> فصل الثلاجة لمدة 24 ساعة وفحص السخان
+              وفيوز الحرارة وحساس الديفروست.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>4. اهتزاز وصوت عالٍ في غسالة فريش أثناء العصر</h4>
+            <p>
+              <strong>السبب الفني:</strong> عدم اتزان الأرجل السفلية أو تلف
+              المساعدين.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> ضبط استواء القواعد والأرجل وتغيير
+              المساعدين في حال اهترائهم.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. نصائح وتوجيهات الحفاظ على أجهزة فريش -->
+      <section class="tips-card">
+        <h3>💡 إرشادات وقائية لتمديد عمر أجهزة وشاشات فريش</h3>
+        <ul class="styled-list">
+          <li>
+            <strong>التنظيف الدوري لفلاتر التكييف:</strong> غسل الفلاتر كل
+            أسبوعين في الصيف لحماية الضاغط.
+          </li>
+          <li>
+            <strong>تقليل إضاءة الليد بالشاشات:</strong> ضبط إضاءة Backlight على
+            70%-80% لتمديد عمر مساطر الليد.
+          </li>
+          <li>
+            <strong>التنظيف الدوري لفلتر الغسالة:</strong> تنظيف فلتر طلمبة
+            الصرف السفلي شهرياً تجنباً لكود E3.
+          </li>
+          <li>
+            <strong>ترك مساحة تهوية للثلاجات:</strong> ترك مسافة لا تقل عن 10 سم
+            خلف الثلاجة لتبريد الضاغط والكارتة.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. الأسئلة الشائعة SEO FAQ -->
+      <section class="faq-section">
+        <h3>❓ الأسئلة الشائعة حول صيانة فريش</h3>
+        <details class="faq-item">
+          <summary>ما هي أرقام الخط الساخن المعتمدة لصيانة فريش؟</summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك التواصل المباشر معنا بخصوص صيانة أجهزة وشاشات فريش على
+              الأرقام: <strong>19580</strong> - <strong>17718</strong> -
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ماذا يعني ظهور كود E1 في تكييف فريش؟</summary>
+          <div class="faq-answer">
+            <p>
+              يدل كود E1 على وجود عطل في حساس حرارة الغرفة (Room Sensor) ويحتاج
+              لفحص السوكت أو التبديل.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            كيف يمكن فتح القائمة السرية (Service Menu) لشاشة فريش؟
+          </summary>
+          <div class="faq-answer">
+            <p>
+              اضغط على زر Source من الريموت ثم أدخل الرقم 2580 أو 1147 للدخول
+              المباشر للقائمة السرية.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ما هو سبب ظهور كود E3 في غسالة فريش؟</summary>
+          <div class="faq-answer">
+            <p>
+              يدل الكود على مشكلة في صرف المياه؛ يجب التأكد من نظافة الفلتر
+              السفلي وفحص طلمبة الصرف.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="cta-box fresh-cta">
+        <h3>هل تحتاج إلى مساعدة أو صيانة فورية لأجهزة وشاشات فريش؟</h3>
+        <p>
+          فريقنا الفني المعتمد جاهز لتوفير قطع الغيار الأصلية والزيارات المنزلية
+          المباشرة
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:19580" class="btn btn-light"
+            >اتصل الآن بالخط الساخن 19580</a
+          >
+          <a
+            href="https://wa.me/201289966660"
+            class="btn btn-whatsapp-light"
+            target="_blank"
+            rel="noopener"
+            >تواصل واتساب</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

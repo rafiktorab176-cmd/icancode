@@ -1,0 +1,721 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ==========================================================================
+   2. Navbar Styles
+   ========================================================================== */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  color: #1e3a8a;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo-container:hover .logo-icon {
+  color: #2563eb;
+  transform: scale(1.08);
+}
+
+.logo-text {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+  color: #2563eb;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  padding: 10px 0;
+}
+
+.dropdown-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.dropdown:hover .dropdown-btn {
+  color: #2563eb;
+}
+
+.dropdown:hover .dropdown-btn::after {
+  width: 100%;
+}
+
+.dropdown-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 230px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  transform: translateX(-4px);
+}
+
+/* Navbar Hotline Button */
+.btn-hotline {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-hotline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+/* ==========================================================================
+   Mobile Menu Styles
+   ========================================================================== */
+
+/* زرار الهامبرجر */
+.hamburger-btn {
+  display: none;
+  color: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+.hamburger-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* القائمة الرئيسية للموبايل (مخفية افتراضياً) */
+.mobile-menu {
+  display: none;
+  background-color: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  padding: 14px 20px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+/* القائمة الفرعية لـ (خدماتنا) - مخفية افتراضياً */
+.mobile-dropdown-menu {
+  display: none; /* إخفاء افتراضي حاسم */
+  padding-right: 12px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 6px 0;
+}
+
+/* إظهار القوائم عند تفعيل كلاس active أو فتح الهامبرجر */
+.mobile-menu.active,
+.mobile-dropdown-menu.active {
+  display: block !important;
+}
+
+/* روابط وحركات الموبايل */
+.mobile-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding-right: 18px;
+}
+
+.mobile-dropdown-btn {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown-btn:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.mobile-sublink {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #475569;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.mobile-sublink:hover {
+  background-color: #e2e8f0;
+  color: #1e3a8a;
+  padding-right: 16px;
+}
+
+.btn-hotline-mobile {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-top: 14px;
+}
+
+/* تدوير السهم عند فتح قائمة خدماتنا */
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* إظهار زر الهامبرجر في الشاشات الصغيرة */
+@media (max-width: 992px) {
+  .nav-links,
+  .btn-hotline {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: block !important;
+  }
+}
+/* ==========================================================================
+   Samsung Light & Modern Theme Styles (No :root Used)
+   ========================================================================== */
+
+/* Header & Hero */
+.brand-hero.samsung-theme {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border: 1px solid #bae6fd;
+  padding: 48px 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.brand-badge h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0369a1;
+}
+
+.brand-icon {
+  font-size: 1.8rem;
+}
+
+.hero-description {
+  color: #334155;
+  max-width: 750px;
+  margin: 0 auto 24px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.hero-actions,
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.btn-primary:hover {
+  background: #0369a1;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #16a34a;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+/* Hotlines Section */
+.hotlines-section {
+  background: #ffffff;
+  padding: 32px 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  color: #0f172a;
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.hotlines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.hotline-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hotline-card:hover {
+  transform: translateY(-4px);
+  border-color: #0284c7;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.phone-icon {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.hotline-card h3 {
+  font-size: 1.7rem;
+  color: #0284c7;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.hotline-card p {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.hotline-btn {
+  display: block;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.hotline-btn:hover {
+  background: #0369a1;
+}
+
+/* Cards & Content Blocks */
+.brand-overview-card,
+.test-mode-card,
+.detailed-errors-section,
+.symptoms-section,
+.tips-card,
+.faq-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 30px;
+  color: #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+.overview-header h2,
+.test-mode-card h3,
+.detailed-errors-section h3,
+.symptoms-section h3,
+.tips-card h3,
+.faq-section h3 {
+  color: #0f172a;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  border-right: 4px solid #0284c7;
+  padding-right: 12px;
+}
+
+.tech-features-grid,
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.tech-item,
+.symptom-box {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.tech-item h4,
+.symptom-box h4 {
+  color: #0284c7;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.steps-list,
+.styled-list {
+  padding-right: 20px;
+  line-height: 1.8;
+}
+
+.steps-list li,
+.styled-list li {
+  margin-bottom: 10px;
+}
+
+/* Error Search & Table */
+.search-filter-box {
+  margin-bottom: 20px;
+}
+
+.search-filter-box input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  color: #0f172a;
+  outline: none;
+}
+
+.search-filter-box input:focus {
+  border-color: #0284c7;
+  background: #ffffff;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.master-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  min-width: 600px;
+}
+
+.master-table th,
+.master-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.master-table th {
+  background: #f1f5f9;
+  color: #0284c7;
+  font-weight: 800;
+}
+
+.code-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #bae6fd;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+/* FAQ Details */
+.faq-item {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.faq-item summary {
+  font-weight: 700;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA Box */
+.cta-box.samsung-cta {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  text-align: center;
+  padding: 36px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.cta-box h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.cta-box p {
+  color: #f0f9ff;
+  margin-bottom: 20px;
+}
+
+.btn-light {
+  background: #ffffff;
+  color: #0369a1;
+}
+
+.btn-light:hover {
+  background: #f8fafc;
+}
+
+.btn-whatsapp-light {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.btn-whatsapp-light:hover {
+  background: #15803d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-actions,
+  .cta-buttons {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .brand-badge h1 {
+    font-size: 1.4rem;
+  }
+}

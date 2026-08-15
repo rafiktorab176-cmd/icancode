@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة - ثلاجات - غسالات - ديب فريزر - غسالات أطباق
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../fridge-repair/" class="dropdown-item">صيانة ثلاجات</a>
+              <a href="../washing-repair/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../deep-freezer-repair/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../dishwasher-repair/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../screen-repair/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../microwave-repair/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../washing-repair/" class="mobile-sublink">صيانة غسالات</a>
+            <a href="../deep-freezer-repair/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../dishwasher-repair/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../screen-repair/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../microwave-repair/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../Blog/" class="mobile-link">المدونة</a>
+        <a href="../contact/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Hero Section -->
+    <header class="brand-hero hoover-theme">
+      <div class="container">
+        <div class="hero-content">
+          <div class="brand-badge">
+            <span class="brand-icon">🔴</span>
+            <h1>دليل صيانة وأكواد أعطال أجهزة هوفر (Hoover)</h1>
+          </div>
+          <p class="hero-description">
+            المرجع الفني الشامل لتشخيص وإصلاح أجهزة هوفر المنزلية. نوفر تحليلاً
+            هندسياً دقيقاً لأعطال غسالات الملابس، غسالات الأطباق، الثلاجات
+            والشاشات المعتمدة على تقنيات Eco-Power وOne Touch والاتصال الذكي
+            hOn، مع خطوات التست مود والفحص الإلكتروني بدقة وإتقان.
+          </p>
+          <div class="hero-actions">
+            <a href="tel:19580" class="btn btn-primary">📞 الخط الساخن 19580</a>
+            <a
+              href="https://wa.me/201289966660"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+              >💬 استشارة مهندس صيانة</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3 Hotlines Contact Bar -->
+    <section class="hotlines-section">
+      <div class="container">
+        <h2 class="section-title text-center">
+          ☎️ أرقام الخط الساخن والدعم الفني المباشر
+        </h2>
+        <p class="section-subtitle text-center">
+          لطلب الصيانة الفورية لأجهزة هوفر والحصول على قطع الغيار الأصلية
+          المعتمدة
+        </p>
+        <div class="hotlines-grid">
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>19580</h3>
+            <p>الخط الساخن الرئيسي لصيانة هوفر</p>
+            <a href="tel:19580" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>17718</h3>
+            <p>مركز بلاغات الأعطال السريعة</p>
+            <a href="tel:17718" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>15607</h3>
+            <p>الدعم الفني والخدمات المعتمدة</p>
+            <a href="tel:15607" class="hotline-btn">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container brand-page-master">
+      <!-- 1. الشرح التكنيكي الممتد لأنظمة هوفر -->
+      <section class="brand-overview-card">
+        <div class="overview-header">
+          <h2>
+            1. الهندسة الإلكترونية ودواءر التحكم الرقمية لأجهزة هوفر (Hoover
+            Architecture)
+          </h2>
+        </div>
+        <div class="overview-body">
+          <p>
+            تعتمد أجهزة <strong>هوفر (Hoover)</strong> على معالجات دقيقة متطورة
+            ترتبط بشبكات الاتصال الذكي (NFC / Wi-Fi) عبر تطبيق hOn أو Hoover
+            Wizard. تتيح منظومة الكارتات الذكية إمكانية الفحص الذاتي واكتشاف
+            أخطاء التشغيل بدقة عالية.
+          </p>
+
+          <h3>أولاً: تقنيات غسالات الملابس والأطباق من هوفر</h3>
+          <p>
+            تتميز أجهزة هوفر بتقنيات توفير الطاقة وتحديد الأوزان تلقائياً للحفاظ
+            على عمر المحرك والأنسجة:
+          </p>
+          <div class="tech-features-grid">
+            <div class="tech-item">
+              <h4>محرك إنفرتر أيكو باور (Eco-Power Inverter Motor)</h4>
+              <p>
+                محرك بدون شربون (Brushless) يقلل الاهتزاز ويوفر استهلاك الطاقة
+                مع زيادة قوة العصر والتنظيف.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>تقنية الاتصال الذكي (One Touch / hOn App)</h4>
+              <p>
+                ربط الغسالة بالهاتف لإجراء فحص شامل للكارتة وحساسات الحرارة ورصد
+                الأعطال مباشرة.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>نظام الرش المباشر (All in One / Power Care)</h4>
+              <p>
+                مزج المسحوق بالماء ورشه داخل الحلة بقوة لضمان تغلغل المسحوق
+                بالأنسجة في درجة حرارة منخفضة.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>حسّاس كجم لوود (KG Mode Sensor)</h4>
+              <p>
+                وزن الملابس تلقائياً في أول 4 دقائق لتعديل كمية المياه وزمن
+                الدورة بدقة متناهية.
+              </p>
+            </div>
+          </div>
+
+          <h3>ثانياً: تقنيات التبريد وشاشات هوفر</h3>
+          <p>
+            تعتمد ثلاجات هوفر على نظام التبريد المزدوج (Total No Frost) لمنع
+            تكون الثلج والحفاظ على مستويات الرطوبة المثالية، بينما تتميز الشاشات
+            بدوائر حماية المكونات الداخلية من تذبذب التيار.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. خطوات التست مود واختبار المكونات -->
+      <section class="test-mode-card">
+        <h3 style="margin-bottom: 12px">
+          ⚙️ كيفية دخول التست مود (Test Mode) وإعادة الضبط لغسالات هوفر
+        </h3>
+        <p>
+          تتيح غسالات هوفر دخول برنامج الفحص الذاتي واختبار المكونات (الصمام،
+          السخان، الموتور، الطلمبة) عبر الخطوات التالية:
+        </p>
+        <ol class="steps-list">
+          <li>
+            تأكد من إيقاف تشغيل الغسالة تماماً وتفريغ الحلة من الماء والملابس مع
+            إغلاق الباب.
+          </li>
+          <li>
+            قم أدر بكرة البرامج إلى أول برنامج (غالباً برنامج القطن 90° أو وضعية
+            OFF ثم أول تكّة).
+          </li>
+          <li>
+            اضغط مع الاستمرار على زر
+            <strong>Extra Rinse (أو زر Spin)</strong> ومعه زر
+            <strong>Start/Pause</strong> في نفس الوقت.
+          </li>
+          <li>
+            انتظر حتى تضيء لمبات اللوحة بالكامل أو يظهر الرمز
+            <strong>E00 / T01</strong> على الشاشة الرقمية.
+          </li>
+          <li>
+            اضغط على زر Start للتنقل بين اختبار صمامات السحب، طلمبة الصرف،
+            وسرعات الدوران المختلفة للمحرك.
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. جدول أكواد الأعطال الشامل -->
+      <section class="detailed-errors-section">
+        <h3>
+          📋 دليل أكواد أعطال هوفر الشامل (Hoover Error Codes - E / Err Series)
+        </h3>
+        <p class="section-desc">
+          ابحث عن كود العطل لمعرفة السبب الفني وطريقة الإصلاح المباشرة:
+        </p>
+        <div class="search-filter-box">
+          <input
+            type="text"
+            id="errorSearchInput"
+            placeholder="🔍 ابحث عن الكود أو الجهاز (مثال: E02, E03, E08, غسالة أطباق)..."
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="master-table" id="hooverErrorsTable">
+            <thead>
+              <tr>
+                <th>كود العطل</th>
+                <th>الجهاز</th>
+                <th>السبب الفني المباشر</th>
+                <th>طريقة الفحص والحل التكنيكي</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-badge">E01 / Err 1</code></td>
+                <td>غسالة ملابس / أطباق</td>
+                <td>عطل في قفل الباب (Door Safety Lock) أو عدم إغلاقه جيداً</td>
+                <td>
+                  فحص مزلاج الباب، قياس الفولت الواصل للميكروسويتش، واستبدال
+                  اللوك عند التلف.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E02 / Err 2</code></td>
+                <td>غسالة ملابس / أطباق</td>
+                <td>
+                  مشكلة في سحب المياه أو انخفاض ضغط الماء (Water Fill Timeout)
+                </td>
+                <td>
+                  تنظيف فلتر خرطوم السحب، فحص محبس المياه، وقياس مقاومة ملف صمام
+                  الدخول.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E03 / Err 3</code></td>
+                <td>غسالة ملابس / أطباق</td>
+                <td>عطل في طرد المياه أو انسداد طلمبة التصريف (Drain Fault)</td>
+                <td>
+                  تنظيف الفلتر السفلي للطلمبة، التأكد من عدم انسداد خرطوم الصرف،
+                  واختبار ملف الطلمبة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E04 / Err 4</code></td>
+                <td>غسالة ملابس</td>
+                <td>ارتفاع منسوب المياه وتفعيل نظام الفيضان (Anti-Overflow)</td>
+                <td>
+                  فحص صمام الدخول للتأكد من عدم علقه، واختبار حساس مستوى الماء
+                  (البريستات).
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E05 / Err 5</code></td>
+                <td>غسالة ملابس</td>
+                <td>عطل في حساس درجة الحرارة NTC (Temperature Sensor)</td>
+                <td>
+                  قياس مقاومة حساس الحرارة بآفو ميتر والتأكد من عدم وجود قطع في
+                  الضفيرة الواصلة بالكارتة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E06 / Err 6</code></td>
+                <td>غسالة ملابس</td>
+                <td>خلل في عدم اتزان الحمل أو عطل برمجيات الكارتة الرئيسية</td>
+                <td>
+                  إعادة توزيع الملابس داخل الحلة، وفي حال استمرار العطل يتم فحص
+                  الكارتة أو عمل Reset.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E07 / Err 7</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  قفلة في محرك الغسالة أو انسداد في حركة الحلة (Motor Blocked)
+                </td>
+                <td>
+                  مراجعة شربون الموتور، قياس الملفات، والتأكد من حركة الحلة
+                  بحرية دون عائق ميكانيكي.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E08 / Err 8</code></td>
+                <td>غسالة ملابس</td>
+                <td>عطل في حساس تاكو الموتور (Tacho Generator Fault)</td>
+                <td>
+                  فحص مغناطيس حساس التاكو خلف الموتور وقياس مقاومته والتأكد من
+                  التوصيلات.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E09 / Err 9</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  عطل في ثايرستور التحكم بمحرك الكارتة (Triac Motor Fault)
+                </td>
+                <td>
+                  فحص مكونات كارتة التشغيل الرئيسية واختبار ترانزستور الثايرستور
+                  الخاص بالمحرك.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E15 / Err 15</code></td>
+                <td>غسالة ملابس</td>
+                <td>عطل في ذاكرة البرمجة للكارتة الرئيسية (EEPROM Error)</td>
+                <td>
+                  إعادة شحن أو إعادة برمجة كارتة الغسالة أو استبدالها بقطع أصلية
+                  معتمدة.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. أعطال شائعة وتصرفات ميكانيكية بدون أكواد -->
+      <section class="symptoms-section">
+        <h3>🔍 أعطال هوفر الشائعة بدون رموز أخطاء وطريقة إصلاحها</h3>
+        <div class="symptoms-grid">
+          <div class="symptom-box">
+            <h4>1. اهتزاز الغسالة والضوضاء أثناء العصر</h4>
+            <p>
+              <strong>السبب الفني:</strong> عدم استواء الأرضية أو تلف مساند
+              التثبيت (المساعدين) وبلي الحلة.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> ضبط الأرجل بميزان مياه، واختبار
+              المساعدين وبلي الحلة وتغييرهما عند وجود فضاوة.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>2. توقف التبريد في كابينة ثلاجة هوفر</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد فتحات توزيع الهواء أو تلف
+              ديفروست الفريزر.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> فصل الجهاز 24 ساعة لتمويج الثلج
+              المتراكم، واختبار حساس الديفروست والسخان.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>3. عدم تجفيف الأطباق بصورة كاملة</h4>
+            <p>
+              <strong>السبب الفني:</strong> نفاد الملمع أو عدم فتح باب الغسالة
+              تلقائياً في الأنظمة الحديثة.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> إعادة ملء مستوعب الملمع واختيار
+              برنامج يحتوي على دورة تجفيف إضافية.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>4. عدم استجابة الشاشة لللمس وظهور علامة القفل</h4>
+            <p>
+              <strong>السبب الفني:</strong> تفعيل قفل الأطفال لحماية الإعدادات
+              (Child Lock).
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> الضغط المطول على زري Spin وOptions
+              لمدة 3 ثوانٍ لإلغاء القفل.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. نصائح وتوجيهات الحفاظ على أجهزة هوفر -->
+      <section class="tips-card">
+        <h3>💡 إرشادات وقائية لتمديد عمر أجهزة هوفر</h3>
+        <ul class="styled-list">
+          <li>
+            <strong>التنظيف الدوري للفلتر:</strong> تنظيف فلتر الصرف السفلي مرة
+            شهرياً لمنع ظهور كود E03 وحماية الطلمبة.
+          </li>
+          <li>
+            <strong>استخدام مثبت الفولت:</strong> لحماية كارتات هوفر الرقمية من
+            تغيرات شدة التيار الفجائية.
+          </li>
+          <li>
+            <strong>تنظيف درج المسحوق:</strong> غسل الدرج بالماء الساخن بانتظام
+            لمنع انسداد أنابيب الرش المباشر.
+          </li>
+          <li>
+            <strong>دورة العناية بالحلة:</strong> تشغيل دورة غسيل فارغة بحرارة
+            عالية مع منظف مخصص كل شهر.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. الأسئلة الشائعة SEO FAQ -->
+      <section class="faq-section">
+        <h3>❓ الأسئلة الشائعة حول صيانة هوفر</h3>
+        <details class="faq-item">
+          <summary>ما هي أرقام الخط الساخن المعتمدة لصيانة هوفر؟</summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك التواصل المباشر معنا بخصوص صيانة هوفر على الأرقام:
+              <strong>19580</strong> - <strong>17718</strong> -
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ماذا يعني كود E08 في غسالة ملابس هوفر؟</summary>
+          <div class="faq-answer">
+            <p>
+              يشير إلى وجود عطل في حساس تاكو الموتور؛ يرجى فحص توصيلات الحساس
+              والمحرك عبر الفني المختص.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>كيف يمكن إعادة ضبط (Reset) لغسالة هوفر؟</summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك تحويل البكرة لوضعية OFF، فصل الفيشة لمدة 5 دقائق، ثم إعادة
+              التوصيل والتشغيل لإلغاء البرنامج السابق.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>كيف تفيد تقنية One Touch / hOn في تشخيص الأعطال؟</summary>
+          <div class="faq-answer">
+            <p>
+              تسمح التقنية بإجراء كشف إلكتروني على أجزاء الغسالة وقراءة سجل
+              الأخطاء مباشرة من خلال هاتفك الذكي.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="cta-box hoover-cta">
+        <h3>هل تحتاج إلى مساعدة أو صيانة فورية لأجهزة هوفر؟</h3>
+        <p>
+          فريقنا الفني المعتمد جاهز لتوفير قطع الغيار الأصلية والزيارات المنزلية
+          المباشرة
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:19580" class="btn btn-light"
+            >اتصل الآن بالخط الساخن 19580</a
+          >
+          <a
+            href="https://wa.me/201289966660"
+            class="btn btn-whatsapp-light"
+            target="_blank"
+            rel="noopener"
+            >تواصل واتساب</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

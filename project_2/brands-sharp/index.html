@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة - ثلاجات - غسالات - ديب فريزر - غسالات أطباق
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../fridge-repair/" class="dropdown-item">صيانة ثلاجات</a>
+              <a href="../washing-repair/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../deep-freezer-repair/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../dishwasher-repair/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../screen-repair/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../microwave-repair/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../washing-repair/" class="mobile-sublink">صيانة غسالات</a>
+            <a href="../deep-freezer-repair/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../dishwasher-repair/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../screen-repair/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../microwave-repair/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../Blog/" class="mobile-link">المدونة</a>
+        <a href="../contact/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Header Section -->
+    <header class="page-header text-center">
+      <div class="container">
+        <h1 class="main-title">
+          صيانة وإصلاح أجهزة شارب (Sharp) - الدعم الفني المعتمد
+        </h1>
+        <p class="lead-text">
+          إذا كانت تواجهك مشكلات تتعلق بأجهزة شارب Sharp الخاصة بك، يسعدنا
+          التواصل مع الدعم الفني المتخصص لخدمة منتجات Sharp المتوفر على مدار
+          اليوم لخدمتك. نمتلك خبرة فريدة ومثالية لحماية منتجات شارب للغسالات
+          والثلاجات والتكييفات ومنع الإصلاحات الخاطئة وتجنب التوقف غير المتوقع
+          لبعض الأجهزة.
+        </p>
+        <p class="description-text">
+          نعمل دائماً على تقديم عمليات إصلاح وصيانة شارب بالطرق الصحيحة والفعالة
+          للوصول إلى الأداء المثالي للثلاجات والتكييفات والغسالات والشاشات.
+          نستخدم أحدث معدات استكشاف الأعطال وتصحيح الأخطاء لضمان إصلاحها بأعلى
+          جودة واحترافية وبقطع الغيار الأصلية.
+        </p>
+        <p class="support-text">
+          اطرح الأسئلة لموظفي خدمة العملاء أو اتصل بنا على أرقام صيانة شارب
+          الموحدة لمعرفة المزايا الإضافية واستمتع بمركز خدمة أفضل في أي وقت.
+        </p>
+
+        <!-- Hotlines Callout -->
+        <div class="hero-hotlines-box">
+          <h3>📞 الخط الساخن المباشر لصيانة شارب (Sharp):</h3>
+          <div class="hotlines-list">
+            <a href="tel:19580" class="btn-hotline">19580</a>
+            <a href="tel:17718" class="btn-hotline">17718</a>
+            <a href="tel:15607" class="btn-hotline">15607</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section 1: Top Images -->
+    <section class="images-section">
+      <div class="container">
+        <div class="image-grid-2col">
+          <div class="img-wrapper">
+            <!-- استبدل YOUR_IMAGE_1.jpg بمسار صورتك -->
+            <img
+              src="../assets/sh1.jpg"
+              alt="صيانة ثلاجات شارب Sharp"
+              class="responsive-img"
+            />
+          </div>
+          <div class="img-wrapper">
+            <!-- استبدل YOUR_IMAGE_2.jpg بمسار صورتك -->
+            <img
+              src="../assets/sh2.jpg"
+              alt="صيانة تكييفات وغسالات شارب Sharp"
+              class="responsive-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Features & Offers -->
+    <section class="features-offers-section">
+      <div class="container">
+        <div class="blue-banner">
+          <h2>
+            احصل على قطع الغيار الأصلية لأجهزة شارب (Sharp) والخصومات الحصرية
+          </h2>
+        </div>
+
+        <div class="text-grid-2col">
+          <div class="feature-col">
+            <h3>عروض وخصومات صيانة شارب</h3>
+            <p>
+              دعنا نرحب بك في مركزنا المستقل لصيانة شارب Sharp، حيث تجد لدينا
+              عروض صيانة مجانية وكروت الخصومات الحصرية المتاحة لكافة العملاء.
+            </p>
+            <p>
+              نهدف دائماً لإرضاء العميل، لذا نقدم خدمة صيانة ممتازة لمنتجات
+              Sharp تشمل ثلاجات وتكييفات وديب فريزر وغسالات وشاشات شارب العربي.
+            </p>
+            <p>
+              تتميز مراكز الصيانة بتوفير مهندسين وفنيين على أعلى مستوى من
+              الكفاءة والتدريب لحل معقد الأعطال الإلكترونية والميكانيكية.
+            </p>
+          </div>
+
+          <div class="feature-col">
+            <h3>قطع غيار شارب الأصلية 100%</h3>
+            <p>
+              نضمن لك استخدام قطع غيار شارب الأصلية المعتمدة بالكامل، مع تقديم
+              ضمان معتمد على عملية الصيانة وقطع الغيار المستبدلة.
+            </p>
+            <p>
+              تنتشر سيارات الخدمة السريعة في جميع محافظات مصر لتغطي كافة المناطق
+              وتقديم الصيانة المنزلية الفورية دون الحاجة لنقل الجهاز.
+            </p>
+            <p>
+              تواصل معنا الآن عبر الخطوط الساخنة المعلنة للحصول على معاينة فورية
+              وخصومات تصل إلى 30% على الصيانة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Middle Images -->
+    <section class="images-section">
+      <div class="container">
+        <div class="image-grid-2col">
+          <div class="img-wrapper">
+            <!-- استبدل YOUR_IMAGE_3.jpg بمسار صورتك -->
+            <img
+              src="../assets/sh3.jpg"
+              alt="فني صيانة Sharp"
+              class="responsive-img"
+            />
+          </div>
+          <div class="img-wrapper">
+            <!-- استبدل YOUR_IMAGE_4.jpg بمسار صورتك -->
+            <img
+              src="../assets/sh4.jpg"
+              alt="مركز صيانة شارب"
+              class="responsive-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Expertise & Contact Banner -->
+    <section class="expertise-section">
+      <div class="container">
+        <div class="blue-banner flex-banner">
+          <h2>خبرات فريق إصلاح وصيانة شارب (Sharp)</h2>
+          <div class="banner-contacts">تواصل معنا: 19580 | 17718 | 15607</div>
+        </div>
+
+        <div class="text-grid-2col">
+          <div class="feature-col">
+            <p>
+              اعتماداً على الخبرات الممتدة لفريق صيانة شارب، فإن هدفنا الرئيسي
+              هو تقديم خدمة صيانة سريعة ومضمونة لإعادة تشغيل أجهزتك بكفاءة
+              المصنع.
+            </p>
+            <p>
+              بمجرد التواصل معنا يتم تحريك أقرب سيارة صيانة مجهزة بالقطع الأصلية
+              ليصلك الفني المختص خلال 24 إلى 48 ساعة فقط.
+            </p>
+          </div>
+          <div class="feature-col">
+            <p>
+              يسعدنا مساعدتك عبر أرقام الخط الساخن <strong>19580</strong> أو
+              <strong>17718</strong> أو <strong>15607</strong> للتغلب على كافة
+              المشكلات التقنية والأعطال.
+            </p>
+            <p>
+              نغطي جميع أنحاء جمهورية مصر العربية بتوفير خدمات صيانة منزلية
+              فورية لضمان وصول الخدمة لكل بيت مصري.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Accordion FAQ (أسفل الصفحة مثل الاسكرين) -->
+    <section class="faq-accordion-section">
+      <div class="container">
+        <div class="accordion-wrapper">
+          <!-- Accordion Item 1 (مفتوح افتراضياً) -->
+          <details class="accordion-item" open>
+            <summary class="accordion-header">
+              <span
+                >اطرح استفسارك على رقم الخط الساخن 19580 أو 17718 واعرف
+                التفاصيل</span
+              >
+              <span class="icon-toggle"></span>
+            </summary>
+            <div class="accordion-content">
+              <p>
+                <strong>كيف يمكنني معرفة تكلفة صيانة جهاز شارب (Sharp)؟</strong>
+              </p>
+              <p>
+                عند التحدث مع أحد ممثلي خدمة العملاء، سيُطلب منك توضيح موديل
+                الجهاز ونوع المشكلة (مثلاً: تكييف، ثلاجة، غسالة)، وهل الجهاز ما
+                زال داخل الضمان أم خارجه.
+              </p>
+              <p>
+                سيتم إفادتك بالتكلفة التقريبية للزيارة المنزلية وقطع الغيار
+                المطلوبة قبل البدء في عملية الإصلاح.
+              </p>
+            </div>
+          </details>
+
+          <!-- Accordion Item 2 -->
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span>كم يستغرق وقت الإصلاح المنزلي لجهاز شارب؟</span>
+              <span class="icon-toggle"></span>
+            </summary>
+            <div class="accordion-content">
+              <p>
+                تستغرق معظم عمليات الصيانة المنزلية لأجهزة شارب ما بين 30 إلى 60
+                دقيقة في حالة الأعطال العادية وتغيير القطع التالفة مباشرة بقطع
+                أصلية.
+              </p>
+            </div>
+          </details>
+
+          <!-- Accordion Item 3 -->
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span>اعرف أرقام التواصل مع صيانة شارب Sharp</span>
+              <span class="icon-toggle"></span>
+            </summary>
+            <div class="accordion-content">
+              <p>
+                يمكنك التواصل المباشر معنا من خلال الأرقام الموحدة:
+                <strong>19580</strong> أو <strong>17718</strong> أو
+                <strong>15607</strong> على مدار الأسبوع.
+              </p>
+            </div>
+          </details>
+
+          <!-- Accordion Item 4 -->
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span>ما هي خطوات صيانة شارب لإصلاح جهازي؟</span>
+              <span class="icon-toggle"></span>
+            </summary>
+            <div class="accordion-content">
+              <p>
+                1. تسجيل البلاغ عبر الخط الساخن وتحديد الموعد المناسب.<br />
+                2. زيارة الفني المختص وفحص الجهاز بأحدث أجهزة كشف الأعطال.<br />
+                3. تركيب قطع الغيار الأصلية واختبار الجهاز أمام العميل.<br />
+                4. تسليم شهادة ضمان معتمدة على الصيانة والقطع الجديدة.
+              </p>
+            </div>
+          </details>
+
+          <!-- Accordion Item 5 -->
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span>نحن في انتظار اتصالك بنا لتقديم أفضل خدمة صيانة</span>
+              <span class="icon-toggle"></span>
+            </summary>
+            <div class="accordion-content">
+              <p>
+                فريق خدمة العملاء متواجد لخدمتك وتلقي بلاغات الأعطال
+                والاستفسارات طوال أيام الأسبوع.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

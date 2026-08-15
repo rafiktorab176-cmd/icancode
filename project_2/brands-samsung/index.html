@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة - ثلاجات - غسالات - ديب فريزر - غسالات أطباق
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../about/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../fridge-repair/" class="dropdown-item">صيانة ثلاجات</a>
+              <a href="../washing-repair/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../deep-freezer-repair/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../dishwasher-repair/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../screen-repair/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../microwave-repair/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../faq/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../blog/" class="nav-link">المدونة</a>
+          <a href="../contact/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../about/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../washing-repair/" class="mobile-sublink">صيانة غسالات</a>
+            <a href="../deep-freezer-repair/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../dishwasher-repair/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../screen-repair/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../microwave-repair/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../faq/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../Blog/" class="mobile-link">المدونة</a>
+        <a href="../contact/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Hero Section -->
+    <header class="brand-hero samsung-theme">
+      <div class="container">
+        <div class="hero-content">
+          <div class="brand-badge">
+            <span class="brand-icon">🌀</span>
+            <h1>دليل صيانة وأكواد أعطال أجهزة سامسونج (Samsung)</h1>
+          </div>
+          <p class="hero-description">
+            المرجع الفني المتكامل لتشخيص وإصلاح أجهزة سامسونج المنزلية. نوفر لك
+            تحليلاً شاملاً لأعطال الثلاجات الإنفرتر، الديب فريزر الديجيتال،
+            غسالات الإيكوبابل (EcoBubble)، وتكييفات سامسونج، مع الدليل الفني
+            للخطوات الميكانيكية والكهربائية.
+          </p>
+          <div class="hero-actions">
+            <a href="tel:19580" class="btn btn-primary">📞 الخط الساخن 19580</a>
+            <a
+              href="https://wa.me/201289966660"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+              >💬 استشارة مهندس صيانة</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3 Hotlines Contact Bar -->
+    <section class="hotlines-section">
+      <div class="container">
+        <h2 class="section-title text-center">
+          ☎️ أرقام الخط الساخن والدعم الفني المباشر
+        </h2>
+        <p class="section-subtitle text-center">
+          للحصول على خدمة الصيانة السريعة وطلب قطع الغيار الأصلية لأجهزة سامسونج
+        </p>
+        <div class="hotlines-grid">
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>19580</h3>
+            <p>الخط الساخن الرئيسي لصيانة الأجهزة</p>
+            <a href="tel:19580" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>17718</h3>
+            <p>مركز بلاغات الأعطال السريعة</p>
+            <a href="tel:17718" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>15607</h3>
+            <p>الدعم الفني واستفسارات الماركة</p>
+            <a href="tel:15607" class="hotline-btn">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container brand-page-master">
+      <!-- 1. الشرح التكنيكي الممتد لأنظمة سامسونج -->
+      <section class="brand-overview-card">
+        <div class="overview-header">
+          <h2>
+            1. التكنيك الفني وبنية الدوائر الإلكترونية والميكانيكية لأجهزة
+            سامسونج
+          </h2>
+        </div>
+        <div class="overview-body">
+          <p>
+            تتميز أجهزة <strong>سامسونج (Samsung)</strong> بالتكنولوجيا
+            الإلكترونية المتقدمة واعتمادها الشامل على محركات ومكابس Digital
+            Inverter لرفع كفاءة الطاقة وتقليل الضوضاء. تعتمد ثلاجات وديب فريزر
+            سامسونج الحديثة على نظام التبريد المزدوج المستقل (Twin Cooling Plus)
+            لمنع اختلاط الروائح والحفاظ على الرطوبة المثالية، مدعومة بكارتات
+            تشغيل ذكية تتحكم بجميع العمليات بدقة عالية.
+          </p>
+
+          <h3>أولاً: منظومة التبريد والديفروست في ثلاجات وديب فريزر سامسونج</h3>
+          <p>
+            تتكون الدائرة الكهربائية للنوفروست في سامسونج من عدة مكونات
+            إلكترونية دقيقة تعمل بالتناغم لتوفير درجة حرارة مستقرة بدون تراكم
+            ثلج على مبخر الجهاز (Evaporator Coil):
+          </p>
+          <div class="tech-features-grid">
+            <div class="tech-item">
+              <h4>حساسات الحرارة (NTC Sensors)</h4>
+              <p>
+                تستخدم سامسونج حساسات قياسية ذات مقاومة تبلغ
+                <strong>5KΩ عند 25°C</strong>. تقوم بإرسال إشارات مستمرة لكارتة
+                التحكم لضبط سرعة المكبس ومروحة التبريد.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>سخانات التذويب (Defrost Heaters)</h4>
+              <p>
+                تشتمل على سخان المزدوج وسخان الأرضية المخصص لمنع انسداد فتحة
+                الصرف، مع معايرة لمقاومة السخان تتراوح بين
+                <strong>180Ω إلى 350Ω</strong> حسب حجم الكابينة.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>وسائل الحماية الحرارية (Thermal Fuse & Bi-metal)</h4>
+              <p>
+                يحتوي النظام على ثرموفيووز حماية قطع فعلي (Thermal Fuse) يقطع
+                الدائرة كهربائياً عند تجاوز الحرارة حد الأمان لمنع انصهار أجزاء
+                البلاستيك الداخلي.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>دامبر توزيع الهواء الإلكتروني (Electronic Damper)</h4>
+              <p>
+                بوابة إلكترونية محركة بموتور خطوي (Stepper Motor) تتحكم في
+                الكمية الدقيقة للهواء البارد المنساب لكابينة الثلاجة للحفاظ على
+                درجة الحرارة المضبوطة.
+              </p>
+            </div>
+          </div>
+
+          <h3>ثانياً: غسالات وبوتاجازات سامسونج</h3>
+          <p>
+            تعتمد غسالات سامسونج الأوتوماتيك والإنفرتر على تقنيات EcoBubble
+            للغسيل بالفقاعات ونظام VRT Plus لتقليل الاهتزاز وضوضاء الدوران، مع
+            كارتات التحكم المعقدة التي تفحص الأحمال ذكياً. بينما تتميز بوتاجازات
+            ومسطحات سامسونج بنظام الأمان الكامل ومستشعرات حرارية لإغلاق الغاز
+            تلقائياً في حال انطفاء الشعلة.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. خطوات التست مود واختبار المكونات -->
+      <section class="test-mode-card">
+        <h3>⚙️ كيفية عمل إعادة ضبط (Reset) واختبار ديب فريزر وثلاجة سامسونج</h3>
+        <p>
+          عند حدوث تعليق في الشاشة أو ظهور رموز خطأ نتيجة انقطاع التيار
+          الكهربائي المتكرر، يُنصح بتنفيذ خطوات Reset واختبار النظام كالآتي:
+        </p>
+        <ol class="steps-list">
+          <li>
+            افصل الفيشة الرئيسية للجهاز عن المقبس الكهربائي لمدة لا تقل عن
+            <strong>15 إلى 20 دقيقة</strong> لتفريغ مكثفات الكارتة تماماً.
+          </li>
+          <li>
+            في ثلاجات وديب فريزر سامسونج الديجيتال: اضغط مع الاستمرار على زري
+            <strong>Power Freeze + Vacation</strong> (أو Fridge + Freezer حسب
+            الشاشة) معاً لمدة <strong>8 إلى 10 ثوانٍ</strong>.
+          </li>
+          <li>
+            استمر بالضغط حتى تبدأ الشاشة في الوميض وتصدر صوت صفارة طويلة (Beep)
+            لبدء التست الذاتي لجميع القطع والحساسات.
+          </li>
+          <li>
+            ستظهر درجة الحرارة الافتراضية للضبط (عادة -18°C للفريزر و3°C
+            للثلاجة). إذا اختفت الأكواد فيعني ذلك أن العطل كان مجرد قراءة خاطئة،
+            أما إذا عادت للظهور فالسبب قطعة تالفة.
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. جدول أكواد الأعطال الشامل -->
+      <section class="detailed-errors-section">
+        <h3>📋 الكتالوج المطور لأكواد أعطال سامسونج (Samsung Error Codes)</h3>
+        <p class="section-desc">
+          يمكنك استخدام صندوق البحث المباشر لتصفية الكود المطلوب بسرعة:
+        </p>
+        <div class="search-filter-box">
+          <input
+            type="text"
+            id="errorSearchInput"
+            placeholder="🔍 ابحث عن الكود أو العطل (مثال: 4C، 5E، غسالة)..."
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="master-table" id="samsungErrorsTable">
+            <thead>
+              <tr>
+                <th>كود العطل</th>
+                <th>الجهاز</th>
+                <th>السبب الفني المباشر</th>
+                <th>طريقة الفحص والحل التكنيكي</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-badge">4E / 4C</code></td>
+                <td>غسالات / أطباق</td>
+                <td>انسداد أو ضعف في دخول المياه للجهاز</td>
+                <td>
+                  افحص صنبور المياه، ونظف فلاتر صمام دخول المياه، وتأكد من ضغط
+                  المياه بالخرطوم.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">5E / 5C</code></td>
+                <td>غسالات ملابس</td>
+                <td>عطل في تصريف المياه (Drain Error)</td>
+                <td>
+                  قم بتنظيف فلتر المضخة السفلي وتأكد من عدم وجود انسداد أو
+                  انثناء بخرطوم الصرف.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">UE / UB</code></td>
+                <td>غسالات ملابس</td>
+                <td>عدم اتزان الحمولة داخل الحلة (Unbalanced)</td>
+                <td>
+                  أعد توزيع الغسيل يدويًا داخل الحلة وافحص استواء قواعد الغسالة
+                  الميكانيكية على الأرض.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">dE / dC</code></td>
+                <td>غسالات ملابس</td>
+                <td>مشكلة في إغلاق الباب أو لوك الباب الإلكتروني</td>
+                <td>
+                  تأكد من غلق الباب جيداً وافحص لوك الباب (Door Lock) وتوصيلاته
+                  الكهربائية للكارتة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">1E / 1C</code></td>
+                <td>غسالات / ثلاجات</td>
+                <td>عطل في حساس الضغط / مستوى المياه (Pressure Switch)</td>
+                <td>
+                  افحص حساس المياه والأنبوب المطاطي الموصول به أو حساس هواء
+                  الفريزر بالثلاجة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">22E / 22C</code></td>
+                <td>ثلاجات سامسونج</td>
+                <td>مشكلة في مروحة الفريزر أو ديفروست الكابينة</td>
+                <td>
+                  افحص محرك مروحة المبخر وسخان إذابة الثلج وحساس الديفروست.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">LE / LC</code></td>
+                <td>غسالات / ثلاجات</td>
+                <td>تسريب مياه في القاعدة السفلية للجهاز</td>
+                <td>
+                  افحص الخراطيم الداخلية والجوانات لمنع التسريب الذي يفعل حساس
+                  الأمان السفلي.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">3E / 3C</code></td>
+                <td>غسالات أوتوماتيك</td>
+                <td>خلل في محرك الغسالة أو تاكو الموتور (Tacho)</td>
+                <td>
+                  قياس ملفات المحرك، وافحص حساس السرعة (Tacho) وتوصيلات كارتة
+                  الإنفرتر.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">OE / OF</code></td>
+                <td>غسالة ملابس</td>
+                <td>ارتفاع مستوى المياه فوق المسموح (Overflow)</td>
+                <td>
+                  فحص صمام دخول المياه للتأكد من عدم تسريبه وتنظيف حساس مستوى
+                  المياه.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">AP</code></td>
+                <td>أجهزة سامسونج الذكية</td>
+                <td>الجهاز في وضع الربط بـ Wi-Fi SmartThings</td>
+                <td>
+                  هذا ليس عطلاً، يشير للجاهزية للربط بالتطبيق الذكي عبر الهاتف.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. أعطال شائعة وتصرفات ميكانيكية بدون أكواد -->
+      <section class="symptoms-section">
+        <h3>🔍 الأعطال الميكانيكية الشائعة وكيفية تشخيصها خطوة بخطوة</h3>
+        <div class="symptoms-grid">
+          <div class="symptom-box">
+            <h4>1. الفريزر يبرد بشكل ممتاز والتبريد في الثلاجة السفلى معدوم</h4>
+            <p>
+              <strong>السبب الفني:</strong> الانسداد الكلي لمجرى درين الصرف
+              (Drain Hole) وتراكم الثلج على كويل المبخر الداخلي مما يحجب حركة
+              مروحة التبريد.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> فصل الجهاز 24 ساعة، سكب ماء ساخن في
+              فتحة الصرف الداخلية حتى ينساب الماء بحرية في طبق التبخير فوق
+              الضاغط، واختبار سخان الديفروست.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>
+              2. الموتور يفتك ويكرر صوت تكتكة (Overload Tripping) ولا يعمل
+            </h4>
+            <p>
+              <strong>السبب الفني:</strong> انخفاض الجهد الكهربائي، أو تلف كارتة
+              Inverter Driver المباشرة، أو وجود قفل ميكانيكي بداخل ضاغط
+              الإنفرتر.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> قياس الجهد الكهربائي الصادر، واختبار
+              إشارات كارتة الإنفرتر والتأكد من سلامة ملفات المكبس باستخدام
+              الملتيميتر.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>3. تسريب مياه داخل الكابينة السفلى تحت أدراج الخضروات</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد خرطوم الصرف الخلفي بالطحالب
+              أو الأوساخ المترسبة من الثلج المذاب أثناء دورة التذويب.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تسليك فتحة الصرف الخلفية بسلك مفرغ
+              دقيق وغسلها بالماء الدافيء مع السائل المنظف لضمان الانسيابية.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>4. تكثف مياه وثقوب ثلج على جوان الباب المطاطي</h4>
+            <p>
+              <strong>السبب الفني:</strong> تلف أو تشوه جوان الباب المغناطيسي
+              مما يسبب تسريب الهواء الساخن الخارجي إلى الداخل وتكثفه.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تسخين الجوان بماء ساخن أو سيشوار
+              لإعادة مرونة الإطار المطاطي، أو استبدال الجوان بإطار أصلي أحكام
+              الغلق.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. نصائح وتوجيهات الحفاظ على أجهزة سامسونج -->
+      <section class="tips-card">
+        <h3>💡 نصائح وإرشادات وقائية لتمديد عمر أجهزة سامسونج</h3>
+        <ul class="styled-list">
+          <li>
+            <strong>ترك مسافات تهوية:</strong> احرص على ترك مسافة لا تقل عن
+            10-15 سم بين ظهر الثلاجة والجدار لضمان التبادل الحراري الجيد لشبكة
+            المكثف.
+          </li>
+          <li>
+            <strong>عدم التحميل الفوري بعد النقل:</strong> عند نقل الثلاجة أو
+            الديب فريزر، اترك الجهاز ساعتين على الأقل قبل التوصيل بالكهرباء
+            ليستقر الزيت بداخل المكبس.
+          </li>
+          <li>
+            <strong>التنظيف الدوري للدرين:</strong> سكب كأس ماء دافئ في فتحة
+            الصرف كل 6 أشهر يمنع تكوّن الروائح الكريهة وانسداد المجاري.
+          </li>
+          <li>
+            <strong>استخدام مثبت الفولتية (Stabilizer):</strong> لحماية كارتات
+            الإنفرتر واللوحات الإلكترونية الحساسة من التذبذب المفاجئ في التيار
+            الكهربائي.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. الأسئلة الشائعة SEO FAQ -->
+      <section class="faq-section">
+        <h3>❓ الأسئلة الأكثر تكراراً عن صيانة أجهزة سامسونج</h3>
+        <details class="faq-item">
+          <summary>
+            ما هي أرقام الخط الساخن المعتمدة لصيانة أجهزة سامسونج؟
+          </summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك التواصل مع الدعم الفني لخدمة سامسونج عبر الأرقام المختصرة
+              التالية: <strong>19580</strong> - <strong>17718</strong> -
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            ما هي قيمة مقاومة حساسات (NTC) لثلاجات وديب فريزر سامسونج؟
+          </summary>
+          <div class="faq-answer">
+            <p>
+              القيمة القياسية لحساسات سامسونج الأصلية هي
+              <strong>5 كيلو أوم (5KΩ)</strong> عند درجة حرارة 25 مئوية.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>لماذا تضيء لمبة أو يظهر رمز Alarm في شاشة سامسونج؟</summary>
+          <div class="faq-answer">
+            <p>
+              تعني إشارة التنبيه أن درجة الحرارة الداخلية ارتفعت عن المعدل
+              المسموح. يحدث هذا عند ترك الباب مفتوحاً، وضع أطعمة ساخنة، أو وجود
+              عطل في دورة التبريد والديفروست.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>كيف يمكنني حجز ميعاد صيانة منزلية لسامسونج؟</summary>
+          <div class="faq-answer">
+            <p>
+              من خلال الاتصال بـ Hotlines الموضحة أعلى الصفحة، وتزويدهم بموديل
+              الجهاز والتفاصيل الموجودة في استيكر البيانات الخلفي.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="cta-box samsung-cta">
+        <h3>هل تحتاج لمساعدة متخصصة في صيانة سامسونج؟</h3>
+        <p>
+          فريقنا متواجد لتوفير قطع الغيار الأصلية وإرسال الفنيين المعتمدين فوراً
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:19580" class="btn btn-light"
+            >اتصل الآن بالخط الساخن 19580</a
+          >
+          <a
+            href="https://wa.me/201289966660"
+            class="btn btn-whatsapp-light"
+            target="_blank"
+            rel="noopener"
+            >تواصل واتساب</a
+          >
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -48,3 +48,41 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+function switchLegalTab(evt, tabId) {
+  const container = evt.currentTarget.closest(".legal-section");
+
+  // Toggle active tab buttons
+  const buttons = container.querySelectorAll(".legal-tab-btn");
+  buttons.forEach((btn) => btn.classList.remove("active"));
+  evt.currentTarget.classList.add("active");
+
+  // Toggle tab content visibility
+  const contents = container.querySelectorAll(".legal-tab-content");
+  contents.forEach((content) => content.classList.remove("active"));
+  container.querySelector("#" + tabId).classList.add("active");
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".seo-container .legal-tab-btn");
+  const tabContents = document.querySelectorAll(
+    ".seo-container .legal-tab-content",
+  );
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const targetTabId = e.currentTarget.getAttribute("data-tab");
+
+      // Remove active class from all buttons
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Hide all tab contents
+      tabContents.forEach((content) => content.classList.remove("active"));
+
+      // Activate current button and matching tab content
+      e.currentTarget.classList.add("active");
+      const targetContent = document.getElementById(targetTabId);
+      if (targetContent) {
+        targetContent.classList.add("active");
+      }
+    });
+  });
+});
