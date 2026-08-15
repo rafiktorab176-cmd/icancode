@@ -38,76 +38,50 @@ button {
 }
 
 /* ==========================================================================
-   2. Navbar Container
+   2. Navbar Structure & Sticky Scroll
    ========================================================================== */
 /* ==========================================================================
-   1. Navbar Structure & Sticky Scroll
+   Navbar Base Styles
    ========================================================================== */
 .navbar {
+  position: relative;
   background-color: #ffffff;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  left: 0;
+  border-bottom: 1px solid #e2e8f0;
   width: 100%;
-  z-index: 1000; /* رفع z-index لضمان ظهوره فوق كل عناصر الصفحة */
+  z-index: 1000;
 }
 
 .nav-container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 24px;
+  padding: 12px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* ==========================================================================
-   3. Logo Styling
-   ========================================================================== */
 .logo-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2px;
-  transition: transform 0.3s ease;
+  gap: 10px;
   text-decoration: none;
-}
-
-.logo-container:hover {
-  transform: translateY(-2px);
+  color: #1e3a8a;
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
-  color: #1e3a8a;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.logo-container:hover .logo-icon {
+  width: 36px;
+  height: 36px;
   color: #2563eb;
-  transform: scale(1.08);
 }
 
 .logo-text {
-  font-size: 1.45rem;
-  font-weight: 900;
+  font-size: 1.35rem;
+  font-weight: 800;
   color: #1e3a8a;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-}
-
-.logo-container:hover .logo-text {
-  color: #2563eb;
 }
 
 /* ==========================================================================
-   4. Desktop Links & Hover
+   Desktop Links & Dropdown
    ========================================================================== */
 .nav-links {
   display: flex;
@@ -115,7 +89,6 @@ button {
   gap: 28px;
   font-weight: 700;
   font-size: 1.05rem;
-  color: #1e293b;
 }
 
 .nav-link {
@@ -146,9 +119,6 @@ button {
   width: 100%;
 }
 
-/* ==========================================================================
-   5. Dropdown Menu
-   ========================================================================== */
 .dropdown {
   position: relative;
   padding: 10px 0;
@@ -166,7 +136,6 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: color 0.25s ease;
 }
 
 .dropdown-btn::after {
@@ -204,7 +173,7 @@ button {
   top: 100%;
   right: 0;
   width: 230px;
-  background-color: #ffffff; /* تم تحسين لون خلفية القائمة لمظهر أنظف */
+  background-color: #ffffff;
   box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   padding: 10px;
@@ -239,9 +208,6 @@ button {
   transform: translateX(-4px);
 }
 
-/* ==========================================================================
-   6. Hotline Button
-   ========================================================================== */
 .btn-hotline {
   display: inline-block;
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
@@ -258,11 +224,10 @@ button {
 .btn-hotline:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
-  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
 }
 
 /* ==========================================================================
-   7. Mobile Menu & Animated Hamburger Button
+   Mobile Menu & Controls
    ========================================================================== */
 .hamburger-btn {
   display: none;
@@ -272,36 +237,20 @@ button {
   gap: 5px;
   width: 40px;
   height: 40px;
-  padding: 6px;
   background: transparent;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: background-color 0.2s ease;
 }
 
-/* الشرائط الـ 3 */
 .hamburger-btn .bar {
   width: 26px;
   height: 3px;
   background-color: #1e293b;
   border-radius: 3px;
-  transition: all 0.35s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: all 0.3s ease;
 }
 
-.hamburger-btn:hover,
-.hamburger-btn:active {
-  background-color: #eff6ff;
-}
-
-.hamburger-btn:hover .bar,
-.hamburger-btn:active .bar {
-  background-color: #2563eb;
-}
-
-/* أنيميشن التحول إلى X عند الضغط (كلاس active) */
 .hamburger-btn.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
   background-color: #2563eb;
@@ -309,7 +258,6 @@ button {
 
 .hamburger-btn.active .bar:nth-child(2) {
   opacity: 0;
-  transform: scale(0);
 }
 
 .hamburger-btn.active .bar:nth-child(3) {
@@ -317,19 +265,19 @@ button {
   background-color: #2563eb;
 }
 
-/* قائمة الموبايل */
+/* قائمة الموبايل الأساسية */
 .mobile-menu {
-  display: flex;
+  display: none; /* إخفاء حتمي افتراضياً */
   flex-direction: column;
   background-color: #ffffff;
   border-top: 1px solid #f1f5f9;
   padding: 14px 20px 20px;
   font-weight: 700;
   font-size: 1rem;
-  color: #1e293b;
-  max-height: 80vh; /* تسمح بالسكرول الداخلي إذا كانت القائمة أطول من الشاشة */
-  overflow-y: auto;
-  transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  display: flex !important; /* إظهار القائمة الرئيسية */
 }
 
 .mobile-link {
@@ -338,13 +286,6 @@ button {
   border-radius: 8px;
   color: #1e293b;
   text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.mobile-link:hover {
-  background-color: #eff6ff;
-  color: #2563eb;
-  padding-right: 18px;
 }
 
 .mobile-dropdown-btn {
@@ -361,15 +302,11 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.mobile-dropdown-btn:hover {
-  background-color: #eff6ff;
-  color: #2563eb;
-}
-
+/* القائمة الفرعية المنسدلة في الموبايل */
 .mobile-dropdown-menu {
+  display: none; /* مخفية افتراضياً */
   padding-right: 12px;
   background-color: #f8fafc;
   border-radius: 8px;
@@ -378,20 +315,16 @@ button {
   margin: 6px 0;
 }
 
+.mobile-dropdown-menu.active {
+  display: block !important; /* إظهار قائمة خدماتنا عند الضغط */
+}
+
 .mobile-sublink {
   display: block;
   padding: 8px 12px;
   font-size: 0.9rem;
   color: #475569;
   text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.mobile-sublink:hover {
-  background-color: #e2e8f0;
-  color: #1e3a8a;
-  padding-right: 16px;
 }
 
 .btn-hotline-mobile {
@@ -402,20 +335,12 @@ button {
   padding: 12px 16px;
   border-radius: 10px;
   font-weight: 800;
-  font-size: 1rem;
   margin-top: 14px;
   text-decoration: none;
 }
 
-/* ==========================================================================
-   8. Utilities & Responsiveness
-   ========================================================================== */
-.hidden {
-  display: none !important;
-}
-
 .rotate-180 {
-  transform: rotate(180deg);
+  transform: rotate(180deg) !important;
 }
 
 @media (max-width: 768px) {
@@ -424,16 +349,7 @@ button {
   }
 
   .hamburger-btn {
-    display: flex; /* إظهار زر الهامبرجر بصورة flex لضبط محاذاة الخطوط */
-  }
-
-  .logo-text {
-    font-size: 1.25rem;
-  }
-
-  .logo-icon {
-    width: 32px;
-    height: 32px;
+    display: flex !important;
   }
 }
 /* ==========================================================================

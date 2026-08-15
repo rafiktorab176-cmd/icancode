@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      "المركز المعتمد لصيانة الثلاجات - الغسالات - الديب فريزر - غسالات الأطباق
-      في مصر - ارقام الخدمه 19580 - 17718 -15607"
+      المركز المعتمد لصيانة الثلاجات - الغسالات - الديب فريزر - غسالات الأطباق
+      في مصر - ارقام الخدمه 19580 - 17718 -15607
     </title>
 
     <!-- خط Cairo من Google Fonts -->
@@ -33,12 +33,11 @@
           <span class="logo-text">المركز المعتمد للصيانة</span>
         </a>
 
-        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <!-- روابط Desktop -->
         <div class="nav-links desktop-only">
           <a href="index.html" class="nav-link">الرئيسية</a>
           <a href="./about/" class="nav-link">من نحن</a>
 
-          <!-- قائمة خدماتنا المنسدلة -->
           <div class="dropdown">
             <button type="button" class="dropdown-btn">
               <span>خدماتنا</span>
@@ -57,7 +56,6 @@
               </svg>
             </button>
 
-            <!-- القائمة الفرعية -->
             <div class="dropdown-menu">
               <a href="./fridge-repair/" class="dropdown-item">صيانة ثلاجات</a>
               <a href="./washing-repair/" class="dropdown-item">صيانة غسالات</a>
@@ -79,14 +77,16 @@
           <a href="./contact/" class="nav-link">اتصل بنا</a>
         </div>
 
-        <!-- الخط الساخن (Desktop) -->
+        <!-- الخط الساخن Desktop -->
         <div class="desktop-only">
           <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
         </div>
 
+        <!-- زر الهامبرجر -->
         <button
           type="button"
           class="hamburger-btn"
+          id="mobile-menu-btn"
           aria-label="Toggle Navigation Menu"
         >
           <span class="bar"></span>
@@ -95,8 +95,8 @@
         </button>
       </div>
 
-      <!-- قائمة الموبايل المنسدلة -->
-      <div id="mobile-menu" class="mobile-menu hidden">
+      <!-- قائمة الموبايل -->
+      <div id="mobile-menu" class="mobile-menu">
         <a href="./index.html" class="mobile-link">الرئيسية</a>
         <a href="./about/" class="mobile-link">من نحن</a>
 
@@ -124,7 +124,7 @@
             </svg>
           </button>
 
-          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+          <div id="mobile-dropdown" class="mobile-dropdown-menu">
             <a href="./fridge-repair/" class="mobile-sublink">صيانة ثلاجات</a>
             <a href="./washing-repair/" class="mobile-sublink">صيانة غسالات</a>
             <a href="./deep-freezer-repair/" class="mobile-sublink"
@@ -141,13 +141,12 @@
         </div>
 
         <a href="./faq/" class="mobile-link">الأسئلة الشائعة</a>
-        <a href="./Blog/" class="mobile-link">المدونة</a>
+        <a href="./blog/" class="mobile-link">المدونة</a>
         <a href="./contact/" class="mobile-link">اتصل بنا</a>
         <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
       </div>
     </nav>
     <!-- Navbar End -->
-
     <!-- Floating Sticky Actions (Hotlines + WhatsApp) -->
     <div class="floating-contact-bar">
       <!-- الخط الساخن 1 -->
