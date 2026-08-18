@@ -40,38 +40,140 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
-/**
- * دالة التبويبات (Legal Tabs)
- * @param {Event} evt - الحدث الخاص بالنقر
- * @param {string} tabId - معرف محتوى التبويب المطلوب تفعيله
- */
-function switchLegalTab(evt, tabId) {
-  if (!evt || !tabId) return;
 
-  const currentBtn = evt.currentTarget;
-  const container = currentBtn.closest(".legal-section");
-  if (!container) return;
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".legal-tab-btn");
 
-  // إلغاء تفعيل جميع الأزرار داخل الحاوية وتفعيل الزر الحالي
-  const buttons = container.querySelectorAll(".legal-tab-btn");
-  buttons.forEach((btn) => {
-    btn.classList.remove("active");
-    btn.setAttribute("aria-selected", "false");
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      const tabId = this.getAttribute("data-tab");
+      const container = this.closest(".legal-section");
+
+      if (!container || !tabId) return;
+
+      // 1. إلغاء تفعيل جميع الأزرار
+      const buttons = container.querySelectorAll(".legal-tab-btn");
+      buttons.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+
+      // 2. تفعيل الزر الحالي
+      this.classList.add("active");
+      this.setAttribute("aria-selected", "true");
+
+      // 3. إخفاء جميع التبويبات
+      const contents = container.querySelectorAll(".legal-tab-content");
+      contents.forEach((content) => {
+        content.classList.remove("active");
+        content.style.display = "none";
+      });
+
+      // 4. إظهار التبويب المطلوب
+      const targetContent = container.querySelector("#" + tabId);
+      if (targetContent) {
+        targetContent.classList.add("active");
+        targetContent.style.display = "block";
+      }
+    });
   });
+});
+// Dynamic Schema Markup Injection for Homepage
+document.addEventListener("DOMContentLoaded", function () {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://hotline-19580.com/#organization",
+        name: "المركز المعتمد لصيانة الثلاجات الغسالات الديب فريزر غسالات الأطباق في مصر",
+        url: "https://hotline-19580.com/",
+        image: "https://hotline-19580.com/images/og-image.jpg",
+        telephone: ["19580", "17718", "15607"],
+        priceRange: "$$",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "EG",
+          addressLocality: "القاهرة",
+          addressRegion: "جميع المحافظات",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 30.0444,
+          longitude: 31.2357,
+        },
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "00:00",
+          closes: "23:59",
+        },
+        areaServed: [
+          { "@type": "State", name: "القاهرة" },
+          { "@type": "State", name: "الجيزة" },
+          { "@type": "State", name: "الإسكندرية" },
+          { "@type": "State", name: "البحيرة" },
+          { "@type": "State", name: "الغربية" },
+          { "@type": "State", name: "الدقهلية" },
+          { "@type": "State", name: "الشرقية" },
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hotline-19580.com/#website",
+        url: "https://hotline-19580.com/",
+        name: "المركز المعتمد لصيانة الأجهزة المنزلية",
+        inLanguage: "ar",
+      },
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://hotline-19580.com/#services",
+        name: "خدمات صيانة الأجهزة المنزلية",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "صيانة ثلاجات",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "صيانة غسالات ملابس",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "صيانة ديب فريزر",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "صيانة غسالات أطباق",
+            },
+          },
+        ],
+      },
+    ],
+  };
 
-  currentBtn.classList.add("active");
-  currentBtn.setAttribute("aria-selected", "true");
-
-  // إخفاء جميع محتويات التبويبات وإظهار المحتوى المطلوب
-  const contents = container.querySelectorAll(".legal-tab-content");
-  contents.forEach((content) => {
-    content.classList.remove("active");
-    content.hidden = true;
-  });
-
-  const targetContent = container.querySelector("#" + tabId);
-  if (targetContent) {
-    targetContent.classList.add("active");
-    targetContent.hidden = false;
-  }
-}
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.text = JSON.stringify(schemaData);
+  document.head.appendChild(script);
+});

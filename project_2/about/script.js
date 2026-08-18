@@ -22,3 +22,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".legal-tab-btn");
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      const tabId = this.getAttribute("data-tab");
+      const container = this.closest(".legal-section");
+
+      if (!container || !tabId) return;
+
+      // 1. إلغاء تفعيل جميع الأزرار
+      const buttons = container.querySelectorAll(".legal-tab-btn");
+      buttons.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+
+      // 2. تفعيل الزر الحالي
+      this.classList.add("active");
+      this.setAttribute("aria-selected", "true");
+
+      // 3. إخفاء جميع التبويبات
+      const contents = container.querySelectorAll(".legal-tab-content");
+      contents.forEach((content) => {
+        content.classList.remove("active");
+        content.style.display = "none";
+      });
+
+      // 4. إظهار التبويب المطلوب
+      const targetContent = container.querySelector("#" + tabId);
+      if (targetContent) {
+        targetContent.classList.add("active");
+        targetContent.style.display = "block";
+      }
+    });
+  });
+});

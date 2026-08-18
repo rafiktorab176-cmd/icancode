@@ -1817,7 +1817,13 @@ button {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
 }
+.legal-tab-content {
+  display: none;
+}
 
+.legal-tab-content.active {
+  display: block !important;
+}
 .seo-container .legal-tabs-nav {
   display: flex;
   gap: 12px;

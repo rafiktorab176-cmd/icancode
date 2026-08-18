@@ -1,0 +1,36 @@
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # تخزين الصور لمدة سنة
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # تخزين ملفات التنسيق والسكريبتات لمدة سنة
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_expires.C>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    # ... (باقي كواد التخزين المؤقت القديمة بتاعتك سيبها زي ما هي)
+</IfModule>
+
+# === ضيف الكود الجديد هنا في الآخر خالص ===
+RewriteEngine On
+
+# منع ظهور index.html نهائياً في شريط العنوان وتحويل الرابط لـ Slash نظيفة
+RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
+RewriteRule ^(.*?)index\.html$ /$1 [R=301,L,NC]
+
+# إخفاء امتداد .html لأي صفحة لو حد كتبه يدوياً
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]

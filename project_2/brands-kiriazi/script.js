@@ -56,3 +56,119 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".legal-tab-btn");
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      const tabId = this.getAttribute("data-tab");
+      const container = this.closest(".legal-section");
+
+      if (!container || !tabId) return;
+
+      // 1. إلغاء تفعيل جميع الأزرار
+      const buttons = container.querySelectorAll(".legal-tab-btn");
+      buttons.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+
+      // 2. تفعيل الزر الحالي
+      this.classList.add("active");
+      this.setAttribute("aria-selected", "true");
+
+      // 3. إخفاء جميع التبويبات
+      const contents = container.querySelectorAll(".legal-tab-content");
+      contents.forEach((content) => {
+        content.classList.remove("active");
+        content.style.display = "none";
+      });
+
+      // 4. إظهار التبويب المطلوب
+      const targetContent = container.querySelector("#" + tabId);
+      if (targetContent) {
+        targetContent.classList.add("active");
+        targetContent.style.display = "block";
+      }
+    });
+  });
+});
+// Dynamic Schema Injection for Kiriazi Maintenance Page
+document.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname;
+
+  // يتم التفعيل إذا كان رابط الصفحة يحتوي على kiriazi
+  if (path.includes("kiriazi")) {
+    const kiriaziSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://hotline-19580.com/kiriazi/#service",
+          name: "المركز المعتمد لصيانة كريازي في مصر",
+          serviceType: "Appliance Repair Service",
+          brand: {
+            "@type": "Brand",
+            name: "Kiriazi",
+            alternateName: "كريازي",
+          },
+          provider: {
+            "@type": "LocalBusiness",
+            "@id": "https://hotline-19580.com/#organization",
+            name: "المركز المعتمد لصيانة الأجهزة المنزلية",
+            url: "https://hotline-19580.com/",
+            telephone: ["19580", "17718", "15607"],
+            image: "https://hotline-19580.com/images/og-image.jpg",
+            priceRange: "$$",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "EG",
+              addressLocality: "القاهرة",
+              addressRegion: "جميع المحافظات",
+            },
+          },
+          areaServed: [
+            { "@type": "State", name: "القاهرة" },
+            { "@type": "State", name: "الجيزة" },
+            { "@type": "State", name: "الإسكندرية" },
+            { "@type": "State", name: "البحيرة" },
+            { "@type": "State", name: "الغربية" },
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "خدمات صيانة أجهزة كريازي",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "صيانة ثلاجات وديب فريزر كريازي بقطع غيار أصلية",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "إصلاح أعطال غسالات وبوتاجازات كريازي",
+                },
+              },
+            ],
+          },
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hotline-19580.com/kiriazi/#webpage",
+          url: window.location.href,
+          name: "المركز المعتمد لصيانة كريازي | ارقام الخدمة 19580 - 17718 - 15607",
+          inLanguage: "ar",
+        },
+      ],
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(kiriaziSchema);
+    document.head.appendChild(script);
+  }
+});

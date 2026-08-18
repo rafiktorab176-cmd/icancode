@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Hotline-19580.com/sitemap.xml

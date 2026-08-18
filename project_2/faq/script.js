@@ -66,3 +66,104 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".legal-tab-btn");
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      const tabId = this.getAttribute("data-tab");
+      const container = this.closest(".legal-section");
+
+      if (!container || !tabId) return;
+
+      // 1. إلغاء تفعيل جميع الأزرار
+      const buttons = container.querySelectorAll(".legal-tab-btn");
+      buttons.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+
+      // 2. تفعيل الزر الحالي
+      this.classList.add("active");
+      this.setAttribute("aria-selected", "true");
+
+      // 3. إخفاء جميع التبويبات
+      const contents = container.querySelectorAll(".legal-tab-content");
+      contents.forEach((content) => {
+        content.classList.remove("active");
+        content.style.display = "none";
+      });
+
+      // 4. إظهار التبويب المطلوب
+      const targetContent = container.querySelector("#" + tabId);
+      if (targetContent) {
+        targetContent.classList.add("active");
+        targetContent.style.display = "block";
+      }
+    });
+  });
+});
+// Dynamic Schema Injection for FAQ Page
+document.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname;
+
+  // يتم التفعيل إذا كان رابط الصفحة يحتوي على faq أو questions
+  if (path.includes("faq") || path.includes("questions")) {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FAQPage",
+          "@id": "https://hotline-19580.com/faq/#faqpage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "ما هي الخطوط الساخنة المعتمدة لصيانة الأجهزة المنزلية؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "يمكنك التواصل المباشر لحجز مواعيد الصيانة الفورية عبر الأرقام المعتمدة: 19580 أو 17718 أو 15607 على مدار 24 ساعة.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "هل يتم إصلاح الأعطال في المنزل؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "نعم، يتم تقديم خدمات الصيانة والإصلاح الفوري بالمنزل لجميع الأجهزة (ثلاجات، غسالات، ديب فريزر، شاشات) دون الحاجة لنقل الجهاز إلا في الحالات الحرجة.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "هل قطع الغيار المستخدمة أصلية ويكون عليها ضمان؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "جميع قطع الغيار المستخدمة أصلية 100% مع توفير شهادة ضمان معتمدة على الصيانة وقطع الغيار المستبدلة.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "ما هي المحافظات التي تغطيها خدمة الصيانة؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "نغطي جميع المحافظات بما فيها القاهرة، الجيزة، الإسكندرية، البحيرة، الغربية، الدقهلية، والشرقية.",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hotline-19580.com/faq/#webpage",
+          url: window.location.href,
+          name: "المركز المعتمد لصيانة الثلاجات والغسالات والديب فريزر | الاسئلة الشائعة | 19580 - 17718 - 15607",
+          inLanguage: "ar",
+        },
+      ],
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+  }
+});
