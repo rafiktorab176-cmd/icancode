@@ -1,0 +1,1151 @@
+/* ==========================================================================
+   1. General Reset & Base Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+}
+
+/* Container Global Class */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Utilities */
+.bg-light {
+  background-color: #f1f5f9;
+  border-radius: 16px;
+  padding: 40px 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   2. Navbar Styles
+   ========================================================================== */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  color: #1e3a8a;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo-container:hover .logo-icon {
+  color: #2563eb;
+  transform: scale(1.08);
+}
+
+.logo-text {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.logo-container:hover .logo-text {
+  color: #2563eb;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  padding: 10px 0;
+}
+
+.dropdown-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #1e293b;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.dropdown:hover .dropdown-btn {
+  color: #2563eb;
+}
+
+.dropdown:hover .dropdown-btn::after {
+  width: 100%;
+}
+
+.dropdown-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 230px;
+  background-color: #ffffff;
+  box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  transform: translateX(-4px);
+}
+
+/* Navbar Hotline Button */
+.btn-hotline {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-hotline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+}
+
+/* Mobile Navigation Menu Base Styles */
+.hamburger-btn {
+  display: none;
+  color: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+.hamburger-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.mobile-menu {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-top: 1px solid transparent;
+  padding: 0 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+  transition:
+    max-height 0.4s cubic-bezier(0, 1, 0, 1),
+    opacity 0.3s ease,
+    padding 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mobile-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+  padding-right: 18px;
+}
+
+.mobile-dropdown-btn {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown-btn:hover {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.mobile-dropdown-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-right: 12px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  transition:
+    max-height 0.35s ease-in-out,
+    opacity 0.25s ease,
+    padding 0.25s ease,
+    margin 0.25s ease;
+}
+
+.mobile-sublink {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #475569;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.mobile-sublink:hover {
+  background-color: #e2e8f0;
+  color: #1e3a8a;
+  padding-right: 16px;
+}
+
+.btn-hotline-mobile {
+  display: block;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-top: 14px;
+}
+
+/* ==========================================================================
+   3. General Maintenance Page Custom CSS (ممركز ومعدل)
+   ========================================================================== */
+.hero-section {
+  text-align: center;
+  padding: 60px 15px 40px;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.subsection-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.hero-subtitle,
+.section-desc {
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 850px;
+  margin: 0 auto 24px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.hotline-badge-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hotline-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hotline-btn:hover {
+  transform: translateY(-2px);
+  background-color: #1d4ed8;
+}
+
+.hotline-btn.alt {
+  background: #1e3a8a;
+}
+
+.hotline-btn.alt:hover {
+  background-color: #1e293b;
+}
+
+.brands-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.brands-wrapper p {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.brand-tag {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  border: 1px solid #bfdbfe;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.brand-tag:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.city-box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.city-box h4 {
+  color: #1e3a8a;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.city-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.city-box ul li {
+  padding: 6px 0;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+}
+
+.cta-card h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.cta-card p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.hotline-numbers {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hotline-divider {
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   4. Cairo Faults & Maintenance Guide Styles (ممركز ومعدل)
+   ========================================================================== */
+.cairo-guide-section {
+  padding: 50px 15px;
+}
+
+.faults-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.fault-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fault-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.fault-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.fault-card h3 {
+  font-size: 1.25rem;
+  color: #1e3a8a;
+  font-weight: 800;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.fault-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.fault-list li {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.fault-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.mini-call-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background 0.2s ease;
+}
+
+.mini-call-btn:hover {
+  background: #1d4ed8;
+}
+
+.cairo-tips-box {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 14px;
+  padding: 30px 24px;
+  margin-top: 45px;
+}
+
+.cairo-tips-box h3 {
+  color: #0369a1;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tip-num {
+  background: #0284c7;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.tip-item p {
+  font-size: 0.95rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. Responsive Rules & JS Active States (شاشات الموبايل والتابلت)
+   ========================================================================== */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .btn-hotline {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  /* حالة فتح القائمة الرئيسية عبر JS */
+  .mobile-menu.active {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 14px 20px 20px;
+    border-top-color: #f1f5f9;
+    transition:
+      max-height 0.5s ease-in-out,
+      opacity 0.4s ease,
+      padding 0.3s ease;
+  }
+
+  /* حالة فتح القائمة الفرعية عبر JS */
+  .mobile-dropdown-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 6px 0;
+  }
+
+  /* تعديلات الخطوط وأبعاد الصفحة للشاشات الصغيرة */
+  .page-title {
+    font-size: 1.65rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .subsection-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-subtitle,
+  .section-desc {
+    font-size: 0.98rem;
+  }
+
+  .hotline-badge-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hotline-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hotline-numbers {
+    font-size: 1.5rem;
+    gap: 8px;
+  }
+
+  .hotline-divider {
+    display: none;
+  }
+
+  .hotline-num {
+    display: block;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 0;
+    border-radius: 8px;
+  }
+
+  .fault-action {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .mini-call-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ==========================================================================
+   Cairo Mega Section Styles (Responsive & Centered)
+   ========================================================================== */
+.cairo-mega-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.mega-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #000000;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.mega-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mega-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  border-color: #cbd5e1;
+}
+
+.card-badge {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+  text-align: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.mega-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.mega-list li {
+  font-size: 0.92rem;
+  color: #334155;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.mega-list li strong {
+  color: #0f172a;
+}
+
+.area-tag-box {
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #475569;
+  text-align: right;
+}
+
+.area-tag-box span {
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+/* Data Table Styles */
+.mega-table-wrapper {
+  margin-top: 40px;
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+.table-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cairo-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  min-width: 600px;
+}
+
+.cairo-data-table th,
+.cairo-data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.cairo-data-table th {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.cairo-data-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Mobile Responsiveness Rules */
+@media (max-width: 768px) {
+  .cairo-mega-section {
+    padding: 40px 0;
+  }
+
+  .mega-card {
+    padding: 18px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .area-tag-box {
+    text-align: center;
+  }
+
+  .table-title {
+    font-size: 1.1rem;
+  }
+}
+/* ==========================================================================
+   Footer Styles (Matching Navbar Design Language)
+   ========================================================================== */
+.footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding-top: 50px;
+  margin-top: 60px;
+  border-top: 4px solid #2563eb;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+  gap: 32px;
+}
+
+/* Footer Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.footer-logo-icon {
+  width: 36px;
+  height: 36px;
+  color: #3b82f6;
+}
+
+.footer-logo-text {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.footer-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Footer Titles */
+.footer-title {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+}
+
+/* Footer Link Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #60a5fa;
+  transform: translateX(-5px);
+}
+
+/* Hotline Cards */
+.hotline-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-hotline-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-hotline-card:hover {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.card-icon {
+  font-size: 1.2rem;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-number {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.phone-label {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-hotline-card:hover .phone-label {
+  color: #e2e8f0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  background-color: #020617;
+  padding: 18px 24px;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+}
+
+.bottom-container p {
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* منع تحديد وتظليل النصوص في الصفحة بالكامل */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE / Edge */
+  user-select: none; /* Standard */
+}
+
+/* استثناء حقول المدخلات لتسمح للمستخدم بالكتابة داخلها بشكل طبيعي */
+input,
+textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

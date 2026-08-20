@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة زانوسي | ارقام الخدمة 19580 - 17718 - 15607
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../من-نحن/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../صيانة-التلاجات/" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="../صيانة-غسالات-الملابس/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../صيانة-الديب-فريزر/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../صيانة-غسالات-الاطباق/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../صيانة-الشاشات/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../صيانة-الميكرويف/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../الاسئلة-الشائعة/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../تواصل-بنا/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../من-نحن/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../صيانة-التلاجات/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../صيانة-غسالات-الملابس/" class="mobile-sublink"
+              >صيانة غسالات</a
+            >
+            <a href="../صيانة-الديب-فريزر/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../صيانة-غسالات-الاطباق/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../صيانة-الشاشات/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../صيانة-الميكرويف/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../الاسئلة-الشائعة/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../المدونة/" class="mobile-link">المدونة</a>
+        <a href="../تواصل-بنا/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <header class="brand-hero zanussi-theme">
+      <div class="container">
+        <div class="hero-content">
+          <div class="brand-badge">
+            <span class="brand-icon">⚡</span>
+            <h1>
+              دليل صيانة وأكواد أعطال أجهزة زانوسي (Zanussi) يرجي الاتصال بارقام
+              الخط الساخن المباشر 19580 - 17718 - 15607
+            </h1>
+          </div>
+          <p class="hero-description">
+            المرجع الفني الشامل لتشخيص وإصلاح أجهزة زانوسي المنزلية. نوفر
+            تحليلاً هندسياً دقيقاً لأعطال غسالات الملابس زانوسي العبد
+            والنوفروست، ثلاجات زانوسي الإيطالية، وغسالات الأطباق، مع خطوات الفحص
+            الميكانيكي والكهربائي.
+          </p>
+          <div class="hero-actions">
+            <a href="tel:19580" class="btn btn-primary">📞 الخط الساخن 19580</a>
+            <a
+              href="https://wa.me/201289966660"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+              >💬 استشارة مهندس صيانة</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3 Hotlines Contact Bar -->
+    <section class="hotlines-section">
+      <div class="container">
+        <h2 class="section-title text-center">
+          ☎️ أرقام الخط الساخن والدعم الفني المباشر
+        </h2>
+        <p class="section-subtitle text-center">
+          لطلب الصيانة الفورية لغسالات وثلاجات زانوسي والحصول على قطع الغيار
+          الأصلية
+        </p>
+        <div class="hotlines-grid">
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>19580</h3>
+            <p>الخط الساخن الرئيسي لصيانة زانوسي</p>
+            <a href="tel:19580" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>17718</h3>
+            <p>مركز بلاغات الأعطال السريعة</p>
+            <a href="tel:17718" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>15607</h3>
+            <p>الدعم الفني والخدمات المعتمدة</p>
+            <a href="tel:15607" class="hotline-btn">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container brand-page-master">
+      <!-- 1. الشرح التكنيكي الممتد لأنظمة زانوسي -->
+      <section class="brand-overview-card">
+        <div class="overview-header">
+          <h2>
+            1. الهندسة الإلكترونية والأنظمة التبريدية والميكانيكية لأجهزة زانوسي
+          </h2>
+        </div>
+        <div class="overview-body">
+          <p>
+            تعتبر أجهزة <strong>زانوسي (Zanussi)</strong> من أكثر الأجهزة
+            اعتمادية في السوق المصري، وتعتمد إلكترونياتها على منصات كارتات
+            التايمر المتطورة مثل سلسلة (EWM1000 / EWM2000) في الغسالات، إلى جانب
+            كارتات التحكم الرقمية الذكية في الثلاجات للتحكم بجهد المحرك وأجهزة
+            الاستشعار.
+          </p>
+
+          <h3>أولاً: منظومة غسالات الملابس زانوسي (Aquacycle & Performa)</h3>
+          <p>
+            تتميز غسالات زانوسي بنظام الغسيل الذكي وحماية المحرك عن طريق
+            التريبليستر ونظام الحماية من طفح المياه:
+          </p>
+          <div class="tech-features-grid">
+            <div class="tech-item">
+              <h4>حساس منسوب المياه (Analog Pressure Switch)</h4>
+              <p>
+                يعتمد بريستات غسالات زانوسي على تغيير التردد بالهرتز بدلاً من
+                النقاط التلامسية التقليدية لضبط مستوى الماء بدقة متناهية.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>مستشعر التاكو ومحرك التدوير (Tacho Generator)</h4>
+              <p>
+                مولد تاكو مثبت بنهاية المحرك يقيس سرعة الدوران ومقاومته قياسياً
+                تتراوح بين <strong>110Ω إلى 180Ω</strong> لمنع الانفلات والتأكد
+                من اتزان الحلة.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>عنصر التسخين ومستشعر الحرارة (Heater & NTC)</h4>
+              <p>
+                سخان كهروميكانيكي يستهلك حوالي 1800W-2000W مزود بحساس NTC تنخفض
+                مقاومته مع ارتفاع الحرارة (حوالي 20KΩ عند 25°C).
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>قفل الباب الحراري (PTC Door Lock)</h4>
+              <p>
+                مفتاح أمان يتأخر لمدة دقيقتين بعد انتهاء الدورة، ويعمل بإشارة
+                كهربائية متصلة مباشرة مع كارتة التحكم.
+              </p>
+            </div>
+          </div>
+
+          <h3>ثانياً: دوائر التبريد في ثلاجات وديب فريزر زانوسي</h3>
+          <p>
+            تستخدم ثلاجات زانوسي النوفروست دورات تذويب منظمة بمؤقت إلكتروني أو
+            كارتة رئيسية، مع مراوح توزيع ذات كفاءة عالية ودامبر تحكم لمنع تجمد
+            الخضروات الكائنة في الكابينة السفلى.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. خطوات التست مود واختبار المكونات -->
+      <section class="test-mode-card">
+        <h3 style="margin-bottom: 12px">
+          ⚙️ كيفية دخول التست مود (Test Mode) وإعادة الضبط لغسالات وثلاجات
+          زانوسي
+        </h3>
+        <p>
+          يمكن تشخيص كارتة زانوسي وقراءة آخر كود عطل مخزن في الذاكرة عبر الخطوات
+          التالية:
+        </p>
+        <ol class="steps-list">
+          <li>
+            تأكد من إيقاف تشغيل الغسالة/الثلاجة واختيار وضع الإيقاف (OFF).
+          </li>
+          <li>
+            في غسالات زانوسي الديجيتال: اضغط مع الاستمرار على زري
+            <strong
+              >Start/Pause (البدء) + الزر المجاور له (مثل Extra Rinse أو
+              Options)</strong
+            >.
+          </li>
+          <li>
+            قم بأدر بكرة البرامج لفة واحدة باتجاه عقارب الساعة مع الاستمرار
+            بالضغط لمدة 3-5 ثوانٍ حتى تبدأ اللمبات بالوميض المتتالي (Scrolling
+            LED).
+          </li>
+          <li>
+            قم بتدوير البكرة إلى الوضع رقم 10 لقياس وقراءة كود العطل الأخير
+            (Last Error Code) الظاهر على الشاشة.
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. جدول أكواد الأعطال الشامل -->
+      <section class="detailed-errors-section">
+        <h3>📋 دليل أكواد أعطال زانوسي (Zanussi Error Codes)</h3>
+        <p class="section-desc">
+          ابحث عن كود العطل بالأسفل لمعرفة السبب وطريقة الإصلاح الفورية:
+        </p>
+        <div class="search-filter-box">
+          <input
+            type="text"
+            id="errorSearchInput"
+            placeholder="🔍 ابحث عن الكود أو الجهاز (مثال: E10, E20, ثلاجة, طلمبة)..."
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="master-table" id="whitewhaleErrorsTable">
+            <thead>
+              <tr>
+                <th>كود العطل</th>
+                <th>الجهاز</th>
+                <th>السبب الفني المباشر</th>
+                <th>طريقة الفحص والحل التكنيكي</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-badge">E10 / E11</code></td>
+                <td>غسالة ملابس / أطباق</td>
+                <td>بطء أو عدم ورود المياه للغسالة</td>
+                <td>
+                  فحص صنبور المياه، تنظيف الفلتر الخارجي للصمام، وقياس مقاومة
+                  ملف صمام الدخول (Solenoid) حوالي 3.8KΩ.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E20 / E21</code></td>
+                <td>غسالة ملابس / أطباق</td>
+                <td>مشكلة في تصريف وطرود المياه</td>
+                <td>
+                  تنظيف فلتر طلمبة الطرد السفلية، التأكد من عدم انسداد مسار
+                  الخرطوم، وقياس ملف مضخة الصرف.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E40 / E41</code></td>
+                <td>غسالة ملابس</td>
+                <td>عدم إغلاق محكم للباب أو تلف اللوك</td>
+                <td>
+                  اختبار مزلاج الباب، وفحص وصلات القفل الحراري (Door Switch)
+                  واستبداله عند عدم توصيل الإشارة للكارتة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E33 / E35</code></td>
+                <td>غسالة ملابس</td>
+                <td>تعارض في قراءات بريستات المياه (حماية من طفح الماء)</td>
+                <td>
+                  فحص خرطوم البريستات من الانسداد بالصابون، واختبار مفتاح الضغط
+                  الإلكتروني أو استبداله.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E50 / E52</code></td>
+                <td>غسالة ملابس</td>
+                <td>عطل في محرك الغسالة أو مستشعر التاكو (Tacho)</td>
+                <td>
+                  فحص شارب المحرك (Carbons)، قياس أوم التاكو، وفحص خط التراياك
+                  (Triac) بداخل كارتة التحكم.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E60 / E61</code></td>
+                <td>غسالة ملابس</td>
+                <td>ضعف أو عدم تسخين المياه</td>
+                <td>
+                  قياس استمرارية عنصر التسخين (Heater) واختبار مستشعر الحرارة
+                  NTC وتوصيلات ريليه السخان على الكارتة.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">E90 / E91</code></td>
+                <td>جميع الأجهزة</td>
+                <td>
+                  خطأ في الاتصال أو برمجة البروسيسور (Communication Error)
+                </td>
+                <td>
+                  فحص الضفيرة بين الشاشة وكارتة القوة الرئيسية، أو إعادة
+                  برمجة/استبدال كارتة EWM.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">RD / EF</code></td>
+                <td>ثلاجة / ديب فريزر</td>
+                <td>انسداد حركة مروحة الفريزر أو تراكم الثلج</td>
+                <td>
+                  إذابة الثلج المتراكم، فحص دوران المروحة، واختبار حساس التذويب
+                  والسخان.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">f1 / f2</code></td>
+                <td>ثلاجة ديجيتال</td>
+                <td>تلف حساس الفريزر أو الكابينة (Sensors)</td>
+                <td>
+                  قياس مقاومة أوم الحساسات واختبار الثرموديسك والفيوز الحراري.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. أعطال شائعة وتصرفات ميكانيكية بدون أكواد -->
+      <section class="symptoms-section">
+        <h3>🔍 أعطال زانوسي الشائعة بدون رموز أخطاء وطريقة إصلاحها</h3>
+        <div class="symptoms-grid">
+          <div class="symptom-box">
+            <h4>1. الغسالة تهتز بشدة وتتحرك من مكانها أثناء العصر</h4>
+            <p>
+              <strong>السبب الفني:</strong> تاكل المساعدين (Shock Absorbers)، أو
+              تلف بلي الحلة (Bearings)، أو عدم فك مسامير التثبيت خلف الغسالة.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تغيير المساعدين بقطع أصلية، فحص اتزان
+              الحلة الداخلية، واستبدال البلي والسيل في حالة وجود صوت صرير عالٍ.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>2. انبعاث رائحة كريهة وتجمع المياه تحت درج المساحيق</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد الفوانيس الرشاشة داخل درج
+              الرش بالترسبات الكلسية والبكتيريا.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> فك الدرج وتنظيفه بماء دافئ مع الخل،
+              وتسليك رشاشات صمام الدخول بأداة رفيعة.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>3. الثلاجة تعمل بدون توقف وتكون ثلج في الفريزر</h4>
+            <p>
+              <strong>السبب الفني:</strong> عطل في دائرة التذويب (الثرموفيووز أو
+              كارتة التايمر) مما يجعل المكبس يستمر بالعمل.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> قياس الفيوز الحراري والسخان مع اختبار
+              حساس NTC لتأكيد تسليم أمر الفصل للكارتة.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>4. توقف الغسالة في منتصف البرنامج عند مرحلة العصر</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد جزئي في فلتر الطرد يمنع إخلاء
+              الماء بالكامل في الوقت المحدد برمجة.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تنظيف فلتر الطرد الأسفل وتصريف الماء
+              يدواً عبر خرطوم الطوارئ ثم إعادة التشغيل.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. نصائح وتوجيهات الحفاظ على أجهزة زانوسي -->
+      <section class="tips-card">
+        <h3>💡 إرشادات وقائية لتمديد عمر أجهزة زانوسي</h3>
+        <ul class="styled-list">
+          <li>
+            <strong>استخدام مسحوق عالي الكفاءة (Automatic):</strong> تجنب
+            المساحيق العادية لمنع تكون الرغوة الكثيفة التي تتسرب للدوائر
+            الإلكترونية والبريستات.
+          </li>
+          <li>
+            <strong>دورة التنظيف بالخل (Tubb Clean):</strong> تشغيل الغسالة
+            فارغة مع كوب خل ودرجة حرارة 60°C شهرياً لإزالة الكلس ورواسب الصابون.
+          </li>
+          <li>
+            <strong>تنظيف فلتر الطرد دورياً:</strong> قم بفتح الفلتر السفلي كل
+            أسبوعين للتأكد من عدم وجود دبابيس أو عملات معدنية تعيق مضخة الطرد.
+          </li>
+          <li>
+            <strong>ترك باب الغسالة/الثلاجة موارباً:</strong> بعد التهوية
+            والتشغيل للحد من تراكم الفطريات والرائحة الكريهة للجوانات المطاطية.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. الأسئلة الشائعة SEO FAQ -->
+      <section class="faq-section">
+        <h3>❓ الأسئلة الشائعة حول صيانة زانوسي</h3>
+        <details class="faq-item">
+          <summary>ما هي أرقام الخط الساخن المعتمدة لصيانة زانوسي؟</summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك التواصل مباشرة مع الدعم الفني عبر الأرقام التالية:
+              <strong>19580</strong> - <strong>17718</strong> -
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ماذا يعني رمز الخطأ E20 في غسالة زانوسي؟</summary>
+          <div class="faq-answer">
+            <p>
+              يرمز كود E20 إلى وجود مشكلة في تصريف المياه، وغالباً ما يعود
+              لانسداد فلتر الطرد أو تلف مضخة الصرف (Drain Pump).
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>كيف يمكن إعادة ضبط (Reset) لغسالة زانوسي؟</summary>
+          <div class="faq-answer">
+            <p>
+              يتم إطفاء الغسالة، ثم الضغط على زري البدء والخيارات معاً أثناء
+              تدوير البكرة خطوة واحدة والاستمرار حتى تومض الشاشة.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ما سبب تكرار كود E40 في الغسالة؟</summary>
+          <div class="faq-answer">
+            <p>
+              يعني عدم إغلاق الباب بإحكام أو وجود مشكلة في قفل الباب الكهربائي
+              (Door Lock)، ويجب فحص المقبض واللوك.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="cta-box zanussi-cta">
+        <h3>هل تحتاج إلى مساعدة أو صيانة فورية لأجهزة زانوسي؟</h3>
+        <p>
+          فريقنا المعتمد جاهز لتوفير قطع الغيار الأصلية والزيارات المنزلية
+          المباشرة
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:19580" class="btn btn-light"
+            >اتصل الآن بالخط الساخن 19580</a
+          >
+          <a
+            href="https://wa.me/201289966660"
+            class="btn btn-whatsapp-light"
+            target="_blank"
+            rel="noopener"
+            >تواصل واتساب</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- ================= SEO SEARCH KEYWORDS SECTION 1 ================= -->
+    <section class="seo-card seo-keywords-section">
+      <div class="seo-keywords-container">
+        <h2 class="seo-keywords-title">
+          🔑 دليل مفاتيح البحث الشاملة لمراكز الصيانة المعتمدة بمصر
+        </h2>
+        <p class="seo-keywords-intro">
+          ابحث عن رقم الخدمة المباشر حسب نوع الجهاز والماركة لتقديم بلاغات
+          الأعطال فورياً وطلب الصيانة المنزلية بقطع غيار أصلية:
+        </p>
+
+        <!-- Key concepts Grid -->
+        <div class="seo-tags-grid">
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الثلاجات والديب فريزر</h3>
+            <p>
+              أرقام خدمة ثلاجات <strong>19580</strong> | رقم خدمة كريازي
+              <strong>19580</strong> | توكيل ثلاجات توشيبا
+              <strong>17718</strong> | رقم صيانة ثلاجات ال جي
+              <strong>17718</strong> | خدمة عملاء ديب فريزر كريازي
+              <strong>19580</strong> | رقم صيانة ثلاجات زانوسي
+              <strong>19580</strong> | صيانة ديب فريزر توشيبا
+              <strong>17718</strong> | توكيل ثلاجات سامسونج
+              <strong>15607</strong> | رقم صيانة ثلاجات بيكو
+              <strong>15607</strong> | صيانة ثلاجات شارب
+              <strong>15607</strong> | رقم صيانة ثلاجات وايت ويل
+              <strong>17718</strong> | صيانة ديب فريزر ال جي
+              <strong>17718</strong>.
+            </p>
+          </div>
+
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الغسالات وأطباق الملابس</h3>
+            <p>
+              توكيل غسالات وايت ويل <strong>17718</strong> | رقم صيانة غسالات
+              ايديال زانوسي <strong>19580</strong> | خدمة عملاء غسالات سامسونج
+              <strong>15607</strong> | توكيل غسالات أطباق بيكو
+              <strong>15607</strong> | رقم صيانة غسالات ال جي
+              <strong>17718</strong> | صيانة غسالات توشيبا
+              <strong>17718</strong> | رقم خدمة عملاء كريازي غسالات
+              <strong>19580</strong> | صيانة غسالات أطباق ايديال زانوسي
+              <strong>19580</strong> | توكيل غسالات فوق اتوماتيك
+              <strong>17718</strong> | رقم صيانة غسالات شارب
+              <strong>15607</strong> | صيانة غسالات أطباق ال جي
+              <strong>17718</strong>.
+            </p>
+          </div>
+
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الشاشات والميكروويف والتكييفات</h3>
+            <p>
+              رقم صيانة شاشات توشيبا <strong>17718</strong> | توكيل شاشات
+              سامسونج <strong>15607</strong> | خدمة عملاء ميكروويف جاك
+              <strong>17718</strong> | رقم صيانة تكييفات شارب
+              <strong>15607</strong> | خدمة عملاء ميكروويف كينوود
+              <strong>15607</strong> | رقم صيانة شاشات ال جي
+              <strong>17718</strong> | صيانة تكييفات كاريير
+              <strong>19580</strong> | توكيل ميكروويف سامسونج
+              <strong>15607</strong> | صيانة شاشات تورنيدو
+              <strong>17718</strong> | رقم صيانة تكييفات ال جي
+              <strong>17718</strong> | صيانة ميكروويف شارب
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEO HOTLINES & BRAND MATRIX SECTION 2 ================= -->
+    <section class="seo-card seo-matrix-section">
+      <div class="seo-matrix-container">
+        <h2 class="seo-keywords-title">
+          📌 جدول استعلامات الماركات والخطوط الساخنة المباشرة
+        </h2>
+        <p class="seo-keywords-intro">
+          جدول الخدمة المباشرة المتاح على مدار 24 ساعة لجميع المحافظات (القاهرة،
+          الجيزة، الإسكندرية، البحيرة، الغربية، الدقهلية، الشرقية):
+        </p>
+
+        <!-- SEO Optimized Data Table -->
+        <div class="seo-table-wrapper">
+          <table class="seo-data-table">
+            <thead>
+              <tr>
+                <th>خدمة الماركة والتوكيل</th>
+                <th>نوع الجهاز المدعوم</th>
+                <th>رقم اتصل بنا المباشر</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>رقم خدمة كريازي / زانوسي / ايديال</strong></td>
+                <td>أرقام خدمة ثلاجات، غسالات ملابس، ديب فريزر، بوتاجازات</td>
+                <td><a href="tel:19580" class="table-link">19580</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>توكيل غسالات وايت ويل / توشيبا / LG / جاك</strong>
+                </td>
+                <td>غسالات، شاشات، ميكروويف، ثلاجات نوفروست، ديب فريزر</td>
+                <td><a href="tel:17718" class="table-link">17718</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong
+                    >توكيل شارب / سامسونج / بيكو / كينوود / تورنيدو</strong
+                  >
+                </td>
+                <td>تكييفات، غسالات أطباق، شاشات، أجهزة بلت إن، ميكروويف</td>
+                <td><a href="tel:15607" class="table-link">15607</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SEO Search Queries Tags (Expanded Tag Cloud) -->
+        <div class="seo-queries-list">
+          <h4>سحابة كلمات البحث الشائعة للخدمة والمحافظات:</h4>
+          <ul>
+            <li>أرقام خدمة ثلاجات 19580</li>
+            <li>رقم خدمة كريازي 19580</li>
+            <li>توكيل غسالات وايت ويل 17718</li>
+            <li>رقم صيانة غسالات ايديال زانوسي 19580</li>
+            <li>توكيل ثلاجات توشيبا 17718</li>
+            <li>خدمة عملاء غسالات سامسونج 15607</li>
+            <li>رقم صيانة شاشات توشيبا 17718</li>
+            <li>رقم صيانة ثلاجات ال جي 17718</li>
+            <li>رقم صيانة تكييفات شارب 15607</li>
+            <li>خدمة عملاء ديب فريزر كريازي 19580</li>
+            <li>رقم صيانة ثلاجات زانوسي 19580</li>
+            <li>توكيل غسالات أطباق بيكو 15607</li>
+            <li>خدمة عملاء ميكروويف جاك 17718</li>
+            <li>صيانة شاشات سامسونج 15607</li>
+            <li>صيانة ديب فريزر توشيبا 17718</li>
+            <li>رقم صيانة ثلاجات بيكو 15607</li>
+            <li>صيانة غسالات فوق اتوماتيك 17718</li>
+            <li>رقم صيانة اعطال الثلاجات بمصر 19580</li>
+            <li>الخط الساخن للبلاغات والشكاوى وتفعيل الضمان 15607</li>
+            <li>قطع غيار أصلية بالضمان 17718</li>
+            <li>مركز صيانة القاهرة والجيزة 19580</li>
+            <li>رقم صيانة الإسكندرية والبحيرة 17718</li>
+            <li>الخط الساخن للصيانة بالغربية والدقهلية 15607</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- SEO Container Isolation -->
+
+    <div class="seo-container">
+      <!-- ================= LEGAL & PRIVACY TABS SECTION ================= -->
+      <section class="seo-card legal-section">
+        <!-- Navigation Tabs -->
+        <div class="legal-tabs-nav">
+          <button
+            class="legal-tab-btn active"
+            data-tab="privacy-tab"
+            type="button"
+          >
+            🔒 سياسة الخصوصية
+          </button>
+          <button class="legal-tab-btn" data-tab="disclaimer-tab" type="button">
+            ⚠️ إخلاء المسؤولية
+          </button>
+        </div>
+
+        <!-- Tab 1: Privacy Policy -->
+        <div id="privacy-tab" class="legal-tab-content active">
+          <h3 class="legal-title">سياسة الخصوصية وحماية البيانات</h3>
+          <p class="seo-text">
+            نلتزم في موقعنا بحماية خصوصية زوارنا الكرام. نوضح فيما يلي كيفية
+            التعامل مع البيانات عند استخدامك لخدمات الصيانة المتاحة عبر المنصة:
+          </p>
+          <div class="legal-grid">
+            <div class="legal-box">
+              <h4>📋 جمع البيانات</h4>
+              <p>
+                لا نقوم بجمع أي بيانات شخصية أو تخزينها تلقائياً عند تصفحك
+                للموقع، باستثناء ما تقوم بتقديمه طواعية عند التواصل الهاتفي
+                معنا.
+              </p>
+            </div>
+            <div class="legal-box">
+              <h4>📞 استخدام أرقام التواصل</h4>
+              <p>
+                تُستخدم أرقام الهواتف المعروضة (مثل خدمة صيانة ثلاجات كريازي
+                19580 أو غسالات زانوسي 19580) لتوجيهك مباشرة لخدمة الدعم الفني
+                المطلوبة.
+              </p>
+            </div>
+            <div class="legal-box">
+              <h4>🍪 ملفات تعريف الارتباط (Cookies)</h4>
+              <p>
+                قد يستخدم الموقع ملفات تعريف الارتباط لتحسين تجربة المستخدم
+                وتحليل حركة المرور بهدف تحسين أداء صفحات الخدمة.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Disclaimer -->
+        <div id="disclaimer-tab" class="legal-tab-content">
+          <h3 class="legal-title">إخلاء مسؤولية وتوضيح هام</h3>
+          <div class="legal-notice-box">
+            <p>
+              <strong>تنبيه هام للزوار:</strong> هذا الموقع عبارة عن دليل خدمي
+              وتسويقي مستقل يقدم معلومات عن أعطال الأجهزة المنزلية وأرقام مراكز
+              الصيانة المباشرة (مثل خدمات صيانة توشيبا 17718، شارب 15607، وال جي
+              17718).
+            </p>
+          </div>
+          <ul class="legal-list">
+            <li>
+              الموقع ليس العلامة التجارية الأصلية للشركات المشار إليها، وإنما
+              يوفر خدمات صيانة مستقلة بواسطة فنيين ومهندسين متخصصين.
+            </li>
+            <li>
+              جميع الأسماء التجارية والعلامات المسجلة المذكورة في الصفحة (مثل
+              كريازي، توشيبا، زانوسي، ال جي، سامسونج) هي ملك لأصحابها الأصليين
+              وتُذكر هنا لأغراض التعريف بالخدمة فقط.
+            </li>
+            <li>
+              عند إجراء أي عملية صيانة، يتم تسليم العميل فاتورة رسمية وضمان
+              معتمد على قطع الغيار المستبدلة من قِبل المركز المنفذ للخدمة.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= FOOTER START ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <svg
+              class="footer-logo-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+              />
+            </svg>
+            <span class="footer-logo-text">المركز المعتمد للصيانة</span>
+          </a>
+          <p class="footer-desc">
+            المركز الأول المتخصص في صيانة وإصلاح الأجهزة المنزلية بقطع غيار
+            أصلية ومعتمدة وضمان شامل على كافة أعمال الصيانة.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">روابط السريعة</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../من-نحن/">الأسئلة الشائعة</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../تواصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h3 class="footer-title">خدمات الصيانة</h3>
+          <ul class="footer-links">
+            <li><a href="../صيانة-التلاجات/">صيانة ثلاجات</a></li>
+            <li><a href="../صيانة-غسالات-الملابس/">صيانة غسالات</a></li>
+            <li><a href="../صيانة-الديب-فريزر/">صيانة ديب فريزر</a></li>
+            <li><a href="../صيانة-غسالات-الاطباق/">صيانة غسالات أطباق</a></li>
+            <li><a href="../صيانة-الشاشات/">صيانة شاشات</a></li>
+            <li><a href="../صيانة-الميكرويف/">صيانة ميكروويف</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Hotlines -->
+        <div class="footer-col footer-hotlines">
+          <h3 class="footer-title">أرقام الدعم المباشر</h3>
+          <div class="hotline-cards-list">
+            <a href="tel:19580" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">19580</span>
+                <span class="phone-label">الخط الساخن الرئيسي</span>
+              </div>
+            </a>
+
+            <a href="tel:17718" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">17718</span>
+                <span class="phone-label">الدعم الفني المباشر</span>
+              </div>
+            </a>
+
+            <a href="tel:15607" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">15607</span>
+                <span class="phone-label">الشكاوى ومتابعة الضمان</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div class="footer-bottom">
+        <div class="bottom-container">
+          <p>© 2026 المركز المعتمد للصيانة. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= FOOTER END ================= -->
+    <script src="script.js"></script>
+  </body>
+</html>

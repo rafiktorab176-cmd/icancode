@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة الثلاجات والغسالات والديب فريزر | دمياط الجديدة |
+      19580 - 17718 - 15607
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../من-نحن/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../صيانة-التلاجات/" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="../صيانة-غسالات-الملابس/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../صيانة-الديب-فريزر/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../صيانة-غسالات-الاطباق/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../صيانة-الشاشات/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../صيانة-الميكرويف/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../الاسئلة-الشائعة/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../تواصل-بنا/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../من-نحن/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../صيانة-التلاجات/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../صيانة-غسالات-الملابس/" class="mobile-sublink"
+              >صيانة غسالات</a
+            >
+            <a href="../صيانة-الديب-فريزر/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../صيانة-غسالات-الاطباق/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../صيانة-الشاشات/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../صيانة-الميكرويف/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../الاسئلة-الشائعة/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../المدونة/" class="mobile-link">المدونة</a>
+        <a href="../تواصل-بنا/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Content Start -->
+    <main class="main-content">
+      <!-- Hero Banner -->
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="page-title">
+            المركز المعتمد لصيانة الأجهزة المنزلية بدمياط الجديدة أرقام الخدمة
+            19580 - 17718 - 15607
+          </h1>
+          <p class="hero-subtitle">
+            خدمة إصلاح فورية بالمنزل مع ضمان معتمد وقطع غيار أصلية 100% لجميع
+            الأجهزة والماركات العالمية.
+          </p>
+          <div class="hotline-badge-group">
+            <a href="tel:19580" class="hotline-btn">الخط الساخن: 19580</a>
+            <a href="tel:17718" class="hotline-btn alt">الدعم الفني: 17718</a>
+            <a href="tel:15607" class="hotline-btn alt">حجز الصيانة: 15607</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Service Overview -->
+      <section class="content-section container">
+        <h2 class="section-title">
+          خدمات الصيانة الشاملة للأجهزة المنزلية بضمان معتمد
+        </h2>
+        <p class="section-desc">
+          نوفر لك في المركز المعتمد أسرع وأدق خدمات صيانة وإصلاح كافة الأجهزة
+          الكهربائية في المنزل بدون الحاجة لنقل الجهاز. نعتمد على أحدث أجهزة
+          الفحص الكهرومغناطيسي وفنيين مهندسين متخصصين لضمان عودة جهازك للعمل
+          بكفاءة المصنع.
+        </p>
+
+        <!-- الماركات المشمولة -->
+        <div class="brands-wrapper">
+          <h3 class="subsection-title">
+            صيانة كافة الماركات والعلامات التجارية العالمية
+          </h3>
+          <p>
+            يقدم مراكزنا خدمات الصيانة الفورية المعتمدة لكل الماركات الشهيرة،
+            وتتضمن:
+          </p>
+          <div class="brands-grid">
+            <span class="brand-tag">صيانة كريازي (Kiriazi)</span>
+            <span class="brand-tag">صيانة إل جي (LG)</span>
+            <span class="brand-tag">صيانة وايت ويل (White Whale)</span>
+            <span class="brand-tag">صيانة سامسونج (Samsung)</span>
+            <span class="brand-tag">صيانة توشيبا (Toshiba)</span>
+            <span class="brand-tag">صيانة زانوسي (Zanussi)</span>
+            <span class="brand-tag">صيانة إيديال (Ideal)</span>
+            <span class="brand-tag">صيانة بيكو (Beko)</span>
+            <span class="brand-tag">صيانة شارب (Sharp)</span>
+            <span class="brand-tag">صيانة وايت بوينت (White Point)</span>
+            <span class="brand-tag">صيانة أريستون (Ariston)</span>
+            <span class="brand-tag">صيانة اندسيت (Indesit)</span>
+            <span class="brand-tag">صيانة يونيفرسال (Universal)</span>
+            <span class="brand-tag">صيانة فريدجيدير (Frigidaire)</span>
+            <span class="brand-tag">صيانة ميتاج (Maytag)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Coverage Areas -->
+      <section class="content-section bg-light container">
+        <h2 class="section-title">
+          تغطية شاملة لجميع أحياء ومجاورات مدينة دمياط الجديدة
+        </h2>
+        <p class="section-desc">
+          تغطي سيارات الخدمة المجهزة لدينا كافة أحياء ومجاورات دمياط الجديدة
+          لتصلك الصيانة في غضون دقائق معدودة من طلب الخدمة.
+        </p>
+
+        <div class="cities-grid">
+          <div class="city-box">
+            <h4 style="margin-bottom: 0.75rem; color: var(--primary-color)">
+              الأحياء المركزية الأولى
+            </h4>
+            <ul
+              style="
+                font-size: 0.95rem;
+                color: var(--text-muted);
+                line-height: 1.8;
+              "
+            >
+              <li>• الحي الأول (جميع المجاورات)</li>
+              <li>• الحي الثاني والمجمع الطبي</li>
+              <li>• الحي الثالث والمنطقة المركزية</li>
+              <li>• وسط المدينة وعمارات المصالح</li>
+            </ul>
+          </div>
+
+          <div class="city-box">
+            <h4 style="margin-bottom: 0.75rem; color: var(--primary-color)">
+              الأحياء السكنية الغربية والشرقية
+            </h4>
+            <ul
+              style="
+                font-size: 0.95rem;
+                color: var(--text-muted);
+                line-height: 1.8;
+              "
+            >
+              <li>• الحي الرابع والمجاورات التابعة</li>
+              <li>• الحي الخامس والمناطق المتاخمة</li>
+              <li>• حي الشاليهات والمنطقة الساحلية</li>
+              <li>• الحي المتميز والشريط الساحلي</li>
+            </ul>
+          </div>
+
+          <div class="city-box">
+            <h4 style="margin-bottom: 0.75rem; color: var(--primary-color)">
+              المجمعات السكنية الحديثة
+            </h4>
+            <ul
+              style="
+                font-size: 0.95rem;
+                color: var(--text-muted);
+                line-height: 1.8;
+              "
+            >
+              <li>• مشروع دار مصر (المرحلة الأولى والثانية)</li>
+              <li>• مشروع سكن مصر وقرية سوسنة</li>
+              <li>• مشروع جنة دمياط الجديدة</li>
+              <li>• العمارات الاستثمارية والمجتمعات المغلقة</li>
+            </ul>
+          </div>
+
+          <div class="city-box">
+            <h4 style="margin-bottom: 0.75rem; color: var(--primary-color)">
+              الجامعات والمنطقة الصناعية
+            </h4>
+            <ul
+              style="
+                font-size: 0.95rem;
+                color: var(--text-muted);
+                line-height: 1.8;
+              "
+            >
+              <li>• منطقة جامعة دمياط وجامعة حورس</li>
+              <li>• المنطقة الصناعية بالكامل</li>
+              <li>• منطقة الورش والمخازن</li>
+              <li>• امتداد دمياط الجديدة الشرقي والغربي</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Call To Action -->
+      <section class="cta-section container">
+        <div class="cta-card">
+          <h2>هل واجهتك مشكلة أو عطل مفاجئ في جهازك؟</h2>
+          <p>
+            فريق الدعم الفني متواجد على مدار 24 ساعة للرد على استفساراتكم وحجز
+            مواعيد الصيانة الفورية.
+          </p>
+          <div class="hotline-numbers">
+            <span class="hotline-num">19580</span>
+            <span class="hotline-divider">|</span>
+            <span class="hotline-num">17718</span>
+            <span class="hotline-divider">|</span>
+            <span class="hotline-num">15607</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Section: New Damietta Faults & Maintenance Guide -->
+    <section class="content-section container cairo-guide-section">
+      <div class="section-header text-center">
+        <h2 class="section-title">
+          دليل الأعطال الشائعة وصيانة الأجهزة المنزلية بدمياط الجديدة
+        </h2>
+        <p class="section-desc">
+          تعرف على أبرز أعطال الأجهزة الكهربائية المنزلية وكيفية تشخيصها فوراً
+          قبل التواصل مع مهندسي الصيانة المعينين لتغطية أحياء دمياط الجديدة.
+        </p>
+      </div>
+
+      <!-- دليل أعطال الأجهزة -->
+      <div class="faults-grid">
+        <!-- عطل الثلاجات -->
+        <div class="fault-card">
+          <div class="fault-icon">❄️</div>
+          <h3>أعطال الثلاجات والديب فريزر</h3>
+          <ul class="fault-list">
+            <li>
+              <strong>توقف التبريد كلياً:</strong> انسداد في فلاتر الغاز أو عطل
+              بالمكبس (الكومبريسور).
+            </li>
+            <li>
+              <strong>تسريب المياه بالداخل:</strong> انسداد فتحة تصريف دورة
+              الذوبان (Defrost).
+            </li>
+            <li>
+              <strong>تراكم الثلج بكثرة:</strong> تلف في التايمر أو السيرموديسك
+              المسؤول عن إذابة الثلج.
+            </li>
+          </ul>
+          <div class="fault-action">
+            <span>خدمة صيانة الثلاجات بدمياط الجديدة:</span>
+            <a href="tel:19580" class="mini-call-btn">19580</a>
+          </div>
+        </div>
+
+        <!-- عطل الغسالات -->
+        <div class="fault-card">
+          <div class="fault-icon">🧺</div>
+          <h3>أعطال غسالات الملابس والأطباق</h3>
+          <ul class="fault-list">
+            <li>
+              <strong>عدم طرد المياه أو العصر:</strong> انسداد أو تلف بطلمبة
+              الطرد (Drain Pump).
+            </li>
+            <li>
+              <strong>اهتزاز شديد أثناء العصر:</strong> تلف مساعدين الغسالة أو
+              تأكل رولمان البلي.
+            </li>
+            <li>
+              <strong>توقف سحب المياه:</strong> تلف صمام دخول المياه أو انخفاض
+              ضغط المياه بالشبكة.
+            </li>
+          </ul>
+          <div class="fault-action">
+            <span>صيانة غسالات بدار مصر والحي المتميز:</span>
+            <a href="tel:17718" class="mini-call-btn">17718</a>
+          </div>
+        </div>
+
+        <!-- عطل السخانات والبوتاجازات -->
+        <div class="fault-card">
+          <div class="fault-icon">🔥</div>
+          <h3>أعطال البوتاجازات والأفران والسخانات</h3>
+          <ul class="fault-list">
+            <li>
+              <strong>انخفاض شعلة الفرن/البوتاجاز:</strong> انسداد الفونيات بسبب
+              تراكم الزيوت والدهون.
+            </li>
+            <li>
+              <strong>توقف الإشعال الذاتي:</strong> تلف وحدة الإشعال أو مفاتيح
+              التشغيل.
+            </li>
+            <li>
+              <strong>انقطاع تسخين المياه بالسخان:</strong> تلف الهيتر أو
+              الثرموستات المسؤول عن تعديل الحرارة.
+            </li>
+          </ul>
+          <div class="fault-action">
+            <span>الدعم الفني السريع بدمياط الجديدة:</span>
+            <a href="tel:15607" class="mini-call-btn">15607</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- خطوات التعامل الأولية من دليل الصيانة -->
+      <div class="cairo-tips-box">
+        <h3>📌 نصائح دليل الصيانة الأولي لجميع سكان دمياط الجديدة:</h3>
+        <div class="tips-grid">
+          <div class="tip-item">
+            <span class="tip-num">1</span>
+            <p>
+              افصل التيار الكهربائي فوراً عن الجهاز في حال سماع أصوات غريبة أو
+              صدور رائحة احتراق.
+            </p>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">2</span>
+            <p>
+              تأكد من ترك مسافة تهوية كافية (لا تقل عن 15 سم) خلف الثلاجات
+              والمجمدات لحمايتها من الرطوبة والحرارة.
+            </p>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">3</span>
+            <p>
+              لا تحاول العبث بالدوائر الإلكترونية أو كروت التشغيل دون الاستعانة
+              بفني معتمد.
+            </p>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">4</span>
+            <p>
+              تواصل فوراً مع مراكزنا بالحي الأول، الرابع، المتميز ودار مصر
+              لتحديد موعد الكشف المنزلي بقطع الغيار الأصلية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+    New Damietta Detailed Faults & Maintenance Section
+    ========================================================================== -->
+    <section class="cairo-mega-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="mega-header">
+          <span class="badge-tag">دمياط الجديدة</span>
+          <h2 class="section-title">
+            دليل أعطال وصيانة الأجهزة المنزلية بدمياط الجديدة
+          </h2>
+          <p class="section-desc">
+            نقدم تغطية شاملة لجميع أحياء ومناطق مدينة دمياط الجديدة مع دعم فني
+            سريع لحل كافة الأعطال الشائعة والمعقدة بأعلى جودة وأطول فترة ضمان.
+          </p>
+        </div>
+
+        <!-- Mega Grid for Fault Categories -->
+        <div class="mega-grid">
+          <!-- Card 1: Refrigerator Faults -->
+          <div class="mega-card">
+            <div class="card-badge">ثلاجات وفريزر</div>
+            <h3 class="card-title">
+              أعطال الثلاجات والديب فريزر بدمياط الجديدة
+            </h3>
+            <ul class="mega-list">
+              <li>
+                <strong>ضعف أو انعدام التبريد:</strong> انسداد في مواسير
+                النوفروست، تلف التايمر، أو تسريب غاز الفريون.
+              </li>
+              <li>
+                <strong>تراكم الثلج بكثرة:</strong> عطل في هيتر الإذابة (Defrost
+                Heater) أو ثرموستات الحرارة.
+              </li>
+              <li>
+                <strong>تسريب المياه الداخلي:</strong> انسداد خرطوم تصريف المياه
+                خلف الثلاجة.
+              </li>
+              <li>
+                <strong>صوت ضوضاء عالي:</strong> تلف بمروحة المبخر أو تآكل كواتم
+                الصدمات بالموتور (Compressor).
+              </li>
+            </ul>
+            <div class="area-tag-box">
+              <span>مناطق الخدمة السريعة:</span> الحي الأول، الحي الثاني، الحي
+              الثالث، الشاليهات.
+            </div>
+          </div>
+
+          <!-- Card 2: Washing Machine Faults -->
+          <div class="mega-card">
+            <div class="card-badge">غسالات ملابس</div>
+            <h3 class="card-title">صيانة غسالات الملابس الأوتوماتيك</h3>
+            <ul class="mega-list">
+              <li>
+                <strong>عدم طرد المياه أو العصر:</strong> انسداد أو تلف طلمبة
+                الطرد (Drain Pump) أو الفلتر.
+              </li>
+              <li>
+                <strong>اهتزاز وتحرك الغسالة:</strong> تلف مساعدين الغسالة أو
+                تآكل رمان البلي (Bearings).
+              </li>
+              <li>
+                <strong>توقف الحلة عن الدوران:</strong> قطع سير الموتور أو عطل
+                في كارتة التحكم الإلكترونية.
+              </li>
+              <li>
+                <strong>تسريب مياه من الأسفل:</strong> تلف الجلبة الأوتوماتيكية
+                أو ثقب في كاوتش الباب.
+              </li>
+            </ul>
+            <div class="area-tag-box">
+              <span>مناطق الخدمة السريعة:</span> الحي الرابع، الحي الخامس، دار
+              مصر، سكن مصر.
+            </div>
+          </div>
+
+          <!-- Card 3: Air Conditioner Faults -->
+          <div class="mega-card">
+            <div class="card-badge">تكييفات الهواء</div>
+            <h3 class="card-title">أعطال التكييفات وشحن الفريون</h3>
+            <ul class="mega-list">
+              <li>
+                <strong>التكييف لا يبرد (ينفخ هوت دافئ):</strong> نقص شحنة
+                الفريون أو تلف الكوندنسر الخارجي بسبب الرطوبة الساحلية.
+              </li>
+              <li>
+                <strong>تسريب مياه داخل الغرفة:</strong> انسداد حوض وفلتر
+                التصريف الخارجي بالأتربة.
+              </li>
+              <li>
+                <strong>توقف الوحدة الخارجية:</strong> تلف الكباش (Capacitor) أو
+                عطل كارتة التشغيل.
+              </li>
+              <li>
+                <strong>انبعاث روائح كريهة:</strong> تراكم الفطريات والبكتيريا
+                داخل الفلاتر والفلتر بحاجة للغسيل.
+              </li>
+            </ul>
+            <div class="area-tag-box">
+              <span>مناطق الخدمة السريعة:</span> الحي المتميز، كمبوند جنة،
+              المنطقة الصناعية، جامعة حورس.
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Table for Maintenance Services Data -->
+        <div class="mega-table-wrapper">
+          <h3 class="table-title">
+            جدول معدل زمن الاستجابة والخدمات بقطاعات دمياط الجديدة
+          </h3>
+          <div class="table-responsive">
+            <table class="cairo-data-table">
+              <thead>
+                <tr>
+                  <th>القطاع / الحي</th>
+                  <th>نوع الجهاز Covered</th>
+                  <th>متوسط زمن الوصول</th>
+                  <th>طبيعة الصيانة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    الأحياء المركزية (الحي الأول، الثاني، الثالث، الشاليهات)
+                  </td>
+                  <td>جميع الأجهزة المنزلية</td>
+                  <td>خلال 30 دقيقة</td>
+                  <td>صيانة منزلية فورية + قطع غيار أصلية</td>
+                </tr>
+                <tr>
+                  <td>
+                    الأحياء الغربية والشرقية (الحي الرابع، الخامس، المتميز)
+                  </td>
+                  <td>تكييفات، ثلاجات، غسالات</td>
+                  <td>خلال 30 دقيقة</td>
+                  <td>فحص كومبيوتر + شحن فريون بالمنزل</td>
+                </tr>
+                <tr>
+                  <td>المجمعات السكنية (دار مصر، سكن مصر، جنة)</td>
+                  <td>غسالات، سخانات، ثلاجات</td>
+                  <td>خلال 45 دقيقة</td>
+                  <td>تغيير مكونات وتجديد كامل للضفيرة</td>
+                </tr>
+                <tr>
+                  <td>
+                    القطاع الخدمي والصناعي (المنطقة الصناعية، الكليات، الورش)
+                  </td>
+                  <td>جميع الأجهزة الكهروميكانيكية</td>
+                  <td>خلال 45 دقيقة</td>
+                  <td>إصلاح كارتات + صيانة وقائية للمواتير</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER START ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <svg
+              class="footer-logo-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+              />
+            </svg>
+            <span class="footer-logo-text">المركز المعتمد للصيانة</span>
+          </a>
+          <p class="footer-desc">
+            المركز الأول المتخصص في صيانة وإصلاح الأجهزة المنزلية بقطع غيار
+            أصلية ومعتمدة وضمان شامل على كافة أعمال الصيانة.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">روابط السريعة</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../من-نحن/">الأسئلة الشائعة</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../تواصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h3 class="footer-title">خدمات الصيانة</h3>
+          <ul class="footer-links">
+            <li><a href="../صيانة-التلاجات/">صيانة ثلاجات</a></li>
+            <li><a href="../صيانة-غسالات-الملابس/">صيانة غسالات</a></li>
+            <li><a href="../صيانة-الديب-فريزر/">صيانة ديب فريزر</a></li>
+            <li><a href="../صيانة-غسالات-الاطباق/">صيانة غسالات أطباق</a></li>
+            <li><a href="../صيانة-الشاشات/">صيانة شاشات</a></li>
+            <li><a href="../صيانة-الميكرويف/">صيانة ميكروويف</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Hotlines -->
+        <div class="footer-col footer-hotlines">
+          <h3 class="footer-title">أرقام الدعم المباشر</h3>
+          <div class="hotline-cards-list">
+            <a href="tel:19580" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">19580</span>
+                <span class="phone-label">الخط الساخن الرئيسي</span>
+              </div>
+            </a>
+
+            <a href="tel:17718" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">17718</span>
+                <span class="phone-label">الدعم الفني المباشر</span>
+              </div>
+            </a>
+
+            <a href="tel:15607" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">15607</span>
+                <span class="phone-label">الشكاوى ومتابعة الضمان</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div class="footer-bottom">
+        <div class="bottom-container">
+          <p>© 2026 المركز المعتمد للصيانة. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= FOOTER END ================= -->
+    <script src="script.js"></script>
+  </body>
+</html>

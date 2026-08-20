@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة اريستون | ارقام الخدمة 19580 - 17718 - 15607
+    </title>
+
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../من-نحن/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../صيانة-التلاجات/" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="../صيانة-غسالات-الملابس/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../صيانة-الديب-فريزر/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../صيانة-غسالات-الاطباق/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../صيانة-الشاشات/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../صيانة-الميكرويف/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../الاسئلة-الشائعة/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../تواصل-بنا/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../من-نحن/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../صيانة-التلاجات/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../صيانة-غسالات-الملابس/" class="mobile-sublink"
+              >صيانة غسالات</a
+            >
+            <a href="../صيانة-الديب-فريزر/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../صيانة-غسالات-الاطباق/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../صيانة-الشاشات/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../صيانة-الميكرويف/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../الاسئلة-الشائعة/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../المدونة/" class="mobile-link">المدونة</a>
+        <a href="../تواصل-بنا/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <header class="brand-hero ariston-theme">
+      <div class="container">
+        <div class="hero-content">
+          <div class="brand-badge">
+            <span class="brand-icon">🔴</span>
+            <h1>دليل صيانة وأكواد أعطال أجهزة أريستون (Ariston)</h1>
+          </div>
+          <p class="hero-description">
+            المرجع الفني الشامل لتشخيص وإصلاح أجهزة أريستون المنزلية. نوفر
+            تحليلاً هندسياً دقيقاً لأعطال غسالات الملابس، غسالات الأطباق، ثلاجات
+            وبوتوجازات أريستون المعتمدة على تقنيات Digital Inverter وDynamic
+            Intelligence، مع خطوات التست مود والفحص الإلكتروني بدقة وإتقان.
+          </p>
+          <div class="hero-actions">
+            <a href="tel:19580" class="btn btn-primary">📞 الخط الساخن 19580</a>
+            <a
+              href="https://wa.me/201289966660"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+              >💬 استشارة مهندس صيانة</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3 Hotlines Contact Bar -->
+    <section class="hotlines-section">
+      <div class="container">
+        <h2 class="section-title text-center">
+          ☎️ أرقام الخط الساخن والدعم الفني المباشر
+        </h2>
+        <p class="section-subtitle text-center">
+          لطلب الصيانة الفورية لأجهزة أريستون والحصول على قطع الغيار الأصلية
+          المعتمدة
+        </p>
+        <div class="hotlines-grid">
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>19580</h3>
+            <p>الخط الساخن الرئيسي لصيانة أريستون</p>
+            <a href="tel:19580" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>17718</h3>
+            <p>مركز بلاغات الأعطال السريعة</p>
+            <a href="tel:17718" class="hotline-btn">اتصل الآن</a>
+          </div>
+          <div class="hotline-card">
+            <div class="phone-icon">📞</div>
+            <h3>15607</h3>
+            <p>الدعم الفني والخدمات المعتمدة</p>
+            <a href="tel:15607" class="hotline-btn">اتصل الآن</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container brand-page-master">
+      <!-- 1. الشرح التكنيكي الممتد لأنظمة أريستون -->
+      <section class="brand-overview-card">
+        <div class="overview-header">
+          <h2>
+            1. الهندسة الإلكترونية ودواءر التحكم الرقمية لأجهزة أريستون (Ariston
+            Architecture)
+          </h2>
+        </div>
+        <div class="overview-body">
+          <p>
+            تتميز أجهزة <strong>أريستون (Ariston)</strong> الإيطالية بالاعتماد
+            على كارتات تحكم رقمية متطورة تسمى (EVO / Main Board) لتوجيه
+            المحركات، مراقبة اتزان الأحمال، وإدارة دوائر التسخين والتبريد بدقة
+            فائقة عبر بروتوكولات حماية متكاملة.
+          </p>
+
+          <h3>أولاً: تقنيات غسالات الملابس والأطباق من أريستون</h3>
+          <p>
+            تعتمد غسالات أريستون على المحركات الرقمية الخالية من الفحمات
+            وتكنولوجيا الرش الذكي لضمان أعلى كفاءة غسيل وأقل استهلاك للمياه
+            والطاقة:
+          </p>
+          <div class="tech-features-grid">
+            <div class="tech-item">
+              <h4>موتور الرقمي الإنفرتر (Digital Inverter Motor)</h4>
+              <p>
+                محرك يعمل بتقنية تحكم المغناطيس الدائم دون احتكاك ميكانيكي، مما
+                يوفر هدوءاً تاماً وأداءً استثنائياً أثناء الدورات السريعة.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>نظام الرش المركّز (3D Zone Wash)</h4>
+              <p>
+                توجيه تدفق المياه بنسبة 40% إضافية نحو الرف المحدد بداخل غسالة
+                الأطباق لإزالة أكثر الدهون وصعوبة دون إهدار للمياه.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>انعاش الملابس بالبخار (Steam Hygiene & Refresh)</h4>
+              <p>
+                حقن البخار في نهاية الدورة للتطهير بنسبة 99.9% وتليين الألياف
+                وتقليل الحاجة إلى الكوي بشكل ملحوظ.
+              </p>
+            </div>
+            <div class="tech-item">
+              <h4>حساس الاتزان الأوتوماتيكي (Auto Balance System)</h4>
+              <p>
+                مراقبة توزيع الغسيل بداخل الحلة وتعديل سرعة دوران العصر تلقائياً
+                لمنع الاهتزاز والضوضاء الناتجة عن التكتل.
+              </p>
+            </div>
+          </div>
+
+          <h3>ثانياً: تقنيات التبريد من أريستون (Active Oxygen & No Frost)</h3>
+          <p>
+            تستخدم ثلاجات أريستون تقنية الأكسجين النشط (Active Oxygen) لإطلاق
+            جزيئات الأوزون الطبيعية التي تمنع تكون البكتيريا والروائح الكريهة
+            بنسبة تصل إلى 90%، مع نظام تبريد الهواء المتعدد (Air Flow) لضمان
+            توزيع درجات الحرارة بانتظام.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. خطوات التست مود وااختبار المكونات -->
+      <section class="test-mode-card">
+        <h3 style="margin-bottom: 12px">
+          ⚙️ كيفية دخول التست مود (Test Mode) وإعادة الضبط لغسالات أريستون
+        </h3>
+        <p>
+          تتيح كارتات أريستون فحص كافة الأجزاء الكهربائية (الموتور، طلمبة الصرف،
+          السخان، صمام الماء) عبر برنامج التشخيص الذاتي الذاتي:
+        </p>
+        <ol class="steps-list">
+          <li>تأكد من إغلاق باب الغسالة وتفريغ الحلة من الماء والمحتويات.</li>
+          <li>قم بإطفاء الغسالة تماماً من زر التشغيل الرئيسي (Power Off).</li>
+          <li>
+            اضغط مع الاستمرار على زر <strong>Option (الخيارات)</strong> وزر
+            <strong>Start / Pause (بدء / إيقاف مؤقت)</strong> معاً لمدة 3 ثوانٍ.
+          </li>
+          <li>
+            قم بتشغيل الغسالة أثناء الضغط؛ ستلاحظ إضاءة جميع لمبات LED أو ظهور
+            الكود <strong>TEST / F00</strong> على الشاشة.
+          </li>
+          <li>
+            استخدم بكرة البرامج للانتفال بين مراحل الفحص (اختبار السخان، اختبار
+            سحب الماء الساخن والبارد، واختبار العصر السريع).
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. جدول أكواد الأعطال الشامل -->
+      <section class="detailed-errors-section">
+        <h3>
+          📋 دليل أكواد أعطال أريستون الشامل (Ariston Error Codes - F Series)
+        </h3>
+        <p class="section-desc">
+          ابحث عن كود العطل المبتدئ بالحرف (F) لمعرفة السبب وطريقة الإصلاح
+          الفورية:
+        </p>
+        <div class="search-filter-box">
+          <input
+            type="text"
+            id="errorSearchInput"
+            placeholder="🔍 ابحث عن الكود أو الجهاز (مثال: F01, F05, F08, غسالة أطباق)..."
+          />
+        </div>
+        <div class="table-responsive">
+          <table class="master-table" id="aristonErrorsTable">
+            <thead>
+              <tr>
+                <th>كود العطل</th>
+                <th>الجهاز</th>
+                <th>السبب الفني المباشر</th>
+                <th>طريقة الفحص والحل التكنيكي</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="code-badge">F01</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  ماس كهربائي في تراياك الموتور بالكارتة (Motor Triac Short
+                  Circuit)
+                </td>
+                <td>
+                  فحص التراياك المسئول عن الموتور بكارتة التحكم، والتأكد من عدم
+                  وصول مياه لفيشة الموتور.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F02</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  عطل في تاكو الموتور أو توقف المحرك (Motor Locked / Tacho Open)
+                </td>
+                <td>
+                  قياس مقاومة ملف التاكو (Tacho Generator)، فحص شربون المحرك
+                  وتوصيلات كارتة التشغيل.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F03</code></td>
+                <td>غسالة ملابس / ثلاجة</td>
+                <td>عطل في حساس حرارة تجفيف أو غسيل (NTC Sensor Fault)</td>
+                <td>
+                  قياس قيمة حساس NTC بالأوم (حوالي 20K-25K أوم عند درجة حرارة
+                  الغرفة) واستبداله إن كان مكسوراً.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F05</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  انسداد في طلمبة الصرف أو عدم تفريغ المياه (Drain Pump /
+                  Blocked Filter)
+                </td>
+                <td>
+                  تنظيف فلتر الصرف السفلي، التأكد من عدم انسداد الخرطوم، وقياس
+                  ملف طلمبة الصرف.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F06</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  عطل قفل الباب أو محدد البرامج (Selector / Door Lock Fault)
+                </td>
+                <td>
+                  فحص لوك الباب (Door Interlock)، واختبار استمرار توصيل مفتاح
+                  تحديد البرامج.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F08</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  التصاق ريلاي السخان أو تلف عنصر التسخين (Heater Relay Stuck /
+                  NTC)
+                </td>
+                <td>
+                  فحص ريلاي السخان بالكارتة، وقياس الأرضي (Leakage to Earth)
+                  لعنصر التسخين نفسه.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F09</code></td>
+                <td>غسالة / ثلاجة</td>
+                <td>
+                  عطل بالذاكرة أو عدم توافق السوفتوير (Setup / EEPROM Error)
+                </td>
+                <td>
+                  تعديل أو إعادة شحن ميكروكونترولر الكارتة (EEPROM) أو استبدال
+                  كارتة التحكم الرئيسية.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F11</code></td>
+                <td>غسالة ملابس</td>
+                <td>انقطاع التغذية عن طلمبة الصرف (Pump Circuit Unfed)</td>
+                <td>
+                  فحص أسلاك التوصيل بين الكارتة وطلمبة الصرف التأكد من عدم وجود
+                  قطع بالأسلاك.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F12</code></td>
+                <td>غسالة ملابس</td>
+                <td>
+                  فقد الاتصال بين كارتة العرض والكارتة الرئيسية (Display
+                  Communication)
+                </td>
+                <td>
+                  مراجعة الكابل الرابط بين شاشة العرض الرقمية والكارتة السفلية
+                  وإعادة تثبيته.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F15</code></td>
+                <td>مجفف / غسالة مجفف</td>
+                <td>عطل ريلاي سخان التجفيف (Drying Element Relay)</td>
+                <td>
+                  قياس ترموستات الأمان (High Limit Thermostat) ورسومات التغذية
+                  الخاصة بالتجفيف.
+                </td>
+              </tr>
+              <tr>
+                <td><code class="code-badge">F11 / F12 (أطباق)</code></td>
+                <td>غسالة أطباق</td>
+                <td>عطل بمحرك التدوير / طلمبة الغسيل (Wash Motor Fault)</td>
+                <td>
+                  فحص المكثف الخاص بموتور الغسيل أو قياس مقاومة ملفات طلمبة
+                  التدوير الرئيسية.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. أعطال شائعة وتصرفات ميكانيكية بدون أكواد -->
+      <section class="symptoms-section">
+        <h3>🔍 أعطال أريستون الشاملة بدون رموز أخطاء وطريقة إصلاحها</h3>
+        <div class="symptoms-grid">
+          <div class="symptom-box">
+            <h4>1. توقف الغسالة عن العصر مع صدور صوت صفير</h4>
+            <p>
+              <strong>السبب الفني:</strong> تلف سير الموتور (Drive Belt) أو تأكل
+              رمان بلي الحلة الداخلية.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> فحص استقامة السير وتغييره، أو تغيير
+              رمان البلي والسيما المائي لمنع تسرب المياه.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>2. عدم تنظيف الصحون بداخل غسالة أطباق أريستون</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد فتحات أذرع الرش السفلية أو
+              العلوية بالترسبات الكلسية.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> فك أذرع الرش وتنظيف الفوهات بإبرة
+              رفيعة واستخدام ملح غسالة الأطباق بانتظام.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>3. ضعف التبريد في ثلاجة أريستون مع إضاءة لمبة Alert</h4>
+            <p>
+              <strong>السبب الفني:</strong> انسداد مجرى الهواء بفعل تراكم الثلج
+              على مبخر الديفروست.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> تفكيك غطاء المبخر، قياس ثرموديسك
+              وسخان التذويب، واختبار حساس الديفروست.
+            </p>
+          </div>
+          <div class="symptom-box">
+            <h4>4. توقف لوحة الأزرار بلمس وميض المؤشرات</h4>
+            <p>
+              <strong>السبب الفني:</strong> تفعيل خيار قفل الأطفال أو وجود رطوبة
+              خلف شاشة التحكم.
+            </p>
+            <p>
+              <strong>خطوات الحل:</strong> ضغط زري (Child Lock / Options) لمدة 3
+              ثوانٍ وتجفيف اللوحة الرقمية بالهواء الدافئ.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. نصائح وتوجيهات الحفاظ على أجهزة أريستون -->
+      <section class="tips-card">
+        <h3>💡 إرشادات وقائية لتمديد عمر أجهزة أريستون</h3>
+        <ul class="styled-list">
+          <li>
+            <strong>التنظيف الدوري للفلتر:</strong> تفريغ الفلتر السفلي لغسالة
+            الملابس شهرياً لمنع أعطال الطلمبة F05.
+          </li>
+          <li>
+            <strong>استخدام مثبت الفولت:</strong> حماية كارتة التحكم الرقمية
+            Sensitivity Board من التذبذب الكهربائي.
+          </li>
+          <li>
+            <strong>إزالة الكلس والمستحضرات:</strong> تشغيل دورة تنظيف بالخل أو
+            مزيل الكلس كل 3 أشهُر للحفاظ على السخان.
+          </li>
+          <li>
+            <strong>عدم التحميل الزائد:</strong> الالتزام بالوزن المخصص للحلة
+            لضمان طول عمر رمان البلي ومساعدين الغسالة.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. الأسئلة الشائعة SEO FAQ -->
+      <section class="faq-section">
+        <h3>❓ الأسئلة الشائعة حول صيانة أريستون</h3>
+        <details class="faq-item">
+          <summary>ما هي أرقام الخط الساخن المعتمدة لصيانة أريستون؟</summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك التواصل المباشر معنا بخصوص صيانة أريستون على الأرقام:
+              <strong>19580</strong> - <strong>17718</strong> -
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ماذا يعني ظهور كود F05 في غسالة أريستون؟</summary>
+          <div class="faq-answer">
+            <p>
+              يعني الكود وجود مشكلة في تصريف المياه؛ إما بسبب انسداد فلتر
+              الطلمبة، الخرطوم، أو تلف طلمبة الصرف نفسها.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>ما هو كود F01 في أجهزة أريستون وكيف يتم إصلاحه؟</summary>
+          <div class="faq-answer">
+            <p>
+              يشير إلى وجود دائرة قصر (Short Circuit) في التراياك الخاص بالموتور
+              على الكارتة الرئيسية وتتطلب فحص مكونات التحكم.
+            </p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>كيف يمكن إعادة ضبط (Reset) لغسالة أريستون؟</summary>
+          <div class="faq-answer">
+            <p>
+              يمكنك الضغط المباشر على زر Start/Pause لمدة 5 ثوانٍ متواصلة أثناء
+              عمل الغسالة لإلغاء البرنامج الحالي وإعادة ضبط القراءات.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Call to Action Banner -->
+      <section class="cta-box ariston-cta">
+        <h3>هل تحتاج إلى مساعدة أو صيانة فورية لأجهزة أريستون؟</h3>
+        <p>
+          فريقنا الفني المعتمد جاهز لتوفير قطع الغيار الأصلية والزيارات المنزلية
+          المباشرة
+        </p>
+        <div class="cta-buttons">
+          <a href="tel:19580" class="btn btn-light"
+            >اتصل الآن بالخط الساخن 19580</a
+          >
+          <a
+            href="https://wa.me/201289966660"
+            class="btn btn-whatsapp-light"
+            target="_blank"
+            rel="noopener"
+            >تواصل واتساب</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- ================= SEO SEARCH KEYWORDS SECTION 1 ================= -->
+    <section class="seo-card seo-keywords-section">
+      <div class="seo-keywords-container">
+        <h2 class="seo-keywords-title">
+          🔑 دليل مفاتيح البحث الشاملة لمراكز الصيانة المعتمدة بمصر
+        </h2>
+        <p class="seo-keywords-intro">
+          ابحث عن رقم الخدمة المباشر حسب نوع الجهاز والماركة لتقديم بلاغات
+          الأعطال فورياً وطلب الصيانة المنزلية بقطع غيار أصلية:
+        </p>
+
+        <!-- Key concepts Grid -->
+        <div class="seo-tags-grid">
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الثلاجات والديب فريزر</h3>
+            <p>
+              أرقام خدمة ثلاجات <strong>19580</strong> | رقم خدمة كريازي
+              <strong>19580</strong> | توكيل ثلاجات توشيبا
+              <strong>17718</strong> | رقم صيانة ثلاجات ال جي
+              <strong>17718</strong> | خدمة عملاء ديب فريزر كريازي
+              <strong>19580</strong> | رقم صيانة ثلاجات زانوسي
+              <strong>19580</strong> | صيانة ديب فريزر توشيبا
+              <strong>17718</strong> | توكيل ثلاجات سامسونج
+              <strong>15607</strong> | رقم صيانة ثلاجات بيكو
+              <strong>15607</strong> | صيانة ثلاجات شارب
+              <strong>15607</strong> | رقم صيانة ثلاجات وايت ويل
+              <strong>17718</strong> | صيانة ديب فريزر ال جي
+              <strong>17718</strong>.
+            </p>
+          </div>
+
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الغسالات وأطباق الملابس</h3>
+            <p>
+              توكيل غسالات وايت ويل <strong>17718</strong> | رقم صيانة غسالات
+              ايديال زانوسي <strong>19580</strong> | خدمة عملاء غسالات سامسونج
+              <strong>15607</strong> | توكيل غسالات أطباق بيكو
+              <strong>15607</strong> | رقم صيانة غسالات ال جي
+              <strong>17718</strong> | صيانة غسالات توشيبا
+              <strong>17718</strong> | رقم خدمة عملاء كريازي غسالات
+              <strong>19580</strong> | صيانة غسالات أطباق ايديال زانوسي
+              <strong>19580</strong> | توكيل غسالات فوق اتوماتيك
+              <strong>17718</strong> | رقم صيانة غسالات شارب
+              <strong>15607</strong> | صيانة غسالات أطباق ال جي
+              <strong>17718</strong>.
+            </p>
+          </div>
+
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الشاشات والميكروويف والتكييفات</h3>
+            <p>
+              رقم صيانة شاشات توشيبا <strong>17718</strong> | توكيل شاشات
+              سامسونج <strong>15607</strong> | خدمة عملاء ميكروويف جاك
+              <strong>17718</strong> | رقم صيانة تكييفات شارب
+              <strong>15607</strong> | خدمة عملاء ميكروويف كينوود
+              <strong>15607</strong> | رقم صيانة شاشات ال جي
+              <strong>17718</strong> | صيانة تكييفات كاريير
+              <strong>19580</strong> | توكيل ميكروويف سامسونج
+              <strong>15607</strong> | صيانة شاشات تورنيدو
+              <strong>17718</strong> | رقم صيانة تكييفات ال جي
+              <strong>17718</strong> | صيانة ميكروويف شارب
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEO HOTLINES & BRAND MATRIX SECTION 2 ================= -->
+    <section class="seo-card seo-matrix-section">
+      <div class="seo-matrix-container">
+        <h2 class="seo-keywords-title">
+          📌 جدول استعلامات الماركات والخطوط الساخنة المباشرة
+        </h2>
+        <p class="seo-keywords-intro">
+          جدول الخدمة المباشرة المتاح على مدار 24 ساعة لجميع المحافظات (القاهرة،
+          الجيزة، الإسكندرية، البحيرة، الغربية، الدقهلية، الشرقية):
+        </p>
+
+        <!-- SEO Optimized Data Table -->
+        <div class="seo-table-wrapper">
+          <table class="seo-data-table">
+            <thead>
+              <tr>
+                <th>خدمة الماركة والتوكيل</th>
+                <th>نوع الجهاز المدعوم</th>
+                <th>رقم اتصل بنا المباشر</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>رقم خدمة كريازي / زانوسي / ايديال</strong></td>
+                <td>أرقام خدمة ثلاجات، غسالات ملابس، ديب فريزر، بوتاجازات</td>
+                <td><a href="tel:19580" class="table-link">19580</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>توكيل غسالات وايت ويل / توشيبا / LG / جاك</strong>
+                </td>
+                <td>غسالات، شاشات، ميكروويف، ثلاجات نوفروست، ديب فريزر</td>
+                <td><a href="tel:17718" class="table-link">17718</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong
+                    >توكيل شارب / سامسونج / بيكو / كينوود / تورنيدو</strong
+                  >
+                </td>
+                <td>تكييفات، غسالات أطباق، شاشات، أجهزة بلت إن، ميكروويف</td>
+                <td><a href="tel:15607" class="table-link">15607</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SEO Search Queries Tags (Expanded Tag Cloud) -->
+        <div class="seo-queries-list">
+          <h4>سحابة كلمات البحث الشائعة للخدمة والمحافظات:</h4>
+          <ul>
+            <li>أرقام خدمة ثلاجات 19580</li>
+            <li>رقم خدمة كريازي 19580</li>
+            <li>توكيل غسالات وايت ويل 17718</li>
+            <li>رقم صيانة غسالات ايديال زانوسي 19580</li>
+            <li>توكيل ثلاجات توشيبا 17718</li>
+            <li>خدمة عملاء غسالات سامسونج 15607</li>
+            <li>رقم صيانة شاشات توشيبا 17718</li>
+            <li>رقم صيانة ثلاجات ال جي 17718</li>
+            <li>رقم صيانة تكييفات شارب 15607</li>
+            <li>خدمة عملاء ديب فريزر كريازي 19580</li>
+            <li>رقم صيانة ثلاجات زانوسي 19580</li>
+            <li>توكيل غسالات أطباق بيكو 15607</li>
+            <li>خدمة عملاء ميكروويف جاك 17718</li>
+            <li>صيانة شاشات سامسونج 15607</li>
+            <li>صيانة ديب فريزر توشيبا 17718</li>
+            <li>رقم صيانة ثلاجات بيكو 15607</li>
+            <li>صيانة غسالات فوق اتوماتيك 17718</li>
+            <li>رقم صيانة اعطال الثلاجات بمصر 19580</li>
+            <li>الخط الساخن للبلاغات والشكاوى وتفعيل الضمان 15607</li>
+            <li>قطع غيار أصلية بالضمان 17718</li>
+            <li>مركز صيانة القاهرة والجيزة 19580</li>
+            <li>رقم صيانة الإسكندرية والبحيرة 17718</li>
+            <li>الخط الساخن للصيانة بالغربية والدقهلية 15607</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- SEO Container Isolation -->
+
+    <div class="seo-container">
+      <!-- ================= LEGAL & PRIVACY TABS SECTION ================= -->
+      <section class="seo-card legal-section">
+        <!-- Navigation Tabs -->
+        <div class="legal-tabs-nav">
+          <button
+            class="legal-tab-btn active"
+            data-tab="privacy-tab"
+            type="button"
+          >
+            🔒 سياسة الخصوصية
+          </button>
+          <button class="legal-tab-btn" data-tab="disclaimer-tab" type="button">
+            ⚠️ إخلاء المسؤولية
+          </button>
+        </div>
+
+        <!-- Tab 1: Privacy Policy -->
+        <div id="privacy-tab" class="legal-tab-content active">
+          <h3 class="legal-title">سياسة الخصوصية وحماية البيانات</h3>
+          <p class="seo-text">
+            نلتزم في موقعنا بحماية خصوصية زوارنا الكرام. نوضح فيما يلي كيفية
+            التعامل مع البيانات عند استخدامك لخدمات الصيانة المتاحة عبر المنصة:
+          </p>
+          <div class="legal-grid">
+            <div class="legal-box">
+              <h4>📋 جمع البيانات</h4>
+              <p>
+                لا نقوم بجمع أي بيانات شخصية أو تخزينها تلقائياً عند تصفحك
+                للموقع، باستثناء ما تقوم بتقديمه طواعية عند التواصل الهاتفي
+                معنا.
+              </p>
+            </div>
+            <div class="legal-box">
+              <h4>📞 استخدام أرقام التواصل</h4>
+              <p>
+                تُستخدم أرقام الهواتف المعروضة (مثل خدمة صيانة ثلاجات كريازي
+                19580 أو غسالات زانوسي 19580) لتوجيهك مباشرة لخدمة الدعم الفني
+                المطلوبة.
+              </p>
+            </div>
+            <div class="legal-box">
+              <h4>🍪 ملفات تعريف الارتباط (Cookies)</h4>
+              <p>
+                قد يستخدم الموقع ملفات تعريف الارتباط لتحسين تجربة المستخدم
+                وتحليل حركة المرور بهدف تحسين أداء صفحات الخدمة.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Disclaimer -->
+        <div id="disclaimer-tab" class="legal-tab-content">
+          <h3 class="legal-title">إخلاء مسؤولية وتوضيح هام</h3>
+          <div class="legal-notice-box">
+            <p>
+              <strong>تنبيه هام للزوار:</strong> هذا الموقع عبارة عن دليل خدمي
+              وتسويقي مستقل يقدم معلومات عن أعطال الأجهزة المنزلية وأرقام مراكز
+              الصيانة المباشرة (مثل خدمات صيانة توشيبا 17718، شارب 15607، وال جي
+              17718).
+            </p>
+          </div>
+          <ul class="legal-list">
+            <li>
+              الموقع ليس العلامة التجارية الأصلية للشركات المشار إليها، وإنما
+              يوفر خدمات صيانة مستقلة بواسطة فنيين ومهندسين متخصصين.
+            </li>
+            <li>
+              جميع الأسماء التجارية والعلامات المسجلة المذكورة في الصفحة (مثل
+              كريازي، توشيبا، زانوسي، ال جي، سامسونج) هي ملك لأصحابها الأصليين
+              وتُذكر هنا لأغراض التعريف بالخدمة فقط.
+            </li>
+            <li>
+              عند إجراء أي عملية صيانة، يتم تسليم العميل فاتورة رسمية وضمان
+              معتمد على قطع الغيار المستبدلة من قِبل المركز المنفذ للخدمة.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= FOOTER START ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <svg
+              class="footer-logo-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+              />
+            </svg>
+            <span class="footer-logo-text">المركز المعتمد للصيانة</span>
+          </a>
+          <p class="footer-desc">
+            المركز الأول المتخصص في صيانة وإصلاح الأجهزة المنزلية بقطع غيار
+            أصلية ومعتمدة وضمان شامل على كافة أعمال الصيانة.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">روابط السريعة</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../من-نحن/">الأسئلة الشائعة</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../تواصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h3 class="footer-title">خدمات الصيانة</h3>
+          <ul class="footer-links">
+            <li><a href="../صيانة-التلاجات/">صيانة ثلاجات</a></li>
+            <li><a href="../صيانة-غسالات-الملابس/">صيانة غسالات</a></li>
+            <li><a href="../صيانة-الديب-فريزر/">صيانة ديب فريزر</a></li>
+            <li><a href="../صيانة-غسالات-الاطباق/">صيانة غسالات أطباق</a></li>
+            <li><a href="../صيانة-الشاشات/">صيانة شاشات</a></li>
+            <li><a href="../صيانة-الميكرويف/">صيانة ميكروويف</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Hotlines -->
+        <div class="footer-col footer-hotlines">
+          <h3 class="footer-title">أرقام الدعم المباشر</h3>
+          <div class="hotline-cards-list">
+            <a href="tel:19580" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">19580</span>
+                <span class="phone-label">الخط الساخن الرئيسي</span>
+              </div>
+            </a>
+
+            <a href="tel:17718" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">17718</span>
+                <span class="phone-label">الدعم الفني المباشر</span>
+              </div>
+            </a>
+
+            <a href="tel:15607" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">15607</span>
+                <span class="phone-label">الشكاوى ومتابعة الضمان</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div class="footer-bottom">
+        <div class="bottom-container">
+          <p>© 2026 المركز المعتمد للصيانة. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= FOOTER END ================= -->
+    <script src="script.js"></script>
+  </body>
+</html>

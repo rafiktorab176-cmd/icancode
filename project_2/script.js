@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 1. إدارة قائمة الموبايل والـ Dropdown
   var menuBtn = document.getElementById("mobile-menu-btn");
   var mobileMenu = document.getElementById("mobile-menu");
   var dropdownBtn = document.getElementById("mobile-dropdown-btn");
   var mobileDropdown = document.getElementById("mobile-dropdown");
   var dropdownIcon = document.getElementById("mobile-dropdown-icon");
 
-  // 1. فتح وإغلاق قائمة الموبايل الرئيسية
   if (menuBtn && mobileMenu) {
     menuBtn.onclick = function (e) {
       e.stopPropagation();
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // 2. فتح وإغلاق قائمة "خدماتنا" الفرعية
   if (dropdownBtn && mobileDropdown) {
     dropdownBtn.onclick = function (e) {
       e.stopPropagation();
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // 3. إغلاق القائمة عند الضغط في أي مكان خارجي
+  // إغلاق القائمة عند الضغط في أي مكان خارجي
   document.onclick = function (e) {
     if (
       mobileMenu &&
@@ -39,11 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (dropdownIcon) dropdownIcon.classList.remove("rotate-180");
     }
   };
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+  // 2. التبديل بين ألسنة الشروط والسياسات (Legal Tabs)
   const tabButtons = document.querySelectorAll(".legal-tab-btn");
-
   tabButtons.forEach((btn) => {
     btn.addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -52,25 +49,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!container || !tabId) return;
 
-      // 1. إلغاء تفعيل جميع الأزرار
       const buttons = container.querySelectorAll(".legal-tab-btn");
       buttons.forEach((b) => {
         b.classList.remove("active");
         b.setAttribute("aria-selected", "false");
       });
 
-      // 2. تفعيل الزر الحالي
       this.classList.add("active");
       this.setAttribute("aria-selected", "true");
 
-      // 3. إخفاء جميع التبويبات
       const contents = container.querySelectorAll(".legal-tab-content");
       contents.forEach((content) => {
         content.classList.remove("active");
         content.style.display = "none";
       });
 
-      // 4. إظهار التبويب المطلوب
       const targetContent = container.querySelector("#" + tabId);
       if (targetContent) {
         targetContent.classList.add("active");
@@ -78,9 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
-// Dynamic Schema Markup Injection for Homepage
-document.addEventListener("DOMContentLoaded", function () {
+
+  // 3. إضافة Schema Markup الخاصة بالصفحة الرئيسية
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -176,4 +168,33 @@ document.addEventListener("DOMContentLoaded", function () {
   script.type = "application/ld+json";
   script.text = JSON.stringify(schemaData);
   document.head.appendChild(script);
+
+  // 4. حماية المحتوى لمنع النسخ والـ Right-Click وأدوات المطورين
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.ctrlKey &&
+      (e.key === "c" ||
+        e.key === "C" ||
+        e.key === "x" ||
+        e.key === "X" ||
+        e.key === "u" ||
+        e.key === "U" ||
+        e.key === "s" ||
+        e.key === "S")
+    ) {
+      e.preventDefault();
+    }
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey &&
+        e.shiftKey &&
+        (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j"))
+    ) {
+      e.preventDefault();
+    }
+  });
 });

@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      المركز المعتمد لصيانة الثلاجات | ارقام الخدمة | 19580 - 17718 - 15607
+    </title>
+
+    <!-- خط Cairo ورابط FontAwesome للأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- اللوجو مع أيقونة حديثة وكبيرة -->
+        <a href="index.html" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+            />
+          </svg>
+          <span class="logo-text">المركز المعتمد للصيانة</span>
+        </a>
+
+        <!-- روابط القائمة الرئيسية (Desktop) -->
+        <div class="nav-links desktop-only">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+          <a href="../من-نحن/" class="nav-link">من نحن</a>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <div class="dropdown">
+            <button type="button" class="dropdown-btn">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- القائمة الفرعية -->
+            <div class="dropdown-menu">
+              <a href="../صيانة-التلاجات/" class="dropdown-item"
+                >صيانة ثلاجات</a
+              >
+              <a href="../صيانة-غسالات-الملابس/" class="dropdown-item"
+                >صيانة غسالات</a
+              >
+              <a href="../صيانة-الديب-فريزر/" class="dropdown-item"
+                >صيانة ديب فريزر</a
+              >
+              <a href="../صيانة-غسالات-الاطباق/" class="dropdown-item"
+                >صيانة غسالات أطباق</a
+              >
+              <a href="../صيانة-الشاشات/" class="dropdown-item">صيانة شاشات</a>
+              <a href="../صيانة-الميكرويف/" class="dropdown-item"
+                >صيانة ميكروويف</a
+              >
+            </div>
+          </div>
+
+          <a href="../الاسئلة-الشائعة/" class="nav-link">الأسئلة الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../تواصل-بنا/" class="nav-link">اتصل بنا</a>
+        </div>
+
+        <!-- الخط الساخن (Desktop) -->
+        <div class="desktop-only">
+          <a href="tel:19580" class="btn-hotline">الخط الساخن: 19580</a>
+        </div>
+
+        <!-- زر الهامبرجر (الموبايل) -->
+        <button id="mobile-menu-btn" type="button" class="hamburger-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- قائمة الموبايل المنسدلة -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <a href="../index.html" class="mobile-link">الرئيسية</a>
+        <a href="../من-نحن/" class="mobile-link">من نحن</a>
+
+        <!-- Dropdown الموبايل -->
+        <div>
+          <button
+            id="mobile-dropdown-btn"
+            type="button"
+            class="mobile-dropdown-btn"
+          >
+            <span>خدماتنا</span>
+            <svg
+              id="mobile-dropdown-icon"
+              class="dropdown-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <div id="mobile-dropdown" class="mobile-dropdown-menu hidden">
+            <a href="../صيانة-التلاجات/" class="mobile-sublink">صيانة ثلاجات</a>
+            <a href="../صيانة-غسالات-الملابس/" class="mobile-sublink"
+              >صيانة غسالات</a
+            >
+            <a href="../صيانة-الديب-فريزر/" class="mobile-sublink"
+              >صيانة ديب فريزر</a
+            >
+            <a href="../صيانة-غسالات-الاطباق/" class="mobile-sublink"
+              >صيانة غسالات أطباق</a
+            >
+            <a href="../صيانة-الشاشات/" class="mobile-sublink">صيانة شاشات</a>
+            <a href="../صيانة-الميكرويف/" class="mobile-sublink"
+              >صيانة ميكروويف</a
+            >
+          </div>
+        </div>
+
+        <a href="../الاسئلة-الشائعة/" class="mobile-link">الأسئلة الشائعة</a>
+        <a href="../المدونة/" class="mobile-link">المدونة</a>
+        <a href="../تواصل-بنا/" class="mobile-link">اتصل بنا</a>
+
+        <a href="tel:19580" class="btn-hotline-mobile">الخط الساخن: 19580</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header & Main Title -->
+    <header class="main-header">
+      <div class="container">
+        <h1>
+          <i class="fa-solid fa-snowflake"></i> المركز المعتمد لصيانة الثلاجات
+          في مصر
+        </h1>
+        <p class="subtitle">
+          خدمة صيانة فورية بقطع الغيار الأصلية مع الضمان المعتمد بجميع المحافظات
+        </p>
+
+        <!-- Hotlines Bar -->
+        <div class="hotlines-header">
+          <div class="hotline-badge">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>الخط الساخن للحجز: <strong>19580</strong></span>
+          </div>
+          <div class="hotline-badge">
+            <i class="fa-solid fa-headset"></i>
+            <span>الدعم المباشر: <strong>17718</strong></span>
+          </div>
+          <div class="hotline-badge">
+            <i class="fa-solid fa-phone-flip"></i>
+            <span>الاستعلام والشكاوى: <strong>15607</strong></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <!-- Section 1: Intro & Features -->
+      <section class="content-block">
+        <h2>أفضلية الاتصال على رقم صيانة الثلاجات بالمركز المعتمد</h2>
+        <p>
+          الجودة ثم الجودة إنها الكلمة الرئيسية للعمل بالشركة مع التشديد على
+          أهمية خفض تكلفة الإصلاح؛ هكذا هو النهج المعروف والمتتبع لكل العاملين
+          بـ <strong>المركز المعتمد لصيانة الثلاجات بمصر</strong>. لهذا تجد
+          لدينا آلاف العملاء بمختلف أنحاء مصر، بالمدن والأحياء والمناطق يتعاملون
+          معنا بمنتهى الثقة والإريحية. انضم لنا الآن وكن ضمن عملائنا المميزين
+          وثق تمام الثقة بأن جهازك سوف يعمل بكامل الكفاءة التشغيلية المعروفة عن
+          ثلاجتك قبل التعطل.
+        </p>
+        <p>
+          إن اختيارك الاتصال برقم
+          <strong>المركز المعتمد لإصلاح ثلاجات التجميد</strong> يُعتبر الاختيار
+          الأفضل لجهازك لأننا نوفر لك معدات كشف الأعطال الحديثة الفاحصة للأعطال
+          بمنتهى الدقة. وبالتالي لن يكون هناك أي احتمال لتغيير مكون يعمل بشكل
+          سليم بمكون آخر جديد، مما سيكون له الأثر في تقليل نفقات صيانة ثلاجة
+          المنزل.
+        </p>
+
+        <h3>هل يوجد بالمركز ميزة استبدال الثلاجة القديمة؟</h3>
+        <p>
+          نعم، لدينا إمكانية الاستبدال للثلاجات؛ إنها خدمة جديدة نقوم بها من أجل
+          راحة عملائنا. لقد اخترنا بعض طرازات ثلاجات التبريد المستوردة وتم
+          إتاحتها للاستبدال مع التسعير العادل للثلاجة القديمة. كما نضيف بأن قسم
+          الاستبدال متاح به كل الأجهزة الكهربائية مثل الثلاجة، غسالات الأطباق،
+          الميكروويف، تكييف الهواء، ديب فريزر، البوتاجازات، وافران بلت إن، ويمكن
+          لمالك المنتج استبداله بمنتج آخر أو بصيانة الثلاجات المنزلية.
+        </p>
+      </section>
+
+      <!-- Section 2: Steps of Inspection -->
+      <section class="content-block">
+        <h2>خطوات الفحص الدقيقة بمركز صيانة الثلاجات المعتمد</h2>
+        <ul class="styled-list">
+          <li>
+            هي عدة خطوات بسيطة ومُيسرة تحصلون بعدها على أفضل خدمة إصلاح لثلاجات
+            المنزل بجمهورية مصر العربية بحد أقصى 48 ساعة للمدن البعيدة عن
+            العاصمة. نجتهد طيلة الوقت ونبذل قصارى جهدنا لمساعدة مقتني ثلاجات
+            التبريد المنزلية والمكتبية.
+          </li>
+          <li>
+            في البداية يتم فحص الثلاجة لمعرفة نوع الخلل، وهذا الفحص دائماً يكون
+            بسعر ثابت من المركز الرئيسي لصيانة الثلاجة بالقاهرة أو بالإسكندرية
+            ومختلف المحافظات.
+          </li>
+          <li>
+            بعد الفحص وتحديد العطل سوف يقوم فني صيانة الثلاجات بعرض تكاليف
+            الإصلاح للمكونات المراد استبدالها لتشغيل الثلاجة، وبناءً على موافقة
+            العميل سوف يتم الإصلاح فوراً أو الاكتفاء بدفع رسوم الزيارة والكشف
+            الفني للثلاجة.
+          </li>
+          <li>
+            غالبية أعطال صيانة الثلاجة يستغرق إصلاحها بعض الفحص الفني الدقيق
+            قرابة الساعة وبضع دقائق (ربما بعض الأعطال تتخطي 120 دقيقة بقليل)،
+            وهذا هو المتعارف عليه بالمركز. ولكن هناك بعض الأعطال قد يضطر الفني
+            لإصلاحها لنقلها لأقرب فرع لمركز صيانة الثلاجات التابع لها.
+          </li>
+          <li>
+            بعد إتمام صيانة الثلاجة يُسلم للعميل شهادة ضمان معتمدة من الفرع
+            تحتوي على كل التفاصيل (قيمة المصنعية، الأجزاء المستبدلة، ورش إصلاح
+            الثلاجات، ومدة الضمان المتاحة على القطعة المستبدلة).
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 3: Importance & Brands -->
+      <section class="content-block">
+        <h2>أهمية صيانة الثلاجة بقطع الغيار الأصلية فقط</h2>
+        <p>
+          عندما تتم صيانة ثلاجات بقطع الغيار الأصلية بالطبع سوف تكون أفضل واضمن
+          للثلاجة وللمستخدم، وهذا ما يؤكد عليه المركز المعتمد بمصر؛ ببدء توافر
+          المكون الأصلي والمهندس المحترف بـ أعطال ثلاجات نوفروست والدوفروست
+          مروراً بخدمة العملاء المتخصصة للإجابة على مختلف الاستفسارات وأسئلة
+          العملاء.
+        </p>
+
+        <h3>مراكز صيانة الثلاجات المتخصصة</h3>
+        <p>
+          نعرف بأن هناك الكثير من المراكز المتخصصة لصيانة ثلاجات بمصر، لكنك معنا
+          سوف تحصل على خدمة ذات جودة بدون مبالغة بتكاليف الإصلاح، كما أنه لدينا
+          سيارات الخدمة وفروع صيانة تغطي اغلب المحافظات (القاهرة، الجيزة،
+          الإسكندرية، وباقي مدن الوجه البحري والوجه القبلي) سريعة باتصالك بأرقام
+          الخدمة المتاحة: <strong>19580 - 17718 - 15607</strong>.
+        </p>
+        <p>
+          نوفر خدمة صيانة ثلاجات دوبلكس وأيضاً إصلاح ثلاجة نوفروست، تصليح ثلاجات
+          دوفروست (2 باب افقي، 14 قدم، تصليح ثلاجات 16 قدم، 18 قدم، إصلاح ثلاجة
+          22 قدم، 24 قدم، و26 قدم) قسم خاص لديب فريزر.
+        </p>
+
+        <div class="highlight-box">
+          <h4>قطع الغيار الأصلية المتاحة لجميع الماركات:</h4>
+          <p>
+            يتواجد لدينا كافة قطع الغيار الأصلية للثلاجات الكوري، الأمريكي،
+            الإيطالي، الألماني، التركي، الفرنسي، الثلاجات الصينية، وصيانة وقطع
+            غيار الثلاجات المحلية إصلاح بالضمان المعتمد.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Maintenance Tips & Guides -->
+      <section class="content-block">
+        <h2>ماذا نفعل عند ظهور خلل بالثلاجة؟</h2>
+        <p>
+          سرعة الاتصال بـ
+          <strong>رقم صيانة ثلاجات المعتمد (19580 / 17718 / 15607)</strong> عند
+          الضرورة، لأن معظم حالات الأعطال بالثلاجة تحدث بالتدريج.
+        </p>
+        <p>
+          مع حدوث بعض المؤشرات الملحوظة والدالة على وجود عطل بالثلاجة أثناء
+          التشغيل أو بعده (سواء ضعف التبريد بالكابينة أو عدم التجميد بالفريزر)،
+          لذلك نرجو منك إذا وجدت ضعف تدريجي أو لاحظت بأن مخزون الأطعمة المجمدة
+          بالثلاجة بدأ بالذوبان:
+        </p>
+        <ul class="styled-list">
+          <li>
+            علیکی بإيقاف الثلاجة فوراً والتواصل مع مركز صيانة ثلاجات المعتمد
+            لأخذ الرأي والمشورة حتي لا يتفاقم العطل ومن ثم يؤدي لتلف أجزاء أخرى
+            وتزايد تكلفة صيانة الجهاز النهائية.
+          </li>
+          <li>
+            التحدث مع الفني لحجز ميعاد لصيانة الثلاجة من أرقام الخطوط الساخنة
+            للمركز المعتمد: <strong>19580 - 17718 - 15607</strong>.
+          </li>
+        </ul>
+
+        <h3>أهمية ترتيب الثلاجة من الداخل لسهولة تدفق الهواء</h3>
+        <ul class="styled-list">
+          <li>
+            لا يجب الإفراط في تعبئة الكابينة بالمأكولات، فذلك يعرض الأطعمة للتلف
+            وكذلك موتور الثلاجة للإجهاد الزائد بالإضافة لارتفاع معدل الاستهلاك
+            الكهربي وبالتبعية فاتورة المحاسبة.
+          </li>
+          <li>
+            ترتيب أكياس الطعام على الأرفف يسهل تدفق الهواء المبرد لمختلف أنحاء
+            الثلاجة ويقلل وقت عمل الكمبريسور ويحفظ الأطعمة جميعها بنفس مستوى
+            التبريد.
+          </li>
+          <li>
+            ضبط منظم درجات التبريد (الترموستات) على درجة من 2 إلى 3 بفصل الشتاء
+            ومن 4 إلى 6 بفصل الصيف، من شأنه تخفيض استهلاك الطاقة وتوازن التشغيل
+            والعمر الافتراضي لثلاجات التبريد المنزلية.
+          </li>
+          <li>
+            توفير مبرد مياه أثناء فترة الصيف سوف يقلل ضغط استخدام الثلاجة ويبقى
+            الهواء المبرد بالداخل أطول وقت ممكن وذلك له اثر جيد.
+          </li>
+          <li>
+            استدعاء فني لتنظيف دائرة تصريف مياه الفريزر المذابة حتى لا تتكون
+            كميات ثلج بأرضية الفريزر أو حول المروحة.
+          </li>
+        </ul>
+      </section>
+      <div class="container">
+        <!-- قسم الصورة وتفاصيل صيانة الثلاجات -->
+        <article class="hero-card">
+          <!-- تاجة الصورة (ضع رابط أو مسار الصورة هنا) -->
+          <div class="image-wrapper">
+            <img
+              src="../assets/2.jpg"
+              alt="صيانة الثلاجات المنزلية"
+              class="hero-image"
+            />
+          </div>
+
+          <!-- النص التفصيلي عن صيانة الثلاجات -->
+          <div class="content-box">
+            <span class="badge">دليل الخدمة والدعم الفني</span>
+            <h1>صيانة وإصلاح الثلاجات المنزلية</h1>
+
+            <p class="intro-text">
+              تُعد الثلاجة من أهم الأجهزة الكهربائية في المنزل، والحفاظ على
+              كفاءتها يتطلب دراية تامة بالأعطال الشائعة وكيفية التعامل معها
+              لتجنب تلف الأطعمة أو إجهاد المحرك (الكومبريسور).
+            </p>
+
+            <div class="info-grid">
+              <div class="info-item">
+                <h3>أبرز الأعطال الشائعة</h3>
+                <p>
+                  ضعف التبريد الكلي، انسداد أنبوب تصريف المياه، تراكم الثلج في
+                  ثلاجات النوفروست، وارتفاع صوت المحرك نتيجة تلف القواعد أو
+                  مروحة الفريزر.
+                </p>
+              </div>
+
+              <div class="info-item">
+                <h3>نصائح الحفاظ على الثلاجة</h3>
+                <p>
+                  ترك مسافة تهوية خلف الجهاز (10-15 سم)، تنظيف كاوتش الباب
+                  بالماء الدافئ لمنع تسريب الهواء، وعدم تكديس الأطعمة أمام فتحات
+                  التهوئة الداخلية.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- قسم الخطوط الساخنة للتواصل -->
+        <section class="hotlines-section">
+          <h2 class="section-title">الخطوط الساخنة الفورية</h2>
+          <div class="hotlines-grid">
+            <div class="hotline-card">
+              <div class="hotline-info">
+                <strong>الدعم الفني والخدمة</strong>
+                <small>استشارات وصيانة منزلية</small>
+              </div>
+              <a href="tel:19111" class="call-btn">📞 19111</a>
+            </div>
+            <div class="hotline-card">
+              <div class="hotline-info">
+                <strong>بلاغات الطوارئ الفورية</strong>
+                <small>خدمة تلبية البلاغات 24/7</small>
+              </div>
+              <a href="tel:19222" class="call-btn">📞 19222</a>
+            </div>
+            <div class="hotline-card">
+              <div class="hotline-info">
+                <strong>متابعة الضمان والشكاوى</strong>
+                <small>خدمة العملاء والجودة</small>
+              </div>
+              <a href="tel:19333" class="call-btn">📞 19333</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Section 5: Working Hours & Branch Address -->
+      <section class="content-block address-section">
+        <h2>
+          <i class="fa-solid fa-location-dot"></i> عنوان المركز المعتمد ومواعيد
+          العمل
+        </h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <h4>مواعيد العمل الرسمية</h4>
+            <p>
+              تعمل فروع المركز المعتمد لصيانة الثلاجات بمصر بمواعيد محددة من
+              <strong>التاسعة صباحاً إلى العاشرة مساءً</strong> بكافة المدن
+              والمحافظات.
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h4>عنوان المركز الرئيسي</h4>
+            <p>
+              جمهورية مصر العربية - الفروع متوفرة بالقاهرة، الجيزة، الإسكندرية，
+              وجميع محافظات الوجه البحري والقبلي.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ================= SEO SEARCH KEYWORDS SECTION 1 ================= -->
+    <section class="seo-card seo-keywords-section">
+      <div class="seo-keywords-container">
+        <h2 class="seo-keywords-title">
+          🔑 مفاتيح البحث الرئيسية لمراكز الصيانة المعتمدة بمصر
+        </h2>
+        <p class="seo-keywords-intro">
+          دليل الكلمات الأكثر بحثاً لخدمات الأعطال والصيانة الفورية بالمنزل،
+          يمكنك الاتصال المباشر حسب نوع الجهاز والماركة:
+        </p>
+
+        <!-- Key concepts Grid -->
+        <div class="seo-tags-grid">
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الثلاجات والديب فريزر</h3>
+            <p>
+              أرقام خدمة ثلاجات <strong>19580</strong> | رقم خدمة كريازي
+              <strong>19580</strong> | توكيل ثلاجات توشيبا
+              <strong>17718</strong> | رقم صيانة ثلاجات ال جي
+              <strong>17718</strong> | خدمة عملاء ديب فريزر كريازي
+              <strong>19580</strong>.
+            </p>
+          </div>
+
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الغسالات والأطباق</h3>
+            <p>
+              توكيل غسالات وايت ويل <strong>17718</strong> | رقم صيانة غسالات
+              ايديال زانوسي <strong>19580</strong> | خدمة عملاء غسالات سامسونج
+              <strong>15607</strong> | توكيل غسالات أطباق بيكو
+              <strong>15607</strong> | رقم صيانة غسالات ال جي
+              <strong>17718</strong>.
+            </p>
+          </div>
+
+          <div class="seo-tag-box">
+            <h3>أرقام صيانة الشاشات والميكروويف والتكييفات</h3>
+            <p>
+              رقم صيانة شاشات توشيبا <strong>17718</strong> | توكيل شاشات
+              سامسونج <strong>15607</strong> | خدمة عملاء ميكروويف جاك
+              <strong>17718</strong> | رقم صيانة تكييفات شارب
+              <strong>15607</strong> | خدمة عملاء ميكروويف كينوود
+              <strong>15607</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEO HOTLINES & BRAND MATRIX SECTION 2 ================= -->
+    <section class="seo-card seo-matrix-section">
+      <div class="seo-matrix-container">
+        <h2 class="seo-keywords-title">
+          📌 جدول استعلامات الماركات والخطوط الساخنة المباشرة
+        </h2>
+        <p class="seo-keywords-intro">
+          ابحث عن توكيل ماركة جهازك واضغط على الرقم للاتصال المباشر بفريق الدعم
+          الفني:
+        </p>
+
+        <!-- SEO Optimized Data Table -->
+        <div class="seo-table-wrapper">
+          <table class="seo-data-table">
+            <thead>
+              <tr>
+                <th>خدمة الماركة والتوكيل</th>
+                <th>نوع الجهاز المدعوم</th>
+                <th>رقم اتصل بنا المباشر</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>رقم خدمة كريازي / زانوسي / ايديال</strong></td>
+                <td>أرقام خدمة ثلاجات، غسالات ملابس، ديب فريزر</td>
+                <td><a href="tel:19580" class="table-link">19580</a></td>
+              </tr>
+              <tr>
+                <td><strong>توكيل غسالات وايت ويل / توشيبا / LG</strong></td>
+                <td>غسالات، شاشات، ميكروويف، ثلاجات نوفروست</td>
+                <td><a href="tel:17718" class="table-link">17718</a></td>
+              </tr>
+              <tr>
+                <td><strong>توكيل شارب / سامسونج / بيكو / كينوود</strong></td>
+                <td>تكييفات، غسالات أطباق، شاشات، أجهزة بلت إن</td>
+                <td><a href="tel:15607" class="table-link">15607</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SEO Search Queries Tags -->
+        <div class="seo-queries-list">
+          <h4>عبارات البحث الشائعة للصيانة:</h4>
+          <ul>
+            <li>أرقام خدمة ثلاجات 19580</li>
+            <li>رقم خدمة كريازي 19580</li>
+            <li>توكيل غسالات وايت ويل 17718</li>
+            <li>رقم صيانة غسالات ايديال زانوسي 19580</li>
+            <li>توكيل ثلاجات توشيبا 17718</li>
+            <li>خدمة عملاء غسالات سامسونج 15607</li>
+            <li>رقم صيانة شاشات توشيبا 17718</li>
+            <li>رقم صيانة ثلاجات ال جي 17718</li>
+            <li>رقم صيانة تكييفات شارب 15607</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- SEO Container Isolation -->
+
+    <div class="seo-container">
+      <!-- ================= LEGAL & PRIVACY TABS SECTION ================= -->
+      <section class="seo-card legal-section">
+        <!-- Navigation Tabs -->
+        <div class="legal-tabs-nav">
+          <button
+            class="legal-tab-btn active"
+            data-tab="privacy-tab"
+            type="button"
+          >
+            🔒 سياسة الخصوصية
+          </button>
+          <button class="legal-tab-btn" data-tab="disclaimer-tab" type="button">
+            ⚠️ إخلاء المسؤولية
+          </button>
+        </div>
+
+        <!-- Tab 1: Privacy Policy -->
+        <div id="privacy-tab" class="legal-tab-content active">
+          <h3 class="legal-title">سياسة الخصوصية وحماية البيانات</h3>
+          <p class="seo-text">
+            نلتزم في موقعنا بحماية خصوصية زوارنا الكرام. نوضح فيما يلي كيفية
+            التعامل مع البيانات عند استخدامك لخدمات الصيانة المتاحة عبر المنصة:
+          </p>
+          <div class="legal-grid">
+            <div class="legal-box">
+              <h4>📋 جمع البيانات</h4>
+              <p>
+                لا نقوم بجمع أي بيانات شخصية أو تخزينها تلقائياً عند تصفحك
+                للموقع، باستثناء ما تقوم بتقديمه طواعية عند التواصل الهاتفي
+                معنا.
+              </p>
+            </div>
+            <div class="legal-box">
+              <h4>📞 استخدام أرقام التواصل</h4>
+              <p>
+                تُستخدم أرقام الهواتف المعروضة (مثل خدمة صيانة ثلاجات كريازي
+                19580 أو غسالات زانوسي 19580) لتوجيهك مباشرة لخدمة الدعم الفني
+                المطلوبة.
+              </p>
+            </div>
+            <div class="legal-box">
+              <h4>🍪 ملفات تعريف الارتباط (Cookies)</h4>
+              <p>
+                قد يستخدم الموقع ملفات تعريف الارتباط لتحسين تجربة المستخدم
+                وتحليل حركة المرور بهدف تحسين أداء صفحات الخدمة.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Disclaimer -->
+        <div id="disclaimer-tab" class="legal-tab-content">
+          <h3 class="legal-title">إخلاء مسؤولية وتوضيح هام</h3>
+          <div class="legal-notice-box">
+            <p>
+              <strong>تنبيه هام للزوار:</strong> هذا الموقع عبارة عن دليل خدمي
+              وتسويقي مستقل يقدم معلومات عن أعطال الأجهزة المنزلية وأرقام مراكز
+              الصيانة المباشرة (مثل خدمات صيانة توشيبا 17718، شارب 15607، وال جي
+              17718).
+            </p>
+          </div>
+          <ul class="legal-list">
+            <li>
+              الموقع ليس العلامة التجارية الأصلية للشركات المشار إليها، وإنما
+              يوفر خدمات صيانة مستقلة بواسطة فنيين ومهندسين متخصصين.
+            </li>
+            <li>
+              جميع الأسماء التجارية والعلامات المسجلة المذكورة في الصفحة (مثل
+              كريازي، توشيبا، زانوسي، ال جي، سامسونج) هي ملك لأصحابها الأصليين
+              وتُذكر هنا لأغراض التعريف بالخدمة فقط.
+            </li>
+            <li>
+              عند إجراء أي عملية صيانة، يتم تسليم العميل فاتورة رسمية وضمان
+              معتمد على قطع الغيار المستبدلة من قِبل المركز المنفذ للخدمة.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= FOOTER START ================= -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <svg
+              class="footer-logo-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v3.17l1.59 1.59-1.42 1.42L11 11.41V7zm1 13.93c-3.95-1.16-7-5.25-7-9.93V6.3l7-3.11 7 3.11V11c0 4.68-3.05 8.77-7 9.93z"
+              />
+            </svg>
+            <span class="footer-logo-text">المركز المعتمد للصيانة</span>
+          </a>
+          <p class="footer-desc">
+            المركز الأول المتخصص في صيانة وإصلاح الأجهزة المنزلية بقطع غيار
+            أصلية ومعتمدة وضمان شامل على كافة أعمال الصيانة.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-title">روابط السريعة</h3>
+          <ul class="footer-links">
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../من-نحن/">الأسئلة الشائعة</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../تواصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h3 class="footer-title">خدمات الصيانة</h3>
+          <ul class="footer-links">
+            <li><a href="../صيانة-التلاجات/">صيانة ثلاجات</a></li>
+            <li><a href="../صيانة-غسالات-الملابس/">صيانة غسالات</a></li>
+            <li><a href="../صيانة-الديب-فريزر/">صيانة ديب فريزر</a></li>
+            <li><a href="../صيانة-غسالات-الاطباق/">صيانة غسالات أطباق</a></li>
+            <li><a href="../صيانة-الشاشات/">صيانة شاشات</a></li>
+            <li><a href="../صيانة-الميكرويف/">صيانة ميكروويف</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Direct Hotlines -->
+        <div class="footer-col footer-hotlines">
+          <h3 class="footer-title">أرقام الدعم المباشر</h3>
+          <div class="hotline-cards-list">
+            <a href="tel:19580" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">19580</span>
+                <span class="phone-label">الخط الساخن الرئيسي</span>
+              </div>
+            </a>
+
+            <a href="tel:17718" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">17718</span>
+                <span class="phone-label">الدعم الفني المباشر</span>
+              </div>
+            </a>
+
+            <a href="tel:15607" class="footer-hotline-card">
+              <div class="card-icon">📞</div>
+              <div class="card-details">
+                <span class="phone-number">15607</span>
+                <span class="phone-label">الشكاوى ومتابعة الضمان</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div class="footer-bottom">
+        <div class="bottom-container">
+          <p>© 2026 المركز المعتمد للصيانة. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= FOOTER END ================= -->
+    <script src="script.js"></script>
+  </body>
+</html>

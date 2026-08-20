@@ -1,0 +1,845 @@
+/* ==========================================
+   1. RESET & BASE STYLES
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #0d6efd;
+  --primary-dark: #0b5ed7;
+  --secondary-color: #198754;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --border-color: #e9ecef;
+  --text-muted: #6c757d;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #fff;
+  color: var(--dark-color);
+  line-height: 1.6;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================
+   2. NAVBAR
+   ========================================== */
+.navbar {
+  background-color: #fff;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Dropdown Desktop */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--dark-color);
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-hotline {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+}
+
+.btn-hotline:hover {
+  background-color: var(--primary-dark);
+}
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background-color: #fff;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.mobile-link,
+.mobile-dropdown-btn {
+  display: block;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  width: 100%;
+  text-align: right;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.mobile-dropdown-menu {
+  background-color: var(--light-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+.mobile-sublink {
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+.btn-hotline-mobile {
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* ==========================================
+   3. HERO SECTION
+   ========================================== */
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #03346e 100%);
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.hotline-badge-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hotline-btn {
+  background-color: #fff;
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.hotline-btn.alt {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hotline-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   4. CONTENT SECTIONS & BRANDS
+   ========================================== */
+.content-section {
+  padding: 4rem 0;
+}
+
+.bg-light {
+  background-color: var(--light-color);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+}
+
+.brands-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.subsection-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.brand-tag {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================
+   5. CITIES & FAULTS GRIDS
+   ========================================== */
+.cities-grid,
+.faults-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.city-box,
+.fault-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.city-box h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.city-box ul {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.fault-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.fault-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.fault-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.fault-action {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mini-call-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   6. CTA SECTION & TIPS
+   ========================================== */
+.cta-section {
+  padding: 2rem 1.25rem;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+  color: #fff;
+  padding: 3rem 1.5rem;
+  border-radius: calc(var(--radius) * 2);
+  text-align: center;
+}
+
+.cta-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.hotline-numbers {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffc107;
+}
+
+.cairo-tips-box {
+  background-color: #e7f1ff;
+  border-right: 4px solid var(--primary-color);
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin-top: 3rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tip-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.tip-num {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   7. MEGA SECTION & TABLES
+   ========================================== */
+.cairo-mega-section {
+  padding: 4rem 0;
+  background-color: #f4f6f8;
+}
+
+.badge-tag {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.mega-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.card-badge {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.mega-list li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.area-tag-box {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.mega-table-wrapper {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cairo-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  min-width: 600px;
+}
+
+.cairo-data-table th,
+.cairo-data-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cairo-data-table th {
+  background-color: var(--light-color);
+  font-weight: 700;
+}
+
+/* ==========================================
+   8. FOOTER STYLES
+   ========================================== */
+.footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding-top: 50px;
+  margin-top: 60px;
+  border-top: 4px solid #2563eb;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+  gap: 32px;
+}
+
+/* Footer Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.footer-logo-icon {
+  width: 36px;
+  height: 36px;
+  color: #3b82f6;
+}
+
+.footer-logo-text {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.footer-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Footer Titles */
+.footer-title {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 3px;
+  background-color: #2563eb;
+  border-radius: 4px;
+}
+
+/* Footer Link Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #60a5fa;
+  transform: translateX(-5px);
+}
+
+/* Hotline Cards */
+.hotline-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-hotline-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-hotline-card:hover {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.card-icon {
+  font-size: 1.2rem;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-number {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.phone-label {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-hotline-card:hover .phone-label {
+  color: #e2e8f0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  background-color: #020617;
+  padding: 18px 24px;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+}
+
+.bottom-container p {
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* ==========================================
+   9. MEDIA QUERIES (FULL RESPONSIVE)
+   ========================================== */
+
+/* الشاشات التي تزيد عن 992px (Desktop) */
+@media (min-width: 992px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* الشاشات المتوسطة والتابلت (Tablets: 991px وأقل) */
+@media (max-width: 991px) {
+  .desktop-only,
+  .nav-links,
+  .btn-hotline {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-container {
+    height: 70px;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* الشاشات الصغيرة (Mobile: 600px وأقل) */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-section {
+    padding: 2.5rem 0;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hotline-badge-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hotline-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hotline-numbers {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .hotline-divider {
+    display: none;
+  }
+
+  .cities-grid,
+  .faults-grid,
+  .mega-grid,
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-card {
+    padding: 2rem 1rem;
+  }
+
+  .cta-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-title::after {
+    right: 0;
+  }
+}
+
+/* الشاشات الصغرى جداً (Small Mobile: 380px وأقل) */
+@media (max-width: 380px) {
+  .logo-container {
+    font-size: 1rem;
+  }
+
+  .brand-tag {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cairo-data-table th,
+  .cairo-data-table td {
+    padding: 0.65rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+/* منع تحديد وتظليل النصوص في الصفحة بالكامل */
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE / Edge */
+  user-select: none; /* Standard */
+}
+
+/* استثناء حقول المدخلات لتسمح للمستخدم بالكتابة داخلها بشكل طبيعي */
+input,
+textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
