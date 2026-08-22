@@ -1015,7 +1015,186 @@ button {
   padding-bottom: 12px;
   margin-bottom: 20px;
 }
+/* --- SEO Keywords Section --- */
+.seo-keywords-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
 
+.seo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-seo-title {
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.seo-keyword-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.seo-keyword-card h3 {
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.seo-keyword-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.seo-keyword-card p:last-child {
+  margin-bottom: 0;
+}
+
+.seo-keyword-card strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* --- Trouble Guide Section --- */
+.trouble-guide-section {
+  padding: 48px 20px;
+  background-color: #f1f5f9;
+}
+
+.guide-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.guide-header h2 {
+  color: #0f172a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.guide-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* --- Grid 4 Columns (الأربع كروت جنب بعض) --- */
+.accordion-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.guide-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- تنسيق الـ SVG والأيقونات بشكل يدوي ونظيف --- */
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* مسافة طبيعية بين الأيقونة والنص */
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e40af;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+/* ضبط مقاسات الـ SVG داخل البادج والعناوين بأسلوب بسيط */
+.card-badge svg,
+.guide-card h3 svg,
+.issue-box h4 svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor; /* يخلي الأيقونة تاخد نفس لون الكلمة اللي جنبها تلقائياً */
+  flex-shrink: 0;
+}
+
+.guide-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.issue-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.issue-box:last-child {
+  margin-bottom: 0;
+}
+
+.issue-box h4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #b91c1c;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.issue-box p {
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.issue-box strong {
+  color: #0f172a;
+}
+
+/* --- Responsive Controls --- */
+@media (max-width: 1024px) {
+  .accordion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .accordion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trouble-guide-section,
+  .seo-keywords-section {
+    padding: 24px 16px;
+  }
+}
 .seo-container .legal-tab-btn {
   background: #334155;
   color: #94a3b8;
