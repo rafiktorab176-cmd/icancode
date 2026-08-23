@@ -1,28 +1,70 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("mobile-menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const dropdownBtn = document.getElementById("mobile-dropdown-btn");
-  const mobileDropdown = document.getElementById("mobile-dropdown");
-  const dropdownIcon = document.getElementById("mobile-dropdown-icon");
+  // 1. تحديد عناصر القائمة والتنقيل
+  const menuBtn = document.querySelector("#mobile-menu-btn, .hamburger-btn");
+  const mobileMenu = document.querySelector("#mobile-menu, .mobile-menu");
 
-  // فتح وإغلاق قائمة الموبايل
+  const dropdownBtn = document.querySelector(
+    "#mobile-dropdown-btn, .mobile-dropdown-btn",
+  );
+  const mobileDropdown = document.querySelector(
+    "#mobile-dropdown, .mobile-dropdown-menu",
+  );
+  const dropdownIcon = document.querySelector(
+    "#mobile-dropdown-icon, .dropdown-icon, .mobile-dropdown-btn svg",
+  );
+
+  // 2. فتح وإغلاق القائمة الرئيسية (الهامبرجر)
   if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () => {
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("active");
       mobileMenu.classList.toggle("hidden");
+
+      if (
+        (mobileMenu.classList.contains("hidden") ||
+          !mobileMenu.classList.contains("active")) &&
+        mobileDropdown
+      ) {
+        mobileDropdown.classList.remove("active");
+        mobileDropdown.classList.add("hidden");
+        if (dropdownIcon) dropdownIcon.classList.remove("rotate-180");
+      }
     });
   }
 
-  // فتح وإغلاق قائمة الخدمات في الموبايل
+  // 3. فتح وإغلاق قائمة (خدماتنا)
   if (dropdownBtn && mobileDropdown) {
-    dropdownBtn.addEventListener("click", () => {
+    dropdownBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      mobileDropdown.classList.toggle("active");
       mobileDropdown.classList.toggle("hidden");
+
       if (dropdownIcon) {
         dropdownIcon.classList.toggle("rotate-180");
       }
     });
   }
-});
-document.addEventListener("DOMContentLoaded", function () {
+
+  // 4. إغلاق القوائم عند الضغط خارج الـ Navbar
+  document.addEventListener("click", (e) => {
+    if (
+      mobileMenu &&
+      !mobileMenu.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
+      mobileMenu.classList.remove("active");
+      mobileMenu.classList.add("hidden");
+      if (mobileDropdown) {
+        mobileDropdown.classList.remove("active");
+        mobileDropdown.classList.add("hidden");
+      }
+      if (dropdownIcon) dropdownIcon.classList.remove("rotate-180");
+    }
+  });
+
+  // 5. التبديل بين ألسنة الشروط والسياسات (Legal Tabs)
   const tabButtons = document.querySelectorAll(".legal-tab-btn");
 
   tabButtons.forEach((btn) => {
@@ -33,25 +75,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!container || !tabId) return;
 
-      // 1. إلغاء تفعيل جميع الأزرار
       const buttons = container.querySelectorAll(".legal-tab-btn");
       buttons.forEach((b) => {
         b.classList.remove("active");
         b.setAttribute("aria-selected", "false");
       });
 
-      // 2. تفعيل الزر الحالي
       this.classList.add("active");
       this.setAttribute("aria-selected", "true");
 
-      // 3. إخفاء جميع التبويبات
       const contents = container.querySelectorAll(".legal-tab-content");
       contents.forEach((content) => {
         content.classList.remove("active");
         content.style.display = "none";
       });
 
-      // 4. إظهار التبويب المطلوب
       const targetContent = container.querySelector("#" + tabId);
       if (targetContent) {
         targetContent.classList.add("active");
@@ -60,35 +98,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// كود منع النسخ والزر الأيمن
-document.addEventListener("DOMContentLoaded", function () {
-  // 1. منع فتح القائمة بالزر الأيمن (Right-Click)
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
 
-  // 2. منع اختصارات النسخ والقص وعرض المصدر وأدوات المطورين
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.ctrlKey &&
-      (e.key === "c" ||
-        e.key === "C" ||
-        e.key === "x" ||
-        e.key === "X" ||
-        e.key === "u" ||
-        e.key === "U" ||
-        e.key === "s" ||
-        e.key === "S")
-    ) {
-      e.preventDefault();
-    }
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey &&
-        e.shiftKey &&
-        (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j"))
-    ) {
-      e.preventDefault();
-    }
-  });
+// 6. الحماية والمنع (Right-Click & DevTools Shortcuts)
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener("keydown", function (e) {
+  // منع Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+  if (
+    e.ctrlKey &&
+    (e.key === "c" ||
+      e.key === "C" ||
+      e.key === "x" ||
+      e.key === "X" ||
+      e.key === "u" ||
+      e.key === "U" ||
+      e.key === "s" ||
+      e.key === "S")
+  ) {
+    e.preventDefault();
+  }
+  // منع F12 و Ctrl+Shift+I / J
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey &&
+      e.shiftKey &&
+      (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j"))
+  ) {
+    e.preventDefault();
+  }
 });

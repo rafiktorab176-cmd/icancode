@@ -909,6 +909,241 @@ button {
 .seo-queries-list li:hover {
   background: #dbeafe;
 }
+/* ==========================================================================
+   JAC BRAND SEO MATRIX & HOTLINES SECTION CSS
+   ========================================================================== */
+
+/* --- Card Shell & Container --- */
+.seo-matrix-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.seo-matrix-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seo-keywords-title {
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.seo-keywords-intro {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+/* --- Data Table Styling --- */
+.seo-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 32px;
+}
+
+.seo-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.seo-data-table thead {
+  background-color: #0284c7; /* JAC Vibrant Blue */
+  color: #ffffff;
+}
+
+.seo-data-table th {
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.seo-data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.seo-data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.seo-data-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.seo-data-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.seo-data-table td strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* --- Table Hotline Phone Links (JAC Blue Button) --- */
+.table-link {
+  display: inline-block;
+  background-color: #0369a1; /* JAC Primary Darker Blue */
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  direction: ltr;
+}
+
+.table-link:hover {
+  background-color: #0c4a6e;
+  transform: translateY(-1px);
+}
+
+/* --- SEO Search Queries (Tag Cloud) --- */
+.seo-queries-list {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.seo-queries-list h4 {
+  color: #0f172a;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.seo-queries-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.seo-queries-list li {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.seo-queries-list li:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+  background-color: #f0f9ff;
+}
+
+/* ==========================================================================
+   SEO KEYWORDS CARDS SECTION
+   ========================================================================== */
+
+.seo-keywords-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.seo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-seo-title {
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.seo-keyword-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.seo-keyword-card h3 {
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.seo-keyword-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.seo-keyword-card p:last-child {
+  margin-bottom: 0;
+}
+
+.seo-keyword-card strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .seo-matrix-section,
+  .seo-keywords-section {
+    padding: 24px 16px;
+  }
+
+  .seo-keywords-title,
+  .main-seo-title {
+    font-size: 1.3rem;
+  }
+
+  .seo-data-table {
+    font-size: 0.88rem;
+  }
+
+  .seo-data-table th,
+  .seo-data-table td {
+    padding: 10px 12px;
+  }
+
+  .table-link {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
+
+  .seo-queries-list li {
+    font-size: 0.78rem;
+    padding: 5px 10px;
+  }
+}
 /* Legal Section Glassmorphism Design */
 .seo-container .legal-section {
   background: #1e293b;

@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".legal-tab-btn");
 
@@ -94,83 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// Dynamic Schema Injection for White Point Maintenance Page
-document.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname;
 
-  // يتم التفعيل إذا كان رابط الصفحة يحتوي على white-point أو whitepoint
-  if (path.includes("white-point") || path.includes("whitepoint")) {
-    const whitePointSchema = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Service",
-          "@id": "https://hotline-19580.com/white-point/#service",
-          name: "المركز المعتمد لصيانة وايت بوينت في مصر",
-          serviceType: "Appliance Repair Service",
-          brand: {
-            "@type": "Brand",
-            name: "White Point",
-          },
-          provider: {
-            "@type": "LocalBusiness",
-            "@id": "https://hotline-19580.com/#organization",
-            name: "المركز المعتمد لصيانة الأجهزة المنزلية",
-            url: "https://hotline-19580.com/",
-            telephone: ["19580", "17718", "15607"],
-            image: "https://hotline-19580.com/images/og-image.jpg",
-            priceRange: "$$",
-            address: {
-              "@type": "PostalAddress",
-              addressCountry: "EG",
-              addressLocality: "القاهرة",
-              addressRegion: "جميع المحافظات",
-            },
-          },
-          areaServed: [
-            { "@type": "State", name: "القاهرة" },
-            { "@type": "State", name: "الجيزة" },
-            { "@type": "State", name: "الإسكندرية" },
-            { "@type": "State", name: "البحيرة" },
-            { "@type": "State", name: "الغربية" },
-          ],
-          hasOfferCatalog: {
-            "@type": "OfferCatalog",
-            name: "خدمات صيانة أجهزة وايت بوينت",
-            itemListElement: [
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "صيانة ثلاجات وغسالات وايت بوينت بقطع غيار أصلية",
-                },
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "إصلاح أعطال ديب فريزر وغسالات أطباق وايت بوينت",
-                },
-              },
-            ],
-          },
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://hotline-19580.com/white-point/#webpage",
-          url: window.location.href,
-          name: "المركز المعتمد لصيانة وايت بوينت | ارقام الخدمة الرسمية 19580 - 17718 - 15607",
-          inLanguage: "ar",
-        },
-      ],
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify(whitePointSchema);
-    document.head.appendChild(script);
-  }
-});
 // 1. منع فتح قائمة الزر الأيمن (Right-Click)
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();

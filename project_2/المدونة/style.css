@@ -546,7 +546,496 @@ button {
   color: #7dd3fc;
   transform: translateX(-3px);
 }
+/* ==========================================================================
+   BLOG SECTIONS STYLING (CAIRO FONT & UPDATED LAYOUT)
+   ========================================================================== */
 
+/* Global Font Definition */
+.blog-seo-section,
+.blog-seo-section * {
+  font-family:
+    "Cairo",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
+  box-sizing: border-box;
+}
+
+/* Layout & Containers */
+.blog-seo-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  direction: rtl;
+}
+
+.blog-seo-section.alt-bg {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-badge {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #000000;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.blog-main-title {
+  color: #0f172a;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.blog-description {
+  color: #475569;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Section 1: Grid (2 Main Columns) */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card-body {
+  padding: 24px;
+}
+
+.blog-card-title {
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #0284c7;
+  padding-bottom: 8px;
+}
+
+.blog-sub-title {
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 18px 0 10px 0;
+}
+
+.blog-card-text {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Detailed Solutions List */
+.blog-solutions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.blog-solutions-list li {
+  background: #f8fafc;
+  border-right: 3px solid #0284c7;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.blog-solutions-list strong {
+  display: block;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.blog-solutions-list span {
+  color: #475569;
+}
+
+.blog-tags-inline {
+  background-color: #f1f5f9;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+/* Section 2: Grid (4 Mini Columns) */
+.blog-grid-four {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.blog-mini-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mini-card-title {
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mini-card-text {
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.mini-card-list {
+  padding-right: 16px;
+  margin-bottom: 14px;
+}
+
+.mini-card-list li {
+  color: #334155;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.mini-card-list span {
+  color: #000202;
+  font-weight: 600;
+}
+
+.brand-pills {
+  display: block;
+  font-size: 0.78rem;
+  color: #0284c7;
+  background-color: #f0f9ff;
+  border: 1px dashed #bae6fd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Call To Action & Hotline Styling */
+.blog-action-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sub-contact {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.sub-contact a {
+  color: #0f172a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.blog-footer-cta {
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.blog-footer-cta p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.cta-sub-links {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.cta-sub-links .sec-link {
+  color: #0284c7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.blog-btn {
+  display: inline-block;
+  background-color: #0284c7;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.blog-btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+.blog-btn.alt-btn {
+  background-color: #0f172a;
+}
+
+.blog-btn.alt-btn:hover {
+  background-color: #1e293b;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .blog-seo-section {
+    padding: 30px 16px;
+  }
+
+  .blog-main-title {
+    font-size: 1.4rem;
+  }
+
+  .blog-grid,
+  .blog-grid-four {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .blog-btn {
+    width: 100%;
+  }
+}
+/* ==========================================================================
+   BLOG SECTION 3: BRAND TRUST & HERO STYLING
+   ========================================================================== */
+
+.brand-hero-bg {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 60px 20px;
+}
+
+.brand-hero-bg .dark-title {
+  color: #ffffff;
+}
+
+.brand-hero-bg .dark-desc {
+  color: #94a3b8;
+}
+
+.gold-badge {
+  background-color: #fef3c7 !important;
+  color: #050300 !important;
+}
+
+/* Features Grid */
+.brand-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.feature-card.highlighted {
+  border: 2px solid #0284c7;
+  background: rgba(2, 132, 199, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.feature-link {
+  display: inline-block;
+  color: #ffffff;
+  background: #0284c7;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.feature-link.gold-btn {
+  background: #d97706;
+}
+
+/* SEO Content Block */
+.brand-seo-content {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  border-right: 4px solid #0284c7;
+}
+
+.seo-block-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.seo-block-text {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+/* Triple Hotline Banner */
+.hotline-triple-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  text-align: center;
+}
+
+.hotline-box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotline-box.main-box {
+  background: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.4);
+}
+
+.hotline-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.main-box .hotline-tag {
+  color: #e0f2fe;
+}
+
+.sec-box .hotline-tag {
+  color: #64748b;
+}
+
+.hotline-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.1;
+  margin: 6px 0;
+}
+
+.main-box .hotline-number {
+  color: #ffffff;
+}
+
+.sec-box .hotline-number {
+  color: #0f172a;
+}
+
+.hotline-sub {
+  font-size: 0.75rem;
+}
+
+.main-box .hotline-sub {
+  color: #bae6fd;
+}
+
+.sec-box .hotline-sub {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .brand-features-grid,
+  .hotline-triple-banner {
+    grid-template-columns: 1fr;
+  }
+}
 /* ================= MODAL STYLES ================= */
 .tech-modal {
   position: fixed;

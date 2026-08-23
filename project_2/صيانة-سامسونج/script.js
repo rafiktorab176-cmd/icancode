@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dropdownIcon) dropdownIcon.classList.remove("rotate-180");
     }
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
+
+  // 5. إدارة التبويبات (Legal Tabs)
   const tabButtons = document.querySelectorAll(".legal-tab-btn");
 
   tabButtons.forEach((btn) => {
@@ -67,25 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!container || !tabId) return;
 
-      // 1. إلغاء تفعيل جميع الأزرار
+      // إلغاء تفعيل جميع الأزرار
       const buttons = container.querySelectorAll(".legal-tab-btn");
       buttons.forEach((b) => {
         b.classList.remove("active");
         b.setAttribute("aria-selected", "false");
       });
 
-      // 2. تفعيل الزر الحالي
+      // تفعيل الزر الحالي
       this.classList.add("active");
       this.setAttribute("aria-selected", "true");
 
-      // 3. إخفاء جميع التبويبات
+      // إخفاء جميع التبويبات
       const contents = container.querySelectorAll(".legal-tab-content");
       contents.forEach((content) => {
         content.classList.remove("active");
         content.style.display = "none";
       });
 
-      // 4. إظهار التبويب المطلوب
+      // إظهار التبويب المطلوب
       const targetContent = container.querySelector("#" + tabId);
       if (targetContent) {
         targetContent.classList.add("active");
@@ -94,92 +94,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-// Dynamic Schema Injection for Samsung Maintenance Page
-document.addEventListener("DOMContentLoaded", function () {
-  const path = window.location.pathname;
 
-  // يتم التفعيل إذا كان رابط الصفحة يحتوي على samsung
-  if (path.includes("samsung")) {
-    const samsungSchema = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Service",
-          "@id": "https://hotline-19580.com/samsung/#service",
-          name: "المركز المعتمد لصيانة سامسونج في مصر",
-          serviceType: "Appliance Repair Service",
-          brand: {
-            "@type": "Brand",
-            name: "Samsung",
-            alternateName: "سامسونج",
-          },
-          provider: {
-            "@type": "LocalBusiness",
-            "@id": "https://hotline-19580.com/#organization",
-            name: "المركز المعتمد لصيانة الأجهزة المنزلية",
-            url: "https://hotline-19580.com/",
-            telephone: ["19580", "17718", "15607"],
-            image: "https://hotline-19580.com/images/og-image.jpg",
-            priceRange: "$$",
-            address: {
-              "@type": "PostalAddress",
-              addressCountry: "EG",
-              addressLocality: "القاهرة",
-              addressRegion: "جميع المحافظات",
-            },
-          },
-          areaServed: [
-            { "@type": "State", name: "القاهرة" },
-            { "@type": "State", name: "الجيزة" },
-            { "@type": "State", name: "الإسكندرية" },
-            { "@type": "State", name: "البحيرة" },
-            { "@type": "State", name: "الغربية" },
-          ],
-          hasOfferCatalog: {
-            "@type": "OfferCatalog",
-            name: "خدمات صيانة أجهزة سامسونج",
-            itemListElement: [
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "صيانة شاشات وثلاجات وغسالات سامسونج بقطع غيار أصلية",
-                },
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "إصلاح أعطال غسالات الأطباق والميكروويف والديب فريزر سامسونج",
-                },
-              },
-            ],
-          },
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://hotline-19580.com/samsung/#webpage",
-          url: window.location.href,
-          name: "المركز المعتمد لصيانة سامسونج | ارقام الخدمة 19580 - 17718 - 15607",
-          inLanguage: "ar",
-        },
-      ],
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify(samsungSchema);
-    document.head.appendChild(script);
-  }
-});
-// 1. منع فتح قائمة الزر الأيمن (Right-Click)
+// 6. الحماية والمنع (Right-Click & DevTools Shortcuts)
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
 });
 
-// 2. منع اختصارات لوحة التحكم الخاصة بالنسخ والقص وأدوات المطورين
 document.addEventListener("keydown", function (e) {
-  // منع Ctrl+C, Ctrl+X, Ctrl+U (عرض المصدر), Ctrl+S (حفظ الصفحة)
+  // منع Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
   if (
     e.ctrlKey &&
     (e.key === "c" ||
@@ -193,7 +115,7 @@ document.addEventListener("keydown", function (e) {
   ) {
     e.preventDefault();
   }
-  // منع F12 و Ctrl+Shift+I (فتح أدوات المطورين Inspect)
+  // منع F12 و Ctrl+Shift+I / J
   if (
     e.key === "F12" ||
     (e.ctrlKey &&
