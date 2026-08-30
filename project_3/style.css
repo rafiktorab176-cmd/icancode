@@ -1,0 +1,1274 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* تنسيق الهيدر */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px; /* مسافة متوازنة لكي تكفي جميع الروابط بجانب اللوجو على اللابتوب */
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px; /* حجم خط مثالي للشاشات الكبيرة */
+  font-weight: 700;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap; /* يمنع نزول الكلام تحت بعضه نهائياً على اللاب توب */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2e7d32;
+}
+
+/* زر الهمبرجر للموبايل (مخفي افتراضياً بالشاشات الكبيرة) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* قسم السلايدر بمساحة واسعة */
+.slider-section {
+  padding: 20px 0;
+  background-color: #1a1a1a;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-track {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+}
+
+.slide {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* الصور الجانبية الصغيرة */
+.side-slide {
+  width: 22%;
+  height: 400px;
+  opacity: 0.5;
+  filter: brightness(0.6);
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* الصورة الرئيسية البارزة في المنتصف */
+.active-slide {
+  width: 50%;
+  height: 480px;
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* أزرار الاتصال العامة */
+.btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.call-btn {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+}
+
+/* شريط أزرار التواصل الثابت أسفل الصفحة مع التمرير */
+.fixed-actions-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 20px;
+  border-radius: 40px;
+  backdrop-filter: blur(5px);
+}
+
+/* أزرار التنقل (السهمين يمين ويسار) */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.prev-btn {
+  right: 25px;
+}
+
+.next-btn {
+  left: 25px;
+}
+
+/* تنسيقات قسم المحتوى */
+.content-section {
+  padding: 50px 0;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.main-img-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-box {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.article-box h2 {
+  font-size: 26px;
+  color: #1a365d;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.article-box h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #3182ce;
+  border-radius: 2px;
+}
+
+.article-box p {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* شبكة الخدمات والأقسام */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.service-card {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  padding: 25px;
+  border-radius: 8px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  color: #2b6cb0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+/* التجاوب مع الشاشات الصغيرة والهواتف */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block; /* إظهار زر الهمبرجر في الموبايل والتابلت */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    display: none; /* إخفاء القائمة افتراضياً حتى يتم الضغط على الزر */
+  }
+
+  .nav-links.active {
+    display: flex; /* إظهار القائمة عند تفعيلها عبر الجافاسكريبت */
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #edf2f7;
+    white-space: normal;
+  }
+
+  .side-slide {
+    display: none;
+  }
+
+  .active-slide {
+    width: 90%;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    padding: 30px 15px;
+  }
+
+  .article-box h2 {
+    font-size: 22px;
+  }
+
+  .article-box p {
+    font-size: 15px;
+    text-align: right;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 25px 0;
+  }
+}
+/* تنسيقات صفحة صيانة الثلاجات (ريسبونسف بالكامل) */
+.fridge-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.fridge-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.reverse-layout .fridge-grid {
+  flex-direction: row-reverse;
+}
+
+.fridge-text {
+  flex: 1;
+  width: 100%;
+}
+
+.fridge-text h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.fridge-text h3 {
+  font-size: 18px;
+  color: #2b6cb0;
+  margin: 20px 0 10px 0;
+}
+
+.fridge-text h4 {
+  font-size: 15px;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.fridge-text p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.fridge-text ul {
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.fridge-text li {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.fridge-image {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  max-height: 450px;
+}
+
+.fridge-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* الأسئلة الشائعة */
+.faq-section {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* جدول رموز الأعطال المتجاوب */
+.error-codes-section {
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.error-codes-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 25px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* يتيح التمرير الأفقي بسلاسة على الهواتف دون كسر التصميم */
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.error-table {
+  width: 100%;
+  min-width: 600px; /* يحافظ على تنسيق الجدول على الشاشات الصغيرة مع خاصية التمرير */
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.error-table th {
+  background-color: #007765;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.error-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+.error-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* زر طلب الصيانة السفلي */
+.action-button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-main-yellow {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-main-yellow:hover {
+  transform: translateY(-2px);
+}
+
+/* التجاوب مع التابلت والهواتف (Media Queries) */
+@media (max-width: 992px) {
+  .fridge-grid,
+  .reverse-layout .fridge-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .fridge-image {
+    width: 100%;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fridge-text h2 {
+    font-size: 20px;
+  }
+
+  .fridge-text h3 {
+    font-size: 16px;
+  }
+
+  .fridge-text p,
+  .fridge-text li {
+    font-size: 13px;
+  }
+
+  .faq-section h2,
+  .error-codes-section h2 {
+    font-size: 20px;
+  }
+}
+/* تنسيقات صفحة صيانة ديب فريزر كريازي (ريسبونسف بالكامل) */
+.fridge-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.fridge-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.reverse-layout .fridge-grid {
+  flex-direction: row-reverse;
+}
+
+.fridge-text {
+  flex: 1;
+  width: 100%;
+}
+
+.fridge-text h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.fridge-text h3 {
+  font-size: 18px;
+  color: #2b6cb0;
+  margin: 20px 0 10px 0;
+}
+
+.fridge-text h4 {
+  font-size: 15px;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.fridge-text p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.fridge-text ul {
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.fridge-text li {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.fridge-image {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  max-height: 450px;
+}
+
+.fridge-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* الأسئلة الشائعة */
+.faq-section {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* جدول رموز الأعطال المتجاوب */
+.error-codes-section {
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.error-codes-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 25px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.error-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.error-table th {
+  background-color: #007765;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.error-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+.error-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* زر طلب الصيانة السفلي */
+.action-button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-main-yellow {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-main-yellow:hover {
+  transform: translateY(-2px);
+}
+
+/* التجاوب مع التابلت والهواتف (Media Queries) */
+@media (max-width: 992px) {
+  .fridge-grid,
+  .reverse-layout .fridge-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .fridge-image {
+    width: 100%;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fridge-text h2 {
+    font-size: 20px;
+  }
+
+  .fridge-text h3 {
+    font-size: 16px;
+  }
+
+  .fridge-text p,
+  .fridge-text li {
+    font-size: 13px;
+  }
+
+  .faq-section h2,
+  .error-codes-section h2 {
+    font-size: 20px;
+  }
+
+  .btn-main-yellow {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+/* تنسيقات صفحة صيانة غسالات كريازي (ريسبونسف بالكامل) */
+.washer-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.washer-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.reverse-layout .washer-grid {
+  flex-direction: row-reverse;
+}
+
+.washer-text {
+  flex: 1;
+  width: 100%;
+}
+
+.washer-text h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.washer-text h3 {
+  font-size: 18px;
+  color: #2b6cb0;
+  margin: 20px 0 10px 0;
+}
+
+.washer-text h4 {
+  font-size: 15px;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.washer-text p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.washer-text ul {
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.washer-text li {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.washer-image {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  max-height: 450px;
+}
+
+.washer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* الأسئلة الشائعة */
+.faq-section {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* جدول رموز الأعطال المتجاوب */
+.error-codes-section {
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.error-codes-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 25px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.error-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.error-table th {
+  background-color: #007765;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.error-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+.error-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* زر طلب الصيانة السفلي والخط الساخن */
+.action-button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-main-yellow {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-main-yellow:hover {
+  transform: translateY(-2px);
+}
+
+/* التجاوب مع التابلت والهواتف (Media Queries) */
+@media (max-width: 992px) {
+  .washer-grid,
+  .reverse-layout .washer-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .washer-image {
+    width: 100%;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .washer-text h2 {
+    font-size: 20px;
+  }
+
+  .washer-text h3 {
+    font-size: 16px;
+  }
+
+  .washer-text p,
+  .washer-text li {
+    font-size: 13px;
+  }
+
+  .faq-section h2,
+  .error-codes-section h2 {
+    font-size: 20px;
+  }
+
+  .btn-main-yellow {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+/* تنسيقات صفحة صيانة تكييفات كريازي (ريسبونسف بالكامل) */
+.ac-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ac-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.reverse-layout .ac-grid {
+  flex-direction: row-reverse;
+}
+
+.ac-text {
+  flex: 1;
+  width: 100%;
+}
+
+.ac-text h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 15px;
+}
+
+.ac-text h3 {
+  font-size: 18px;
+  color: #2b6cb0;
+  margin: 20px 0 10px 0;
+}
+
+.ac-text h4 {
+  font-size: 15px;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.ac-text p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.ac-text ul {
+  margin-right: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.ac-text li {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.ac-image {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  max-height: 450px;
+}
+
+.ac-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* الأسئلة الشائعة */
+.faq-section {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* جدول رموز الأعطال المتجاوب */
+.error-codes-section {
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.error-codes-section h2 {
+  font-size: 24px;
+  color: #1a365d;
+  margin-bottom: 25px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.error-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.error-table th {
+  background-color: #007765;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.error-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+.error-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* زر طلب الصيانة السفلي والخط الساخن */
+.action-button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-main-yellow {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 14px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-main-yellow:hover {
+  transform: translateY(-2px);
+}
+
+/* التجاوب مع التابلت والهواتف (Media Queries) */
+@media (max-width: 992px) {
+  .ac-grid,
+  .reverse-layout .ac-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ac-image {
+    width: 100%;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ac-text h2 {
+    font-size: 20px;
+  }
+
+  .ac-text h3 {
+    font-size: 16px;
+  }
+
+  .ac-text p,
+  .ac-text li {
+    font-size: 13px;
+  }
+
+  .faq-section h2,
+  .error-codes-section h2 {
+    font-size: 20px;
+  }
+
+  .btn-main-yellow {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
