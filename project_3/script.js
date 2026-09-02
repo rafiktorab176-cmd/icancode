@@ -55,3 +55,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document
+  .getElementById("whatsappForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault(); // منع إعادة تحميل الصفحة
+
+    // جلب البيانات المدخلة
+    var name = document.getElementById("clientName").value;
+    var phone = document.getElementById("clientPhone").value;
+    var device = document.getElementById("deviceType").value;
+    var address = document.getElementById("clientAddress").value;
+
+    // رقم الواتساب الخاص بك (مضاف إليه كود الدولة 20 لمصر)
+    var whatsappNumber = "201289966660";
+
+    // تنسيق رسالة الواتساب بشكل احترافي ومرتب
+    var message =
+      "🔹 *طلب صيانة جديد من الموقع* 🔹\n\n" +
+      "👤 *الاسم:* " +
+      name +
+      "\n" +
+      "📞 *رقم الهاتف:* " +
+      phone +
+      "\n" +
+      "🛠 *الجهاز:* " +
+      device +
+      "\n" +
+      "📍 *العنوان:* " +
+      address;
+
+    // ترميز الرسالة لتتوافق مع الروابط
+    var encodedMessage = encodeURIComponent(message);
+
+    // فتح رابط الواتساب بالبيانات
+    var whatsappURL =
+      "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
+    window.open(whatsappURL, "_blank");
+  });

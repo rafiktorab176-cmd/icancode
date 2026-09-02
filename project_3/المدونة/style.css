@@ -1,0 +1,1006 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* تنسيق الهيدر */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+}
+
+/* اللوجو على اليمين */
+.logo {
+  margin-left: auto;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+  display: block;
+}
+
+/* روابط التنقل */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2e7d32;
+}
+
+/* زر الهمبرجر للموبايل (مخفي بالشاشات الكبيرة) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* أزرار الاتصال العامة */
+.btn {
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.call-btn {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+}
+
+/* شريط أزرار التواصل الثابت أسفل الصفحة */
+.fixed-actions-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 20px;
+  border-radius: 40px;
+  backdrop-filter: blur(5px);
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة (Responsive) */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block; /* إظهار زر القائمة في الموبايل والتابلت */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.4s ease-in-out,
+      padding 0.4s ease;
+    margin-right: 0;
+  }
+
+  /* عند تفعيل القائمة تظهر وتتوسع بالارتفاع الكافي لجميع العناصر */
+  .nav-links.active {
+    max-height: 500px;
+    padding: 15px 20px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none; /* إزالة الخط السفلي لآخر عنصر لتنسيق أفضل */
+  }
+}
+/* تنسيق محتوى المدونة والمقالات */
+.main-content {
+  padding: 40px 20px;
+}
+
+.blog-article {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.blog-article h1 {
+  color: #c0392b;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.blog-article h2 {
+  color: #c0392b;
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  border-right: 4px solid #c0392b;
+  padding-right: 10px;
+}
+
+.blog-article p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.blog-article .intro-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.blog-article ul {
+  list-style-type: disc;
+  margin-right: 25px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.blog-article li {
+  margin-bottom: 8px;
+}
+
+/* تنسيق حاوية الصور داخل المقال */
+.blog-img-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.blog-img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* التجاوب الإضافي للمقالات على الشاشات الصغيرة */
+@media (max-width: 992px) {
+  .blog-article {
+    padding: 20px;
+  }
+
+  .blog-article h1 {
+    font-size: 22px;
+  }
+
+  .blog-article h2 {
+    font-size: 18px;
+  }
+}
+/* تنسيق محتوى المدونة والمقالات */
+.main-content {
+  padding: 40px 20px;
+}
+
+.blog-article {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.blog-article h1 {
+  color: #c0392b;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.blog-article h2 {
+  color: #c0392b;
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  border-right: 4px solid #c0392b;
+  padding-right: 10px;
+}
+
+.blog-article p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.blog-article .intro-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.blog-article ul {
+  list-style-type: disc;
+  margin-right: 25px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.blog-article li {
+  margin-bottom: 8px;
+}
+
+/* تنسيق حاوية الصور داخل المقال */
+.blog-img-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.blog-img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* أزرار الاتصال العامة */
+.btn {
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.call-btn {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+}
+
+/* شريط أزرار التواصل الثابت أسفل الصفحة */
+.fixed-actions-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 20px;
+  border-radius: 40px;
+  backdrop-filter: blur(5px);
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة (Responsive) */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.4s ease-in-out,
+      padding 0.4s ease;
+    margin-right: 0;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+    padding: 15px 20px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .blog-article {
+    padding: 20px;
+  }
+
+  .blog-article h1 {
+    font-size: 22px;
+  }
+
+  .blog-article h2 {
+    font-size: 18px;
+  }
+}
+/* تنسيقات سيكشن مدونة كريازي بألوان الهوية المميزة */
+.kiriazi-blog-banner {
+  background: linear-gradient(135deg, #059154 0%, #145d02 100%);
+  color: #ffffff;
+  padding: 50px 20px;
+  border-radius: 16px;
+  margin: 30px auto;
+  box-shadow: 0 10px 30px rgba(169, 29, 34, 0.25);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* إضافة لمسة جمالية في الخلفية */
+.kiriazi-blog-banner::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.kiriazi-banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.blog-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fdfcfc;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.kiriazi-blog-banner h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.kiriazi-blog-banner p {
+  font-size: 17px;
+  color: #fce4e4;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 700px;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kiriazi-btn-primary {
+  background-color: #f1c40f;
+  color: #000000;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.kiriazi-btn-primary:hover {
+  background-color: #f8faf8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.kiriazi-btn-secondary {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.kiriazi-btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة */
+@media (max-width: 768px) {
+  .kiriazi-blog-banner {
+    padding: 35px 15px;
+    border-radius: 12px;
+  }
+
+  .kiriazi-blog-banner h2 {
+    font-size: 22px;
+  }
+
+  .kiriazi-blog-banner p {
+    font-size: 15px;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .kiriazi-btn-primary,
+  .kiriazi-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* تنسيقات مقال صيانة كريازي بالهوية البصرية الرسمية */
+.kiriazi-article-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Cairo", sans-serif;
+  color: #333333;
+  line-height: 1.8;
+  direction: rtl;
+  text-align: right;
+}
+
+.article-header {
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.kiriazi-article-container h1 {
+  font-size: 32px;
+  color: #a91d22; /* لون كريازي الأساسي */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: #777;
+}
+
+.article-lead {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  background-color: #fcf4f4;
+  padding: 15px 20px;
+  border-right: 4px solid #a91d22;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.kiriazi-section {
+  margin-bottom: 35px;
+}
+
+.kiriazi-article-container h2 {
+  font-size: 22px;
+  color: #a91d22;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.kiriazi-article-container h3 {
+  font-size: 18px;
+  color: #222;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.kiriazi-article-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.kiriazi-list,
+.kiriazi-steps {
+  margin: 15px 0 20px 20px;
+  padding-right: 20px;
+}
+
+.kiriazi-list li,
+.kiriazi-steps li {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* تنسيق قسم الأسئلة الشائعة */
+.faq-section {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.faq-box {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-right: 4px solid #a91d22;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.faq-box h3 {
+  color: #a91d22;
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.faq-box p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة */
+@media (max-width: 768px) {
+  .kiriazi-article-container {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .kiriazi-article-container h1 {
+    font-size: 24px;
+  }
+
+  .kiriazi-article-container h2 {
+    font-size: 19px;
+  }
+}
+/* تنسيقات سيكشن سياسة الخصوصية وإخلاء المسؤولية */
+.policy-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.policy-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+}
+
+.policy-header h2 {
+  font-size: 26px;
+  color: #007765; /* أخضر كريازي */
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.policy-header p {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+/* تخطيط البطاقات جنباً إلى جنب (Grid) */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.policy-card {
+  background: #f8fafc;
+  padding: 35px 25px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* خط علوي ملون لكل بطاقة (أخضر وأصفر) */
+.policy-card:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #007765; /* أخضر كريازي */
+}
+
+.policy-card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #f1c40f; /* أصفر كريازي */
+}
+
+.policy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 119, 101, 0.08);
+}
+
+.policy-icon {
+  font-size: 32px;
+  color: #007765;
+  margin-bottom: 15px;
+}
+
+.policy-card:nth-child(2) .policy-icon {
+  color: #d4ac0d; /* تدرج أصفر داكن للأيقونة الثانية */
+}
+
+.policy-card h3 {
+  font-size: 18px;
+  color: #1a365d;
+  margin-bottom: 12px;
+}
+
+.policy-card > p {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.policy-card ul {
+  margin-right: 18px;
+  padding: 0;
+}
+
+.policy-card li {
+  font-size: 13.5px;
+  color: #4a5568;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.policy-card li strong {
+  color: #1a365d;
+}
+
+/* شريط الملاحظة السفلي */
+.policy-footer-note {
+  background-color: #fefce8; /* خلفية صفراء فاتحة جداً متناسقة مع الهوية */
+  border: 1px solid #fef08a;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.policy-footer-note strong {
+  color: #854d0e;
+}
+
+/* التجاوب مع الهواتف والتابلت */
+@media (max-width: 768px) {
+  .policy-header h2 {
+    font-size: 22px;
+  }
+
+  .policy-card {
+    padding: 25px 20px;
+  }
+}
+/* تنسيق فقرة المقال والروابط الداخلية */
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+/* تنسيق الباك لينك داخل الفقرة */
+p a {
+  color: #ef0404;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 3px;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* تأثير عند المرور بالماوس على الرابط */
+p a:hover {
+  color: #ffffff;
+  background-color: #dd0707;
+  text-decoration: none;
+  border-radius: 4px;
+}
+/* =========================================
+   تنسيقات الفوتر (Footer)
+========================================= */
+.site-footer {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding-top: 50px;
+  margin-top: 40px;
+  font-family: "Cairo", sans-serif;
+  border-top: 4px solid #37d32f;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col h3::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #37d32f;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  border: none;
+}
+
+.footer-logo h3::after {
+  display: none;
+}
+
+.site-footer p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* القوائم والروابط داخل الفوتر */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    padding-right 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #08da19;
+  padding-right: 5px;
+}
+
+/* معلومات الاتصال والخط الساخن والواتساب */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-contact li i {
+  color: #f7faf6;
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+
+.footer-contact .contact-number {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 2px 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.footer-contact .contact-number:hover {
+  background: #21a308;
+  color: #ffffff;
+}
+
+/* شريط الحقوق السفلي */
+.footer-bottom {
+  background-color: #0f172a;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #334155;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 30px;
+  }
+}
