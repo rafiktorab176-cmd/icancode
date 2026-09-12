@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مؤسسة المعتمد لصيانة الأجهزة المنزلية</title>
+
+    <!-- أيقونة الموقع (Favicon) صيانة فخمة وملكية -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M50 10 L85 25 V50 C85 72 50 90 50 90 C50 90 15 72 15 50 V25 Z' fill='none' stroke='%23b58e3e' stroke-width='6'/%3E%3Cpath d='M65 35 L45 55 M42 58 L32 68 C30 70 27 70 25 68 C23 66 23 63 25 61 L35 51 M58 42 L63 37 C67 33 73 33 77 37 C81 41 81 47 77 51 L72 56' fill='none' stroke='%23ffffff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='68' cy='42' r='4' fill='%23b58e3e'/%3E%3C/svg%3E"
+    />
+
+    <!-- استيراد خط Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ربط ملف الـ CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- بداية الـ Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- اللوجو الفخم مع الاسم (ظاهر دايماً ديسكتوب وموبايل) -->
+        <a href="index.html" class="logo-area">
+          <div class="logo-emblem">
+            <i class="fa-solid fa-shield-alt"></i>
+            <span class="koofi-m">م</span>
+          </div>
+          <div class="logo-text-area">
+            <span class="main-brand">مؤسسة المعتمد</span>
+            <span class="sub-brand">لصيانة الأجهزة المنزلية</span>
+          </div>
+        </a>
+
+        <!-- روابط القائمة -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="من-نحن">من نحن</a></li>
+          <li><a href="خدمتنا"> خدمتنا</a></li>
+          <li><a href="الاسئلة-الشائعة">الأسئلة الشائعة</a></li>
+          <li><a href="المدونة">المدونة</a></li>
+          <li><a href="اتصل-بنا">اتصل بنا</a></li>
+        </ul>
+
+        <!-- الجزء الأيسر للموبايل (زرار الخط الساخن المصغر + الهامبرجر) -->
+        <div class="mobile-actions">
+          <a
+            href="tel:19580"
+            class="hotline-mobile-btn"
+            title="اتصل بالخط الساخن"
+          >
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>19580</span>
+          </a>
+
+          <!-- زرار الهامبرجر -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- الخط الساخن الملكي (للديسكتوب) -->
+        <div class="hotline-royal">
+          <div class="hotline-icon-circle">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="hotline-details">
+            <span class="hotline-title">الخط الساخن الموحد</span>
+            <span class="hotline-number">19580</span>
+          </div>
+          <div class="shine-effect"></div>
+        </div>
+      </nav>
+    </header>
+    <!-- السيكشن الأول الفخم والمتحرك -->
+    <section class="hero-animated-section">
+      <div class="hero-content-wrapper">
+        <!-- شارة الاعتماد الفخمة -->
+        <div class="hero-elite-badge">
+          <i class="fa-solid fa-award"></i>
+          <span>المركز الأول المعتمد للصيانة في مصر</span>
+        </div>
+
+        <!-- التيتل الكبير والبارز -->
+        <h1 class="hero-huge-title">
+          مؤسسة المعتمد <br />
+          <span class="gold-gradient-text">لصيانة الأجهزة المنزلية</span>
+        </h1>
+
+        <!-- الوصف -->
+        <p class="hero-sub-description">
+          نخبة مهندسي الصيانة الفورية لباب بيتك. خدمة محترفة لجميع الماركات بقطع
+          غيار أصلية 100% وضمان معتمد.
+        </p>
+
+        <!-- أزرار الاتصال بـ Hover وتأثيرات قوية -->
+        <div class="hero-interactive-buttons">
+          <!-- زرار الخط الساخن -->
+          <a href="tel:19580" class="neon-btn hotline-neon">
+            <div class="btn-icon-box">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="btn-text-content">
+              <span class="small-label">الخط الساخن الموحد</span>
+              <span class="large-value">19580</span>
+            </div>
+            <div class="btn-glow-effect"></div>
+          </a>
+
+          <!-- زرار الواتساب -->
+          <a
+            href="https://wa.me/201289966660"
+            target="_blank"
+            class="neon-btn whatsapp-neon"
+          >
+            <div class="btn-icon-box">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="btn-text-content">
+              <span class="small-label">تواصل عبر الواتساب</span>
+              <span class="large-value">01289966660</span>
+            </div>
+            <div class="btn-glow-effect"></div>
+          </a>
+        </div>
+
+        <!-- المميزات السريعة -->
+        <div class="hero-quick-perks">
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>صيانة فورية بالمنزل</span>
+          </div>
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>قطع غيار أصلية</span>
+          </div>
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>ضمان معتمد شامل</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن خدماتنا الفخم والكاردات المتوهجة -->
+    <section class="services-section" id="services">
+      <div class="services-container">
+        <!-- هيدر السيكشن -->
+        <div class="section-header">
+          <h2 class="section-title">خدمات الصيانة المنزلية المعتمدة</h2>
+          <p class="section-subtitle">
+            نقدم أحدث حلول الصيانة الفورية بالمنزل بأعلى معايير الجودة وبقطع
+            غيار أصلية 100%
+          </p>
+        </div>
+
+        <!-- شبكة الكاردات الفخمة -->
+        <div class="services-grid">
+          <!-- 1. صيانة الثلاجات -->
+          <div class="service-card">
+            <div class="card-glow-border"></div>
+            <div class="service-content">
+              <h3>صيانة الثلاجات</h3>
+              <p>
+                علاج كافة أعطال التبريد، تسريب الغاز، الشحن، وتغير الكباس بكفاءة
+                تامة.
+              </p>
+              <div class="card-footer">
+                <a href="صيانة-الثلاجات.html" class="service-link"
+                  >تفاصيل الخدمة والطلب <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. صيانة الغسالات -->
+          <div class="service-card">
+            <div class="card-glow-border"></div>
+            <div class="service-content">
+              <h3>صيانة الغسالات</h3>
+              <p>
+                حل مشاكل العصر، الدوران، الطلمبة، والأعطال الكهربائية بالمنزل
+                فوراً.
+              </p>
+              <div class="card-footer">
+                <a href="صيانة-الغسالات.html" class="service-link"
+                  >تفاصيل الخدمة والطلب <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. صيانة الديب فريزر -->
+          <div class="service-card">
+            <div class="card-glow-border"></div>
+            <div class="service-content">
+              <h3>صيانة الديب فريزر</h3>
+              <p>
+                معالجة تكون الثلج الزائد، ضعف التبريد، وصيانة الدوائر
+                الإلكترونية.
+              </p>
+              <div class="card-footer">
+                <a href="صيانة-الديب-فريزر.html" class="service-link"
+                  >تفاصيل الخدمة والطلب <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. صيانة غسالات الأطباق -->
+          <div class="service-card">
+            <div class="card-glow-border"></div>
+            <div class="service-content">
+              <h3>صيانة غسالات الأطباق</h3>
+              <p>
+                إصلاح مشاكل التجفيف، تصريف المياه، وعدم تنظيف الأطباق بالشكل
+                الأمثل.
+              </p>
+              <div class="card-footer">
+                <a href="صيانة-غسالات-الأطباق.html" class="service-link"
+                  >تفاصيل الخدمة والطلب <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. صيانة الميكرويف -->
+          <div class="service-card">
+            <div class="card-glow-border"></div>
+            <div class="service-content">
+              <h3>صيانة الميكرويف</h3>
+              <p>
+                علاج أعطال التسخين، التاتش، دوران البلاتوه، وتغيير قطع الغيار
+                التالفة.
+              </p>
+              <div class="card-footer">
+                <a href="صيانة-الميكرويف.html" class="service-link"
+                  >تفاصيل الخدمة والطلب <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. صيانة الشاشات -->
+          <div class="service-card">
+            <div class="card-glow-border"></div>
+            <div class="service-content">
+              <h3>صيانة الشاشات</h3>
+              <p>
+                إصلاح مشاكل الإضاءة، البانل، الصوت، والخطوط بالشاشات المختلفة
+                بمهارة.
+              </p>
+              <div class="card-footer">
+                <a href="صيانة-الشاشات.html" class="service-link"
+                  >تفاصيل الخدمة والطلب <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

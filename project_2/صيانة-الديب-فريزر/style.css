@@ -38,12 +38,14 @@ button {
 /* ==========================================================================
    2. Navbar Styles
    ========================================================================== */
+/* تنسيقات الناف بار العامة */
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .nav-container {
@@ -55,10 +57,12 @@ button {
   align-items: center;
 }
 
+/* اللوجو */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
   transition: transform 0.3s ease;
 }
 
@@ -92,19 +96,23 @@ button {
   color: #2563eb;
 }
 
+/* روابط الديسكتوب */
 .desktop-only {
   display: flex;
   align-items: center;
 }
 
 .nav-links {
+  display: flex;
+  align-items: center;
   gap: 24px;
   font-weight: 700;
   font-size: 1rem;
-  color: #1e293b;
 }
 
 .nav-link {
+  text-decoration: none;
+  color: #1e293b;
   position: relative;
   padding: 6px 0;
   transition: color 0.25s ease;
@@ -130,19 +138,25 @@ button {
   width: 100%;
 }
 
-/* Dropdown Styles */
+/* Dropdown (الديسكتوب) */
 .dropdown {
   position: relative;
   padding: 10px 0;
+  cursor: pointer;
 }
 
 .dropdown-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
   display: flex;
   align-items: center;
   gap: 6px;
   font-weight: 700;
   font-size: 1rem;
   color: #1e293b;
+  cursor: pointer;
+  padding: 0;
   transition: color 0.25s ease;
 }
 
@@ -150,6 +164,10 @@ button {
   width: 18px;
   height: 18px;
   transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate-180 {
+  transform: rotate(180deg);
 }
 
 .dropdown:hover .dropdown-btn {
@@ -185,6 +203,7 @@ button {
 
 .dropdown-item {
   display: block;
+  text-decoration: none;
   padding: 10px 14px;
   font-size: 0.95rem;
   font-weight: 700;
@@ -199,12 +218,14 @@ button {
   transform: translateX(-4px);
 }
 
+/* زر الخط الساخن */
 .btn-hotline {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
   color: #ffffff;
+  text-decoration: none;
   padding: 10px 22px;
   border-radius: 10px;
   font-weight: 800;
@@ -218,9 +239,12 @@ button {
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
 }
 
-/* Mobile Navbar Styles */
+/* زر الهامبرجر (الموبايل) */
 .hamburger-btn {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   color: #1e293b;
   padding: 8px;
   border-radius: 8px;
@@ -239,11 +263,13 @@ button {
   height: 28px;
 }
 
+/* قائمة الموبايل المنسدلة */
 .mobile-menu {
   display: none;
   background-color: #ffffff;
   border-top: 1px solid #f1f5f9;
   padding: 14px 20px 20px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .mobile-menu.active {
@@ -253,6 +279,7 @@ button {
 
 .mobile-link {
   display: block;
+  text-decoration: none;
   padding: 10px 12px;
   border-radius: 8px;
   font-weight: 700;
@@ -267,18 +294,28 @@ button {
 
 .mobile-dropdown-btn {
   width: 100%;
+  background: none;
+  border: none;
+  font-family: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 12px;
   color: #1e293b;
   font-weight: 700;
+  font-size: 1rem;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-dropdown-btn:hover {
+  background-color: #f1f5f9;
 }
 
 .mobile-dropdown-menu {
   display: none;
-  padding-right: 12px;
+  padding-right: 15px;
   background-color: #f8fafc;
   border-radius: 8px;
   margin-top: 4px;
@@ -290,15 +327,23 @@ button {
 
 .mobile-sublink {
   display: block;
+  text-decoration: none;
   padding: 8px 12px;
   font-size: 0.9rem;
   color: #475569;
   font-weight: 600;
+  border-radius: 6px;
+  transition: color 0.2s ease;
+}
+
+.mobile-sublink:hover {
+  color: #2563eb;
 }
 
 .btn-hotline-mobile {
   display: block;
   text-align: center;
+  text-decoration: none;
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
   color: #ffffff;
   padding: 12px 16px;
@@ -306,11 +351,26 @@ button {
   font-weight: 800;
   margin-top: 14px;
 }
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 15px;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* إخفاء عناصر الديسكتوب وإظهار الهامبرجر في الشاشات الصغيرة */
+@media (max-width: 992px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .hamburger-btn {
+    display: block !important;
+  }
 }
 
 /* ==========================================================================

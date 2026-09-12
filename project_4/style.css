@@ -1,0 +1,817 @@
+/* إعدادات أساسية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  height: 200vh;
+}
+
+/* تصميم الهيدر */
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #b58e3e; /* لمسة ذهبية خفيفة تحت الهيدر */
+}
+
+.navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* --- ستايل اللوجو الفخم الجديد --- */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.logo-emblem {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(42, 82, 152, 0.3);
+  flex-shrink: 0;
+}
+
+.logo-emblem i {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 30px;
+  position: absolute;
+}
+
+.koofi-m {
+  font-family: serif;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-brand {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.sub-brand {
+  font-size: 12px;
+  color: #475569; /* غمّقناه شوية عشان يبמו واضح وأنيق */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* --- روابط القائمة (Desktop) --- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #b58e3e;
+  transition: width 0.3s;
+  border-radius: 3px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #b58e3e;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* --- أزرار الموبايل (الخط الساخن المصغر + الهامبرجر) --- */
+.mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 14px; /* مسافة واضحة ومريحة بين زرار الاتصال والهامبرجر */
+}
+
+.hotline-mobile-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(20, 30, 48, 0.3);
+  border: 1px solid rgba(181, 142, 62, 0.4); /* إطار ذهبي خفيف يبرز الزرار */
+}
+
+.hotline-mobile-btn i {
+  color: #b58e3e;
+  font-size: 14px;
+}
+
+.hotline-mobile-btn span {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+/* --- ستايل الهوت لاين الملكي الجديد (الديسكتوب) --- */
+.hotline-royal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(to right, #141e30, #243b55);
+  padding: 8px 25px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(20, 30, 48, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+  border: 1px solid rgba(181, 142, 62, 0.4);
+}
+
+.hotline-royal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(20, 30, 48, 0.4);
+}
+
+.hotline-icon-circle {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotline-icon-circle i {
+  color: #b58e3e;
+  font-size: 18px;
+}
+
+.hotline-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotline-title {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 700;
+}
+
+.hotline-number {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+/* تأثير لمعة متحركة */
+.shine-effect {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    top: -100%;
+  }
+  60% {
+    left: 100%;
+    top: 100%;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
+}
+
+/* --- هامبرجر الموبايل --- */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #1e293b;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+/* --- ميديا كويري للموبايل والشاشات الصغيرة --- */
+@media (max-width: 1100px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-actions {
+    display: flex; /* إظهار أزرار الموبايل */
+  }
+
+  .hotline-royal {
+    display: none; /* إخفاء الكبيرة الخاصة بالديسكتوب */
+  }
+
+  .navbar {
+    padding: 8px 12px;
+    height: 70px;
+  }
+
+  /* قياسات اللوجو والنص في الموبايل عشان يكونوا باينين ومنورين بوضوح */
+  .logo-emblem {
+    width: 40px;
+    height: 40px;
+  }
+
+  .koofi-m {
+    font-size: 24px;
+  }
+
+  .main-brand {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a; /* لون أغمق وأوضح */
+  }
+
+  .sub-brand {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #334155; /* وضحناه وبقى بارز أكتر */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0;
+    gap: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: left 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 16px;
+    font-size: 17px;
+  }
+
+  .nav-links li a::after {
+    display: none;
+  }
+
+  /* أنيميشن الهامبرجر لعلامة X */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+/* --- ستايل السيكشن المتحرك والرهيب --- */
+.hero-animated-section {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  /* خلفية متحركة بألوان مميزة ورايقة (كحلي ملكي مع لمسات داكنة فخمة) */
+  background: linear-gradient(-45deg, #090d16, #111c33, #1e3c72, #0f172a);
+  background-size: 400% 400%;
+  animation: bgGradientAnimation 12s ease infinite;
+}
+
+@keyframes bgGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* طبقة إضاءة جمالية خفيفة فوق الخلفية */
+.hero-animated-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(181, 142, 62, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* شارة الاعتماد */
+.hero-elite-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(181, 142, 62, 0.15);
+  border: 1px solid rgba(181, 142, 62, 0.4);
+  padding: 8px 22px;
+  border-radius: 50px;
+  color: #d4af37;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.hero-elite-badge i {
+  font-size: 16px;
+}
+
+/* التيتل الكبير والبارز */
+.hero-huge-title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3e7c4 0%, #b58e3e 50%, #dfba6d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* الوصف */
+.hero-sub-description {
+  font-size: 18px;
+  color: #94a3b8;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* الأزرار التفاعلية الحماسية */
+.hero-interactive-buttons {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.neon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 28px;
+  border-radius: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  min-width: 250px;
+}
+
+.hotline-neon {
+  background: linear-gradient(135deg, #16222a 0%, #3a6073 100%);
+}
+
+.whatsapp-neon {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 100%, #2c5364 100%);
+}
+
+/* تأثيرات الهوفر القوية للزرار */
+.neon-btn:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(181, 142, 62, 0.4);
+  border-color: #b58e3e;
+}
+
+.btn-icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #b58e3e;
+  transition: 0.3s;
+}
+
+.whatsapp-neon:hover .btn-icon-box {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.hotline-neon:hover .btn-icon-box {
+  background: #b58e3e;
+  color: #ffffff;
+}
+
+.btn-text-content {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.small-label {
+  font-size: 11px;
+  color: #cbd5e1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.large-value {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+/* لمسة لمعة إضافية للزرار */
+.btn-glow-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.neon-btn:hover .btn-glow-effect {
+  left: 100%;
+}
+
+/* مميزات السيكشن التحتية */
+.hero-quick-perks {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.perk-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 15px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.perk-box i {
+  color: #b58e3e;
+  font-size: 16px;
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة */
+@media (max-width: 768px) {
+  .hero-huge-title {
+    font-size: 36px;
+  }
+
+  .hero-sub-description {
+    font-size: 15px;
+  }
+
+  .hero-interactive-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .neon-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+/* --- ستايل سيكشن خدماتنا (خلفية فاتحة، مريحة جداً للعين، مع أنيميشن قوي) --- */
+.services-section {
+  padding: 100px 20px;
+  background-color: #f0eded; /* خلفية فاتحة ناعمة جداً ومريحة للعين تماماً */
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* إضاءة خلفية خفيفة جداً تدي لمسة فخامة وهدوء */
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle,
+    rgba(181, 142, 62, 0.04) 0%,
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* هيدر السيكشن */
+.section-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 65px;
+}
+
+.section-tag {
+  display: inline-block;
+  background: rgba(181, 142, 62, 0.1);
+  color: #9c7526; /* لون ذهبي أغمق وواضح ومريح على الخلفية الفاتحة */
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  border: 1px solid rgba(181, 142, 62, 0.3);
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0f172a; /* لون داكن ناصع وواضح جداً للقراءة */
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #64748b; /* لون رمادي متوسط مريح للقراءة بدون زغللة */
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+/* شبكة الكاردات */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+}
+
+/* تصميم الكارد والهيكل الخارجي */
+.service-card {
+  position: relative;
+  background: #ffffff; /* لون الكارد أبيض ناصع ونظيف جداً */
+  border-radius: 22px;
+  padding: 2.5px; /* سمك البوردر المتحرك */
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* ظل خفيف وهادي جداً */
+}
+
+/* حركة رفع الكارد فخمة عند الـ Hover */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(181, 142, 62, 0.15);
+}
+
+/* بوردر متحرك ومتوهج بنعومة واحترافية عالية على الخلفية الفاتحة */
+.card-glow-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(181, 142, 62, 0.3),
+    transparent 40%,
+    transparent 60%,
+    rgba(59, 130, 246, 0.2)
+  );
+  z-index: 0;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover .card-glow-border {
+  opacity: 1;
+  background: linear-gradient(135deg, #b58e3e, #f3e7c4, #3b82f6, #b58e3e);
+  animation: borderAnimation 3.5s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* محتوى الكارد الداخلي (أبيض ناصع ومريح تماماً للعين) */
+.service-content {
+  position: relative;
+  background: #ffffff; 
+  border-radius: 20px;
+  padding: 40px 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.service-card:hover .service-content {
+  background: #ffffff;
+}
+
+/* عنوان الكارد */
+.service-content h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #0f172a; /* أزرق داكن فخم وواضح جداً */
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+}
+
+/* وصف الخدمة */
+.service-content p {
+  font-size: 15px;
+  color: #475569; /* لون رمادي هادي وممتاز جداً للقراءة */
+  line-height: 1.8;
+  margin-bottom: 35px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+/* فوتر الكارد واللينك */
+.card-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #b58e3e; /* لون ذهبي دافئ وواضح جداً */
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.service-link i {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-link {
+  color: #9c7526;
+  gap: 15px; /* حركة سحب ذكية للينك عند الماوس */
+}
+
+.service-card:hover .service-link i {
+  transform: translateX(-5px);
+}
+
+/* التجاوب مع شاشات الموبايل */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .services-section {
+    padding: 60px 15px;
+  }
+}

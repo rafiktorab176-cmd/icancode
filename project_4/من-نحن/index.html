@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>من نحن للمؤسسة المعتمد</title>
+
+    <!-- أيقونة الموقع (Favicon) صيانة فخمة وملكية -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M50 10 L85 25 V50 C85 72 50 90 50 90 C50 90 15 72 15 50 V25 Z' fill='none' stroke='%23b58e3e' stroke-width='6'/%3E%3Cpath d='M65 35 L45 55 M42 58 L32 68 C30 70 27 70 25 68 C23 66 23 63 25 61 L35 51 M58 42 L63 37 C67 33 73 33 77 37 C81 41 81 47 77 51 L72 56' fill='none' stroke='%23ffffff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='68' cy='42' r='4' fill='%23b58e3e'/%3E%3C/svg%3E"
+    />
+
+    <!-- استيراد خط Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ربط ملف الـ CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../globals/style.css" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- بداية الـ Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- اللوجو الفخم مع الاسم (ظاهر دايماً ديسكتوب وموبايل) -->
+        <a href="../index.html/" class="logo-area">
+          <div class="logo-emblem">
+            <i class="fa-solid fa-shield-alt"></i>
+            <span class="koofi-m">م</span>
+          </div>
+          <div class="logo-text-area">
+            <span class="main-brand">مؤسسة المعتمد</span>
+            <span class="sub-brand">لصيانة الأجهزة المنزلية</span>
+          </div>
+        </a>
+
+        <!-- روابط القائمة -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">الرئيسية</a></li>
+          <li><a href="../من-نحن/" class="active">من نحن</a></li>
+          <li><a href="../خدمتنا/"> خدمتنا</a></li>
+          <li><a href="../الاسئلة-الشائعة/">الأسئلة الشائعة</a></li>
+          <li><a href="../المدونة/">المدونة</a></li>
+          <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+        </ul>
+
+        <!-- الجزء الأيسر للموبايل (زرار الخط الساخن المصغر + الهامبرجر) -->
+        <div class="mobile-actions">
+          <a
+            href="tel:19580"
+            class="hotline-mobile-btn"
+            title="اتصل بالخط الساخن"
+          >
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>19580</span>
+          </a>
+
+          <!-- زرار الهامبرجر -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <!-- الخط الساخن الملكي (للديسكتوب) -->
+        <div class="hotline-royal">
+          <div class="hotline-icon-circle">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="hotline-details">
+            <span class="hotline-title">الخط الساخن الموحد</span>
+            <span class="hotline-number">19580</span>
+          </div>
+          <div class="shine-effect"></div>
+        </div>
+      </nav>
+    </header>
+    <!-- سيكشن من نحن ولماذا نحن ورسالتنا (بدون أيقونات) -->
+    <section class="about-main-section">
+      <div class="container">
+        <!-- رأس القسم -->
+        <div class="page-header">
+          <span class="section-tag">مؤسسة المعتمد لصيانة الأجهزة المنزلية</span>
+          <h1 class="page-title">
+            تعرف على <span class="gold-gradient-text">مؤسسة المعتمد</span>
+          </h1>
+          <p class="page-subtitle">
+            نضع معايير جديدة لخدمات صيانة الأجهزة المنزلية في مصر، تجمع بين
+            الخبرة الاحترافية، السرعة القصوى، والجودة المطلقة لراحة بالك.
+          </p>
+        </div>
+
+        <!-- شبكة الكروت الرئيسية -->
+        <div class="about-grid-content">
+          <!-- الكارت الأول: من نحن -->
+          <div class="info-card">
+            <div class="card-body">
+              <h2>من نحن</h2>
+              <p>
+                تأسست مؤسسة المعتمد لصيانة الأجهزة المنزلية لتكون الصرح الرائد
+                والوجهة الأولى لكل أسرة مصرية تبحث عن الجودة، الأمان، والسرعة.
+                نحن ندرك تماماً أن تعطل أي جهاز منزلي يمثل إرباكاً لحياتك
+                اليومية، ومن هذا المنطلق، بنا استراتيجيتنا على تقديم "خدمة
+                الصيانة الفورية الشاملة داخل المنزل"، لرفع عن كاهلك عناء نقل
+                الأجهزة وتكاليفها الباهظة.
+              </p>
+              <p>
+                يضم كياننا نخبة من أكفأ المهندسين والفنيين المعتمدين، المدربين
+                على أحدث تقنيات الفحص الإلكتروني، مما يضمن اكتشاف الأعطال بدقة
+                متناهية ومعالجتها في وقت قياسي. اسطولنا من السيارات المجهزة
+                وفريق خدمة العملاء متاحة دائماً لتلبية نداءك عبر الخط الساخن،
+                لنصلك أينما كنت وفي أسرع وقت.
+              </p>
+            </div>
+          </div>
+
+          <!-- الكارت الثاني: لماذا مؤسسة المعتمد هي اختيارك الأول -->
+          <div class="info-card">
+            <div class="card-body">
+              <h2>لماذا مؤسسة المعتمد هي اختيارك الأول</h2>
+              <p>
+                صيانة منزلية 100%: نقوم بكافة أعمال الفحص والإصلاح أمام عينيك
+                داخل منزلك، لضمان الشفافية التامة وتوفير وقتك.
+              </p>
+              <p>
+                خبراء الماركات العالمية: نفتخر بتخصصنا الدقيق واعتمادنا كخبراء
+                في صيانة كبرى العلامات التجارية التي تتطلب تعاملاً احترافياً
+                خاصاً.
+              </p>
+              <p>
+                قطع غيار أصلية: لا نقبل بأنصاف الحلول، نستخدم فقط قطع الغيار
+                الأصلية المطابقة لمواصفات الشركة المصنعة، لضمان أطول عمر افتراضي
+                لجهازك.
+              </p>
+              <p>
+                ضمان حقيقي ومعتمد: نثق في كفاءة عملنا، لذا نمنح عملائنا فاتورة
+                رسمية وضماناً معتمداً على كافة قطع الغيار وأعمال الصيانة.
+              </p>
+            </div>
+          </div>
+
+          <!-- الكارت الثالث: رسالتنا ورؤيتنا (عرض كامل) -->
+          <div class="info-card span-full">
+            <div class="card-body">
+              <h2>رسالتنا ورؤيتنا</h2>
+              <p>
+                <strong>رسالتنا:</strong> تقديم خدمات صيانة استثنائية تركز على
+                الأمانة المهنية، الشفافية في التسعير، والاحترام الكامل لوقت
+                وخصوصية العميل المصري.
+              </p>
+              <p>
+                <strong>رؤيتنا:</strong> أن نضل الكيان المرجعي الأول والمركز
+                الأكبر المعتمد في الشرق الأوسط لخدمات ما بعد البيع والدعم الفني
+                للاجهزة المنزلية الذكية والتقليدية.
+              </p>
+              <p>
+                جهازك في أيد أمينة.. لا تتردد في طلب المساعدة. انضم لآلاف
+                العملاء الذين وضعوا ثقتهم في مؤسسة المعتمد. فريقنا مستعد الآن
+                للرد على استفساراتك وتوجيه أقرب سيارة دعم فني لمنزلك.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سيكشن 1: فلسفة العمل ومنهجنا الفريد -->
+    <section class="about-main-section" id="about-philosophy">
+      <div class="container">
+        <div class="page-header">
+          <h2 class="page-title">
+            طريقة عمل مختلفة تعتمد على
+            <span class="gold-gradient-text">الدقة والشفافية</span>
+          </h2>
+          <p class="page-subtitle">
+            مش مجرد إصلاح عطل عابر، إحنا بنعيد الأمان والاستقرار لجهازك وكأن لسه
+            خارج من الكرتونة.
+          </p>
+        </div>
+
+        <div class="about-grid-content">
+          <div class="info-card">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="fa-solid fa-stethoscope"></i>
+              </div>
+              <h2>التشخيص الذكي والمبكر</h2>
+              <p>
+                سر النجاح بيكمن في معرفة سبب المشكلة من جذورها مش علاج أعراضها
+                المؤقتة. بنعتمد على أحدث أجهزة الفحص الإلكتروني لتحديد مكان
+                الخلل بدقة متناهية دون إهدار وقتك أو أموالك في تغيير قطع سليمة.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> كشف شامل ومبكر لتفادي
+                  المفاجآت.
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> تقارير واضحة وصادقة
+                  لحالة الجهاز.
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> شرح تفصيلي للعميل قبل
+                  البدء في الإصلاح.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-body">
+              <div class="card-icon">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <h2>فريق فني على أهبة الاستعداد</h2>
+              <p>
+                نخبة من المهندسين والفنيين الذين تم اختيارهم بعناية فائقة،
+                ولديهم خبرة طفيفة وعميقة بأسرار جميع الماركات العالمية والمحلية،
+                ومدربين خصيصاً على مواكبة التعقيدات التكنولوجية الحديثة في
+                الأجهزة المنزلية.
+              </p>
+              <ul class="check-list">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> تدريبات دورية على
+                  أحدث موديلات الأجهزة.
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> التزام بأعلى قواعد
+                  الأمان والنظافة أثناء العمل.
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i> سعة صدر واحترافية
+                  عالية في التعامل مع العملاء.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سيكشن 2: التزامنا نحو البيئة المنزلية وراحتك -->
+    <section class="customer-satisfaction-section" id="home-care">
+      <div class="container">
+        <div class="page-header">
+          <span class="section-tag">
+            <i class="fa-solid fa-house-laptop"></i> راحة منزلك أولوية
+          </span>
+          <h2 class="page-title">
+            لماذا يفضلنا العملاء على أي
+            <span class="gold-gradient-text">خيار آخر؟</span>
+          </h2>
+          <p class="page-subtitle">
+            لأننا نضع أنفسنا مكانك؛ فنحن نعلم جيداً مدى الإزعاج الذي يسببه توقف
+            أي جهاز أساسي في البيت.
+          </p>
+        </div>
+
+        <div class="satisfaction-grid">
+          <div class="sat-card">
+            <div class="sat-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>السرعة والالتزام بالوقت</h3>
+            <p>
+              نوفر عليك أيام الانتظار. فور تلقينا اتصالك، يتحرك الفني المخصص
+              لممنزلك في أسرع وقت ممكن لإنجاز المهمة بكفاءة عالية وبدون أي
+              تسويف.
+            </p>
+          </div>
+
+          <div class="sat-card">
+            <div class="sat-icon"><i class="fa-solid fa-shield-cat"></i></div>
+            <h3>الحفاظ على أثاث ومكان منزلك</h3>
+            <p>
+              فنيونا مدربون ليس فقط على صيانة الأجهزة، بل على التعامل بحرص تام
+              مع محيط المكان داخل منزلك، لضمان مغادرتنا وكأن شيئاً لم يكن سوى أن
+              جهازك عاد للعمل.
+            </p>
+          </div>
+
+          <div class="sat-card">
+            <div class="sat-icon">
+              <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3>شفافية كاملة في الأسعار</h3>
+            <p>
+              لا توجد أي تكاليف خفية أو مفاجآت بعد انتهاء العمل. كل التكاليف،
+              سواء الخاصة بزيارة الفحص أو قطع الغيار، تكون واضحة ومكشوفة للعميل
+              منذ اللحظة الأولى.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سيكشن 3: عهد وميثاق الجودة -->
+    <section class="our-story-section" id="quality-pledge">
+      <div class="container">
+        <div class="story-box-wrapper">
+          <div class="story-content-box">
+            <h2>عهدنا معك: جودة لا تقبل التنازل وضمان حقيقي يريح بالك</h2>
+            <p>
+              نحن لا نبيع خدمة مؤقتة، بل نبني علاقة طويلة الأمد قائمة على
+              المصداقية المتبادلة. كل قطعة غيار يتم تركيبها مصحوبة بضمان معتمد
+              يحميك ويضمن كفاءة التشغيل لأطول فترة ممكنة، لأننا نثق تماماً فيما
+              نقدمه.
+            </p>
+            <p>
+              إذا واجهتك أي استفسارات أو احتجت لاستشارة فنية سريعة بعد الصيانة،
+              فابوابنا وخطوطنا المفتوحة دائماً في خدمتك لمتابعة حال الجهاز
+              والإجابة على كل تساؤلاتك.
+            </p>
+            <div class="story-badges">
+              <div class="s-badge">
+                <i class="fa-solid fa-check"></i> ضمان معتمد على الصيانة
+              </div>
+              <div class="s-badge">
+                <i class="fa-solid fa-check"></i> دعم فني مستمر
+              </div>
+              <div class="s-badge">
+                <i class="fa-solid fa-check"></i> قطع غيار أصلية موثوقة
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سيكشن إحصائيات العملاء والتواصل (بدون أيقونات) -->
+    <section class="stats-contact-section">
+      <div class="container">
+        <!-- رأس القسم -->
+        <div class="section-header">
+          <span class="section-tag">مؤسسة المعتمد لصيانة الأجهزة المنزلية</span>
+          <h2 class="section-title">
+            أرقام تعكس <span class="gold-gradient-text">ريادتنا وخبرتنا</span>
+          </h2>
+          <p class="section-subtitle">
+            نفتخر بخدمة آلاف العملاء في مصر، ونضع بين أيديكم خطوطنا الساخنة
+            لخدمتكم على مدار الساعة.
+          </p>
+        </div>
+
+        <!-- شبكة الإحصائيات -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">+15,000</div>
+            <div class="stat-label">عميل سعيد ومستفيد</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">+25,000</div>
+            <div class="stat-label">جهاز تم إصلاحه بنجاح</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">قطع غيار أصلية معتمدة</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">دعم فني وسرعة استجابة</div>
+          </div>
+        </div>
+
+        <!-- كارت التواصل السريع المتميز -->
+        <div class="direct-contact-banner">
+          <div class="banner-content">
+            <div class="banner-text">
+              <h3>تحتاج إلى صيانة فورية أو استشارة فنية؟</h3>
+              <p>
+                فريق الدعم الفني في مؤسسة المعتمد جاهز الآن للرد على استفساراتكم
+                وتسجيل بلاغات الأعطال.
+              </p>
+            </div>
+          </div>
+          <div class="banner-actions">
+            <a href="tel:19580" class="contact-btn primary-hotline">
+              <span>الخط الساخن: 19580</span>
+            </a>
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              class="contact-btn whatsapp-btn"
+            >
+              <span>تواصل واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن حلول صيانة الأجهزة الشاملة (مطابق تماماً للصورة) -->
+    <section class="exact-solutions-section">
+      <div class="container">
+        <div class="exact-grid">
+          <!-- العمود الأيمن: النصوص والعلامات الحمراء -->
+          <div class="exact-content">
+            <div class="top-black-badge">صيانة سريعة وبأسعار معقولة</div>
+            <h2 class="exact-title">حلول صيانة الأجهزة الشاملة</h2>
+
+            <p class="exact-desc">
+              سواء كانت الثلاجة بطلت تبريد أو الغسالة مش راضية تعصر، إحنا
+              موجودين نساعدك. فنيينا المدربين عندهم خبرة في صيانة جميع أنواع
+              الأجهزة الكهربائية، مهما كان نوعها أو ماركتها أو موديلها، وده كله
+              في بيتك بدون تعب. بنقدم خدمة سريعة وأسعار مناسبة، مع استخدام قطع
+              غيار أصلية وتشخيص دقيق وضمان على كل عملية صيانة من مركز المؤسسة
+              الألمانية.
+            </p>
+
+            <p class="exact-desc">
+              من نشافات بتعمل صوت عالي لغسالات بتسرب مية وبوتاجازات مش شغالة
+              بكفاءة، متخصصينا بيتعاملوا مع كل عطل باحترافية ودقة. بنقدم خدمات
+              صيانة موثوقة في جميع أنحاء مصر، باستخدام أدوات حديثة وقطع عالية
+              الجودة علشان نرجع جهازك يشتغل بكفاءة وبأسرع وقت.
+            </p>
+
+            <!-- قائمة المميزات بعلامات الصح الحمراء -->
+            <ul class="exact-features">
+              <li>
+                <i class="fa-solid fa-check"></i> دعم 24/7 عبر الهاتف والواتس اب
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> خدمة صيانة الطوارئ في جميع
+                أنحاء مصر
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> احجز في أي وقت مع استجابة
+                فورية مضمونة
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> نثق به المنازل والمطاعم
+                والمقاهي والمكاتب
+              </li>
+            </ul>
+
+            <!-- أزرار التواصل (الأحمر والأسود) -->
+            <div class="exact-actions">
+              <a href="tel:19580" class="exact-btn-red">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>اتصل الآن</span>
+              </a>
+              <a href="https://wa.me/" target="_blank" class="exact-btn-dark">
+                <i class="fa-brands fa-whatsapp" style="color: #22c55e"></i>
+                <span>دردشة واتس اب حية</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- العمود الأيسر: الصورة المحاطة بالإطار الأحمر وختم الضمان -->
+          <div class="exact-media-side">
+            <div class="red-frame-container">
+              <!-- ختم الضمان الذهبي الدائري (Satisfaction Guarantee) -->
+              <div class="golden-seal-badge">
+                <div class="seal-content">
+                  <span class="seal-p">100%</span>
+                  <span class="seal-t">SATISFACTION</span>
+                  <span class="seal-b">GUARANTEE</span>
+                </div>
+              </div>
+
+              <!-- الصورة الرئيسية للفني -->
+              <img
+                src="../assets/1.webp"
+                alt="صيانة الأجهزة"
+                class="main-tech-pic"
+              />
+
+              <!-- الشريط السفلي الأسود داخل الصورة -->
+              <div class="inner-dark-bar">
+                <span class="bar-label">محترفو صيانة الأجهزة</span>
+                <div class="avatar-group">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                    alt="فني"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                    alt="فني"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+                    alt="فني"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                    alt="فني"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
+                    alt="فني"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"
+                    alt="فني"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../globals/script.js"></script>
+  </body>
+</html>

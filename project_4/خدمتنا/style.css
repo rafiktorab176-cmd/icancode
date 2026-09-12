@@ -1,0 +1,624 @@
+/* --- تنسيقات الهب المستقل للماركات مع توزيع 6 لينكات --- */
+.independent-brands-hub {
+  padding: 60px 20px;
+  background: #f1f5f9;
+  font-family: "Cairo", sans-serif;
+  color: #1e293b;
+}
+
+.independent-brands-hub .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hub-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 45px auto;
+}
+
+.hub-badge {
+  display: inline-block;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hub-heading {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.hub-subtitle {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+/* صندوق الماركة المفرد المستقل */
+.single-brand-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.brand-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.brand-tag {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.brand-title-bar h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.brand-desc {
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* صندوق أبرز المنتجات */
+.brand-highlight-box {
+  background: #f8fafc;
+  border-right: 4px solid #0284c7;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.brand-highlight-box h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.brand-highlight-box ul {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.brand-highlight-box li {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 6px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* جدول الأعطال الخاص بالماركة */
+.brand-trouble-wrap {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.brand-trouble-wrap h4 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.brand-trouble-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 13.5px;
+}
+
+.brand-trouble-table th,
+.brand-trouble-table td {
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.brand-trouble-table th {
+  background: #1e293b;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.brand-trouble-table tr:nth-child(even) {
+  background: #ffffff;
+}
+
+.brand-trouble-table tr:nth-child(odd) {
+  background: #f1f5f9;
+}
+
+/* تنسيق الرابط الداخلي الموزع (الـ 6 لينكات) */
+.brand-internal-link {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.brand-internal-link a {
+  display: inline-block;
+  color: #0284c7;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  background: #e0f2fe;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.brand-internal-link a:hover {
+  background: #bae6fd;
+  color: #0369a1;
+}
+
+/* زر النهاية والـ CTA */
+.page-bottom-cta {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 45px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.2);
+  margin-top: 35px;
+}
+
+.page-bottom-cta h3 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.page-bottom-cta p {
+  font-size: 14.5px;
+  color: #cbd5e1;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.cta-buttons-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.main-action-call {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+  transition: 0.3s;
+}
+
+.main-action-call:hover {
+  background: #b91c1c;
+}
+
+.main-action-whatsapp {
+  background: #22c55e;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+  transition: 0.3s;
+}
+
+.main-action-whatsapp:hover {
+  background: #16a34a;
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+  .hub-heading {
+    font-size: 24px;
+  }
+
+  .single-brand-box {
+    padding: 20px;
+  }
+
+  .brand-trouble-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .cta-buttons-group {
+    flex-direction: column;
+  }
+
+  .main-action-call,
+  .main-action-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* --- تنسيقات سيكشنات الماركات المنفصلة --- */
+.brand-isolated-section {
+  padding: 40px 20px;
+  background: #f8fafc;
+  font-family: "Cairo", sans-serif;
+  color: #1e293b;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.brand-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.brand-header {
+  margin-bottom: 15px;
+}
+
+.brand-badge {
+  display: inline-block;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.brand-header h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0;
+}
+
+.brand-intro {
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.brand-products-box {
+  background: #ffffff;
+  border-right: 4px solid #2563eb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.brand-products-box h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.brand-products-box ul {
+  margin: 0;
+  padding-right: 20px;
+}
+
+.brand-products-box li {
+  font-size: 13.5px;
+  color: #334155;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.brand-table-wrapper {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.brand-table-wrapper h4 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.isolated-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 13.5px;
+}
+
+.isolated-table th,
+.isolated-table td {
+  padding: 11px 13px;
+  border: 1px solid #e2e8f0;
+}
+
+.isolated-table th {
+  background: #1e293b;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.isolated-table tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.isolated-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .isolated-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+/* --- تنسيقات سيكشنات صيانة الماركات الشاملة --- */
+.maintenance-full-sections-wrapper {
+  font-family: "Cairo", sans-serif;
+  color: #334155;
+  background: #f8fafc;
+  padding: 40px 15px;
+  line-height: 1.9;
+}
+
+.brand-full-section {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 40px 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.brand-content-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.brand-full-section .main-title {
+  color: #16a34a; /* اللون الأخضر المميز المتطابق مع التصميم */
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  text-align: right;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
+}
+
+.brand-full-section p {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 18px;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.brand-full-section p strong {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.brand-footer-box {
+  background: #f1f5f9;
+  border-right: 4px solid #16a34a;
+  padding: 18px 20px;
+  border-radius: 8px;
+  margin-top: 25px;
+  font-size: 14.5px;
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .brand-full-section {
+    padding: 20px 15px;
+  }
+  .brand-full-section .main-title {
+    font-size: 21px;
+  }
+}
+/* --- تنسيقات سيكشنات صيانة إل جي المعتمدة --- */
+.lg-maintenance-sections-wrapper {
+  font-family: "Cairo", sans-serif;
+  color: #334155;
+  background: #f8fafc;
+  padding: 40px 15px;
+  line-height: 1.9;
+}
+
+.lg-section-box {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 40px 30px;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.lg-section-box .main-title {
+  color: #1e293b;
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-intro {
+  font-size: 15px;
+  color: #475569;
+  text-align: justify;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.info-banner {
+  background: #f1f5f9;
+  border-right: 4px solid #2563eb;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.alert-box {
+  background: #fef2f2;
+  border-right: 4px solid #dc2626;
+  color: #991b1b;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.card-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  position: relative;
+}
+
+.card-header-badge {
+  background: #dc2626;
+  color: #ffffff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card-item h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.card-item p {
+  font-size: 14.5px;
+  color: #475569;
+  text-align: justify;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.sub-heading {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.bullet-list {
+  margin: 0 0 15px 20px;
+  padding-right: 20px;
+  list-style-type: disc;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bullet-list li {
+  margin-bottom: 6px;
+}
+
+.path-box {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #1e293b;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.inner-sub-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.inner-sub-card h4 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.inner-sub-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .lg-section-box {
+    padding: 20px 15px;
+  }
+  .lg-section-box .main-title {
+    font-size: 20px;
+  }
+}
