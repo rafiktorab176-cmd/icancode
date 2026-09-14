@@ -512,6 +512,10 @@ svg {
 }
 
 .call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   background-color: var(--secondary);
   color: #ffffff;
   text-decoration: none;
