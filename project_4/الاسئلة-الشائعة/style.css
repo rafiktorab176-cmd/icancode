@@ -1,0 +1,687 @@
+/* تنسيقات عامة للسيكشن */
+.faq-accordion-section {
+  padding: 60px 20px;
+  background-color: #f8fafc;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ضبط العنوان في المنتصف تماماً */
+.text-center {
+  text-align: center !important;
+}
+
+.faq-main-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.title-underline {
+  width: 90px;
+  height: 3px;
+  background-color: #0d9488;
+  margin: 0 auto 12px auto;
+  border-radius: 2px;
+}
+
+.faq-section-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+/* حاوية الأسئلة */
+.faq-accordion-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* تصميم الكارت الواحد */
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #cbd5e1;
+}
+
+/* زر السؤال */
+.faq-question-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Cairo", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  cursor: pointer;
+  text-align: right;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.faq-question-btn:hover {
+  color: #0d9488;
+}
+
+/* أيقونة السهم */
+.faq-arrow {
+  font-size: 12px;
+  color: #0d9488;
+  transition: transform 0.3s ease;
+}
+
+/* محتوى الإجابة (مخفي افتراضياً بالكامل) */
+.faq-answer-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease-out,
+    padding 0.35s ease-out;
+  padding: 0 24px;
+  background-color: #ffffff;
+}
+
+.faq-answer-content p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+  text-align: right;
+}
+
+/* تفعيل الفتح والغلق عند الضغط */
+.faq-item.active .faq-answer-content {
+  max-height: 300px; /* مساحة كافية لظهور الإجابة بالكامل */
+  padding: 0 24px;
+}
+
+.faq-item.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-item.active {
+  border-color: #0d9488;
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.06);
+}
+/* تنسيقات المقدمة الكبيرة في أول الصفحة */
+.faq-hero-intro {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  max-width: 950px;
+  margin: 0 auto 50px auto;
+}
+
+.hero-main-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #475569;
+  line-height: 2;
+  margin: 0;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .faq-hero-intro {
+    padding: 30px 20px;
+  }
+  .hero-main-title {
+    font-size: 24px;
+  }
+  .hero-description {
+    font-size: 15px;
+  }
+}
+/* تنسيقات عامة للقسم */
+.institution-faq-section {
+  padding: 60px 20px;
+  background: #f8fafc;
+  font-family: "Cairo", sans-serif;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+/* مقدمة الصفحة */
+.institution-hero-intro {
+  background: #ffffff;
+  padding: 45px 35px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  max-width: 950px;
+  margin: 0 auto 40px auto;
+}
+
+.hero-main-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #475569;
+  line-height: 2;
+  margin: 0;
+  text-align: justify;
+}
+
+/* شبكة الكروت الثابتة */
+.institution-cards-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* تصميم الكارت الواحد الثابت */
+.modern-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* رأس الكارت */
+.card-header-area {
+  margin-bottom: 15px;
+}
+
+.card-header-area h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 10px 0 0 0;
+}
+
+.card-tag {
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* محتوى الكارت */
+.card-body-content p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.8;
+  margin: 0 0 15px 0;
+  text-align: right;
+}
+
+.card-tip-box {
+  background: #f8fafc;
+  border-right: 3px solid #0d9488;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #334155;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.hotline-box {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.hotline-box strong {
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+/* تنسيقات عامة للقسم */
+.institution-banner-section {
+  padding: 60px 20px;
+  background: #f8fafc;
+  font-family: "Cairo", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* الحاوية الرئيسية للبانر */
+.banner-wrapper {
+  background: #0a192f; /* اللون الأزرق الغامق المطابق للصورة */
+  border-radius: 24px;
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(10, 25, 47, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* الجانب الأيمن */
+.banner-right-content {
+  color: #ffffff;
+}
+
+.top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+}
+
+.banner-main-title {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.banner-description {
+  font-size: 14px;
+  line-height: 2;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.banner-description strong {
+  color: #38bdf8;
+}
+
+/* أزرار الإجراءات */
+.banner-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-red-call {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.btn-red-call:hover {
+  background: #b91c1c;
+}
+
+.btn-dark-contact {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-dark-contact:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* الجانب الأيسر (الصندوق الداخلي) */
+.banner-left-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.side-box-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.side-box-text {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* زر رقم التليفون داخل الكارت */
+.phone-number-badge {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.phone-number-badge strong {
+  color: #0d9488;
+  letter-spacing: 1px;
+}
+
+/* شبكة المميزات الثلاثة السفليلة */
+.features-grid-mini {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.mini-feature-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  padding: 10px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.mini-feature-item:hover {
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+/* التجاوب مع الشاشات الصغيرة (Responsive) */
+@media (max-width: 968px) {
+  .banner-wrapper {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .banner-main-title {
+    font-size: 28px;
+  }
+
+  .features-grid-mini {
+    grid-template-columns: 1fr;
+  }
+}
+/* تنسيقات عامة للقسم */
+.institution-faq-grid-section {
+  padding: 60px 20px;
+  background: #121212; /* خلفية داكنة مطابقة للصورة */
+  font-family: "Cairo", sans-serif;
+  color: #e5e5e5;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* تخطيط الصفحة (شبكة من عمودين) */
+.faq-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* العمود الأيمن (النصوص والشرواح) */
+.faq-sidebar-info {
+  background: #18181b;
+  padding: 35px;
+  border-radius: 16px;
+  border: 1px solid #27272a;
+}
+
+.faq-main-heading {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0d9488;
+  padding-bottom: 12px;
+  display: inline-block;
+}
+
+.faq-sidebar-text {
+  font-size: 14px;
+  line-height: 2;
+  color: #a1a1aa;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.faq-sidebar-text strong {
+  color: #38bdf8;
+}
+
+/* العمود الأيسر (شبكة الكروت الثابتة) */
+.faq-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* تصميم الكارت الثابت الواحد */
+.faq-card-item {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: border-color 0.3s ease;
+}
+
+.faq-card-item:hover {
+  border-color: #0d9488;
+}
+
+/* رأس الكارت (السؤال والأيقونة) */
+.faq-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 15px;
+}
+
+.faq-icon-box {
+  background: #0284c7;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.faq-card-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* محتوى الكارت (الإجابات) */
+.faq-card-body p {
+  font-size: 13px;
+  color: #a1a1aa;
+  line-height: 1.9;
+  margin: 0 0 12px 0;
+  text-align: right;
+}
+
+.faq-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-card-body strong {
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+
+/* التجاوب مع الشاشات الصغيرة (Responsive) */
+@media (max-width: 1024px) {
+  .faq-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .faq-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+.container {
+  margin: 0 auto;
+  background: #e9e8e8;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2,
+h3 {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #2563eb;
+  border-right: 4px solid #2563eb;
+  padding-right: 12px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.faq-box {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.contact-highlight {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}

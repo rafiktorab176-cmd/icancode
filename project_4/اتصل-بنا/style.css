@@ -1,0 +1,444 @@
+.exact-contact-section {
+  font-family: "Cairo", Tahoma, sans-serif;
+  background-color: #f8fafc;
+  padding: 60px 20px;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.exact-contact-section *,
+.exact-contact-section *::before,
+.exact-contact-section *::after {
+  box-sizing: border-box;
+}
+
+.exact-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 30px;
+  align-items: start;
+}
+
+.exact-title-box {
+  margin-bottom: 25px;
+}
+
+.exact-title-box h2 {
+  font-size: 26px;
+  color: #1e293b;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+}
+
+.exact-title-box p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.exact-methods-side {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* الكروت أصبحت روابط قابلة للضغط تفاعلياً */
+.exact-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(13, 148, 136, 0.1);
+  border-color: #0d9488;
+}
+
+.static-card:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border-color: #e2e8f0;
+}
+
+.exact-info h4 {
+  font-size: 15px;
+  color: #475569;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.exact-highlight {
+  font-size: 18px;
+  color: #0d9488;
+  font-weight: 800;
+}
+
+.exact-text-val {
+  font-size: 16px;
+  color: #0d9488;
+  font-weight: 700;
+  margin: 0;
+}
+
+.exact-map-link {
+  font-size: 14px;
+  color: #0d9488;
+  font-weight: 700;
+}
+
+.exact-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.exact-card:hover .exact-icon {
+  transform: scale(1.1);
+}
+
+.phone-icon {
+  background-color: #0d9488;
+  color: #ffffff;
+}
+.wa-icon {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+.time-icon {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+.map-icon {
+  background-color: #db2777;
+  color: #ffffff;
+}
+
+.exact-location-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.exact-location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.exact-loc-icon-bg {
+  width: 60px;
+  height: 60px;
+  background: #ccfbf1;
+  color: #0d9488;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.exact-location-card:hover .exact-loc-icon-bg {
+  transform: scale(1.08) rotate(10deg);
+}
+
+.exact-location-card h3 {
+  font-size: 17px;
+  color: #1e293b;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.exact-location-card p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+}
+
+.exact-main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #0d9488;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.exact-main-btn:hover {
+  background: #0f766e;
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .exact-container {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f4f5f7;
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-map-section .container {
+  display: flex;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* قسم نموذج التواصل */
+.contact-map-section .form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-map-section .form-section h2 {
+  font-size: 28px;
+  color: #111;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contact-map-section .form-section p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-map-section .input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-map-section input,
+.contact-map-section textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  background-color: #f0f2f5;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+.contact-map-section .input-row input {
+  margin-bottom: 0;
+}
+
+.contact-map-section input:focus,
+.contact-map-section textarea:focus {
+  background-color: #e4e7eb;
+}
+
+.contact-map-section textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-map-section .submit-btn {
+  width: 100%;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-map-section .submit-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* قسم الخريطة */
+.contact-map-section .map-section {
+  flex: 1;
+  background-color: #eef2f5;
+  position: relative;
+  min-height: 450px;
+  border: 6px solid #fff;
+  border-radius: 15px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-map-section .map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .contact-map-section .container {
+    flex-direction: column;
+  }
+  .contact-map-section .map-section {
+    min-height: 300px;
+    margin: 20px;
+  }
+}
+.contact-map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f4f5f7;
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-map-section .container {
+  display: flex;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* قسم نموذج التواصل */
+.contact-map-section .form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-map-section .form-section h2 {
+  font-size: 28px;
+  color: #111;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contact-map-section .form-section p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-map-section .input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-map-section input,
+.contact-map-section textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  background-color: #f0f2f5;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+.contact-map-section .input-row input {
+  margin-bottom: 0;
+}
+
+.contact-map-section input:focus,
+.contact-map-section textarea:focus {
+  background-color: #e4e7eb;
+}
+
+.contact-map-section textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-map-section .submit-btn {
+  width: 100%;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-map-section .submit-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* قسم الخريطة */
+.contact-map-section .map-section {
+  flex: 1;
+  background-color: #eef2f5;
+  position: relative;
+  min-height: 450px;
+  border: 6px solid #fff;
+  border-radius: 15px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-map-section .map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .contact-map-section .container {
+    flex-direction: column;
+  }
+  .contact-map-section .map-section {
+    min-height: 300px;
+    margin: 20px;
+  }
+}

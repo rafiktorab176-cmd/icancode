@@ -540,6 +540,18 @@ svg {
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  .hotline-card {
+    flex-direction: column;
+    align-items: stretch; /* بدل flex-start عشان الزرار ياخد عرض الكارت كله */
+    gap: 12px;
+  }
+  .call-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; /* عشان الـ padding مايطلعش بره الكارت */
+  }
+}
 /* Content Blocks */
 .page-content {
   margin-top: 30px;
