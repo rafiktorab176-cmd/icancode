@@ -963,7 +963,7 @@ a:hover {
   letter-spacing: 0.5px;
 }
 
-/* شريط الحقوق السفلي */
+شريط الحقوق السفلي
 .footer-bottom-bar {
   background-color: #05080e;
   padding: 18px 0;
@@ -1007,4 +1007,29 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px 10px;
+}
+/* حل مشكلة باهتان الفوتر وتداخله مع السكشن السابق */
+.main-footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  background: linear-gradient(135deg, #090d16 0%, #0f172a 100%) !important;
+  color: #ffffff;
+  padding-top: 60px;
+  margin-top: 80px; /* زيادة المسافة الفاصلة لمنع أي تداخل بصري */
+  border-top: 4px solid #0284c7;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف يفصل الفوتر عن المحتوى فوقه */
+  z-index: 10;
+}
+
+/* التأكد من أن حاوية الفوتر تأخذ عرضها الكامل دون تأثر بالسكاشن السابقة */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  display: grid;
+  grid-template-columns: 1.3fr 1.4fr 1.1fr;
+  gap: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent !important; /* لضمان عدم وجود خلفية رمادية باهتة بداخلها */
 }
