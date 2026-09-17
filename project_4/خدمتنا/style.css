@@ -1,18 +1,34 @@
 /* ==========================================
-   تنسيقات الهب المستقل للماركات والموبايل
+   إعدادات أساسية وتعامد العناصر
    ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  overflow-x: hidden;
+}
+
 .independent-brands-hub {
   padding: 40px 15px;
   background: #f1f5f9;
   font-family: "Cairo", sans-serif;
   color: #1e293b;
   overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .independent-brands-hub .container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .hub-header {
@@ -56,6 +72,8 @@
   margin-bottom: 25px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
   border: 1px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .brand-title-bar {
@@ -79,6 +97,7 @@
   font-size: 20px;
   font-weight: 900;
   color: #0f172a;
+  margin: 0;
 }
 
 .brand-desc {
@@ -96,6 +115,7 @@
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .brand-highlight-box h4 {
@@ -118,46 +138,72 @@
   font-weight: 600;
 }
 
-/* جدول الأعطال وتجنب خروجه عن الشاشة في الموبايل */
+/* ==========================================
+   الجداول المتجاوبة مع شريط اسكرول (Scroll)
+   ========================================== */
 .brand-trouble-wrap,
 .brand-table-wrapper {
   background: #f8fafc;
   border: 1px solid #cbd5e1;
   border-radius: 12px;
-  padding: 15px;
+  padding: 12px;
   margin-bottom: 20px;
-  overflow-x: auto; /* يتيح التمرير الأفقي للجدول على الموبايل بدون كسر التصميم */
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.brand-trouble-wrap h4,
-.brand-table-wrapper h4 {
-  font-size: 15px;
-  font-weight: 900;
-  color: #0f172a;
-  margin-bottom: 12px;
+.table-responsive {
+  width: 100%;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* تخصيص مظهر شريط الاسكرول الأفقي */
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 .brand-trouble-table,
 .isolated-table {
   width: 100%;
-  min-width: 500px; /* يضمن عدم انكماش الجدول بشكل مزعج */
+  min-width: 600px;
   border-collapse: collapse;
   text-align: right;
-  font-size: 13px;
+  background-color: #fff;
 }
 
 .brand-trouble-table th,
 .brand-trouble-table td,
 .isolated-table th,
 .isolated-table td {
-  padding: 10px;
+  padding: 12px 15px;
   border: 1px solid #e2e8f0;
+  font-size: 13.5px;
+  white-space: nowrap;
 }
 
 .brand-trouble-table th,
 .isolated-table th {
-  background: #1e293b;
+  background-color: #1e293b;
   color: #ffffff;
   font-weight: 800;
 }
@@ -180,25 +226,27 @@
   transition: 0.3s;
 }
 
-/* زر النهاية والـ CTA */
+/* زر النهاية والـ CTA الرئيسي */
 .page-bottom-cta {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: #ffffff;
   text-align: center;
-  padding: 35px 20px;
+  padding: 30px 15px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
   margin-top: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .page-bottom-cta h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
   margin-bottom: 10px;
 }
 
 .page-bottom-cta p {
-  font-size: 14px;
+  font-size: 13.5px;
   color: #cbd5e1;
   margin-bottom: 20px;
   font-weight: 600;
@@ -209,22 +257,24 @@
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .main-action-call,
 .main-action-whatsapp {
-  padding: 12px 20px;
+  padding: 12px 18px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 800;
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   transition: 0.3s;
   width: 100%;
   max-width: 260px;
+  box-sizing: border-box;
 }
 
 .main-action-call {
@@ -240,13 +290,14 @@
 }
 
 /* ==========================================
-   تنسيقات السيكشنات العامة وشبكات العرض
+   السيكشنات العامة وشبكات العرض (Grids)
    ========================================== */
 .brand-isolated-section,
 .brand-full-section,
 .lg-section-box,
-.toshiba-section-box {
-  padding: 25px 15px;
+.toshiba-section-box,
+.section-card {
+  padding: 20px 15px;
   background: #ffffff;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
@@ -260,106 +311,122 @@
 .grid-3-cols,
 .privacy-grid {
   display: grid;
-  grid-template-columns: 1fr; /* افتراضي للموبايل: عمود واحد لضمان عدم التداخل */
+  grid-template-columns: 1fr;
   gap: 15px;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  .grid-2-cols {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid-3-cols {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .privacy-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  box-sizing: border-box;
 }
 
 .card-item,
-.privacy-item {
+.privacy-item,
+.privacy-disclaimer-box {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 20px 15px;
+  padding: 15px;
   width: 100%;
   box-sizing: border-box;
 }
 
 .regions-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.badge-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
-@media (min-width: 576px) {
-  .regions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.chip-item {
+  background: #f1f3f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #495057;
 }
 
+/* هوامش مساعدة سريعة */
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* ==========================================
+   الفوتر (Footer)
+   ========================================== */
 .main-footer {
   background: linear-gradient(135deg, #090d16 0%, #0f172a 100%);
   color: #ffffff;
-  padding-top: 60px;
-  margin-top: 50px;
+  padding-top: 40px;
+  margin-top: 40px;
   border-top: 4px solid #0284c7;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 40px 20px;
+  padding: 0 15px 30px 15px;
   display: grid;
-  grid-template-columns: 1.3fr 1.4fr 1.1fr;
-  gap: 35px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
 }
 
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* عمود اليمين (اللوجو والاسم) */
 .footer-logo-box {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-logo-icon {
-  width: 55px;
-  height: 55px;
+  width: 48px;
+  height: 48px;
   background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
   color: #0f172a;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
 }
 
 .footer-title-group h3 {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   color: #ffffff;
   font-weight: 700;
   margin: 0 0 2px 0;
 }
 
 .footer-title-group span {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #38bdf8;
   font-weight: 600;
 }
 
 .footer-desc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #94a3b8;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -368,18 +435,17 @@
   background: rgba(245, 158, 11, 0.1);
   border: 1px solid rgba(245, 158, 11, 0.3);
   color: #fbbf24;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
-/* عمود الوسط (اللينكات) */
 .footer-col h4 {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: #ffffff;
   margin-bottom: 5px;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   border-bottom: 2px solid #0284c7;
   width: fit-content;
 }
@@ -387,7 +453,7 @@
 .footer-links-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-links-list {
@@ -402,22 +468,9 @@
 .footer-links-list li a {
   color: #cbd5e1;
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   transition: all 0.3s ease;
   display: inline-block;
-}
-
-.footer-links-list li a:hover {
-  color: #38bdf8;
-  transform: translateX(-4px);
-}
-
-/* عمود اليسار (أرقام الاتصال) */
-.footer-contact-col p {
-  font-size: 0.92rem;
-  color: #94a3b8;
-  margin: 0;
-  line-height: 1.6;
 }
 
 .footer-contacts-box {
@@ -430,42 +483,30 @@
 .footer-contact-btn {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
+  gap: 10px;
+  padding: 10px 12px;
   border-radius: 10px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .hotline-btn {
   background: rgba(2, 132, 199, 0.15);
   border: 1px solid rgba(2, 132, 199, 0.4);
 }
-.hotline-btn:hover {
-  background: rgba(2, 132, 199, 0.3);
-  transform: translateY(-2px);
-}
 
 .phone-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
-}
-.phone-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
 }
 
 .whatsapp-btn {
   background: rgba(37, 211, 102, 0.15);
   border: 1px solid rgba(37, 211, 102, 0.4);
 }
-.whatsapp-btn:hover {
-  background: rgba(37, 211, 102, 0.3);
-  transform: translateY(-2px);
-}
 
 .footer-contact-btn .f-icon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #38bdf8;
 }
 .whatsapp-btn .f-icon {
@@ -474,59 +515,63 @@
 
 .footer-contact-btn .f-text small {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #94a3b8;
 }
 
 .footer-contact-btn .f-text strong {
   display: block;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #ffffff;
-  letter-spacing: 0.5px;
 }
 
-/* شريط الحقوق السفلي */
 .footer-bottom-bar {
   background-color: #05080e;
-  padding: 18px 0;
+  padding: 15px 10px;
   text-align: center;
 }
 
 .footer-bottom-content p {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   color: #64748b;
   margin: 0;
 }
 
-.footer-bottom-content strong {
-  color: #e2e8f0;
-}
-
-/* التجاوب مع الشاشات الصغيرة والمتوسطة */
-@media (max-width: 1024px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+/* ==========================================
+   Media Queries للشاشات المختلفة
+   ========================================== */
+@media (min-width: 768px) {
+  .grid-2-cols,
+  .privacy-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .footer-col:last-child {
-    grid-column: span 2;
+  .grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-container {
+    grid-template-columns: 1.2fr 1.3fr 1fr;
+    padding: 0 20px 40px 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .independent-brands-hub {
+    padding: 15px 8px;
   }
-  .footer-col:last-child {
-    grid-column: span 1;
+
+  .single-brand-box,
+  .section-card {
+    padding: 15px 12px !important;
   }
-  .footer-links-grid {
-    grid-template-columns: 1fr 1fr;
+
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-}
-.regions-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px 10px;
+
+  .hub-heading {
+    font-size: 22px;
+  }
 }
