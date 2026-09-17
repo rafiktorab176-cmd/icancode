@@ -1,0 +1,683 @@
+/* الهيدر */
+.main-header {
+  background-color: #0f766e;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header-top {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.main-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.search-bar-container input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: right;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* الأقسام العامة */
+.section-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-3px);
+}
+
+.section-card h2 {
+  color: #115e59;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-right: 5px solid #0f766e;
+  padding-right: 10px;
+}
+
+.section-card p {
+  color: #64748b;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+/* القوائم والقواعد التفصيلية */
+.detailed-list {
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.detailed-list li {
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+/* التساؤلات الشائعة */
+.faq-item {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-right: 4px solid #f97316;
+  transition: background 0.3s;
+}
+
+.faq-item:hover {
+  background: #f1f5f9;
+}
+
+.faq-item h4 {
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+}
+
+/* مقدمة الصفحة (قسم السايدبار) */
+.intro-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.content-box h2 {
+  color: #115e59;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.sidebar-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cta-box {
+  background: #0f766e;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(15, 118, 110, 0.3);
+}
+
+.cta-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.cta-box p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.btn-phone,
+.btn-whatsapp {
+  display: block;
+  background: white;
+  color: #115e59;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.btn-phone:hover,
+.btn-whatsapp:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.features-sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.features-sidebar h4 {
+  color: #115e59;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.features-sidebar ul {
+  list-style: none;
+}
+
+.features-sidebar li {
+  padding: 6px 0;
+  color: #64748b;
+}
+
+/* الكارتات (أعطال الثلاجات) */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px -3px rgba(15, 118, 110, 0.15);
+  border-color: #0f766e;
+}
+
+.card-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #fff7ed;
+  color: #f97316;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+  padding-left: 40px;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.card-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #f97316;
+  font-size: 0.9rem;
+}
+
+.card .action-link {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.card .action-link:hover {
+  text-decoration: underline;
+}
+
+.card .self-fix {
+  color: #10b981;
+}
+
+/* مناطق الخدمة */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.area-box {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.area-box:hover {
+  transform: translateY(-3px);
+  border-color: #0f766e;
+}
+
+.area-box h4 {
+  color: #115e59;
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.tags span:hover {
+  background: #0f766e;
+  color: white;
+}
+
+.search-keywords-box {
+  margin-top: 30px;
+  background: #f0fdfa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ccfbf1;
+}
+
+.search-keywords-box h4 {
+  color: #115e59;
+  margin-bottom: 8px;
+}
+
+.search-keywords-box p {
+  margin-bottom: 15px;
+}
+
+.tags.secondary span {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* لماذا نحن */
+.why-us {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+  border: 1px solid #e2e8f0;
+}
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #115e59;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background: #f0fdfa;
+  padding: 20px;
+  border-radius: 8px;
+  border-right: 4px solid #0f766e;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.feature-box:hover {
+  background: #ccfbf1;
+  transform: translateY(-4px);
+}
+
+.feature-box h4 {
+  color: #115e59;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+/* أقسام الماركات والمميزات */
+.brand-section {
+  background: white;
+}
+
+.brand-features {
+  margin-top: 20px;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.brand-features h4 {
+  color: #115e59;
+  margin-bottom: 12px;
+}
+
+.brand-features ul {
+  list-style: none;
+}
+
+.brand-features li {
+  padding: 5px 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* الكارتات (أعطال الثلاجات) */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px -3px rgba(15, 118, 110, 0.15);
+  border-color: #0f766e;
+}
+
+.card-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #fff7ed;
+  color: #f97316;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #1e293b;
+  padding-left: 40px;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.card-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+}
+
+.card .price {
+  font-weight: bold;
+  color: #f97316;
+  font-size: 0.9rem;
+}
+
+.card .action-link {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.card .action-link:hover {
+  text-decoration: underline;
+}
+
+.card .self-fix {
+  color: #10b981;
+}
+
+/* مناطق الخدمة */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.area-box {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.area-box:hover {
+  transform: translateY(-3px);
+  border-color: #0f766e;
+}
+
+.area-box h4 {
+  color: #115e59;
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: white;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.tags span:hover {
+  background: #0f766e;
+  color: white;
+}
+
+.search-keywords-box {
+  margin-top: 30px;
+  background: #f0fdfa;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ccfbf1;
+}
+
+.search-keywords-box h4 {
+  color: #115e59;
+  margin-bottom: 8px;
+}
+
+.search-keywords-box p {
+  margin-bottom: 15px;
+}
+
+.tags.secondary span {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* لماذا نحن */
+.why-us {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+  border: 1px solid #e2e8f0;
+}
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #115e59;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background: #f0fdfa;
+  padding: 20px;
+  border-radius: 8px;
+  border-right: 4px solid #0f766e;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.feature-box:hover {
+  background: #ccfbf1;
+  transform: translateY(-4px);
+}
+
+.feature-box h4 {
+  color: #115e59;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.images-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.images-section h2 {
+  color: #115e59;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-right: 5px solid #0f766e;
+  padding-right: 10px;
+}
+
+.two-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.image-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.custom-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.image-box span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #0f766e;
+  font-weight: 600;
+}

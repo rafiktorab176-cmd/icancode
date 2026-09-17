@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدونة الشاشات للمؤسسة المعتمد</title>
+
+    <!-- أيقونة الموقع (Favicon) صيانة فخمة وملكية -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M50 10 L85 25 V50 C85 72 50 90 50 90 C50 90 15 72 15 50 V25 Z' fill='none' stroke='%23b58e3e' stroke-width='6'/%3E%3Cpath d='M65 35 L45 55 M42 58 L32 68 C30 70 27 70 25 68 C23 66 23 63 25 61 L35 51 M58 42 L63 37 C67 33 73 33 77 37 C81 41 81 47 77 51 L72 56' fill='none' stroke='%23ffffff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='68' cy='42' r='4' fill='%23b58e3e'/%3E%3C/svg%3E"
+    />
+
+    <!-- استيراد خط Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ربط ملف الـ CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../globals/style.css" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- بداية الـ Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- اللوجو الفخم مع الاسم (ظاهر دايماً ديسكتوب وموبايل) -->
+        <a href="../index.html/" class="logo-area">
+          <div class="logo-emblem">
+            <i class="fa-solid fa-shield-alt"></i>
+            <span class="koofi-m">م</span>
+          </div>
+          <div class="logo-text-area">
+            <span class="main-brand">مؤسسة المعتمد</span>
+            <span class="sub-brand">لصيانة الأجهزة المنزلية</span>
+          </div>
+        </a>
+
+        <!-- روابط القائمة -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">الرئيسية</a></li>
+          <li><a href="../من-نحن/">من نحن</a></li>
+          <li><a href="../خدمتنا/"> خدمتنا</a></li>
+          <li>
+            <a href="../الاسئلة-الشائعة/">الأسئلة الشائعة</a>
+          </li>
+          <li><a href="../المدونة/" class="active">المدونة</a></li>
+          <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+        </ul>
+        <!-- الجزء الأيسر للموبايل (زرار الخط الساخن المصغر + الهامبرجر) -->
+        <div class="mobile-actions">
+          <a
+            href="tel:19580"
+            class="hotline-mobile-btn"
+            title="اتصل بالخط الساخن"
+          >
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>19580</span>
+          </a>
+          <!-- زرار الهامبرجر -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- الخط الساخن الملكي (للديسكتوب) -->
+        <div class="hotline-royal">
+          <div class="hotline-icon-circle">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="hotline-details">
+            <span class="hotline-title">الخط الساخن الموحد</span>
+            <span class="hotline-number">19580</span>
+          </div>
+          <div class="shine-effect"></div>
+        </div>
+      </nav>
+    </header>
+    <section class="screen-intro-section">
+      <div class="container">
+        <div class="header-box">
+          <div class="icon-frame-box">
+            <div class="service-icon-frame">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="currentColor"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.9 6.9a2.12 2.12 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.94-7.94l-3.76 3.77z"
+                />
+              </svg>
+            </div>
+          </div>
+          <span class="top-badge">دليل صيانة الشاشات</span>
+          <h1>لماذا تحتاج فني شاشات متخصص وليس كهربائياً عاماً؟</h1>
+          <p class="intro-sub">
+            شاشات Smart TV LED الحديثة إلكترونيات دقيقة: بورد باور، بورد رئيسي
+            (Main Board)، شرائط إضاءة خلفية (Backlight)، بورد T-Con، والبانل
+            نفسه. الفني غير المتخصص يشكّس بالتخمين ويغيّر قطع سليمة، أو أسوأ؛
+            يكسر البانل أثناء الفك وهو أغلى قطعة في الشاشة. فنيونا شغالون يومياً
+            على صيانة الشاشات والتليفزيونات بأجهزة قياس، ويحددوا العطل قبل أي فك
+            من خلال <span class="highlight-keyword">المؤسسة المعتمدة</span>.
+            تواصل معنا على الخط الساخن
+            <a href="tel:19580" class="contact-hover-link">19580</a>.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h2>أشهر أعطال الشاشات التي نصلحها</h2>
+
+          <h3>الشاشة لا تعمل نهائياً أو لمبة الاستندباي بترمش</h3>
+          <p>
+            غالباً عطل في بورد الباور: مكثفات منتفخة، فيوز محروق، أو دايود قصر.
+            من أكثر الأعطال شيوعاً بعد تذبذب الكهرباء وانقطاعها المتكرر، وإصلاحه
+            في المنزل وارد جداً في نفس الزيارة.
+          </p>
+
+          <h3>الصوت شغّال والصورة سودا</h3>
+          <p>
+            العلامة الكلاسيكية لتلف الإضاءة الخلفية (Backlight). بنقرّب كشاف
+            موبايل من الشاشة: لو الصورة باينة باهتة يبقى شرائط الليد محتاجة
+            تغيير. بنغيّر الشرايط بالكامل مش لمبة واحدة، عشان العطل ما يرجعش بعد
+            شهر.
+          </p>
+
+          <h3>خطوط رأسية أو أفقية على الصورة</h3>
+          <p>
+            ممكن تكون فلاتة (كابل) اتحركت، أو بورد T-Con، أو بداية مشكلة في
+            البانل. التشخيص الدقيق هنا بيوفر عليك فلوس كتير: عطل الفلاتة بسيط،
+            أما البانل فبنصارحك لو تغييره مش مجدي اقتصادياً.
+          </p>
+
+          <h3>الشاشة بتفصل لوحدها أو بتعيد التشغيل</h3>
+          <p>
+            سخونة زايدة، عطل في البورد، أو مشكلة سوفت وير في السمارت. بنفصل
+            الثلاثة بالترتيب.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- رأس الصفحة (Banner) -->
+    <section class="screen-header">
+      <div class="header-icon-box">
+        <i class="fa-solid fa-tv"></i>
+      </div>
+      <h1>صيانة شاشات سامسونج</h1>
+      <div class="breadcrumb-box">
+        <a href="../index.html">الرئيسية</a>
+        <span>/</span>
+        <span style="margin-right: 8px">صيانة شاشات سامسونج</span>
+      </div>
+    </section>
+
+    <!-- المحتوى والشبكة الجانبية -->
+    <div class="main-content-layout">
+      <!-- الشريط الجانبي (Sidebar) -->
+      <aside class="sidebar">
+        <div class="booking-card">
+          <h3>احجز صيانة شاشة الآن</h3>
+          <p>اتصل بنا الآن واحصل على خدمة سريعة بالمنزل</p>
+          <a href="tel:01289966660" class="btn-hotline">
+            <i class="fa-solid fa-phone"></i> 19580
+          </a>
+          <a
+            href="https://wa.me/201289966660"
+            target="_blank"
+            class="btn-whatsapp"
+          >
+            <i class="fa-brands fa-whatsapp"></i> واتساب الخدمة
+          </a>
+        </div>
+
+        <div class="features-card">
+          <h4>مميزاتنا</h4>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-circle-check"></i> فنيين متخصصين</li>
+            <li><i class="fa-solid fa-circle-check"></i> قطع غيار أصلية</li>
+            <li><i class="fa-solid fa-circle-check"></i> ضمان 6 شهور</li>
+            <li><i class="fa-solid fa-circle-check"></i> خدمة منزلية</li>
+            <li><i class="fa-solid fa-circle-check"></i> أسعار مناسبة</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- المقال والمحتوى الشامل لشاشات سامسونج -->
+      <main class="article-content-area">
+        <p>
+          شاشات سامسونج QLED و Crystal UHD منتشرة جداً في بيوت الدلتا، وبتتعامل
+          يومياً مع أعطالها: الصوت شغال والصورة سوداء (شرائط الباك لايت)، الشاشة
+          مش بتقوم ولمبة الاستندباي بترمش (بورد الباور)، وتهنيج السمارت هاب
+          وتطبيقاته. بنشخص بأجهزة قياس قبل أي فك، وبنستخدم قطع مطابقة للموديل،
+          مع ضمان 6 شهور مكتوب. لو شاشتك جديدة ولسه في ضمان سامسونج الرسمي
+          بننصحك تلجأ للوكيل الأول عشان ما تفقدش الضمان.
+        </p>
+
+        <!-- كارت الموديلات الحديثة والفاخرة -->
+        <div class="modern-models-box">
+          <div class="models-box-header">
+            <h3>خدمة الموديلات الحديثة والفاخرة من شاشات سامسونج</h3>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            الأجهزة الحديثة (الإنفرتر، سايد باي سايد، البلت إن، الشاشات الذكية)
+            تحتاج فنياً يفهم البورد الإلكتروني وحساساتها، وليس فنياً عاماً. نعمل
+            بأجهزة قياس ونستخدم قطع غيار أصلية فقط حفاظاً على قيمة الجهاز.
+          </p>
+          <div class="tags-list">
+            <span>The Frame</span>
+            <span>Q60C</span>
+            <span>AU8000</span>
+            <span>BU8000</span>
+            <span>CU7000</span>
+            <span>AU7000</span>
+          </div>
+          <p class="coverage-text">
+            <strong>نغطي أيضاً:</strong> تصليح شاشات · فني شاشة قريب مني · رقم
+            فني شاشة · ورشة تصليح شاشات · إصلاح شاشات طوارئ 24 ساعة · رقم خدمة
+            عملاء سامسونج مصر
+          </p>
+          <a href="tel:01289966660" class="btn-consultation">
+            <i class="fa-solid fa-phone"></i> استشارة فنية مجانية قبل الإصلاح
+            (الخط الساخن: 19580)
+          </a>
+        </div>
+
+        <!-- قسم أعطال شاشات سامسونج الشائعة -->
+        <h2 class="section-title-main">أعطال شاشات سامسونج الشائعة</h2>
+        <p class="section-subtitle-text">
+          اضغط على العطل لمعرفة أسبابه وما يمكنك تجربته قبل طلب الفني.
+        </p>
+
+        <div class="faults-grid">
+          <!-- كارت 1 -->
+          <div class="fault-card">
+            <div class="fault-card-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h3>الشاشة لا تعمل نهائياً</h3>
+            </div>
+            <p class="fault-desc">
+              الشاشة ميتة تماماً: لا صورة ولا صوت ولا لمبة استندباي، أو اللمبة
+              بترمش والشاشة مش بتقوم.
+            </p>
+            <div class="fault-footer">
+              <span class="fault-cause"
+                ><strong>الأسباب المحتملة:</strong> تلف بورد الباور (مكثفات
+                منتفخة أو فيوز) — السبب الأول - تذبذب أو انقطاع الكهرباء المتكرر
+                - مشكلة في زر التشغيل أو كابل نفسه.</span
+              >
+              <div class="fault-meta">
+                <span class="badge-pro">يحتاج فني متخصص</span>
+                <span class="fault-price">تقريباً 400-1200 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- كارت 2 -->
+          <div class="fault-card">
+            <div class="fault-card-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h3>الصوت شغال والصورة سوداء</h3>
+            </div>
+            <p class="fault-desc">
+              الشاشة بتفتح والصوت واضح، لكن الصورة سوداء تماماً أو باهتة جداً
+              لدرجة إنها مش باينة إلا بكشاف.
+            </p>
+            <div class="fault-footer">
+              <span class="fault-cause"
+                ><strong>الأسباب المحتملة:</strong> تلف شرائط الإضاءة الخلفية
+                LED — السبب الأغلب - عطل في دايرة الباك لايت داخل بورد الباور -
+                نادراً: مشكلة في بورد T-Con.</span
+              >
+              <div class="fault-meta">
+                <span class="badge-pro">يحتاج فني متخصص</span>
+                <span class="fault-price">تقريباً 600-2000 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- كارت 3 -->
+          <div class="fault-card">
+            <div class="fault-card-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h3>خطوط رأسية أو أفقية على الشاشة</h3>
+            </div>
+            <p class="fault-desc">
+              خط أو مجموعة خطوط ملونة أو سوداء، رأسية أو أفقية، ثابتة أو بتظهر
+              وتختفي مع تسخين الشاشة.
+            </p>
+            <div class="fault-footer">
+              <span class="fault-cause"
+                ><strong>الأسباب المحتملة:</strong> فلاتة (كابل مسطح) اتحركت من
+                مكانها أو تأكسدت - عطل في بورد T-Con - بداية تلف في البانل
+                نفسه.</span
+              >
+              <div class="fault-meta">
+                <span class="badge-pro">يحتاج فني متخصص</span>
+                <span class="fault-price">تقريباً 300-1500 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- كارت 4 -->
+          <div class="fault-card">
+            <div class="fault-card-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h3>الشاشة بتفصل أو بتعيد التشغيل لوحدها</h3>
+            </div>
+            <p class="fault-desc">
+              الشاشة بتشتغل شوية وبعدين تفصل فجأة، أو بتفضل تعيد تشغيل نفسها في
+              حلقة مستمرة.
+            </p>
+            <div class="fault-footer">
+              <span class="fault-cause"
+                ><strong>الأسباب المحتملة:</strong> سخونة زايدة بسبب سد فتحات
+                التهوية أو الأتربة - مكثفات ضعيفة في بورد الباور - سوفت وير
+                معطوب أو تحديث فشل.</span
+              >
+              <div class="fault-meta">
+                <span class="badge-pro">يحتاج فني متخصص</span>
+                <span class="fault-price">تقريباً 300-1000 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- كارت 5 -->
+          <div class="fault-card">
+            <div class="fault-card-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h3>الصورة شغالة ومفيش صوت</h3>
+            </div>
+            <p class="fault-desc">
+              الصورة تمام لكن الصوت مقطوع تماماً أو ضعيف جداً أو فيه تشويش.
+            </p>
+            <div class="fault-footer">
+              <span class="fault-cause"
+                ><strong>الأسباب المحتملة:</strong> إعدادات صوت متظبطة غلط أو
+                الشاشة على وضع كتم - مخرج صوت خارجي (سماعات/ريسيفر) متوصل ومش
+                شغال - تلف...</span
+              >
+              <div class="fault-meta">
+                <span class="badge-pro">يحتاج فني متخصص</span>
+                <span class="fault-price">تقريباً 250-800 ج.م</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- كارت 6 -->
+          <div class="fault-card">
+            <div class="fault-card-header">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <h3>مشاكل السمارت والواي فاي والتطبيقات</h3>
+            </div>
+            <p class="fault-desc">
+              الشاشة مش بتوصل بالواي فاي، أو التطبيقات بطيئة وبتقفل لوحدها، أو
+              يوتيوب ونتفلكس مش شغالين.
+            </p>
+            <div class="fault-footer">
+              <span class="fault-cause"
+                ><strong>الأسباب المحتملة:</strong> ذاكرة الشاشة ممتلئة أو سوفت
+                وير قديم - إشارة واي فاي ضعيفة في مكان الشاشة - تحديث معلق أو
+                تطبيق محتاج إعادة...</span
+              >
+              <div class="fault-meta">
+                <span class="badge-self">قد تحله بنفسك</span>
+                <span class="fault-price">تقريباً 200-500 ج.م</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="price-notice">
+          * الأسعار المذكورة تقديرية لأعطال شاشات سامسونج وتختلف حسب الموديل
+          ونوع قطعة الغيار، ويتم إبلاغك بالسعر النهائي بعد الفحص وقبل بدء
+          الإصلاح.
+        </p>
+
+        <!-- جدول أكواد أخطاء شاشات سامسونج ومعناها -->
+        <h2>أكواد أخطاء شاشات سامسونج ومعناها</h2>
+        <div class="table-responsive">
+          <table class="error-codes-table">
+            <thead>
+              <tr>
+                <th>الكود</th>
+                <th>المعنى</th>
+                <th>الحل المبدئي</th>
+                <th>إجراء</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>102</strong></td>
+                <td>
+                  برنامج الشبكة (Firmware) الخاص بالتلفزيون غير مسجل على خادم
+                  سامسونج بعد، فيفشل الاتصال بالخدمات.
+                </td>
+                <td>
+                  حدث برنامج التلفزيون عبر التلفزيون عبر Settings > Support >
+                  Software Update؛ إذا فشل التحديث عبر الإنترنت حمل الملف من
+                  موقع سامسونج...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>109</strong></td>
+                <td>
+                  خطأ في تصنيف أو ربط الموديل على خادم سامسونج (خطأ من جهة
+                  الخادم وليس من التلفزيون).
+                </td>
+                <td>
+                  تأكد من صحة تاريخ ووقت التلفزيون؛ أعد ضبط الشبكة وأعد تشغيل
+                  الجهاز؛ حدث البرنامج لأحدث إصدار؛ تواصل مع دعم سامسونج لتصح...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>600</strong></td>
+                <td>فشل في تخصيص الذاكرة داخل التلفزيون.</td>
+                <td>
+                  افصل التلفزيون عن الكهرباء دقيقتين ثم أعد التشغيل؛ ثم أعد
+                  التشغيل؛ نفذ Reset Smart Hub من قائمة الدعم؛ حدث البرنامج عبر
+                  USB؛ نفذ ضبط...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>801</strong></td>
+                <td>انتهاء مهلة العملية لأن خادم سامسونج مشغول.</td>
+                <td>
+                  انتظر فترة ثم أعد المحاولة؛ نفذ اختبار الشبكة من Settings >
+                  General > Network > Network Status؛ أعد تشغيل الراوتر؛ جرب...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>Check Signal Cable</strong></td>
+                <td>
+                  التلفزيون يرصد مشكلة في توصيل كابل الإشارة من المصدر المختار.
+                </td>
+                <td>
+                  تأكد من تثبيت الكابل في الطرفين وفي المنفذ الصحيح؛ شغل الجهاز
+                  الخارجي واختار المصدر المطابق؛ استبدل الكابل بآخر سليم؛ جر...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>Mode Not Supported</strong></td>
+                <td>
+                  دقة أو صيغة الإخراج من الجهاز المتصل غير مدعومة من التلفزيون.
+                </td>
+                <td>
+                  اضبط دقة الجهاز الخارجي على قيمة مدعومة (480i/p أو 720p أو
+                  1080i/p أو 2160p)؛ أعد تشغيل التلفزيون والجهاز الخارجي؛
+                  استخدم...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>No Signal</strong></td>
+                <td>
+                  التلفزيون لا يستقبل إشارة من الجهاز الخارجي أو الهوائي المتصل
+                  به.
+                </td>
+                <td>
+                  تأكد من تشغيل الجهاز الخارجي واختيار المصدر الصحيح من زر
+                  Source؛ أعد تثبيت كابل HDMI في الطرفين وجرب منفذاً آخر؛
+                  استبدل...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>Self Diagnosis - Picture Test</strong></td>
+                <td>
+                  اختبار الصورة الذاتي المدمج: يعرض صورة مرجعية للتفريق بين عطل
+                  في الشاشة نفسها وبين مشكلة في المصدر أو الإشارة.
+                </td>
+                <td>
+                  ادخل الصورة الذاتي المدمج: يعرض صورة مرجعية للتفريق بين عطل في
+                  Settings > Support > Device Care > Self Diagnosis > Picture
+                  Test؛ إذا ظهرت الصورة المرجعية سليمة فالمشكلة فالعطل أو المصدر
+                  أ...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>Standby LED Blinking</strong></td>
+                <td>
+                  مؤشر الاستعداد الأحمر يومض والتلفزيون لا يعمل، وهو ما تصفه
+                  سامسونج بأنه خلل داخلي في التلفزيون.
+                </td>
+                <td>
+                  افصل التلفزيون وصندوق One Connect عن الكهرباء 30 ثانية ثم
+                  وصلهما بمقبس مباشر بدون مشترك حماية؛ إذا استمر الوميض فالعطل
+                  فا...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+              <tr>
+                <td><strong>The HDCP Has Been Compromised</strong></td>
+                <td>
+                  فشل في التحقق من حماية المحتوى HDCP بين التلفزيون والريسيفر أو
+                  الجهاز المتصل.
+                </td>
+                <td>
+                  افصل الريسيفر عن الكهرباء 30 ثانية ثم أعد تشغيله؛ أعد تثبيت
+                  كابل HDMI وجرب منفذاً آخر؛ أزل أي موزع أو محول بين الجهازي...
+                </td>
+                <td><a href="#" class="table-link">التفاصيل ←</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="error-footer-text">
+          أكواد أخطاء شاشة سامسونج الأكثر شيوعاً. إذا استمر الكود بعد إعادة
+          التشغيل، اتصل بنا على **19580** ليصلك فني سامسونج متخصص.
+        </p>
+
+        <!-- قسم كيف تتم الخدمة (4 خطوات) -->
+        <h2 class="section-title-main" style="margin-top: 50px">
+          كيف تتم الخدمة
+        </h2>
+        <p class="section-subtitle-text">أربع خطوات من الاتصال حتى الضمان</p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>إصلاح وضمان</h3>
+            <p>
+              إصلاح في المنزل غالباً في نفس الزيارة، مع ضمان مكتوب على الإصلاح
+              وقطع الغيار.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>فحص وتسعير</h3>
+            <p>تشخيص دقيق للعطل وتوضيح السعر النهائي قبل البدء، وأنت تقرر.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>وصول الفني</h3>
+            <p>
+              يصلك فني متخصص في الماركة نفسها ومعم عدة الفحص وقطع الغيار
+              الشائعة.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>اتصال أو طلب أونلاين</h3>
+            <p>
+              اتصل بنا على **01289966660** أو الخط الساخن **19580** واذكر نوع
+              الجهاز والماركة والعطل، ونحدد معك أقرب موعد لصيانة شاشات.
+            </p>
+          </div>
+        </div>
+
+        <!-- الأسئلة الشائعة (FAQ) -->
+        <h2 class="section-title-main" style="margin-top: 50px">أسئلة شائعة</h2>
+        <p class="section-subtitle-text">أسئلة شائعة عن صيانة شاشات شاشات</p>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>هل بتصلحوا الشاشات بالمنزل ولا بتاخدوها الورشة؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>الشاشة بتشتغل وتفصل لوحدها، إيه السبب؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>شاشتي وقعت والبانل اتكسر — ينفع تتصلح؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>الشاشة صوت من غير صورة، تتصلح؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>بتصلحوا شاشات قديمة LCD؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>هل الكشف على الجهاز مجاني؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>هل الصيانة في المنزل ولا لازم أنقل الجهاز؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>ما هي مدة الضمان على الإصلاح؟</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- الكلمات الدلالية في الأسفل -->
+        <div class="bottom-seo-box">
+          <h3>تبحث عنها بأسباب تانية؟ إحنا نفس الخدمة</h3>
+          <p>
+            سواء بتقول صيانة شاشات سامسونج أو بأي صيغة تانية، الخدمة واحدة
+            والرقم واحد: <strong>01289966660</strong> أو الخط الساخن
+            <strong>19580</strong>
+          </p>
+          <div class="seo-tags-wrap">
+            <span>تصليح شاشات</span>
+            <span>فني شاشة قريب مني</span>
+            <span>رقم فني شاشة</span>
+            <span>ورشة تصليح شاشات</span>
+            <span>إصلاح شاشات طوارئ 24 ساعة</span>
+            <span>رقم خدمة عملاء سامسونج مصر</span>
+            <span>تصليح سامسونج</span>
+            <span>مركز خدمة سامسونج</span>
+            <span>فني شاشة سامسونج</span>
+            <span>إصلاح شاشات سامسونج بالمنزل</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <section class="toshiba-faults-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="top-badge">تشخيص سريع</span>
+          <h2>أعطال شاشات توشيبا الشائعة</h2>
+          <p>
+            اضغط على العطل لمعرفة أسبابه وما يمكنك تجريبه قبل طلب الفني من خلال
+            <span class="highlight-keyword">المؤسسة المعتمدة</span>.
+          </p>
+        </div>
+
+        <div class="faults-grid">
+          <!-- كارت 1 -->
+          <div class="fault-card">
+            <div class="card-icon warning">⚠️</div>
+            <h3>الشاشة لا تعمل نهائياً</h3>
+            <p class="fault-desc">
+              الشاشة ميتة تماماً: لا صورة ولا صوت ولا لمبة استندباي، أو اللمبة
+              بترمش والشاشة مش بتقوم.
+            </p>
+            <div class="fault-details">
+              <strong>الأسباب المحتملة:</strong> تلف بورد الباور (مكثفات منتفخة
+              أو فيوز) — السبب الأول - تذبذب أو انقطاع الكهرباء المتكرر - مشكلة
+              في زر التشغيل أو كاب...
+            </div>
+            <div class="card-footer">
+              <span class="price-tag">تقريباً 400–1200 ج.م</span>
+              <span class="status-badge technician">يحتاج فني متخصص</span>
+            </div>
+          </div>
+
+          <!-- كارت 2 -->
+          <div class="fault-card">
+            <div class="card-icon warning">⚠️</div>
+            <h3>الصوت شغّال والصورة سودا</h3>
+            <p class="fault-desc">
+              الشاشة بتفتح والصوت واضح، لكن الصورة سودا تماماً أو باهتة جداً
+              لدرجة إنها مش باينة إلا بكشاف.
+            </p>
+            <div class="fault-details">
+              <strong>الأسباب المحتملة:</strong> تلف شرائط الإضاءة الخلفية LED —
+              السبب الأغلب - عطل في دايرة الباك لايت داخل بورد الباور - نادراً:
+              مشكلة في بورد T-Con.
+            </div>
+            <div class="card-footer">
+              <span class="price-tag">تقريباً 600–2000 ج.م</span>
+              <span class="status-badge technician">يحتاج فني متخصص</span>
+            </div>
+          </div>
+
+          <!-- كارت 3 -->
+          <div class="fault-card">
+            <div class="card-icon warning">⚠️</div>
+            <h3>خطوط رأسية أو أفقية على الشاشة</h3>
+            <p class="fault-desc">
+              خط أو مجموعة خطوط ملونة أو سوداء، رأسية أو أفقية، ثابتة أو بتظهر
+              وتختفي مع تسخين الشاشة.
+            </p>
+            <div class="fault-details">
+              <strong>الأسباب المحتملة:</strong> فلاتة (كابل مسطح) اتحركت من
+              مكانها أو تأكسدت - عطل في بورد T-Con - بداية تلف في البانل نفسه.
+            </div>
+            <div class="card-footer">
+              <span class="price-tag">تقريباً 300–1500 ج.م</span>
+              <span class="status-badge technician">يحتاج فني متخصص</span>
+            </div>
+          </div>
+
+          <!-- كارت 4 -->
+          <div class="fault-card">
+            <div class="card-icon warning">⚠️</div>
+            <h3>الشاشة بتفصل أو بتعيد التشغيل لوحدها</h3>
+            <p class="fault-desc">
+              الشاشة بتشتغل شوية وبعدين تفصل فجأة، أو بتفضل تعيد تشغيل نفسها في
+              حلقة مستمرة.
+            </p>
+            <div class="fault-details">
+              <strong>الأسباب المحتملة:</strong> سخونة زايدة بسبب سد فتحات
+              التهوية أو الأتربة - مكثفات ضعيفة في بورد الباور - سوفت وير معطوب
+              أو تحديث فشل...
+            </div>
+            <div class="card-footer">
+              <span class="price-tag">تقريباً 300–1000 ج.م</span>
+              <span class="status-badge technician">يحتاج فني متخصص</span>
+            </div>
+          </div>
+
+          <!-- كارت 5 -->
+          <div class="fault-card">
+            <div class="card-icon warning">⚠️</div>
+            <h3>الصورة شغالة ومفيش صوت</h3>
+            <p class="fault-desc">
+              الصورة تمام لكن الصوت مقطوع تماماً أو ضعيف جداً أو فيه تشويش.
+            </p>
+            <div class="fault-details">
+              <strong>الأسباب المحتملة:</strong> إعدادات صوت متظبطة غلط أو
+              الشاشة على وضع كتم - مخرج صوت خارجي (سماعات/ريسيفر) متوصل ومش شغال
+              - تلف...
+            </div>
+            <div class="card-footer">
+              <span class="price-tag">تقريباً 250–800 ج.م</span>
+              <span class="status-badge technician">يحتاج فني متخصص</span>
+            </div>
+          </div>
+
+          <!-- كارت 6 -->
+          <div class="fault-card">
+            <div class="card-icon warning">⚠️</div>
+            <h3>مشاكل السمارت والواي فاي والتطبيقات</h3>
+            <p class="fault-desc">
+              الشاشة مش بتوصل بالواي فاي، أو التطبيقات بطيئة وبتقفل لوحدها، أو
+              يوتيوب ونتفلكس مش شغالين.
+            </p>
+            <div class="fault-details">
+              <strong>الأسباب المحتملة:</strong> ذاكرة الشاشة ممتلئة أو سوفت وير
+              قديم - إشارة واي فاي ضعيفة في مكان الشاشة - تحديث معلّق أو تطبيق
+              محتاج إعادة...
+            </div>
+            <div class="card-footer">
+              <span class="price-tag">تقريباً 200–500 ج.م</span>
+              <span class="status-badge self-fix">قد تحله بنفسك</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer-note">
+          <p>
+            الأسعار المذكورة تقديرية لأعطال شاشات توشيبا وتختلف حسب الموديل ونوع
+            قطعة الغيار، ويتم إبلاغك بالسعر النهائي بعد الفحص وقبل بدء الإصلاح
+            عبر <span class="highlight-keyword">المؤسسة المعتمدة</span>. للطلب
+            اتصل بالخط الساخن
+            <a href="tel:19580" class="contact-hover-link">19580</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- قسم سياسة الخصوصية وتوضيح طبيعة الخدمة - مؤسسة المعتمد جروب -->
+    <section class="section-card container section-spacing">
+      <h2>سياسة الخصوصية وتوضيح طبيعة الخدمة</h2>
+
+      <!-- تنبيه هام حول طبيعة عمل المؤسسة -->
+      <div class="privacy-disclaimer-box">
+        <h3>⚠️ تنبيه قانوني وتوضيحي للعملاء</h3>
+        <p>
+          نود التوضيح الكامـل لعملائنا الكرام أن
+          <strong>مؤسسة المعتمد جروب</strong> هي مركز خدمة وصيانة معتمد خارجي
+          للأجهزة المنزلية، ولسنا الشركة الرئيسية أو الوكيل الحصري المصنّع
+          للعلامات التجارية المختلفة؛ نحن نقدم خدمات الصيانة الفورية، الإصلاح،
+          وتوفير قطع الغيار الأصلية بكفاءة عالية وبخبرة فنية متخصصة لراحة
+          عملائنا.
+        </p>
+      </div>
+
+      <p style="margin-top: 20px">
+        في <strong>مؤسسة المعتمد جروب</strong>، نُدرك تماماً أهمية خصوصيتك
+        ونلتزم التزاماً كاملاً بحماية بياناتك الشخصية بكل أمان وشفافية تامة
+        أثناء طلبك لخدمات الصيانة المنزلية.
+      </p>
+
+      <div class="privacy-grid">
+        <div class="privacy-item">
+          <h3>🔒 سرية البيانات المدخلة</h3>
+          <p>
+            جميع البيانات التي تقدمها لنا (مثل: الاسم، رقم الهاتف، والعنوان
+            التفصيلي) تُستخدم حصرياً لتنفيذ طلب الصيانة وتوجيه الفريق الفني
+            المعتمد لمنزلك في أسرع وقت، ولا يتم مشاركتها أبداً مع أي طرف ثالث.
+          </p>
+        </div>
+
+        <div class="privacy-item">
+          <h3>🛡️ أمان التصفح والاتصال</h3>
+          <p>
+            نستخدم أحدث تقنيات التشفير الرقمي وبروتوكولات الأمان لضمان حماية
+            وسائط الاتصال بين جهازك وموقعنا، مما يمنع أي محاولات لاعتراض أو
+            استطلاع بياناتك أثناء التصفح أو إرسال طلبات الصيانة.
+          </p>
+        </div>
+
+        <div class="privacy-item">
+          <h3>📋 استخدام ملفات تعريف الارتباط (Cookies)</h3>
+          <p>
+            تستعين منصة المعتمد جروب بملفات تعريف الارتباط البسيطة لتحسين تجربتك
+            في تصفح الموقع، تذكر تفضيلاتك، وتقديم محتوى ملائم وسريع يلبي
+            احتياجاتك الفنية فوراً.
+          </p>
+        </div>
+
+        <div class="privacy-item">
+          <h3>📞 التواصل والتحديثات الرسمية</h3>
+          <p>
+            قد نستخدم رقم هاتفك للتواصل معك فقط بشأن حالة طلب الصيانة الخاص بك،
+            أو إرسال تفاصيل الفاتورة والضمان المعتمد، مع الاحتفاظ بحقك الكامل في
+            طلب مراجعة، تعديل، أو حذف بياناتك في أي وقت.
+          </p>
+        </div>
+      </div>
+
+      <div class="privacy-footer-note">
+        <p>
+          باستمرارك في تصفح الموقع أو طلب خدمات الصيانة، فإنك توافق تماماً على
+          سياسة الخصوصية الخاصة بـ <strong>مؤسسة المعتمد جروب</strong>. لأي
+          استفسارات، يمكنك الاتصال بنا عبر الخط الساخن <strong>19580</strong>.
+        </p>
+      </div>
+    </section>
+    <!-- الفوتر الرئيسي المطور - مؤسسة المعتمد جروب -->
+    <footer class="main-footer" dir="rtl">
+      <div class="container footer-container">
+        <!-- القسم الأول (يمين): اللوجو واسم المؤسسة والنبذة -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo-box">
+            <div class="footer-logo-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="footer-title-group">
+              <h3>مؤسسة المعتمد جروب</h3>
+              <span>لصيانة الأجهزة المنزلية في مصر</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            نحن مركز خدمة وصيانة خارجي معتمد لتقديم خدمات الإصلاح الفوري بالمنزل
+            لأغلب الأجهزة المنزلية بقطع غيار أصلية وضمان معتمد. هدفنا راحتك
+            وسرعة الاستجابة.
+          </p>
+          <div class="footer-disclaimer-note">
+            <small
+              >⚠️ تنبيه: نحن مركز صيانة خارجي معتمد ولسنا الوكيل الرئيسي للشركات
+              المصنعة.</small
+            >
+          </div>
+        </div>
+
+        <!-- القسم الثاني: خدمات الصيانة والأجهزة -->
+        <div class="footer-col footer-services-col">
+          <h4>خدمات الصيانة</h4>
+          <ul class="footer-links-list">
+            <li><a href="صيانة-التلاجات">صيانة الثلاجات</a></li>
+            <li><a href="صيانة-الغسالات">صيانة الغسالات</a></li>
+            <li><a href="صيانة-الديب-فريزر">صيانة الديب فريزر</a></li>
+            <li><a href="صيانة-غسالات-الاطباق">صيانة غسالات الأطباق</a></li>
+            <li><a href="صيانة-الميكرويف">صيانة الميكرويف</a></li>
+            <li><a href="صيانة-الشاشات">صيانة الشاشات</a></li>
+          </ul>
+        </div>
+
+        <!-- القسم الثالث: أقسام الموقع -->
+        <div class="footer-col footer-links-col">
+          <h4>أقسام الموقع</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="من-نحن">من نحن</a></li>
+            <li><a href="خدمتنا">خدماتنا</a></li>
+            <li><a href="المدونة">المدونة</a></li>
+            <li><a href="الاسئلة-الشائعة">الأسئلة الشائعة</a></li>
+            <li><a href="اتصل-بنا">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- القسم الرابع: مناطق ومحافظات الخدمة -->
+        <div class="footer-col footer-regions-col">
+          <h4>مناطق ونطاق الخدمة</h4>
+          <ul class="footer-links-list regions-grid">
+            <li><a href="القاهرة">صيانة القاهرة</a></li>
+            <li><a href="الجيزة">صيانة الجيزة</a></li>
+            <li><a href="الصعيد">صيانة الصعيد</a></li>
+            <li><a href="القليوبية">صيانة القليوبية</a></li>
+            <li><a href="الغربية">صيانة الغربية</a></li>
+            <li><a href="المنوفية">صيانة المنوفية</a></li>
+            <li><a href="الدقهلية">صيانة الدقهلية</a></li>
+            <li><a href="كفر-الشيخ">صيانة كفر الشيخ</a></li>
+            <li><a href="الشرقية">صيانة الشرقية</a></li>
+            <li><a href="دمياط">صيانة دمياط</a></li>
+            <li><a href="البحيرة">صيانة البحيرة</a></li>
+            <li><a href="السواحل">صيانة السواحل</a></li>
+          </ul>
+        </div>
+
+        <!-- القسم الخامس (يسار): أرقام الاتصال ووسائل التواصل -->
+        <div class="footer-col footer-contact-col">
+          <h4>تواصل معنا فوراً</h4>
+          <p>
+            فريق خدمة العملاء والفنيين جاهز لتلقي بلاغات الأعطال وخدمات الطوارئ
+            طوال اليوم.
+          </p>
+
+          <div class="footer-contacts-box">
+            <!-- الخط الساخن 19580 -->
+            <a href="tel:19580" class="footer-contact-btn hotline-btn">
+              <div class="f-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div class="f-text">
+                <small>الخط الساخن الموحد</small>
+                <strong>19580</strong>
+              </div>
+            </a>
+
+            <!-- رقم الموبايل 01289966660 -->
+            <a href="tel:01289966660" class="footer-contact-btn phone-btn">
+              <div class="f-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div class="f-text">
+                <small>رقم الموبايل</small>
+                <strong>01289966660</strong>
+              </div>
+            </a>
+
+            <!-- زر الواتساب -->
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-contact-btn whatsapp-btn"
+            >
+              <div class="f-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="f-text">
+                <small>احجز موعدك عبر</small>
+                <strong>واتساب فوراً</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- شريط الحقوق السفلي -->
+      <div class="footer-bottom-bar">
+        <div class="container footer-bottom-content">
+          <p>
+            جميع الحقوق محفوظة © 2026 <strong>مؤسسة المعتمد جروب</strong> لصيانة
+            الأجهزة المنزلية في مصر.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../globals/script.js"></script>
+  </body>
+</html>

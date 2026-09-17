@@ -1,0 +1,424 @@
+/* --- إعدادات عامة للصفحة --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- العناوين --- */
+h2 {
+  color: #0369a1;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.section-subtitle {
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* --- القسم الأول والمقدمة --- */
+.intro-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-box,
+.section-card,
+.brand-section,
+.why-us {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-box:hover,
+.section-card:hover,
+.brand-section:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* --- صندوق الاتصال الجانبي (CTA Box) --- */
+.sidebar-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.cta-box h3 {
+  color: #ffffff;
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.cta-box p {
+  color: #e0f2fe;
+  font-size: 0.95rem;
+}
+
+.btn-phone,
+.btn-whatsapp {
+  display: block;
+  background-color: #ffffff;
+  color: #0369a1;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-phone:hover {
+  background-color: #f97316;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20ba5a;
+  transform: translateY(-2px);
+}
+
+/* --- القوائم والمميزات الجانبية --- */
+.features-sidebar,
+.brand-features {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.features-sidebar h4,
+.brand-features h4 {
+  color: #0369a1;
+  margin-top: 0;
+}
+
+.features-sidebar ul,
+.brand-features ul,
+.detailed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-sidebar li,
+.brand-features li {
+  padding: 6px 0;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* --- شبكة الكروت (الأعطال الشائعة) --- */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #0284c7;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #0284c7;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 0.92rem;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 15px;
+  margin-top: auto;
+}
+
+.price {
+  font-weight: bold;
+  color: #f97316;
+  font-size: 0.95rem;
+}
+
+.action-link {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-link:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+
+.action-link.self-fix {
+  color: #10b981;
+}
+
+/* --- قسم الصور --- */
+.two-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-box {
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-box:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.custom-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-box span {
+  display: block;
+  padding: 12px;
+  font-weight: 600;
+  color: #1e293b;
+  background: #ffffff;
+}
+
+/* --- أقسام المناطق --- */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.area-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.area-box:hover {
+  background: #f0f9ff;
+  border-color: #0284c7;
+}
+
+.area-box h4 {
+  margin-top: 0;
+  color: #0369a1;
+}
+
+/* --- الوسوم والـ Tags --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tags span {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tags span:hover {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.tags.secondary span {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.tags.secondary span:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+/* --- قسم لماذا تختارنا (Why Us) --- */
+.why-us {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.why-us h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-box:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+  border-color: #0284c7;
+}
+
+.feature-box h4 {
+  color: #38bdf8;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.feature-box p {
+  color: #cbd5e1;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* --- الأسئلة الشائعة (FAQ) --- */
+.faq-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item:hover {
+  border-color: #0284c7;
+  background: #ffffff;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.faq-item h4 {
+  color: #0369a1;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #64748b;
+}

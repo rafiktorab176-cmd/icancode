@@ -54,3 +54,7 @@ function sendToWhatsApp(event) {
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
   window.open(whatsappURL, "_blank");
 }
+function openPost(url) {
+  // عند الضغط على الكارت، سينتقل لصفحة المقال المطلوبة
+  window.location.href = url;
+}

@@ -1,0 +1,811 @@
+.maintenance-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  direction: rtl;
+  font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.maintenance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.badge-top {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+  border: 1px solid #ffcdd2;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  color: #0b2545;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.section-header p {
+  color: #555;
+  font-size: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* تلوين خفيف ومميز للكلمات المستهدفة */
+.highlight-keyword {
+  color: #d32f2f;
+  background-color: #fff3e0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  border-bottom: 2px solid #ffb74d;
+}
+
+/* صندوق الخط الساخن */
+.hotline-box-main {
+  background: linear-gradient(135deg, #0b2545 0%, #133b5c 100%);
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(11, 37, 69, 0.15);
+}
+
+.hotline-box-main h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hotline-number {
+  font-size: 38px;
+  font-weight: 900;
+  color: #ffca28;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hotline-box-main p {
+  font-size: 14px;
+  color: #e0e0e0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* شبكة الكروت */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.m-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eef0f2;
+  border-top: 4px solid #d32f2f;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.m-card h3 {
+  font-size: 18px;
+  color: #0b2545;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.m-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* شريط الأنواع */
+.types-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eef0f2;
+}
+
+.type-pill {
+  background: #f1f5f9;
+  color: #0b2545;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.type-pill:hover {
+  background: #0b2545;
+  color: #fff;
+}
+
+/* صندوق المعلومات السفلي */
+.bottom-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.info-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #eef0f2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.highlight-box {
+  border-right: 4px solid #d32f2f;
+}
+
+.info-box h4 {
+  font-size: 17px;
+  color: #0b2545;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.info-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+.usage-maintenance-section {
+  padding: 60px 20px;
+  background-color: #f7f9fc;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+  color: #2d3748;
+}
+
+.usage-maintenance-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sub-badge {
+  background-color: #fff1f2;
+  color: #e11d48;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 12px;
+  border: 1px solid #ffe4e6;
+}
+
+.header-box h2 {
+  font-size: 28px;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.header-box p {
+  color: #475569;
+  font-size: 15px;
+  max-width: 950px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* تلوين خفيف ومميز للكلمات المفتاحية */
+.highlight-keyword {
+  color: #e11d48;
+  background-color: #fff1f2;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  border-bottom: 2px solid #fda4af;
+}
+
+/* صندوق الجانب البارز */
+.sidebar-notice {
+  background: #0f172a;
+  color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+.sidebar-notice h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.sidebar-notice p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.sidebar-notice ul {
+  list-style: disc;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.sidebar-hotline {
+  border-top: 1px solid #334155;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotline-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fbbf24;
+  letter-spacing: 1px;
+}
+
+.hotline-text {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* شبكة كروت الاستخدامات (9 كروت) */
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.usage-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #e11d48;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.usage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-num {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #f1f5f9;
+  color: #e11d48;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.usage-card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.usage-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* شريط الفلاتر */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.f-pill {
+  background: #f8fafc;
+  color: #0f172a;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #e2e8f0;
+}
+
+/* الملاحظات السفلية */
+.bottom-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.note-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.highlight-note {
+  border-right: 4px solid #e11d48;
+}
+
+.note-box h4 {
+  font-size: 17px;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.note-box p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* البانر الأخير */
+.footer-hotline-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+.footer-hotline-banner h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-hotline-banner p {
+  font-size: 14px;
+  color: #94a3b8;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.7;
+}
+
+.footer-big-num {
+  font-size: 42px;
+  font-weight: 900;
+  color: #fbbf24;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.lg-maintenance-section {
+  padding: 60px 20px;
+  background-color: #f8fafc;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+  color: #1e293b;
+}
+
+.lg-maintenance-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.top-badge {
+  background-color: #0f172a;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.header-box h2 {
+  font-size: 30px;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.intro-sub {
+  font-size: 16px;
+  font-weight: bold;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.header-box p {
+  color: #475569;
+  font-size: 15px;
+  max-width: 950px;
+  margin: 0 auto 15px auto;
+  line-height: 1.8;
+}
+
+.highlight-keyword {
+  color: #0369a1;
+  background-color: #e0f2fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hotline-inline {
+  color: #e11d48;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+/* صندوق تعريف ال جي */
+.lg-intro-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #f59e0b;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.lg-intro-card p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.quick-links-bar {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+.ql-title {
+  display: block;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.ql-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.q-pill {
+  background: #f1f5f9;
+  color: #334155;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid #cbd5e1;
+  font-weight: 500;
+}
+
+/* صندوق التقنية */
+.tech-spec-box {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.tech-spec-box h3 {
+  font-size: 20px;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.tech-spec-box p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.tech-spec-box ul {
+  list-style: disc;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.8;
+}
+
+.tech-spec-box li {
+  margin-bottom: 10px;
+}
+
+/* الجداول */
+.table-container {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.table-container h3 {
+  font-size: 20px;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.table-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 14px;
+}
+
+.custom-table th {
+  background-color: #1e3a8a;
+  color: #fff;
+  padding: 14px;
+  font-weight: bold;
+  border: 1px solid #1e3a8a;
+}
+
+.custom-table td {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+.custom-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sub-text {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.text-danger {
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+.text-primary {
+  color: #1d4ed8;
+  font-weight: 500;
+}
+
+/* مؤشرات الحالة (النقاط الملونة) */
+.status-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status-dot.green {
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.status-dot.yellow {
+  background-color: #eab308;
+  box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.2);
+}
+
+.status-dot.red {
+  background-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+.washer-brands-section {
+  padding: 60px 20px;
+  background-color: #f8fafc;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+  color: #1e293b;
+}
+
+.washer-brands-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.top-badge {
+  background-color: #0f172a;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.header-box h2 {
+  font-size: 30px;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.header-box p {
+  color: #475569;
+  font-size: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.brand-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #0284c7;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.brand-num {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #f1f5f9;
+  color: #0284c7;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.brand-card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+.hotline-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.brand-card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tips-section {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-right: 4px solid #f59e0b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.tips-section h3 {
+  font-size: 20px;
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.tips-section ul {
+  list-style: disc;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.tips-section li {
+  margin-bottom: 10px;
+}
