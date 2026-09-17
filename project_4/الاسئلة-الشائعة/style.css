@@ -1,13 +1,35 @@
-/* تنسيقات عامة للسيكشن */
-.faq-accordion-section {
-  padding: 60px 20px;
-  background-color: #f8fafc;
+/* ==========================================
+   تنسيقات وإعدادات عامة ومتجاوبة
+   ========================================== */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Cairo", sans-serif;
 }
 
-/* ضبط العنوان في المنتصف تماماً */
+body {
+  background-color: #f8fafc;
+  overflow-x: hidden;
+} */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
 .text-center {
   text-align: center !important;
+}
+
+/* ==========================================
+   1. سكشن الأسئلة الشائعة (FAQ Accordion)
+   ========================================== */
+.faq-accordion-section {
+  padding: 60px 15px;
+  background-color: #f8fafc;
 }
 
 .faq-main-title {
@@ -28,26 +50,24 @@
 .faq-section-subtitle {
   font-size: 15px;
   color: #64748b;
-  margin: 0;
+  margin: 0 auto;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.6;
 }
 
 .mb-45 {
   margin-bottom: 45px;
 }
 
-/* حاوية الأسئلة */
 .faq-accordion-wrapper {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 
-/* تصميم الكارت الواحد */
 .faq-item {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -55,23 +75,23 @@
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .faq-item:hover {
   border-color: #cbd5e1;
 }
 
-/* زر السؤال */
 .faq-question-btn {
   width: 100%;
   background: transparent;
   border: none;
-  padding: 20px 24px;
+  padding: 18px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: "Cairo", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #1e293b;
   cursor: pointer;
@@ -84,26 +104,24 @@
   color: #0d9488;
 }
 
-/* أيقونة السهم */
 .faq-arrow {
   font-size: 12px;
   color: #0d9488;
   transition: transform 0.3s ease;
 }
 
-/* محتوى الإجابة (مخفي افتراضياً بالكامل) */
 .faq-answer-content {
   max-height: 0;
   overflow: hidden;
   transition:
     max-height 0.35s ease-out,
     padding 0.35s ease-out;
-  padding: 0 24px;
+  padding: 0 20px;
   background-color: #ffffff;
 }
 
 .faq-answer-content p {
-  font-size: 15px;
+  font-size: 14.5px;
   color: #475569;
   line-height: 1.8;
   margin: 0 0 20px 0;
@@ -112,10 +130,9 @@
   text-align: right;
 }
 
-/* تفعيل الفتح والغلق عند الضغط */
 .faq-item.active .faq-answer-content {
-  max-height: 300px; /* مساحة كافية لظهور الإجابة بالكامل */
-  padding: 0 24px;
+  max-height: 400px;
+  padding: 0 20px;
 }
 
 .faq-item.active .faq-arrow {
@@ -126,104 +143,65 @@
   border-color: #0d9488;
   box-shadow: 0 5px 15px rgba(13, 148, 136, 0.06);
 }
-/* تنسيقات المقدمة الكبيرة في أول الصفحة */
-.faq-hero-intro {
-  background: #ffffff;
-  padding: 50px 40px;
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  max-width: 950px;
-  margin: 0 auto 50px auto;
-}
 
-.hero-main-title {
-  font-size: 32px;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 20px;
-}
-
-.hero-description {
-  font-size: 16px;
-  color: #475569;
-  line-height: 2;
-  margin: 0;
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
-  .faq-hero-intro {
-    padding: 30px 20px;
-  }
-  .hero-main-title {
-    font-size: 24px;
-  }
-  .hero-description {
-    font-size: 15px;
-  }
-}
-/* تنسيقات عامة للقسم */
-.institution-faq-section {
-  padding: 60px 20px;
-  background: #f8fafc;
-  font-family: "Cairo", sans-serif;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.mb-50 {
-  margin-bottom: 50px;
-}
-
-/* مقدمة الصفحة */
+/* ==========================================
+   2. مقدمة الصفحة (Hero Intro)
+   ========================================== */
+.faq-hero-intro,
 .institution-hero-intro {
   background: #ffffff;
-  padding: 45px 35px;
+  padding: 40px 25px;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   max-width: 950px;
   margin: 0 auto 40px auto;
+  width: 100%;
 }
 
 .hero-main-title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 15px;
 }
 
 .hero-description {
-  font-size: 16px;
+  font-size: 15.5px;
   color: #475569;
-  line-height: 2;
+  line-height: 1.9;
   margin: 0;
   text-align: justify;
 }
 
-/* شبكة الكروت الثابتة */
+/* ==========================================
+   3. شبكة الكروت والثابتة (Institution Cards)
+   ========================================== */
+.institution-faq-section {
+  padding: 60px 15px;
+  background: #f8fafc;
+}
+
 .institution-cards-grid {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
 }
 
-/* تصميم الكارت الواحد الثابت */
 .modern-card {
   background: #ffffff;
   border-radius: 14px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .modern-card:hover {
@@ -231,13 +209,12 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
 }
 
-/* رأس الكارت */
 .card-header-area {
   margin-bottom: 15px;
 }
 
 .card-header-area h3 {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #1e293b;
   margin: 10px 0 0 0;
@@ -253,9 +230,8 @@
   display: inline-block;
 }
 
-/* محتوى الكارت */
 .card-body-content p {
-  font-size: 14px;
+  font-size: 13.5px;
   color: #475569;
   line-height: 1.8;
   margin: 0 0 15px 0;
@@ -279,7 +255,7 @@
   padding: 10px 14px;
   border-radius: 8px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
   margin-top: auto;
 }
@@ -288,33 +264,27 @@
   color: #38bdf8;
   letter-spacing: 1px;
 }
-/* تنسيقات عامة للقسم */
+
+/* ==========================================
+   4. سكشن البانر الاحترافي (Banner Section)
+   ========================================== */
 .institution-banner-section {
-  padding: 60px 20px;
+  padding: 60px 15px;
   background: #f8fafc;
-  font-family: "Cairo", sans-serif;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* الحاوية الرئيسية للبانر */
 .banner-wrapper {
-  background: #0a192f; /* اللون الأزرق الغامق المطابق للصورة */
-  border-radius: 24px;
-  padding: 50px 40px;
+  background: #0a192f;
+  border-radius: 20px;
+  padding: 40px 25px;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
   box-shadow: 0 20px 40px rgba(10, 25, 47, 0.15);
-  position: relative;
-  overflow: hidden;
+  width: 100%;
 }
 
-/* الجانب الأيمن */
 .banner-right-content {
   color: #ffffff;
 }
@@ -325,11 +295,11 @@
   gap: 8px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 50px;
-  font-size: 13px;
+  font-size: 12.5px;
   color: #e2e8f0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .badge-dot {
@@ -340,18 +310,18 @@
 }
 
 .banner-main-title {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
   line-height: 1.4;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #ffffff;
 }
 
 .banner-description {
   font-size: 14px;
-  line-height: 2;
+  line-height: 1.9;
   color: #cbd5e1;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   text-align: justify;
 }
 
@@ -359,22 +329,28 @@
   color: #38bdf8;
 }
 
-/* أزرار الإجراءات */
 .banner-actions {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
+}
+
+.btn-red-call,
+.btn-dark-contact {
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  text-align: center;
+  flex: 1;
+  min-width: 140px;
 }
 
 .btn-red-call {
   background: #dc2626;
   color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  transition: background 0.3s ease;
   box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
@@ -386,54 +362,45 @@
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-  transition: background 0.3s ease;
 }
 
 .btn-dark-contact:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* الجانب الأيسر (الصندوق الداخلي) */
 .banner-left-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 30px;
-  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
 }
 
 .side-box-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .side-box-text {
   font-size: 13px;
-  line-height: 1.9;
+  line-height: 1.8;
   color: #94a3b8;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: justify;
 }
 
-/* زر رقم التليفون داخل الكارت */
 .phone-number-badge {
   background: #ffffff;
   color: #0f172a;
-  padding: 12px 18px;
-  border-radius: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -442,89 +409,61 @@
   letter-spacing: 1px;
 }
 
-/* شبكة المميزات الثلاثة السفليلة */
 .features-grid-mini {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
 }
 
 .mini-feature-item {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #cbd5e1;
-  padding: 10px 8px;
-  border-radius: 10px;
+  padding: 8px 5px;
+  border-radius: 8px;
   font-size: 11px;
   font-weight: 600;
   text-align: center;
-  transition: border-color 0.3s;
 }
 
-.mini-feature-item:hover {
-  border-color: #38bdf8;
-  color: #ffffff;
-}
-
-/* التجاوب مع الشاشات الصغيرة (Responsive) */
-@media (max-width: 968px) {
-  .banner-wrapper {
-    grid-template-columns: 1fr;
-    padding: 30px 20px;
-  }
-
-  .banner-main-title {
-    font-size: 28px;
-  }
-
-  .features-grid-mini {
-    grid-template-columns: 1fr;
-  }
-}
-/* تنسيقات عامة للقسم */
+/* ==========================================
+   5. سكشن شبكة الأسئلة الداكن (FAQ Grid)
+   ========================================== */
 .institution-faq-grid-section {
-  padding: 60px 20px;
-  background: #121212; /* خلفية داكنة مطابقة للصورة */
-  font-family: "Cairo", sans-serif;
+  padding: 60px 15px;
+  background: #121212;
   color: #e5e5e5;
 }
 
-.container {
-  max-width: 1250px;
-  margin: 0 auto;
-}
-
-/* تخطيط الصفحة (شبكة من عمودين) */
 .faq-grid-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
   align-items: start;
 }
 
-/* العمود الأيمن (النصوص والشرواح) */
 .faq-sidebar-info {
   background: #18181b;
-  padding: 35px;
+  padding: 30px 20px;
   border-radius: 16px;
   border: 1px solid #27272a;
 }
 
 .faq-main-heading {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-bottom: 3px solid #0d9488;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   display: inline-block;
 }
 
 .faq-sidebar-text {
-  font-size: 14px;
-  line-height: 2;
+  font-size: 13.5px;
+  line-height: 1.9;
   color: #a1a1aa;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: justify;
 }
 
@@ -532,19 +471,17 @@
   color: #38bdf8;
 }
 
-/* العمود الأيسر (شبكة الكروت الثابتة) */
 .faq-cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 
-/* تصميم الكارت الثابت الواحد */
 .faq-card-item {
   background: #18181b;
   border: 1px solid #27272a;
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 14px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -555,211 +492,90 @@
   border-color: #0d9488;
 }
 
-/* رأس الكارت (السؤال والأيقونة) */
 .faq-card-header {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .faq-icon-box {
   background: #0284c7;
   color: #ffffff;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   flex-shrink: 0;
 }
 
 .faq-card-header h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
 }
 
-/* محتوى الكارت (الإجابات) */
 .faq-card-body p {
-  font-size: 13px;
+  font-size: 12.5px;
   color: #a1a1aa;
-  line-height: 1.9;
-  margin: 0 0 12px 0;
+  line-height: 1.8;
+  margin: 0 0 10px 0;
   text-align: right;
-}
-
-.faq-card-body p:last-child {
-  margin-bottom: 0;
 }
 
 .faq-card-body strong {
   color: #38bdf8;
-  letter-spacing: 0.5px;
 }
 
-/* التجاوب مع الشاشات الصغيرة (Responsive) */
-@media (max-width: 1024px) {
-  .faq-grid-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .faq-cards-container {
-    grid-template-columns: 1fr;
-  }
-}
-.container {
-  margin: 0 auto;
-  background: #e9e8e8;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-h1,
-h2,
-h3 {
-  color: #0f172a;
-  font-weight: 800;
-}
-
-h1 {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 30px;
-  border-bottom: 3px solid #2563eb;
-  padding-bottom: 15px;
-}
-
-h2 {
-  font-size: 22px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #2563eb;
-  border-right: 4px solid #2563eb;
-  padding-right: 12px;
-}
-
-p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  text-align: justify;
-}
-
-a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.faq-box {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.faq-question {
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 10px;
-  font-size: 17px;
-}
-
-.contact-highlight {
-  background: #e0f2fe;
-  color: #0369a1;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: bold;
-}
 /* ==========================================
-   تنسيقات سكشن سياسة الخصوصية (Privacy Policy CSS)
+   6. سياسة الخصوصية والتنبيهات (Privacy & Disclaimers)
    ========================================== */
-
 .privacy-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  gap: 15px;
+  margin: 20px 0;
 }
 
 .privacy-item {
   background: #f0f9ff;
   border: 1px solid #bae6fd;
-  padding: 22px;
+  padding: 20px;
   border-radius: 12px;
-  transition: all 0.3s ease;
   border-right: 4px solid #0ea5e9;
-}
-
-.privacy-item:hover {
-  transform: translateY(-4px);
-  background: #ffffff;
-  border-color: #0284c7;
-  box-shadow: 0 10px 20px -5px rgba(2, 132, 199, 0.1);
 }
 
 .privacy-item h3 {
   color: #0f172a;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
   font-weight: 700;
 }
 
 .privacy-item p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #334155;
   line-height: 1.7;
 }
 
-.privacy-footer-note {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
-  border: 1px dashed #0284c7;
-  padding: 15px 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.privacy-footer-note p {
-  font-size: 0.95rem;
-  color: #0f172a;
-  margin: 0;
-}
-
-/* التجاوب مع الشاشات الصغيرة والمتوسطة */
-@media (max-width: 768px) {
-  .privacy-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* تنسيق صندوق التنبيه بطبيعة المركز (لسنا الوكيل الرئيسي) */
 .privacy-disclaimer-box {
   background: #fffbeb;
   border: 1px solid #fde68a;
   border-right: 4px solid #f59e0b;
-  padding: 20px;
+  padding: 18px;
   border-radius: 12px;
   margin-top: 15px;
 }
 
 .privacy-disclaimer-box h3 {
   color: #b45309;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 8px;
   font-weight: 700;
   display: flex;
@@ -769,51 +585,62 @@ a:hover {
 
 .privacy-disclaimer-box p {
   color: #78350f;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   margin: 0;
 }
-/* ==========================================
-   تنسيقات الفوتر القوي - مؤسسة المعتمد جروب
-   ========================================== */
 
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 10px;
+}
+
+/* ==========================================
+   7. الفوتر الاحترافي (Main Footer)
+   ========================================== */
 .main-footer {
-  background: linear-gradient(135deg, #090d16 0%, #0f172a 100%);
+  position: relative;
+  clear: both;
+  width: 100%;
+  background: linear-gradient(135deg, #090d16 0%, #0f172a 100%) !important;
   color: #ffffff;
-  padding-top: 60px;
-  margin-top: 50px;
+  padding-top: 50px;
+  margin-top: 60px;
   border-top: 4px solid #0284c7;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 40px 20px;
+  padding: 0 15px 30px 15px;
   display: grid;
   grid-template-columns: 1.3fr 1.4fr 1.1fr;
-  gap: 35px;
+  gap: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent !important;
 }
 
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-/* عمود اليمين (اللوجو والاسم) */
 .footer-logo-box {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-logo-icon {
-  width: 55px;
-  height: 55px;
+  width: 48px;
+  height: 48px;
   background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
   color: #0f172a;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -822,20 +649,20 @@ a:hover {
 }
 
 .footer-title-group h3 {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   color: #ffffff;
   font-weight: 700;
   margin: 0 0 2px 0;
 }
 
 .footer-title-group span {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #38bdf8;
   font-weight: 600;
 }
 
 .footer-desc {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #94a3b8;
   line-height: 1.7;
   margin: 0;
@@ -846,18 +673,17 @@ a:hover {
   background: rgba(245, 158, 11, 0.1);
   border: 1px solid rgba(245, 158, 11, 0.3);
   color: #fbbf24;
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 6px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
-/* عمود الوسط (اللينكات) */
 .footer-col h4 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #ffffff;
   margin-bottom: 5px;
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   border-bottom: 2px solid #0284c7;
   width: fit-content;
 }
@@ -865,7 +691,7 @@ a:hover {
 .footer-links-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 12px;
 }
 
 .footer-links-list {
@@ -880,7 +706,7 @@ a:hover {
 .footer-links-list li a {
   color: #cbd5e1;
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   transition: all 0.3s ease;
   display: inline-block;
 }
@@ -890,9 +716,8 @@ a:hover {
   transform: translateX(-4px);
 }
 
-/* عمود اليسار (أرقام الاتصال) */
 .footer-contact-col p {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: #94a3b8;
   margin: 0;
   line-height: 1.6;
@@ -901,15 +726,15 @@ a:hover {
 .footer-contacts-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   margin-top: 5px;
 }
 
 .footer-contact-btn {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
+  gap: 10px;
+  padding: 10px 12px;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -919,59 +744,46 @@ a:hover {
   background: rgba(2, 132, 199, 0.15);
   border: 1px solid rgba(2, 132, 199, 0.4);
 }
-.hotline-btn:hover {
-  background: rgba(2, 132, 199, 0.3);
-  transform: translateY(-2px);
-}
 
 .phone-btn {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
-}
-.phone-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
 }
 
 .whatsapp-btn {
   background: rgba(37, 211, 102, 0.15);
   border: 1px solid rgba(37, 211, 102, 0.4);
 }
-.whatsapp-btn:hover {
-  background: rgba(37, 211, 102, 0.3);
-  transform: translateY(-2px);
-}
 
 .footer-contact-btn .f-icon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #38bdf8;
 }
+
 .whatsapp-btn .f-icon {
   color: #25d366;
 }
 
 .footer-contact-btn .f-text small {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #94a3b8;
 }
 
 .footer-contact-btn .f-text strong {
   display: block;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #ffffff;
-  letter-spacing: 0.5px;
 }
 
-شريط الحقوق السفلي
 .footer-bottom-bar {
   background-color: #05080e;
-  padding: 18px 0;
+  padding: 15px 10px;
   text-align: center;
 }
 
 .footer-bottom-content p {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   color: #64748b;
   margin: 0;
 }
@@ -980,56 +792,69 @@ a:hover {
   color: #e2e8f0;
 }
 
-/* التجاوب مع الشاشات الصغيرة والمتوسطة */
+/* ==========================================
+   Media Queries للتجاوب التام مع الشاشات
+   ========================================== */
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 25px;
   }
   .footer-col:last-child {
     grid-column: span 2;
   }
+  .faq-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
+  .banner-wrapper {
+    grid-template-columns: 1fr;
+    padding: 30px 15px;
+  }
+
+  .banner-main-title {
+    font-size: 24px;
+  }
+
+  .faq-cards-container,
+  .privacy-grid,
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 30px;
   }
+
   .footer-col:last-child {
     grid-column: span 1;
   }
+
   .footer-links-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .faq-main-title,
+  .hero-main-title,
+  .faq-main-heading {
+    font-size: 24px;
+  }
+
+  .faq-question-btn {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-actions {
+    flex-direction: column;
+  }
+  .btn-red-call,
+  .btn-dark-contact {
+    width: 100%;
   }
 }
 .regions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px 10px;
-}
-/* حل مشكلة باهتان الفوتر وتداخله مع السكشن السابق */
-.main-footer {
-  position: relative;
-  clear: both;
-  width: 100%;
-  background: linear-gradient(135deg, #090d16 0%, #0f172a 100%) !important;
-  color: #ffffff;
-  padding-top: 60px;
-  margin-top: 80px; /* زيادة المسافة الفاصلة لمنع أي تداخل بصري */
-  border-top: 4px solid #0284c7;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف يفصل الفوتر عن المحتوى فوقه */
-  z-index: 10;
-}
-
-/* التأكد من أن حاوية الفوتر تأخذ عرضها الكامل دون تأثر بالسكاشن السابقة */
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 40px 20px;
-  display: grid;
-  grid-template-columns: 1.3fr 1.4fr 1.1fr;
-  gap: 35px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent !important; /* لضمان عدم وجود خلفية رمادية باهتة بداخلها */
 }
