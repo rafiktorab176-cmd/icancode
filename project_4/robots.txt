@@ -1,0 +1,10 @@
+# السماح لجميع محركات البحث بزيارة وأرشفة كامل صفحات الموقع
+User-agent: *
+Allow: /
+
+# منع أرشفة المجلدات البرمجية أو ملفات النظام والجلوبال لحماية الخصوصية
+Disallow: /globals/
+Disallow: /assets/
+
+# رابط خريطة الموقع (Sitemap) لتسهيل وتسرع أرشفة جوجل لصفحاتك
+Sitemap: https://almoatamed-group.com/sitemap.xml
