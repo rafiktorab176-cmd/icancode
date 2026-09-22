@@ -576,18 +576,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 5px 10px;
 }
-/* حاوية الصورة لتوسيطها وحمايتها على جميع الأجهزة */
-.image-container {
-  width: 100%;
-  max-width: 800px; /* يمكنك زيادة أو تقليل العرض الأقصى حسب تصميم موقعك */
-  margin: 20px auto;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
 /* تصميم الصورة الاحترافي */
 .custom-img {
-  width: 100%;
+  width: 100vw; /* تم التعديل للتجاوب السريع */
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 12px; /* حواف دائرية أنيقة */
@@ -598,7 +590,15 @@ body {
     box-shadow 0.3s ease;
 }
 
-/* تأثير حركة خفيف عند مرور الماوس فوق الصورة */
+/* باقي التنسيقات زي ما هي تماماً */
+.image-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .custom-img:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(181, 142, 62, 0.3);

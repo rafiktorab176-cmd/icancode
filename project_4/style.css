@@ -8,7 +8,7 @@
 
 body {
   background-color: #f4f7f6;
-  height: 200vh;
+  /* تم إزالة الـ height الثابت 200vh عشان مايعملش مساحة فاضية تحت الموقع */
 }
 
 /* تصميم الهيدر */
@@ -82,7 +82,7 @@ body {
 
 .sub-brand {
   font-size: 12px;
-  color: #475569; /* غمّقناه شوية عشان يبמו واضح وأنيق */
+  color: #475569;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -129,7 +129,7 @@ body {
 .mobile-actions {
   display: none;
   align-items: center;
-  gap: 14px; /* مسافة واضحة ومريحة بين زرار الاتصال والهامبرجر */
+  gap: 14px;
 }
 
 .hotline-mobile-btn {
@@ -142,7 +142,7 @@ body {
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(20, 30, 48, 0.3);
-  border: 1px solid rgba(181, 142, 62, 0.4); /* إطار ذهبي خفيف يبرز الزرار */
+  border: 1px solid rgba(181, 142, 62, 0.4);
 }
 
 .hotline-mobile-btn i {
@@ -269,11 +269,11 @@ body {
   }
 
   .mobile-actions {
-    display: flex; /* إظهار أزرار الموبايل */
+    display: flex;
   }
 
   .hotline-royal {
-    display: none; /* إخفاء الكبيرة الخاصة بالديسكتوب */
+    display: none;
   }
 
   .navbar {
@@ -281,7 +281,6 @@ body {
     height: 70px;
   }
 
-  /* قياسات اللوجو والنص في الموبايل عشان يكونوا باينين ومنورين بوضوح */
   .logo-emblem {
     width: 40px;
     height: 40px;
@@ -294,13 +293,13 @@ body {
   .main-brand {
     font-size: 14px;
     font-weight: 800;
-    color: #0f172a; /* لون أغمق وأوضح */
+    color: #0f172a;
   }
 
   .sub-brand {
     font-size: 9.5px;
     font-weight: 700;
-    color: #334155; /* وضحناه وبقى بارز أكتر */
+    color: #334155;
   }
 
   .nav-links {
@@ -2194,29 +2193,27 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 5px 10px;
 }
-/* حاوية الصورة لتوسيطها وحمايتها على جميع الأجهزة */
-.image-container {
-  width: 100%;
-  max-width: 800px; /* يمكنك زيادة أو تقليل العرض الأقصى حسب تصميم موقعك */
-  margin: 20px auto;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
 /* تصميم الصورة الاحترافي */
 .custom-img {
-  width: 100%;
+  width: 100%; /* تم التعديل لتلتزم بالحاوية وتشتغل تمام */
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 12px; /* حواف دائرية أنيقة */
   border: 2px solid #b58e3e; /* إطار بنفس لون الهوية (الذهبي الفاخر) */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* ظل خفيف لإبراز الصورة وتعميق التصميم */
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* تأثير حركة خفيف عند مرور الماوس فوق الصورة */
+/* حاوية الصورة */
+.image-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 .custom-img:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(181, 142, 62, 0.3);

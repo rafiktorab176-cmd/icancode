@@ -1,19 +1,26 @@
-// تفعيل قائمة الهامبرجر للموبايل
+// تفعيل قائمة الهامبرجر للموبايل بأداء محسّن
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-});
-
-// قفل القائمة تلقائياً لما تضغط علي أي لينك جوه الموبايل
-document.querySelectorAll(".nav-links li a").forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    requestAnimationFrame(() => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
   });
-});
+
+  // قفل القائمة تلقائياً لما تضغط علي أي لينك جوه الموبايل
+  document.querySelectorAll(".nav-links li a").forEach((link) => {
+    link.addEventListener("click", () => {
+      requestAnimationFrame(() => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+      });
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // 1. أسكيما النشاط التجاري (LocalBusiness)
   const localBusinessSchema = {
@@ -32,17 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
     address: {
       "@type": "PostalAddress",
       streetAddress: "شارع الخدمة الرئيسي",
-      addressLocality: "القاهرة",
-      addressRegion: "محافظة القاهرة",
-      postalCode: "12345",
+      addressLocality: "طنطا",
+      addressRegion: "محافظة الغربية",
+      postalCode: "31511",
       addressCountry: "EG",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 30.0444,
-      longitude: 31.2357,
+      latitude: 30.7885,
+      longitude: 31.0019,
     },
-    telephone: "+201000000000",
+    telephone: "+201289966660",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
