@@ -1,4 +1,6 @@
+/* ========================================== */
 /* إعدادات أساسية */
+/* ========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +10,19 @@
 
 body {
   background-color: #f4f7f6;
-  height: 200vh;
+  min-height: 100vh;
 }
 
+/* ========================================== */
 /* تصميم الهيدر */
+/* ========================================== */
 .header {
   background: #ffffff;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 3px solid #b58e3e; /* لمسة ذهبية خفيفة تحت الهيدر */
+  border-bottom: 3px solid #b58e3e;
 }
 
 .navbar {
@@ -50,12 +54,15 @@ body {
   position: relative;
   box-shadow: 0 5px 15px rgba(42, 82, 152, 0.3);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
+/* [تصليح الأيقونة داخل اللوجو عشان تظهر بوضوح وفخامة] */
 .logo-emblem i {
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 30px;
+  color: rgba(181, 142, 62, 0.4); /* لون ذهبي خفيف وواضح ورا الحرف */
+  font-size: 32px;
   position: absolute;
+  z-index: 0;
 }
 
 .koofi-m {
@@ -65,7 +72,7 @@ body {
   font-weight: bold;
   position: relative;
   z-index: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .logo-text-area {
@@ -82,7 +89,7 @@ body {
 
 .sub-brand {
   font-size: 12px;
-  color: #475569; /* غمّقناه شوية عشان يبמו واضح وأنيق */
+  color: #475569;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -129,7 +136,7 @@ body {
 .mobile-actions {
   display: none;
   align-items: center;
-  gap: 14px; /* مسافة واضحة ومريحة بين زرار الاتصال والهامبرجر */
+  gap: 14px;
 }
 
 .hotline-mobile-btn {
@@ -142,11 +149,11 @@ body {
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(20, 30, 48, 0.3);
-  border: 1px solid rgba(181, 142, 62, 0.4); /* إطار ذهبي خفيف يبرز الزرار */
+  border: 1px solid rgba(181, 142, 62, 0.4);
 }
 
 .hotline-mobile-btn i {
-  color: #b58e3e;
+  color: #b58e3e !important; /* تأكيد ظهور أيقونة الخط الساخن */
   font-size: 14px;
 }
 
@@ -188,7 +195,7 @@ body {
 }
 
 .hotline-icon-circle i {
-  color: #b58e3e;
+  color: #b58e3e !important; /* تأكيد لون الأيقونة */
   font-size: 18px;
 }
 
@@ -262,18 +269,20 @@ body {
   transition: all 0.4s;
 }
 
-/* --- ميديا كويري للموبايل والشاشات الصغيرة --- */
+/* ========================================== */
+/* ميديا كويري للموبايل والشاشات الصغيرة */
+/* ========================================== */
 @media (max-width: 1100px) {
   .hamburger {
     display: flex;
   }
 
   .mobile-actions {
-    display: flex; /* إظهار أزرار الموبايل */
+    display: flex;
   }
 
   .hotline-royal {
-    display: none; /* إخفاء الكبيرة الخاصة بالديسكتوب */
+    display: none;
   }
 
   .navbar {
@@ -281,10 +290,13 @@ body {
     height: 70px;
   }
 
-  /* قياسات اللوجو والنص في الموبايل عشان يكونوا باينين ومنورين بوضوح */
   .logo-emblem {
     width: 40px;
     height: 40px;
+  }
+
+  .logo-emblem i {
+    font-size: 24px;
   }
 
   .koofi-m {
@@ -294,13 +306,13 @@ body {
   .main-brand {
     font-size: 14px;
     font-weight: 800;
-    color: #0f172a; /* لون أغمق وأوضح */
+    color: #0f172a;
   }
 
   .sub-brand {
     font-size: 9.5px;
     font-weight: 700;
-    color: #334155; /* وضحناه وبقى بارز أكتر */
+    color: #334155;
   }
 
   .nav-links {
@@ -315,7 +327,7 @@ body {
     align-items: center;
     padding: 30px 0;
     gap: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 10.1);
     transition: left 0.4s ease-in-out;
   }
 
@@ -339,7 +351,6 @@ body {
     display: none;
   }
 
-  /* أنيميشن الهامبرجر لعلامة X */
   .hamburger.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
