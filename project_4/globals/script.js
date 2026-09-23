@@ -1,19 +1,52 @@
-// تفعيل قائمة الهامبرجر للموبايل
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+// حل جذري ومضمون 100% لتشغيل الهامبرجر
+window.addEventListener("DOMContentLoaded", () => {
+  const hamburger =
+    document.querySelector(".hamburger") ||
+    document.getElementById("hamburger");
+  const navLinks =
+    document.querySelector(".nav-links") || document.getElementById("navLinks");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-});
+  if (!hamburger || !navLinks) {
+    console.error(
+      "عنصر الهامبرجر أو القائمة غير موجود في الصفحة تأكد من الـ HTML",
+    );
+    return;
+  }
 
-// قفل القائمة تلقائياً لما تضغط علي أي لينك جوه الموبايل
-document.querySelectorAll(".nav-links li a").forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
+  // السماح بالضغط على الهامبرجر بوضوح
+  hamburger.style.cursor = "pointer";
+  hamburger.style.zIndex = "9999";
+
+  hamburger.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // تبديل الكلاسات
+    this.classList.toggle("active");
+    navLinks.classList.toggle("active");
+
+    console.log("تم الضغط على الهامبرجر بنجاح!");
+  });
+
+  // إغلاق القائمة عند الضغط على أي لينكات جواها
+  const links = navLinks.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+    });
+  });
+
+  // إغلاق القائمة لو المستخدم ضغط في أي مكان تاني بره القائمة والهامبرجر
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+    }
   });
 });
+
+// تفعيل الأسئلة الشائعة (FAQ)
 document.querySelectorAll(".faq-question-btn").forEach((button) => {
   button.addEventListener("click", () => {
     const currentItem = button.parentElement;

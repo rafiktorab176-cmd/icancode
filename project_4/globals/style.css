@@ -81,7 +81,7 @@ body {
 
 .sub-brand {
   font-size: 12px;
-  color: #475569; /* غمّقناه شوية عشان يبמו واضح وأنيق */
+  color: #475569; /* غمّقناه شوية عشان يبقي واضح وأنيق */
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -305,7 +305,7 @@ body {
   .nav-links {
     position: fixed;
     top: 70px;
-    left: -100%;
+    right: -100%; /* تم التعديل من left إلى right ليتناسب مع اللغة العربية و تظهر القائمة بشكل صحيح */
     width: 100%;
     height: calc(100vh - 70px);
     background-color: #ffffff;
@@ -315,11 +315,12 @@ body {
     padding: 30px 0;
     gap: 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: left 0.4s ease-in-out;
+    transition: right 0.4s ease-in-out; /* متوافقة مع خاصية الـ right */
+    z-index: 9999; /* ضمان ظهور القائمة فوق جميع العناصر وبدون مشاكل */
   }
 
   .nav-links.active {
-    left: 0;
+    right: 0; /* عند التفعيل تظهر تماماً في الشاشة */
   }
 
   .nav-links li {
@@ -348,4 +349,10 @@ body {
   .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+}
+
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px 10px;
 }
