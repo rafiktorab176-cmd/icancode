@@ -257,10 +257,14 @@ button {
   background-color: #f1f5f9;
   color: #2563eb;
 }
-
 .hamburger-btn svg {
   width: 28px;
   height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-btn:active svg {
+  transform: scale(0.9);
 }
 
 /* قائمة الموبايل المنسدلة */

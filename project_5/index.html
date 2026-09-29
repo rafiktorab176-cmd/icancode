@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المركز المعتمد لصيانة الأجهزة المنزلية</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- أحدث رابط FontAwesome لضمان ظهور جميع الأيقونات الحديثة -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="./assets/19580-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الهيدر -->
+    <header>
+      <div class="logo-area">
+        <img
+          src="./assets/19580-logo.png"
+          alt="شعار المعتمد للصيانة والإعلانات"
+        />
+      </div>
+
+      <!-- زر الهمبرجر للموبايل -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="من-نحن/">من نحن</a></li>
+          <li class="dropdown" id="servicesDropdown">
+            <a href="خدماتنا/">خدماتنا ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="صيانة-تلاجات/">صيانة تلاجات</a></li>
+              <li><a href="صيانة-الديب-فريزر/">صيانة الديب فريزر</a></li>
+              <li><a href="صيانة-الغسالات/">صيانة الغسالات</a></li>
+              <li><a href="صيانة-غسالات-الاطباق/">صيانة غسالات الاطباق</a></li>
+              <li><a href="صيانة-الشاشات/">صيانة الشاشات</a></li>
+              <li><a href="صيانة-الميكرويف/">صيانة الميكرويف</a></li>
+              <li><a href="صيانة-المجففات/">صيانة المجففات</a></li>
+            </ul>
+          </li>
+          <li><a href="الأسئلة-الشائعة/">الأسئلة الشائعة</a></li>
+          <li><a href="الماركات/">الماركات</a></li>
+          <li><a href="مناطق-الخدمة/">مناطق الخدمة</a></li>
+          <li><a href="المدونة/">المدونة</a></li>
+          <li><a href="اتصل-بنا/">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:19580" class="hotline-btn"> 📞 احجز صيانة الآن: 19580 </a>
+    </header>
+
+    <!-- واجهة البطل (Hero) -->
+    <section class="hero">
+      <img
+        src="assets/1.jpg"
+        alt="صيانة الأجهزة المنزلية"
+        class="hero-bg-img"
+      />
+      <div class="hero-content">
+        <h2>خدمات صيانة الأجهزة المنزلية الاحترافية من المركز المعتمد</h2>
+        <p>
+          نحن نبحث عن راحة بالكم ونعمل على إصلاح أجهزة المنزل العطلية في مصر
+          باحترافية تامة.
+        </p>
+        <div class="hero-btns">
+          <a href="tel:19580" class="btn-red">احجز طلب صيانة 19580</a>
+          <a href="https://wa.me/201289966660" target="_blank" class="btn-dark"
+            >محادثة واتساب</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- أزرار الاتصال الثابتة في الشاشة من الجهة اليسرى -->
+    <div class="floating-contact-buttons">
+      <a
+        href="tel:19580"
+        class="float-btn hotline"
+        title="اتصل بالخط الساخن 19580"
+      >
+        <span class="float-icon">📞</span>
+        <span class="float-text">احجز صيانة 19580 </span>
+      </a>
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp"
+        title="محادثة سريعة عبر واتساب"
+      >
+        <span class="float-icon">💬</span>
+        <span class="float-text">محادثة واتساب</span>
+      </a>
+    </div>
+
+    <!-- قسم من نحن وصورة مميزة -->
+    <section class="about-section">
+      <div class="about-content">
+        <span class="tag">من نحن</span>
+        <h3>خبراء صيانة الأجهزة المنزلية الموثوق بهم في مصر</h3>
+        <p>
+          المركز المعتمد هي خيارك الأمثل والأول لعملية صيانة الأجهزة المنزلية في
+          مصر. نحن لا نقتصر فقط على الإصلاح، بل نضمن لك إعادة جهازك كأنه جديد
+          تماماً مع تقديم ضمان معتمد على الصيانة وقطع الغيار الأصلية 100%.
+        </p>
+        <ul class="features-list">
+          <li>أفضل صيانة لجهازك السريعة والموثوقة في مصر</li>
+          <li>صيانة سريعة وموثوقة للأجهزة في المنزل دون نقل الجهاز</li>
+          <li>فنيون محترفون ومدربون على أعلى مستوى بالصيانة</li>
+          <li>خدمات صيانة موثوقة للمنازل، الفلل، والشركات</li>
+          <li>قطع غيار أصلية معتمدة بضمان شامل</li>
+        </ul>
+        <div class="about-stats">
+          <div class="stat-box">
+            <h4>+14 سنة</h4>
+            <p>خبرة في الصيانة</p>
+          </div>
+          <div class="stat-box">
+            <h4>+42 ألف</h4>
+            <p>عميل راضٍ</p>
+          </div>
+          <div class="stat-box">
+            <h4>24/7</h4>
+            <p>دعم فني وسريع</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-wrapper">
+        <div class="about-image">
+          <img
+            id="customAboutImg"
+            src="assets/2.jpg"
+            alt="فني صيانة الأجهزة المنزلية"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- السكشن الفارغ الجديد -->
+    <section class="custom-empty-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">اكتب العنوان الفرعي هنا (سبان)</span>
+          <h2 class="section-title">اكتب العنوان الرئيسي للسكشن هنا</h2>
+          <p class="section-description">
+            اكتب هنا البرجراف أو النص التعريفي الخاص بهذا السكشن، يمكنك تغيير
+            هذا النص بأي محتوى تريده .
+          </p>
+        </div>
+
+        <!-- حاوية أو مكان إضافي لو حبيت تحط جواه كروت أو عناصر بعدين -->
+        <div class="section-content-area">
+          <!-- مكان مخصص لإضافة محتواك أو داتا الخاصة بك -->
+        </div>
+      </div>
+    </section>
+    <!-- قسم خدماتنا (Services Section) -->
+    <section class="services-section">
+      <div class="services-header">
+        <span class="tag">خدماتنا</span>
+        <h2>خدمات صيانة الأجهزة المنزلية الاحترافية</h2>
+        <p>
+          نقدم لك خدمات صيانة شاملة لجميع أجهزتك المنزلية بأعلى جودة وبأيدي
+          فنيين متخصصين ومعتمدين
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- كارت 1: صيانة الثلاجات -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/4.jpg" alt="صيانة الثلاجات" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة الثلاجات</h3>
+            <p>
+              إصلاح جميع أعطال التبريد وتسريب الغاز وتغيير الفلتر والكومبروسر
+              بقطع أصلية.
+            </p>
+            <a href="صيانة-الثلاجات/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+
+        <!-- كارت 2: صيانة الديب فريزر -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/3.jpg" alt="صيانة الديب فريزر" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة الديب فريزر</h3>
+            <p>
+              خدمة سريعة لحل مشاكل الثلج وعدم التبريد وصيانة الأرفف والكباسات
+              بالمنزل.
+            </p>
+            <a href="صيانة-الديب-فريزر/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+
+        <!-- كارت 3: صيانة الغسالات -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/5.jpg" alt="صيانة الغسالات" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة الغسالات</h3>
+            <p>
+              إصلاح مشاكل العصر، السحب، الصرف، وتغيير البلي والباب بأعلى كفاءة.
+            </p>
+            <a href="صيانة-الغسالات/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+
+        <!-- كارت 4: صيانة غسالات الأطباق -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/6.jpg" alt="صيانة غسالات الأطباق" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة غسالات الأطباق</h3>
+            <p>
+              علاج مشاكل التنظيف، التسريب، وعدم تسخين المياه لجميع الماركات
+              العالمية.
+            </p>
+            <a href="صيانة-غسالات-الأطباق/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+
+        <!-- كارت 5: صيانة الشاشات -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/7.jpg" alt="صيانة الشاشات" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة الشاشات</h3>
+            <p>
+              إصلاح أعطال الإضاءة، البنل، الصوت، والصورة لجميع الشاشات الذكية
+              (LED & Smart).
+            </p>
+            <a href="صيانة-الشاشات/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+
+        <!-- كارت 6: صيانة الميكرويف -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/8.jpg" alt="صيانة الميكرويف" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة الميكرويف</h3>
+            <p>حل مشاكل التسخين، احتراق الفيوز، وعدم دوران الطبق بأمان تام.</p>
+            <a href="صيانة-الميكرويف/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+
+        <!-- كارت 7: صيانة المجففات -->
+        <div class="service-card">
+          <div class="card-bg-img">
+            <img src="assets/9.jpg" alt="صيانة المجففات" />
+          </div>
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>صيانة المجففات</h3>
+            <p>
+              صيانة أعطال التجفيف، السحب الكهربائي، والفلتر لضمان عمل المجفف
+              بكفاءة.
+            </p>
+            <a href="صيانة-المجففات/" class="service-btn">زيارة الخدمة</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
