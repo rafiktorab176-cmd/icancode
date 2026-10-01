@@ -734,7 +734,7 @@ nav ul li a:hover::after {
 .section-subtitle {
   display: inline-block;
   background-color: rgba(138, 183, 49, 0.12);
-  color: #8ab731; /* لون مميز متناسق مع تصميمك */
+  color: #000000; /* لون مميز متناسق مع تصميمك */
   padding: 6px 16px;
   border-radius: 20px;
   font-weight: 700;
@@ -935,5 +935,834 @@ nav ul li a:hover::after {
 
   .services-header h2 {
     font-size: 1.7rem;
+  }
+}
+/* سكشن الأسئلة الشائعة الشامل */
+.comprehensive-faq-section {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+  font-family: inherit;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* الرأس */
+.faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-tag {
+  display: inline-block;
+  background-color: rgba(138, 183, 49, 0.15);
+  color: #000000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.faq-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #17212b;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.faq-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* عناوين الفئات الفرعية بين الأسئلة */
+.faq-category-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #8ab731;
+  margin: 35px 0 15px 0;
+  padding-right: 5px;
+  border-right: 4px solid #8ab731;
+}
+
+.faq-category-title:first-of-type {
+  margin-top: 0;
+}
+
+/* تصميم عنصر السؤال (Accordion Item) */
+.accordion-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.accordion-header:hover {
+  color: #8ab731;
+}
+
+/* أيقونة السهم المدمجة عبر SVG لضمان ظهورها بدون مكتبات خارجية */
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238ab731' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* حالة فتح السؤال */
+.accordion-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 25px;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
+}
+
+.accordion-body p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+/* التجاوب (Responsive) */
+@media (max-width: 768px) {
+  .comprehensive-faq-section {
+    padding: 50px 15px;
+  }
+  .faq-header h2 {
+    font-size: 1.6rem;
+  }
+  .accordion-header {
+    font-size: 0.95rem;
+    padding: 16px 20px;
+  }
+}
+/* سكشن الماركات العام */
+.brands-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.brands-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* الرأس */
+.brands-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.brands-tag {
+  display: inline-block;
+  background-color: rgba(138, 183, 49, 0.15);
+  color: #000000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.brands-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #17212b;
+  margin-bottom: 12px;
+}
+
+.brands-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* شبكة الكروت (Grid) متجاوبة بالكامل */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* تصميم كارت الماركة الواحد */
+.brand-card {
+  position: relative;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.3s ease;
+}
+
+/* حاوية الصورة لتغطية الكارت */
+.brand-img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.brand-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s ease;
+}
+
+/* طبقة تظليل تدرجية عشان اسم الماركة يظهر بوضوح */
+.brand-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.9) 10%,
+    rgba(15, 23, 42, 0.2) 100%
+  );
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+/* المحتوى جوه الكارت (اسم الماركة وزر الطلب) */
+.brand-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.brand-content h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* تأثير الـ Hover الخرافي */
+.brand-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 15);
+  border-color: #8ab731;
+}
+
+.brand-card:hover .brand-img-wrap img {
+  transform: scale(1.1);
+}
+
+.brand-card:hover .brand-content h3 {
+  color: #8ab731;
+}
+
+.brand-card:hover .brand-content span {
+  background-color: #ffffff;
+}
+
+/* التجاوب (Responsive) للموبايل */
+@media (max-width: 768px) {
+  .brands-section {
+    padding: 50px 15px;
+  }
+  .brands-header h2 {
+    font-size: 1.6rem;
+  }
+  .brands-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+  }
+  .brand-card {
+    height: 150px;
+    padding: 15px;
+  }
+  .brand-content h3 {
+    font-size: 1rem;
+  }
+}
+/* سكشن مناطق الخدمة العام */
+.service-areas-section {
+  padding: 80px 20px;
+  background-color: #f8fafc;
+  font-family: inherit;
+}
+
+.areas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* الرأس */
+.areas-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.areas-tag {
+  display: inline-block;
+  background-color: rgba(138, 183, 49, 0.15);
+  color: #000000;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.areas-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #17212b;
+  margin-bottom: 12px;
+}
+
+.areas-header p {
+  color: #64748b;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* مجموعة كل محافظة */
+.governorate-group {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+}
+
+/* عنوان المحافظة مع الأيقونة */
+.gov-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse; /* لضبط الأيقونة يمين الاسم */
+  gap: 8px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 12px;
+}
+
+.gov-icon {
+  width: 22px;
+  height: 22px;
+  color: #8ab731;
+}
+
+/* شبكة أزرار المدن والمراكز */
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+/* تصميم الزر الخاص بالمدينة (رابط) */
+.city-btn {
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+/* تأثير الـ Hover */
+.city-btn:hover {
+  background-color: #8ab731;
+  color: #17212b;
+  border-color: #8ab731;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(138, 183, 49, 0.25);
+}
+
+/* التجاوب (Responsive) للموبايل */
+@media (max-width: 768px) {
+  .service-areas-section {
+    padding: 50px 15px;
+  }
+  .areas-header h2 {
+    font-size: 1.6rem;
+  }
+  .governorate-group {
+    padding: 15px 20px;
+  }
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .city-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+/* إعدادات الحاوية العامة بخلفية فاتحة وهادئة */
+.appliance-tables-wrapper {
+  background: #f1f5f9;
+  padding: 60px 15px;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+
+.tables-container-main {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.section-main-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-main-title h2 {
+  font-size: 2.1rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.section-main-title p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* صندوق الجدول الواحد (لون أبيض ناصع مع ظل خفيف) */
+.table-card-box {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.table-card-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.1);
+  border-color: #bae6fd;
+}
+
+.table-title {
+  color: #0369a1;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 18px 20px;
+  background: #f0f9ff;
+  border-bottom: 1px solid #e0f2fe;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.repair-custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #334155;
+  text-align: right;
+}
+
+.repair-custom-table th,
+.repair-custom-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.repair-custom-table th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 700;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.repair-custom-table tr:hover {
+  background: #f8fafc;
+}
+
+.repair-custom-table td code {
+  background: #ffe4e6;
+  color: #e11d48;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 0.85rem;
+  border: 1px solid #fecdd3;
+}
+
+/* تنسيق الموبايل (نفس فكرة البطاقات الرأسية بدون قطع وبألوان فاتحة واضحة) */
+@media (max-width: 768px) {
+  .repair-custom-table,
+  .repair-custom-table tbody,
+  .repair-custom-table tr,
+  .repair-custom-table td,
+  .repair-custom-table th {
+    display: block;
+    width: 100%;
+  }
+
+  .repair-custom-table thead {
+    display: none;
+  }
+
+  .repair-custom-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  }
+
+  .repair-custom-table td {
+    text-align: right !important;
+    padding: 8px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+  }
+
+  .repair-custom-table td:last-child {
+    border-bottom: none;
+  }
+
+  .repair-custom-table td:nth-child(1)::before {
+    content: "العطل / الرمز: ";
+    color: #0284c7;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .repair-custom-table td:nth-child(2)::before {
+    content: "الأسباب المحتملة: ";
+    color: #64748b;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .repair-custom-table td:nth-child(3)::before {
+    content: "الحل الفوري: ";
+    color: #16a34a;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+  }
+}
+/* إعدادات القسم العام والألوان الفخمة */
+.luxury-testimonials {
+  background: radial-gradient(circle at center, #0f172a 0%, #090d16 100%);
+  padding: 90px 20px;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  overflow: hidden;
+  position: relative;
+}
+
+/* خلفية جمالية مضيئة خفيفة */
+.luxury-testimonials::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 600px;
+  height: 250px;
+  background: rgba(14, 165, 233, 0.08);
+  filter: blur(90px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.luxury-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.luxury-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sub-title {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.luxury-header h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.luxury-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* حاوية العرض */
+.luxury-viewport {
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 5px;
+}
+
+.luxury-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+/* تصميم الكارت الفخم جداً */
+.luxury-card {
+  flex: 0 0 calc(33.333% - 16px);
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-sizing: border-box;
+}
+
+/* تأثير الإضاءة المتحركة عند الهوفر (Glow Effect قوي) */
+.luxury-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #38bdf8, transparent, #818cf8);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.luxury-card:hover::after {
+  opacity: 1;
+}
+
+.luxury-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(56, 189, 248, 0.2);
+  background: linear-gradient(145deg, #23324a, #111c31);
+}
+
+/* بيانات العميل وأيقونات الـ SVG الملونة */
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.client-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.luxury-card:hover .client-avatar {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.client-avatar.male {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: #fff;
+}
+
+.client-avatar.female {
+  background: linear-gradient(135deg, #f43f5e, #db2777);
+  color: #fff;
+}
+
+.client-avatar svg {
+  width: 28px;
+  height: 28px;
+}
+
+.client-info h3 {
+  font-size: 1.15rem;
+  color: #f8fafc;
+  margin: 0 0 3px 0;
+  font-weight: 700;
+}
+
+.client-loc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.rating {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+}
+
+.comment {
+  color: #cbd5e1;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  min-height: 75px;
+}
+
+.badge-tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  transition: all 0.3s;
+}
+
+.luxury-card:hover .badge-tag {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* النقاط الفخمة (Dots) */
+.luxury-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot.active {
+  background: #38bdf8;
+  width: 32px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* التجاوب الدقيق تماماً مع الشاشات والموبايل بدون أي مشاكل */
+@media (max-width: 992px) {
+  .luxury-card {
+    flex: 0 0 calc(50% - 12px); /* كارتين في التابلت */
+  }
+}
+
+@media (max-width: 640px) {
+  .luxury-card {
+    flex: 0 0 100%; /* كارت واحد بالكامل في الموبايل ومريح جداً للعين */
+  }
+  .luxury-header h2 {
+    font-size: 1.9rem;
   }
 }

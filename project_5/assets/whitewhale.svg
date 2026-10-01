@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#fff"/>
+  <text x="100" y="35" text-anchor="middle" fill="#0072bc" font-size="16" font-weight="bold" font-family="Arial">WHITE</text>
+  <text x="100" y="55" text-anchor="middle" fill="#0072bc" font-size="16" font-weight="bold" font-family="Arial">WHALE</text>
+</svg>

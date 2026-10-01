@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#fff"/>
+  <text x="100" y="48" text-anchor="middle" fill="#1a1a6c" font-size="24" font-weight="bold" font-family="Arial">ZANUSSI</text>
+  <rect x="25" y="55" width="150" height="3" fill="#ff6900"/>
+</svg>
