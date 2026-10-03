@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif !important;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* انيميشن عام */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(138, 183, 49, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(138, 183, 49, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(138, 183, 49, 0);
+  }
+}
+
+/* الهيدر العلوي */
+header {
+  background-color: #17212b;
+  color: #fff;
+  padding: 12px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #8ab731;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.logo-area img {
+  height: 70px;
+  width: auto;
+  object-fit: cover;
+}
+
+/* النافبار */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  right: 0;
+  background-color: #8ab731;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #8ab731;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* القائمة المنسدلة (Dropdown Menu) لخدماتنا */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #17212b;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid #2b3a4a;
+  list-style: none;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease-in-out;
+  z-index: 1100;
+}
+
+.dropdown-menu li a {
+  padding: 8px 15px;
+  font-size: 13px;
+  color: #ddd;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.dropdown-menu li a::after {
+  display: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #22303c;
+  color: #8ab731;
+  padding-right: 20px;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* زر الخط الساخن */
+.hotline-btn {
+  background: linear-gradient(135deg, #1f3044, #17212b);
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #8ab731;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: pulseGlow 2s infinite;
+}
+
+.hotline-btn:hover {
+  background-color: #8ab731;
+  color: #17212b;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* زر الهمبرجر للموبايل (مخفي افتراضياً بالديسكتوب) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: linear-gradient(135deg, #8ab731, #55751d);
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  z-index: 1200;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* أزرار الاتصال الثابتة */
+.floating-contact-buttons {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.float-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.float-btn.hotline {
+  background: linear-gradient(135deg, #1f3044, #17212b);
+  border: 2px solid #8ab731;
+  animation: strongPulse 2s infinite;
+}
+
+.float-btn.whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  animation: floatBounce 2.5s ease-in-out infinite;
+}
+
+.float-btn:hover {
+  transform: scale(1.08) translateX(5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes strongPulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(138, 183, 49, 0.7),
+      0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  70% {
+    box-shadow:
+      0 0 0 15px rgba(138, 183, 49, 0),
+      0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(138, 183, 49, 0),
+      0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes floatBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
+  }
+}
+
+/* ==========================================
+   تجاوب الموبايل (Responsive Media Queries)
+   ========================================== */
+@media (max-width: 992px) {
+  .hamburger {
+    display: flex; /* إظهار الهمبرجر على الشاشات الصغيرة */
+  }
+
+  /* تم تصغير حجم زر الخط الساخن قليلاً وإبقاؤه ظاهراً في الهيدر بجانب الهمبرجر */
+  header .hotline-btn {
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #17212b;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    padding: 80px 20px 20px 20px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1100;
+    overflow-y: auto;
+  }
+
+  nav.active {
+    right: 0; /* فتح القائمة الجانبية */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background-color: #1f2c3a;
+    box-shadow: none;
+    border: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    border-radius: 6px;
+    margin-top: 5px;
+  }
+
+  .dropdown.active .dropdown-menu {
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu li a {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* تصغير الزر أكثر في الهواتف الصغيرة جداً حتى لا يتداخل مع اللوجو والهمبرجر */
+  header .hotline-btn {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .floating-contact-buttons {
+    bottom: 15px;
+    left: 15px;
+    gap: 8px;
+  }
+
+  .float-btn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}

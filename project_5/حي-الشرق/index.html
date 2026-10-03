@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المركز المعتمد لصيانة الأجهزة المنزلية</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- أحدث رابط FontAwesome لضمان ظهور جميع الأيقونات الحديثة -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الهيدر -->
+    <header>
+      <div class="logo-area">
+        <img
+          src="../assets/19580-logo.png"
+          alt="شعار المعتمد للصيانة والإعلانات"
+        />
+      </div>
+
+      <!-- زر الهمبرجر للموبايل -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="navMenu">
+        <ul>
+          <li><a href="../index.html" class="active">الرئيسية</a></li>
+          <li><a href="../من-نحن/">من نحن</a></li>
+          <li class="dropdown" id="servicesDropdown">
+            <a href="../خدماتنا/">خدماتنا ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="../صيانة-التلاجات/">صيانة التلاجات</a></li>
+              <li><a href="../صيانة-الديب-فريزر/">صيانة الديب فريزر</a></li>
+              <li><a href="../صيانة-الغسالات/">صيانة الغسالات</a></li>
+              <li>
+                <a href="../صيانة-غسالات-الاطباق/">صيانة غسالات الاطباق</a>
+              </li>
+              <li><a href="../صيانة-الشاشات/">صيانة الشاشات</a></li>
+              <li><a href="../صيانة-الميكرويف/">صيانة الميكرويف</a></li>
+              <li><a href="../صيانة-المجففات/">صيانة المجففات</a></li>
+            </ul>
+          </li>
+          <li><a href="../الاسئلة-الشائعة/">الأسئلة الشائعة</a></li>
+          <li><a href="../الماركات/">الماركات</a></li>
+          <li><a href="../مناطق-الخدمة/">مناطق الخدمة</a></li>
+          <li><a href="../المدونة/">المدونة</a></li>
+          <li><a href="../موسوعة-الاعطال/"> موسوعة الاعطال</a></li>
+          <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:19580" class="hotline-btn"> 📞 احجز صيانة الآن: 19580 </a>
+    </header>
+
+    <!-- أزرار الاتصال الثابتة في الشاشة من الجهة اليسرى -->
+    <div class="floating-contact-buttons">
+      <a
+        href="tel:19580"
+        class="float-btn hotline"
+        title="اتصل بالخط الساخن 19580"
+      >
+        <span class="float-icon">📞</span>
+        <span class="float-text">احجز صيانة 19580 </span>
+      </a>
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp"
+        title="محادثة سريعة عبر واتساب"
+      >
+        <span class="float-icon">💬</span>
+        <span class="float-text">محادثة واتساب</span>
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
