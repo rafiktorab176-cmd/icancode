@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <rect width="200" height="80" fill="#fff"/>
+  <rect x="18" y="22" width="164" height="36" fill="#1a4d8f" rx="3"/>
+  <text x="100" y="47" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold" font-family="Arial">KIRIAZI</text>
+</svg>

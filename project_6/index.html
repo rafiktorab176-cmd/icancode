@@ -1,0 +1,1520 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المعتمد جروب للصيانة الاجهزة المنزلية</title>
+    <!-- استدعاء خط Cairo وأيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="./assets/19580-logo.png" />
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- رأس الصفحة وقائمة التنقل -->
+    <header>
+      <div class="logo-area">
+        <img
+          src="./assets/logo_main.webp"
+          alt="لوجو الموقع"
+          class="site-logo"
+        />
+        <div class="logo-text">
+          المعتمد جروب
+          <span>صيانة الأجهزة المنزلية</span>
+        </div>
+      </div>
+
+      <nav id="navbar-menu">
+        <ul>
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+
+          <!-- قائمة خدماتنا المنسدلة -->
+          <li class="dropdown" id="dropdown-toggle">
+            <a href="خدمتنا/">خدماتنا <i class="fa-solid fa-angle-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="صيانة-الثلاجات/">صيانة الثلاجات</a>
+              <a href="صيانة-الغسالات/">صيانة الغسالات</a>
+              <a href="صيانة-غسالات-الاطباق/">صيانة غسالات الاطباق</a>
+              <a href="صيانة-الديب-فريزر/">صيانة الديب فريزر</a>
+              <a href="صيانة-الشاشات/">صيانة الشاشات</a>
+              <a href="صيانة-الميكروويف/">صيانة الميكروويف</a>
+            </div>
+          </li>
+
+          <li><a href="الماركات/">الماركات</a></li>
+          <li><a href="مناطق-الخدمة/">مناطق الخدمة</a></li>
+          <li><a href="موسوعة-اعطال/">موسوعة اعطال</a></li>
+          <li><a href="اتصل بنا/">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right-actions">
+        <a href="tel:19580" class="header-hotline-btn">
+          <i class="fas fa-headset"></i> 19580
+        </a>
+        <!-- زر القائمة الجانبية (الهمبرجر) للشاشات الصغيرة -->
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- قسم الهيرو المتحرك (Slider) -->
+    <section class="hero-section">
+      <!-- الشريحة الأولى -->
+      <div
+        class="hero-slide active"
+        style="background-image: url(assets/hero1.jpg)"
+      >
+        <div class="hero-content">
+          <h1>صيانة أجهزتك المنزلية بجودة تستحق الثقة</h1>
+          <p>
+            فريق فني متكامل من المعتمد جروب لإصلاح الثلاجات والغسالات والتكييفات
+            وكافة الأجهزة المنزلية في منزلك، بقطع غيار أصلية.
+          </p>
+          <div class="hero-buttons">
+            <a href="https://wa.me/201289966660" class="btn-whatsapp"
+              ><i class="fab fa-whatsapp"></i>محادثة واتساب
+            </a>
+            <a href="tel:19580" class="btn-call-gold"
+              ><i class="fas fa-phone-alt"></i> اتصل الآن 19580</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- الشريحة الثانية -->
+      <div class="hero-slide" style="background-image: url(assets/hero2.jpg)">
+        <div class="hero-content">
+          <span class="badge-warranty"
+            ><i class="fas fa-bolt"></i> خدمة منزلية فورية</span
+          >
+          <h1>نخدمك في نفس اليوم غالباً</h1>
+          <p>
+            نخدم كافة المحافظات بفريق فني متخصص، والفني بيوصلك ومعاه العدة
+            والقطع الأكثر استخداماً لإصلاح جهازك بالمنزل.
+          </p>
+          <div class="hero-buttons">
+            <a href="https://wa.me/201289966660" class="btn-whatsapp"
+              ><i class="fab fa-whatsapp"></i> تواصل واتساب</a
+            >
+            <a href="tel:19580" class="btn-call-gold"
+              ><i class="fas fa-phone-alt"></i> اتصل الآن 19580</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- أزرار التنقل يمين ويسار -->
+      <button class="slider-arrow prev-arrow" onclick="changeSlide(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <button class="slider-arrow next-arrow" onclick="changeSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- النقاط بالأسفل -->
+      <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+      </div>
+    </section>
+
+    <!-- شريط الإحصائيات -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">4.9 <i class="fas fa-star"></i></div>
+        <div class="stat-label">متوسط تقييم عملائنا</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">200+ <i class="fas fa-user-tie"></i></div>
+        <div class="stat-label">فني متخصص</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12+ <i class="fas fa-calendar-alt"></i></div>
+        <div class="stat-label">سنة من الخبرة الفنية</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">58000+ <i class="fas fa-users"></i></div>
+        <div class="stat-label">عميل راض عن خدماتنا</div>
+      </div>
+    </div>
+
+    <div class="floating-buttons">
+      <!-- زرار الهوت لاين الثابت مع النص التوضيحي -->
+      <a
+        href="tel:19580"
+        class="float-btn hotline-float"
+        id="hotlineFloatBtn"
+        aria-label="اتصل بنا"
+      >
+        <i class="fa-solid fa-phone-volume"></i>
+        <span class="hotline-label">اتصل بنا على 19580</span>
+      </a>
+      <!-- زرار الواتساب الثابت -->
+      <a
+        href="https://wa.me/01289966660"
+        target="_blank"
+        s
+        class="float-btn whatsapp-float"
+        aria-label="واتساب"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <section class="services-section">
+      <div class="section-header">
+        <span class="badge-sub"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> خدماتنا</span
+        >
+        <h2>خدماتنا المتخصصة</h2>
+        <p>نغطي جميع الأجهزة المنزلية بفريق فني مؤهل وقطع غيار أصلية موثقة</p>
+      </div>
+
+      <div class="services-slider-container">
+        <button class="slider-arrow prev-service">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="services-slider-wrapper">
+          <div class="services-grid">
+            <!-- 1. صيانة ثلاجات -->
+            <div class="service-card">
+              <div class="service-img">
+                <img src="assets/4.jpg" alt="صيانة الثلاجات" />
+              </div>
+              <div class="service-body">
+                <h3>صيانة ثلاجات</h3>
+                <p>صيانة وإصلاح احترافي مع قطع غيار أصلية وضمان</p>
+                <div class="service-actions">
+                  <a href="tel:19580" class="btn-service-call"
+                    ><i class="fa-solid fa-phone"></i> 19580</a
+                  >
+                  <a href="صيانة-الثلاجات/" class="btn-service-details"
+                    >تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. صيانة الديب فريزر -->
+            <div class="service-card">
+              <div class="service-img">
+                <img src="assets/3.jpg" alt="صيانة الديب فريزر" />
+              </div>
+              <div class="service-body">
+                <h3>صيانة الديب فريزر</h3>
+                <p>صيانة وإصلاح احترافي مع قطع غيار أصلية وضمان</p>
+                <div class="service-actions">
+                  <a href="tel:19580" class="btn-service-call"
+                    ><i class="fa-solid fa-phone"></i> 19580</a
+                  >
+                  <a href="صيانة-الديب-فريزر/" class="btn-service-details"
+                    >تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. صيانة غسالات ملابس -->
+            <div class="service-card">
+              <div class="service-img">
+                <img src="assets/5.jpg" alt="صيانة غسالات ملابس" />
+              </div>
+              <div class="service-body">
+                <h3>صيانة غسالات ملابس</h3>
+                <p>صيانة وإصلاح احترافي مع قطع غيار أصلية وضمان</p>
+                <div class="service-actions">
+                  <a href="tel:19580" class="btn-service-call"
+                    ><i class="fa-solid fa-phone"></i> 19580</a
+                  >
+                  <a href="صيانة-الغسالات-ملابس/" class="btn-service-details"
+                    >تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. صيانة غسالات اطباق -->
+            <div class="service-card">
+              <div class="service-img">
+                <img src="assets/6.jpg" alt="صيانة غسالات اطباق" />
+              </div>
+              <div class="service-body">
+                <h3>صيانة غسالات اطباق</h3>
+                <p>صيانة وإصلاح احترافي مع قطع غيار أصلية وضمان</p>
+                <div class="service-actions">
+                  <a href="tel:19580" class="btn-service-call"
+                    ><i class="fa-solid fa-phone"></i> 19580</a
+                  >
+                  <a href="صيانة-الغسالات-اطباق/" class="btn-service-details"
+                    >تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. صيانة الشاشات -->
+            <div class="service-card">
+              <div class="service-img">
+                <img src="assets/7.jpg" alt="صيانة الشاشات" />
+              </div>
+              <div class="service-body">
+                <h3>صيانة الشاشات</h3>
+                <p>صيانة وإصلاح احترافي مع قطع غيار أصلية وضمان</p>
+                <div class="service-actions">
+                  <a href="tel:19580" class="btn-service-call"
+                    ><i class="fa-solid fa-phone"></i> 19580</a
+                  >
+                  <a href="صيانة-الشاشات/" class="btn-service-details"
+                    >تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. صيانة الميكرويف -->
+            <div class="service-card">
+              <div class="service-img">
+                <img src="assets/8.jpg" alt="صيانة الميكرويف" />
+              </div>
+              <div class="service-body">
+                <h3>صيانة الميكرويف</h3>
+                <p>صيانة وإصلاح احترافي مع قطع غيار أصلية وضمان</p>
+                <div class="service-actions">
+                  <a href="tel:19580" class="btn-service-call"
+                    ><i class="fa-solid fa-phone"></i> 19580</a
+                  >
+                  <a href="صيانة-الميكرويف/" class="btn-service-details"
+                    >تفاصيل الخدمة <i class="fa-solid fa-arrow-left"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-arrow next-service">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+
+      <!-- شريط المميزات السفلي -->
+      <div class="features-bar">
+        <div class="feature-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ضمان مكتوب 6 شهور</span>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-gears"></i>
+          <span>قطع غيار أصلية</span>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-bolt"></i>
+          <span>الفني يصلك نفس اليوم</span>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-tags"></i>
+          <span>سعر واضح قبل الشغل</span>
+        </div>
+      </div>
+    </section>
+    <section class="how-it-works-section">
+      <div class="section-header dark-header">
+        <span class="badge-sub-dark"
+          ><i class="fa-solid fa-list-check"></i> خطوات العمل</span
+        >
+        <h2>كيف نعمل؟</h2>
+        <p>خطوات بسيطة للحصول على خدمة صيانة احترافية</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="steps-line"></div>
+
+        <!-- الخطوة 1: اتصل بنا -->
+        <div class="step-item">
+          <div class="step-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="step-content">
+            <h3>اتصل بنا</h3>
+            <p>
+              اتصل على الخط الساخن أو أرسل واتساب وأخبرنا بنوع الجهاز والعطل
+            </p>
+          </div>
+        </div>
+
+        <!-- الخطوة 2: الفحص والتشخيص -->
+        <div class="step-item">
+          <div class="step-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="step-content">
+            <h3>الفحص والتشخيص</h3>
+            <p>فني متخصص يصلك في الموعد المحدد لفحص الجهاز مجاناً</p>
+          </div>
+        </div>
+
+        <!-- الخطوة 3: الإصلاح والضمان -->
+        <div class="step-item">
+          <div class="step-icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="step-content">
+            <h3>الإصلاح والضمان</h3>
+            <p>نصلح الجهاز بقطع غيار أصلية مع ضمان كتابي 6 شهور</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن حجز الموعد ولماذا يختارنا -->
+    <section class="booking-why-section">
+      <!-- بانر احجز موعد -->
+      <div class="booking-banner">
+        <div class="booking-content">
+          <span class="badge-service"
+            ><i class="fa-solid fa-headset"></i> خدمة عملاء 24/7</span
+          >
+          <h2>احجِز موعد صيانة الآن</h2>
+          <p>فني متخصص يصلك في نفس اليوم — قطع غيار أصلية وضمان حقيقي</p>
+          <div class="booking-actions">
+            <a href="tel:19580" class="btn-call-now"
+              ><i class="fa-solid fa-phone"></i> اتصل الآن 19580</a
+            >
+            <button class="btn-open-modal" id="openBookingModal">
+              <i class="fa-solid fa-calendar-days"></i> احجز موعد
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- سيكشن لماذا يختارنا -->
+      <div class="why-us-container">
+        <div class="section-header">
+          <span class="badge-sub"
+            ><i class="fa-solid fa-gem"></i> مميزاتنا</span
+          >
+          <h2>لماذا يختار عملاؤنا المعتمد جروب؟</h2>
+          <p>ليه العملاء يرجعوا لنا تاني؟ السبب في الحاجات دي بالضبط</p>
+        </div>
+
+        <div class="why-grid">
+          <!-- كارت 1 -->
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-user-gear"></i></div>
+            <h3>فنيون متخصصون</h3>
+            <p>
+              فريق فني مدرب على الماركات والموديلات الحديثة، وكل فني متخصص في
+              نوع أجهزة معين.
+            </p>
+          </div>
+
+          <!-- كارت 2 -->
+          <div class="why-card">
+            <div class="why-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>ضمان حقيقي موثق</h3>
+            <p>
+              نمنحك ضماناً مكتوباً يصل إلى 6 أشهر على القطع والخدمة المقدمة.
+            </p>
+          </div>
+
+          <!-- كارت 3 -->
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>استجابة سريعة</h3>
+            <p>
+              نصل إلى منزلك في نفس اليوم غالباً لحل المشكلة دون انتظار طويل.
+            </p>
+          </div>
+
+          <!-- كارت 4 -->
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+            <h3>أسعار شفافة</h3>
+            <p>تحديد التكلفة بوضوح بعد الفحص وقبل بدء أي عمل فعلي.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- نافذة الحجز المنبثقة (Popup Modal) -->
+    <div class="booking-modal-overlay" id="bookingModal">
+      <div class="booking-modal-content">
+        <button class="modal-close" id="closeBookingModal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-header">
+          <h3><i class="fa-solid fa-calendar-check"></i> احجز موعد صيانة</h3>
+        </div>
+
+        <!-- مؤشر الخطوات -->
+        <div class="modal-steps-indicator">
+          <div class="step-line"></div>
+          <div class="step-bullet active" id="bullet-1">
+            <span>1</span>
+            <label>الجهاز</label>
+          </div>
+          <div class="step-bullet" id="bullet-2">
+            <span>2</span>
+            <label>الماركة</label>
+          </div>
+          <div class="step-bullet" id="bullet-3">
+            <span>3</span>
+            <label>البيانات</label>
+          </div>
+        </div>
+
+        <!-- محتوى الخطوات -->
+        <div class="modal-body-content">
+          <!-- الخطوة الأولى: اختيار الجهاز -->
+          <div class="wizard-step active" data-step="1">
+            <h4><i class="fa-solid fa-gear"></i> اختر نوع الجهاز</h4>
+            <div class="devices-grid">
+              <div class="device-option" data-value="ثلاجات">
+                <i class="fa-solid fa-snowflake"></i><span>ثلاجات</span>
+              </div>
+              <div class="device-option" data-value="غسالات">
+                <i class="fa-solid fa-shirt"></i><span>غسالات</span>
+              </div>
+
+              <div class="device-option" data-value="ميكروويف">
+                <i class="fa-solid fa-wifi"></i><span>ميكروويف</span>
+              </div>
+              <div class="device-option" data-value="ديب فريزر">
+                <i class="fa-solid fa-temperature-low"></i
+                ><span>ديب فريزر</span>
+              </div>
+
+              <div class="device-option" data-value="مجففات">
+                <i class="fa-solid fa-shirt"></i><span>مجففات</span>
+              </div>
+              <div class="device-option" data-value="غسالات أطباق">
+                <i class="fa-solid fa-utensils"></i><span>غسالات أطباق</span>
+              </div>
+
+              <div class="device-option" data-value="شاشات">
+                <i class="fa-solid fa-tv"></i><span>شاشات</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- الخطوة الثانية: اختيار الماركة -->
+          <div class="wizard-step" data-step="2">
+            <h4><i class="fa-solid fa-copyright"></i> اختر ماركة الجهاز</h4>
+            <div class="brands-grid">
+              <div class="brand-option" data-value="توشيبا">
+                توشيبا (Toshiba)
+              </div>
+              <div class="brand-option" data-value="كريازي">
+                كريازي (Kiriazi)
+              </div>
+              <div class="brand-option" data-value="شارب">شارب (Sharp)</div>
+              <div class="brand-option" data-value="بى تك/كريازي">كريازي</div>
+              <div class="brand-option" data-value="كريازي">
+                اريستون (Ariston)
+              </div>
+              <div class="brand-option" data-value="بوش">بوش (Bosch)</div>
+              <div class="brand-option" data-value="زانوسي">
+                زانوسي (Zanussi)
+              </div>
+              <div class="brand-option" data-value="كريازي">
+                الكتروستار (Electrostar)
+              </div>
+              <div class="brand-option" data-value="أخرى">ماركة أخرى</div>
+            </div>
+          </div>
+
+          <!-- الخطوة الثالثة: إدخال البيانات -->
+          <div class="wizard-step" data-step="3">
+            <h4>
+              <i class="fa-solid fa-address-card"></i> أدخل بيانات التواصل
+            </h4>
+            <form class="booking-form" id="serviceBookingForm">
+              <div class="form-group">
+                <label>الاسم الكريم</label>
+                <input type="text" placeholder="اكتب اسمك هنا" required />
+              </div>
+              <div class="form-group">
+                <label>رقم الهاتف (للتواصل)</label>
+                <input type="tel" placeholder="+000 000 0000" required />
+              </div>
+              <div class="form-group">
+                <label>العنوان (المدينة / الحي)</label>
+                <input
+                  type="text"
+                  placeholder="مثال: القاهرة - الرحاب"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- أزرار التنقل (التالي / السابق / إرسال) -->
+        <div class="modal-footer-actions">
+          <button class="btn-prev-step" id="prevStepBtn" style="display: none">
+            <i class="fa-solid fa-arrow-right"></i> السابق
+          </button>
+          <button class="btn-next-step" id="nextStepBtn">
+            التالي <i class="fa-solid fa-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- سيكشن الماركات التي نصلحها المستقل -->
+    <section class="brands-we-fix-section">
+      <div class="brands-container">
+        <!-- هيدر السيكشن -->
+        <div class="brands-section-header">
+          <div class="badge-title">
+            <i class="fa-solid fa-medal"></i> الماركات
+          </div>
+          <h2>الماركات التي نصلحها</h2>
+          <p>
+            بنصلّح ماركات عالمية ومحلية كتير — من الثلاجات والغسالات لحد الشاشات
+            — والفني هتعود على الماركة اللى عندك
+          </p>
+        </div>
+
+        <!-- شبكة الكارتات (كل كارت رابط لصفحة الماركة) -->
+        <div class="brands-grid-section">
+          <!-- 1. كريازي -->
+          <a href="كريازي/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/kiriazi.svg" alt="كريازي" />
+            </div>
+            <span>كريازي</span>
+          </a>
+
+          <!-- 2. الجي -->
+          <a href="الجي/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/lg.svg" alt="الجي" />
+            </div>
+            <span>الجي</span>
+          </a>
+
+          <!-- 3. سامسونج -->
+          <a href="سامسونج/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/samsung.svg" alt="سامسونج" />
+            </div>
+            <span>سامسونج</span>
+          </a>
+
+          <!-- 4. وايت ويل -->
+          <a href="وايت-ويل/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/white-whale.svg" alt="وايت ويل" />
+            </div>
+            <span>وايت ويل</span>
+          </a>
+
+          <!-- 5. وايت بوينت -->
+          <a href="وايت-بوينت/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/white-point.svg" alt="وايت بوينت" />
+            </div>
+            <span>وايت بوينت</span>
+          </a>
+
+          <!-- 6. شارب -->
+          <a href="شارب/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/sharp.svg" alt="شارب" />
+            </div>
+            <span>شارب</span>
+          </a>
+
+          <!-- 7. توشيبا -->
+          <a href="توشيبا/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/toshiba.svg" alt="توشيبا" />
+            </div>
+            <span>توشيبا</span>
+          </a>
+
+          <!-- 8. زانوسي -->
+          <a href="زانوسي/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/zanussi.svg" alt="زانوسي" />
+            </div>
+            <span>زانوسي</span>
+          </a>
+
+          <!-- 9. بيكو -->
+          <a href="بيكو/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/beko.svg" alt="بيكو" />
+            </div>
+            <span>بيكو</span>
+          </a>
+
+          <!-- 10. تورنيدو -->
+          <a href="تورنيدو/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/tornado.svg" alt="تورنيدو" />
+            </div>
+            <span>تورنيدو</span>
+          </a>
+
+          <!-- 11. هيتاشي -->
+          <a href="هيتاشي/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/hitachi.svg" alt="هيتاشي" />
+            </div>
+            <span>هيتاشي</span>
+          </a>
+
+          <!-- 12. فريش -->
+          <a href="فريش/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/fresh.svg" alt="فريش" />
+            </div>
+            <span>فريش</span>
+          </a>
+
+          <!-- 13. الاسكا -->
+          <a href="الاسكا/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/alaska.svg" alt="الاسكا" />
+            </div>
+            <span>الاسكا</span>
+          </a>
+
+          <!-- 14. يونيون اير -->
+          <a href="يونيون-اير/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/unionaire.svg" alt="يونيون اير" />
+            </div>
+            <span>يونيون اير</span>
+          </a>
+
+          <!-- 15. ميديا -->
+          <a href="ميديا/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/midea.svg" alt="ميديا" />
+            </div>
+            <span>ميديا</span>
+          </a>
+
+          <!-- 16. اندست -->
+          <a href="اندست/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/indesit.svg" alt="اندست" />
+            </div>
+            <span>اندست</span>
+          </a>
+
+          <!-- 17. هوفر -->
+          <a href="هوفر/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/hoover.svg" alt="هوفر" />
+            </div>
+            <span>هوفر</span>
+          </a>
+
+          <!-- 18. ويرلبول -->
+          <a href="ويرلبول/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/whirlpool.svg" alt="ويرلبول" />
+            </div>
+            <span>ويرلبول</span>
+          </a>
+
+          <!-- 19. وستنجهاوس -->
+          <a href="وستنجهاوس/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/white-westinghouse.svg" alt="وستنجهاوس" />
+            </div>
+            <span>وستنجهاوس</span>
+          </a>
+
+          <!-- 20. كلفنتور -->
+          <a href="كلفنتور/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/kelvinator.svg" alt="كلفنتور" />
+            </div>
+            <span>كلفنتور</span>
+          </a>
+
+          <!-- 21. بلومبرج -->
+          <a href="بلومبرج/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/blomberg.svg" alt="بلومبرج" />
+            </div>
+            <span>بلومبرج</span>
+          </a>
+
+          <!-- 22. اريستون -->
+          <a href="اريستون/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/ariston.svg" alt="اريستون" />
+            </div>
+            <span>اريستون</span>
+          </a>
+
+          <!-- 23. يونيفرسال -->
+          <a href="يونيفرسال/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/universal.svg" alt="يونيفرسال" />
+            </div>
+            <span>يونيفرسال</span>
+          </a>
+
+          <!-- 24. دايو -->
+          <a href="دايو/" class="brand-card-item">
+            <div class="brand-img-box">
+              <img src="./assets/daewoo.svg" alt="دايو" />
+            </div>
+            <span>دايو</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن آراء وتقييمات العملاء (Slider) -->
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <!-- هيدر السيكشن -->
+        <div class="testimonials-header">
+          <div class="badge-title">
+            <i class="fa-solid fa-comments"></i> آراء العملاء
+          </div>
+          <h2>آراء وتقييمات عملائنا</h2>
+          <p>قصص حقيقية من عملاء استفادوا من خدماتنا وشرفونا بثقتهم</p>
+        </div>
+
+        <!-- حاوية السلايفر (Swiper Slider) -->
+        <div class="swiper testimonials-slider">
+          <div class="swiper-wrapper">
+            <!-- التقييم 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="stars-box">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="client-comment">
+                  "الفني وصل في الميعاد بالضبط وأصلح الثلاجة في أقل من ساعة،
+                  خدمة محترمة جداً وسعر مناسب"
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="client-name">أحمد السيد</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- التقييم 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="stars-box">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="client-comment">
+                  "غسالتي كانت بتسرب مياه من فترة طويلة، الفني اكتشف العطل بسرعة
+                  وغيّر القطعة التالفة، شكرًا لكم"
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="client-name">منى عبد الرحمن</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- التقييم 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="stars-box">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="client-comment">
+                  "خدمة جيدة بشكل عام، تأخر الفني قليلًا عن الميعاد لكن جودة
+                  الإصلاح كانت ممتازة والسعر معقول"
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="client-name">كريم فتحي</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- التقييم 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="stars-box">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="client-comment">
+                  "تعاملت معهم لصيانة الميكرويف وكانت تجربة رائعة، الفني شرح لي
+                  سبب العطل بالتفصيل قبل ما يبدأ الشغل"
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="client-name">سارة حسن</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- التقييم 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="stars-box">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="client-comment">
+                  "الديب فريزر بتاعي كان واقف تماماً، الفني جابه وشحن الغاز
+                  واشتغل تاني زي الأول، ضمان حقيقي فعلاً"
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="client-name">محمود عزت</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- التقييم 6 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="stars-box">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="client-comment">
+                  "أفضل خدمة صيانة تعاملت معاها في القاهرة، الأسعار واضحة من
+                  الأول ومفيش أي مفاجأت في الفاتورة"
+                </p>
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <span class="client-name">هبة الشناوي</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- عناصر التحكم في السلايدر (أزرار ونقاط التنقل) -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن مناطق تغطية الخدمة (الصفحة الرئيسية) -->
+    <section class="service-coverage-section">
+      <div class="coverage-container">
+        <!-- هيدر السيكشن -->
+        <div class="coverage-header">
+          <div class="badge-title">
+            <i class="fa-solid fa-map-location-dot"></i> التغطية
+          </div>
+          <h2>مناطق تغطية الخدمة</h2>
+          <p>
+            بنخدم القاهرة، الجيزة، القليوبية، الغربية، المنوفية، الدقهلية
+            والشرقية — بفريق فني ثابت في كل محافظة
+          </p>
+        </div>
+
+        <!-- مربعات المحافظات السريعة -->
+        <div class="governorates-grid">
+          <a href="القاهرة/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>القاهرة</span>
+          </a>
+          <a href="الجيزة/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الجيزة</span>
+          </a>
+          <a href="القليوبية/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>القليوبية</span>
+          </a>
+          <a href="الغربية/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الغربية</span>
+          </a>
+          <a href="المنوفية/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>المنوفية</span>
+          </a>
+          <a href="الدقهلية/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الدقهلية</span>
+          </a>
+          <a href="الشرقية/" class="gov-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الشرقية</span>
+          </a>
+        </div>
+
+        <!-- زرار عرض جميع المناطق (لينك لصفحة تفاصيل المناطق) -->
+        <div class="coverage-action">
+          <a href="مناطق-الخدمة/" class="all-areas-btn">
+            <span>عرض جميع المناطق</span>
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن الأعطال الشائعة وخلولها -->
+    <section class="common-faults-section">
+      <div class="faults-container">
+        <!-- هيدر السيكشن -->
+        <div class="faults-header">
+          <div class="badge-title">
+            <i class="fa-solid fa-triangle-exclamation"></i> أعطال شائعة
+          </div>
+          <h2>أعطال شائعة وحلولها</h2>
+          <p>أكثر المشاكل التي تواجه الأجهزة المنزلية وكيفية التعامل معها</p>
+        </div>
+
+        <!-- كارتات الأعطال (مرصوصة تحت بعضها) -->
+        <div class="faults-list">
+          <!-- 1. ثلاجات -->
+          <a href="اعطال-ثلاجات/" class="fault-card">
+            <div class="fault-icon-box">
+              <i class="fa-solid fa-temperature-arrow-down"></i>
+            </div>
+            <div class="fault-content">
+              <span class="fault-category">صيانة ثلاجات</span>
+              <h3>عدم تبريد الثلاجة نهائياً</h3>
+            </div>
+            <div class="fault-action">
+              <span>الأسباب والحلول</span>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+          </a>
+
+          <!-- 2. غسالات -->
+          <a href="اعطال-غسالات/" class="fault-card">
+            <div class="fault-icon-box">
+              <i class="fa-solid fa-rotate"></i>
+            </div>
+            <div class="fault-content">
+              <span class="fault-category">صيانة غسالات</span>
+              <h3>توقف الغسالة عن الدورات</h3>
+            </div>
+            <div class="fault-action">
+              <span>الأسباب والحلول</span>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+          </a>
+
+          <!-- 3. شاشات -->
+          <a href="اعطال-شاشات/" class="fault-card">
+            <div class="fault-icon-box">
+              <i class="fa-solid fa-tv"></i>
+            </div>
+            <div class="fault-content">
+              <span class="fault-category">صيانة شاشات</span>
+              <h3>انقطاع الصورة مع استمرار الصوت</h3>
+            </div>
+            <div class="fault-action">
+              <span>الأسباب والحلول</span>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+          </a>
+
+          <!-- 4. ميكرويف -->
+          <a href="اعطال-ميكرويف/" class="fault-card">
+            <div class="fault-icon-box">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="fault-content">
+              <span class="fault-category">صيانة ميكرويف</span>
+              <h3>الميكرويف لا يقوم بتسخين الطعام</h3>
+            </div>
+            <div class="fault-action">
+              <span>الأسباب والحلول</span>
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- زرار موسوعة الأعطال -->
+        <div class="faults-action-box">
+          <a href="موسوعة-الأعطال/" class="all-faults-btn">
+            <i class="fa-solid fa-list-check"></i>
+            <span>عرض جميع الأعطال (موسوعة الأعطال)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن الأسئلة الأكثر تكراراً (FAQ) -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <!-- هيدر السيكشن -->
+        <div class="faq-header">
+          <div class="badge-title">
+            <i class="fa-solid fa-circle-question"></i> أسئلة شائعة
+          </div>
+          <h2>الأسئلة الأكثر تكرارًا</h2>
+          <p>
+            إجابات وافية على أهم استفسارات عملائنا الكرام لضمان راحتكم وثقتكم
+          </p>
+        </div>
+
+        <!-- قائمة الأسئلة -->
+        <div class="faq-list">
+          <!-- السؤال 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>كم تبلغ مدة وصول الفني بعد الاتصال؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                حرصاً على وقتك، يصلك فني الصيانة المتخصص في خلال ساعتين إلى 4
+                ساعات كحد أقصى من وقت تأكيد الحجز، وتتوفر لدينا فرق طوارئ جاهزة
+                للتحرك السريع في جميع المناطق.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>هل يوجد ضمان على قطع الغيار المستخدمة؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نعم، نمنحك ضماناً معتمداً وموثقاً يتراوح بين 6 أشهر إلى سنة
+                كاملة على جميع قطع الغيار الأصلية المُستبدلة، بالإضافة لضمان على
+                جودة وصيانة الإصلاح.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>هل فيه رسوم على الكشف والمعاينة؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                رسوم الكشف والانتقال رمزية ومجانية بالكامل في حال إتمام عملية
+                الإصلاح وصيانة الجهاز من خلالنا، وتغطي تكلفة انتقال الفني لحد
+                باب منزلك.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>ما هي وسائل الدفع المتاحة لديكم؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نوفر لك كافة وسائل الراحة؛ يمكنك الدفع نقداً بعد الانتهاء من
+                الصيانة والتجربة الكاملة لجهازك، أو عبر التحويل البنكي والمحافظ
+                الإلكترونية الشهيرة.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>ما هي المحافظات التي تغطونها بخدماتكم؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نغطي بكفاءة عالية محافظات: القاهرة، الجيزة، القليوبية، الغربية،
+                المنوفية، الدقهلية، والشرقية، مع وجود فنيين مقيمين وثابتين في كل
+                مركز وحي.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>هل تستخدمون قطع غيار أصلية 100%؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نعم، نلتزم تماماً بتركيب قطع غيار أصلية ومطابقة للمواصفات
+                المصنعية لكل ماركة، لضمان كفاءة تشغيل الجهاز وعمره الافتراضي
+                وعدم تكرار العطل.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 7 (سؤال مضاف جديد قوي جداً) -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>ماذا لو عاد العطل بعد الإصلاح مباشرة؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                في حال ظهر نفس العطل خلال فترة الضمان، يتم إرسال فني متخصص لفحص
+                الجهاز فوراً وإصلاحه بدون أي رسوم إضافية، لأن رضاء عميلنا وثقته
+                هي أولويتنا القصوى.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 8 (سؤال مضاف جديد يرفع معدل حجز العملاء) -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>هل يمكن حجز موعد صيانة مسائي بعد العمل؟</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نعم بكل تأكيد، نوفر مواعيد مرنة تتناسب مع ظروف عملك ووقتك، بما
+                في ذلك المواعيد المسائية المتأخرة وأيام العطلات الرسمية
+                والأسبوعية.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن مقالات ونصائح الصيانة -->
+    <section class="maintenance-articles-section">
+      <div class="articles-container">
+        <!-- هيدر السيكشن -->
+        <div class="articles-header">
+          <div class="badge-title">
+            <i class="fa-solid fa-blog"></i> المدونة
+          </div>
+          <h2>مقالات ونصائح الصيانة</h2>
+          <p>معلومات مفيدة للحفاظ على أجهزتك المنزلية لأطول فترة ممكنة</p>
+        </div>
+
+        <!-- شبكة المقالات (Grid) -->
+        <div class="articles-grid">
+          <!-- مقال 1: ثلاجات -->
+          <a href="مدونة-الثلاجات/" class="article-card">
+            <div class="article-img-box">
+              <img src="./assets/blog1.jpg" alt="صيانة الثلاجات" />
+              <span class="article-tag">صيانة ثلاجات</span>
+            </div>
+            <div class="article-content">
+              <h3>أسباب توقف تبريد الثلاجة فجأة وطرق تفادي تلف طعامك</h3>
+              <p>
+                تعرف على الأخطاء الشايعة في الاستخدام التي تؤدي لضعف غاز الفريون
+                وكيف تحافظ على كفاءة الكباس...
+              </p>
+              <span class="read-more-link">
+                <span>اقرأ المزيد</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- مقال 2: غسالات -->
+          <a href="مدونة-الغسالات/" class="article-card">
+            <div class="article-img-box">
+              <img src="./assets/blog2.jpg" alt="صيانة الغسالات" />
+              <span class="article-tag">صيانة غسالات</span>
+            </div>
+            <div class="article-content">
+              <h3>رائحة كريهة من الغسالة؟ السبب والحل في 20 دقيقة</h3>
+              <p>
+                مشكلة منتشرة جداً وحلها غالباً بسيط ومجاني، اعرف مصادر الرائحة
+                الأربعة وإزاي تتخلص منها نهائياً...
+              </p>
+              <span class="read-more-link">
+                <span>اقرأ المزيد</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- مقال 3: شاشات -->
+          <a href="مدونة-الشاشات/" class="article-card">
+            <div class="article-img-box">
+              <img src="./assets/blog3.webp" alt="صيانة الشاشات" />
+              <span class="article-tag">صيانة شاشات</span>
+            </div>
+            <div class="article-content">
+              <h3>خطوات بسيطة تطيل عمر الشاشة وتحمي ليد الإضاءة من التلف</h3>
+              <p>
+                إعدادات الإضاءة والطاقة الخاطئة قد تقصر عمر شاشتك الافتراضي，
+                إليك أهم إرشادات الاستخدام الآمن...
+              </p>
+              <span class="read-more-link">
+                <span>اقرأ المزيد</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- مقال 4: ميكرويف -->
+          <a href="مدونة-الميكرويف/" class="article-card">
+            <div class="article-img-box">
+              <img src="./assets/blog4.jpg" alt="صيانة الميكرويف" />
+              <span class="article-tag">صيانة ميكرويف</span>
+            </div>
+            <div class="article-content">
+              <h3>الميكرويف لا يسخن الطعام؟ الأسباب الفنية وكيف تتعامل معها</h3>
+              <p>
+                أسباب تعطل صمام التسخين والماترات الداخلية، ومتى يجب عليك طلب
+                الفني المختص فوراً...
+              </p>
+              <span class="read-more-link">
+                <span>اقرأ المزيد</span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- زرار جميع المقالات (ينقل لصفحة المدونة الكاملة) -->
+        <div class="articles-action-box">
+          <a href="المدونة" class="all-articles-btn">
+            <span>جميع المقالات</span>
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن الفوتر (Footer) -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- القسم العلوي للفوتر (أعمدة) -->
+        <div class="footer-top-grid">
+          <!-- العمود الأول: روابط سريعة (على اليسار في التخطيط العربي) -->
+          <div class="footer-col">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-chevron-left"></i> الرئيسية</a
+                >
+              </li>
+              <li>
+                <a href="blog.html"
+                  ><i class="fa-solid fa-chevron-left"></i> المدونة</a
+                >
+              </li>
+              <li>
+                <a href="tracking.html"
+                  ><i class="fa-solid fa-chevron-left"></i> متابعة طلبي</a
+                >
+              </li>
+              <li>
+                <a href="brands.html"
+                  ><i class="fa-solid fa-chevron-left"></i> جميع الماركات</a
+                >
+              </li>
+              <li>
+                <a href="service-areas.html"
+                  ><i class="fa-solid fa-chevron-left"></i> مناطق الخدمة</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- العمود الثاني: الماركات -->
+          <div class="footer-col">
+            <h3 class="footer-title">الماركات</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> سامسونج</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> ال جي</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> توشيبا</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> شارب</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> بوش</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> زانوسي</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-chevron-left"></i> كريازي</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> وايت ويل</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- العمود الثالث: خدماتنا -->
+          <div class="footer-col">
+            <h3 class="footer-title">خدماتنا</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> صيانة ثلاجات</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> صيانة غسالات</a
+                >
+              </li>
+
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> صيانة ميكروويف</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> صيانة ديب فريزر</a
+                >
+              </li>
+
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> صيانة غسالات
+                  أطباق</a
+                >
+              </li>
+
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-chevron-left"></i> صيانة شاشات</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- العمود الرابع: نبذة عن الشركة واللوجو والهوتلاين (على اليمين) -->
+          <div class="footer-col footer-brand-col">
+            <div class="footer-logo">
+              <!-- حط مسار اللوجو بتاعك هنا -->
+              <img src="./assets/19580-logo.png" alt="المعتمد جروب" />
+            </div>
+            <p class="footer-about-text">
+              المعتمد جروب شركة متخصصة في صيانة الأجهزة المنزلية بالزيارة
+              المنزلية. بنشتغل بفريق فني ثابت في 7 محافظات: القاهرة، الجيزة，
+              القليوبية، الغربية، المنوفية، الدقهلية والشرقية — وبنستخدم قطع
+              غيار أصلية مع ضمان مكتوب على كل إصلاح.
+            </p>
+            <div class="footer-contact-info">
+              <a href="tel:19580" class="footer-hotline">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>19580</span>
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="footer-whatsapp"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>واتساب</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- خط فاصل -->
+        <div class="footer-divider"></div>
+
+        <!-- قسم إخلاء المسؤولية التوضيحي -->
+        <div class="footer-disclaimer-box">
+          <p>
+            <strong>المعتمد جروب</strong> مركز صيانة مستقل غير تابع لأي شركة
+            مصنعة. جميع أسماء الماركات والعلامات التجارية المذكورة (سامسونج، إل
+            جي، توشيبا، وغيرها) ملك لأصحابها، وذكرها لغرض توضيح الخدمة فقط ولا
+            يعني أي ارتباط أو رعاية رسمية.
+            <a href="اخلاء-المسؤولية/">اقرأ إخلاء المسؤولية كاملة</a>
+          </p>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <!-- الشريط السفلي (حقوق النشر وروابط سريعة سفلية) -->
+        <div class="footer-bottom">
+          <ul class="footer-bottom-links">
+            <li><a href="من-نحن/">من نحن</a></li>
+            <li><a href="سياسة-الخصوصية/">سياسة الخصوصية</a></li>
+            <li><a href="اخلاء-المسؤولية/">إخلاء المسؤولية</a></li>
+            <li><a href="اتصل بنا/">اتصل بنا</a></li>
+          </ul>
+          <p class="copyrights">
+            © 2026 المعتمد جروب. جميع الحقوق محفوظة. | صيانة أجهزة منزلية في مصر
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
