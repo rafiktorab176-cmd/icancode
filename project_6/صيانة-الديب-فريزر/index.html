@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صيانة الثلاجات - المعتمد جروب لصيانة الأجهزة المنزلية</title>
+    <!-- استدعاء خط Cairo وأيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- رأس الصفحة وقائمة التنقل -->
+    <header>
+      <div class="logo-area">
+        <img
+          src="../assets/logo_main.webp"
+          alt="لوجو الموقع"
+          class="site-logo"
+        />
+        <div class="logo-text">
+          المعتمد جروب
+          <span>لصيانة الأجهزة المنزلية</span>
+        </div>
+      </div>
+
+      <nav id="navbar-menu">
+        <ul>
+          <li><a href="../index.html">الرئيسية</a></li>
+
+          <!-- قائمة خدماتنا المنسدلة باستخدام Button -->
+          <li class="dropdown">
+            <button type="button" class="dropdown-btn" id="dropdown-toggle">
+              <span>خدماتنا</span>
+              <svg
+                class="dropdown-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <a href="../صيانة-التلاجات/">صيانة التلاجات</a>
+              <a href="../صيانة-الغسالات/">صيانة الغسالات</a>
+              <a href="../صيانة-غسالات-الاطباق/">صيانة غسالات الاطباق</a>
+              <a href="../صيانة-الديب-فريزر/" class="active"
+                >صيانة الديب فريزر</a
+              >
+              <a href="../صيانة-الشاشات/">صيانة الشاشات</a>
+              <a href="../صيانة-الميكروويف/">صيانة الميكروويف</a>
+            </div>
+          </li>
+
+          <li><a href="../الماركات/">الماركات</a></li>
+          <li><a href="../مناطق-الخدمة/">مناطق الخدمة</a></li>
+          <li><a href="../موسوعة-اعطال/">موسوعة اعطال</a></li>
+          <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right-actions">
+        <a href="tel:19580" class="header-hotline-btn">
+          <i class="fas fa-headset"></i> 19580
+        </a>
+        <!-- زر القائمة الجانبية (الهمبرجر) للشاشات الصغيرة -->
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+    <!-- الهيدر العلوي للخدمة -->
+    <section class="service-hero-section">
+      <div class="service-hero-content">
+        <div class="service-icon-badge">
+          <i class="fa-solid fa-snowflake"></i>
+        </div>
+        <h1>صيانة الديب فريزر</h1>
+        <div class="breadcrumb-links">
+          <a href="../index.html">الرئيسية</a>
+          <i class="fa-solid fa-chevron-left"></i>
+          <span class="current">صيانة الديب فريزر</span>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صيانة شاشات OLED - مركز الخبراء</title>
+
+    <!-- أيقونة المتصفح -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+    <!-- FontAwesome للأيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+   
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+      <div class="container-custom">
+        <div class="top-bar-content">
+          <div class="info-group">
+            <span class="time-info">
+              <i class="fa-regular fa-clock"></i>
+              السبت - الخميس: 9 صباحاً - 10 مساءً
+            </span>
+          </div>
+          <div class="info-group">
+            <span class="location-info">
+              <i class="fa-solid fa-location-dot"></i>
+              نغطي جميع المحافظات
+            </span>
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-link"
+              aria-label="فيسبوك"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط الرئيسي -->
+    <header class="main-header">
+      <div class="container-custom header-flex">
+        <!-- زر الهمبرجر للجوال فقط -->
+        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- اللوجو (صورة) -->
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+
+        <!-- الروابط الرئيسية للشاشات الكبيرة -->
+        <nav class="desktop-nav">
+          <a href="../index.html">الرئيسية</a>
+
+          <!-- أنواع الشاشات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu">
+              <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+              <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+              <a href="../صيانة-شاشات-oled/" class="active">صيانة شاشات OLED</a>
+              <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+              <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+            </div>
+          </div>
+
+          <!-- الماركات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu brands-menu">
+              <a href="../سامسونج/">سامسونج</a>
+              <a href="../الجي/">ال جي</a>
+              <a href="../توشيبا/">توشيبا</a>
+              <a href="../شارب/">شارب</a>
+              <a href="../سوني/">سوني</a>
+              <a href="../هايسنس/">هايسنس</a>
+              <a href="../تورنيدو/">تورنيدو</a>
+              <a href="../فريش/">فريش</a>
+              <a href="../يونيفرسال/">يونيفرسال</a>
+              <a href="../شاومي/">شاومي</a>
+              <a href="../يونيون-اير/">يونيون إير</a>
+              <a href="../جاك/">جاك</a>
+              <a href="../هاير/">هاير</a>
+            </div>
+          </div>
+          <a href="../مناطق-الخدمة/" class="nav-link">مناطق الخدمة</a>
+          <a href="../الاعطال-الشائعة/" class="nav-link">الأعطال الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
+        </nav>
+
+        <!-- أزرار الخط الساخن والاتصال -->
+        <div class="header-actions">
+          <a href="tel:19580" class="btn-hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i>
+            <span>19580</span>
+          </a>
+          <a href="tel:01289966660" class="btn-phone pulse-blue">
+            <i class="fa-solid fa-phone"></i>
+            <span>01289966660</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- الخلفية المعتمة للقائمة الجانبية -->
+    <div id="overlay" class="drawer-overlay"></div>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img small"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+        <button id="closeBtn" class="close-btn" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <a href="../index.html" class="drawer-link main-color">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a>
+
+        <!-- أنواع الشاشات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
+            <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="screensSubMenu" class="drawer-submenu hidden">
+            <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+            <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+            <a href="../صيانة-شاشات-oled/" class="active">صيانة شاشات OLED</a>
+            <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+            <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+          </div>
+        </div>
+
+        <!-- الماركات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tags"></i> الماركات</span>
+            <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="brandsSubMenu" class="drawer-submenu hidden scrollable">
+            <a href="../سامسونج/">سامسونج</a>
+            <a href="../الجي/">ال جي</a>
+            <a href="../توشيبا/">توشيبا</a>
+            <a href="../شارب/">شارب</a>
+            <a href="../سوني/">سوني</a>
+            <a href="../هايسنس/">هايسنس</a>
+            <a href="../تورنيدو/">تورنيدو</a>
+            <a href="../فريش/">فريش</a>
+            <a href="../يونيفرسال/">يونيفرسال</a>
+            <a href="../شاومي/">شاومي</a>
+            <a href="../يونيون-اير/">يونيون إير</a>
+            <a href="../جاك/">جاك</a>
+            <a href="../هاير/">هاير</a>
+          </div>
+        </div>
+
+        <a href="../مناطق-الخدمة/" class="drawer-link"
+          ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
+        >
+        <a href="../الأعطال-الشائعة/" class="drawer-link"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> الأعطال الشائعة</a
+        >
+        <a href="../المدونة/" class="drawer-link"
+          ><i class="fa-solid fa-blog"></i> المدونة</a
+        >
+        <a href="../اتصل-بنا/" class="drawer-link"
+          ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+        >
+      </div>
+
+      <div class="drawer-footer">
+        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+          <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+        </a>
+        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+          <i class="fa-solid fa-phone"></i> 01289966660
+        </a>
+        <a
+          href="https://wa.me/201289966660"
+          target="_blank"
+          class="drawer-btn green"
+        >
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp pulse-green"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:19580" class="float-btn phone pulse-blue">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+
+    <!-- هيرو صفحة صيانة شاشات OLED -->
+    <section class="sub-hero-section">
+      <div class="sub-hero-overlay"></div>
+
+      <div class="container-custom sub-hero-content">
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+          <a href="../index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+        </nav>
+
+        <div class="sub-hero-box">
+          <div class="sub-hero-text-area">
+            <h1 class="sub-hero-title">صيانة شاشات OLED</h1>
+            <p class="sub-hero-desc">
+              مركز خبراء صيانة الشاشات في مصر المتخصص يقدم خدمة صيانة شاشات OLED
+              لكل الماركات بأعلى جودة وبضمان حقيقي
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- محتوى صفحة صيانة شاشات OLED -->
+    <section class="service-details-section">
+      <div class="container-custom service-layout">
+        <!-- القائمة الجانبية للحجز السريع -->
+        <aside class="service-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <i class="fa-solid fa-headset"></i>
+              <h3>احجز صيانة الآن</h3>
+            </div>
+            <p>فنيون متخصصون في صيانة شاشات OLED جاهزون لخدمتك</p>
+
+            <div class="booking-actions">
+              <a href="tel:19580" class="booking-btn hotline-btn">
+                <i class="fa-solid fa-phone-volume"></i> الخط الساخن 19580
+              </a>
+              <a href="tel:01289966660" class="booking-btn phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="booking-btn whatsapp-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- محتوى المقال والتفاصيل -->
+        <div class="service-content-area">
+          <div class="content-block">
+            <h2>صيانة شاشات OLED في مصر</h2>
+            <p>
+              شاشات OLED تمثل أحدث تقنيات العرض وأكثرها دقة ووضوحاً بفضل الإضاءة
+              الذاتية لكل بكسل. لكن نظراً لدقتها التقنية العالية، قد تتعرض
+              لأعطال تتطلب مهندسين محترفين ومعدات متطورة. في مركزنا نقدم خدمة
+              صيانة شاشات OLED شاملة ومتخصصة لكل الماركات العالمية مثل إل جي،
+              سامسونج، وسوني بقطع غيار أصلية وضمان معتمد.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>إزاي شاشة OLED بتشتغل؟</h2>
+            <p>
+              تعتمد شاشات OLED (الصمام الثنائي الباعث للضوء العضوي) على تقنية
+              فريدة حيث يُضيء كل بكسل بنفسه بشكل مستقل تماماً دون الحاجة لإضاءة
+              خلفية (Backlight). يتكون النظام من لوحة البانل العضوية العالية
+              الدقة، وبوردة المعالجة الرئيسية (Main Board)، ودوائر التغذية
+              والتحكم بالطاقة لضمان استقرار الجهد لكل بكسل بدقة متناهية.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>أشهر أعطال شاشات OLED</h2>
+
+            <div class="fault-item">
+              <h3>
+                مشكلة الاحتراق الداخلي أو اثر الصورة (Burn-in / Image
+                Retention):
+              </h3>
+              <p>
+                تحدث نتيجة عرض عناصر ثابتة لفترات طويلة، مما يترك طيفاً خافتاً
+                للصورة على الشاشة.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>الشاشة مش بتفتح خالص واللمبة الحمراء تومض:</h3>
+              <p>
+                المشكلة تكون في دائرة الباور سبلاي أو عطل في تغذية اللوحة
+                الرئيسية (Main Board).
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>خطوط ملونة أو بكسلات ميتة (Dead/Stuck Pixels):</h3>
+              <p>
+                يرجع هذا العطل لتلف في مصفوفة البكسلات العضوية أو مشكلة في
+                كابلات التوصيل الداخلي للبانل.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>تغير تدريجي أو بهتان في الألوان:</h3>
+              <p>
+                عطل في دائرة معالجة الألوان باللوحة الرئيسية أو تقادم بعض المواد
+                العضوية نتيجة الاستخدام الشاق.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>الشاشة بتفصل وتشتغل لوحدها:</h3>
+              <p>
+                غالباً مشكلة في نظام الحماية ضد ارتفاع حرارة المكونات الداخلية
+                أو خلل في السوفت وير.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>ظهور بقع داكنة أو تباين غير متوازن في الإضاءة:</h3>
+              <p>
+                تنتج عن تلف جزئي في خلايا البكسلات العضوية أو خلل في دوائر الجهد
+                المنظم.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-outer-section">
+      <div class="main-white-card">
+        <!-- البلوك الأول -->
+        <div class="sub-info-card">
+          <h2>صيانة شاشات OLED في مصر - خبراء صيانة الشاشات في مصر</h2>
+          <p>
+            شاشات OLED تتميز بتجربة بصرية مذهلة وسواد حالك. ولكن مع الاستخدام
+            المكثف قد تواجه بعض المشاكل الفنية الدقيقة. في خبراء صيانة الشاشات
+            في مصر، بنقدملك خدمة صيانة شاشات OLED شاملة ومتخصصة لكافة الأعطال
+            بأحدث أجهزة الفحص المعتمدة.
+          </p>
+        </div>
+
+        <!-- البلوك الثاني -->
+        <div class="sub-info-card">
+          <h2>إزاي شاشة OLED بتشتغل؟</h2>
+          <p>
+            تعتمد الشاشة على بكسلات عضوية ذاتية الإضاءة لتوليد الصورة بأعلى
+            درجات التباين. تتألف الشاشة من كروت إلكترونية دقيقة تشمل المين بورد،
+            باور بورد، ووحدات معالجة البيانات والبانل العضوي. يقوم مهندسونا
+            بفحصها بأحدث المعدات لضمان دقة الإصلاح.
+          </p>
+        </div>
+
+        <!-- البلوك الثالث: خطوات الصيانة -->
+        <div class="sub-info-card">
+          <h2>خطوات صيانة شاشات OLED في خبراء صيانة الشاشات في مصر</h2>
+          <p>عملية الصيانة عندنا بتمر بمراحل منظمة عشان نضمنلك أفضل نتيجة:</p>
+          <p>
+            <strong>الفحص المبدئي:</strong> الفني بيعمل تشخيص شامل للشاشة ويحدد
+            مصدر العطل بدقة متناهية باستخدام أجهزة فحص رقمية متطورة.
+          </p>
+          <p>
+            <strong>تحديد التكلفة:</strong> بعد التشخيص، بنبلغك بالتكلفة
+            المتوقعة قبل ما نبدأ أي شغل، مفيش مفاجأت.
+          </p>
+          <p>
+            <strong>الإصلاح:</strong> بنستخدم أحدث معدات المعالجة ودعم المكونات
+            الدقيقة عشان نضمن جودة الشغل دون الإضرار بالبانل الحساس.
+          </p>
+          <p>
+            <strong>الاختبار:</strong> بعد الإصلاح، بنعمل اختبار شامل للشاشة
+            لمدة كافية عشان نتأكد إن العطل اتحل بالكامل.
+          </p>
+          <p>
+            <strong>الضمان:</strong> بنديك ضمان معتمد على الإصلاح عشان تكون
+            مطمن.
+          </p>
+        </div>
+
+        <!-- البلوك الرابع: الأسعار -->
+        <div class="sub-info-card">
+          <h2>أسعار صيانة شاشات OLED</h2>
+          <p>
+            أسعارنا تنافسية وبتختلف حسب نوع العطل وحجم الشاشة والماركة. إصلاح
+            اللوحات الإلكترونية يختلف عن استبدال وحدات التغذية. بنقدملك سعر عادل
+            بعد الفحص مباشرة ومفيش أي رسوم مخفية.
+          </p>
+        </div>
+
+        <!-- البلوك الخامس: أسئلة شائعة -->
+        <div class="sub-info-card">
+          <h2>أسئلة شائعة عن صيانة شاشات OLED</h2>
+          <p>
+            <strong>شاشة OLED عمرها الافتراضي قد إيه؟</strong> تعيش الشاشة
+            لسنوات طويلة مع مراعاة الإرشادات وتجنب عرض الصور الثابتة لفترات
+            مبالغ فيها.
+          </p>
+          <p>
+            <strong>هل يمكن إصلاح مشاكل البانل العضوي مباشرة؟</strong> يتم فحص
+            البانل بعناية، وفي حالات التلف الجزئي للوحات التحكم أو الباور يتم
+            الإصلاح فوراً لتوفير تكلفة التغيير الكلي.
+          </p>
+          <p>
+            <strong>إيه الفرق بين OLED والأنواع الأخرى؟</strong> شاشات OLED تتيح
+            إضاءة ذاتية لكل بكسل، مما يعطي تبايناً مطلقاً وسواداً مثالياً بخلاف
+            الشاشات التقليدية.
+          </p>
+        </div>
+
+        <!-- البلوك السادس: تواصل معنا -->
+        <div class="sub-info-card highlight-card">
+          <h2>تواصل معنا دلوقتي</h2>
+          <p>
+            لو شاشة OLED بتاعتك فيها أي مشكلة، متتأخرش وكلمنا فوراً. فريق خبراء
+            صيانة الشاشات في مصر جاهز يساعدك في أي وقت. اتصل بينا على
+            <strong>01289966660</strong> أو الخط الساخن
+            <strong>19580</strong> واحجز موعد صيانة متخصص.
+          </p>
+        </div>
+
+        <!-- شبكة الماركات -->
+        <section class="brands-section">
+          <div class="container-custom">
+            <div class="section-header text-center">
+              <h2>ماركات صيانة شاشات OLED التي نصلحها</h2>
+              <p>
+                نتعامل مع جميع ماركات صيانة شاشات OLED بقطع غيار أصلية وضمان
+                معتمد
+              </p>
+            </div>
+
+            <div class="brands-grid">
+              <a href="../سامسونج/" class="brand-card">
+                <span class="brand-en">SAMSUNG</span>
+                <span class="brand-ar">سامسونج</span>
+              </a>
+              <a href="../الجي/" class="brand-card">
+                <span class="brand-en">LG</span>
+                <span class="brand-ar">ال جي</span>
+              </a>
+              <a href="../توشيبا/" class="brand-card">
+                <span class="brand-en">TOSHIBA</span>
+                <span class="brand-ar">توشيبا</span>
+              </a>
+              <a href="../شارب/" class="brand-card">
+                <span class="brand-en">SHARP</span>
+                <span class="brand-ar">شارب</span>
+              </a>
+              <a href="../سوني/" class="brand-card">
+                <span class="brand-en">SONY</span>
+                <span class="brand-ar">سوني</span>
+              </a>
+              <a href="../تورنيدو/" class="brand-card">
+                <span class="brand-en">TORNADO</span>
+                <span class="brand-ar">تورنيدو</span>
+              </a>
+              <a href="../فريش/" class="brand-card">
+                <span class="brand-en">fresh</span>
+                <span class="brand-ar">فريش</span>
+              </a>
+              <a href="../جاك/" class="brand-card">
+                <span class="brand-en">jac</span>
+                <span class="brand-ar">جاك</span>
+              </a>
+              <a href="../شاومي/" class="brand-card">
+                <span class="brand-en">sumi</span>
+                <span class="brand-ar">شاومي</span>
+              </a>
+              <a href="../يونيون-اير/" class="brand-card">
+                <span class="brand-en">uni-air</span>
+                <span class="brand-ar">يونيون-اير</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة الـ 10 كاملاً -->
+        <section class="faq-section">
+          <div class="container-custom">
+            <div class="section-title-box">
+              <h2>الأسئلة الشائعة عن صيانة شاشات OLED</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="faq-container">
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب ظهور خطوط أو مشاكل في ألوان شاشة OLED؟
+                </h3>
+                <p class="faq-answer">
+                  قد يكون السبب ناتجاً عن عطل في كابلات التوصيل الداخلية أو
+                  دوائر معالجة الصورة ويحتاج فحصاً دقيقاً.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">هل يمكن تصليح شاشة OLED في المنزل؟</h3>
+                <p class="faq-answer">
+                  بعض أعطال الباور، السوفت وير، والاتصال يتم إصلاحها منزلياً،
+                  بينما المشاكل الدقيقة بالبانل تتطلب صيانة داخل المركز.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">كم تكلفة صيانة وإصلاح شاشات OLED؟</h3>
+                <p class="faq-answer">
+                  تختلف التكلفة حسب نوع العطل وحجم الشاشة ومكونات الإصلاح
+                  المطلوبة بعد التشخيص الفني.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب عدم استجابة شاشة OLED للتشغيل نهائياً؟
+                </h3>
+                <p class="faq-answer">
+                  غالباً ما تكون المشكلة في دائرة الباور (Power Supply) أو تلف
+                  المين بورد الرئيسية.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  هل مشكلة الاحتراق (Burn-in) في شاشة OLED لها حل؟
+                </h3>
+                <p class="faq-answer">
+                  يتم استخدام برامج إنعاش البكسلات المتاحة بالإعدادات أو فحص
+                  اللوحة لتخفيف التأثير وضمان أفضل أداء ممكن.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب انطفاء الشاشة المفاجئ أثناء التشغيل؟
+                </h3>
+                <p class="faq-answer">
+                  قد يرجع ذلك للحماية ضد ارتفاع حرارة المكونات، أو خلل في منظم
+                  الجهد الكهربائي.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما مميزات شاشات OLED عن الأنواع الأخرى؟
+                </h3>
+                <p class="faq-answer">
+                  تتميز بسواد مطلق، تباين فائق، وزوايا رؤية مذهلة بفضل الإضاءة
+                  المستقلة لكل بكسل.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  متى يجب عليك الاتصال بمركز الصيانة فوراً؟
+                </h3>
+                <p class="faq-answer">
+                  عند صدور أصوات غير طبيعية، رائحة احتراق، أو انقطاع الصورة
+                  تماماً مع وجود الصوت.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  هل تتوفر قطع غيار أصلية لشاشات OLED؟
+                </h3>
+                <p class="faq-answer">
+                  نعم، نوفر قطع غيار أصلية ومكونات معتمدة لمختلف الموديلات
+                  المتاحة بمصر.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  كيف أطلب خدمة صيانة لشاشتي الـ OLED؟
+                </h3>
+                <p class="faq-answer">
+                  يمكنك التواصل معنا مباشرة عبر الخط الساخن 19580 أو أرقام
+                  الصيانة الموضحة لتسجيل الطلب.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- سكشن دليل الصيانة -->
+        <section class="guide-nav-section">
+          <div class="container-custom">
+            <div class="section-title-box">
+              <h2>دليل صيانة شاشات OLED</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="guide-buttons-wrapper">
+              <a href="oled-repair.html" class="guide-btn">جميع أعطال OLED</a>
+              <a href="#" class="guide-btn">دليل صيانة OLED</a>
+              <a href="#" class="guide-btn">مشكلة احتراق البكسلات</a>
+              <a href="#" class="guide-btn">مميزات تقنية OLED</a>
+              <a href="#" class="guide-btn">مناطق خدمة الشاشات</a>
+              <a href="#" class="guide-btn">ماركات شاشات OLED</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- جدول الأعطال الـ 9 كاملاً -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>أعطال الشاشات الشائعة ← 9 مشاكل والحل مع فني صيانة</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%">العطل</th>
+                    <th style="width: 35%">السبب المحتمل</th>
+                    <th style="width: 40%">الحل / الإجراء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>الشاشة بتفصل وتشتغل لوحدها</strong></td>
+                    <td>
+                      • إعدادات Sleep Timer مفعلة • كابل الطاقة غير ثابت • سخونة
+                      بوردة الطاقة
+                    </td>
+                    <td>
+                      • إلغاء مؤقت النوم • فحص كابل الطاقة
+                      <span class="alert-text"
+                        >⚠️ طلب صيانة لفحص اللوحة الأم</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>ظهور خطوط أفقية أو رأسية</strong></td>
+                    <td>
+                      • كابل HDMI تالف • مشكلة في كارت المعالجة • تلف جزئي
+                      بالبانل
+                    </td>
+                    <td>
+                      • تغيير كابل HDMI • فحص الاتصالات الداخلية
+                      <span class="alert-text"
+                        >⚠️ فحص دوائر التوصيل أو البانل</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة شغالة بس مفيش صورة</strong></td>
+                    <td>
+                      • عطل في اللوحة الرئيسية Main Board • تلف دائرة التغذية •
+                      مصدر خاطئ
+                    </td>
+                    <td>
+                      • التأكد من إعدادات المصدر
+                      <span class="alert-text"
+                        >⚠️ استبدال أو إصلاح Main Board</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>بقع سوداء أو أثار احتراق Burn-in</strong></td>
+                    <td>• عرض صور ثابتة لفترات طويلة • ضغط على البانل</td>
+                    <td>
+                      • تشغيل دورة تنظيف البكسلات من الإعدادات
+                      <span class="alert-text">⚠️ فحص البانل في المركز</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>تأخر ظهور الصورة عند التشغيل</strong></td>
+                    <td>• تلف مكثفات الباور سبلاي • المين بورد بطيء</td>
+                    <td>
+                      • فصل الكهرباء وإعادة تشغيلها
+                      <span class="alert-text"
+                        >⚠️ استبدال مكثفات دائرة الطاقة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة بتصدر صوت طقطقة</strong></td>
+                    <td>
+                      • تمدد وانكماش المواد البلاستيكية • ارتفاع درجة الحرارة
+                    </td>
+                    <td>
+                      • صوت طبيعي ناتج عن التمدد الحراري
+                      <span class="alert-text"
+                        >⚠️ فحص سماعات الصوت إذا استمرت المشكلة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>ضعف وسطوع ألوان الشاشة</strong></td>
+                    <td>
+                      • تفعيل وضع توفير الطاقة المبالغ فيه • وضع الصورة خاطئ
+                    </td>
+                    <td>
+                      • ضبط إعدادات الإضاءة من المنيو
+                      <span class="alert-text"
+                        >⚠️ صيانة وحدة إمداد الطاقة الداخلية</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الألوان باهتة أو غير طبيعية</strong></td>
+                    <td>• إعدادات الألوان غير مضبوطة • كابل HDMI تالف</td>
+                    <td>
+                      • ضبط الألوان • تغيير كابل HDMI
+                      <span class="alert-text"
+                        >⚠️ فحص نظام معالجة الألوان مع الفني</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة مش بتتعرف على HDMI</strong></td>
+                    <td>• كابل HDMI تالف • منفذ HDMI تالف</td>
+                    <td>
+                      • تجربة كابل أو منفذ آخر
+                      <span class="alert-text"
+                        >⚠️ فحص وصيانة منفذ HDMI بالبوردة</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- سكشن المميزات الـ 3 كاملاً -->
+        <section class="page-main-section" style="background-color: #ffffff">
+          <div class="container-custom content-centered-wrapper">
+            <div class="three-columns-grid">
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img src="../assets/led1.jpg" alt="صيانة شاشة OLED بالضمان" />
+                </div>
+                <h3>صيانة شاشة OLED بالضمان</h3>
+                <ul class="feature-list">
+                  <li>
+                    أهمية شهادة الضمان المرفقة مع الشاشة بعد الإصلاح لا تقل
+                    أهمية عن الصيانة نفسها.
+                  </li>
+                  <li>
+                    تعتبر تعهد من مركز صيانة شاشات OLED بأن الشاشة ستعمل بشكل
+                    صحيح.
+                  </li>
+                  <li>
+                    نحن نضمن كافة الأجزاء المستبدلة والالتزام بإصلاحها فوراً حال
+                    حدوث أي خلل.
+                  </li>
+                  <li>تتراوح مدة الضمان عادة بين 3 شهور إلى 12 شهراً.</li>
+                  <li>
+                    المركز ملزم بتقديم كافة أعمال الخدمة مجاناً طوال فترة
+                    الضمان.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img src="../assets/led2.jpg" alt="تصليح شاشات بالمنزل" />
+                </div>
+                <h3>تصليح شاشات بالمنزل</h3>
+                <ul class="feature-list">
+                  <li>
+                    إذا كنت تفضل تصليح الشاشة بمنزلك نوفر لك السيارات المجهزة.
+                  </li>
+                  <li>
+                    مجهزة بأحدث معدات كشف الأعطال وقطع الغيار بنسبة كبيرة.
+                  </li>
+                  <li>
+                    حرص كامل على إتمام كافة أعمال الصيانة بنفس الموقع لراحتك.
+                  </li>
+                  <li>
+                    نغطي كافة المحافظات والمدن بفروعنا المتعددة للوصول السريع.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img src="../assets/led3.jpg" alt="سرعة اصلاح الشاشة" />
+                </div>
+                <h3>سرعة اصلاح الشاشة</h3>
+                <ul class="feature-list">
+                  <li>وصول المهندس السريع إليك يقلل من وقت تعطيل شاشتك.</li>
+                  <li>
+                    نمتلك أحدث الأجهزة لتقييم وفحص الشاشة وإصلاحها بأعلى سرعة.
+                  </li>
+                  <li>
+                    سيارات الصيانة المنزلية تضمن الخدمة السريعة العاجلة بكافة
+                    المحافظات.
+                  </li>
+                  <li>
+                    فريقنا ملتزم تماماً بالاحترافية الميدانية لتحقيق رضاك.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- جدول شرح الرسائل التحذيرية كاملاً (10 رسائل) -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>شرح الرسائل التحذيرية للشاشات وكيفية حلها</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%">الرسالة التحذيرية</th>
+                    <th style="width: 35%">السبب المحتمل</th>
+                    <th style="width: 40%">الحل / الإجراء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>No Signal / Check Signal Cable</strong></td>
+                    <td>الشاشة لا تستقبل إشارة / مصدر إدخال خاطئ.</td>
+                    <td>
+                      • التأكد من كابل HDMI/AV • ضبط Source
+                      <span class="alert-text">⚠️ فحص منفذ الشاشة</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Not Supported / Not Optimum Mode</strong></td>
+                    <td>دقة أو معدل تحديث الجهاز المتصل أعلى من الشاشة.</td>
+                    <td>
+                      • ضبط دقة العرض 4K أو 60Hz
+                      <span class="alert-text"
+                        >⚠️ فحص دوائر الاستقبال بالمركز</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>HDCP Error / Authentication Failed</strong></td>
+                    <td>فشل التشفير الرقمي بين الشاشة والجهاز.</td>
+                    <td>
+                      • إعادة توصيل الكابل • استخدام كابل معتمد
+                      <span class="alert-text">⚠️ فحص شريحة HDCP</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Smart Hub Error / Network Unavailable</strong>
+                    </td>
+                    <td>انقطاع الإنترنت / مشكلة DNS.</td>
+                    <td>
+                      • إعادة تشغيل الراوتر • تعديل DNS إلى 8.8.8.8
+                      <span class="alert-text">⚠️ فحص قطعة الكارت الداخلي</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>USB Device Not Recognized</strong></td>
+                    <td>صيغة غير مدعومة (NTFS) / منفذ تالف.</td>
+                    <td>
+                      • تهيئة الفلاش بصيغة FAT32
+                      <span class="alert-text"
+                        >⚠️ فحص دائرة تغذية منفذ USB</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Demo Mode / Store Mode Active</strong></td>
+                    <td>الشاشة مضبوطة على الوضع التجاري.</td>
+                    <td>
+                      • التحويل إلى وضع Home Use من الإعدادات
+                      <span class="alert-text"
+                        >⚠️ تحديث السوفت وير عند التعليق</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Auto Power Off / Sleep Timer</strong></td>
+                    <td>تفعيل توفير الطاقة / مؤقت النوم.</td>
+                    <td>
+                      • تعطيل Sleep Timer من المنيو
+                      <span class="alert-text"
+                        >⚠️ فحص لوحة الطاقة إذا كان الإغلاق عشوائياً</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Firmware Update Failed / Retry Later</strong>
+                    </td>
+                    <td>انقطاع الإنترنت أثناء التحديث.</td>
+                    <td>
+                      • التحديث يدوياً عبر فلاشة USB
+                      <span class="alert-text"
+                        >⚠️ عمل شحن فلاشة يدوياً (Manual Flash)</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Screen Lock / Parental Control Active</strong>
+                    </td>
+                    <td>تفعيل قفل الشاشة / نسيان الرمز.</td>
+                    <td>
+                      • إدخال الرمز الافتراضي (0000 أو 1234)
+                      <span class="alert-text">⚠️ إعادة ضبط مصنع كاملة</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Invalid EDID / Monitor Not Recognized</strong>
+                    </td>
+                    <td>فشل قراءة تعريف الشاشة على الكمبيوتر.</td>
+                    <td>
+                      • تغيير كابل HDMI • تحديث كارت شاشة الجهاز
+                      <span class="alert-text">⚠️ إعادة برمجة شريحة EDID</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- سكشن خطوات حجز الصيانة (7 خطوات + الملاحظات) كاملاً -->
+        <section class="page-main-section" style="background-color: #ffffff">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>كيف تحجز موعد صيانة شاشة بمنزلك</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="steps-container">
+              <div class="step-item">
+                <span class="step-number">1</span>
+                <p>
+                  قم بالاتصال الهاتفي على رقم هاتف صيانة شاشات مصر المخصص
+                  لاستقبال بلاغات الأعطال 19580.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">2</span>
+                <p>
+                  حاول تحديد المشكلة التي تواجهها بشكل واضح لتجهيز الأدوات وقطع
+                  الغيار اللازمة قبل الوصول إليك.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">3</span>
+                <p>
+                  عليك معرفة أسعار الفحص المنزلي للشاشة المحددة بحسب المسافة
+                  والمحافظة.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">4</span>
+                <p>
+                  اسأل عن تكاليف صيانة جهازك المحتملة لتجنب أي مفاجآت غير
+                  متوقعة.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">5</span>
+                <p>
+                  يجب تقديم كافة التفاصيل ورقم طراز شاشة OLED لتسهيل عملية
+                  الإصلاح.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">6</span>
+                <p>
+                  التحقق من أوراق الضمان الخاصة بجهازك للتأكد من تغطية تكاليف
+                  الخدمة.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">7</span>
+                <p>
+                  بعد تحديد الموعد يتم إرسال فني متخصص من قسم تصليح الشاشات
+                  بالمنزل المجهز لخدمتك خلال 24 ساعة.
+                </p>
+              </div>
+            </div>
+
+            <div class="notes-box">
+              <p>
+                💡 الموقع الإلكتروني خيار ممتاز لحجز الصيانة دون الحاجة للانتظار
+                على الخطوط الهاتفيّة.
+              </p>
+              <p>💡 يمكنك التوجه لأقرب فرع صيانة متواجد في محافظتك.</p>
+              <p>
+                💡 موظفو مركزنا يعملون باستمرار لتقديم الخدمة الأفضل لك ولجهازك.
+              </p>
+            </div>
+
+            <div
+              class="text-center"
+              style="text-align: center; margin-top: 2rem"
+            >
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> اتصل بنا الان
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- بانر الاتصال السريع السفلي -->
+        <section class="cta-banner-section">
+          <div class="container-custom">
+            <div class="cta-blue-card">
+              <h2>تحتاج إلى فحص شاشة OLED الخاصة بك؟</h2>
+              <p>
+                اتصل بـ خبراء صيانة الشاشات في مصر واشرح نوع العطل وموديل الشاشة
+                لمعرفة الخطوة المناسبة للصيانة الفورية.
+              </p>
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- الكلمات المفتاحية لشاشات OLED -->
+        <div class="sub-info-card keywords-card">
+          <h2>كلمات بحث ذات صلة بصيانة شاشات OLED</h2>
+          <div class="keywords-tags">
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >صيانة شاشات OLED</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >خبراء صيانة الشاشات في مصر</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >تصليح شاشات OLED بالمنزل</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >علاج احتراق بكسلات OLED</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >أسعار صيانة شاشات OLED</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >صيانة شاشة OLED سامسونج</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >صيانة شاشة OLED ال جي</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >صيانة شاشة OLED سوني</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >اعطال شاشات OLED الشائعة</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >مشكلة Burn-in في الشاشات</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >قطع غيار شاشات OLED أصلية</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >مركز صيانة شاشات OLED معتمد</a
+            >
+            <a href="../صيانة-شاشات-oled/" class="keyword-tag"
+              >الخط الساخن صيانة شاشات 19580</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

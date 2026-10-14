@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خبراء صيانة الشاشات</title>
+
+    <!-- أيقونة المتصفح في الـ URL -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
+    />
+    <link rel="icon" type="image/png" href="./assets/19580-logo.png" />
+    <!-- FontAwesome للأيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+      <div class="container-custom">
+        <div class="top-bar-content">
+          <div class="info-group">
+            <span class="time-info">
+              <i class="fa-regular fa-clock"></i>
+              السبت - الخميس: 9 صباحاً - 10 مساءً
+            </span>
+          </div>
+          <div class="info-group">
+            <span class="location-info">
+              <i class="fa-solid fa-location-dot"></i>
+              نغطي جميع المحافظات
+            </span>
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-link"
+              aria-label="فيسبوك"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط الرئيسي -->
+    <header class="main-header">
+      <div class="container-custom header-flex">
+        <!-- زر الهمبرجر للجوال فقط -->
+        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- اللوجو (صورة) -->
+        <a href="#" class="logo-area">
+          <img
+            src="./assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+
+        <!-- الروابط الرئيسية للشاشات الكبيرة -->
+        <nav class="desktop-nav">
+          <a href="#" class="nav-link active">الرئيسية</a>
+
+          <!-- أنواع الشاشات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu">
+              <a href="صيانة-شاشات-led/">صيانة شاشات LED</a>
+              <a href="صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+              <a href="صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+              <a href="صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+              <a href="صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+            </div>
+          </div>
+
+          <!-- الماركات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu brands-menu">
+              <a href="سامسونج/">سامسونج</a>
+              <a href="الجي/">ال جي</a>
+              <a href="توشيبا/">توشيبا</a>
+              <a href="شارب/">شارب</a>
+              <a href="سوني/">سوني</a>
+              <a href="هايسنس/">هايسنس</a>
+              <a href="تورنيدو/">تورنيدو</a>
+              <a href="فريش/">فريش</a>
+              <a href="يونيفرسال/">يونيفرسال</a>
+              <a href="شاومي/">شاومي</a>
+              <a href="يونيون-اير/">يونيون إير</a>
+              <a href="جاك/">جاك</a>
+              <a href="هاير/">هاير</a>
+            </div>
+          </div>
+          <a href="مناطق-الخدمة/" class="nav-link">مناطق الخدمة</a>
+          <a href="الاعطال-الشائعة/" class="nav-link">الأعطال الشائعة</a>
+          <a href="المدونة/" class="nav-link">المدونة</a>
+          <a href="اتصل-بنا/" class="nav-link">اتصل بنا</a>
+        </nav>
+
+        <!-- أزرار الخط الساخن والاتصال -->
+        <div class="header-actions">
+          <a href="tel:19580" class="btn-hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i>
+            <span>19580</span>
+          </a>
+          <a href="tel:01289966660" class="btn-phone pulse-blue">
+            <i class="fa-solid fa-phone"></i>
+            <span>01289966660</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- الخلفية المعتمة للقائمة الجانبية -->
+    <div id="overlay" class="drawer-overlay"></div>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <a href="#" class="logo-area">
+          <img
+            src="./assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img small"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+        <button id="closeBtn" class="close-btn" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <a href="#" class="drawer-link main-color">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a>
+
+        <!-- أنواع الشاشات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
+            <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="screensSubMenu" class="drawer-submenu hidden">
+            <a href="صيانة-شاشات-led/">صيانة شاشات LED</a>
+            <a href="صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+            <a href="صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+            <a href="صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+            <a href="صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+          </div>
+        </div>
+
+        <!-- الماركات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tags"></i> الماركات</span>
+            <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="brandsSubMenu" class="drawer-submenu hidden scrollable">
+            <a href="سامسونج/">سامسونج</a>
+            <a href="الجي/">ال جي</a>
+            <a href="توشيبا/">توشيبا</a>
+            <a href="شارب/">شارب</a>
+            <a href="سوني/">سوني</a>
+            <a href="هايسنس/">هايسنس</a>
+            <a href="تورنيدو/">تورنيدو</a>
+            <a href="فريش/">فريش</a>
+            <a href="يونيفرسال/">يونيفرسال</a>
+            <a href="شاومي/">شاومي</a>
+            <a href="يونيون-اير/">يونيون إير</a>
+            <a href="جاك/">جاك</a>
+            <a href="هاير/">هاير</a>
+          </div>
+        </div>
+
+        <a href="مناطق-الخدمة/" class="drawer-link"
+          ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
+        >
+        <a href="الأعطال-الشائعة/" class="drawer-link"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> الأعطال الشائعة</a
+        >
+        <a href="المدونة/" class="drawer-link"
+          ><i class="fa-solid fa-blog"></i> المدونة</a
+        >
+        <a href="اتصل-بنا/" class="drawer-link"
+          ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+        >
+      </div>
+
+      <div class="drawer-footer">
+        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+          <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+        </a>
+        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+          <i class="fa-solid fa-phone"></i> 01289966660
+        </a>
+        <a
+          href="https://wa.me/201289966660"
+          target="_blank"
+          class="drawer-btn green"
+        >
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp pulse-green"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:19580" class="float-btn phone pulse-blue">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+    <!-- قسم البطل الرئيسي (Hero Section) -->
+    <section class="hero-section">
+      <!-- صورة الخلفية المظللة في الـ HTML مباشرة -->
+      <img
+        src="./assets/hero-1.jpg"
+        alt="خلفية صيانة الشاشات"
+        class="hero-bg-img"
+      />
+
+      <!-- طبقة التظليل فوق الصورة -->
+      <div class="hero-overlay"></div>
+
+      <!-- محتوى السيكشن (فوق الصورة والتظليل بـ z-index) -->
+      <div class="container-custom hero-content">
+        <!-- العنوان الترويجي الفرعي -->
+        <span class="hero-subtitle"
+          >مركز متخصص في صيانة جميع أنواع الشاشات والتلفزيونات</span
+        >
+
+        <!-- العنوان الرئيسي -->
+        <h1 class="hero-title">خبراء صيانة الشاشات في مصر</h1>
+
+        <!-- الوصف -->
+        <p class="hero-description">
+          نحن في خبراء صيانة الشاشات نقدم خدمات صيانة احترافية لجميع أنواع
+          الشاشات والتلفزيونات بأحدث الأجهزة والمعتمد. فريقنا من الفنيين
+          المتخصصين بخبرة تتجاوز 15 عاماً يضمن لك إصلاح شاشتك بأعلى جودة وبأسعار
+          منافسة.
+        </p>
+
+        <!-- إحصائيات الأعداد المتحركة (تتحدث ديناميكياً) -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number" data-target="4.9">0</span>
+            <span class="stat-label">تقييم العملاء</span>
+          </div>
+          <div class="stat-card">
+            <span
+              class="stat-number"
+              data-stat="technicians"
+              data-target="120"
+              data-plus="+"
+              >0</span
+            >
+            <span class="stat-label">فني متخصص</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="15" data-plus="+">0</span>
+            <span class="stat-label">سنة خبرة</span>
+          </div>
+          <div class="stat-card">
+            <span
+              class="stat-number"
+              data-stat="customers"
+              data-target="50000"
+              data-plus="+"
+              >0</span
+            >
+            <span class="stat-label">عميل سعيد</span>
+          </div>
+        </div>
+
+        <!-- أزرار التواصل السريع -->
+        <div class="hero-actions">
+          <a href="tel:19580" class="hero-btn hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i> الخط الساخن 19580
+          </a>
+          <a
+            href="https://wa.me/201289966660"
+            target="_blank"
+            class="hero-btn whatsapp pulse-green"
+          >
+            <i class="fa-brands fa-whatsapp"></i> واتساب
+          </a>
+        </div>
+
+        <!-- الشارات الثلاثة في الأسفل -->
+        <div class="hero-badges">
+          <div class="badge-item">
+            <i class="fa-solid fa-shield-halved"></i> مركز معتمد
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-certificate"></i> ضمان حقيقي
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-star"></i> الأعلى تقييماً
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن أنواع الشاشات التي نصلحها -->
+    <section class="screens-types-section">
+      <div class="container-custom">
+        <!-- عنوان القسم العلوي -->
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-tv"></i> خدماتنا
+          </span>
+          <h2 class="section-title">أنواع الشاشات التي نصلحها</h2>
+          <p class="section-desc">
+            نحن متخصصون في صيانة وإصلاح جميع أنواع وتقنيات الشاشات الحديثة
+            والقديمة
+          </p>
+        </div>
+
+        <!-- شبكة الكروت (Grid) -->
+        <div class="screens-grid">
+          <!-- كارت 1: صيانة شاشات سمارت -->
+          <div class="screen-card">
+            <div class="card-icon-box purple">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 class="card-title">صيانة شاشات سمارت</h3>
+            <p class="card-text">
+              صيانة شاشات سمارت TV في مصر من خبراء صيانة الشاشات. إصلاح مشاكل
+              الواي فاي والتطبيقات وال...
+            </p>
+            <a href="صيانة-شاشات-سمارت/" class="card-link"
+              >اعرف المزيد <i class="fa-solid fa-arrow-left"></i
+            ></a>
+          </div>
+
+          <!-- كارت 2: صيانة شاشات OLED -->
+          <div class="screen-card">
+            <div class="card-icon-box pink">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <h3 class="card-title">صيانة شاشات OLED</h3>
+            <p class="card-text">
+              صيانة متقدمة لشاشات OLED من خبراء صيانة الشاشات. متخصصون في إصلاح
+              مشاكل الاحتراق والبيكس...
+            </p>
+            <a href="صيانة-شاشات-oled/" class="card-link"
+              >اعرف المزيد <i class="fa-solid fa-arrow-left"></i
+            ></a>
+          </div>
+
+          <!-- كارت 3: صيانة شاشات LCD -->
+          <div class="screen-card">
+            <div class="card-icon-box green">
+              <i class="fa-solid fa-desktop"></i>
+            </div>
+            <h3 class="card-title">صيانة شاشات LCD</h3>
+            <p class="card-text">
+              مركز خبراء صيانة الشاشات لصيانة شاشات LCD بكل أحجامها وماركاتها.
+              إصلاح مشاكل الإنفرتر وا...
+            </p>
+            <a href="صيانة-شاشات-lcd/" class="card-link"
+              >اعرف المزيد <i class="fa-solid fa-arrow-left"></i
+            ></a>
+          </div>
+
+          <!-- كارت 4: صيانة شاشات LED -->
+          <div class="screen-card">
+            <div class="card-icon-box blue">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <h3 class="card-title">صيانة شاشات LED</h3>
+            <p class="card-text">
+              خدمة صيانة شاشات LED المتخصصة من خبراء صيانة الشاشات. نقدم إصلاح
+              جميع أعطال شاشات الليد ...
+            </p>
+            <a href="صيانة-شاشات-led/" class="card-link"
+              >اعرف المزيد <i class="fa-solid fa-arrow-left"></i
+            ></a>
+          </div>
+          <!-- كارت 4: صيانة شاشات سمارت -->
+          <div class="screen-card">
+            <div class="card-icon-box blue">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <h3 class="card-title">صيانة شاشات سمارت</h3>
+            <p class="card-text">
+              خدمة صيانة شاشات سمارت المتخصصة من خبراء صيانة الشاشات. نقدم إصلاح
+              جميع أعطال شاشات السمارت ...
+            </p>
+            <a href="صيانة-شاشات-سمارت/" class="card-link"
+              >اعرف المزيد <i class="fa-solid fa-arrow-left"></i
+            ></a>
+          </div>
+
+          <!-- كارت 6: صيانة شاشات بلازما -->
+          <div class="screen-card">
+            <div class="card-icon-box orange">
+              <i class="fa-solid fa-border-all"></i>
+            </div>
+            <h3 class="card-title">صيانة شاشات بلازما</h3>
+            <p class="card-text">
+              صيانة شاشات بلازما في مصر من خبراء صيانة الشاشات. إصلاح بوردة
+              الواي بورد والزي سيستيم وم...
+            </p>
+            <a href="صيانة-شاشات-بلازما/" class="card-link"
+              >اعرف المزيد <i class="fa-solid fa-arrow-left"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- زر الصعود إلى أعلى الصفحة -->
+    <button
+      id="scrollTopBtn"
+      class="scroll-top-btn"
+      aria-label="العودة إلى الأعلى"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- سيكشن الماركات التي نتخصص فيها -->
+    <section class="brands-section">
+      <div class="container-custom">
+        <!-- عنوان القسم العلوي -->
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-tags"></i> الماركات
+          </span>
+          <h2 class="section-title">الماركات التي نتخصص فيها</h2>
+          <p class="section-desc">
+            نتعامل مع جميع الماركات العالمية والمحلية بقطع غيار أصلية ومعتمدة
+          </p>
+        </div>
+
+        <!-- شبكة الكروت (Grid) للماركات (صفحات منفصلة) -->
+        <div class="brands-grid">
+          <!-- سامسونج -->
+          <a href="سامسونج/" class="brand-card">
+            <span class="brand-name-en">SAMSUNG</span>
+            <span class="brand-name-ar">سامسونج</span>
+          </a>
+
+          <!-- ال جي -->
+          <a href="ال-جي/" class="brand-card">
+            <span class="brand-name-en text-red">LG</span>
+            <span class="brand-name-ar">ال جي</span>
+          </a>
+
+          <!-- توشيبا -->
+          <a href="توشيبا/" class="brand-card">
+            <span class="brand-name-en text-red">TOSHIBA</span>
+            <span class="brand-name-ar">توشيبا</span>
+          </a>
+
+          <!-- شارب -->
+          <a href="شارب/" class="brand-card">
+            <span class="brand-name-en text-red">SHARP</span>
+            <span class="brand-name-ar">شارب</span>
+          </a>
+
+          <!-- سوني -->
+          <a href="سوني/" class="brand-card">
+            <span class="brand-name-en">SONY</span>
+            <span class="brand-name-ar">سوني</span>
+          </a>
+
+          <!-- هايسنس -->
+          <a href="هايسنس/" class="brand-card">
+            <span class="brand-name-en text-green">Hisense</span>
+            <span class="brand-name-ar">هايسنس</span>
+          </a>
+
+          <!-- باناسونيك -->
+          <a href="باناسونيك/" class="brand-card">
+            <span class="brand-name-en text-blue">Panasonic</span>
+            <span class="brand-name-ar">باناسونيك</span>
+          </a>
+
+          <!-- تورنيدو -->
+          <a href="تورنيدو/" class="brand-card">
+            <span class="brand-name-en text-blue">TORNADO</span>
+            <span class="brand-name-ar">تورنيدو</span>
+          </a>
+
+          <!-- يونيون إير -->
+          <a href="يونيون-إير/" class="brand-card">
+            <span class="brand-name-en text-blue">UNIONAIRE</span>
+            <span class="brand-name-ar">يونيون إير</span>
+          </a>
+
+          <!-- فريش -->
+          <a href="فريش/" class="brand-card">
+            <span class="brand-name-en text-blue">Fresh</span>
+            <span class="brand-name-ar">فريش</span>
+          </a>
+
+          <!-- جاك -->
+          <a href="جاك/" class="brand-card">
+            <span class="brand-name-en">JAC</span>
+            <span class="brand-name-ar">جاك</span>
+          </a>
+
+          <!-- شاومي -->
+          <a href="شاومي/" class="brand-card">
+            <span class="brand-name-en text-orange">Mi</span>
+            <span class="brand-name-ar">شاومي</span>
+          </a>
+
+          <!-- هاير -->
+          <a href="هاير/" class="brand-card">
+            <span class="brand-name-en text-blue">HaiEr</span>
+            <span class="brand-name-ar">هاير</span>
+          </a>
+
+          <!-- يونيفرسال -->
+          <a href="يونيفرسال/" class="brand-card">
+            <span class="brand-name-en text-orange">Universal</span>
+            <span class="brand-name-ar">يونيفرسال</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن ليه تختار خبراء صيانة الشاشات -->
+    <section class="why-us-section">
+      <div class="container-custom">
+        <!-- عنوان القسم العلوي -->
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-award"></i> مميزاتنا
+          </span>
+          <h2 class="section-title">ليه تختار خبراء صيانة الشاشات؟</h2>
+          <p class="section-desc">
+            أكبر مركز متخصص في صيانة الشاشات في مصر - قطع غيار أصلية، ضمان
+            حقيقي، وفنيين بخبرة +15 سنة
+          </p>
+        </div>
+
+        <!-- شبكة المميزات (Grid) -->
+        <div class="why-us-grid">
+          <!-- ميزة 1: ضمان يصل إلى 12 شهر -->
+          <div class="why-card">
+            <div class="why-card-content">
+              <h3 class="why-card-title">ضمان يصل إلى 12 شهر</h3>
+              <p class="why-card-text">
+                نقدم ضماناً حقيقياً يصل إلى 12 شهراً على جميع أعمال الصيانة وقطع
+                الغيار المستبدلة.
+              </p>
+            </div>
+            <div class="why-icon-box yellow-grad">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+          </div>
+
+          <!-- ميزة 2: قطع غيار أصلية 100% -->
+          <div class="why-card">
+            <div class="why-card-content">
+              <h3 class="why-card-title">قطع غيار أصلية 100%</h3>
+              <p class="why-card-text">
+                نستخدم فقط قطع غيار أصلية ومعتمدة من الشركات المصنعة لضمان أعلى
+                جودة وعمر أطول لشاشتك.
+              </p>
+            </div>
+            <div class="why-icon-box green-grad">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+          </div>
+
+          <!-- ميزة 3: متخصصون في الشاشات فقط -->
+          <div class="why-card">
+            <div class="why-card-content">
+              <h3 class="why-card-title">متخصصون في الشاشات فقط</h3>
+              <p class="why-card-text">
+                تخصصنا الدقيق في صيانة الشاشات فقط يضمن لك خبرة عميقة ودقة في
+                التشخيص والإصلاح لجميع الأعطال.
+              </p>
+            </div>
+            <div class="why-icon-box blue-grad">
+              <i class="fa-solid fa-tv"></i>
+            </div>
+          </div>
+
+          <!-- ميزة 4: أسعار عادلة وشفافة -->
+          <div class="why-card">
+            <div class="why-card-content">
+              <h3 class="why-card-title">أسعار عادلة وشفافة</h3>
+              <p class="why-card-text">
+                نقدم أسعاراً تنافسية وعادلة مع تقديم فاتورة تفصيلية بكل التكاليف
+                قبل البدء في أي عملية صيانة.
+              </p>
+            </div>
+            <div class="why-icon-box purple-grad">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+          </div>
+
+          <!-- ميزة 5: فنيين بخبرة 15 عاماً -->
+          <div class="why-card">
+            <div class="why-card-content">
+              <h3 class="why-card-title">فنيين بخبرة 15 عاماً</h3>
+              <p class="why-card-text">
+                فريقنا من الفنيين المدربين والمعتمدين بخبرة تتجاوز 15 عاماً في
+                صيانة جميع أنواع الشاشات.
+              </p>
+            </div>
+            <div class="why-icon-box red-grad">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+          </div>
+
+          <!-- ميزة 6: خدمة منزلية سريعة -->
+          <div class="why-card">
+            <div class="why-card-content">
+              <h3 class="why-card-title">خدمة منزلية سريعة</h3>
+              <p class="why-card-text">
+                فنيونا يصلون إليك في نفس اليوم أينما كنت. نوفر خدمة الصيانة
+                المنزلية في جميع المحافظات.
+              </p>
+            </div>
+            <div class="why-icon-box sky-grad">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن مناطق تغطية خدمتنا (صفحات المحافظات) -->
+    <section class="coverage-section">
+      <div class="container-custom">
+        <!-- عنوان القسم العلوي -->
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-location-dot"></i> التغطية
+          </span>
+          <h2 class="section-title">مناطق تغطية خدمتنا</h2>
+          <p class="section-desc">
+            نغطي جميع المحافظات والمناطق في مصر بفريق فنيين متخصصين في كل منطقة
+          </p>
+        </div>
+
+        <!-- شبكة المحافظات (روابط لصفحات المحافظات) -->
+        <div class="coverage-grid">
+          <a href="القاهرة/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>القاهرة</span>
+          </a>
+          <a href="الجيزة/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الجيزة</span>
+          </a>
+          <a href="الإسكندرية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الإسكندرية</span>
+          </a>
+          <a href="القليوبية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>القليوبية</span>
+          </a>
+          <a href="الشرقية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الشرقية</span>
+          </a>
+          <a href="الغربية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الغربية</span>
+          </a>
+          <a href="المنوفية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>المنوفية</span>
+          </a>
+
+          <a href="الدقهلية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الدقهلية</span>
+          </a>
+          <a href="البحيرة/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>البحيرة</span>
+          </a>
+          <a href="كفر الشيخ/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>كفر الشيخ</span>
+          </a>
+
+          <a href="بورسعيد/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>بورسعيد</span>
+          </a>
+          <a href="السويس/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>السويس</span>
+          </a>
+          <a href="الإسماعيلية/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الإسماعيلية</span>
+          </a>
+          <a href="دمياط/" class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>دمياط</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- سيكشن آراء عملائنا (Slider) -->
+    <section class="testimonials-section">
+      <div class="container-custom">
+        <!-- عنوان القسم العلوي -->
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-star"></i> التقييمات
+          </span>
+          <h2 class="section-title">آراء عملائنا</h2>
+          <p class="section-desc">
+            اطلع على تجارب عملائنا الحقيقية مع خدمات صيانة الشاشات لدينا
+          </p>
+        </div>
+
+        <!-- حاوية السلايدر -->
+        <div class="testimonials-slider-container">
+          <!-- زر التمرير يمين -->
+          <button class="slider-btn prev-btn" aria-label="السابق">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- مسار السلايدر (Tracks) -->
+          <div class="testimonials-track-wrapper">
+            <div class="testimonials-track" id="testimonialsTrack">
+              <!-- تقييم 1 -->
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h3>أحمد محمود</h3>
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i> مدينة نصر</span
+                    >
+                  </div>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  والله خدمة ممتازة! الشاشة سامسونج 55 بوصة بتاعتي كان فيها
+                  مشكلة في الباك لايت. الفني وصل في نفس اليوم وصلحها في البيت في
+                  أقل من ساعة. الأسعار معقولة جداً مقارنة بأي مركز تاني. شكراً
+                  الكترو هاوس!
+                </p>
+              </div>
+
+              <!-- تقييم 2 -->
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h3>سارة عبد الرحمن</h3>
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i> المعادي</span
+                    >
+                  </div>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  شاشة LG بتاعتي كانت بتطفي وتولع لوحدها وكنت خايفة إن المشكلة
+                  تكون كبيرة. كلمت الخط الساخن 16294 والفني جه تاني يوم الصبح.
+                  طلعت المشكلة في البوردة وغیرها بقطعة أصلية وادانا ضمان سنة
+                  كاملة. ممتازين فعلاً.
+                </p>
+              </div>
+
+              <!-- تقييم 3 -->
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h3>محمد السيد</h3>
+                    <span><i class="fa-solid fa-location-dot"></i> الهرم</span>
+                  </div>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  صلحت عندهم شاشة توشيبا LED وكانت الصورة فيها خطوط. الشغل كان
+                  كويس والفني محترم بس استنيت يومين لحد ما القطعة توصل. غير كده
+                  الخدمة تمام والسعر مناسب.
+                </p>
+              </div>
+
+              <!-- تقييم 4 -->
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h3>فاطمة حسن</h3>
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i> الإسكندرية -
+                      سموحة</span
+                    >
+                  </div>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  أنا من الإسكندرية وكنت فاكرة إن الخدمة مش هتوصلي. بس كلمتهم
+                  والفني جه لحد البيت وصلح شاشة سوني 65 بوصة سمارت. كانت مش
+                  بتتوصل بالواي فاي وكمان الصوت كان فيه تشويش. صلّح كل حاجة
+                  وشرحلي إزاي أحافظ عليها. ناس محترمة جداً.
+                </p>
+              </div>
+
+              <!-- تقييم 5 -->
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h3>عمرو خالد</h3>
+                    <span
+                      ><i class="fa-solid fa-location-dot"></i> مصر
+                      الجديدة</span
+                    >
+                  </div>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  عندي شاشة سامسونج كيرف 49 بوصة كان فيها كسر في البانل من جوه.
+                  الفني قالي بصراحة إن تغيير البانل هتكلف كام وساب القرار ليا.
+                  غيرتها وبقت زي الجديدة بالضبط. أمانة في الشغل والكلام وده أهم
+                  حاجة.
+                </p>
+              </div>
+
+              <!-- تقييم 6 -->
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="user-info">
+                    <h3>نورا مصطفى</h3>
+                    <span><i class="fa-solid fa-location-dot"></i> الدقي</span>
+                  </div>
+                  <div class="user-avatar">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  شاشة شارب 50 بوصة كانت الصورة فيها ألوان غريبة ومتغيرة. الفني
+                  جه وشخص المشكلة إنها في الكابل الداخلي وغيره في نص ساعة. خدمة
+                  سريعة ومحترمة وماخدش غير سعر الكشف والقطعة بس. هنصح بيهم أي
+                  حد.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- زر التمرير يسار -->
+          <button class="slider-btn next-btn" aria-label="التالي">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+        <!-- نقاط التنقل (Dots) -->
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </section>
+    <!-- سيكشن الأسئلة الشائعة (FAQ) -->
+    <section class="faq-section">
+      <div class="container-custom">
+        <!-- عنوان القسم العلوي -->
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-circle-question"></i> أسئلة شائعة
+          </span>
+          <h2 class="section-title">الأسئلة الشائعة</h2>
+          <p class="section-desc">
+            إجابات على أكثر الأسئلة شيوعاً حول خدمات صيانة الشاشات
+          </p>
+        </div>
+
+        <!-- حاوية الأسئلة -->
+        <div class="faq-container">
+          <!-- السؤال 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>كم تكلفة صيانة الشاشة؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                تختلف تكلفة صيانة الشاشة بناءً على نوع العطل وحجم الشاشة والقطع
+                المراد استبدالها (مثل البانل، الليد، أو البوردة). نقوم بعمل
+                معاينة وفحص دقيق وإعطاء العميل فاتورة تفصيلية بالتكلفة قبل البدء
+                في أي صيانة.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>ما هي المناطق التي تغطيها خدمة الصيانة؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نغطي جميع المحافظات والمناطق في جمهورية مصر العربية من خلال فريق
+                فنيين محترفين وجهات صيانة متنقلة تصلك أينما كنت.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>كم يستغرق إصلاح الشاشة؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                معظم الأعطال البسيطة وأعطال الإضاءة (الباك لايت) يتم إصلاحها في
+                منزل العميلة خلال أقل من ساعة إلى ساعتين. الأعطال المعقدة قد
+                تستغرق يوماً أو يومين في المركز.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>هل تقدمون ضمان على الصيانة؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نعم، نقدم ضماناً حقيقياً وموثقاً يصل إلى 12 شهراً على قطع الغيار
+                الأصلية المستبدلة وأعمال الصيانة التي تم إنجازها.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>ما الفرق بين شاشة LED وشاشة LCD؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                الشاشتان تعتمدان على تقنية الكريستال السائل، لكن شاشات LED
+                تستخدم إضاءة خلفية تعتمد على الدايودات المضيئة (LEDs) مما يجعلها
+                أنحف، توفّر في الكهرباء، وذات جودة صورة أعلى مقارنة بـ LCD.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>شاشتي فيها خطوط على الشاشة، ما السبب؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                ظهور الخطوط الرأسية أو الأفقية غالباً ما يكون ناتجاً عن مشكلة في
+                كابلات التوصيل الداخلية (LVDS)، أو تلف في الفلاتة الخاصة
+                بالبانل، ويلزم فحصها فنياً لتحديد ما إذا كانت قابلة للإصلاح.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 7 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>الشاشة فيها صوت بس مفيش صورة، إيه المشكلة؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                هذه العلامة تدل بنسبة كبيرة على تلف إضاءة الشاشة الخلفية (الباك
+                لايت - Backlight) أو عطل في دائرة الـ Inverter بداخل الشاشة،
+                ويتم إصلاحها أو تغيير لمبات الليد في المنزل.
+              </p>
+            </div>
+          </div>
+
+          <!-- السؤال 8 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>هل يمكن إصلاح شاشة سامسونج سمارت في المنزل؟</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                نعم، نوفر خدمة الإصلاح الفوري بالمنزل لجميع ماركات الشاشات
+                السمارت بما فيها سامسونج، إلا في حالات نادرة تستدعي نقل الشاشة
+                للمركز.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- القسم الأول: دعوة لاتخاذ إجراء (CTA Section) -->
+    <section class="cta-section">
+      <div class="container-custom cta-content">
+        <h2 class="cta-title">شاشتك محتاجة صيانة؟ اتصل بينا دلوقتي!</h2>
+        <p class="cta-desc">
+          فريقنا المتخصص جاهز لخدمتك على مدار الساعة. اتصل الآن واحصل على خصم
+          خاص للعملاء الجدد.
+        </p>
+
+        <div class="cta-actions">
+          <a
+            href="https://wa.me/201289966660"
+            target="_blank"
+            class="cta-btn whatsapp pulse-green"
+          >
+            <i class="fa-brands fa-whatsapp"></i> راسلنا واتساب
+          </a>
+          <a href="tel:19580" class="cta-btn hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i> الخط الساخن 19580
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- القسم الثاني: تذييل الصفحة (Footer Section) -->
+    <footer class="main-footer">
+      <div class="container-custom footer-grid">
+        <!-- العمود الأول: معلومات التواصل -->
+        <div class="footer-col">
+          <h3>تواصل معنا</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="tel:19580">
+                <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+              </a>
+            </li>
+            <li>
+              <a href="tel:01289966660">
+                <i class="fa-solid fa-phone"></i> موبايل: 01289966660
+              </a>
+            </li>
+            <li>
+              <a href="tel:0403456555">
+                <i class="fa-solid fa-phone-office"></i> أرضي: 0403456555
+              </a>
+            </li>
+            <li>
+              <a href="tel:0403456137">
+                <i class="fa-solid fa-phone-office"></i> أرضي: 0403456137
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/201289966660" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> واتساب: 01289966660
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@almoatamed-group.com">
+                <i class="fa-solid fa-envelope"></i> info@almoatamed-group.com
+              </a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i> السبت - الخميس: 9 صباحاً - 10
+              مساءً
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الثاني: خدماتنا -->
+        <div class="footer-col">
+          <h3>خدماتنا</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="صيانة-شاشات-LED/"
+                ><i class="fa-solid fa-angle-left"></i> صيانة شاشات LED</a
+              >
+            </li>
+            <li>
+              <a href="صيانة-شاشات-LCD/"
+                ><i class="fa-solid fa-angle-left"></i> صيانة شاشات LCD</a
+              >
+            </li>
+            <li>
+              <a href="صيانة-شاشات-OLED/"
+                ><i class="fa-solid fa-angle-left"></i> صيانة شاشات OLED</a
+              >
+            </li>
+            <li>
+              <a href="صيانة-شاشات-سمارت/"
+                ><i class="fa-solid fa-angle-left"></i> صيانة شاشات سمارت</a
+              >
+            </li>
+            <li>
+              <a href="صيانة-شاشات-بلازما/"
+                ><i class="fa-solid fa-angle-left"></i> صيانة شاشات بلازما</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث: روابط سريعة -->
+        <div class="footer-col">
+          <h3>روابط سريعة</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-angle-left"></i> الرئيسية</a
+              >
+            </li>
+            <li>
+              <a href="من-نحن/"
+                ><i class="fa-solid fa-angle-left"></i> من نحن</a
+              >
+            </li>
+            <li>
+              <a href="مناطق-الخدمة/"
+                ><i class="fa-solid fa-angle-left"></i> مناطق الخدمة</a
+              >
+            </li>
+            <li>
+              <a href="الأسئلة-الشائعة/"
+                ><i class="fa-solid fa-angle-left"></i> الأسئلة الشائعة</a
+              >
+            </li>
+            <li>
+              <a href="المدونة/"
+                ><i class="fa-solid fa-angle-left"></i> المدونة</a
+              >
+            </li>
+
+            <li>
+              <a href="اتصل-بنا/"
+                ><i class="fa-solid fa-angle-left"></i> اتصل بنا</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع: نبذة عن الشركة والشعار -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo-area">
+            <!-- ضع اسم صورتك هنا، مثلاً logo.png في نفس مجلد المشروع -->
+            <img
+              src="./assets/logo_main.webp"
+              alt="شعار خبراء صيانة الشاشات"
+              class="footer-logo-img"
+            />
+            <div class="footer-logo-text">
+              <h3>خبراء صيانة الشاشات</h3>
+            </div>
+          </div>
+          <p class="footer-about">
+            خبراء صيانة الشاشات - مركز متخصص في صيانة وإصلاح جميع أنواع الشاشات
+            والتلفزيونات. نقدم خدمة صيانة احترافية بالمنزل مع ضمان على جميع قطع
+            الغيار والإصلاحات. فريقنا من الفنيين المتخصصين جاهز لخدمتك في جميع
+            المحافظات.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-icon"
+              aria-label="فيسبوك"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- حقوق النشر في الأسفل -->
+      <div class="footer-bottom">
+        <div class="container-custom footer-bottom-flex">
+          <p>© 2026 خبراء صيانة الشاشات. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ملف الـ JavaScript الخارجي -->
+    <script src="script.js"></script>
+  </body>
+</html>

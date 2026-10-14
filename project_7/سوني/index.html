@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صيانة شاشات سوني - مركز الخبراء</title>
+
+    <!-- أيقونة المتصفح -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+    <!-- FontAwesome للأيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+   
+
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+      <div class="container-custom">
+        <div class="top-bar-content">
+          <div class="info-group">
+            <span class="time-info">
+              <i class="fa-regular fa-clock"></i>
+              السبت - الخميس: 9 صباحاً - 10 مساءً
+            </span>
+          </div>
+          <div class="info-group">
+            <span class="location-info">
+              <i class="fa-solid fa-location-dot"></i>
+              نغطي جميع المحافظات
+            </span>
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-link"
+              aria-label="فيسبوك"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط الرئيسي -->
+    <header class="main-header">
+      <div class="container-custom header-flex">
+        <!-- زر الهمبرجر للجوال فقط -->
+        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- اللوجو (صورة) -->
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+
+        <!-- الروابط الرئيسية للشاشات الكبيرة -->
+        <nav class="desktop-nav">
+          <a href="../index.html">الرئيسية</a>
+
+          <!-- أنواع الشاشات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu">
+              <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+              <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+              <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+              <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+              <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+            </div>
+          </div>
+
+          <!-- الماركات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu brands-menu">
+              <a href="../سامسونج/">سامسونج</a>
+              <a href="../الجي/">ال جي</a>
+              <a href="../توشيبا/">توشيبا</a>
+              <a href="../شارب/">شارب</a>
+              <a href="../سوني/" class="active">سوني</a>
+              <a href="../هايسنس/">هايسنس</a>
+              <a href="../تورنيدو/">تورنيدو</a>
+              <a href="../فريش/">فريش</a>
+              <a href="../يونيفرسال/">يونيفرسال</a>
+              <a href="../شاومي/">شاومي</a>
+              <a href="../يونيون-اير/">يونيون إير</a>
+              <a href="../جاك/">جاك</a>
+              <a href="../هاير/">هاير</a>
+            </div>
+          </div>
+          <a href="../مناطق-الخدمة/" class="nav-link">مناطق الخدمة</a>
+          <a href="../الاعطال-الشائعة/" class="nav-link">الأعطال الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
+        </nav>
+
+        <!-- أزرار الخط الساخن والاتصال -->
+        <div class="header-actions">
+          <a href="tel:19580" class="btn-hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i>
+            <span>19580</span>
+          </a>
+          <a href="tel:01289966660" class="btn-phone pulse-blue">
+            <i class="fa-solid fa-phone"></i>
+            <span>01289966660</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- الخلفية المعتمة للقائمة الجانبية -->
+    <div id="overlay" class="drawer-overlay"></div>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img small"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+        <button id="closeBtn" class="close-btn" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <a href="../index.html" class="drawer-link main-color">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a>
+
+        <!-- أنواع الشاشات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
+            <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="screensSubMenu" class="drawer-submenu hidden">
+            <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+            <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+            <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+            <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+            <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+          </div>
+        </div>
+
+        <!-- الماركات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tags"></i> الماركات</span>
+            <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="brandsSubMenu" class="drawer-submenu hidden scrollable">
+            <a href="../سامسونج/">سامسونج</a>
+            <a href="../الجي/">ال جي</a>
+            <a href="../توشيبا/">توشيبا</a>
+            <a href="../شارب/">شارب</a>
+            <a href="../سوني/" class="active">سوني</a>
+            <a href="../هايسنس/">هايسنس</a>
+            <a href="../تورنيدو/">تورنيدو</a>
+            <a href="../فريش/">فريش</a>
+            <a href="../يونيفرسال/">يونيفرسال</a>
+            <a href="../شاومي/">شاومي</a>
+            <a href="../يونيون-اير/">يونيون إير</a>
+            <a href="../جاك/">جاك</a>
+            <a href="../هاير/">هاير</a>
+          </div>
+        </div>
+
+        <a href="../مناطق-الخدمة/" class="drawer-link"
+          ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
+        >
+        <a href="../الأعطال-الشائعة/" class="drawer-link"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> الأعطال الشائعة</a
+        >
+        <a href="../المدونة/" class="drawer-link"
+          ><i class="fa-solid fa-blog"></i> المدونة</a
+        >
+        <a href="../اتصل-بنا/" class="drawer-link"
+          ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+        >
+      </div>
+
+      <div class="drawer-footer">
+        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+          <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+        </a>
+        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+          <i class="fa-solid fa-phone"></i> 01289966660
+        </a>
+        <a
+          href="https://wa.me/201289966660"
+          target="_blank"
+          class="drawer-btn green"
+        >
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp pulse-green"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:19580" class="float-btn phone pulse-blue">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+
+    <!-- هيرو صفحة صيانة شاشات سوني -->
+    <section class="sub-hero-section">
+      <div class="sub-hero-overlay"></div>
+
+      <div class="container-custom sub-hero-content">
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+          <a href="../index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <a href="../سوني/">صيانة شاشات سوني</a>
+        </nav>
+
+        <div class="sub-hero-box">
+          <div class="sub-hero-text-area">
+            <h1 class="sub-hero-title">صيانة شاشات سوني</h1>
+            <p class="sub-hero-desc">
+              مركز خبراء صيانة الشاشات في مصر المتخصص يقدم خدمة صيانة شاشات سوني
+              (Sony Bravia) بمختلف أنواعها بأعلى جودة وبقطع غيار أصلية وضمان
+              حقيقي
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- محتوى صفحة صيانة شاشات سوني -->
+    <section class="service-details-section">
+      <div class="container-custom service-layout">
+        <!-- القائمة الجانبية للحجز السريع -->
+        <aside class="service-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <i class="fa-solid fa-headset"></i>
+              <h3>احجز صيانة الآن</h3>
+            </div>
+            <p>فنيون متخصصون في صيانة شاشات سوني جاهزون لخدمتك</p>
+
+            <div class="booking-actions">
+              <a href="tel:19580" class="booking-btn hotline-btn">
+                <i class="fa-solid fa-phone-volume"></i> الخط الساخن 19580
+              </a>
+              <a href="tel:01289966660" class="booking-btn phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="booking-btn whatsapp-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- محتوى المقال والتفاصيل -->
+        <div class="service-content-area">
+          <div class="content-block">
+            <h2>صيانة شاشات سوني في مصر</h2>
+            <p>
+              عالم شاشات سوني بريفيا والابتكار التكنولوجي ​تُعتبر شاشات سوني
+              (Sony Bravia) اليابانية الشهيرة من الرواد في تكنولوجيا المرئيات
+              والترفيه المنزلي عالمياً وفي مصر. بفضل الاعتماد على أحدث التقنيات
+              مثل X1 Processor، OLED، 4K HDR، وSmart TVs التي تعمل بنظم تشغيل
+              متطورة مثل Google TV و Android TV، تمنح هذه الشاشات للمستخدمين
+              تجربة مشاهدة ممتازة بالألوان ودرجات التباين العالية والدقة
+              اليابانية المعهودة. ​ومع الاستخدام اليومي المكثف وتغيرات التيار
+              الكهربائي، قد تواجه هذه الأجهزة بعض الأعطال التقنية التي تتطلب
+              التدخل الفني المباشر. يهدف هذا الدليل إلى تقديم شرح تفصيلي وشامل
+              لكل ما يتعلق بـ صيانة شاشات سوني، بدءاً من تشخيص الأعطال الشائعة
+              وحتى طرق التواصل مع مركز صيانة شاشات سوني وطرق الحفاظ على الجهاز.
+              ​أولاً: تغطية كافة موديلات وأحجام شاشات سوني ​يتعامل فريق الدعم
+              الفني لشاشات سوني مع مختلف الإصدارات والأحجام المتوفرة في السوق
+              المصري، لتقديم خدمة تصليح شاشات سوني لكل المقاسات: ​الأحجام
+              المدمجة والمتوسطة: ​صيانة شاشة سوني 32 بوصة. ​تصليح شاشة سوني 43
+              بوصة. ​الأحجام الكبيرة والشاشات الذكية: ​مركز صيانة شاشات سوني 50
+              بوصة. ​صيانة شاشة سوني 55 بوصة سمارت. ​تصليح شاشات سوني 65 بوصة.
+              ​صيانة شاشات سوني سمارت 75 بوصة. ​الفئات التقنية المتطورة: ​شاشات
+              سوني LED و 4K و OLED. ​شاشات سوني Bravia Google TV الحديثة. ​صيانة
+              تلفزيونات سوني البلازما وLCD القديمة. ​ثانياً: أكثر أعطال شاشات
+              سوني شيوعاً وكيفية تصليحها ​تتنوع الأعطال الفنية في الشاشات
+              وتتفاوت درجة تعقيدها. إليك أبرز المشاكل التقنية وطرق معالجتها
+              باحترافية: ​1. عطل الإضاءة الخلفية (صوت بدون صورة) ​تحدث هذه
+              المشكلة عندما تعمل الشاشة ويصدر منها الصوت بوضوح ولكن تكون الشاشة
+              سوداء تماماً، أو يمكنك رؤية خيال باهت للصورة عند تسليط ضوء كشاف
+              الموبايل عليها. ​السبب: احتراق مساطر الإضاءة (LED Backlight) أو
+              عطل في دائرة الـ Inverter. ​الإصلاح: يتطلب الأمر تصليح عطل الإضاءة
+              في شاشات سوني عن طريق تغيير ليد شاشات سوني، مع حساب تكلفة تغيير
+              باكلايت شاشة سوني واستبدال المساطر بالكامل بمساطر أصلية للحفاظ على
+              كفاءة توزيع الإضاءة. ​2. أعطال دوائر الباور والتشغيل (وميض اللمبة
+              الحمراء) ​في حالة حدوث عطل في الطاقة، تكون الشاشة فاصلة كهرباء
+              تماماً، أو تضيء لمبة البيان الحمراء بعدد مرات وميض معينة (Red
+              Blinking) دون الإقلاع. ​السبب: احتراق الفيوز، تلف آيسي الباور، أو
+              دخول الشاشة في وضع الحماية. ​الإصلاح: يتولى الفني تصليح الباور في
+              شاشات سوني عبر صيانة تلفزيون سوني فاصل باور وتغيير المكونات
+              المحترقة، لضمان معالجة صيانة شاشة سوني لا تعمل وإصلاح عطل إصلاح
+              شاشة سوني لا تفتح. ​3. أعطال البانل والكسور والخطوط ​ظهور خطوط
+              أفقية أو رأسية ملونة، بقع سوداء، أو تعرض الشاشة لكسر خارجي أو
+              داخلي نتيجة ارتطام. ​السبب: تلف كابلات الـ COF المرتبطة بالبانل أو
+              تلف في زجاج الشاشة نفسه. ​الإصلاح: يتم علاج الخطوط في شاشة سوني
+              عبر جهاز البوندنج (Bonding Machine). وفي حالة تصليح شاشات سوني كسر
+              داخلي أو إذا تصليح شاشة سوني اتكسرت، يتم إجراء استبدال شاشة سوني
+              أصلية أو تغيير البانل (Sony panel repair Cairo) لضمان عودة جودة
+              الصورة. ​4. أعطال اللوحة الأم والكروت الذكية (Main Board) ​توقف
+              الشاشة عند شعار سوني (Sony Logo)، عدم استجابة الشاشة للريموت، أو
+              فقدان الاتصال بالشبكة الكهرومغناطيسية. ​السبب: تلف الذاكرة
+              الداخلية أو السوفت وير أو كارت الواي فاي. ​الإصلاح: يتم إجراء
+              تغيير بوردة شاشة سوني أو صيانة كارت الشاشة تلفزيون سوني، بالإضافة
+              إلى حل مشكلة تهنيج شاشة سوني وإصلاح صيانة شاشة سوني سمارت واي فاي
+              وتصليح عطل لا توجد إشارة (No Signal) وإصلاح استجابة الريموت
+              كنترول.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>إزاي شاشة سوني بتشتغل؟</h2>
+            <p>
+              تعتمد شاشة سوني على معالجات صورة قوية (مثل Sony X1 Processing
+              Engine) لمعالجة الصورة والصوت بدقة عالية، وتتصل بنظام التغذية
+              الكهربائية ومكونات الإضاءة عبر لوحة الباور (Power Supply). كما
+              تتضمن الشاشة اللوحة الرئيسية (Main Board) المسؤولة عن نظام Google
+              TV، إضافة إلى لوحة T-Con ومساطر الليد عالية الكثافة ذات العمر
+              الافتراضي الطويل.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>أشهر أعطال شاشات سوني</h2>
+
+            <div class="fault-item">
+              <h3>الشاشة بتعمل إعادة تشغيل متكررة (Sony Boot Loop):</h3>
+              <p>
+                عطل مشهور جداً في موديلات سوني سمارت، يحدث بسببه انطفاء الشاشة
+                وإعادة فتحها على شعار Sony أو شاشة Google TV باستمرار، ويرجع ذلك
+                لعطل في السوفت وير أو تلف الفلاشة أو تلف جزئي بالبانل.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>ظهور ألوان غير طبيعية أو شاشات زرقاء في الصورة:</h3>
+              <p>
+                عطل شائع نتيجة انتهاء العمر الافتراضي لمساطر ليدات سوني وتغير
+                الطبقة المضيئة، ويحتاج استبدال طقم ليدات أصلية.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>الشاشة فيها صوت بس مفيش صورة (غياب الإضاءة):</h3>
+              <p>
+                تلف مساطر الـ LED أو احتراق دائرة الانفرتر المسؤولة عن تغذية
+                الإضاءة الخلفية على بوردة الطاقة.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>انقطاع الاتصال بالواي فاي أو توقف التطبيقات الذكية:</h3>
+              <p>
+                عطل في كارت الواي فاي الداخلي (Wi-Fi Module) الخاص بسوني أو
+                تعليق برمجي في نظام تشغيل جوجل تي في.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>ظهور خطوط سوداء أفقية أو رأسية على الشاشة:</h3>
+              <p>
+                مشكلة في كابل الـ Ribbon أو تلف في فلاتات البانل وتكلفة إصلاحها
+                تتوقف على حالة الشاشة.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>
+                وميض لمبة الباور (Red Light Blinking 4, 5, or 6 times) والشاشة
+                مش بتفتح:
+              </h3>
+              <p>
+                دخول الشاشة في وضع الحماية نتيجة عطل في اللوحة الرئيسية أو مشكلة
+                في الاضاءة الخلفية.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-outer-section">
+      <div class="main-white-card">
+        <!-- البلوك الأول -->
+        <div class="sub-info-card">
+          <h2>صيانة شاشات سوني في مصر - خبراء صيانة الشاشات في مصر</h2>
+          <p>
+            تتميز شاشات سوني بجودة التصنيع اليابانية والوضوح العالي، ولكن مع
+            الاستخدام المستمر أو تذبذب التيار الكهربائي قد تظهر بعض الأعطال
+            الشائعة. في خبراء صيانة الشاشات في مصر، بنقدملك خدمة صيانة شاشات
+            سوني شاملة لجميع الفئات بقطع غيار أصلية وضمان معتمد.
+          </p>
+        </div>
+
+        <!-- البلوك الثاني -->
+        <div class="sub-info-card">
+          <h2>إزاي شاشة سوني بتشتغل؟</h2>
+          <p>
+            ترتبط المكونات الداخلية لشاشة سوني معاً عبر نظام التشغيل واللوحة
+            الرئيسية بوردة الطاقة. يقوم مهندسونا المتخصصون بفحص الشاشة بأحدث
+            أجهزة القياس وشحن فلاشات سوني لضمان تشخيص العطل وإصلاحه بدقة
+            متناهية. رابعاً: الفروع والتغطية الجغرافية في مصر ​إذا كنت تسأل:
+            "أصلح شاشة سوني فين؟" أو "عنوان توكيل شاشات سوني فين؟" أو تبحث عن
+            أقرب مركز صيانة شاشات سوني أو مركز تصليح شاشات سوني قريب مني، تتوفر
+            الخدمات في المحافظات التالية: ​القاهرة الكبرى والمدن الجديدة: ​صيانة
+            شاشات سوني بالقاهرة مع إتاحة رقم صيانة سوني للشاشات بالقاهرة الكبرى.
+            ​توكيل سوني للشاشات بمدينة نصر. ​صيانة شاشات سوني التجمع الخامس.
+            ​محافظة الجيزة: ​مركز صيانة شاشات سوني الجيزة. ​مركز صيانة تلفزيونات
+            سوني في الهرم. ​محافظات الدلتا والقناة: ​توكيل شاشات سوني
+            الإسكندرية. ​صيانة شاشات سوني طنطا. ​صيانة شاشات سوني المنصورة.
+            ​صيانة شاشات سوني الشرقية. ​صيانة شاشات سوني الإسماعيلية. ​تصليح
+            شاشات سوني بالمحافظات. ​خامساً: مميزات خدمة الصيانة المنزلية والضمان
+            ​عند اختيارك لـ شركة تصليح شاشات سوني معتمدة أو مركز صيانة شاشات
+            سوني معتمد رسمي، تتلقى العديد من المزايا الخدمية: ​صيانة شاشات سوني
+            بالمنزل بدون نقل: يقوم فني صيانة شاشات سوني في أجهزة البيت بزيارتك
+            لفحص وتصليح الجهاز في المكان دون الحاجة لنقله، مما يحمي الشاشة من
+            خطر الكسر أثناء النقل. ​صيانة شاشات سوني بالضمان المعتمد: يتم توفير
+            ضمان مكتوب على جميع العمليات والقطع المبدلة. ​قطع غيار شاشات سوني
+            الأصلية: ضمان التوافق التام مع الجهد الكهربائي ومكونات الجهاز.
+            ​أسعار مناسبة وخيارات متعددة: إتاحة خيارات اقتصادية تجعله أرخص مركز
+            صيانة شاشات سوني يجمع بين جودة الصيانة والتكلفة المناسبة. ​سرعة
+            الاستجابة: تقديم صيانة شاشات سوني الفورية وتوفير خدمة صيانة شاشات
+            سوني 24 ساعة لتلبية الحالات الطارئة. ​سادساً: طرق التواصل وطلب الدعم
+            الفني ​لكل من يتساءل: "عايز رقم صيانة شاشات سوني" أو "مين بيصلح
+            شاشات سوني بسرعة؟"، يمكن التواصل عبر قنوات الدعم المباشرة: ​الخط
+            الساخن ورقم الصيانة: يمكنك الاتصال على رقم صيانة شاشات سوني الموحد،
+            أو استخدام رقم صيانة سوني للشاشات الخط الساخن وتلقي الدعم عبر رقم
+            مجمع صيانة شاشات سوني. ​خدمة العملاء والبلاغات: تستقبل خدمة عملاء
+            شاشات سوني ورقم خدمة عملاء سوني للشاشات كافة بلاغات عيوب شاشات سوني
+            وتسجيلها على رقم شكاوى وعيوب شاشات سوني لضمان المتابعة الدورية.
+            ​التواصل للتوكيل والصيانة المباشرة: من خلال رقم توكيل شاشات سوني
+            وتوفير خدمات توكيل شاشات سوني صيانة وإصلاح الفورية عبر مهندس صيانة
+            شاشات سوني منزلي. ​سابعاً: المصطلحات الفنية والخدمات باللغة
+            الإنجليزية (Technical & Search Terms) ​لتسهيل الوصول للخدمات عبر
+            مختلف محركات البحث والاستعلامات الدولية، يتم تقديم خدمات مخصصة تشمل:
+            ​Services: Sony TV repair service Egypt, Sony screen maintenance
+            center, Authorized Sony TV service center. ​Search queries: Sony LED
+            TV repair near me, Sony smart TV maintenance hotline, Sony TV
+            customer service number. ​Technical fixes: Sony LED backlight
+            repair, Sony TV power board repair, Sony panel repair Cairo, Sony TV
+            black screen fix, Sony smart TV troubleshooting. ​Spare parts: Sony
+            screen spare parts Egypt. ​Transliteration Terms: Soyanat shashat
+            Sony, Taslih shashat Sony, Tawkil shashat Sony. ​ثامناً: نصائح مهمة
+            للحفاظ على شاشة سوني من الأعطال ​استخدام مشترك معالج للتيار (Surge
+            Protector): لحماية دوائر الباور والمين بورد من الارتفاع المفاجئ في
+            التيار الكهربائي عند انقطاعه وعودته. ​ضبط درجة السطوع والإضاءة
+            (Backlight): تجنب تشغيل الشاشة على أقصى درجة سطوع طوال الوقت، حيث
+            يساعد ضبط السطوع المتوازن في إطالة عمر مساطر الليد. ​التنظيف السليم:
+            احرص على استخدام قطعة قماش خالية من الوبر (Microfiber) مسحوب عليها
+            كمية بسيطة جداً من منظف الشاشات المخصص، وتجنب رش أي سوائل مباشرة على
+            زجاج الشاشة. ​تهوية الجهاز: تأكد من وجود مسافة كافية خلف الشاشة
+            للسماح بالتهوية وطرد الحرارة الناتجة عن التشغيل. ​الأسئلة الشائعة
+            (FAQ) ​س: كيف يمكن تسجيل طلب صيانة لشاشة سوني؟ ​يمكنك الاتصال بـ رقم
+            خدمة عملاء سوني للشاشات أو عبر الخط الساخن شاشات سوني وتحديد نوع
+            العطل وموديل الشاشة، وسيقوم الفني بالتوصل معك لترتيب موعد الزيارة
+            المنزلية. ​س: هل يتم تغيير مساطر الليد بالمنزل؟ ​نعم، يتم توفير
+            خيارات تصليح تلفزيون سوني بالمنزل أو داخل ورشة تصليح شاشات سوني
+            المجهزة بحسب طبيعة العطل لضمان الحصول على صيانة شاشات سوني مضمونة.
+            ​خاتمة ​تضمن لك الصيانة الاحترافية والدورية المحافظة على كفاءة شاشة
+            سوني واستعادة دقة ووضوح الصورة كما كانت في حالة الشراء الأولى. انتبه
+            دائماً للتعامل مع الفنيين المتخصصين واستخدام قطع الغيار الأصلية
+            لحماية أجهزتك المنزلية لسنوات طويلة.
+          </p>
+        </div>
+
+        <!-- البلوك الثالث: خطوات الصيانة -->
+        <div class="sub-info-card">
+          <h2>خطوات صيانة شاشات سوني في خبراء صيانة الشاشات في مصر</h2>
+          <p>عملية الصيانة عندنا بتمر بمراحل منظمة عشان نضمنلك أفضل نتيجة</p>
+          <p>
+            <strong>الفحص المبدئي</strong> المهندس بيعمل فحص شامل لشاشة سوني
+            واختبار كروت الباور والمين بورد وأكواد الخطأ بالنظام (وميض اللمبة
+            الحمراء).
+          </p>
+          <p>
+            <strong>تحديد التكلفة</strong> بعد التشخيص الدقيق، بنبلغك بالتكلفة
+            المطلوبة وقطع الغيار التي تحتاج تغيير قبل البدء.
+          </p>
+          <p>
+            <strong>الإصلاح</strong> بنستخدم قطع غيار سوني أصلية ومعدات شحن
+            الفلاشات واللحام الحديثة للتعامل مع المكونات.
+          </p>
+          <p>
+            <strong>الاختبار</strong> بنشغل الشاشة ونختبر ألوانها والتطبيقات
+            للتأكد من عودة الشاشة لكفاءتها الأصلية.
+          </p>
+          <p>
+            <strong>الضمان</strong> بنقدملك شهادة ضمان معتمدة على كافة قطع
+            الغيار المستبدلة لأمانك لراحة بالك.
+          </p>
+        </div>
+
+        <!-- البلوك الرابع: الأسعار -->
+        <div class="sub-info-card">
+          <h2>أسعار صيانة شاشات سوني</h2>
+          <p>
+            أسعارنا تنافسية وبتختلف حسب حجم الشاشة (من 32 بوصة حتى 85 بوصة) ونوع
+            العطل (سواء تغيير مساطر ليد سوني أصلية، أو شحن فلاشة، أو إصلاح بوردة
+            الباور). بنقدملك سعر شفاف ومناسب قبل بدء العمل.
+          </p>
+        </div>
+
+        <!-- البلوك الخامس: أسئلة شائعة -->
+        <div class="sub-info-card">
+          <h2>أسئلة شائعة عن صيانة شاشات سوني</h2>
+          <p>
+            <strong>ما سبب وميض اللمبة الحمراء في شاشة سوني؟</strong>
+            يدل على دخول الشاشة في وضع الحماية بسبب مشكلة في الإضاءة أو دوائر
+            الطاقة، ويتم فحصها بواسطة فني متخصص.
+          </p>
+          <p>
+            <strong>ما سبب تكرار إعادة فتح الشاشة على شعار سوني؟</strong> عطل
+            معروف في برمجيات النظام (Android/Google TV) أو الذاكرة الداخلية
+            للمين بورد ويحتاج إعادة شحن أو برمجة.
+          </p>
+          <p>
+            <strong>هل يتوفر تصليح شاشات سوني بالمنزل؟</strong> نعم، نوفر خدمة
+            صيانة منزلية فورية لمعظم أعطال الليدات، الباور، والسوفت وير.
+          </p>
+        </div>
+
+        <!-- البلوك السادس: تواصل معنا -->
+        <div class="sub-info-card highlight-card">
+          <h2>تواصل معنا دلوقتي</h2>
+          <p>
+            لو شاشة سوني بتاعتك فيها أي مشكلة، متتأخرش وكلمنا فوراً. فريق خبراء
+            صيانة الشاشات في مصر جاهز لمساعدتك في أي وقت. اتصل بينا على
+            <strong>01289966660</strong> أو الخط الساخن
+            <strong>19580</strong> واحجز موعد صيانة جهازك.
+          </p>
+        </div>
+
+        <!-- شبكة الماركات -->
+        <section class="brands-section">
+          <div class="container-custom">
+            <div class="section-header text-center">
+              <h2>ماركات الشاشات التي نصلحها بجانب سوني</h2>
+              <p>نتعامل مع جميع الماركات العالمية بقطع غيار أصلية</p>
+            </div>
+
+            <div class="brands-grid">
+              <a href="../سامسونج/" class="brand-card">
+                <span class="brand-en">SAMSUNG</span>
+                <span class="brand-ar">سامسونج</span>
+              </a>
+              <a href="../الجي/" class="brand-card">
+                <span class="brand-en">LG</span>
+                <span class="brand-ar">ال جي</span>
+              </a>
+              <a href="../توشيبا/" class="brand-card">
+                <span class="brand-en">TOSHIBA</span>
+                <span class="brand-ar">توشيبا</span>
+              </a>
+              <a href="../شارب/" class="brand-card">
+                <span class="brand-en">SHARP</span>
+                <span class="brand-ar">شارب</span>
+              </a>
+              <a href="../سوني/" class="brand-card active">
+                <span class="brand-en">SONY</span>
+                <span class="brand-ar">سوني</span>
+              </a>
+              <a href="../تورنيدو/" class="brand-card">
+                <span class="brand-en">TORNADO</span>
+                <span class="brand-ar">تورنيدو</span>
+              </a>
+              <a href="../فريش/" class="brand-card">
+                <span class="brand-en">fresh</span>
+                <span class="brand-ar">فريش</span>
+              </a>
+              <a href="../جاك/" class="brand-card">
+                <span class="brand-en">jac</span>
+                <span class="brand-ar">جاك</span>
+              </a>
+              <a href="../شاومي/" class="brand-card">
+                <span class="brand-en">sumi</span>
+                <span class="brand-ar">شاومي</span>
+              </a>
+              <a href="../يونيون-اير/" class="brand-card">
+                <span class="brand-en">uni-air</span>
+                <span class="brand-ar">يونيون-اير</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة الـ 10 كاملاً -->
+        <section class="faq-section">
+          <div class="container-custom">
+            <div class="section-title-box">
+              <h2>الأسئلة الشائعة عن صيانة شاشات سوني</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="faq-container">
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب توقف شاشة سوني وإعادة التشغيل تلقائياً (Boot Loop)؟
+                </h3>
+                <p class="faq-answer">
+                  يرجع ذلك غالباً لعطل في السوفت وير الخاص بنظام Android TV أو
+                  السعة التخزينية المدمجة.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">هل يمكن تصليح شاشة سوني في المنزل؟</h3>
+                <p class="faq-answer">
+                  نعم، معظم أعطال الليدات، الباور سبلاي، وتحديثات النظام يتم
+                  إصلاحها فوراً في المنزل.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">كم تكلفة صيانة وإصلاح شاشات سوني؟</h3>
+                <p class="faq-answer">
+                  تختلف التكلفة حسب نوع العطل، حجم الشاشة، وسعر قطعة الغيار
+                  الأصلية المطلوبة.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب ظهور خطوط ملونة على شاشة سوني؟
+                </h3>
+                <p class="faq-answer">
+                  حدث ذلك بسبب مشكلة في فلاتات البانل أو كابل التوصيل، ويتم
+                  فحصها بدقة.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب عدم اتصال شاشة سوني بالواي فاي؟
+                </h3>
+                <p class="faq-answer">
+                  قد يرجع ذلك لخلل في إعدادات الشبكة أو تلف قطعة كارت الواي فاي
+                  الداخلي بالشاشة.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  هل يمكن تحديث متجر Google Play إذا توقف عن العمل؟
+                </h3>
+                <p class="faq-answer">
+                  نعم، يتم ضبط إعدادات الدولة أو عمل إعادة ضبط مصنع للسوفت وير
+                  أو شحن الفلاشة.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب انطفاء الشاشة المفاجئ مع تكرار وميض اللمبة الحمراء؟
+                </h3>
+                <p class="faq-answer">
+                  يدل وميض لمبة الباور في سوني على دخول الشاشة في وضع الحماية
+                  بسبب مشكلة بدائرة الطاقة أو الإضاءة.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  متى يجب عليك الاتصال بمركز الصيانة فوراً؟
+                </h3>
+                <p class="faq-answer">
+                  عند تكرار إعادة التشغيل تلقائياً، اختفاء الصورة تماماً، أو
+                  ظهور ألوان غير طبيعية.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  هل تتوفر قطع غيار أصلية لشاشات سوني؟
+                </h3>
+                <p class="faq-answer">
+                  نعم، نوفر قطع غيار أصلية ومساطر ليد وكروت مين بورد وكروت واي
+                  فاي لشاشات سوني بمصر.
+                </p>
+              </div>
+
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  كيف أطلب خدمة صيانة لشاشة سوني الخاصة بي؟
+                </h3>
+                <p class="faq-answer">
+                  يمكنك التواصل معنا مباشرة عبر الخط الساخن 19580 أو أرقام
+                  الصيانة الموضحة لتسجيل الطلب.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- سكشن دليل الصيانة -->
+        <section class="guide-nav-section">
+          <div class="container-custom">
+            <div class="section-title-box">
+              <h2>دليل صيانة شاشات سوني</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="guide-buttons-wrapper">
+              <a href="sony-repair.html" class="guide-btn"
+                >جميع أعطال شاشات سوني</a
+              >
+              <a href="#" class="guide-btn">دليل صيانة شاشات سوني</a>
+              <a href="#" class="guide-btn">حل مشكلة اعادة التشغيل Boot Loop</a>
+              <a href="#" class="guide-btn">تغيير ليدات شاشة سوني</a>
+              <a href="#" class="guide-btn">مناطق خدمة الشاشات</a>
+              <a href="#" class="guide-btn">موديلات شاشات سوني</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- جدول الأعطال الـ 9 كاملاً -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>أعطال شاشات سوني الشائعة ← 9 مشاكل والحل مع فني صيانة</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%">العطل</th>
+                    <th style="width: 35%">السبب المحتمل</th>
+                    <th style="width: 40%">الحل / الإجراء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>الشاشة تعيد التشغيل باستمرار على اللوجو</strong>
+                    </td>
+                    <td>
+                      • تلف السوفت وير • عطل بذاكرة eMMC • مشكلة بمسارات البانل
+                    </td>
+                    <td>
+                      • فصل الكهرباء وإعادة التجربة
+                      <span class="alert-text"
+                        >⚠️ إعادة شحن الفلاشة أو برمجة اللوحة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>الصورة مائلة للون الأزرق أو البنفسجي</strong>
+                    </td>
+                    <td>• تلف مساطر ليد سوني • تغيير الخصائص الضوئية لليدات</td>
+                    <td>
+                      • ضبط الألوان مبدئياً
+                      <span class="alert-text"
+                        >⚠️ تغيير طقم مساطر ليد أصلية بالكامل</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة شغالة صوت بس مفيش صورة</strong></td>
+                    <td>
+                      • تلف مساطر الليد (Backlight) • عطل بوردة الطاقة Power
+                      Board
+                    </td>
+                    <td>
+                      • اختبار الشاشة بكشاف ضوئي
+                      <span class="alert-text"
+                        >⚠️ استبدال مساطر الليد أو دائرة الانفرتر</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>وميض اللمبة الحمراء وعدم فتح الشاشة</strong>
+                    </td>
+                    <td>
+                      • تفعيل وضع الحماية (Protection) • تلف مكثفات دائرة الطاقة
+                    </td>
+                    <td>
+                      • فحص كابل التغذية والفيوز
+                      <span class="alert-text"
+                        >⚠️ صيانة بوردة الباور أو المين بورد</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>توقف التطبيقات أو بطئها</strong></td>
+                    <td>• امتلاء الذاكرة المؤقتة • الحاجة للتحديث الرسمى</td>
+                    <td>
+                      • مسح الذاكرة وإعادة ضبط المصنع
+                      <span class="alert-text"
+                        >⚠️ تحديث النظام أو شحن الفلاشة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>عدم الاتصال بالشبكة (الواي فاي)</strong></td>
+                    <td>• مشكلة بالراوتر • تلف كارت Wi-Fi سوني الداخلي</td>
+                    <td>
+                      • إعادة تشغيل الراوتر
+                      <span class="alert-text"
+                        >⚠️ استبدال كارت الواي فاي الداخلي بالشاشة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>ظهور خطوط ملونة عمودية على الشاشة</strong></td>
+                    <td>• عطل كابل T-Con Ribbon • تلف فلاتات البانل</td>
+                    <td>
+                      • فحص التوصيلات الخارجية
+                      <span class="alert-text"
+                        >⚠️ صيانة كارت T-Con أو البانل</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>توقف منافذ HDMI عن العمل</strong></td>
+                    <td>• تلف كابل HDMI • شحنة كهربائية زائدة أتلفت الشريحة</td>
+                    <td>
+                      • تجربة منفذ أو كابل آخر
+                      <span class="alert-text"
+                        >⚠️ صيانة أو استبدال شريحة HDMI بالمين بورد</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الصوت مكتوم أو فيه تشويش</strong></td>
+                    <td>• تلف السماعات الداخلية • خلل بـ IC الصوت</td>
+                    <td>
+                      • التأكد من إعدادات الصوت
+                      <span class="alert-text"
+                        >⚠️ استبدال السماعات أو صيانة دائرة الصوت</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- سكشن المميزات الـ 3 كاملاً -->
+        <section class="page-main-section" style="background-color: #ffffff">
+          <div class="container-custom content-centered-wrapper">
+            <div class="three-columns-grid">
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img src="../assets/led1.jpg" alt="صيانة شاشة سوني بالضمان" />
+                </div>
+                <h3>صيانة شاشة سوني بالضمان</h3>
+                <ul class="feature-list">
+                  <li>
+                    أهمية شهادة الضمان المرفقة مع الشاشة بعد الإصلاح لا تقل
+                    أهمية عن الصيانة نفسها.
+                  </li>
+                  <li>
+                    تعتبر تعهد من مركز صيانة شاشات سوني بأن الشاشة ستعمل بكفاءة.
+                  </li>
+                  <li>
+                    نحن نضمن كافة الأجزاء المستبدلة والالتزام بإصلاحها فوراً حال
+                    حدوث أي خلل.
+                  </li>
+                  <li>تتراوح مدة الضمان عادة بين 3 شهور إلى 12 شهراً.</li>
+                  <li>
+                    المركز ملزم بتقديم كافة أعمال الخدمة مجاناً طوال فترة
+                    الضمان.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img src="../assets/led2.jpg" alt="تصليح شاشات بالمنزل" />
+                </div>
+                <h3>تصليح شاشات بالمنزل</h3>
+                <ul class="feature-list">
+                  <li>
+                    إذا كنت تفضل تصليح الشاشة بمنزلك نوفر لك السيارات المجهزة.
+                  </li>
+                  <li>
+                    مجهزة بأحدث معدات كشف الأعطال وقطع الغيار بنسبة كبيرة.
+                  </li>
+                  <li>
+                    حرص كامل على إتمام كافة أعمال الصيانة بنفس الموقع لراحتك.
+                  </li>
+                  <li>
+                    نغطي كافة المحافظات والمدن بفروعنا المتعددة للوصول السريع.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img src="../assets/led3.jpg" alt="سرعة اصلاح الشاشة" />
+                </div>
+                <h3>سرعة اصلاح الشاشة</h3>
+                <ul class="feature-list">
+                  <li>وصول المهندس السريع إليك يقلل من وقت تعطيل شاشتك.</li>
+                  <li>
+                    نمتلك أحدث الأجهزة لتقييم وفحص الشاشة وإصلاحها بأعلى سرعة.
+                  </li>
+                  <li>
+                    سيارات الصيانة المنزلية تضمن الخدمة السريعة العاجلة بكافة
+                    المحافظات.
+                  </li>
+                  <li>
+                    فريقنا ملتزم تماماً بالاحترافية الميدانية لتحقيق رضاك.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- جدول شرح الرسائل التحذيرية كاملاً (10 رسائل) -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>شرح الرسائل التحذيرية لشاشات سوني وكيفية حلها</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%">الرسالة التحذيرية</th>
+                    <th style="width: 35%">السبب المحتمل</th>
+                    <th style="width: 40%">الحل / الإجراء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>No Signal / Check Cable Connection</strong></td>
+                    <td>الشاشة لا تستقبل إشارة / مصدر إدخال خاطئ.</td>
+                    <td>
+                      • التأكد من كابل HDMI/AV • ضبط المصدر من الريموت
+                      <span class="alert-text">⚠️ فحص منفذ الشاشة</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Not Supported Mode</strong></td>
+                    <td>دقة أو معدل تحديث الجهاز المتصل أعلى من دعم الشاشة.</td>
+                    <td>
+                      • ضبط دقة العرض إلى 1080p أو 60Hz
+                      <span class="alert-text"
+                        >⚠️ فحص دوائر الاستقبال بالمركز</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>HDCP Error / Connection Issue</strong></td>
+                    <td>فشل التشفير الرقمي بين الشاشة والجهاز الخارجي.</td>
+                    <td>
+                      • إعادة توصيل الكابل • استخدام كابل معتمد
+                      <span class="alert-text"
+                        >⚠️ فحص شريحة HDCP بالمين بورد</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Network Cable Disconnected / Wi-Fi Error</strong>
+                    </td>
+                    <td>انقطاع الإنترنت / مشكلة بكارت الواي فاي.</td>
+                    <td>
+                      • إعادة تشغيل الراوتر • تعديل الـ DNS إلى 8.8.8.8
+                      <span class="alert-text"
+                        >⚠️ استبدال قطعة الكارت الداخلي</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>USB Device Overload / Not Recognized</strong>
+                    </td>
+                    <td>سحب تيار عالي أو صيغة غير مدعومة.</td>
+                    <td>
+                      • تهيئة الفلاش بصيغة FAT32
+                      <span class="alert-text"
+                        >⚠️ فحص دائرة تغذية منفذ USB</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Retail Mode Active / Store Demo</strong></td>
+                    <td>الشاشة مضبوطة على الوضع التجاري للمعرض.</td>
+                    <td>
+                      • التحويل إلى وضع Home Use من الإعدادات
+                      <span class="alert-text">⚠️ إعادة ضبط مصنع كاملة</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Auto Power Off / Sleep Timer Active</strong>
+                    </td>
+                    <td>تفعيل خاصية توفير الطاقة أو مؤقت النوم.</td>
+                    <td>
+                      • تعطيل الإيقاف التلقائي من القائمة
+                      <span class="alert-text"
+                        >⚠️ فحص لوحة الطاقة إذا تكرر الإغلاق</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Software Update Error / Retry Later</strong>
+                    </td>
+                    <td>انقطاع اتصال الإنترنت أثناء التحديث.</td>
+                    <td>
+                      • إعادة التحديث يدوياً من USB
+                      <span class="alert-text"
+                        >⚠️ عمل شحن فلاشة يدوياً (Manual Flash)</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>PIN Incorrect / System Lock</strong></td>
+                    <td>تفعيل قفل الشاشة أو الأبوة ونسيان الرمز.</td>
+                    <td>
+                      • إدخال الرمز الافتراضي (0000)
+                      <span class="alert-text">⚠️ ضبط مصنع شامل بالمركز</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Weak Signal or No Signal (TV Antenna)</strong>
+                    </td>
+                    <td>ضعف إشارة الدش الداخلي أو كابل الريسيفر.</td>
+                    <td>
+                      • إعادة ضبط القنوات وفحص التوصيلات
+                      <span class="alert-text"
+                        >⚠️ فحص كارت التيونر الداخلي</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- سكشن خطوات حجز الصيانة (7 خطوات + الملاحظات) كاملاً -->
+        <section class="page-main-section" style="background-color: #ffffff">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>كيف تحجز موعد صيانة شاشة بمنزلك</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="steps-container">
+              <div class="step-item">
+                <span class="step-number">1</span>
+                <p>
+                  قم بالاتصال الهاتفي على رقم هاتف صيانة شاشات مصر المخصص
+                  لاستقبال بلاغات الأعطال 19580.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">2</span>
+                <p>
+                  حاول تحديد المشكلة التي تواجهها بشكل واضح لتجهيز الأدوات وقطع
+                  الغيار اللازمة قبل الوصول إليك.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">3</span>
+                <p>
+                  عليك معرفة أسعار الفحص المنزلي للشاشة المحددة بحسب المسافة
+                  والمحافظة.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">4</span>
+                <p>
+                  اسأل عن تكاليف صيانة جهازك المحتملة لتجنب أي مفاجآت غير
+                  متوقعة.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">5</span>
+                <p>
+                  يجب تقديم كافة التفاصيل ورقم طراز شاشة سوني لتسهيل عملية
+                  الإصلاح.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">6</span>
+                <p>
+                  التحقق من أوراق الضمان الخاصة بجهازك للتأكد من تغطية تكاليف
+                  الخدمة.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">7</span>
+                <p>
+                  بعد تحديد الموعد يتم إرسال فني متخصص من قسم تصليح الشاشات
+                  بالمنزل المجهز لخدمتك خلال 24 ساعة.
+                </p>
+              </div>
+            </div>
+
+            <div class="notes-box">
+              <p>
+                💡 الموقع الإلكتروني خيار ممتاز لحجز الصيانة دون الحاجة للانتظار
+                على الخطوط الهاتفيّة.
+              </p>
+              <p>💡 يمكنك التوجه لأقرب فرع صيانة متواجد في محافظتك.</p>
+              <p>
+                💡 موظفو مركزنا يعملون باستمرار لتقديم الخدمة الأفضل لك ولجهازك.
+              </p>
+            </div>
+
+            <div
+              class="text-center"
+              style="text-align: center; margin-top: 2rem"
+            >
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> اتصل بنا الان
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- بانر الاتصال السريع السفلي -->
+        <section class="cta-banner-section">
+          <div class="container-custom">
+            <div class="cta-blue-card">
+              <h2>تحتاج إلى فحص شاشة سوني الخاصة بك؟</h2>
+              <p>
+                اتصل بـ خبراء صيانة الشاشات في مصر واشرح نوع العطل وموديل الشاشة
+                لمعرفة الخطوة المناسبة للصيانة الفورية.
+              </p>
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- الكلمات المفتاحية لشاشات سوني -->
+        <div class="sub-info-card keywords-card">
+          <h2>كلمات بحث ذات صلة بصيانة شاشات سوني</h2>
+          <div class="keywords-tags">
+            <a href="../سوني/" class="keyword-tag">صيانة شاشات سوني</a>
+            <a href="../سوني/" class="keyword-tag"
+              >خبراء صيانة الشاشات في مصر</a
+            >
+            <a href="../سوني/" class="keyword-tag">تصليح شاشات سوني بالمنزل</a>
+            <a href="../سوني/" class="keyword-tag">سوفت وير شاشات سوني</a>
+            <a href="../سوني/" class="keyword-tag">أسعار صيانة شاشات سوني</a>
+            <a href="../سوني/" class="keyword-tag">تغيير ليدات شاشة سوني</a>
+            <a href="../سوني/" class="keyword-tag">صيانة شاشة سوني سمارت</a>
+            <a href="../سوني/" class="keyword-tag">شاشة سوني بتفصل وتشتغل</a>
+            <a href="../سوني/" class="keyword-tag">اعطال شاشات سوني الشائعة</a>
+            <a href="../سوني/" class="keyword-tag"
+              >الشاشة واقفه على شعار سوني</a
+            >
+            <a href="../سوني/" class="keyword-tag">قطع غيار شاشات سوني أصلية</a>
+            <a href="../سوني/" class="keyword-tag"
+              >مركز صيانة شاشات سوني معتمد</a
+            >
+            <a href="../سوني/" class="keyword-tag"
+              >الخط الساخن صيانة شاشات 19580</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

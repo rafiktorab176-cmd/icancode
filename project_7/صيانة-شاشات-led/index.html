@@ -1,0 +1,1290 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LED صيانة الشاشات</title>
+
+    <!-- أيقونة المتصفح في الـ URL -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+    <!-- FontAwesome للأيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+      <div class="container-custom">
+        <div class="top-bar-content">
+          <div class="info-group">
+            <span class="time-info">
+              <i class="fa-regular fa-clock"></i>
+              السبت - الخميس: 9 صباحاً - 10 مساءً
+            </span>
+          </div>
+          <div class="info-group">
+            <span class="location-info">
+              <i class="fa-solid fa-location-dot"></i>
+              نغطي جميع المحافظات
+            </span>
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-link"
+              aria-label="فيسبوك"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط الرئيسي -->
+    <header class="main-header">
+      <div class="container-custom header-flex">
+        <!-- زر الهمبرجر للجوال فقط -->
+        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- اللوجو (صورة) -->
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+
+        <!-- الروابط الرئيسية للشاشات الكبيرة -->
+        <nav class="desktop-nav">
+          <a href="../index.html">الرئيسية</a>
+
+          <!-- أنواع الشاشات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu">
+              <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+              <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+              <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+              <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+              <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+            </div>
+          </div>
+
+          <!-- الماركات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu brands-menu">
+              <a href="../سامسونج/">سامسونج</a>
+              <a href="../الجي/">ال جي</a>
+              <a href="../توشيبا/">توشيبا</a>
+              <a href="../شارب/">شارب</a>
+              <a href="../سوني/">سوني</a>
+              <a href="../هايسنس/">هايسنس</a>
+              <a href="../تورنيدو/">تورنيدو</a>
+              <a href="../فريش/">فريش</a>
+              <a href="../يونيفرسال/">يونيفرسال</a>
+              <a href="../شاومي/">شاومي</a>
+              <a href="../يونيون-اير/">يونيون إير</a>
+              <a href="../جاك/">جاك</a>
+              <a href="../هاير/">هاير</a>
+            </div>
+          </div>
+          <a href="../مناطق-الخدمة/" class="nav-link">مناطق الخدمة</a>
+          <a href="../الاعطال-الشائعة/" class="nav-link">الأعطال الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
+        </nav>
+
+        <!-- أزرار الخط الساخن والاتصال -->
+        <div class="header-actions">
+          <a href="tel:19580" class="btn-hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i>
+            <span>19580</span>
+          </a>
+          <a href="tel:01289966660" class="btn-phone pulse-blue">
+            <i class="fa-solid fa-phone"></i>
+            <span>01289966660</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- الخلفية المعتمة للقائمة الجانبية -->
+    <div id="overlay" class="drawer-overlay"></div>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img small"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+        <button id="closeBtn" class="close-btn" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <a href="../index.html" class="drawer-link main-color">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a>
+
+        <!-- أنواع الشاشات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
+            <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="screensSubMenu" class="drawer-submenu hidden">
+            <a href="../صيانة-شاشات-led/" class="active">صيانة شاشات LED</a>
+            <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+            <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+            <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+            <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+          </div>
+        </div>
+
+        <!-- الماركات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tags"></i> الماركات</span>
+            <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="brandsSubMenu" class="drawer-submenu hidden scrollable">
+            <a href="../سامسونج/">سامسونج</a>
+            <a href="../الجي/">ال جي</a>
+            <a href="../توشيبا/">توشيبا</a>
+            <a href="../شارب/">شارب</a>
+            <a href="../سوني/">سوني</a>
+            <a href="../هايسنس/">هايسنس</a>
+            <a href="../تورنيدو/">تورنيدو</a>
+            <a href="../فريش/">فريش</a>
+            <a href="../يونيفرسال/">يونيفرسال</a>
+            <a href="../شاومي/">شاومي</a>
+            <a href="../يونيون-اير/">يونيون إير</a>
+            <a href="../جاك/">جاك</a>
+            <a href="../هاير/">هاير</a>
+          </div>
+        </div>
+
+        <a href="../مناطق-الخدمة/" class="drawer-link"
+          ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
+        >
+        <a href="../الأعطال-الشائعة/" class="drawer-link"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> الأعطال الشائعة</a
+        >
+        <a href="../المدونة/" class="drawer-link"
+          ><i class="fa-solid fa-blog"></i> المدونة</a
+        >
+        <a href="../اتصل-بنا/" class="drawer-link"
+          ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+        >
+      </div>
+
+      <div class="drawer-footer">
+        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+          <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+        </a>
+        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+          <i class="fa-solid fa-phone"></i> 01289966660
+        </a>
+        <a
+          href="https://wa.me/201289966660"
+          target="_blank"
+          class="drawer-btn green"
+        >
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp pulse-green"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:19580" class="float-btn phone pulse-blue">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+    <!-- هيرو صفحة صيانة شاشات LED سامسونج -->
+    <section class="sub-hero-section">
+      <div class="sub-hero-overlay"></div>
+
+      <div class="container-custom sub-hero-content">
+        <!-- مسار التنقل (Breadcrumbs) المتطابق مع الصورة -->
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+          <a href="../index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+        </nav>
+
+        <div class="sub-hero-box">
+          <div class="sub-hero-text-area">
+            <h1 class="sub-hero-title">صيانة شاشات LED</h1>
+            <p class="sub-hero-desc">
+              مركز خبراء صيانة الشاشات في مصر المتخصص يقدم خدمة صيانة صيانة
+              شاشات LED سامسونج بأعلى جودة وبضمان حقيقي
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- محتوى صفحة صيانة شاشات LED -->
+    <section class="service-details-section">
+      <div class="container-custom service-layout">
+        <!-- القائمة الجانبية للحجز السريع (Sidebar) -->
+        <aside class="service-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <i class="fa-solid fa-headset"></i>
+              <h3>احجز صيانة الآن</h3>
+            </div>
+            <p>فنيون متخصصون في صيانة شاشات LED جاهزون لخدمتك</p>
+
+            <div class="booking-actions">
+              <a href="tel:19580" class="booking-btn hotline-btn">
+                <i class="fa-solid fa-phone-volume"></i> الخط الساخن 19580
+              </a>
+              <a href="tel:01289966660" class="booking-btn phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="booking-btn whatsapp-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- محتوى المقال والتفاصيل -->
+        <div class="service-content-area">
+          <div class="content-block">
+            <h2>صيانة شاشات LED في مصر</h2>
+            <p>
+              شاشات LED هي الأكثر انتشاراً في البيوت المصرية النهاردة، وبتميز
+              بصورة ممتازة واستهلاك كهرباء منخفض مقارنة بالأنواع التانية. لكن زي
+              أي جهاز إلكتروني، شاشات الليد ممكن تتعرض لأعطال مختلفة مع
+              الاستخدام اليومي أو بسبب مشاكل الكهرباء. في جروب، بنقدملك خدمة
+              صيانة شاشات LED شاملة ومتخصصة لكل الماركات سواء سامسونج، ال جي，
+              توشيبا، شارب، أو أي ماركة تانية.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>إزاي شاشة LED بتشتغل؟</h2>
+            <p>
+              شاشة LED بتعتمد على تقنية الدايود المضيء (Light Emitting Diode) في
+              الإضاءة الخلفية للشاشة. الشاشة بتتكون من عدة طبقات أساسية: لوحة
+              العرض LCD اللي بتحكم في الألوان والصورة، وطبقة الباك لايت LED اللي
+              بتوفر الإضاءة، وبوردة المين بورد (Main Board) اللي بتعالج
+              الإشارات، وبوردة التي كون (T-Con Board) اللي بتحكم في توقيت عرض
+              الصورة، بالإضافة لبوردة الباور سبلي للي بتوزع الكهرباء على كل
+              المكونات.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>أشهر أعطال شاشات LED</h2>
+
+            <div class="fault-item">
+              <h3>الشاشة فيها صوت بس مفيش صورة:</h3>
+              <p>
+                ده غالباً عطل في الباك لايت (LED Strips) أو الإنفرتر. اللمبات
+                الليف الخلفية بتجوز مع الوقت أو بسبب زيادة الفولت.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>الشاشة مش بتفتح خالص:</h3>
+              <p>
+                المشكلة غالباً في الباور سبلاي أو في المكثفات (Capacitors) اللي
+                على البوردة. ممكن تكون منتفخة أو محروقة.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>خطوط على الشاشة أفقية أو رأسية:</h3>
+              <p>
+                ده بيكون عطل في التي كون بورد أو في كابل LVDS اللي بيوصل بين
+                المين بورد ولوحة العرض.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>الألوان مش طبيعية أو الصورة باهتة:</h3>
+              <p>ممكن يكون عطل في التي كون أو في إعدادات البانل نفسها.</p>
+            </div>
+
+            <div class="fault-item">
+              <h3>الشاشة بتفصل وتشتغل لوحدها:</h3>
+              <p>غالباً مشكلة في الباور سبلاي أو في سوفت وير الشاشة.</p>
+            </div>
+
+            <div class="fault-item">
+              <h3>ظهور بقع مضيئة أو مناطق مظلمة:</h3>
+              <p>ده بيكون بسبب تلف في بعض لمبات الباك لايت LED.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="details-outer-section">
+      <!-- الكارت الرئيسي الكبير المتركز في المنتصف -->
+      <div class="main-white-card">
+        <!-- البلوك الأول -->
+        <div class="sub-info-card">
+          <h2>صيانة شاشات LED في مصر - خبراء صيانة الشاشات في مصر</h2>
+          <p>
+            شاشات LED هي الأكثر انتشاراً في البيوت المصرية النهاردة، وبتميز
+            بصورة ممتازة واستهلاك كهرباء منخفض مقارنة بالأنواع التانية. لكن زي
+            أي جهاز إلكتروني، شاشات الليد ممكن تتعرض لأعطال مختلفة مع الاستخدام
+            اليومي أو بسبب مشاكل الكهرباء. في خبراء صيانة الشاشات في مصر،
+            بنقدملك خدمة صيانة شاشات LED شاملة ومتخصصة لكل الماركات سواء
+            سامسونج، ال جي، توشيبا، شارب، أو أي ماركة تانية.
+          </p>
+        </div>
+
+        <!-- البلوك الثاني -->
+        <div class="sub-info-card">
+          <h2>إزاي شاشة LED بتشتغل؟</h2>
+          <p>
+            شاشة LED بتعتمد على تقنية الدايود المضيء (Light Emitting Diode) في
+            الإضاءة الخلفية للشاشة. الشاشة بتتكون من عدة طبقات أساسية: لوحة
+            العرض LCD اللي بتحكم في الألوان والصورة، وطبقة الباك لايت LED اللي
+            بتوفر الإضاءة، وبوردة المين بورد (Main Board) اللي بتعالج الإشارات،
+            وبوردة التي كون (T-Con Board) اللي بتحكم في توقيت عرض الصورة،
+            بالإضافة لبوردة الباور سبلي اللي بتوزع الكهرباء على كل المكونات.
+          </p>
+        </div>
+
+        <!-- البلوك الثالث: خطوات الصيانة -->
+        <div class="sub-info-card">
+          <h2>خطوات صيانة شاشات LED في خبراء صيانة الشاشات في مصر</h2>
+          <p>عملية الصيانة عندنا بتمر بمراحل منظمة عشان نضمنلك أفضل نتيجة:</p>
+          <p>
+            <strong>الفحص المبدئي:</strong> الفني بيعمل تشخيص شامل للشاشة ويحدد
+            مصدر العطل بالضبط باستخدام أجهزة قياس متطورة.
+          </p>
+          <p>
+            <strong>تحديد التكلفة:</strong> بعد التشخيص، بنبلغك بالتكلفة
+            المتوقعة قبل ما نبدأ أي شغل، مفيش مفاجأت.
+          </p>
+          <p>
+            <strong>الإصلاح:</strong> بنستخدم قطع غيار أصلية ومعدات لحام
+            احترافية (محطات لحام SMD) عشان نضمن جودة الشغل.
+          </p>
+          <p>
+            <strong>الاختبار:</strong> بعد الإصلاح، بنعمل اختبار شامل للشاشة
+            لمدة كافية عشان نتأكد إن العطل اتحل بالكامل.
+          </p>
+          <p><strong>الضمان:</strong> بنديك ضمان على الإصلاح عشان تكون مطمن.</p>
+        </div>
+
+        <!-- البلوك الرابع: أسعار صيانة شاشات LED -->
+        <div class="sub-info-card">
+          <h2>أسعار صيانة شاشات LED</h2>
+          <p>
+            أسعارنا تنافسية وبتختلف حسب نوع العطل وحجم الشاشة والماركة. تغيير
+            الباك لايت مثلاً بيختلف عن إصلاح المين بورد. بنقدملك سعر عادل بعد
+            الفحص مباشرة ومفيش أي رسوم مخفية. كمان لو العطل بسيط، ممكن يتصلح في
+            نفس الزيارة في بيتك.
+          </p>
+        </div>
+
+        <!-- البلوك الخامس: أسئلة شائعة -->
+        <div class="sub-info-card">
+          <h2>أسئلة شائعة عن صيانة شاشات LED</h2>
+          <p>
+            <strong>شاشة LED عمرها الافتراضي قد إيه؟</strong> في المتوسط من
+            50,000 لـ 100,000 ساعة تشغيل، يعني ممكن تعيش معاك سنين طويلة لو
+            اتصانت صح.
+          </p>
+          <p>
+            <strong>هل ممكن أصلح الباك لايت ولا لازم أغير الشاشة؟</strong> طبعاً
+            ممكن نغير لمبات الباك لايت بس من غير ما تغير الشاشة كلها. وده
+            بيوفرلك فلوس كتير.
+          </p>
+          <p>
+            <strong>إيه الفرق بين LED وLCD؟</strong> شاشات LED هي في الأصل شاشات
+            LCD بس بتستخدم إضاءة LED بدل الفلورسنت، فبتكون أنحف وأوفر في
+            الكهرباء.
+          </p>
+        </div>
+
+        <!-- البلوك السادس: تواصل معنا -->
+        <div class="sub-info-card highlight-card">
+          <h2>تواصل معنا دلوقتي</h2>
+          <p>
+            لو شاشة LED بتاعتك فيها أي مشكلة، متتأخرش وكلمنا فوراً. فريق خبراء
+            صيانة الشاشات في مصر جاهز يساعدك في أي وقت. اتصل بينا على
+            <strong>01289966660</strong> أو الخط الساخن
+            <strong>19580</strong> واحجز موعد صيانة في بيتك.
+          </p>
+        </div>
+        <!-- شبكة ماركات شاشات LED -->
+        <section class="brands-section">
+          <div class="container-custom">
+            <div class="section-header text-center">
+              <h2>ماركات صيانة شاشات LED التي نصلحها</h2>
+              <p>نتعامل مع جميع ماركات صيانة شاشات LED بقطع غيار أصلية</p>
+            </div>
+
+            <div class="brands-grid">
+              <!-- سامسونج -->
+              <a href="../سامسونج/" class="brand-card">
+                <span class="brand-en">SAMSUNG</span>
+                <span class="brand-ar">سامسونج</span>
+              </a>
+
+              <!-- ال جي -->
+              <a href="../الجي/" class="brand-card">
+                <span class="brand-en">LG</span>
+                <span class="brand-ar">ال جي</span>
+              </a>
+
+              <!-- توشيبا -->
+              <a href="../توشيبا/" class="brand-card">
+                <span class="brand-en">TOSHIBA</span>
+                <span class="brand-ar">توشيبا</span>
+              </a>
+
+              <!-- شارب -->
+              <a href="../شارب/" class="brand-card">
+                <span class="brand-en">SHARP</span>
+                <span class="brand-ar">شارب</span>
+              </a>
+
+              <!-- سوني -->
+              <a href="../سوني/" class="brand-card">
+                <span class="brand-en">SONY</span>
+                <span class="brand-ar">سوني</span>
+              </a>
+
+              <!-- تورنيدو -->
+              <a href="../تورنيدو/" class="brand-card">
+                <span class="brand-en">TORNADO</span>
+                <span class="brand-ar">تورنيدو</span>
+              </a>
+              <!-- فريش -->
+              <a href="../فريش/" class="brand-card">
+                <span class="brand-en">fresh</span>
+                <span class="brand-ar">فريش</span>
+              </a>
+              <!-- جاك -->
+              <a href="../جاك/" class="brand-card">
+                <span class="brand-en">jac</span>
+                <span class="brand-ar">جاك</span>
+              </a>
+              <!-- شاومي -->
+              <a href="../شاومي/" class="brand-card">
+                <span class="brand-en">sumi</span>
+                <span class="brand-ar">شاومي</span>
+              </a>
+              <!-- يونيون-اير -->
+              <a href="../يونيون-اير/" class="brand-card">
+                <span class="brand-en">uni-air</span>
+                <span class="brand-ar">يونيون-اير</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- ==========================================
+     1. قسم الأسئلة الشائعة عن صيانة شاشات LED
+     ========================================== -->
+        <section class="faq-section">
+          <div class="container-custom">
+            <div class="section-title-box">
+              <h2>الأسئلة الشائعة عن صيانة شاشات LED</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="faq-container">
+              <!-- السؤال 1 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب ظهور خطوط أو مشاكل في ألوان شاشة LED؟
+                </h3>
+                <p class="faq-answer">
+                  قد يكون السبب ناتجاً عن عطل في كابلات التوصيل الداخلية أو
+                  دوائر التحكم في البانل العضوي، ويحتاج فحصاً دقيقاً من فني
+                  متخصص.
+                </p>
+              </div>
+
+              <!-- السؤال 2 -->
+              <div class="faq-card">
+                <h3 class="faq-question">هل يمكن تصليح شاشة LED في المنزل؟</h3>
+                <p class="faq-answer">
+                  بعض الأعطال المتعلقة بالباور أو السوفت وير يمكن حلها منزلياً，
+                  بينما أعطال الشاشة العضوية (LED Panel) تفضل صيانتها داخل
+                  المركز لتوافر أجهزة الفحص المتقدمة.
+                </p>
+              </div>
+
+              <!-- السؤال 3 -->
+              <div class="faq-card">
+                <h3 class="faq-question">كم تكلفة صيانة وإصلاح شاشات LED؟</h3>
+                <p class="faq-answer">
+                  تختلف التكلفة حسب نوع العطل وحجم الشاشة ومكونات الإصلاح
+                  المطلوبة بعد التشخيص الفني الدقيق.
+                </p>
+              </div>
+              <!-- السؤال 4 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب عدم استجابة شاشة LED للتشغيل نهائياً?
+                </h3>
+                <p class="faq-answer">
+                  غالباً ما تكون المشكلة في دائرة الباور (Power Supply) أو تلف
+                  في البوردة الرئيسية (Main Board).
+                </p>
+              </div>
+
+              <!-- السؤال 5 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  هل مشكلة احتراق الشاشة (Burn-in) في شاشات LED لها إصلاح؟
+                </h3>
+                <p class="faq-answer">
+                  تعتمد على درجة احتراق البكسلات؛ بعض الحالات تعالج عبر أدوات
+                  تنظيف البكسل المتاحة بالنظام، الحالات المتقدمة تتطلب استبدال
+                  البانل.
+                </p>
+              </div>
+              <!-- السؤال 6 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما سبب انطفاء الشاشة المفاجئ أثناء التشغيل؟
+                </h3>
+                <p class="faq-answer">
+                  قد يرجع ذلك إلى حماية ضد ارتفاع الحرارة، أو مشكلة في توصيلات
+                  الكهرباء الداخلية وبوردة الطاقة.
+                </p>
+              </div>
+              <!-- السؤال 7 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  ما مميزات شاشات LED عن الأنواع الأخرى؟
+                </h3>
+                <p class="faq-answer">
+                  تتميز بتقديم درجات سواد حقيقية، ألوان مذهلة، وتباين فائض لأن
+                  كل بكسل يضيء ذاتياً بدون الحاجة لخلفية إضاءة (باك لايت).
+                </p>
+              </div>
+              <!-- السؤال 8 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  متى يجب عليك الاتصال بمركز الصيانة فوراً？
+                </h3>
+                <p class="faq-answer">
+                  عند صدور أصوات غريبة، روائح احتراق، أو انقطاع الصورة تماماً مع
+                  استمرار وجود الصوت أو انقطاع الجهاز كلياً.
+                </p>
+              </div>
+
+              <!-- السؤال 9 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  هل تتوفر قطع غيار أصلية لشاشات LED؟
+                </h3>
+                <p class="faq-answer">
+                  نعم، نوفر قطع غيار أصلية ومضمونة لمختلف ماركات شاشات LED
+                  العالمية والمحلية.
+                </p>
+              </div>
+
+              <!-- السؤال 10 -->
+              <div class="faq-card">
+                <h3 class="faq-question">
+                  كيف أطلب خدمة صيانة لشاشتي الـ LED؟
+                </h3>
+                <p class="faq-answer">
+                  يمكنك التواصل معنا مباشرة عبر الخط الساخن أو الأرقام الموضحة
+                  أدناه لتسجيل طلب صيانة وتحديد موعد الزيارة.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+     2. قسم دليل صيانة شاشات OLED (الروابط السريعة)
+     ========================================== -->
+        <section class="guide-nav-section">
+          <div class="container-custom">
+            <div class="section-title-box">
+              <h2>دليل صيانة شاشات OLED</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="guide-buttons-wrapper">
+              <a href="led-repair.html" class="guide-btn">جميع أعطال LED</a>
+              <a href="#" class="guide-btn">دليل صيانة LED</a>
+              <a href="#" class="guide-btn">مشكلة احتراق بكسلات LED</a>
+              <a href="#" class="guide-btn">الفرق بين LED و OLED</a>
+              <a href="#" class="guide-btn">مناطق خدمة الشاشات</a>
+              <a href="#" class="guide-btn">ماركات شاشات LED</a>
+            </div>
+          </div>
+        </section>
+        <!-- ==========================================
+     1. جدول أعطال الشاشات الشائعة (9 مشاكل والحل)
+     ========================================== -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>أعطال الشاشات الشائعة ← 9 مشاكل والحل مع فني صيانة</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%">العطل</th>
+                    <th style="width: 35%">السبب المحتمل</th>
+                    <th style="width: 40%">الحل / الإجراء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>الشاشة بتفصل وتشتغل لوحدها</strong></td>
+                    <td>
+                      • إعدادات Sleep Timer مفعلة • كابل الطاقة غير ثابت • مشكلة
+                      في لوحة التحكم
+                    </td>
+                    <td>
+                      • إلغاء مؤقت النوم من الإعدادات • فحص كابل الطاقة وتثبيتها
+                      <span class="alert-text"
+                        >⚠️ طلب في صيانة شاشات لفحص اللوحة الأم</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>ظهور خطوط أفقية أو رأسية</strong></td>
+                    <td>
+                      • كابل HDMI تالف • مشكلة في كارت الشاشة (T-Con) • تلف في
+                      بانل الشاشة
+                    </td>
+                    <td>
+                      • تغيير كابل HDMI أو المنفذ • فحص اتصال كابل الـ Ribbon
+                      <span class="alert-text"
+                        >⚠️ استبدال لوحة T-Con أو البانل</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة شغالة بس مفيش صورة</strong></td>
+                    <td>
+                      • إضاءة خلفية (Backlight) محترقة • كارت الشاشة Main Board
+                      تالف • إعدادات المصدر خاطئة
+                    </td>
+                    <td>
+                      • اختبار الشاشة بكشاف (Flashlight Test) • التأكد من اختيار
+                      المصدر الصحيح
+                      <span class="alert-text"
+                        >⚠️ استبدال إضاءة LED أو Main Board</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>بقع سوداء أو مضيئة في الشاشة</strong></td>
+                    <td>
+                      • Dead Pixels أو Stuck Pixels • ضغط على البانل • تلف في
+                      طبقة الـ Diffuser
+                    </td>
+                    <td>
+                      • تجربة برامج إصلاح الـ Dead Pixels • تجنب الضغط على
+                      الشاشة
+                      <span class="alert-text"
+                        >⚠️ استبدال البانل في الحالات الشديدة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>تأخر ظهور الصورة عند التشغيل</strong></td>
+                    <td>
+                      • تحديث النظام معلق • Main Board بطيء • سعة الرام ممتلئة
+                    </td>
+                    <td>
+                      • إعادة تشغيل الشاشة (Power Cycle) • حذف التطبيقات غير
+                      المستخدمة
+                      <span class="alert-text"
+                        >⚠️ تحديث أو إعادة ضبط المصنع</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة بتصدر صوت طقطقة</strong></td>
+                    <td>
+                      • تمدد وانكماش المواد البلاستيكية • ارتفاع درجة الحرارة •
+                      تركيب غير محكم
+                    </td>
+                    <td>
+                      • صوت طبيعي غالباً بسبب التمدد الحراري • راجع تركيب الشاشة
+                      هل تم بشكل صحيح
+                      <span class="alert-text"
+                        >⚠️ فحص / تغيير سماعات الصوت إذا استمر</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>احتراق الشاشة (Burn-in)</strong></td>
+                    <td>
+                      • عرض صورة ثابتة لفترات طويلة • ارتفاع السطوع بشكل مستمر •
+                      استخدام شاشات OLED لفترات طويلة
+                    </td>
+                    <td>
+                      • تفعيل Screen Saver بعد 5 دقائق • تقليل مستوى السطوع
+                      <span class="alert-text"
+                        >⚠️ استخدام ميزة Pixel Shift</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الألوان باهتة أو غير طبيعية</strong></td>
+                    <td>
+                      • إعدادات الألوان غير مضبوطة • كابل HDMI تالف • وضع الصورة
+                      خاطئ
+                    </td>
+                    <td>
+                      • ضبط إعدادات الصورة من القائمة • تغيير كابل HDMI
+                      <span class="alert-text"
+                        >⚠️ فحص كارت T-Con مع فني صيانة شاشات خبرة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>الشاشة مش بتتعرف على HDMI</strong></td>
+                    <td>
+                      • كابل HDMI تالف • منفذ HDMI تالف • عدم توافق الإصدار
+                    </td>
+                    <td>
+                      • تجربة كابل HDMI مختلف • تجربة منفذ HDMI آخر
+                      <span class="alert-text">⚠️ فحص منفذ HDMI في الشاشة</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+     2. سكشن الخدمات الثلاث (صيانة شاشة LED بالضمان، تصليح شاشات بالمنزل، سرعة اصلاح الشاشة)
+     ========================================== -->
+        <section class="page-main-section" style="background-color: #ffffff">
+          <div class="container-custom content-centered-wrapper">
+            <div class="three-columns-grid">
+              <!-- العمود الأول: صيانة شاشة LED بالضمان -->
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img
+                    src="../assets/led1.jpg"
+                    alt="صيانة شاشة LED بالضمان"
+                    [cite: 9]
+                  />
+                </div>
+                <h3>صيانة شاشة LED بالضمان</h3>
+                <ul class="feature-list">
+                  <li>
+                    أهمية شهادة الضمان المرفقة مع الشاشة بعد الإصلاح لا تقل
+                    أهمية عن الصيانة نفسها.
+                  </li>
+                  <li>
+                    لانها تعتبر تعهد من مركز صيانة شاشات LED بأن الشاشة سوف تعمل
+                    بشكل صحيح.
+                  </li>
+                  <li>
+                    وفق المواصفات المعلنة هكذا يكون مركز تصليح شاشات LED ضامن
+                    للاجزاء المستبدلة وملزم باستبدالها مرة اخرى عند اي خلل اتلف
+                    بالشاشة اوتعطل.
+                  </li>
+                  <li>
+                    لهذا نحن نرى بأن شهادة الضمان تعد بمثابة عقد بين مركز صيانة
+                    شاشة LED والعميل بدون بها كل صغيرة وكبيرة لضمان حقوق
+                    المستهلك.
+                  </li>
+                  <li>في العادة تتراوح مدة الضمان بين 3 شهور الى 12 شهر.</li>
+                  <li>
+                    وييكون مركز صيانة LED ملزم بتقديم خدمات الإصلاح مجاناً خلال
+                    هذه المدة الزمنية[cite: 9].
+                  </li>
+                  <li>
+                    لا تحتوي الشهادة أي استثناءات معينة، مثل عدم تغطية الأضرار
+                    الناجمة عن الاستخدام الخاطئ أو الحوادث.
+                  </li>
+                  <li>لأننا ببساطة نرغب لتعزيز الثقة مع كل عملائنا.</li>
+                  <li>
+                    اتصلوا بنا عند الحاجة نحن هنا لمساعدتكم حتى بعد انتهاء فترة
+                    الضمان مركز صيانة شاشة LED معكم بكل الاحوال.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- العمود الثاني: تصليح شاشات بالمنزل -->
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img
+                    src="../assets/led2.jpg"
+                    alt="تصليح شاشات بالمنزل"
+                    [cite: 9]
+                  />
+                </div>
+                <h3>تصليح شاشات بالمنزل</h3>
+                <ul class="feature-list">
+                  <li>
+                    اذا كنت من الاشخاص الذين يفضلون تصليح الشاشة بمنزلك نحن نوفر
+                    لك ذلك.
+                  </li>
+                  <li>
+                    سواء كنت بالعاصمة او بمدينة بعيدة في الوجه البحري او محافظة
+                    من محافظات الصعيد.
+                  </li>
+                  <li>
+                    لقد وفرنا لك سيارة اصلاح شاشه وبها كل متطلبات ومعدات كشف
+                    الاعطال ونسبة كبيرة لقطع الغيار تخطي 90%.
+                  </li>
+                  <li>
+                    ومع ذلك هناك بعض المشكلات قد تتطلب سحب الشاشة لمقر الصيانة.
+                  </li>
+                  <li>
+                    مثل الشاشات التي بها عبث شديد او الموديلات القديمة فوق 20
+                    عاماً او الاجهزة التي تستلزم عمل تجديد شامل مثل السمكرة
+                    والدوكو.
+                  </li>
+                  <li>
+                    وبالرغم من كل هذا حريصون كل الحرص اتمام تصليح شاشات المنزل
+                    بمكانها.
+                  </li>
+                  <li>
+                    حتى في ابعد المحافظات لقد افتتحنا 7 فروق وفي طريقنا لافتتاح
+                    المزيد لكي نقترب اكثر لعملائنا.
+                  </li>
+                  <li>
+                    شركة مركز صيانة شاشات مصر بالمحافظات تشمل هذه الشراكات
+                    مجموعة متنوعة لمراكز الخدمة بالمدن والمحافظات وذلك لتوسيع
+                    قاعدة العملاء المحتملون.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- العمود الثالث: سرعة اصلاح الشاشة -->
+              <div class="feature-card">
+                <div class="feature-img-box">
+                  <img
+                    src="../assets/led3.jpg"
+                    alt="سرعة اصلاح الشاشة"
+                    [cite: 9]
+                  />
+                </div>
+                <h3>سرعة اصلاح الشاشة</h3>
+                <ul class="feature-list">
+                  <li>
+                    حينما يواجه العميل مشكلة تقنية أو عطلاً مفاجئاً مع شاشة
+                    التلفزيون فإن قدرة مهندس صيانة شاشة العرض على الوصول إليك
+                    بسرعة.
+                  </li>
+                  <li>
+                    وإجراء التقييمات والإصلاحات اللازمة تلعب دوراً أساسياً
+                    لتقليل وقت التعطل والحد من الخسائر المحتملة.
+                  </li>
+                  <li>
+                    ولأننا نملك معدات صيانة وتحديد اعطال حديثة للغاية مع تواجد
+                    المهندسون والفنيون المحترفون لذلك.
+                  </li>
+                  <li>
+                    نحن واثقون بأننا الاسرع لصيانة شاشة التلفزيون بكافة
+                    طرازاتها.
+                  </li>
+                  <li>
+                    تضمن سيارات تصليح شاشة المنزل المجهزة بالمركز الوصول السريع
+                    إلى العملاء بمختلف المحافظات.
+                  </li>
+                  <li>
+                    بما يساعد لتقديم خدمة صيانة فورية وعاجلة عند الحاجة لإصلاح
+                    أو تغيير قطع غيار بالمنزل.
+                  </li>
+                  <li>
+                    مع الأخذ في الاعتبار بأن سرعة الاستجابة تتطلب خطوط سير
+                    منتظمة ومهندسون اصلاح شاشة لديهم مهارات فنية عالية.
+                  </li>
+                  <li>
+                    بالإضافة لقدرتهم على اتخاذ القرارات السريعة والفعالة تحت
+                    الضغط. كما تعكس هذه السرعة.
+                  </li>
+                  <li>
+                    التزام مهندسو مركز صيانة شاشة المنزل بمعايير مهنية عالية
+                    أثناء الكشف وحرصهم على تلبية توقعات العملاء وتحقيق
+                    رضاهم[cite: 9].
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+     3. جدول شرح الرسائل التحذيرية للشاشات وكيفية حلها
+     ========================================== -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>شرح الرسائل التحذيرية للشاشات وكيفية حلها</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%">الرسالة التحذيرية</th>
+                    <th style="width: 35%">السبب المحتمل</th>
+                    <th style="width: 40%">الحل / الإجراء</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>No Signal / Check Signal Cable</strong></td>
+                    <td>
+                      الشاشة لا تستقبل إشارة من الجهاز المتصل/ تم اختيار مصدر
+                      إدخال خاطئ.
+                    </td>
+                    <td>
+                      • التأكد من توصيل كابل HDMI/AV جيداً • اختيار المدخل
+                      الصحيح من زر source
+                      <span class="alert-text"
+                        >⚠️ فحص منفذ الشاشة أو استبدال الكابل التالف</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Not Supported / Not Optimum Mode</strong></td>
+                    <td>
+                      دقة أو معدل تحديث الجهاز المتصل أعلى من مواصفات الشاشة.
+                    </td>
+                    <td>
+                      • ضبط إعدادات العرض على الجهاز 1920×1080 أو 60Hz • تجربة
+                      كابل HDMI مختلف يدعم الدقة العالية
+                      <span class="alert-text"
+                        >⚠️ فحص دائرة استقبال الإشارة في الشاشة بواسطة في صيانة
+                        شاشات</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>HDCP Error / Authentication Failed</strong></td>
+                    <td>
+                      فشل التشفير الرقمي بين الشاشة والجهاز (شائع مع أجهزة
+                      الاستقبال والبلايستيشن).
+                    </td>
+                    <td>
+                      • فصل وإعادة توصيل الكابل من الطرفين • استخدام كابل HDMI
+                      معتمد (High Speed)
+                      <span class="alert-text"
+                        >⚠️ فحص شريحة HDCP أو منفذ الـ HDMI</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Smart Hub Error / Network Unavailable</strong>
+                    </td>
+                    <td>
+                      انقطاع الإنترنت، مشكلة مع خوادم التطبيقات / إعدادات DNS
+                      غير صحيحة.
+                    </td>
+                    <td>
+                      • إعادة تشغيل الراوتر وإعادة الاتصال بالواي فاي • تغيير
+                      DNS إلى 8-8-8-8 من إعدادات الشبكة
+                      <span class="alert-text"
+                        >⚠️ فحص وحدة الواي فاي الداخلية للشاشة بواسطة في تصليح
+                        شاشات</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>USB Device Not Recognized</strong></td>
+                    <td>
+                      صيغة الفلاش غير مدعومة (NTFS) / عطل بمنفذ USB / فلاش تلفة.
+                    </td>
+                    <td>
+                      • تهيئة الفلاش بصيغة FAT32 أو exFAT • تجربة منفذ USB آخر
+                      أو فلاش مختلفة
+                      <span class="alert-text"
+                        >⚠️ فحص دائرة تغذية منفذ USB</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Demo Mode / Store Mode Active</strong></td>
+                    <td>
+                      الشاشة مضبوطة على وضع العرض التجاري، مما يسبب إعادة ضبط
+                      الإعدادات دورياً.
+                    </td>
+                    <td>
+                      • الدخول للإعدادات > عام > وضع الاستخدام > التحويل إلى
+                      Home Use • إعادة ضبط المصنع إذا استمرت الرسالة
+                      <span class="alert-text"
+                        >⚠️ تحديث السوفتوير يدوياً بواسطة صيانة شاشات إذا تعطلت
+                        القائمة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Auto Power Off / Sleep Timer</strong></td>
+                    <td>
+                      تفعيل وضع توفير الطاقة / مؤقت النوم / عدم وجود إشارة لفترة
+                      طويلة.
+                    </td>
+                    <td>
+                      • تعطيل وضع توفير الطاقة & Sleep Timer • إلغاء خيار "إغلاق
+                      تلقائي عند عدم النشاط"
+                      <span class="alert-text"
+                        >⚠️ اتصل بمركز صيانة الشاشات لفحص لوحة الباور إذا كان
+                        الإغلاق عشوائياً</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Firmware Update Failed / Retry Later</strong>
+                    </td>
+                    <td>
+                      انقطاع الإنترنت أثناء التحديث، ملف تحديث تالف / مساحة
+                      تخزين ممتلئة.
+                    </td>
+                    <td>
+                      • التأكد من استقرار الإنترنت وإعادة المحاولة • التحديث عبر
+                      فلاشة USB من الموقع الرسمي
+                      <span class="alert-text"
+                        >⚠️ عمل فلاشة يدوية (Manual Flash)</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Screen Lock / Parental Control Active</strong>
+                    </td>
+                    <td>تفعيل قفل الأبواب، وضع الفندق / نسيان رمز PIN.</td>
+                    <td>
+                      • إدخال الرمز الافتراضي (0000 أو 1234) وتعطيل القفل •
+                      البحث عن "Parental Lock" أو "Hotel Mode" وتعطيله
+                      <span class="alert-text"
+                        >⚠️ إعادة ضبط مصنع كاملة إذا نسي الرمز</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Invalid EDID / Monitor Not Recognized</strong>
+                    </td>
+                    <td>
+                      فشل قراءة بيانات تعريف الشاشة من جهاز الكمبيوتر (مشكلة
+                      بروتوكول الاتصال).
+                    </td>
+                    <td>
+                      • تجربة كابل DisplayPort أو HDMI آخر • تحديث تعريف كارت
+                      الشاشة على الكمبيوتر
+                      <span class="alert-text"
+                        >⚠️ إعادة برمجة شريحة EDID / تغيير Main Board بواسطة
+                        مركز صيانة شاشات مصر</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================
+     4. سكشن خطوات حجز موعد صيانة شاشة بمنزلك
+     ========================================== -->
+        <section class="page-main-section" style="background-color: #ffffff">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>كيف تحجز موعد صيانة شاشة بمنزلك</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="steps-container">
+              <div class="step-item">
+                <span class="step-number">1</span>
+                <p>
+                  قم بالاتصال الهاتفي على رقم هاتف صيانة شاشات مصر المخصص
+                  لاستقبال بلاغات الأعطال 19602[cite: 11].
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">2</span>
+                <p>
+                  حاول تحديد المشكلة التي تواجهها بشكل واضح. هذا سيمكن فنيين
+                  المركز من تجهيز الأدوات وقطع الغيار اللازمة قبل الوصول اليك.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">3</span>
+                <p>
+                  عليك معرفة أسعار الفحص المنزلي للشاشة فهي تتراوح ما بين 250
+                  إلى 450 جنيه، ويعود هذا الاختلاف إلى المسافة والمحافظة: 11].
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">4</span>
+                <p>
+                  اسأل عن تكاليف صيانة جهازك المحتملة لتجنب أي مفاجآت غير متوقعة
+                  بما فيها رسوم الإنتقال والكشف المنزلي لجهازك.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">5</span>
+                <p>
+                  يجب أن تكون لديك جميع المعلومات الضرورية مثل رقم الطراز
+                  وتفاصيل المشكلة لتسهيل عملية الاصلاح .
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">6</span>
+                <p>
+                  التحقق من الضمان ريما عليك مراجعة اوراق الشاشة لعلها ما زالت
+                  داخل الضمان لأنه قد يغطي تكلفة الإصلاح.
+                </p>
+              </div>
+              <div class="step-item">
+                <span class="step-number">7</span>
+                <p>
+                  بعد اتصالك وتحديد موعد صيانة مناسب لك سوف يتم ارسال فني متخصص
+                  من قسم تصليح شاشة المنزل مسجهزة مجهزة لتمام الخدمة خلال 24
+                  ساعة.
+                </p>
+              </div>
+            </div>
+
+            <div class="notes-box">
+              <p>
+                💡 الموقع الإلكتروني خيار جيد لحجز صيانة بالمنزل، هذا الخيار
+                يتيح لك اختيار الوقت والتاريخ المناسبين لك دون الحاجة للانتظار
+                على الهاتف.
+              </p>
+              <p>
+                💡 التوجه للفروع القريبة منك: القاهرة ، مدينة نصر ، الجيزة ،
+                المهندسين والدقي : الاسكندرية ، لوران.
+              </p>
+              <p>
+                💡 اعرف بأن موظفي مركز صيانة شاشة مصر يجتهدون دائماً لمساعدتك
+                وتقديم خدمة جيدة لجهازك.
+              </p>
+            </div>
+
+            <div
+              class="text-center"
+              style="text-align: center; margin-top: 2rem"
+            >
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> اتصل بنا الان
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- ==========================================
+     3. قسم دعوة الاتصال السريع (الحاوية الزرقاء السفلية)
+     ========================================== -->
+        <section class="cta-banner-section">
+          <div class="container-custom">
+            <div class="cta-blue-card">
+              <h2>تحتاج إلى فحص شاشة LED الخاصة بك؟</h2>
+              <p>
+                اتصل بـ خبراء صيانة الشاشات في مصر واشرح نوع العطل وموديل الشاشة
+                لمعرفة الخطوة المناسبة للصيانة الفورية.
+              </p>
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- البلوك السابع: كلمات البحث المفتاحية -->
+        <div class="sub-info-card keywords-card">
+          <h2>كلمات بحث ذات صلة بصيانة شاشات LED</h2>
+          <div class="keywords-tags">
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >صيانة شاشات LED</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >خبراء صيانة الشاشات في مصر</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >تصليح شاشات LED بالمنزل</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >تغيير باك لايت شاشة LED</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >أسعار صيانة شاشات LED</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >صيانة شاشة LED سامسونج</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >صيانة شاشة LED ال جي</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >صيانة شاشة LED توشيبا</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >اعطال شاشات LED الشائعة</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >الشاشة فيها صوت ومفيش صورة</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >قطع غيار شاشات LED أصلية</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >مركز صيانة شاشات LED معتمد</a
+            >
+            <a href="../صيانة-شاشات-led/" class="keyword-tag"
+              >الخط الساخن صيانة شاشات 19580</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
