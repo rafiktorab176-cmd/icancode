@@ -1776,3 +1776,114 @@ video {
     font-size: 1.1rem;
   }
 }
+/* قسم التغطية الجغرافية الأنيق */
+.coverage-section {
+  background-color: #f8fafc;
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+
+.coverage-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+}
+
+.coverage-header h2 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .coverage-header h2 {
+    font-size: 2rem;
+  }
+}
+
+.coverage-header p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  max-width: 600px;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .coverage-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .coverage-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .coverage-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1.1rem;
+  }
+}
+
+.coverage-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.25rem 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.coverage-card i {
+  font-size: 1.25rem;
+  color: #2563eb;
+  transition: transform 0.3s ease;
+}
+
+.coverage-card span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.coverage-card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
+}
+
+.coverage-card:hover i {
+  transform: scale(1.2);
+  color: #1d4ed8;
+}

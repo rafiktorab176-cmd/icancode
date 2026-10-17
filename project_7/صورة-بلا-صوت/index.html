@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      عطل صورة بلا صوت في الشاشات - الأسباب وطريقة الإصلاح | مركز خبراء صيانة
+      الشاشات
+    </title>
+
+    <!-- أيقونة المتصفح -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+
+    <!-- FontAwesome للأيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+      <div class="container-custom">
+        <div class="top-bar-content">
+          <div class="info-group">
+            <span class="time-info">
+              <i class="fa-regular fa-clock"></i>
+              السبت - الخميس: 9 صباحاً - 10 مساءً
+            </span>
+          </div>
+          <div class="info-group">
+            <span class="location-info">
+              <i class="fa-solid fa-location-dot"></i>
+              نغطي جميع المحافظات
+            </span>
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-link"
+              aria-label="فيسبوك"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط الرئيسي -->
+    <header class="main-header">
+      <div class="container-custom header-flex">
+        <!-- زر الهمبرجر للجوال فقط -->
+        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- اللوجو -->
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+
+        <!-- الروابط الرئيسية للشاشات الكبيرة -->
+        <nav class="desktop-nav">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+
+          <!-- أنواع الشاشات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu">
+              <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+              <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+              <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+              <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+              <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+            </div>
+          </div>
+
+          <!-- الماركات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu brands-menu">
+              <a href="../سامسونج/">سامسونج</a>
+              <a href="../الجي/">ال جي</a>
+              <a href="../توشيبا/">توشيبا</a>
+              <a href="../شارب/">شارب</a>
+              <a href="../سوني/">سوني</a>
+              <a href="../هايسنس/">هايسنس</a>
+              <a href="../تورنيدو/">تورنيدو</a>
+              <a href="../فريش/">فريش</a>
+              <a href="../يونيفرسال/">يونيفرسال</a>
+              <a href="../شاومي/">شاومي</a>
+              <a href="../يونيون-اير/">يونيون إير</a>
+              <a href="../جاك/">جاك</a>
+              <a href="../هاير/">هاير</a>
+            </div>
+          </div>
+          <a href="../مناطق-الخدمة/" class="nav-link">مناطق الخدمة</a>
+          <a href="../الاعطال-الشائعة/" class="nav-link active"
+            >الأعطال الشائعة</a
+          >
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
+        </nav>
+
+        <!-- أزرار الخط الساخن والاتصال -->
+        <div class="header-actions">
+          <a href="tel:19580" class="btn-hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i>
+            <span>19580</span>
+          </a>
+          <a href="tel:01289966660" class="btn-phone pulse-blue">
+            <i class="fa-solid fa-phone"></i>
+            <span>01289966660</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- الخلفية المعتمة للقائمة الجانبية -->
+    <div id="overlay" class="drawer-overlay"></div>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img small"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+        <button id="closeBtn" class="close-btn" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <a href="../index.html" class="drawer-link">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a>
+
+        <!-- أنواع الشاشات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
+            <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="screensSubMenu" class="drawer-submenu hidden">
+            <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+            <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+            <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+            <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+            <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+          </div>
+        </div>
+
+        <!-- الماركات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tags"></i> الماركات</span>
+            <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="brandsSubMenu" class="drawer-submenu hidden scrollable">
+            <a href="../سامسونج/">سامسونج</a>
+            <a href="../الجي/">ال جي</a>
+            <a href="../توشيبا/">توشيبا</a>
+            <a href="../شارب/">شارب</a>
+            <a href="../سوني/">سوني</a>
+            <a href="../هايسنس/">هايسنس</a>
+            <a href="../تورنيدو/">تورنيدو</a>
+            <a href="../فريش/">فريش</a>
+            <a href="../يونيفرسال/">يونيفرسال</a>
+            <a href="../شاومي/">شاومي</a>
+            <a href="../يونيون-اير/">يونيون إير</a>
+            <a href="../جاك/">جاك</a>
+            <a href="../هاير/">هاير</a>
+          </div>
+        </div>
+
+        <a href="../مناطق-الخدمة/" class="drawer-link"
+          ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
+        >
+        <a href="../الاعطال-الشائعة/" class="drawer-link main-color active"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> الأعطال الشائعة</a
+        >
+        <a href="../المدونة/" class="drawer-link"
+          ><i class="fa-solid fa-blog"></i> المدونة</a
+        >
+        <a href="../اتصل-بنا/" class="drawer-link"
+          ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+        >
+      </div>
+
+      <div class="drawer-footer">
+        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+          <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+        </a>
+        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+          <i class="fa-solid fa-phone"></i> 01289966660
+        </a>
+        <a
+          href="https://wa.me/201289966660"
+          target="_blank"
+          class="drawer-btn green"
+        >
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp pulse-green"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:19580" class="float-btn phone pulse-blue">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+
+    <!-- هيرو صفحة الأعطال الشائعة -->
+    <section class="sub-hero-section">
+      <div class="sub-hero-overlay"></div>
+
+      <div class="container-custom sub-hero-content">
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+          <a href="../index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <a href="../الاعطال-الشائعة/">الأعطال الشائعة</a>
+        </nav>
+
+        <div class="sub-hero-box">
+          <div class="sub-hero-text-area">
+            <h1 class="sub-hero-title">
+              عطل وجود صورة بلا صوت في الشاشات (اختفاء أو تشويش الصوت)
+            </h1>
+            <p class="sub-hero-desc">
+              دليلك الشامل لمعرفة أسباب مشكلة انعدام الصوت أو ظهور زنة وتشويش مع
+              وجود صورة ممتازة، وكيفية إصلاح نظام الصوت بكروت أصلية بالمنزل
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سكشن كروت الأعطال السريعة -->
+    <section class="coverage-section">
+      <div class="container-custom">
+        <div class="coverage-header">
+          <span class="badge-tag">
+            <i class="fa-solid fa-volume-xmark"></i> العطل الرئيسي
+          </span>
+          <h2>مشكلة انعدام الصوت ووضوح الصورة</h2>
+          <p>
+            نقدم حلولاً جذرية وفورية لعطل دوائر الصوت والمكبرات المسببة لاختفاء
+            الصوت نهائياً
+          </p>
+        </div>
+
+        <div
+          class="coverage-grid"
+          style="
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            justify-content: center;
+          "
+        >
+          <div class="coverage-card" style="border-color: #f97316">
+            <i class="fa-solid fa-volume-xmark" style="color: #f97316"></i>
+            <span>تلف آي سي الصوت (Audio IC Failure)</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>تلف السماعات الداخلية للشاشة</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-sliders"></i>
+            <span>خلل في إعدادات مخرج الصوت (Audio Out)</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-microchip"></i>
+            <span>مشكلة في البرمجيات والسوفت وير</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- محتوى صفحة الأعطال الشائعة الرئيسي -->
+    <section class="service-details-section">
+      <div class="container-custom service-layout">
+        <!-- القائمة الجانبية للحجز السريع -->
+        <aside class="service-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <i class="fa-solid fa-headset"></i>
+              <h3>احجز إصلاح عطل الصوت الآن</h3>
+            </div>
+            <p>
+              فنيون متخصصون جاهزون لفحص واستبدال دائرة الصوت والسماعات لشاشتك في
+              منزلك بضمان معتمد
+            </p>
+
+            <div class="booking-actions">
+              <a href="tel:19580" class="booking-btn hotline-btn">
+                <i class="fa-solid fa-phone-volume"></i> الخط الساخن 19580
+              </a>
+              <a href="tel:01289966660" class="booking-btn phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="booking-btn whatsapp-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- محتوى التفاصيل للأعطال -->
+        <div class="service-content-area">
+          <div class="content-block">
+            <h2>لماذا تظهر الصورة كوداعية وبلا أي صوت في الشاشة؟</h2>
+            <p>
+              تعتبر مشكلة <strong>"وجود صورة بلا صوت"</strong> من الأعطال
+              المزعجة في الشاشات المنزلية (LED و LCD و Smart). وتظهر هذه المشكلة
+              عندما تعمل لوحة العرض (Panel) وليدات الإضاءة بكفاءة ممتازة وتظهر
+              الألوان بشكل نقي، بينما لا يخرج أي صوت من الشاشة، أو يصدر صوت زنة
+              وتشويش عالي. يمتلك مركز "خبراء صيانة الشاشات في مصر" الحلول
+              التقنية الفورية لمعالجة دائرة الصوت واستبدال المكونات التالفة في
+              منزل العميل.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>الأسباب الرئيسية لعطل الصورة بدون صوت وطرق حلها</h2>
+
+            <div class="fault-item">
+              <h3>1. احتراق أو تلف آي سي الصوت (Audio IC):</h3>
+              <p>
+                وهو السبب الأكثر شيوعاً لهذا العطل. آي سي الصوت عبارة عن شريحة
+                معالجة وتكبير الصوت المثبتة على اللوحة الرئيسية (Main Board).
+                عند تعرضها لارتفاع في درجة الحرارة أو التيار الكهربائي تتوقف عن
+                العمل نهائياً، ويتم صيانة اللوحة واستبدال قطاع آي سي الصوت
+                بشرائح أصلية.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>2. تلف السماعات الداخلية للشاشة (Internal Speakers):</h3>
+              <p>
+                نتيجة تشغيل الصوت على أعلى مستوياته لفترات طويلة أو بسبب
+                الرطوبة، قد تتعرض الملفات الداخلية لسماعات الشاشة للاحتراق أو
+                التمزق. ويتم حل المشكلة بتغيير السماعات التالفة بأطقم جديدة ذات
+                نقاء صوت ممتاز.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>
+                3. مشاكل إعدادات السوفت وير ومخارج الصوت (Audio Output
+                Settings):
+              </h3>
+              <p>
+                في الشاشات الذكية (Smart TV)، قد تحول الشاشة مخرج الصوت تلقائياً
+                إلى خيار السماعات الخارجية (Optical / HDMI ARC / Bluetooth)، مما
+                يقطع الصوت عن السماعات الداخلية. يتم حلها بإعادة ضبط المصنع أو
+                ضبط إعدادات الصوت ومخرج السبيكر الداخلي.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- البطاقة البيضاء والجدول المعدل المتجاوب -->
+    <section class="details-outer-section">
+      <div class="main-white-card">
+        <!-- جدول الأعطال وطرق الإصلاح -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>جدول تشخيص وحلول عطل "صورة بلا صوت"</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 30%">مظاهر العطل الظاهري</th>
+                    <th style="width: 45%">السبب الفني الدقيق</th>
+                    <th style="width: 25%">طريقة الإصلاح والمعالجة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="مظاهر العطل الظاهري">
+                      <strong>صورة واضحة تماماً مع انقطاع الصوت الكلي</strong>
+                    </td>
+                    <td data-label="السبب الفني الدقيق">
+                      تلف أو احتراق آي سي الصوت (Audio IC) بالبوردة الرئيسية
+                    </td>
+                    <td data-label="طريقة الإصلاح والمعالجة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >استبدال آي سي الصوت أو صيانة البوردة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="مظاهر العطل الظاهري">
+                      <strong>صورة شغال مع وجود صوت خرير أو زنة عالية</strong>
+                    </td>
+                    <td data-label="السبب الفني الدقيق">
+                      تلف ملفات السماعات الداخلية للشاشة
+                    </td>
+                    <td data-label="طريقة الإصلاح والمعالجة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >استبدال السماعات الداخلية بجديدة أصلية</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="مظاهر العطل الظاهري">
+                      <strong
+                        >اختفاء الصوت فقط عند استخدام أجهزة خارجية
+                        (HDMI)</strong
+                      >
+                    </td>
+                    <td data-label="السبب الفني الدقيق">
+                      عطل في كابل HDMI أو خيار ترميز الصوت (PCM / Bitstream)
+                    </td>
+                    <td data-label="طريقة الإصلاح والمعالجة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >تغيير الكابل وضبط إعدادات الصوت برسيفر/شاشة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="مظاهر العطل الظاهري">
+                      <strong
+                        >توقف الصوت بعد تحديث السوفت وير في الشاشات
+                        السمارت</strong
+                      >
+                    </td>
+                    <td data-label="السبب الفني الدقيق">
+                      خلل في ملفات السوفت وير المسؤولة عن تعريف الصوت
+                    </td>
+                    <td data-label="طريقة الإصلاح والمعالجة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >إعادة تثبيت السوفت وير الأصلي وإعادة الضبط</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- شبكة الماركات -->
+        <section class="brands-section">
+          <div class="container-custom">
+            <div class="section-header text-center">
+              <h2>نصلح عطل الصورة بلا صوت لكافة الماركات</h2>
+              <p>
+                فريقنا مدرب على معالجة كافة دوائر الصوت والسماعات لمختلف
+                الماركات بقطع غيار أصلية وضمان معتمد
+              </p>
+            </div>
+
+            <div class="brands-grid">
+              <a href="../سامسونج/" class="brand-card">
+                <span class="brand-en">SAMSUNG</span>
+                <span class="brand-ar">سامسونج</span>
+              </a>
+              <a href="../الجي/" class="brand-card">
+                <span class="brand-en">LG</span>
+                <span class="brand-ar">ال جي</span>
+              </a>
+              <a href="../توشيبا/" class="brand-card">
+                <span class="brand-en">TOSHIBA</span>
+                <span class="brand-ar">توشيبا</span>
+              </a>
+              <a href="../شارب/" class="brand-card">
+                <span class="brand-en">SHARP</span>
+                <span class="brand-ar">شارب</span>
+              </a>
+              <a href="../سوني/" class="brand-card">
+                <span class="brand-en">SONY</span>
+                <span class="brand-ar">سوني</span>
+              </a>
+              <a href="../هايسنس/" class="brand-card">
+                <span class="brand-en">HISENSE</span>
+                <span class="brand-ar">هايسنس</span>
+              </a>
+              <a href="../تورنيدو/" class="brand-card">
+                <span class="brand-en">TORNADO</span>
+                <span class="brand-ar">تورنيدو</span>
+              </a>
+              <a href="../فريش/" class="brand-card">
+                <span class="brand-en">fresh</span>
+                <span class="brand-ar">فريش</span>
+              </a>
+              <a href="../جاك/" class="brand-card">
+                <span class="brand-en">jac</span>
+                <span class="brand-ar">جاك</span>
+              </a>
+              <a href="../هاير/" class="brand-card">
+                <span class="brand-en">haier</span>
+                <span class="brand-ar">هاير</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- بانر الاتصال السريع السفلي -->
+        <section class="cta-banner-section">
+          <div class="container-custom">
+            <div class="cta-blue-card">
+              <h2>هل تعمل شاشتك بصورة ممتازة وبدون صوت الآن؟</h2>
+              <p>
+                اتصل بـ خبراء صيانة الشاشات في مصر للحصول على فحص منزلي فوري
+                وإصلاح دوائر الصوت والسماعات بضمان معتمد.
+              </p>
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- الكلمات المفتاحية -->
+        <div class="sub-info-card keywords-card">
+          <h2>كلمات بحث ذات صلة بعطل الصورة بلا صوت</h2>
+          <div class="keywords-tags">
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >صيانة عطل الصوت في الشاشات</a
+            >
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >حل مشكلة الشاشة صورة بدون صوت</a
+            >
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >تغيير سماعات الشاشة الداخلية</a
+            >
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >اصلاح أي سي الصوت للشاشة</a
+            >
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >حل مشكلة زنة الصوت في الشاشة</a
+            >
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >رقم صيانة الشاشات الموحد</a
+            >
+            <a href="../الاعطال-الشائعة/" class="keyword-tag"
+              >صيانة شاشات بالمنزل</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ملف الـ JS الخارجي -->
+    <script src="script.js"></script>
+  </body>
+</html>

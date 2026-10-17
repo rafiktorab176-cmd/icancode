@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>صيانة شاشات تورنيدو - مركز الخبراء</title>
+    <title>مناطق الخدمة - مركز خبراء صيانة الشاشات في القاهرة</title>
 
     <!-- أيقونة المتصفح -->
     <link
@@ -12,11 +12,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
     />
     <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+
     <!-- FontAwesome للأيقونات -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- ملف الـ CSS الخارجي -->
     <link rel="stylesheet" href="style.css" />
@@ -35,7 +39,7 @@
           <div class="info-group">
             <span class="location-info">
               <i class="fa-solid fa-location-dot"></i>
-              نغطي جميع المحافظات
+              نغطي جميع أحياء ومناطق القاهرة
             </span>
             <a
               href="https://www.facebook.com/lgg.19580/"
@@ -57,7 +61,7 @@
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <!-- اللوجو (صورة) -->
+        <!-- اللوجو -->
         <a href="../index.html" class="logo-area">
           <img
             src="../assets/logo_main.webp"
@@ -71,7 +75,7 @@
 
         <!-- الروابط الرئيسية للشاشات الكبيرة -->
         <nav class="desktop-nav">
-          <a href="../index.html">الرئيسية</a>
+          <a href="../index.html" class="nav-link">الرئيسية</a>
 
           <!-- أنواع الشاشات -->
           <div class="dropdown-container">
@@ -99,7 +103,7 @@
               <a href="../شارب/">شارب</a>
               <a href="../سوني/">سوني</a>
               <a href="../هايسنس/">هايسنس</a>
-              <a href="../تورنيدو/" class="active">تورنيدو</a>
+              <a href="../تورنيدو/">تورنيدو</a>
               <a href="../فريش/">فريش</a>
               <a href="../يونيفرسال/">يونيفرسال</a>
               <a href="../شاومي/">شاومي</a>
@@ -108,7 +112,7 @@
               <a href="../هاير/">هاير</a>
             </div>
           </div>
-          <a href="../مناطق-الخدمة/" class="nav-link">مناطق الخدمة</a>
+          <a href="../مناطق-الخدمة/" class="nav-link active">مناطق الخدمة</a>
           <a href="../الاعطال-الشائعة/" class="nav-link">الأعطال الشائعة</a>
           <a href="../المدونة/" class="nav-link">المدونة</a>
           <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
@@ -150,7 +154,7 @@
       </div>
 
       <div class="drawer-body">
-        <a href="../index.html" class="drawer-link main-color">
+        <a href="../index.html" class="drawer-link">
           <i class="fa-solid fa-house"></i> الرئيسية
         </a>
 
@@ -182,7 +186,7 @@
             <a href="../شارب/">شارب</a>
             <a href="../سوني/">سوني</a>
             <a href="../هايسنس/">هايسنس</a>
-            <a href="../تورنيدو/" class="active">تورنيدو</a>
+            <a href="../تورنيدو/">تورنيدو</a>
             <a href="../فريش/">فريش</a>
             <a href="../يونيفرسال/">يونيفرسال</a>
             <a href="../شاومي/">شاومي</a>
@@ -192,7 +196,7 @@
           </div>
         </div>
 
-        <a href="../مناطق-الخدمة/" class="drawer-link"
+        <a href="../مناطق-الخدمة/" class="drawer-link main-color active"
           ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
         >
         <a href="../الأعطال-الشائعة/" class="drawer-link"
@@ -236,6 +240,439 @@
         <i class="fa-solid fa-phone"></i>
       </a>
     </div>
+
+    <!-- هيرو صفحة مناطق الخدمة -->
+    <section class="sub-hero-section">
+      <div class="sub-hero-overlay"></div>
+
+      <div class="container-custom sub-hero-content">
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+          <a href="../index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <a href="../مناطق-الخدمة/">مناطق الخدمة</a>
+        </nav>
+
+        <div class="sub-hero-box">
+          <div class="sub-hero-text-area">
+            <h1 class="sub-hero-title">خدمة صيانة الشاشات في القاهرة</h1>
+            <p class="sub-hero-desc">
+              نغطي جميع أحياء ومناطق محافظة القاهرة بفريق عمل مجهز لأداء الصيانة
+              المنزلية الفورية بأعلى جودة وضمان معتمد
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سكشن كروت المحافظات والتغطية الجغرافية -->
+    <section class="coverage-section">
+      <div class="container-custom">
+        <div class="coverage-header">
+          <span class="badge-tag">
+            <i class="fa-solid fa-location-dot"></i> التغطية
+          </span>
+          <h2>مناطق تغطية خدمتنا بالقاهرة</h2>
+          <p>نغطي جميع أحياء ومناطق القاهرة بفريق فنيين متخصصين في كل منطقة</p>
+        </div>
+
+        <div class="coverage-grid">
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>مدينة نصر</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>مصر الجديدة</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>التجمع الخامس</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>المعادي</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>هليوبوليس</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>المقطم</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>شبرا مصر</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>عين شمس</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>المطرية</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>المرج</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الشرابية</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>وسط البلد</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>مدينة الشروق</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>مدينة الرحاب</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- محتوى صفحة مناطق الخدمة الرئيسي -->
+    <section class="service-details-section">
+      <div class="container-custom service-layout">
+        <!-- القائمة الجانبية للحجز السريع -->
+        <aside class="service-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <i class="fa-solid fa-headset"></i>
+              <h3>احجز صيانة الآن</h3>
+            </div>
+            <p>
+              فنيون متخصصون جاهزون للوصول إليك في أسرع وقت بجميع مناطق القاهرة
+            </p>
+
+            <div class="booking-actions">
+              <a href="tel:19580" class="booking-btn hotline-btn">
+                <i class="fa-solid fa-phone-volume"></i> الخط الساخن 19580
+              </a>
+              <a href="tel:01289966660" class="booking-btn phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="booking-btn whatsapp-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- محتوى التفاصيل -->
+        <div class="service-content-area">
+          <div class="content-block">
+            <h2>خريطة تغطية مراكز صيانة الشاشات في القاهرة</h2>
+            <p>
+              حرصاً منا على توفير خدمة سريعة ومريحة لعملائنا الكرام، يمتلك مركز
+              "خبراء صيانة الشاشات في مصر" شبكة واسعة من سيارات الخدمة المجهزة
+              وورش الصيانة المتنقلة التي تغطي كافة أحياء ومناطق محافظة القاهرة
+              ومدنها الجديدة. نصلك أينما كنت لفحص وتصليح شاشتك في منزلك دون
+              الحاجة لنقل الجهاز وحمايته من مخاطر الطرق والكسر.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>أبرز الأحياء والمناطق التي نخدمها بالقاهرة</h2>
+
+            <div class="fault-item">
+              <h3>مدينة نصر ومصر الجديدة:</h3>
+              <p>
+                تغطية شاملة لجميع مناطق مدينة نصر (مكرم عبيد، الحي العاشر،
+                الطيران، العباس العقاد)، ومصر الجديدة (روكسي، الميرغني، الكوربة،
+                هليوبوليس) بسرعة استجابة فائقة وفريق فني مقيم لخدمتكم طوال أيام
+                الأسبوع.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>التجمع الخامس والمدن الجديدة:</h3>
+              <p>
+                نخدم كافة أحياء التجمع الأول والثامنة والخامسة، مدينتي، الرحاب،
+                الشروق، وبدر عبر فروعنا المنتشرة لضمان سرعة الوصول بقطع غيار
+                أصلية.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>المعادي ومصر القديمة:</h3>
+              <p>
+                خدمة صيانة منزلية فورية تغطي كافة أحياء المعادي (دجلة، المعادي
+                القديمة، كورنيش النيل، البساتين) ومصر القديمة والسيدة زينب بأعلى
+                مستوى من الجودة.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>شبرا مصر ووسط البلد:</h3>
+              <p>
+                توفير سيارات صيانة متنقلة لخدمة أهالي شبرا مصر، روض الفرج،
+                الشرابية، وسط البلد، رمسيس، وشارع عبد العزيز لإصلاح كافة أعطال
+                الشاشات (ليد، سمارت، 4K) في نفس الزيارة المنزلية.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>عين شمس والمطرية والمرج:</h3>
+              <p>
+                فريق فني متخصص ومؤهل للتعامل مع أعطال الشاشات الكبرى والصغرى
+                وتقديم الدعم الفني الكامل لشرق وشمال القاهرة.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- البطاقة البيضاء والجدول المعدل المتجاوب -->
+    <section class="details-outer-section">
+      <div class="main-white-card">
+        <!-- جدول التغطية الجغرافية الخالي من أي مشاكل قص أو تقسيم -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>جدول تغطية مناطق القاهرة وخدمات الصيانة</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 30%">المنطقة / الحي</th>
+                    <th style="width: 45%">أبرز الشوارع والأماكن المشمولة</th>
+                    <th style="width: 25%">سرعة الاستجابة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="المنطقة / الحي">
+                      <strong>مدينة نصر ومصر الجديدة</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      مكرم عبيد، الطيران، الحي العاشر، روكسي، الميرغني
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال ساعات قليلة (نفس اليوم)</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / الحي">
+                      <strong>التجمع والمدن الجديدة</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      التجمع الأول، التجمع الخامس، مدينتي، الرحاب، الشروق
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 24 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / الحي">
+                      <strong>المعادي ومصر القديمة</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      دجلة المعادي، الكورنيش، البساتين، السيدة زينب، مصر القديمة
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 24 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / الحي">
+                      <strong>شبرا مصر ووسط البلد</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      شارع شبرا، روض الفرج، وسط البلد، رمسيس، العباسية
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 24 إلى 48 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / الحي">
+                      <strong>عين شمس والمطرية والمرج</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      عين شمس، المطرية، المرج، جسر السويس، المظلات
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 48 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- سكشن كروت الأعطال السريعة -->
+        <section class="coverage-section">
+          <div class="container-custom">
+            <div class="coverage-header">
+              <span class="badge-tag">
+                <i class="fa-solid fa-screwdriver-wrench"></i> الأعطال
+              </span>
+              <h2>أبرز مشاكل الشاشات الشائعة</h2>
+              <p>
+                نقدم حلولاً جذرية وفورية لكافة الأعطال الفنية والتقنية لشاشات
+                العرض الحديثة
+              </p>
+            </div>
+
+            <div class="coverage-grid">
+              <a href="../صوت-بلا-صورة/" class="coverage-card">
+                <i class="fa-solid fa-tv"></i>
+                <span>انقطاع الصورة وبقاء الصوت</span>
+              </a>
+
+              <a href="../عطل-الباور/" class="coverage-card">
+                <i class="fa-solid fa-bolt"></i>
+                <span>عطل الباور وعدم التشغيل</span>
+              </a>
+
+              <a href="../خطوط-بالشاشة/" class="coverage-card">
+                <i class="fa-solid fa-desktop"></i>
+                <span>خطوط رأسية أو أفقية بالشاشة</span>
+              </a>
+
+              <a href="../تكسير-البنل/" class="coverage-card">
+                <i class="fa-solid fa-display"></i>
+                <span>تكسير أو كسر البنل الداخلي</span>
+              </a>
+
+              <a href="../مشاريع-مشاكل-الواي-فاي/" class="coverage-card">
+                <i class="fa-solid fa-wifi"></i>
+                <span>مشاريع ومشاكل السمارت والواي فاي</span>
+              </a>
+
+              <a href="../صورة-بلا-صوت/" class="coverage-card">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <span>انعدام أو تشويش الصوت</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- شبكة الماركات -->
+        <section class="brands-section">
+          <div class="container-custom">
+            <div class="section-header text-center">
+              <h2>الماركات التي نصلحها في كافة مناطق القاهرة</h2>
+              <p>
+                نقدم خدمة الصيانة الشاملة لكافة الماركات العالمية بقطع غيار
+                أصلية وضمان معتمد
+              </p>
+            </div>
+
+            <div class="brands-grid">
+              <a href="../سامسونج/" class="brand-card">
+                <span class="brand-en">SAMSUNG</span>
+                <span class="brand-ar">سامسونج</span>
+              </a>
+              <a href="../الجي/" class="brand-card">
+                <span class="brand-en">LG</span>
+                <span class="brand-ar">ال جي</span>
+              </a>
+              <a href="../توشيبا/" class="brand-card">
+                <span class="brand-en">TOSHIBA</span>
+                <span class="brand-ar">توشيبا</span>
+              </a>
+              <a href="../شارب/" class="brand-card">
+                <span class="brand-en">SHARP</span>
+                <span class="brand-ar">شارب</span>
+              </a>
+              <a href="../سوني/" class="brand-card">
+                <span class="brand-en">SONY</span>
+                <span class="brand-ar">سوني</span>
+              </a>
+              <a href="../هايسنس/" class="brand-card">
+                <span class="brand-en">HISENSE</span>
+                <span class="brand-ar">هايسنس</span>
+              </a>
+              <a href="../تورنيدو/" class="brand-card">
+                <span class="brand-en">TORNADO</span>
+                <span class="brand-ar">تورنيدو</span>
+              </a>
+              <a href="../فريش/" class="brand-card">
+                <span class="brand-en">fresh</span>
+                <span class="brand-ar">فريش</span>
+              </a>
+              <a href="../جاك/" class="brand-card">
+                <span class="brand-en">jac</span>
+                <span class="brand-ar">جاك</span>
+              </a>
+              <a href="../هاير/" class="brand-card">
+                <span class="brand-en">haier</span>
+                <span class="brand-ar">هاير</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- بانر الاتصال السريع السفلي -->
+        <section class="cta-banner-section">
+          <div class="container-custom">
+            <div class="cta-blue-card">
+              <h2>ابحث عن أقرب فني صيانة لشاشتك في القاهرة الآن</h2>
+              <p>
+                اتصل بـ خبراء صيانة الشاشات في القاهرة لتحديد موقعك وحجز موعد
+                زيارة الفني المنزلي السريع.
+              </p>
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- الكلمات المفتاحية -->
+        <div class="sub-info-card keywords-card">
+          <h2>كلمات بحث ذات صلة بمناطق خدمة الشاشات بالقاهرة</h2>
+          <div class="keywords-tags">
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >صيانة شاشات القاهرة</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >مركز صيانة شاشات مدينة نصر</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >تصليح شاشات بالمنزل بالقاهرة</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >صيانة شاشات مصر الجديدة</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >رقم صيانة الشاشات الموحد بالقاهرة</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >خبراء صيانة الشاشات في القاهرة</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >فني صيانة شاشات منزلي القاهرة</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ملف الـ JS الخارجي -->
     <script src="script.js"></script>
   </body>
 </html>

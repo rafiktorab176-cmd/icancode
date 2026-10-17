@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مناطق الخدمة - مركز خبراء صيانة الشاشات في الشرقية</title>
+
+    <!-- أيقونة المتصفح -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
+    />
+    <link rel="icon" type="image/png" href="../assets/19580-logo.png" />
+
+    <!-- FontAwesome للأيقونات -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+      <div class="container-custom">
+        <div class="top-bar-content">
+          <div class="info-group">
+            <span class="time-info">
+              <i class="fa-regular fa-clock"></i>
+              السبت - الخميس: 9 صباحاً - 10 مساءً
+            </span>
+          </div>
+          <div class="info-group">
+            <span class="location-info">
+              <i class="fa-solid fa-location-dot"></i>
+              نغطي جميع مراكز ومدن الشرقية
+            </span>
+            <a
+              href="https://www.facebook.com/lgg.19580/"
+              class="social-link"
+              aria-label="فيسبوك"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط الرئيسي -->
+    <header class="main-header">
+      <div class="container-custom header-flex">
+        <!-- زر الهمبرجر للجوال فقط -->
+        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- اللوجو -->
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+
+        <!-- الروابط الرئيسية للشاشات الكبيرة -->
+        <nav class="desktop-nav">
+          <a href="../index.html" class="nav-link">الرئيسية</a>
+
+          <!-- أنواع الشاشات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu">
+              <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+              <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+              <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+              <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+              <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+            </div>
+          </div>
+
+          <!-- الماركات -->
+          <div class="dropdown-container">
+            <span class="dropdown-toggle"
+              >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
+            ></span>
+            <div class="dropdown-menu brands-menu">
+              <a href="../سامسونج/">سامسونج</a>
+              <a href="../الجي/">ال جي</a>
+              <a href="../توشيبا/">توشيبا</a>
+              <a href="../شارب/">شارب</a>
+              <a href="../سوني/">سوني</a>
+              <a href="../هايسنس/">هايسنس</a>
+              <a href="../تورنيدو/">تورنيدو</a>
+              <a href="../فريش/">فريش</a>
+              <a href="../يونيفرسال/">يونيفرسال</a>
+              <a href="../شاومي/">شاومي</a>
+              <a href="../يونيون-اير/">يونيون إير</a>
+              <a href="../جاك/">جاك</a>
+              <a href="../هاير/">هاير</a>
+            </div>
+          </div>
+          <a href="../مناطق-الخدمة/" class="nav-link active">مناطق الخدمة</a>
+          <a href="../الاعطال-الشائعة/" class="nav-link">الأعطال الشائعة</a>
+          <a href="../المدونة/" class="nav-link">المدونة</a>
+          <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
+        </nav>
+
+        <!-- أزرار الخط الساخن والاتصال -->
+        <div class="header-actions">
+          <a href="tel:19580" class="btn-hotline pulse-orange">
+            <i class="fa-solid fa-headset"></i>
+            <span>19580</span>
+          </a>
+          <a href="tel:01289966660" class="btn-phone pulse-blue">
+            <i class="fa-solid fa-phone"></i>
+            <span>01289966660</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- الخلفية المعتمة للقائمة الجانبية -->
+    <div id="overlay" class="drawer-overlay"></div>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <div class="drawer-header">
+        <a href="../index.html" class="logo-area">
+          <img
+            src="../assets/logo_main.webp"
+            alt="خبراء صيانة الشاشات"
+            class="logo-img small"
+          />
+          <div class="logo-text">
+            <h2>خبراء صيانة الشاشات</h2>
+          </div>
+        </a>
+        <button id="closeBtn" class="close-btn" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body">
+        <a href="../index.html" class="drawer-link">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a>
+
+        <!-- أنواع الشاشات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
+            <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="screensSubMenu" class="drawer-submenu hidden">
+            <a href="../صيانة-شاشات-led/">صيانة شاشات LED</a>
+            <a href="../صيانة-شاشات-lcd/">صيانة شاشات LCD</a>
+            <a href="../صيانة-شاشات-oled/">صيانة شاشات OLED</a>
+            <a href="../صيانة-شاشات-سمارت/">صيانة شاشات سمارت</a>
+            <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
+          </div>
+        </div>
+
+        <!-- الماركات - موبايل -->
+        <div class="drawer-dropdown">
+          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+            <span><i class="fa-solid fa-tags"></i> الماركات</span>
+            <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="brandsSubMenu" class="drawer-submenu hidden scrollable">
+            <a href="../سامسونج/">سامسونج</a>
+            <a href="../الجي/">ال جي</a>
+            <a href="../توشيبا/">توشيبا</a>
+            <a href="../شارب/">شارب</a>
+            <a href="../سوني/">سوني</a>
+            <a href="../هايسنس/">هايسنس</a>
+            <a href="../تورنيدو/">تورنيدو</a>
+            <a href="../فريش/">فريش</a>
+            <a href="../يونيفرسال/">يونيفرسال</a>
+            <a href="../شاومي/">شاومي</a>
+            <a href="../يونيون-اير/">يونيون إير</a>
+            <a href="../جاك/">جاك</a>
+            <a href="../هاير/">هاير</a>
+          </div>
+        </div>
+
+        <a href="../مناطق-الخدمة/" class="drawer-link main-color active"
+          ><i class="fa-solid fa-map-location-dot"></i> مناطق الخدمة</a
+        >
+        <a href="../الأعطال-الشائعة/" class="drawer-link"
+          ><i class="fa-solid fa-screwdriver-wrench"></i> الأعطال الشائعة</a
+        >
+        <a href="../المدونة/" class="drawer-link"
+          ><i class="fa-solid fa-blog"></i> المدونة</a
+        >
+        <a href="../اتصل-بنا/" class="drawer-link"
+          ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+        >
+      </div>
+
+      <div class="drawer-footer">
+        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+          <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
+        </a>
+        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+          <i class="fa-solid fa-phone"></i> 01289966660
+        </a>
+        <a
+          href="https://wa.me/201289966660"
+          target="_blank"
+          class="drawer-btn green"
+        >
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/201289966660"
+        target="_blank"
+        class="float-btn whatsapp pulse-green"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a href="tel:19580" class="float-btn phone pulse-blue">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+
+    <!-- هيرو صفحة مناطق الخدمة -->
+    <section class="sub-hero-section">
+      <div class="sub-hero-overlay"></div>
+
+      <div class="container-custom sub-hero-content">
+        <nav class="breadcrumb-nav" aria-label="breadcrumb">
+          <a href="../index.html">الرئيسية</a>
+          <span class="separator">/</span>
+          <a href="../مناطق-الخدمة/">مناطق الخدمة</a>
+        </nav>
+
+        <div class="sub-hero-box">
+          <div class="sub-hero-text-area">
+            <h1 class="sub-hero-title">خدمة صيانة الشاشات في الشرقية</h1>
+            <p class="sub-hero-desc">
+              نغطي جميع المراكز والمدن بمحافظة الشرقية بفريق عمل مجهز لأداء
+              الصيانة المنزلية الفورية بأعلى جودة وضمان معتمد
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- سكشن كروت المحافظات والتغطية الجغرافية -->
+    <section class="coverage-section">
+      <div class="container-custom">
+        <div class="coverage-header">
+          <span class="badge-tag">
+            <i class="fa-solid fa-location-dot"></i> التغطية
+          </span>
+          <h2>مناطق تغطية خدمتنا بالشرقية</h2>
+          <p>نغطي جميع مراكز ومدن الشرقية بفريق فنيين متخصصين في كل منطقة</p>
+        </div>
+
+        <div class="coverage-grid">
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الزقازيق</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>العاشر من رمضان</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>بلبيس</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>منيا القمح</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>أبو حماد</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>فاقوس</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>ههيا</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>ديرب نجم</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>أبو كبير</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>كفر صقر</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>مشتول السوق</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الإبراهيمية</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الحسينية</span>
+          </div>
+          <div class="coverage-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الصالحية الجديدة</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- محتوى صفحة مناطق الخدمة الرئيسي -->
+    <section class="service-details-section">
+      <div class="container-custom service-layout">
+        <!-- القائمة الجانبية للحجز السريع -->
+        <aside class="service-sidebar">
+          <div class="booking-card">
+            <div class="booking-header">
+              <i class="fa-solid fa-headset"></i>
+              <h3>احجز صيانة الآن</h3>
+            </div>
+            <p>
+              فنيون متخصصون جاهزون للوصول إليك في أسرع وقت بجميع مناطق الشرقية
+            </p>
+
+            <div class="booking-actions">
+              <a href="tel:19580" class="booking-btn hotline-btn">
+                <i class="fa-solid fa-phone-volume"></i> الخط الساخن 19580
+              </a>
+              <a href="tel:01289966660" class="booking-btn phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="booking-btn whatsapp-btn"
+              >
+                <i class="fa-brands fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- محتوى التفاصيل -->
+        <div class="service-content-area">
+          <div class="content-block">
+            <h2>خريطة تغطية مراكز صيانة الشاشات في الشرقية</h2>
+            <p>
+              حرصاً منا على توفير خدمة سريعة ومريحة لعملائنا الكرام، يمتلك مركز
+              "خبراء صيانة الشاشات في مصر" شبكة واسعة من سيارات الخدمة المجهزة
+              وورش الصيانة المتنقلة التي تغطي كافة مراكز ومدن محافظة الشرقية.
+              نصلك أينما كنت لفحص وتصليح شاشتك في منزلك دون الحاجة لنقل الجهاز
+              وحمايته من مخاطر الطرق والكسر.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>أبرز المراكز والمدن التي نخدمها بالشرقية</h2>
+
+            <div class="fault-item">
+              <h3>مدينة الزقازيق والنواحي التابعة:</h3>
+              <p>
+                تغطية شاملة لجميع أحياء الزقازيق (القومية، فلل الجامعة، صيادين،
+                الشوبك، المحطة، القنايات) بسرعة استجابة فائقة وفريق فني مقيم
+                لخدمتكم طوال أيام الأسبوع.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>مدينة العاشر من رمضان والصالحية الجديدة:</h3>
+              <p>
+                نخدم كافة مجاورات وأحياء مدينة العاشر من رمضان (من الحي الأول
+                حتى باقي الأحياء السكنية والصناعية)، بالإضافة إلى مدينة الصالحية
+                الجديدة عبر سياراتنا المنتشرة لضمان سرعة الوصول.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>بلبيس ومشتول السوق ومنيا القمح:</h3>
+              <p>
+                خدمة صيانة منزلية فورية تغطي مراكز بلبيس، مشتول السوق، ومنيا
+                القمح وكافة القرى التابعة لها بأعلى مستوى من الكفاءة بقطع غيار
+                أصلية.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>أبو حماد وأبو كبير وفاقوس:</h3>
+              <p>
+                توفير سيارات صيانة متنقلة لخدمة أهالي أبو حماد، فاقوس، أبو كبير،
+                ههيا، والدلجمون والقرى التابعة لإصلاح كافة أعطال الشاشات (ليد،
+                سمارت، 4K) في نفس الزيارة المنزلية.
+              </p>
+            </div>
+
+            <div class="fault-item">
+              <h3>ديرب نجم وكفر صقر والحسينية:</h3>
+              <p>
+                فريق فني متخصص ومؤهل للتعامل مع أعطال الشاشات بجميع مراكز شمال
+                وغرب الشرقية مثل ديرب نجم، كفر صقر، أولاد صقر، والحسينية بضمان
+                معتمد وتكلفة مناسبة.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- البطاقة البيضاء والجدول المعدل المتجاوب -->
+    <section class="details-outer-section">
+      <div class="main-white-card">
+        <!-- جدول التغطية الجغرافية الخالي من أي مشاكل قص أو تقسيم -->
+        <section class="page-main-section">
+          <div class="container-custom content-centered-wrapper">
+            <div class="section-title-box">
+              <h2>جدول تغطية مناطق الشرقية وخدمات الصيانة</h2>
+              <div class="title-underline"></div>
+            </div>
+
+            <div class="table-responsive-wrapper">
+              <table class="custom-repair-table">
+                <thead>
+                  <tr>
+                    <th style="width: 30%">المنطقة / المركز</th>
+                    <th style="width: 45%">أبرز الشوارع والأماكن المشمولة</th>
+                    <th style="width: 25%">سرعة الاستجابة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="المنطقة / المركز">
+                      <strong>الزقازيق والقنايات</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      القومية، فلل الجامعة، شيبة، الصيادين، القنايات
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال ساعات قليلة (نفس اليوم)</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / المركز">
+                      <strong>العاشر من رمضان والصالحية</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      مجاورات العاشر، المناطق الصناعية، الصالحية الجديدة
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 24 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / المركز">
+                      <strong>بلبيس ومنيا القمح ومشتول</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      مدينة بلبيس، منيا القمح، مشتول السوق والقرى التابعة
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 24 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / المركز">
+                      <strong>أبو حماد وفاقوس وأبو كبير</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      أبو حماد، فاقوس المدينة، أبو كبير، ههيا، الإبراهيمية
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 24 إلى 48 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-label="المنطقة / المركز">
+                      <strong>ديرب نجم وكفر صقر والحسينية</strong>
+                    </td>
+                    <td data-label="أبرز الشوارع والأماكن المشمولة">
+                      ديرب نجم، كفر صقر، أولاد صقر، الحسينية
+                    </td>
+                    <td data-label="سرعة الاستجابة">
+                      <span class="alert-text" style="color: #16a34a !important"
+                        >خلال 48 ساعة</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- سكشن كروت الأعطال السريعة -->
+        <section class="coverage-section">
+          <div class="container-custom">
+            <div class="coverage-header">
+              <span class="badge-tag">
+                <i class="fa-solid fa-screwdriver-wrench"></i> الأعطال
+              </span>
+              <h2>أبرز مشاكل الشاشات الشائعة</h2>
+              <p>
+                نقدم حلولاً جذرية وفورية لكافة الأعطال الفنية والتقنية لشاشات
+                العرض الحديثة
+              </p>
+            </div>
+
+            <div class="coverage-grid">
+              <a href="../صوت-بلا-صورة/" class="coverage-card">
+                <i class="fa-solid fa-tv"></i>
+                <span>انقطاع الصورة وبقاء الصوت</span>
+              </a>
+
+              <a href="../عطل-الباور/" class="coverage-card">
+                <i class="fa-solid fa-bolt"></i>
+                <span>عطل الباور وعدم التشغيل</span>
+              </a>
+
+              <a href="../خطوط-بالشاشة/" class="coverage-card">
+                <i class="fa-solid fa-desktop"></i>
+                <span>خطوط رأسية أو أفقية بالشاشة</span>
+              </a>
+
+              <a href="../تكسير-البنل/" class="coverage-card">
+                <i class="fa-solid fa-display"></i>
+                <span>تكسير أو كسر البنل الداخلي</span>
+              </a>
+
+              <a href="../مشاريع-مشاكل-الواي-فاي/" class="coverage-card">
+                <i class="fa-solid fa-wifi"></i>
+                <span>مشاريع ومشاكل السمارت والواي فاي</span>
+              </a>
+
+              <a href="../صورة-بلا-صوت/" class="coverage-card">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <span>انعدام أو تشويش الصوت</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- شبكة الماركات -->
+        <section class="brands-section">
+          <div class="container-custom">
+            <div class="section-header text-center">
+              <h2>الماركات التي نصلحها في كافة مناطق الشرقية</h2>
+              <p>
+                نقدم خدمة الصيانة الشاملة لكافة الماركات العالمية بقطع غيار
+                أصلية وضمان معتمد
+              </p>
+            </div>
+
+            <div class="brands-grid">
+              <a href="../سامسونج/" class="brand-card">
+                <span class="brand-en">SAMSUNG</span>
+                <span class="brand-ar">سامسونج</span>
+              </a>
+              <a href="../الجي/" class="brand-card">
+                <span class="brand-en">LG</span>
+                <span class="brand-ar">ال جي</span>
+              </a>
+              <a href="../توشيبا/" class="brand-card">
+                <span class="brand-en">TOSHIBA</span>
+                <span class="brand-ar">توشيبا</span>
+              </a>
+              <a href="../شارب/" class="brand-card">
+                <span class="brand-en">SHARP</span>
+                <span class="brand-ar">شارب</span>
+              </a>
+              <a href="../سوني/" class="brand-card">
+                <span class="brand-en">SONY</span>
+                <span class="brand-ar">سوني</span>
+              </a>
+              <a href="../هايسنس/" class="brand-card">
+                <span class="brand-en">HISENSE</span>
+                <span class="brand-ar">هايسنس</span>
+              </a>
+              <a href="../تورنيدو/" class="brand-card">
+                <span class="brand-en">TORNADO</span>
+                <span class="brand-ar">تورنيدو</span>
+              </a>
+              <a href="../فريش/" class="brand-card">
+                <span class="brand-en">fresh</span>
+                <span class="brand-ar">فريش</span>
+              </a>
+              <a href="../جاك/" class="brand-card">
+                <span class="brand-en">jac</span>
+                <span class="brand-ar">جاك</span>
+              </a>
+              <a href="../هاير/" class="brand-card">
+                <span class="brand-en">haier</span>
+                <span class="brand-ar">هاير</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- بانر الاتصال السريع السفلي -->
+        <section class="cta-banner-section">
+          <div class="container-custom">
+            <div class="cta-blue-card">
+              <h2>ابحث عن أقرب فني صيانة لشاشتك في الشرقية الآن</h2>
+              <p>
+                اتصل بـ خبراء صيانة الشاشات في الشرقية لتحديد موقعك وحجز موعد
+                زيارة الفني المنزلي السريع.
+              </p>
+              <a href="tel:01289966660" class="cta-phone-btn">
+                <i class="fa-solid fa-phone"></i> 01289966660
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- الكلمات المفتاحية -->
+        <div class="sub-info-card keywords-card">
+          <h2>كلمات بحث ذات صلة بمناطق خدمة الشاشات بالشرقية</h2>
+          <div class="keywords-tags">
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >صيانة شاشات الشرقية</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >مركز صيانة شاشات الزقازيق</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >تصليح شاشات العاشر من رمضان</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag">صيانة شاشات بلبيس</a>
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >رقم صيانة الشاشات الموحد بالشرقية</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >خبراء صيانة الشاشات في الشرقية</a
+            >
+            <a href="../مناطق-الخدمة/" class="keyword-tag"
+              >فني صيانة شاشات منزلي الشرقية</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ملف الـ JS الخارجي -->
+    <script src="script.js"></script>
+  </body>
+</html>
