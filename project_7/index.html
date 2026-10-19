@@ -3,8 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>خبراء صيانة الشاشات</title>
 
+    <!-- ================================================================= -->
+    <!-- 1. المقتطفات الأولية والعناوين (SEO Meta Tags)                     -->
+    <!-- ================================================================= -->
+    <title>مركز صيانة الشاشات | تصليح جميع أعطال الشاشات بالمنزل في مصر</title>
+    <meta
+      name="description"
+      content="المركز المتخصص في صيانة وتصليح جميع أنواع الشاشات (سامسونج، LG، توشيبا، يونيون إير، سوني، فريش). قطع غيار أصلية، صيانة منزلية فورية مع الضمان في القاهرة والمحافظات."
+    />
+    <meta
+      name="keywords"
+      content="صيانة شاشات, تصليح شاشات, مركز صيانة شاشات, صيانة شاشات سمارت, تصليح اعطال الشاشات, قطع غيار شاشات"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://screens-eg.com/" />
+
+    <!-- ================================================================= -->
+    <!-- 2. مقتطفات التواصل الاجتماعي (Open Graph / Facebook / Twitter)    -->
+    <!-- ================================================================= -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_EG" />
+    <meta property="og:site_name" content="خبراء صيانة الشاشات" />
+    <meta
+      property="og:title"
+      content="مركز صيانة الشاشات - تصليح جميع أنواع الشاشات بالمنزل"
+    />
+    <meta
+      property="og:description"
+      content="صيانة فورية بالمنزل لجميع أعطال الشاشات LED, LCD, OLED, Smart مع قطع غيار أصلية وضمان معتمد."
+    />
+    <meta property="og:url" content="https://screens-eg.com/" />
+    <meta
+      property="og:image"
+      content="https://screens-eg.com/assets/19580-logo.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="خبراء صيانة الشاشات بمصر" />
+    <meta
+      name="twitter:description"
+      content="خدمات صيانة وإصلاح جميع ماركات الشاشات بالمنزل وبأعلى جودة."
+    />
+    <meta
+      name="twitter:image"
+      content="https://screens-eg.com/assets/19580-logo.png"
+    />
+
+    <!-- ================================================================= -->
+    <!-- 3. الأيقونات والملفات الخارجية (Favicons & Stylesheets)            -->
+    <!-- ================================================================= -->
     <!-- أيقونة المتصفح في الـ URL -->
     <link
       rel="icon"
@@ -12,6 +60,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
     />
     <link rel="icon" type="image/png" href="./assets/19580-logo.png" />
+
     <!-- FontAwesome للأيقونات -->
     <link
       rel="stylesheet"
@@ -20,6 +69,76 @@
 
     <!-- ملف الـ CSS الخارجي -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ================================================================= -->
+    <!-- 4. أكواد السكيما الهيكلية (JSON-LD Structured Data Schema)        -->
+    <!-- ================================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          /* --- سكيما الموقع والمحرك (WebSite) --- */
+          {
+            "@type": "WebSite",
+            "@id": "https://screens-eg.com/#website",
+            "url": "https://screens-eg.com/",
+            "name": "خبراء صيانة الشاشات",
+            "description": "مركز متخصص في خدمات صيانة وإصلاح الشاشات في مصر",
+            "inLanguage": "ar-EG"
+          },
+
+          /* --- سكيما المؤسسة/الشركة (Organization) --- */
+          {
+            "@type": "Organization",
+            "@id": "https://screens-eg.com/#organization",
+            "name": "خبراء صيانة الشاشات",
+            "url": "https://screens-eg.com/",
+            "logo": "https://screens-eg.com/assets/19580-logo.png",
+            "image": "https://screens-eg.com/assets/19580-logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+201000000000" /* استبدله برقم الهاتف للخدمة */,
+              "contactType": "customer service",
+              "areaServed": "EG",
+              "availableLanguage": "Arabic"
+            }
+          },
+
+          /* --- سكيما النشاط المحلي والخدمة (LocalBusiness) --- */
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://screens-eg.com/#localbusiness",
+            "name": "مركز خبراء صيانة الشاشات",
+            "image": "https://screens-eg.com/assets/19580-logo.png",
+            "url": "https://screens-eg.com/",
+            "telephone": "+201000000000" /* استبدله برقمك */,
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "EG"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "addressCountry": "EG"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "22:00"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- الشريط العلوي -->
@@ -1182,8 +1301,8 @@
               >
             </li>
             <li>
-              <a href="الأسئلة-الشائعة/"
-                ><i class="fa-solid fa-angle-left"></i> الأسئلة الشائعة</a
+              <a href="الاعطال-الشائعة/"
+                ><i class="fa-solid fa-angle-left"></i> الاعطال الشائعة</a
               >
             </li>
             <li>
@@ -1238,5 +1357,6 @@
     </footer>
     <!-- ملف الـ JavaScript الخارجي -->
     <script src="script.js"></script>
+    <script src="cookie-banner.js"></script>
   </body>
 </html>
