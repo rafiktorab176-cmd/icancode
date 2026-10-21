@@ -1781,3 +1781,21 @@ body {
     text-align: right;
   }
 }
+/* تعديل تباين النصوص لرفع درجات Accessibility */
+.card-title {
+  color: #0f172a !important;
+}
+
+.card-text {
+  color: #334155 !important;
+}
+
+.brand-name-ar {
+  color: #475569 !important;
+  font-weight: 700;
+}
+
+.section-desc,
+.hero-description {
+  color: #cbd5e1 !important;
+}

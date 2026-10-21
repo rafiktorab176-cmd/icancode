@@ -156,7 +156,7 @@
             <a
               href="https://www.facebook.com/lgg.19580/"
               class="social-link"
-              aria-label="فيسبوك"
+              aria-label="رابط صفحة الفيسبوك"
             >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
@@ -168,7 +168,11 @@
     <!-- الشريط الرئيسي -->
     <header class="main-header">
       <div class="container-custom header-flex">
-        <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
+        <button
+          id="menuBtn"
+          class="menu-toggle-btn"
+          aria-label="فتح القائمة الرئيسية"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
 
@@ -229,7 +233,7 @@
           <a
             href="tel:19580"
             class="btn-hotline pulse-orange"
-            aria-label="اتصل بالخط الساخن 19580"
+            aria-label="الاتصال بالخط الساخن 19580"
           >
             <i class="fa-solid fa-headset"></i>
             <span>19580</span>
@@ -237,7 +241,7 @@
           <a
             href="tel:01289966660"
             class="btn-phone pulse-blue"
-            aria-label="اتصل برقم الموبايل"
+            aria-label="الاتصال برقم الموبايل 01289966660"
           >
             <i class="fa-solid fa-phone"></i>
             <span>01289966660</span>
@@ -271,7 +275,11 @@
         </a>
 
         <div class="drawer-dropdown">
-          <button id="screensDropdownBtn" class="drawer-dropdown-btn">
+          <button
+            id="screensDropdownBtn"
+            class="drawer-dropdown-btn"
+            aria-label="أنواع الشاشات"
+          >
             <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
             <i id="screensArrow" class="fa-solid fa-chevron-down"></i>
           </button>
@@ -285,7 +293,11 @@
         </div>
 
         <div class="drawer-dropdown">
-          <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
+          <button
+            id="brandsDropdownBtn"
+            class="drawer-dropdown-btn"
+            aria-label="قائمة الماركات"
+          >
             <span><i class="fa-solid fa-tags"></i> الماركات</span>
             <i id="brandsArrow" class="fa-solid fa-chevron-down"></i>
           </button>
@@ -321,17 +333,25 @@
       </div>
 
       <div class="drawer-footer">
-        <a href="tel:19580" class="drawer-btn orange pulse-orange">
+        <a
+          href="tel:19580"
+          class="drawer-btn orange pulse-orange"
+          aria-label="الخط الساخن"
+        >
           <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
         </a>
-        <a href="tel:01289966660" class="drawer-btn blue pulse-blue">
+        <a
+          href="tel:01289966660"
+          class="drawer-btn blue pulse-blue"
+          aria-label="رقم الموبايل"
+        >
           <i class="fa-solid fa-phone"></i> 01289966660
         </a>
         <a
           href="https://wa.me/201289966660"
           target="_blank"
           class="drawer-btn green"
-          aria-label="تواصل معنا عبر واتساب"
+          aria-label="تواصل عبر واتساب"
         >
           <i class="fa-brands fa-whatsapp"></i> واتساب
         </a>
@@ -344,21 +364,22 @@
         href="https://wa.me/201289966660"
         target="_blank"
         class="float-btn whatsapp pulse-green"
-        aria-label="تواصل معنا عبر واتساب"
+        aria-label="تواصل عبر واتساب"
       >
         <i class="fa-brands fa-whatsapp"></i>
       </a>
       <a
         href="tel:19580"
         class="float-btn phone pulse-blue"
-        aria-label="اتصل بالخط الساخن"
+        aria-label="الاتصال بالخط الساخن"
       >
         <i class="fa-solid fa-phone"></i>
       </a>
     </div>
 
-    <!-- قسم البطل الرئيسي (Hero Section) -->
+    <!-- تغليف المحتوى الرئيسي بـ main لتحقيق معيار Landmark -->
     <main>
+      <!-- قسم البطل الرئيسي (Hero Section) مع مسار الصورة الأصلي -->
       <section class="hero-section">
         <img
           src="./assets/hero-1.jpg"
@@ -366,12 +387,16 @@
           class="hero-bg-img"
           fetchpriority="high"
         />
+
         <div class="hero-overlay"></div>
+
         <div class="container-custom hero-content">
           <span class="hero-subtitle"
             >مركز متخصص في صيانة جميع أنواع الشاشات والتلفزيونات</span
           >
+
           <h1 class="hero-title">خبراء صيانة الشاشات في مصر</h1>
+
           <p class="hero-description">
             نحن في خبراء صيانة الشاشات نقدم خدمات صيانة احترافية لجميع أنواع
             الشاشات والتلفزيونات بأحدث الأجهزة والمعتمد. فريقنا من الفنيين
@@ -411,14 +436,18 @@
           </div>
 
           <div class="hero-actions">
-            <a href="tel:19580" class="hero-btn hotline pulse-orange">
+            <a
+              href="tel:19580"
+              class="hero-btn hotline pulse-orange"
+              aria-label="الخط الساخن"
+            >
               <i class="fa-solid fa-headset"></i> الخط الساخن 19580
             </a>
             <a
               href="https://wa.me/201289966660"
               target="_blank"
               class="hero-btn whatsapp pulse-green"
-              aria-label="واتساب"
+              aria-label="راسلنا واتساب"
             >
               <i class="fa-brands fa-whatsapp"></i> واتساب
             </a>
@@ -548,7 +577,7 @@
         <i class="fa-solid fa-arrow-up"></i>
       </button>
 
-      <!-- سيكشن الماركات التي نتخصص فيها -->
+      <!-- سيكشن الماركات -->
       <section class="brands-section">
         <div class="container-custom">
           <div class="section-header">
@@ -793,6 +822,7 @@
         </div>
       </section>
 
+      <!-- صور المعرض الثلاثة بمساراتها الأصلية الدقيقة -->
       <div class="gallery-container">
         <div class="img-card">
           <img src="./assets/in1.jpg" alt="تحت الفحص" />
@@ -1020,7 +1050,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: كم تكلفة صيانة الشاشة؟"
+                aria-label="سؤال: كم تكلفة صيانة الشاشة؟"
               >
                 <span>كم تكلفة صيانة الشاشة؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1038,7 +1068,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: ما هي المناطق التي تغطيها خدمة الصيانة؟"
+                aria-label="سؤال: ما هي المناطق التي تغطيها خدمة الصيانة؟"
               >
                 <span>ما هي المناطق التي تغطيها خدمة الصيانة؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1054,7 +1084,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: كم يستغرق إصلاح الشاشة؟"
+                aria-label="سؤال: كم يستغرق إصلاح الشاشة؟"
               >
                 <span>كم يستغرق إصلاح الشاشة؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1071,7 +1101,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: هل تقدمون ضمان على الصيانة؟"
+                aria-label="سؤال: هل تقدمون ضمان على الصيانة؟"
               >
                 <span>هل تقدمون ضمان على الصيانة؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1087,7 +1117,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: ما الفرق بين شاشة LED وشاشة LCD؟"
+                aria-label="سؤال: ما الفرق بين شاشة LED وشاشة LCD؟"
               >
                 <span>ما الفرق بين شاشة LED وشاشة LCD؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1105,7 +1135,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: شاشتي فيها خطوط على الشاشة، ما السبب؟"
+                aria-label="سؤال: شاشتي فيها خطوط على الشاشة، ما السبب؟"
               >
                 <span>شاشتي فيها خطوط على الشاشة، ما السبب؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1122,7 +1152,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: الشاشة فيها صوت بس مفيش صورة، إيه المشكلة؟"
+                aria-label="سؤال: الشاشة فيها صوت بس مفيش صورة، إيه المشكلة؟"
               >
                 <span>الشاشة فيها صوت بس مفيش صورة، إيه المشكلة؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1139,7 +1169,7 @@
             <div class="faq-item">
               <button
                 class="faq-question"
-                aria-label="السؤال: هل يمكن إصلاح شاشة سامسونج سمارت في المنزل؟"
+                aria-label="سؤال: هل يمكن إصلاح شاشة سامسونج سمارت في المنزل؟"
               >
                 <span>هل يمكن إصلاح شاشة سامسونج سمارت في المنزل؟</span>
                 <i class="fa-solid fa-chevron-down faq-icon"></i>
@@ -1170,11 +1200,15 @@
               href="https://wa.me/201289966660"
               target="_blank"
               class="cta-btn whatsapp pulse-green"
-              aria-label="واتساب"
+              aria-label="راسلنا عبر واتساب"
             >
               <i class="fa-brands fa-whatsapp"></i> راسلنا واتساب
             </a>
-            <a href="tel:19580" class="cta-btn hotline pulse-orange">
+            <a
+              href="tel:19580"
+              class="cta-btn hotline pulse-orange"
+              aria-label="الخط الساخن"
+            >
               <i class="fa-solid fa-headset"></i> الخط الساخن 19580
             </a>
           </div>
@@ -1223,8 +1257,10 @@
               </a>
             </li>
             <li>
-              <i class="fa-solid fa-clock"></i> السبت - الخميس: 9 صباحاً - 10
-              مساءً
+              <a href="#" class="time-link" aria-label="مواعيد العمل">
+                <i class="fa-solid fa-clock"></i> السبت - الخميس: 9 صباحاً - 10
+                مساءً
+              </a>
             </li>
           </ul>
         </div>
