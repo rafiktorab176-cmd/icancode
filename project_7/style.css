@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap");
 
-/* تصحيح خطأ المحدد ليعمل box-sizing على جميع العناصر لمنع السكرول الأفقي */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,10 +12,9 @@ body {
   margin: 0;
   padding: 0;
   color: #1e293b;
-  overflow-x: hidden; /* منع التمرير الأفقي في أجهزة الجوال */
+  overflow-x: hidden;
 }
 
-/* التخطيط العام */
 .container-custom {
   max-width: 1280px;
   margin: 0 auto;
@@ -25,7 +23,6 @@ body {
   width: 100%;
 }
 
-/* الشريط العلوي */
 .top-bar {
   background: linear-gradient(90deg, #000000, #6fa5b7);
   color: #94a3b8;
@@ -89,7 +86,6 @@ body {
   transform: translateY(-3px) scale(1.05);
 }
 
-/* الهيدر الرئيسي */
 .main-header {
   background-color: #ffffff;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
@@ -135,7 +131,6 @@ body {
   }
 }
 
-/* تنسيق صورة اللوجو */
 .logo-area {
   display: flex;
   align-items: center;
@@ -179,7 +174,6 @@ body {
   font-weight: 700;
 }
 
-/* القائمة الرئيسية للشاشات الكبيرة */
 .desktop-nav {
   display: none;
   align-items: center;
@@ -224,7 +218,6 @@ body {
   width: 100%;
 }
 
-/* القوائم المنسدلة في سطح المكتب */
 .dropdown-container {
   position: relative;
   cursor: pointer;
@@ -295,7 +288,6 @@ body {
   padding-right: 1.5rem;
 }
 
-/* أزرار الاتصال الهيدر */
 .header-actions {
   display: flex;
   align-items: center;
@@ -343,7 +335,6 @@ body {
   }
 }
 
-/* أنيميشن النبض */
 .pulse-orange {
   animation: pulseOrange 2s infinite;
 }
@@ -397,7 +388,6 @@ body {
   transform: translateY(-3px) scale(1.03);
 }
 
-/* القائمة الجانبية للجوال (Responsive Drawer) */
 .drawer-overlay {
   position: fixed;
   inset: 0;
@@ -418,7 +408,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 82%; /* استخدام نسبة مئوية لضمان التجاوب مع كل أنواع الهواتف */
+  width: 82%;
   max-width: 320px;
   height: 100%;
   background-color: #ffffff;
@@ -505,7 +495,6 @@ body {
   text-align: center;
 }
 
-/* القوائم المنسدلة للموبايل */
 .drawer-dropdown-btn {
   width: 100%;
   display: flex;
@@ -609,7 +598,6 @@ body {
   background: linear-gradient(135deg, #10b981, #059669);
 }
 
-/* الأزرار العائمة للموبايل */
 .floating-buttons {
   position: fixed;
   bottom: 1.25rem;
@@ -645,35 +633,8 @@ body {
   background-color: #ff8800;
 }
 
-/* تحسين الاستجابة للشاشات الصغيرة جداً (أقل من 380px) */
-@media (max-width: 380px) {
-  .logo-text h1 {
-    font-size: 1rem;
-  }
-  .logo-text span {
-    display: none; /* إخفاء النص الفرعي لتوفير المساحة */
-  }
-  .btn-hotline {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-  }
-  .mobile-drawer {
-    width: 88%;
-  }
-}
-
-/* دوران الأسهم */
-.rotate-180 {
-  transform: rotate(180deg);
-}
-
-#screensArrow,
-#brandsArrow {
-  transition: transform 0.25s ease;
-}
-/* تنسيقات قسم البطل (Hero Section) */
 .hero-section {
-  background-color: #0b1329; /* لون احتياطي في حال تأخر تحميل الصورة */
+  background-color: #0b1329;
   color: #ffffff;
   padding: 4rem 1rem 5rem 1rem;
   text-align: center;
@@ -681,26 +642,16 @@ body {
   overflow: hidden;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-/* ضبط صورة الـ HTML لتغطي الخلفية بالكامل */
 .hero-bg-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* لتجنب قص الصورة */
+  object-fit: cover;
   object-position: center;
-  z-index: 1; /* الطبقة الأولى في الخلف */
+  z-index: 1;
 }
 
-/* طبقة التظليل (Overlay) فوق الصورة لتوضيح النصوص */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -709,13 +660,12 @@ body {
     rgba(30, 50, 106, 0.93) 0%,
     rgba(0, 0, 0, 0.88) 100%
   );
-  z-index: 2; /* الطبقة الثانية فوق الصورة مباشرة */
+  z-index: 2;
 }
 
-/* محتوى السيكشن (النصوص، الأزرار، الكروت) تظهر فوق الصورة والتظليل تماماً */
 .hero-content {
   position: relative;
-  z-index: 3; /* الطبقة العليا لضمان تفاعل المستخدم ووضوح النصوص */
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -723,6 +673,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .hero-subtitle {
   background: rgba(56, 189, 248, 0.15);
   color: #38bdf8;
@@ -754,7 +705,6 @@ body {
   margin: 0 auto;
 }
 
-/* شبكة الإحصائيات والأرقام */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -800,7 +750,6 @@ body {
   font-weight: 600;
 }
 
-/* أزرار الاتصال داخل القسم */
 .hero-actions {
   display: flex;
   gap: 1rem;
@@ -835,7 +784,6 @@ body {
   transform: translateY(-3px) scale(1.03);
 }
 
-/* الشارات الثلاثة في الأسفل */
 .hero-badges {
   display: flex;
   gap: 1.25rem;
@@ -860,60 +808,21 @@ body {
 .badge-item i {
   color: #f59e0b;
 }
-/* حاوية وتنسيق الصورة تحت الكلام */
-.hero-image-container {
-  width: 100%;
-  max-width: 850px;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 
-.hero-main-img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-/* تأثير جمالي عند تمرير الماوس فوق الصورة */
-.hero-main-img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.25);
-}
-
-@media (max-width: 768px) {
-  .hero-image-container {
-    margin-top: 1.5rem;
-  }
-  .hero-main-img {
-    max-height: 250px;
-    border-radius: 12px;
-  }
-}
-/* الحاوية الرئيسية للصور الثلاث */
 .gallery-container {
   display: flex;
-  flex-wrap: wrap; /* للسماح بنزول الصور تحت بعض في الشاشات الصغيرة */
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* المسافة بين الصور */
+  gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* بطاقات الصور */
 .img-card {
-  flex: 1 1 300px; /* العرض يتوسع بالتساوي وبحد أدنى 300px ليكون متجاوباً */
-  max-width: 380px; /* أقصى عرض للبطاقة */
+  flex: 1 1 300px;
+  max-width: 380px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -924,21 +833,18 @@ body {
     box-shadow 0.3s ease;
 }
 
-/* تأثير عند مرور الماوس */
 .img-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* ضبط حجم وحجم الصور */
 .img-card img {
   width: 100%;
   height: 250px;
-  object-fit: cover; /* يمنع تشوه أو مط الصورة */
+  object-fit: cover;
   display: block;
 }
 
-/* عنوان الصورة */
 .card-title {
   padding: 15px;
   text-align: center;
@@ -948,9 +854,9 @@ body {
     sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #eceaea;
+  color: #0f172a;
 }
-/* تنسيقات سيكشن أنواع الشاشات */
+
 .screens-types-section {
   background-color: #f8fafc;
   padding: 5rem 1rem;
@@ -991,7 +897,7 @@ body {
   margin: 0;
   line-height: 1.6;
 }
-/* شبكة الكروت (Grid) */
+
 .screens-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -1008,12 +914,12 @@ body {
 
 @media (min-width: 1024px) {
   .screens-grid {
-    grid-template-columns: repeat(3, 1fr); /* هنا خليناها 3 أعمدة بدل 4 */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-/* تصميم الكارت الواحد */
+
 .screen-card {
-  background: linear-gradient(135deg, #81a8b0, #655f5f);
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
   border-radius: 20px;
   padding: 2rem 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
@@ -1029,11 +935,10 @@ body {
 
 .screen-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(77, 124, 227, 0.1);
-  border-color: #000000;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+  border-color: #2563eb;
 }
 
-/* أيقونة الكارت الملونة */
 .card-icon-box {
   width: 64px;
   height: 64px;
@@ -1050,7 +955,6 @@ body {
   transform: scale(1.1) rotate(5deg);
 }
 
-/* ألوان الأيقونات المختلفة مطابقة للصورة */
 .card-icon-box.purple {
   background-color: #f3e8ff;
   color: #9333ea;
@@ -1067,10 +971,6 @@ body {
   background-color: #e0f2fe;
   color: #0284c7;
 }
-.card-icon-box.teal {
-  background-color: #ccfbf1;
-  color: #0d9488;
-}
 .card-icon-box.orange {
   background-color: #ffedd5;
   color: #f97316;
@@ -1079,24 +979,23 @@ body {
 .card-title {
   font-size: 1.15rem;
   font-weight: 800;
-  color: #000000;
+  color: #0f172a;
   margin-bottom: 0.75rem;
 }
 
 .card-text {
   font-size: 0.825rem;
-  color: #000000;
+  color: #64748b;
   line-height: 1.7;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
-/* رابط "اعرف المزيد" مع السهم المتحرك */
 .card-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: #ea6907;
+  color: #2563eb;
   font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
@@ -1108,20 +1007,16 @@ body {
 }
 
 .screen-card:hover .card-link i {
-  transform: translateX(-5px); /* تحريك السهم لليسار عند الهوفر */
+  transform: translateX(-5px);
 }
 
-.card-link:hover {
-  color: #f4f1ee;
-}
-/* تنسيق زر العودة إلى الأعلى */
 .scroll-top-btn {
   position: fixed;
   bottom: 1.5rem;
-  right: 1.5rem; /* يظهر في أقصى اليمين، بينما الأزرار العائمة الأخرى في اليسار */
+  right: 1.5rem;
   width: 3.2rem;
   height: 3.2rem;
-  background-color: #0c3298;
+  background-color: #2563eb;
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -1138,7 +1033,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* حالة ظهور الزر عند التمرير */
 .scroll-top-btn.show {
   opacity: 1;
   visibility: visible;
@@ -1146,17 +1040,16 @@ body {
 }
 
 .scroll-top-btn:hover {
-  background-color: #00143f;
+  background-color: #1d4ed8;
   transform: translateY(-4px) scale(1.08);
 }
-/* تنسيقات سيكشن الماركات */
+
 .brands-section {
   background-color: #ffffff;
   padding: 5rem 1rem;
   text-align: center;
 }
 
-/* شبكة كروت الماركات */
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1173,14 +1066,10 @@ body {
 
 @media (min-width: 1024px) {
   .brands-grid {
-    grid-template-columns: repeat(
-      7,
-      1fr
-    ); /* 7 كروت في السطر للشاشات الكبيرة مطابقة للصورة */
+    grid-template-columns: repeat(7, 1fr);
   }
 }
 
-/* تصميم كارت الماركة الواحد */
 .brand-card {
   background-color: #ffffff;
   border-radius: 16px;
@@ -1193,11 +1082,10 @@ body {
   justify-content: center;
   gap: 0.75rem;
   transition: all 0.3s ease;
+  text-decoration: none;
   cursor: pointer;
 }
 
-/* الكارت المحدد افتراضياً (مثل فيليبيس في الصورة) */
-.brand-card.active,
 .brand-card:hover {
   transform: translateY(-5px);
   border-color: #2563eb;
@@ -1211,16 +1099,13 @@ body {
   color: #0f172a;
   font-family: Arial, sans-serif;
 }
-.brands-grid .brand-card {
-  text-decoration: none;
-}
+
 .brand-name-ar {
   font-size: 0.825rem;
   font-weight: 700;
   color: #64748b;
 }
 
-/* ألوان مميزة لبعض العلامات التجارية مطابقة للصورة */
 .brand-name-en.text-red {
   color: #dc2626;
 }
@@ -1233,14 +1118,13 @@ body {
 .brand-name-en.text-orange {
   color: #f97316;
 }
-/* تنسيقات سيكشن مميزاتنا / ليه تختارنا */
+
 .why-us-section {
   background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
   padding: 5rem 1rem;
   text-align: center;
 }
 
-/* شبكة الكروت للمميزات */
 .why-us-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -1261,7 +1145,6 @@ body {
   }
 }
 
-/* تصميم الكارت الواحد مع تدرجات وإضاءة خفيفة */
 .why-card {
   background: #ffffff;
   border-radius: 20px;
@@ -1278,7 +1161,6 @@ body {
   overflow: hidden;
 }
 
-/* تأثير خط ملون متحرك عند الهوفر أسفل الكارت */
 .why-card::after {
   content: "";
   position: absolute;
@@ -1321,7 +1203,6 @@ body {
   margin: 0;
 }
 
-/* مربعات الأيقونات ذات التدرجات الملونة غير السادة */
 .why-icon-box {
   width: 58px;
   height: 58px;
@@ -1340,7 +1221,6 @@ body {
   transform: scale(1.1) rotate(-6deg);
 }
 
-/* تدرجات الألوان غير السادة للأيقونات */
 .yellow-grad {
   background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
 }
@@ -1359,55 +1239,13 @@ body {
 .sky-grad {
   background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
 }
-/* تنسيقات سيكشن مناطق التغطية */
+
 .coverage-section {
   background-color: #f8fafc;
   padding: 3.5rem 1rem;
   text-align: center;
 }
 
-/* الهيدر والعنوان */
-.coverage-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.badge-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background-color: #e0f2fe;
-  color: #0284c7;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 0.35rem 0.9rem;
-  border-radius: 50px;
-}
-
-.coverage-header h2 {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #0f172a;
-  margin: 0;
-}
-
-@media (min-width: 640px) {
-  .coverage-header h2 {
-    font-size: 2rem;
-  }
-}
-
-.coverage-header p {
-  font-size: 0.9rem;
-  color: #64748b;
-  margin: 0;
-  max-width: 600px;
-}
-
-/* شبكة الكروت المتجاوبة */
 .coverage-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1430,15 +1268,11 @@ body {
 
 @media (min-width: 1024px) {
   .coverage-grid {
-    grid-template-columns: repeat(
-      7,
-      1fr
-    ); /* 7 كروت في السطر لتطابق الصورة تماماً */
+    grid-template-columns: repeat(7, 1fr);
     gap: 1.1rem;
   }
 }
 
-/* تصميم الكارت الواحد للمحافظة */
 .coverage-card {
   background-color: #ffffff;
   border-radius: 16px;
@@ -1450,6 +1284,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
+  text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -1477,9 +1312,7 @@ body {
   transform: scale(1.2);
   color: #1d4ed8;
 }
-/* ==========================================
-   تنسيقات سلايدر آراء العملاء
-   ========================================== */
+
 .testimonials-section {
   background: #f8fafc;
   padding: 4rem 1rem;
@@ -1507,7 +1340,6 @@ body {
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* تصميم كارت التقييم */
 .testimonial-card {
   background: #ffffff;
   border-radius: 20px;
@@ -1584,14 +1416,6 @@ body {
   flex-grow: 1;
 }
 
-.testimonial-date {
-  font-size: 0.72rem;
-  color: #94a3b8;
-  text-align: left;
-  margin-top: auto;
-}
-
-/* أزرار السلايدر الجانبية (للكمبيوتر) */
 .slider-btn {
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -1617,20 +1441,12 @@ body {
   transform: scale(1.08);
 }
 
-/* النقاط والحاويات السفلية */
-.slider-controls-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
 .slider-dots {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
+  margin-top: 1.5rem;
 }
 
 .slider-dot {
@@ -1650,24 +1466,12 @@ body {
   border-radius: 50px;
 }
 
-/* ==========================================
-   تعديلات خاصة بالشاشات الصغيرة (الموبايل)
-   ========================================== */
 @media (max-width: 767px) {
-  /* إخفاء الأزرار الجانبية التي تضغط الكارت في الموبايل */
   .testimonials-slider-container .slider-btn {
     display: none;
   }
-
-  .testimonials-slider-container {
-    padding: 0;
-  }
-
-  .testimonial-card {
-    padding: 1.25rem;
-  }
 }
-/* تنسيقات سيكشن الأسئلة الشائعة */
+
 .faq-section {
   background-color: #f8fafc;
   padding: 5rem 1rem;
@@ -1681,7 +1485,6 @@ body {
   gap: 1rem;
 }
 
-/* تنسيق المربع الواحد (FAQ Item) */
 .faq-item {
   background: #ffffff;
   border-radius: 14px;
@@ -1691,14 +1494,12 @@ body {
   transition: all 0.3s ease;
 }
 
-/* هوفر جميل للمربع */
 .faq-item:hover {
   border-color: #2563eb;
   box-shadow: 0 8px 25px rgba(37, 99, 235, 0.08);
   transform: translateY(-2px);
 }
 
-/* زر السؤال */
 .faq-question {
   width: 100%;
   background: transparent;
@@ -1721,7 +1522,6 @@ body {
   color: #2563eb;
 }
 
-/* أيقونة السهم */
 .faq-icon {
   font-size: 0.85rem;
   color: #64748b;
@@ -1739,7 +1539,6 @@ body {
   color: #2563eb;
 }
 
-/* صندوق الإجابة المخفي والمفتوح */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -1751,7 +1550,7 @@ body {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px; /* مساحة كافية لاحتواء النص */
+  max-height: 200px;
   padding: 1.25rem 1.5rem;
   border-top-color: #f1f5f9;
 }
@@ -1762,7 +1561,7 @@ body {
   color: #475569;
   line-height: 1.8;
 }
-/* تنسيقات قسم الـ CTA الأول */
+
 .cta-section {
   background: linear-gradient(135deg, #0b1329 0%, #1e3a8a 100%);
   padding: 4rem 1rem;
@@ -1830,7 +1629,6 @@ body {
   transform: translateY(-3px) scale(1.03);
 }
 
-/* تنسيقات الفوتر (Footer Section) الثاني */
 .main-footer {
   background-color: #2c3347;
   color: #94a3b8;
@@ -1841,7 +1639,6 @@ body {
 
 .footer-grid {
   display: grid;
-  -ms-grid-columns: 1fr;
   gap: 2.5rem;
   padding-bottom: 3rem;
 }
@@ -1910,7 +1707,6 @@ body {
   font-size: 0.75rem;
 }
 
-/* معلومات الشعار والنبذة في الفوتر */
 .footer-logo-area {
   display: flex;
   align-items: center;
@@ -1918,20 +1714,10 @@ body {
   margin-bottom: 1rem;
 }
 
-.footer-logo-icon {
-  font-size: 1.75rem;
-  color: #38bdf8;
-}
-
 .footer-logo-text h3 {
   color: #ffffff;
   font-size: 1.1rem;
   margin: 0;
-}
-
-.footer-logo-text span {
-  color: #64748b;
-  font-size: 0.7rem;
 }
 
 .footer-about {
@@ -1966,7 +1752,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* شريط حقوق النشر السفلي */
 .footer-bottom {
   background-color: #050a15;
   padding: 1.25rem 1rem;
@@ -1979,16 +1764,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 0.5rem;
   text-align: center;
 }
-/* تنسيق صورة الشعار في الفوتر */
+
 .footer-logo-img {
-  width: 48px; /* العرض المطلوب للشعار، يمكنك تعديله حسب رغبتك (مثلاً 40px أو 50px) */
-  height: 48px; /* الارتفاع */
-  object-fit: contain; /* لضمان عدم قص أطراف اللوجو وتناسبه داخل المربع */
-  border-radius: 8px; /* زوايا دائرية خفيفة إذا أردت، أو احذفها */
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 @media (min-width: 640px) {
