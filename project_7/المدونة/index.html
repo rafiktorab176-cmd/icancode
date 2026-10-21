@@ -55,20 +55,16 @@
     <!-- ================================================================= -->
     <!-- 3. الأيقونات والملفات الخارجية (Favicons & Stylesheets)            -->
     <!-- ================================================================= -->
-    <!-- أيقونة المتصفح في الـ URL -->
     <link
       rel="icon"
       type="image/png"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/tv.svg"
     />
     <link rel="icon" type="image/png" href="../assets/tv-.webp" />
-    <!-- FontAwesome للأيقونات -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <!-- ملف الـ CSS الخارجي (تأكد من تعديل المسار حسب مكان الملف إذا كان داخل مجلد فرعي) -->
     <link rel="stylesheet" href="../style.css" />
 
     <!-- ================================================================= -->
@@ -78,7 +74,6 @@
       {
         "@context": "https://schema.org",
         "@graph": [
-          /* --- سكيما المدونة وموقع المقالات (Blog) --- */
           {
             "@type": "Blog",
             "@id": "https://screens-eg.com/المدونة#blog",
@@ -92,8 +87,6 @@
               "telephone": "+201289966660"
             }
           },
-
-          /* --- سكيما التتبع (Breadcrumbs) --- */
           {
             "@type": "BreadcrumbList",
             "@id": "https://screens-eg.com/المدونة#breadcrumb",
@@ -112,8 +105,6 @@
               }
             ]
           },
-
-          /* --- سكيما أسئلة شائعة مخصصة بالمدونة والمحتوى --- */
           {
             "@type": "FAQPage",
             "@id": "https://screens-eg.com/المدونة#faq",
@@ -171,12 +162,10 @@
     <!-- الشريط الرئيسي -->
     <header class="main-header">
       <div class="container-custom header-flex">
-        <!-- زر الهمبرجر للجوال فقط -->
         <button id="menuBtn" class="menu-toggle-btn" aria-label="فتح القائمة">
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <!-- اللوجو (صورة) -->
         <a href="../" class="logo-area">
           <img
             src="../assets/tv-.webp"
@@ -188,11 +177,8 @@
           </div>
         </a>
 
-        <!-- الروابط الرئيسية للشاشات الكبيرة -->
         <nav class="desktop-nav">
           <a href="../" class="nav-link">الرئيسية</a>
-
-          <!-- أنواع الشاشات -->
           <div class="dropdown-container">
             <span class="dropdown-toggle"
               >أنواع الشاشات <i class="fa-solid fa-chevron-down text-xs"></i
@@ -205,8 +191,6 @@
               <a href="../صيانة-شاشات-بلازما/">صيانة شاشات بلازما</a>
             </div>
           </div>
-
-          <!-- الماركات -->
           <div class="dropdown-container">
             <span class="dropdown-toggle"
               >الماركات <i class="fa-solid fa-chevron-down text-xs"></i
@@ -233,7 +217,6 @@
           <a href="../اتصل-بنا/" class="nav-link">اتصل بنا</a>
         </nav>
 
-        <!-- أزرار الخط الساخن والاتصال -->
         <div class="header-actions">
           <a href="tel:19580" class="btn-hotline pulse-orange">
             <i class="fa-solid fa-headset"></i>
@@ -247,10 +230,8 @@
       </div>
     </header>
 
-    <!-- الخلفية المعتمة للقائمة الجانبية -->
     <div id="overlay" class="drawer-overlay"></div>
 
-    <!-- القائمة الجانبية للجوال -->
     <div id="mobileDrawer" class="mobile-drawer">
       <div class="drawer-header">
         <a href="../" class="logo-area">
@@ -272,8 +253,6 @@
         <a href="../" class="drawer-link">
           <i class="fa-solid fa-house"></i> الرئيسية
         </a>
-
-        <!-- أنواع الشاشات - موبايل -->
         <div class="drawer-dropdown">
           <button id="screensDropdownBtn" class="drawer-dropdown-btn">
             <span><i class="fa-solid fa-tv"></i> أنواع الشاشات</span>
@@ -288,7 +267,6 @@
           </div>
         </div>
 
-        <!-- الماركات - موبايل -->
         <div class="drawer-dropdown">
           <button id="brandsDropdownBtn" class="drawer-dropdown-btn">
             <span><i class="fa-solid fa-tags"></i> الماركات</span>
@@ -342,7 +320,6 @@
       </div>
     </div>
 
-    <!-- الأزرار العائمة -->
     <div class="floating-buttons">
       <a
         href="https://wa.me/201289966660"
@@ -356,7 +333,6 @@
       </a>
     </div>
 
-    <!-- رأس الصفحة الداخلية (Page Header / Breadcrumb) -->
     <section
       class="page-header-section"
       style="
@@ -400,7 +376,7 @@
       </div>
     </section>
 
-    <!-- قسم مقالات المدونة -->
+    <!-- قسم مقالات المدونة (بدون تنسيقات مضمنة معقدة، الاعتماد على CSS) -->
     <section
       class="blog-section"
       style="padding: 60px 0; background-color: #f9f9f9"
@@ -409,67 +385,74 @@
         <div class="screens-grid">
           <!-- مقال 1 -->
           <div class="screen-card">
-            <div class="card-icon-box blue">
-              <i class="fa-solid fa-lightbulb"></i>
+            <div class="card-img-box">
+              <img
+                src="../assets/b1.jpg"
+                alt="طريقة الحفاظ على شاشة التلفزيون"
+              />
             </div>
             <h3 class="card-title">طريقة الحفاظ على شاشة التلفزيون من التلف</h3>
             <p class="card-text">
               تعرف على أهم النصائح اليومية لحماية شاشتك السمارت والـ LED من
               أعطال الإضاءة وتقلبات التيار الكهربائي...
             </p>
-            <a href="../طريقة-الحفاظ-علي-الشاشة/" class="card-link"
-              >قراءة المقال <i class="fa-solid fa-arrow-left"></i
-            ></a>
+            <a href="../طريقة-الحفاظ-علي-الشاشة/" class="card-link">
+              قراءة المقال <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
 
           <!-- مقال 2 -->
           <div class="screen-card">
-            <div class="card-icon-box pink">
-              <i class="fa-solid fa-tv"></i>
+            <div class="card-img-box">
+              <img src="../assets/images.jpg" alt="أسباب ظهور خطوط في الشاشة" />
             </div>
             <h3 class="card-title">أسباب ظهور خطوط رأسية وأفقية في الشاشة</h3>
             <p class="card-text">
               ما هو سبب ظهور الخطوط الملونة على شاشة التلفزيون؟ وهل يمكن إصلاحها
               أم تتطلب تغيير البانل بالكامل؟...
             </p>
-            <a href="../خطوط-بالشاشة/" class="card-link"
-              >قراءة المقال <i class="fa-solid fa-arrow-left"></i
-            ></a>
+            <a href="../خطوط-بالشاشة/" class="card-link">
+              قراءة المقال <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
 
           <!-- مقال 3 -->
           <div class="screen-card">
-            <div class="card-icon-box green">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
+            <div class="card-img-box">
+              <img src="../assets/hq720.jpg" alt="عطل الباك لايت والشاشات" />
             </div>
             <h3 class="card-title">عطل الباك لايت: صوت بدون صورة في الشاشات</h3>
             <p class="card-text">
-              عندما تعمل الشاشة ويظهر الصوتي ولكن الشاشة مظلمة تماماً، تعرف على
+              عندما تعمل الشاشة ويظهر الصوت ولكن الشاشة مظلمة تماماً، تعرف على
               عطل الباك لايت وكيفية إصلاحه...
             </p>
-            <a href="../صوت-بلا-صورة/" class="card-link"
-              >قراءة المقال <i class="fa-solid fa-arrow-left"></i
-            ></a>
+            <a href="../صوت-بلا-صورة/" class="card-link">
+              قراءة المقال <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
 
           <!-- مقال 4 -->
           <div class="screen-card">
-            <div class="card-icon-box purple">
-              <i class="fa-solid fa-wifi"></i>
+            <div class="card-img-box">
+              <img
+                src="../assets/images (1).jpg"
+                alt="حل مشكلة واي فاي التلفزيون"
+              />
             </div>
             <h3 class="card-title">حل مشكلة اتصال شاشة سمارت بالواي فاي</h3>
             <p class="card-text">
               خطوات عملية وسهلة لحل مشكلة عدم اتصال التلفزيون الذكي بالإنترنت أو
               بطء التطبيقات مثل نتفليكس اليوتيوب...
             </p>
-            <a href="../مشاريع-مشاكل-الواي-فاي/" class="card-link"
-              >قراءة المقال <i class="fa-solid fa-arrow-left"></i
-            ></a>
+            <a href="../مشاريع-مشاكل-الواي-فاي/" class="card-link">
+              قراءة المقال <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
+
           <!-- مقال 5 -->
           <div class="screen-card">
-            <div class="card-icon-box orange">
-              <i class="fa-solid fa-shield-halved"></i>
+            <div class="card-img-box">
+              <img src="../assets/images (2).jpg" alt="فني صيانة الشاشات" />
             </div>
             <h3 class="card-title">
               الفرق بين صيانة المنزل ومركز الصيانة للشاشات
@@ -478,15 +461,18 @@
               متى تستدعي الفني للإصلاح المنزلي الفوري ومتى تستدعي نقل الشاشة
               للمركز الرئيسي لفحص البانل المعقد...
             </p>
-            <a href="../الصيانة-المنزلية-للشاشات/" class="card-link"
-              >قراءة المقال <i class="fa-solid fa-arrow-left"></i
-            ></a>
+            <a href="../الصيانة-المنزلية-للشاشات/" class="card-link">
+              قراءة المقال <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
 
           <!-- مقال 6 -->
           <div class="screen-card">
-            <div class="card-icon-box blue">
-              <i class="fa-solid fa-star"></i>
+            <div class="card-img-box">
+              <img
+                src="../assets/photo-1593784991095-a205069470b6.avif"
+                alt="اختيار أفضل شاشة تلفزيون"
+              />
             </div>
             <h3 class="card-title">
               كيف تختار أفضل شاشة تلفزيون مناسبة لمنزلك؟
@@ -495,15 +481,14 @@
               دليلك الشامل لاختيار حجم الشاشة المناسب لمسافة الجلوس، والفرق بين
               تقنيات OLED و LED و QLED بدقة...
             </p>
-            <a href="../كيفية-اختيار-شاشة-التلفزيون/" class="card-link"
-              >قراءة المقال <i class="fa-solid fa-arrow-left"></i
-            ></a>
+            <a href="../كيفية-اختيار-شاشة-التلفزيون/" class="card-link">
+              قراءة المقال <i class="fa-solid fa-arrow-left"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- زر الصعود إلى أعلى الصفحة -->
     <button
       id="scrollTopBtn"
       class="scroll-top-btn"
@@ -512,7 +497,6 @@
       <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- القسم الأول: دعوة لاتخاذ إجراء (CTA Section) -->
     <section class="cta-section">
       <div class="container-custom cta-content">
         <h2 class="cta-title">شاشتك تواجه أي مشكلة فنية؟ اتصل بينا دلوقتي!</h2>
@@ -520,7 +504,6 @@
           فريقنا المتخصص جاهز لخدمتك على مدار الساعة. اتصل الآن واحصل على فحص
           فوري وخدمة منزلية مع ضمان معتمد.
         </p>
-
         <div class="cta-actions">
           <a
             href="https://wa.me/201289966660"
@@ -536,42 +519,41 @@
       </div>
     </section>
 
-    <!-- القسم الثاني: تذييل الصفحة (Footer Section) -->
     <footer class="main-footer">
       <div class="container-custom footer-grid">
-        <!-- العمود الأول: معلومات التواصل -->
         <div class="footer-col">
           <h3>تواصل معنا</h3>
           <ul class="footer-links">
             <li>
-              <a href="tel:19580">
-                <i class="fa-solid fa-headset"></i> الخط الساخن: 19580
-              </a>
+              <a href="tel:19580"
+                ><i class="fa-solid fa-headset"></i> الخط الساخن: 19580</a
+              >
             </li>
             <li>
-              <a href="tel:01289966660">
-                <i class="fa-solid fa-phone"></i> موبايل: 01289966660
-              </a>
+              <a href="tel:01289966660"
+                ><i class="fa-solid fa-phone"></i> موبايل: 01289966660</a
+              >
             </li>
             <li>
-              <a href="tel:0403456555">
-                <i class="fa-solid fa-phone-office"></i> أرضي: 0403456555
-              </a>
+              <a href="tel:0403456555"
+                ><i class="fa-solid fa-phone-office"></i> أرضي: 0403456555</a
+              >
             </li>
             <li>
-              <a href="tel:0403456137">
-                <i class="fa-solid fa-phone-office"></i> أرضي: 0403456137
-              </a>
+              <a href="tel:0403456137"
+                ><i class="fa-solid fa-phone-office"></i> أرضي: 0403456137</a
+              >
             </li>
             <li>
-              <a href="https://wa.me/201289966660" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> واتساب: 01289966660
-              </a>
+              <a href="https://wa.me/201289966660" target="_blank"
+                ><i class="fa-brands fa-whatsapp"></i> واتساب: 01289966660</a
+              >
             </li>
             <li>
-              <a href="mailto:info@almoatamed-group.com">
-                <i class="fa-solid fa-envelope"></i> info@almoatamed-group.com
-              </a>
+              <a href="mailto:info@almoatamed-group.com"
+                ><i class="fa-solid fa-envelope"></i>
+                info@almoatamed-group.com</a
+              >
             </li>
             <li>
               <i class="fa-solid fa-clock"></i> السبت - الخميس: 9 صباحاً - 10
@@ -579,8 +561,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- العمود الثاني: خدماتنا -->
         <div class="footer-col">
           <h3>خدماتنا</h3>
           <ul class="footer-links">
@@ -611,8 +591,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- العمود الثالث: روابط سريعة -->
         <div class="footer-col">
           <h3>روابط سريعة</h3>
           <ul class="footer-links">
@@ -646,8 +624,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- العمود الرابع: نبذة عن الشركة والشعار -->
         <div class="footer-col brand-col">
           <div class="footer-logo-area">
             <img
@@ -662,8 +638,7 @@
           <p class="footer-about">
             خبراء صيانة الشاشات - مركز متخصص في صيانة وإصلاح جميع أنواع الشاشات
             والتلفزيونات. نقدم خدمة صيانة احترافية بالمنزل مع ضمان على جميع قطع
-            الغيار والإصلاحات. فريقنا من الفنيين المتخصصين جاهز لخدمتك في جميع
-            المحافظات.
+            الغيار والإصلاحات.
           </p>
           <div class="footer-social">
             <a
@@ -675,7 +650,6 @@
           </div>
         </div>
       </div>
-      <!-- حقوق النشر في الأسفل -->
       <div class="footer-bottom">
         <div class="container-custom footer-bottom-flex">
           <p>©️ 2026 خبراء صيانة الشاشات. جميع الحقوق محفوظة.</p>
@@ -683,7 +657,6 @@
       </div>
     </footer>
 
-    <!-- ملف الـ JavaScript الخارجي (تم تعديل المسار ليعمل من داخل مجلد المدونة) -->
     <script src="../script.js"></script>
     <script src="../cookie-banner.js"></script>
   </body>
