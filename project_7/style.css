@@ -656,7 +656,6 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    
     rgba(58, 78, 128, 0.93) 0%,
     rgba(29, 29, 29, 0.88) 3%
   );
@@ -873,15 +872,17 @@ body {
 }
 
 .section-badge {
-  background: #e0f2fe;
-  color: #0284c7;
+  background: #b9e6fe; /* زيادة غمقان الخلفية لرفع التباين مع النص الأزرق */
+  color: #0369a1;
   padding: 0.4rem 1rem;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+}
+
+.brand-name-ar {
+  color: #334155 !important; /* لون أغمق لضمان وضوح النص العربي للماركات */
+  font-weight: 700;
 }
 
 .section-title {
@@ -1450,19 +1451,20 @@ body {
 }
 
 .slider-dot {
-  width: 8px;
-  height: 8px;
-  background: #cbd5e1;
+  width: 12px;
+  height: 12px;
+  background: #94a3b8;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0;
+  padding: 6px; /* توسيع مساحة النقر بالـ padding */
+  margin: 0 3px;
 }
 
 .slider-dot.active {
   background: #2563eb;
-  width: 24px;
+  width: 28px;
   border-radius: 50px;
 }
 

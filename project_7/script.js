@@ -194,13 +194,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const totalSlides = Math.max(0, cards.length - getCardsPerView() + 1);
 
-  // إنشاء نقاط التنقل (Dots)
+  // إنشاء نقاط التنقل (Dots) مع دعم إمكانية الوصول Accessibility
   function createDots() {
     if (!dotsContainer) return;
     dotsContainer.innerHTML = "";
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement("button");
       dot.classList.add("slider-dot");
+
+      // إضافة وصف للزر ليتوافق مع معايير الوصول
+      dot.setAttribute("aria-label", `الانتقال إلى الشريحة رقم ${i + 1}`);
+
       if (i === 0) dot.classList.add("active");
       dot.addEventListener("click", () => {
         moveToSlide(i);
