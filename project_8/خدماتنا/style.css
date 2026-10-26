@@ -1,0 +1,1141 @@
+/* ==========================================
+   1. General Reset & Base Styles
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  direction: rtl;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   2. Header & Navbar
+   ========================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+  flex-shrink: 0;
+}
+
+.logo-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+  line-height: 1.1;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  padding: 6px 0;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0284c7;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* زر الخط الساخن */
+.hotline-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #dc2626 !important;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+  animation: redPulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.hotline-btn:hover {
+  background-color: #b91c1c !important;
+}
+
+@keyframes redPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+.hotline-btn i {
+  font-size: 16px;
+}
+
+.small-text {
+  font-size: 9px;
+  color: #fee2e2;
+  display: block;
+}
+
+.phone-num {
+  font-size: 14px;
+  font-weight: 900;
+  font-family: monospace;
+}
+
+/* زر القائمة للموبايل والتابلت */
+.menu-toggle-btn {
+  display: none;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #0369a1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.menu-toggle-btn:hover,
+.menu-toggle-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+/* ==========================================
+   3. Mobile Side Menu Drawer
+   ========================================== */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-side-menu.active {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.close-menu-btn {
+  background: #f1f5f9;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-menu-btn:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.mobile-nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-links a i {
+  color: #0284c7;
+  font-size: 16px;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  background-color: #f0f9ff;
+  color: #0284c7;
+}
+
+.mobile-menu-footer {
+  padding: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mobile-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #dc2626;
+  color: #ffffff !important;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* ==========================================
+   4. Services Hero Section
+   ========================================== */
+.services-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 85px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(2, 132, 199, 0.15);
+  color: #fdfdfd;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  margin-bottom: 20px;
+}
+
+.services-hero h1 {
+  font-size: 38px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.services-hero p {
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+/* ==========================================
+   5. Section Header & Services Grid (ضبط العناوين فوق الكروت)
+   ========================================== */
+.services-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-title .subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0284c7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: #0284c7;
+}
+
+.card-img-box {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background-color: #fefefe;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.service-card:hover .card-img-box img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  padding: 22px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* روابط كروت الخدمات */
+.service-card-link {
+  text-decoration: none !important;
+  display: block;
+  color: inherit;
+}
+
+.service-link-btn {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0284c7;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.service-card-link:hover .service-link-btn {
+  gap: 12px;
+}
+
+/* ==========================================
+   6. Responsive Media Queries (التجاوب الكامل)
+   ========================================== */
+@media (max-width: 1024px) {
+  .navbar .nav-links,
+  .nav-links {
+    display: none !important;
+  }
+
+  .navbar .menu-toggle-btn,
+  .menu-toggle-btn {
+    display: flex !important;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .header-actions {
+    gap: 8px !important;
+  }
+
+  .hotline-btn {
+    padding: 6px 10px !important;
+    border-radius: 8px !important;
+    gap: 5px !important;
+  }
+
+  .hotline-btn .small-text {
+    display: none;
+  }
+
+  .hotline-btn .phone-num {
+    font-size: 13px !important;
+  }
+
+  .services-hero {
+    padding: 60px 0;
+  }
+
+  .services-hero h1 {
+    font-size: 28px;
+  }
+
+  .services-hero p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .services-section {
+    padding: 50px 0;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-title {
+    font-size: 14px;
+  }
+
+  .logo-subtitle {
+    font-size: 9px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .services-hero h1 {
+    font-size: 24px;
+  }
+}
+.kiriazi-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+}
+.kiriazi-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+.kiriazi-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .kiriazi-card {
+    padding: 2rem;
+  }
+}
+.kiriazi-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+@media (min-width: 768px) {
+  .kiriazi-title {
+    font-size: 1.5rem;
+  }
+}
+.kiriazi-box {
+  background-color: #f0f9ff;
+  border: 2px solid #38bdf8;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .kiriazi-box {
+    padding: 1.25rem;
+  }
+}
+.kiriazi-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+.kiriazi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.kiriazi-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.kiriazi-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+.kiriazi-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+@media (min-width: 768px) {
+  .kiriazi-card p {
+    font-size: 1rem;
+  }
+}
+.kiriazi-card p:last-child {
+  margin-bottom: 0;
+}
+/* ==========================================
+   Kiriazi Brand Link & Image Box Customization
+   ========================================== */
+.kiriazi-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.kiriazi-box .brand-item:hover {
+  background-color: #f0f9ff;
+  border-color: #0284c7;
+  color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.kiriazi-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.kiriazi-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   LG Section & Brand Styling
+   ========================================== */
+.lg-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.lg-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.lg-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .lg-card {
+    padding: 2rem;
+  }
+}
+
+.lg-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .lg-title {
+    font-size: 1.5rem;
+  }
+}
+
+.lg-box {
+  background-color: #f0f9ff;
+  border: 2px solid #38bdf8;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .lg-box {
+    padding: 1.25rem;
+  }
+}
+
+.lg-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.lg-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lg-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.lg-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.lg-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .lg-card p {
+    font-size: 1rem;
+  }
+}
+
+.lg-card p:last-child {
+  margin-bottom: 0;
+}
+
+.lg-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.lg-box .brand-item:hover {
+  background-color: #f0f9ff;
+  border-color: #0284c7;
+  color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.lg-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.lg-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Samsung Section & Brand Styling
+   ========================================== */
+.samsung-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.samsung-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.samsung-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .samsung-card {
+    padding: 2rem;
+  }
+}
+
+.samsung-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .samsung-title {
+    font-size: 1.5rem;
+  }
+}
+
+.samsung-box {
+  background-color: #f0f9ff;
+  border: 2px solid #38bdf8;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .samsung-box {
+    padding: 1.25rem;
+  }
+}
+
+.samsung-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.samsung-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.samsung-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.samsung-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.samsung-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .samsung-card p {
+    font-size: 1rem;
+  }
+}
+
+.samsung-card p:last-child {
+  margin-bottom: 0;
+}
+
+.samsung-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.samsung-box .brand-item:hover {
+  background-color: #f0f9ff;
+  border-color: #0284c7;
+  color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.samsung-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.samsung-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Toshiba Section & Brand Styling
+   ========================================== */
+.toshiba-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.toshiba-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.toshiba-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .toshiba-card {
+    padding: 2rem;
+  }
+}
+
+.toshiba-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .toshiba-title {
+    font-size: 1.5rem;
+  }
+}
+
+.toshiba-box {
+  background-color: #f0f9ff;
+  border: 2px solid #38bdf8;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .toshiba-box {
+    padding: 1.25rem;
+  }
+}
+
+.toshiba-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.toshiba-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toshiba-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.toshiba-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.toshiba-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .toshiba-card p {
+    font-size: 1rem;
+  }
+}
+
+.toshiba-card p:last-child {
+  margin-bottom: 0;
+}
+
+.toshiba-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.toshiba-box .brand-item:hover {
+  background-color: #f0f9ff;
+  border-color: #0284c7;
+  color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.toshiba-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.toshiba-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

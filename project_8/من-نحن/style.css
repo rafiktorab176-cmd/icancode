@@ -1,0 +1,1070 @@
+/* ==========================================
+   1. General Reset & Base Styles
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  direction: rtl;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   2. Header & Navbar
+   ========================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+  flex-shrink: 0;
+}
+
+.logo-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+  line-height: 1.1;
+}
+
+.logo-subtitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0284c7;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  padding: 6px 0;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0284c7;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* مسافة فاصلة مريحة بين الهمبرغر وزر الاتصال */
+}
+
+/* زر الخط الساخن */
+.hotline-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #dc2626 !important;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+  animation: redPulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.hotline-btn:hover {
+  background-color: #b91c1c !important;
+}
+
+@keyframes redPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+.hotline-btn i {
+  font-size: 16px;
+}
+
+.small-text {
+  font-size: 9px;
+  color: #fee2e2;
+  display: block;
+}
+
+.phone-num {
+  font-size: 14px;
+  font-weight: 900;
+  font-family: monospace;
+}
+
+/* زر القائمة للموبايل والتابلت */
+.menu-toggle-btn {
+  display: none;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #0369a1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.menu-toggle-btn:hover,
+.menu-toggle-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+/* ==========================================
+   3. Mobile Side Menu Drawer
+   ========================================== */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-side-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-side-menu.active {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.close-menu-btn {
+  background: #f1f5f9;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-menu-btn:hover {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.mobile-nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-links a i {
+  color: #0284c7;
+  font-size: 16px;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  background-color: #f0f9ff;
+  color: #0284c7;
+}
+
+.mobile-menu-footer {
+  padding: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mobile-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #dc2626;
+  color: #ffffff !important;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* ==========================================
+   4. About Us Page Sections
+   ========================================== */
+.about-hero {
+  background: linear-gradient(135deg, #0f172a, #0284c7);
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 15px 0;
+}
+
+.about-hero p {
+  font-size: 15px;
+  color: #e2e8f0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+
+.hero-badge i {
+  color: #f59e0b;
+}
+
+.about-story-section {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0284c7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.story-content h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.story-content p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.story-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.s-feat {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.s-feat i {
+  color: #059669;
+}
+
+.story-img-box {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+.story-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #0284c7;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(2, 132, 199, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-num {
+  font-size: 26px;
+  font-weight: 900;
+  font-family: monospace;
+}
+
+.exp-text {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stats-section {
+  background: #0f172a;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-card i {
+  font-size: 28px;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  font-weight: 900;
+  font-family: monospace;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.why-section {
+  padding: 70px 0;
+  background-color: #f8fafc;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.section-title .subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0284c7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.why-card {
+  background: #ffffff;
+  padding: 25px 18px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  border-color: #0284c7;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.04);
+}
+
+.why-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #eefbff;
+  color: #0284c7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.guarantee-section {
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.guarantee-box {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-radius: 20px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.subtitle-light {
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.g-text h2 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.g-text p {
+  font-size: 13.5px;
+  color: #cbd5e1;
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.about-cta-section {
+  padding: 60px 0;
+  background-color: #f1f5f9;
+  text-align: center;
+}
+
+.about-cta-section h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.about-cta-section p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.style-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-warning {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.btn-warning:hover {
+  background-color: #b91c1c;
+}
+
+.btn-success {
+  background-color: #059669;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #047857;
+}
+
+.btn-lg {
+  padding: 14px;
+  font-size: 16px;
+}
+
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+/* ==========================================
+   5. Responsive Media Queries (يدعم كل أحجام الموبايل والتابلت الشائعة)
+   ========================================== */
+@media (max-width: 1024px) {
+  /* تحويل الروابط العادية إلى قائمة منسدلة لكل شاشات التابلت والموبايل (أقل من 1024px) */
+  .navbar .nav-links,
+  .nav-links {
+    display: none !important;
+  }
+
+  .navbar .menu-toggle-btn,
+  .menu-toggle-btn {
+    display: flex !important;
+  }
+
+  .about-story-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .guarantee-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .header-actions {
+    gap: 8px !important; /* ضمان وجود مسافة ممتازة وغير متلاصقة بين الهمبرغر وزر الاتصال تماماً مثل الرئيسية */
+  }
+
+  /* تصغير زر الخط الساخن ليشبه الصفحة الرئيسية بدقة ومطابقة تامة */
+  .hotline-btn {
+    padding: 6px 10px !important;
+    border-radius: 8px !important;
+    gap: 5px !important;
+  }
+
+  .hotline-btn .small-text {
+    display: none;
+  }
+
+  .hotline-btn .phone-num {
+    font-size: 13px !important;
+  }
+
+  .story-features {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .about-hero h1 {
+    font-size: 26px;
+  }
+
+  .story-content h2,
+  .section-title h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid,
+  .why-grid,
+  .story-features {
+    grid-template-columns: 1fr !important;
+  }
+
+  .logo-title {
+    font-size: 14px;
+  }
+
+  .logo-subtitle {
+    font-size: 9px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* --- سيكشن آراء العملاء داخل صفحة من نحن --- */
+.testimonials-section {
+  padding: 90px 0;
+  background-color: #f8fafc;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: #0284c7;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.client-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #0284c7;
+}
+
+.client-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 3px;
+}
+
+.client-loc {
+  font-size: 11px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.client-loc i {
+  color: #dc2626;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.service-tag {
+  display: inline-block;
+  background-color: #eefbff;
+  color: #0284c7;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 50px;
+  align-self: flex-start;
+}
+
+/* التجاوب مع الموبايل والشاشات المتوسطة للآراء */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 70px 0 30px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h4 {
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.footer-col p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.footer-contact-box {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-contact-box:hover {
+  border-color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.footer-contact-label {
+  font-size: 14px;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.footer-hotline-box {
+  color: #b91c1c;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: monospace;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-wa-box {
+  color: #34d399;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  text-decoration: none;
+  display: inline;
+  direction: ltr;
+  text-align: right;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gov-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .gov-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-row,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+  .booking-card {
+    padding: 22px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* تنسيق البريد والأرقام الأرضية داخل الفوتر */
+.footer-email-box {
+  color: #38bdf8;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  font-family: monospace;
+}
+
+.footer-landlines {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  direction: ltr;
+  justify-content: flex-end;
+}
+
+.landline-num {
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.landline-num:hover {
+  color: #38bdf8;
+}
+
+.separator {
+  color: #64748b;
+}
