@@ -14,8 +14,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="icon" type="image/png" href="./assets/logo.png"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* تنسيق صورة اللوجو لتظهر بشكل احترافي ومناسب */
+      .logo-box img.logo-img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+      .footer .logo-box img.logo-img {
+        width: 45px;
+        height: 45px;
+      }
+    </style>
   </head>
   <body>
     <!-- Mobile Menu Overlay Background -->
@@ -27,7 +41,11 @@
         <!-- Logo -->
         <div class="logo-box">
           <div class="logo-icon">
-            <i class="fa-solid fa-snowflake"></i>
+            <img
+              src="./assets/logo.png"
+              alt="المركز المعتمد"
+              class="logo-img"
+            />
           </div>
           <div class="logo-text">
             <span class="logo-title">المركز المعتمد</span>
@@ -72,7 +90,13 @@
       <aside id="mobileMenu" class="mobile-side-menu">
         <div class="mobile-menu-header">
           <div class="logo-box">
-            <div class="logo-icon"><i class="fa-solid fa-snowflake"></i></div>
+            <div class="logo-icon">
+              <img
+                src="./assets/logo.png"
+                alt="المركز المعتمد"
+                class="logo-img"
+              />
+            </div>
             <span class="logo-title">المركز المعتمد</span>
           </div>
           <button id="closeMenuBtn" class="close-menu-btn">
@@ -83,9 +107,11 @@
           <a href="index.html" class="active"
             ><i class="fa-solid fa-house"></i> الرئيسية</a
           >
-          <a href="من-نحن/"><i class="fa-solid fa-calendar-check"></i> من نحن</a>
+          <a href="من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
           <a href="خدماتنا/"
-            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+            ><i class="fa-solid fa-screwdriver-wrench"></i> خدماتنا</a
           >
           <a href="المحافظات/"
             ><i class="fa-solid fa-location-dot"></i> المحافظات</a
@@ -1069,13 +1095,19 @@
       </a>
     </div>
 
-    <!-- Footer (محدث بالكامل ليشمل كل المحافظات والماركات والروابط بالعربي) -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container footer-grid">
         <!-- العمود الأول: التعريف بالموقع، البريد، ووسائل التواصل -->
         <div class="footer-col">
           <div class="logo-box" style="margin-bottom: 1rem">
-            <div class="logo-icon"><i class="fa-solid fa-snowflake"></i></div>
+            <div class="logo-icon">
+              <img
+                src="./assets/logo.png"
+                alt="المركز المعتمد"
+                class="logo-img"
+              />
+            </div>
             <span class="logo-title" style="color: white">المركز المعتمد</span>
           </div>
           <p>
@@ -1168,7 +1200,7 @@
             <li><a href="البحيرة/">صيانة ثلاجات البحيرة</a></li>
             <li><a href="كفر-الشيخ/">صيانة كفر الشيخ</a></li>
             <li><a href="دمياط/">صيانة ثلاجات دمياط</a></li>
-            <li><a href="دمياط-الجديدة/"> صيانة تلاجات دمياط ج</a></li>
+            <li><a href="دمياط-الجديدة/">صيانة ثلاجات دمياط الجديدة</a></li>
           </ul>
         </div>
       </div>
@@ -1179,7 +1211,6 @@
         </p>
       </div>
     </footer>
-
     <!-- Custom JS -->
     <script src="script.js"></script>
   </body>

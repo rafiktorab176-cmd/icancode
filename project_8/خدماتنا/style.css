@@ -58,7 +58,7 @@ img {
 .logo-icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #0369a1, #0284c7);
+  background: linear-gradient(135deg, #eaebec, #c1c2c3);
   color: #ffffff;
   border-radius: 10px;
   display: flex;
@@ -1138,4 +1138,3540 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* ==========================================
+   Sharp Section & Brand Styling
+   ========================================== */
+.sharp-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.sharp-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.sharp-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .sharp-card {
+    padding: 2rem;
+  }
+}
+
+.sharp-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .sharp-title {
+    font-size: 1.5rem;
+  }
+}
+
+.sharp-box {
+  background-color: #fef2f2; /* لون خلفية مائل للأحمر الفاتح الخاص بماركة شارب */
+  border: 2px solid #ef4444; /* إطار أحمر متناسق */
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .sharp-box {
+    padding: 1.25rem;
+  }
+}
+
+.sharp-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.sharp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sharp-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.sharp-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.sharp-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .sharp-card p {
+    font-size: 1rem;
+  }
+}
+
+.sharp-card p:last-child {
+  margin-bottom: 0;
+}
+
+.sharp-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.sharp-box .brand-item:hover {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+  color: #ef4444;
+  transform: translateY(-2px);
+}
+
+.sharp-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.sharp-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Zanussi Section & Brand Styling
+   ========================================== */
+.zanussi-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.zanussi-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.zanussi-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .zanussi-card {
+    padding: 2rem;
+  }
+}
+
+.zanussi-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .zanussi-title {
+    font-size: 1.5rem;
+  }
+}
+
+.zanussi-box {
+  background-color: #fefce8; /* خلفية صفراء/ذهبية متناسقة مع الهوية */
+  border: 2px solid #eab308;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .zanussi-box {
+    padding: 1.25rem;
+  }
+}
+
+.zanussi-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.zanussi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.zanussi-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.zanussi-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.zanussi-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .zanussi-card p {
+    font-size: 1rem;
+  }
+}
+
+.zanussi-card p:last-child {
+  margin-bottom: 0;
+}
+
+.zanussi-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.zanussi-box .brand-item:hover {
+  background-color: #fefce8;
+  border-color: #ca8a04;
+  color: #ca8a04;
+  transform: translateY(-2px);
+}
+
+.zanussi-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.zanussi-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Beko Section & Brand Styling
+   ========================================== */
+.beko-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.beko-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.beko-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .beko-card {
+    padding: 2rem;
+  }
+}
+
+.beko-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .beko-title {
+    font-size: 1.5rem;
+  }
+}
+
+.beko-box {
+  background-color: #ecfeff; /* خلفية سماوية فاتحة متناسقة مع هوية بيكو */
+  border: 2px solid #06b6d4; /* إطار سيان/أزرق مميز */
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .beko-box {
+    padding: 1.25rem;
+  }
+}
+
+.beko-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.beko-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.beko-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.beko-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.beko-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .beko-card p {
+    font-size: 1rem;
+  }
+}
+
+.beko-card p:last-child {
+  margin-bottom: 0;
+}
+
+.beko-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.beko-box .brand-item:hover {
+  background-color: #ecfeff;
+  border-color: #0891b2;
+  color: #0891b2;
+  transform: translateY(-2px);
+}
+
+.beko-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.beko-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   White Whale Section & Brand Styling
+   ========================================== */
+.whitewhale-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.whitewhale-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.whitewhale-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .whitewhale-card {
+    padding: 2rem;
+  }
+}
+
+.whitewhale-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .whitewhale-title {
+    font-size: 1.5rem;
+  }
+}
+
+.whitewhale-box {
+  background-color: #f8fafc; /* خلفية رمادية فاتحة ونقية تتناسب مع اسم وايت ويل */
+  border: 2px solid #64748b; /* إطار رمادي داكن أنيق ومتناسق */
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .whitewhale-box {
+    padding: 1.25rem;
+  }
+}
+
+.whitewhale-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.whitewhale-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.whitewhale-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.whitewhale-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.whitewhale-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .whitewhale-card p {
+    font-size: 1rem;
+  }
+}
+
+.whitewhale-card p:last-child {
+  margin-bottom: 0;
+}
+
+.whitewhale-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.whitewhale-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.whitewhale-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.whitewhale-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Electrostar Section & Brand Styling
+   ========================================== */
+.electrostar-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.electrostar-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.electrostar-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .electrostar-card {
+    padding: 2rem;
+  }
+}
+
+.electrostar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .electrostar-title {
+    font-size: 1.5rem;
+  }
+}
+
+.electrostar-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .electrostar-box {
+    padding: 1.25rem;
+  }
+}
+
+.electrostar-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.electrostar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.electrostar-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.electrostar-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.electrostar-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .electrostar-card p {
+    font-size: 1rem;
+  }
+}
+
+.electrostar-card p:last-child {
+  margin-bottom: 0;
+}
+
+.electrostar-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.electrostar-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.electrostar-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.electrostar-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   White Point Section & Brand Styling
+   ========================================== */
+.whitepoint-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.whitepoint-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.whitepoint-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .whitepoint-card {
+    padding: 2rem;
+  }
+}
+
+.whitepoint-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .whitepoint-title {
+    font-size: 1.5rem;
+  }
+}
+
+.whitepoint-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .whitepoint-box {
+    padding: 1.25rem;
+  }
+}
+
+.whitepoint-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.whitepoint-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.whitepoint-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.whitepoint-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.whitepoint-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .whitepoint-card p {
+    font-size: 1rem;
+  }
+}
+
+.whitepoint-card p:last-child {
+  margin-bottom: 0;
+}
+
+.whitepoint-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.whitepoint-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.whitepoint-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.whitepoint-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Alaska Section & Brand Styling
+   ========================================== */
+.alaska-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.alaska-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.alaska-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .alaska-card {
+    padding: 2rem;
+  }
+}
+
+.alaska-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .alaska-title {
+    font-size: 1.5rem;
+  }
+}
+
+.alaska-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .alaska-box {
+    padding: 1.25rem;
+  }
+}
+
+.alaska-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.alaska-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alaska-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.alaska-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.alaska-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .alaska-card p {
+    font-size: 1rem;
+  }
+}
+
+.alaska-card p:last-child {
+  margin-bottom: 0;
+}
+
+.alaska-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.alaska-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.alaska-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.alaska-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Alaska Section & Brand Styling
+   ========================================== */
+.alaska-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.alaska-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.alaska-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .alaska-card {
+    padding: 2rem;
+  }
+}
+
+.alaska-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .alaska-title {
+    font-size: 1.5rem;
+  }
+}
+
+.alaska-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .alaska-box {
+    padding: 1.25rem;
+  }
+}
+
+.alaska-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.alaska-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alaska-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.alaska-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.alaska-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .alaska-card p {
+    font-size: 1rem;
+  }
+}
+
+.alaska-card p:last-child {
+  margin-bottom: 0;
+}
+
+.alaska-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.alaska-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.alaska-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.alaska-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Fresh Section & Brand Styling
+   ========================================== */
+.fresh-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.fresh-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.fresh-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .fresh-card {
+    padding: 2rem;
+  }
+}
+
+.fresh-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .fresh-title {
+    font-size: 1.5rem;
+  }
+}
+
+.fresh-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .fresh-box {
+    padding: 1.25rem;
+  }
+}
+
+.fresh-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.fresh-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fresh-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.fresh-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.fresh-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .fresh-card p {
+    font-size: 1rem;
+  }
+}
+
+.fresh-card p:last-child {
+  margin-bottom: 0;
+}
+
+.fresh-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.fresh-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.fresh-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.fresh-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Tornado Section & Brand Styling
+   ========================================== */
+.tornado-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.tornado-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.tornado-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .tornado-card {
+    padding: 2rem;
+  }
+}
+
+.tornado-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .tornado-title {
+    font-size: 1.5rem;
+  }
+}
+
+.tornado-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .tornado-box {
+    padding: 1.25rem;
+  }
+}
+
+.tornado-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.tornado-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tornado-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tornado-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.tornado-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .tornado-card p {
+    font-size: 1rem;
+  }
+}
+
+.tornado-card p:last-child {
+  margin-bottom: 0;
+}
+
+.tornado-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.tornado-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.tornado-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.tornado-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Hitachi Section & Brand Styling
+   ========================================== */
+.hitachi-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.hitachi-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.hitachi-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .hitachi-card {
+    padding: 2rem;
+  }
+}
+
+.hitachi-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .hitachi-title {
+    font-size: 1.5rem;
+  }
+}
+
+.hitachi-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hitachi-box {
+    padding: 1.25rem;
+  }
+}
+
+.hitachi-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.hitachi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hitachi-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hitachi-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.hitachi-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .hitachi-card p {
+    font-size: 1rem;
+  }
+}
+
+.hitachi-card p:last-child {
+  margin-bottom: 0;
+}
+
+.hitachi-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.hitachi-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.hitachi-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.hitachi-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Hisense Section & Brand Styling
+   ========================================== */
+.hisense-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.hisense-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.hisense-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .hisense-card {
+    padding: 2rem;
+  }
+}
+
+.hisense-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .hisense-title {
+    font-size: 1.5rem;
+  }
+}
+
+.hisense-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hisense-box {
+    padding: 1.25rem;
+  }
+}
+
+.hisense-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.hisense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hisense-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hisense-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.hisense-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .hisense-card p {
+    font-size: 1rem;
+  }
+}
+
+.hisense-card p:last-child {
+  margin-bottom: 0;
+}
+
+.hisense-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.hisense-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.hisense-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.hisense-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Westinghouse Section & Brand Styling
+   ========================================== */
+.westinghouse-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.westinghouse-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.westinghouse-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .westinghouse-card {
+    padding: 2rem;
+  }
+}
+
+.westinghouse-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .westinghouse-title {
+    font-size: 1.5rem;
+  }
+}
+
+.westinghouse-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .westinghouse-box {
+    padding: 1.25rem;
+  }
+}
+
+.westinghouse-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.westinghouse-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.westinghouse-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.westinghouse-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.westinghouse-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .westinghouse-card p {
+    font-size: 1rem;
+  }
+}
+
+.westinghouse-card p:last-child {
+  margin-bottom: 0;
+}
+
+.westinghouse-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.westinghouse-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.westinghouse-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.westinghouse-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Frigidaire Section & Brand Styling
+   ========================================== */
+.frigidaire-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.frigidaire-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.frigidaire-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .frigidaire-card {
+    padding: 2rem;
+  }
+}
+
+.frigidaire-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .frigidaire-title {
+    font-size: 1.5rem;
+  }
+}
+
+.frigidaire-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .frigidaire-box {
+    padding: 1.25rem;
+  }
+}
+
+.frigidaire-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.frigidaire-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.frigidaire-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.frigidaire-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.frigidaire-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .frigidaire-card p {
+    font-size: 1rem;
+  }
+}
+
+.frigidaire-card p:last-child {
+  margin-bottom: 0;
+}
+
+.frigidaire-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.frigidaire-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.frigidaire-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.frigidaire-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Haier Section & Brand Styling
+   ========================================== */
+.haier-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.haier-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.haier-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .haier-card {
+    padding: 2rem;
+  }
+}
+
+.haier-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .haier-title {
+    font-size: 1.5rem;
+  }
+}
+
+.haier-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .haier-box {
+    padding: 1.25rem;
+  }
+}
+
+.haier-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.haier-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.haier-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.haier-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.haier-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .haier-card p {
+    font-size: 1rem;
+  }
+}
+
+.haier-card p:last-child {
+  margin-bottom: 0;
+}
+
+.haier-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.haier-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.haier-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.haier-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Midea Section & Brand Styling
+   ========================================== */
+.midea-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.midea-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.midea-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .midea-card {
+    padding: 2rem;
+  }
+}
+
+.midea-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .midea-title {
+    font-size: 1.5rem;
+  }
+}
+
+.midea-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .midea-box {
+    padding: 1.25rem;
+  }
+}
+
+.midea-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.midea-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.midea-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.midea-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.midea-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .midea-card p {
+    font-size: 1rem;
+  }
+}
+
+.midea-card p:last-child {
+  margin-bottom: 0;
+}
+
+.midea-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.midea-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.midea-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.midea-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Indesit Section & Brand Styling
+   ========================================== */
+.indesit-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.indesit-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.indesit-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .indesit-card {
+    padding: 2rem;
+  }
+}
+
+.indesit-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .indesit-title {
+    font-size: 1.5rem;
+  }
+}
+
+.indesit-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .indesit-box {
+    padding: 1.25rem;
+  }
+}
+
+.indesit-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.indesit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indesit-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.indesit-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.indesit-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .indesit-card p {
+    font-size: 1rem;
+  }
+}
+
+.indesit-card p:last-child {
+  margin-bottom: 0;
+}
+
+.indesit-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.indesit-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.indesit-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.indesit-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Goldi Section & Brand Styling
+   ========================================== */
+.goldi-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.goldi-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.goldi-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .goldi-card {
+    padding: 2rem;
+  }
+}
+
+.goldi-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .goldi-title {
+    font-size: 1.5rem;
+  }
+}
+
+.goldi-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .goldi-box {
+    padding: 1.25rem;
+  }
+}
+
+.goldi-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.goldi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goldi-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.goldi-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.goldi-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .goldi-card p {
+    font-size: 1rem;
+  }
+}
+
+.goldi-card p:last-child {
+  margin-bottom: 0;
+}
+
+.goldi-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.goldi-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.goldi-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.goldi-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Ariston Section & Brand Styling
+   ========================================== */
+.ariston-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.ariston-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.ariston-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .ariston-card {
+    padding: 2rem;
+  }
+}
+
+.ariston-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .ariston-title {
+    font-size: 1.5rem;
+  }
+}
+
+.ariston-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .ariston-box {
+    padding: 1.25rem;
+  }
+}
+
+.ariston-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.ariston-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ariston-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ariston-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.ariston-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .ariston-card p {
+    font-size: 1rem;
+  }
+}
+
+.ariston-card p:last-child {
+  margin-bottom: 0;
+}
+
+.ariston-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.ariston-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.ariston-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.ariston-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Bosch Section & Brand Styling
+   ========================================== */
+.bosch-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.bosch-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.bosch-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .bosch-card {
+    padding: 2rem;
+  }
+}
+
+.bosch-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .bosch-title {
+    font-size: 1.5rem;
+  }
+}
+
+.bosch-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bosch-box {
+    padding: 1.25rem;
+  }
+}
+
+.bosch-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.bosch-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bosch-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.bosch-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.bosch-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .bosch-card p {
+    font-size: 1rem;
+  }
+}
+
+.bosch-card p:last-child {
+  margin-bottom: 0;
+}
+
+.bosch-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.bosch-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.bosch-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.bosch-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ==========================================
+   Unionaire Section & Brand Styling
+   ========================================== */
+.unionaire-section {
+  direction: rtl;
+  background-color: #f3f4f6;
+  padding: 2rem 1rem;
+  color: #1f2937;
+  font-family: "Cairo", sans-serif;
+  line-height: 1.7;
+}
+
+.unionaire-container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.unionaire-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .unionaire-card {
+    padding: 2rem;
+  }
+}
+
+.unionaire-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+@media (min-width: 768px) {
+  .unionaire-title {
+    font-size: 1.5rem;
+  }
+}
+
+.unionaire-box {
+  background-color: #f8fafc;
+  border: 2px solid #64748b;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .unionaire-box {
+    padding: 1.25rem;
+  }
+}
+
+.unionaire-box-title {
+  font-weight: 700;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.unionaire-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.unionaire-list li {
+  position: relative;
+  padding-right: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.unionaire-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background-color: #111827;
+  border-radius: 50%;
+}
+
+.unionaire-card p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .unionaire-card p {
+    font-size: 1rem;
+  }
+}
+
+.unionaire-card p:last-child {
+  margin-bottom: 0;
+}
+
+.unionaire-box .brand-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.unionaire-box .brand-item:hover {
+  background-color: #f1f5f9;
+  border-color: #475569;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+.unionaire-box .brand-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.unionaire-box .brand-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.client-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #0284c7;
+}
+
+.client-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 3px;
+}
+
+.client-loc {
+  font-size: 11px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.client-loc i {
+  color: #dc2626;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.service-tag {
+  display: inline-block;
+  background-color: #eefbff;
+  color: #0284c7;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 50px;
+  align-self: flex-start;
+}
+
+/* التجاوب مع الموبايل والشاشات المتوسطة للآراء */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 70px 0 30px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h4 {
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.footer-col p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.footer-contact-box {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.footer-contact-box:hover {
+  border-color: #0284c7;
+  transform: translateY(-2px);
+}
+
+.footer-contact-label {
+  font-size: 14px;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.footer-hotline-box {
+  color: #b91c1c;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: monospace;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-wa-box {
+  color: #34d399;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  text-decoration: none;
+  display: inline;
+  direction: ltr;
+  text-align: right;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gov-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .gov-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-row,
+  .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+  .booking-card {
+    padding: 22px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* تنسيق البريد والأرقام الأرضية داخل الفوتر */
+.footer-email-box {
+  color: #38bdf8;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  font-family: monospace;
+}
+
+.footer-landlines {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  direction: ltr;
+  justify-content: flex-end;
+}
+
+.landline-num {
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.landline-num:hover {
+  color: #38bdf8;
+}
+
+.separator {
+  color: #64748b;
+}
+/* ==========================================
+   6. CTA Section (دعوة للاتصال)
+========================================== */
+.about-cta-section {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  padding: 60px 20px;
+  border-radius: 16px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  direction: rtl;
+}
+
+/* خلفية جمالية خفيفة */
+.about-cta-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* العنوان الرئيسي */
+.about-cta-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* النص الوصفي */
+.about-cta-section p {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  margin-bottom: 35px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* حاوي الأزرار */
+.hero-buttons.style-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* التنسيق العام للأزرار */
+.hero-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-buttons .btn i {
+  font-size: 1.25rem;
+}
+
+/* زر الخط الساخن (التحذيري/الأصفر) */
+.hero-buttons .btn-warning {
+  background-color: #f59e0b;
+  color: #0f172a;
+  border: 2px solid #f59e0b;
+}
+
+.hero-buttons .btn-warning:hover {
+  background-color: #d97706;
+  border-color: #d97706;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* زر الواتساب (الخيارات الأخضر) */
+.hero-buttons .btn-success {
+  background-color: #25d366;
+  color: #ffffff;
+  border: 2px solid #25d366;
+}
+
+.hero-buttons .btn-success:hover {
+  background-color: #1da851;
+  border-color: #1da851;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ==========================================
+   التجاوب مع الشاشات الصغيرة (Responsive)
+========================================== */
+@media (max-width: 768px) {
+  .about-cta-section {
+    padding: 40px 15px;
+    border-radius: 12px;
+  }
+
+  .about-cta-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-cta-section p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons.style-center {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }

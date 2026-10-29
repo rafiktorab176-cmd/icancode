@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محافظات التغطية وخدمات الصيانة | المركز المعتمد</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* تنسيقات كروت المحافظات بالصور (مطابقة لتصميمك) */
+      .gov-card-img {
+        background: #bcbbbb;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .gov-card-img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .gov-img-box {
+        width: 100%;
+        height: 140px;
+        overflow: hidden;
+        position: relative;
+      }
+      .gov-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .gov-card-img:hover .gov-img-box img {
+        transform: scale(1.08);
+      }
+      .gov-card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+      }
+      .gov-title-link {
+        color: #000000;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+        display: block;
+        text-align: center;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 10px;
+        transition: color 0.2s;
+      }
+      .gov-title-link:hover {
+        color: #0d6efd;
+      }
+      .cities-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+      .cities-list li {
+        margin-bottom: 7px;
+      }
+      .cities-list li a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition:
+          color 0.2s ease,
+          padding-right 0.2s ease;
+      }
+      .cities-list li a i {
+        font-size: 0.7rem;
+        color: #ffc107;
+      }
+      .cities-list li a:hover {
+        color: #204783;
+        padding-right: 5px;
+      }
+      .gov-btn {
+        display: block;
+        text-align: center;
+        background: #f8f9fa;
+        color: #0d6efd;
+        padding: 8px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.85rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        margin-top: auto;
+      }
+      .gov-btn:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar (ثابت لا يتغير) -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="../index.html" class="logo-box" style="text-decoration: none">
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../index.html">الرئيسية</a>
+          <a href="../من-نحن/">من نحن</a>
+          <a href="../خدماتنا/">خدماتنا</a>
+          <a href="../المحافظات/" class="active">المحافظات</a>
+          <a href="../الماركات/">الماركات</a>
+          <a href="../المدونة/">المدونة</a>
+          <a href="../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+          <a href="../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../المحافظات/" class="active"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../الماركات/"><i class="fa-solid fa-tags"></i> الماركات</a>
+          <a href="../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى صفحة المحافظات والمدن بالصور -->
+    <main>
+      <!-- 1. Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-map-location-dot"></i> تغطية شاملة لجميع
+            المحافظات والمدن
+          </span>
+          <h1>دليل مراكز صيانة الثلاجات بالمحافظات</h1>
+          <p>
+            اختر محافظتك أو مدينتك للوصول المباشر لأقرب فرع صيانة معتمد وتغطية
+            منزلية فورية.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Governorates & 5 Main Cities Section with Images -->
+      <section
+        class="why-section"
+        style="background-color: #f8f9fa; padding: 80px 0"
+      >
+        <div class="container">
+          <div class="section-title">
+            <span class="subtitle">المحافظات والمدن</span>
+            <h2>المحافظات والمدن الأساسية المغطاة بالكامل</h2>
+            <p>
+              اضغط على اسم المحافظة أو المدينة للانتقال لصفحة الخدمة الخاصة بها:
+            </p>
+          </div>
+
+          <div
+            class="why-grid"
+            style="grid-template-columns: repeat(3, 1fr); gap: 30px"
+          >
+            <!-- 1. محافظة القاهرة -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i1.jpg"
+                  alt="محافظة القاهرة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../القاهرة/" class="gov-title-link"
+                    >صيانة ثلاجات القاهرة</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../القاهرة/مدينة-نصر/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        مدينة نصر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القاهرة/مصر-الجديدة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات مصر
+                        الجديدة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القاهرة/التجمع-الخامس/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        التجمع الخامس</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القاهرة/المعادي/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        المعادي</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القاهرة/حلوان/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        حلوان</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../القاهرة/" class="gov-btn"
+                  >عرض كل مناطق القاهرة <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 2. محافظة الجيزة -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i2.jpg"
+                  alt="محافظة الجيزة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../الجيزة/" class="gov-title-link"
+                    >صيانة ثلاجات الجيزة</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../الجيزة/6-أكتوبر/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات 6
+                        أكتوبر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الجيزة/الشيخ-زايد/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        الشيخ زايد</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الجيزة/الهرم/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        الهرم</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الجيزة/فيصل/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        فيصل</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الجيزة/المهندسين/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        المهندسين</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../الجيزة/" class="gov-btn"
+                  >عرض كل مناطق الجيزة <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 3. محافظة الإسكندرية -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i4.jpg"
+                  alt="محافظة الإسكندرية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../الإسكندرية/" class="gov-title-link"
+                    >صيانة ثلاجات الإسكندرية</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../الإسكندرية/سموحة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        سموحة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الإسكندرية/سيدي-بشر/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        سيدي بشر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الإسكندرية/ميامي/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        ميامي</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الإسكندرية/العجمي/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        العجمي</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الإسكندرية/برج-العرب/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات برج
+                        العرب</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../الإسكندرية/" class="gov-btn"
+                  >عرض كل مناطق الإسكندرية <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 4. محافظة الغربية -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i3.jpg"
+                  alt="محافظة الغربية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../الغربية/" class="gov-title-link"
+                    >صيانة ثلاجات الغربية</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../الغربية/طنطا/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        طنطا</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الغربية/المحلة-الكبرى/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        المحلة الكبرى</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الغربية/كفر-الزيات/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات كفر
+                        الزيات</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الغربية/زفتى/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        زفتى</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الغربية/سمنود/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        سمنود</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../الغربية/" class="gov-btn"
+                  >عرض كل مدن الغربية <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 5. محافظة الدقهلية -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i5.jpg"
+                  alt="محافظة الدقهلية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../الدقهلية/" class="gov-title-link"
+                    >صيانة ثلاجات الدقهلية</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../الدقهلية/المنصورة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        المنصورة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الدقهلية/طلخا/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        طلخا</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الدقهلية/ميت-غمر/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات ميت
+                        غمر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الدقهلية/دكرنس/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        دكرنس</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الدقهلية/السنبلاوين/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        السنبلاوين</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../الدقهلية/" class="gov-btn"
+                  >عرض كل مدن الدقهلية <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 6. محافظة الشرقية -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i6.webp"
+                  alt="محافظة الشرقية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../الشرقية/" class="gov-title-link"
+                    >صيانة ثلاجات الشرقية</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../الشرقية/الزقازيق/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        الزقازيق</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الشرقية/العاشر-من-رمضان/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        العاشر من رمضان</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الشرقية/بلبيس/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        بلبيس</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الشرقية/منيا-القمح/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        منيا القمح</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الشرقية/فاقوس/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        فاقوس</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../الشرقية/" class="gov-btn"
+                  >عرض كل مدن الشرقية <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 7. محافظة القليوبية -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i7.jpg"
+                  alt="محافظة القليوبية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../القليوبية/" class="gov-title-link"
+                    >صيانة ثلاجات القليوبية</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../القليوبية/بنها/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        بنها</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القليوبية/شبرا-الخيمة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        شبرا الخيمة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القليوبية/قليوب/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        قليوب</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القليوبية/طوخ/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        طوخ</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../القليوبية/القناطر-الخيرية/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة القناطر
+                        الخيرية</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../القليوبية/" class="gov-btn"
+                  >عرض كل مدن القليوبية <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 8. محافظة المنوفية -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i8.jpg"
+                  alt="محافظة المنوفية"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../المنوفية/" class="gov-title-link"
+                    >صيانة ثلاجات المنوفية</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../المنوفية/شبين-الكوم/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        شبين الكوم</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المنوفية/مدينة-السادات/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        مدينة السادات</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المنوفية/منوف/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        منوف</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المنوفية/أشمون/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        أشمون</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المنوفية/قويسنا/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        قويسنا</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المنوفية/" class="gov-btn"
+                  >عرض كل مدن المنوفية <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 9. محافظة البحيرة -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i9.jpg"
+                  alt="محافظة البحيرة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../البحيرة/" class="gov-title-link"
+                    >صيانة ثلاجات البحيرة</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../البحيرة/دمنهور/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        دمنهور</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../البحيرة/كفر-الدوار/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات كفر
+                        الدوار</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../البحيرة/إيتاي-البارود/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة إيتاي
+                        البارود</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../البحيرة/أبو-حمص/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات أبو
+                        حمص</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../البحيرة/رشيد/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        رشيد</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../البحيرة/" class="gov-btn"
+                  >عرض كل مدن البحيرة <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 10. محافظة كفر الشيخ -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i10.jpg"
+                  alt="محافظة كفر الشيخ"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../كفر-الشيخ/" class="gov-title-link"
+                    >صيانة ثلاجات كفر الشيخ</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../كفر-الشيخ/كفر-الشيخ-المدينة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة كفر الشيخ
+                        (المدينة)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../كفر-الشيخ/دسوق/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        دسوق</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../كفر-الشيخ/بيلا/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        بيلا</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../كفر-الشيخ/فوه/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        فوه</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../كفر-الشيخ/بلطيم/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        بلطيم</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../كفر-الشيخ/" class="gov-btn"
+                  >عرض كل مدن كفر الشيخ <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 11. محافظة دمياط -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img
+                  src="../assets/i11.jpg"
+                  alt="محافظة دمياط"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../دمياط/" class="gov-title-link"
+                    >صيانة ثلاجات دمياط</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../دمياط/دمياط-المدينة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة دمياط
+                        (المدينة)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../دمياط/دمياط-الجديدة/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        دمياط الجديدة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../دمياط/رأس-البر/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات رأس
+                        البر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../دمياط/فارسكور/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        فارسكور</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../دمياط/الزرقا/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        الزرقا</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../دمياط/" class="gov-btn"
+                  >عرض كل مدن دمياط <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- 12. مدن القناة -->
+            <div class="gov-card-img">
+              <div class="gov-img-box">
+                <img src="../assets/i12.webp" alt="مدن القناة" loading="lazy" />
+              </div>
+              <div class="gov-card-body">
+                <div>
+                  <a href="../مدن-القناة/" class="gov-title-link"
+                    >صيانة ثلاجات مدن القناة</a
+                  >
+                  <ul class="cities-list">
+                    <li>
+                      <a href="../الإسماعيلية/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        الإسماعيلية</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../بورسعيد/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        بورسعيد</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../السويس/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        السويس</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الإسماعيلية/فايد/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة ثلاجات
+                        فايد</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../الإسماعيلية/القنطرة-غرب/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة القنطرة
+                        غرب</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../مدن-القناة/" class="gov-btn"
+                  >عرض كل مدن القناة <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CTA Section -->
+      <section class="about-cta-section text-center">
+        <div class="container">
+          <h2>لم تجد مدينتك أو منطقتك القريبة؟</h2>
+          <p>
+            تواصل فوراً مع خدمة العملاء لمعرفة أقرب سيارة صيانة متواجدة بجوارك.
+          </p>
+          <div class="hero-buttons style-center">
+            <a href="tel:19580" class="btn btn-warning">
+              <i class="fa-solid fa-headset"></i> اتصل بالخط الساخن: 19580
+            </a>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="btn btn-success"
+            >
+              <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (ثابت لا يتغير) -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -54,7 +54,7 @@ img {
 .logo-icon {
   width: 45px;
   height: 45px;
-  background: linear-gradient(135deg, #0369a1, #0284c7);
+  background: linear-gradient(135deg, #eaebec, #c1c2c3);
   color: white;
   border-radius: 12px;
   display: flex;
@@ -1226,4 +1226,32 @@ img {
 
 .separator {
   color: #64748b;
+}
+/* تنسيق لوجو الناف بار */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 120px; /* حدد العرض المناسب للوجو بتاعك */
+  height: auto; /* عشان الصورة تحافظ على أبعادها وما تتضغطش */
+  display: block;
+  background: linear-gradient(135deg, #eaebec, #c1c2c3);
+}
+
+/* لو حابب تضيف نص جنب اللوجو */
+.logo-text {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* تنسيق لوجو الفوتر */
+.footer-logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
 }

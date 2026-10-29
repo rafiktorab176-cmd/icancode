@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الماركات المعتمدة لصيانة الثلاجات | المركز المعتمد</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar (ثابت لا يتغير) -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="../index.html" class="logo-box" style="text-decoration: none">
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../index.html">الرئيسية</a>
+          <a href="../من-نحن/">من نحن</a>
+          <a href="../خدماتنا/">خدماتنا</a>
+          <a href="../المحافظات/">المحافظات</a>
+          <a href="../الماركات/" class="active">الماركات</a>
+          <a href="../المدونة/">المدونة</a>
+          <a href="../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+          <a href="../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../الماركات/" class="active"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى صفحة الماركات مع صور كروت الماركات والأقسام -->
+    <main>
+      <!-- 1. Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-tags"></i> صيانة معتمدة لجميع العلامات
+            التجارية
+          </span>
+          <h1>دليل صيانة ماركات الثلاجات في مصر</h1>
+          <p>
+            قطع غيار أصلية 100% بالضمان وخبرة متخصصة لكل ماركة عالمية أو محلية.
+          </p>
+        </div>
+      </section>
+
+      <!-- Brands Section -->
+      <section id="brands" class="brands-section">
+        <div class="container">
+          <div class="section-title">
+            <span class="subtitle">الماركات العالمية</span>
+            <h2>نقدم الصيانة المعتمدة لجميع الماركات</h2>
+            <p>قطع غيار أصلية متوفرة لكل الماركات مع الضمان</p>
+          </div>
+          <div class="brands-grid">
+            <a href="توشيبا/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/tosh.png" alt="توشيبا" loading="lazy" />
+              </div>
+              <span>توشيبا (Toshiba)</span>
+            </a>
+
+            <a href="شارب/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/sha.png" alt="شارب" loading="lazy" />
+              </div>
+              <span>شارب (Sharp)</span>
+            </a>
+
+            <a href="كريازي/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/kir.jpg" alt="كريازي" loading="lazy" />
+              </div>
+              <span>كريازي (Kiriazi)</span>
+            </a>
+
+            <a href="إيديال-زانوسي/" class="brand-item">
+              <div class="brand-img-box">
+                <img
+                  src="../assets/zan.png"
+                  alt="إيديال زانوسي"
+                  loading="lazy"
+                />
+              </div>
+              <span>إيديال زانوسي(Zanussi)</span>
+            </a>
+
+            <a href="سامسونج/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/sams.png" alt="سامسونج" loading="lazy" />
+              </div>
+              <span>سامسونج (Samsung)</span>
+            </a>
+
+            <a href="إل-جي/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/l-g.jpg" alt="إل جي" loading="lazy" />
+              </div>
+              <span>إل جي (LG)</span>
+            </a>
+
+            <a href="بيكو/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/beko.png" alt="بيكو" loading="lazy" />
+              </div>
+              <span>بيكو (Beko)</span>
+            </a>
+
+            <a href="وايت-ويل/" class="brand-item">
+              <div class="brand-img-box">
+                <img
+                  src="../assets/white-w.jpg"
+                  alt="وايت ويل"
+                  loading="lazy"
+                />
+              </div>
+              <span>وايت ويل (White Whale)</span>
+            </a>
+
+            <a href="الكتروستار/" class="brand-item">
+              <div class="brand-img-box">
+                <img
+                  src="../assets/elktro.png"
+                  alt="الكتروستار"
+                  loading="lazy"
+                />
+              </div>
+              <span>الكتروستار (Electrostar)</span>
+            </a>
+
+            <a href="وايت-بوينت/" class="brand-item">
+              <div class="brand-img-box">
+                <img
+                  src="../assets/white-p.jpg"
+                  alt="وايت بوينت"
+                  loading="lazy"
+                />
+              </div>
+              <span>وايت بوينت (whitepoint)</span>
+            </a>
+
+            <a href="الاسكا/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/als.png" alt="ألاسكا" loading="lazy" />
+              </div>
+              <span>ألاسكا (Alaska)</span>
+            </a>
+
+            <a href="فريش/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/fresh.png" alt="فريش" loading="lazy" />
+              </div>
+              <span>فريش (Fresh)</span>
+            </a>
+
+            <a href="تورنيدو/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/torna.png" alt="تورنيدو" loading="lazy" />
+              </div>
+              <span>تورنيدو</span>
+            </a>
+
+            <a href="هيتاشي/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/hitachi.png" alt="هيتاشي" loading="lazy" />
+              </div>
+              <span>هيتاشي (Hitachi)</span>
+            </a>
+
+            <a href="هيسنس/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/his.png" alt="هيسنس" loading="lazy" />
+              </div>
+              <span>هيسنس (Hisense)</span>
+            </a>
+
+            <a href="وايت-ويستنجهاوس/" class="brand-item">
+              <div class="brand-img-box">
+                <img
+                  src="../assets/white-ws.jpg"
+                  alt="وايت ويستنجهاوس"
+                  loading="lazy"
+                />
+              </div>
+              <span>ويستنجهاوس (Westinghouse)</span>
+            </a>
+
+            <a href="فريجيدير/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/fre.jpg" alt="فريجيدير" loading="lazy" />
+              </div>
+              <span>فريجيدير (Frigidaire)</span>
+            </a>
+
+            <a href="هاير/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/hai.jpg" alt="هاير" loading="lazy" />
+              </div>
+              <span>هاير (Haier)</span>
+            </a>
+
+            <a href="ميديا/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/mid.jpg" alt="ميديا" loading="lazy" />
+              </div>
+              <span>ميديا (Midea)</span>
+            </a>
+
+            <a href="اندست/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/indest.jpg" alt=" إنديست" loading="lazy" />
+              </div>
+              <span> إنديست (indest )</span>
+            </a>
+
+            <a href="جولدى/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/goldi.jpg" alt="جولدي" loading="lazy" />
+              </div>
+              <span>جولدي (Goldi)</span>
+            </a>
+
+            <a href="أريستون/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/air.png" alt="أريستون" loading="lazy" />
+              </div>
+              <span>أريستون (Ariston)</span>
+            </a>
+
+            <a href="بوش/" class="brand-item">
+              <div class="brand-img-box">
+                <img src="../assets/bosh.jpg" alt="بوش" loading="lazy" />
+              </div>
+              <span>بوش (Bosh)</span>
+            </a>
+
+            <a href="يونيون-اير/" class="brand-item">
+              <div class="brand-img-box">
+                <img
+                  src="../assets/union.png"
+                  alt="يونيون إير"
+                  loading="lazy"
+                />
+              </div>
+              <span>يونيون إير (Unionaire)</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CTA Section -->
+      <section class="about-cta-section text-center">
+        <div class="container">
+          <h2>لم تجد الماركة أو الموديل الخاص بثلاجتك؟</h2>
+          <p>
+            نوفر خدمة الصيانة والقطع الأصلية لجميع الماركات المحلية والعالمية
+            بخبرة معتمدة.
+          </p>
+          <div class="hero-buttons style-center">
+            <a href="tel:19580" class="btn btn-warning">
+              <i class="fa-solid fa-headset"></i> اتصل بالخط الساخن: 19580
+            </a>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="btn btn-success"
+            >
+              <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (ثابت لا يتغير) -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

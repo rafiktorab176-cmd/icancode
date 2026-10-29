@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدونة صيانة الثلاجات والنصائح | المركز المعتمد</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* تنسيقات كروت المدونة والمقالات بالصور */
+      .blog-card-img {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .blog-card-img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .blog-img-box {
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+      }
+      .blog-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .blog-card-img:hover .blog-img-box img {
+        transform: scale(1.08);
+      }
+      .blog-card-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+      }
+      .blog-title-link {
+        color: #1e293b;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+        display: block;
+        line-height: 1.4;
+        transition: color 0.2s;
+      }
+      .blog-title-link:hover {
+        color: #0d6efd;
+      }
+      .blog-links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 10px;
+      }
+      .blog-links-list li {
+        margin-bottom: 6px;
+      }
+      .blog-links-list li a {
+        color: #475569;
+        text-decoration: none;
+        font-size: 0.88rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition:
+          color 0.2s ease,
+          padding-right 0.2s ease;
+      }
+      .blog-links-list li a i {
+        font-size: 0.7rem;
+        color: #0d6efd;
+      }
+      .blog-links-list li a:hover {
+        color: #0d6efd;
+        padding-right: 5px;
+      }
+      .blog-btn {
+        display: block;
+        text-align: center;
+        background: #f8f9fa;
+        color: #0d6efd;
+        padding: 8px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.85rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        margin-top: auto;
+      }
+      .blog-btn:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar (ثابت لا يتغير) -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="../index.html" class="logo-box" style="text-decoration: none">
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../index.html">الرئيسية</a>
+          <a href="../من-نحن/">من نحن</a>
+          <a href="../خدماتنا/">خدماتنا</a>
+          <a href="../المحافظات/">المحافظات</a>
+          <a href="../الماركات/">الماركات</a>
+          <a href="../المدونة/" class="active">المدونة</a>
+          <a href="../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+          <a href="../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../الماركات/"><i class="fa-solid fa-tags"></i> الماركات</a>
+          <a href="../المدونة/" class="active"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى صفحة المدونة والمقالات -->
+    <main>
+      <!-- 1. Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-newspaper"></i> نصائح وإرشادات هندسية
+          </span>
+          <h1>مدونة المركز المعتمد لصيانة الثلاجات</h1>
+          <p>
+            مقالات حصرية، أسباب الأعطال المفاجئة، وطرق الحفاظ على كفاءة تبريد
+            ثلاجتك لأطول عمر افتراضي.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Blog Articles Section -->
+      <section
+        class="why-section"
+        style="background-color: #f8f9fa; padding: 80px 0"
+      >
+        <div class="container">
+          <div class="section-title">
+            <span class="subtitle">أحدث المقالات والنصائح</span>
+            <h2>دليلك الشامل لصيانة الثلاجات وحل المشاكل المنزلية</h2>
+            <p>
+              اختر المقال لقراءة التفاصيل الكاملة وتجنب تلف الأطعمة والأعطال
+              المتكررة:
+            </p>
+          </div>
+
+          <div
+            class="why-grid"
+            style="grid-template-columns: repeat(3, 1fr); gap: 30px"
+          >
+            <!-- المقال الأول -->
+            <div class="blog-card-img">
+              <div class="blog-img-box">
+                <img
+                  src="../assets/m1m.jpg"
+                  alt="أسباب ضعف التبريد"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <a
+                    href="../المدونة/أسباب-ضعف-التبريد/"
+                    class="blog-title-link"
+                    >أسباب ضعف التبريد في الثلاجة وطرق علاجها بنفسك</a
+                  >
+                  <ul class="blog-links-list">
+                    <li>
+                      <a href="../المدونة/تسريب-الفريون/"
+                        ><i class="fa-solid fa-angle-left"></i> علامات نقص
+                        وفريون الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تنظيف-الكอยل/"
+                        ><i class="fa-solid fa-angle-left"></i> أهمية تنظيف كويل
+                        المكثف</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تلف-الثرموستات/"
+                        ><i class="fa-solid fa-angle-left"></i> كيف تفحص
+                        ترموستات الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تحميل-الأطعمة/"
+                        ><i class="fa-solid fa-angle-left"></i> الأخطاء الشايعة
+                        في رص الأطعمة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/درجة-الحرارة-المثالية/"
+                        ><i class="fa-solid fa-angle-left"></i> ظبط درجة حرارة
+                        الشتاء والصيف</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المدونة/أسباب-ضعف-التبريد/" class="blog-btn"
+                  >قراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- المقال الثاني -->
+            <div class="blog-card-img">
+              <div class="blog-img-box">
+                <img src="../assets/m1.jpg" alt="تراكم الثلج" loading="lazy" />
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <a
+                    href="../المدونة/تراكم-الثلج-نوفروست/"
+                    class="blog-title-link"
+                    >حل مشكلة تراكم الثلج في الثلاجة النوفروست نهائياً</a
+                  >
+                  <ul class="blog-links-list">
+                    <li>
+                      <a href="../المدونة/عطل-السخان/"
+                        ><i class="fa-solid fa-angle-left"></i> اختبار سخان
+                        الإذابة (Defrost)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تلف-التايمر/"
+                        ><i class="fa-solid fa-angle-left"></i> أعطال تايمر أو
+                        كارتة الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/كاوتش-الباب/"
+                        ><i class="fa-solid fa-angle-left"></i> تسريب الهواء
+                        الساخن من الباب</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/انسداد-فتحات-التبريد/"
+                        ><i class="fa-solid fa-angle-left"></i> علاج انسداد
+                        فتحات الهوايات</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/فحص-الفيوز-حراري/"
+                        ><i class="fa-solid fa-angle-left"></i> فحص الفيوز
+                        الحراري (Thermal Fuse)</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المدونة/تراكم-الثلج-نوفروست/" class="blog-btn"
+                  >قراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- المقال الثالث -->
+            <div class="blog-card-img">
+              <div class="blog-img-box">
+                <img
+                  src="../assets/m3.jpg"
+                  alt="أصوات مزعجة في الثلاجة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <a
+                    href="../المدونة/أصوات-مزعجة-في-الثلاجة/"
+                    class="blog-title-link"
+                    >ما سبب ظهور أصوات غريبة أو ضوضاء عالية في الثلاجة؟</a
+                  >
+                  <ul class="blog-links-list">
+                    <li>
+                      <a href="../المدونة/عطل-مروحة-الفريزر/"
+                        ><i class="fa-solid fa-angle-left"></i> صوت احتكاك مروحة
+                        الفريزر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/اهتزاز-الكمبروسور/"
+                        ><i class="fa-solid fa-angle-left"></i> فحص قواعد موتور
+                        الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تلامس-الأنابيب/"
+                        ><i class="fa-solid fa-angle-left"></i> معالجة تلامس
+                        مواسير التبريد</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/استواء-الأرجل/"
+                        ><i class="fa-solid fa-angle-left"></i> ضبط اتزان الأرجل
+                        الأمامية</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/انتهاء-عمر-الموتور/"
+                        ><i class="fa-solid fa-angle-left"></i> مؤشرات تلف
+                        كمبروسور الثلاجة</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المدونة/أصوات-مزعجة-في-الثلاجة/" class="blog-btn"
+                  >قراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- المقال الرابع -->
+            <div class="blog-card-img">
+              <div class="blog-img-box">
+                <img
+                  src="../assets/m4.jpg"
+                  alt="تسريب المياه من الثلاجة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <a
+                    href="../المدونة/تسريب-المياه-أسفل-الثلاجة/"
+                    class="blog-title-link"
+                    >أسباب تسريب المياه أسفل الثلاجة وطريقة تسليك الصرف</a
+                  >
+                  <ul class="blog-links-list">
+                    <li>
+                      <a href="../المدونة/انسداد-خرطوم-الصرف/"
+                        ><i class="fa-solid fa-angle-left"></i> تنظيف وتسليك
+                        خرطوم الصرف</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/كسر-وعاء-التجميع/"
+                        ><i class="fa-solid fa-angle-left"></i> فحص صينية تجميع
+                        المياه فوق الموتور</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/ميل-الثلاجة-للخارج/"
+                        ><i class="fa-solid fa-angle-left"></i> ضبط ميل الثلاجة
+                        للخلف لرجوع المياه</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تجمد-مجرى-المياه/"
+                        ><i class="fa-solid fa-angle-left"></i> علاج تجمد مجرى
+                        صرف الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تغيير-خرطوم-الفلتر/"
+                        ><i class="fa-solid fa-angle-left"></i> صيانة خراطيم
+                        فلتر المياه المدمج</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المدونة/تسريب-المياه-أسفل-الثلاجة/" class="blog-btn"
+                  >قراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- المقال الخامس -->
+            <div class="blog-card-img">
+              <div class="blog-img-box">
+                <img
+                  src="../assets/m5.jpg"
+                  alt="استهلاك الكهرباء في الثلاجة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <a
+                    href="../المدونة/تقليل-استهلاك-الكهرباء/"
+                    class="blog-title-link"
+                    >نصائح ذهبية لتقليل استهلاك الثلاجة للكهرباء وفاتورة
+                    الطاقة</a
+                  >
+                  <ul class="blog-links-list">
+                    <li>
+                      <a href="../المدونة/مكان-وضع-الثلاجة/"
+                        ><i class="fa-solid fa-angle-left"></i> المسافات الآمنة
+                        لتهوية الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/فتح-الباب-متكرر/"
+                        ><i class="fa-solid fa-angle-left"></i> مخاطر الفتح
+                        المستمر للباب</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/فحص-كاوتش-الابواب/"
+                        ><i class="fa-solid fa-angle-left"></i> اختبار إحكام
+                        كاوتش باب الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/تبريد-الأطعمة-الساخنة/"
+                        ><i class="fa-solid fa-angle-left"></i> لماذا تضر
+                        الأطعمة الساخنة الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/مميزات-انفرتر/"
+                        ><i class="fa-solid fa-angle-left"></i> هل تقنية
+                        الإنفرتر توفر الكهرباء حقاً؟</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المدونة/تقليل-استهلاك-الكهرباء/" class="blog-btn"
+                  >قراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- المقال السادس -->
+            <div class="blog-card-img">
+              <div class="blog-img-box">
+                <img
+                  src="../assets/m6.jpg"
+                  alt="الصيانة الدورية للثلاجة"
+                  loading="lazy"
+                />
+              </div>
+              <div class="blog-card-body">
+                <div>
+                  <a
+                    href="../المدونة/دليل-الصيانة-الدورية/"
+                    class="blog-title-link"
+                    >دليلك الشامل للعناية الدورية بالثلاجة لحمايتها من
+                    الاعطال</a
+                  >
+                  <ul class="blog-links-list">
+                    <li>
+                      <a href="../المدونة/طريقة-تنظيف-الثلاجة/"
+                        ><i class="fa-solid fa-angle-left"></i> الخطوات الصحيحة
+                        لتنظيف الثلاجة</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/إزالة-الروائح-الكريهة/"
+                        ><i class="fa-solid fa-angle-left"></i> القضاء على
+                        الروائح بالمواد الطبيعية</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/فترة-إيقاف-الثلاجة/"
+                        ><i class="fa-solid fa-angle-left"></i> كيفية تخزين
+                        الثلاجة عند السفر</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/متى تستدعي الفني/"
+                        ><i class="fa-solid fa-angle-left"></i> متى يجب طلب فريق
+                        الصيانة المتخصص</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../المدونة/أهمية-الضمان/"
+                        ><i class="fa-solid fa-angle-left"></i> فوائد الاعتماد
+                        على مراكز الصيانة المعتمدة</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a href="../المدونة/دليل-الصيانة-الدورية/" class="blog-btn"
+                  >قراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CTA Section -->
+      <section class="about-cta-section text-center">
+        <div class="container">
+          <h2>هل تواجه عطلاً معقداً وتحتاج لتدخل فوري؟</h2>
+          <p>
+            مهندسونا جاهزون للتحرك إلى منزلك في أي وقت لفحص وإصلاح ثلاجتك بضمان
+            معتمد.
+          </p>
+          <div class="hero-buttons style-center">
+            <a href="tel:19580" class="btn btn-warning">
+              <i class="fa-solid fa-headset"></i> اتصل بالخط الساخن: 19580
+            </a>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="btn btn-success"
+            >
+              <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (ثابت لا يتغير) -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

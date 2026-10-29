@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اتصل بنا وفريق الدعم الفني | المركز المعتمد</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* تنسيقات صفحة اتصل بنا مع كروت التواصل وتأثيرات الهوفر */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 40px;
+        margin-top: 50px;
+        align-items: start;
+      }
+      @media (max-width: 992px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .contact-info-container h3 {
+        font-size: 1.4rem;
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-weight: 800;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 12px;
+      }
+
+      /* شبكة كروت وسائل الاتصال */
+      .contact-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      @media (max-width: 576px) {
+        .contact-cards-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* تصميم كارت التواصل المفرد مع الهوفر */
+      .contact-card-item {
+        background: #fff;
+        border-radius: 12px;
+        padding: 22px 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease,
+          background-color 0.3s ease;
+      }
+
+      /* تأثيرات الهوفر (Hover Effects) للكروت */
+      .contact-card-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(13, 110, 253, 0.12);
+        border-color: #0d6efd;
+        background: linear-gradient(to bottom, #ffffff 0%, #f8fbff 100%);
+      }
+
+      .contact-card-icon {
+        width: 55px;
+        height: 55px;
+        background: rgba(13, 110, 253, 0.08);
+        color: #0d6efd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-card-item:hover .contact-card-icon {
+        background: #0d6efd;
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      /* تخصيص أيقونة الواتساب والخط الساخن عند الهوفر */
+      .contact-card-item.wa .contact-card-icon {
+        background: rgba(25, 135, 84, 0.08);
+        color: #198754;
+      }
+      .contact-card-item.wa:hover .contact-card-icon {
+        background: #198754;
+        color: #fff;
+      }
+
+      .contact-card-item.hotline .contact-card-icon {
+        background: rgba(255, 193, 7, 0.15);
+        color: #d97706;
+      }
+      .contact-card-item.hotline:hover .contact-card-icon {
+        background: #f59e0b;
+        color: #fff;
+      }
+
+      .contact-card-content h4 {
+        margin: 0 0 8px 0;
+        font-size: 1.05rem;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      .contact-card-content span,
+      .contact-card-content p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #475569;
+        direction: ltr;
+        display: inline-block;
+        font-weight: 600;
+      }
+
+      .contact-card-content p.rtl-text {
+        direction: rtl;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        color: #64748b;
+      }
+
+      /* تنسيق نموذج إرسال الرسالة */
+      .contact-form-box {
+        background: #fff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        border: 1px solid #e2e8f0;
+      }
+      .contact-form-box h3 {
+        font-size: 1.4rem;
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 800;
+        border-bottom: 2px solid #f1f5f9;
+        padding-bottom: 12px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.9rem;
+        color: #334155;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-family: "Cairo", sans-serif;
+        font-size: 0.95rem;
+        color: #1e293b;
+        background: #f8fafc;
+        transition: all 0.3s ease;
+      }
+      .form-control:focus {
+        outline: none;
+        border-color: #0d6efd;
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+      }
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+      .submit-btn {
+        background: #0d6efd;
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-family: "Cairo", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s ease;
+      }
+      .submit-btn:hover {
+        background: #0b5ed7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar (ثابت لا يتغير) -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="../index.html" class="logo-box" style="text-decoration: none">
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../index.html">الرئيسية</a>
+          <a href="../من-نحن/">من نحن</a>
+          <a href="../خدماتنا/">خدماتنا</a>
+          <a href="../المحافظات/">المحافظات</a>
+          <a href="../الماركات/">الماركات</a>
+          <a href="../المدونة/">المدونة</a>
+          <a href="../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../اتصل-بنا/" class="active">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+          <a href="../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../الماركات/"><i class="fa-solid fa-tags"></i> الماركات</a>
+          <a href="../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../اتصل-بنا/" class="active"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى صفحة اتصل بنا -->
+    <main>
+      <!-- 1. Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-headset"></i> نحن في خدمتك طوال اليوم
+          </span>
+          <h1>اتصل بفريق الدعم الفني والصيانة</h1>
+          <p>
+            تواصل معنا فوراً للإبلاغ عن أي عطل في ثلاجتك، وسيقوم فريقنا بتنسيق
+            موعد الصيانة المنزلية في أسرع وقت.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Contact Cards & Form Section -->
+      <section style="background-color: #f8f9fa; padding: 70px 0">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- كروت وسائل الاتصال -->
+            <div class="contact-info-container">
+              <h3>قنوات التواصل السريع</h3>
+
+              <div class="contact-cards-grid">
+                <!-- كارت الخط الساخن -->
+                <a href="tel:19580" class="contact-card-item hotline">
+                  <div class="contact-card-icon">
+                    <i class="fa-solid fa-headset"></i>
+                  </div>
+                  <div class="contact-card-content">
+                    <h4>الخط الساخن الموحد</h4>
+                    <span>19580</span>
+                  </div>
+                </a>
+
+                <!-- كارت الواتساب -->
+                <a
+                  href="https://wa.me/201289966660"
+                  target="_blank"
+                  class="contact-card-item wa"
+                >
+                  <div class="contact-card-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </div>
+                  <div class="contact-card-content">
+                    <h4>الواتساب المباشر</h4>
+                    <span>+20 128 996 6660</span>
+                  </div>
+                </a>
+
+                <!-- كارت الأرقام الأرضية -->
+                <a href="tel:0403456555" class="contact-card-item">
+                  <div class="contact-card-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="contact-card-content">
+                    <h4>الأرقام الأرضية</h4>
+                    <span>0403456555</span>
+                  </div>
+                </a>
+
+                <!-- كارت البريد الإلكتروني -->
+                <a
+                  href="mailto:info@elmoatamad-group.com"
+                  class="contact-card-item"
+                >
+                  <div class="contact-card-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="contact-card-content" style="width: 100%">
+                    <h4>البريد الإلكتروني</h4>
+                    <span style="font-size: 0.8rem; word-break: break-all"
+                      >info@elmoatamad-group.com</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <!-- كارت نطاق التغطية الشامل بالأسفل -->
+              <div
+                class="contact-card-item"
+                style="
+                  margin-top: 20px;
+                  grid-column: span 2;
+                  align-items: flex-start;
+                  text-align: right;
+                  flex-direction: row;
+                  gap: 15px;
+                "
+              >
+                <div
+                  class="contact-card-icon"
+                  style="margin-bottom: 0; flex-shrink: 0"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-card-content">
+                  <h4 style="margin-bottom: 5px">نطاق التغطية والخدمة</h4>
+                  <p class="rtl-text">
+                    متواجدون لخدمتكم الفورية في كافة محافظات الجمهورية من خلال
+                    فروعنا وفرق الصيانة المتنقلة بالمنزل.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- نموذج إرسال رسالة / طلب صيانة -->
+            <div class="contact-form-box">
+              <h3>أرسل طلب صيانة أو استفسار</h3>
+              <form action="#" method="POST">
+                <div class="form-group">
+                  <label for="name">الاسم بالكامل:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="اكتب اسمك هنا..."
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">رقم الهاتف أو المحمول:</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-control"
+                    placeholder="01xxxxxxxxx"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="brand">ماركة الثلاجة:</label>
+                  <select id="brand" name="brand" class="form-control">
+                    <option value="">اختر ماركة الثلاجة...</option>
+                    <option value="توشيبا">توشيبا (Toshiba)</option>
+                    <option value="شارب">شارب (Sharp)</option>
+                    <option value="سامسونج">سامسونج (Samsung)</option>
+                    <option value="إل جي">إل جي (LG)</option>
+                    <option value="كريازي">كريازي (Kiriazi)</option>
+                    <option value="إيديال زانوسي">إيديال زانوسي</option>
+                    <option value="أخرى">ماركة أخرى</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">تفاصيل العطل أو الشكوى:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="اكتب وصفاً مبسطاً للمشكلة أو العطل الذي تواجهه..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  <i
+                    class="fa-solid fa-paper-plane"
+                    style="margin-left: 8px"
+                  ></i>
+                  إرسال الطلب
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (ثابت لا يتغير) -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../index.html">الرئيسية</a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
+            <li><a href="../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href.="../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
