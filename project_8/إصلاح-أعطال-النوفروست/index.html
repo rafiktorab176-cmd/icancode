@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إصلاح أعطال النوفرست | المركز المعتمد لصيانة الثلاجات</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة إصلاح أعطال النوفرست */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .features-list li {
+        position: relative;
+        padding-right: 30px;
+        margin-bottom: 15px;
+        color: #334155;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .features-list li i {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #198754;
+        font-size: 1.1rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* تنسيقات السكشنات الإضافية */
+      .freon-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .freon-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .freon-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .freon-card h3 {
+        font-size: 1.2rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .sign-item {
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .sign-icon {
+        background: #e2e8f0;
+        color: #0284c7;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .sign-info h4 {
+        margin: 0 0 5px 0;
+        font-size: 1rem;
+        color: #1e293b;
+      }
+      .sign-info p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #64748b;
+        line-height: 1.5;
+      }
+
+      /* تنسيقات سكشن النصائح الجديد */
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/" class="active">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/" class="active"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للخدمة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-snowflake"></i> صيانة منزلية فورية لنظام
+            التبريد بدون ثلج
+          </span>
+          <h1>خدمة إصلاح أعطال النوفرست للثلاجات</h1>
+          <p>
+            حلول جذرية لمشكلة تراكم الثلج أو ضعف التبريد في الثلاجة، باستخدام
+            أحدث معدات الفحص وقطع الغيار الأصلية.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <h2>ما هي أعطال النوفرست وكيف نقوم بإصلاحها؟</h2>
+            <p>
+              نظام النوفرست (No-Frost) مسؤول عن منع تكوين الثلج اليدوي داخل
+              الثلاجة عبر دورة إذابة (ديفروست) تلقائية تعتمد على السخان، التايمر
+              أو الكارت، والترموديسك. عندما يحدث خلل في أي من هذه المكونات،
+              يتراكم الثلج ويعيق تدفق الهواء البارد. في المركز المعتمد، نقوم
+              بفحص الدائرة بالكامل وإصلاح العطل من الركيزة الأساسية لضمان عدم
+              عودته مجدداً.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> اختبار كفاءة سخانات
+                الديفروست والتأكد من عدم وجود أي قطع أو تلف بها.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> فحص وضبط الحساسات
+                والترموديسك والترموفيوز بدقة باستخدام أجهزة القياس الرقمية.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> تسليك وتنظيف مجاري
+                تصريف المياه المسدودة لمنع تسرب المياه داخل الكابينة.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> اختبار دورة الإذابة
+                بالكامل والتايمر أو الكارت الإلكتروني لضمان انتظام العمل
+                التلقائي.
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تنبيه هام جداً:
+              </h4>
+              <p>
+                احذر من ترك الثلج يتراكم لفترات طويلة أو استخدام أدوات حادة
+                لإزالته، فهذا قد يؤدي إلى ثقب غاز الفريون أو تلف الهيكل الداخلي.
+                استعن فوراً بمهندسينا المتخصصين لفحص النظام هندسياً بالمنزل.
+              </p>
+            </div>
+
+            <h2>خطوات كيف تتم عملية إصلاح أعطال النوفرست بالمنزل؟</h2>
+            <p>
+              نقدم خدمة صيانة فورية ل sistemi النوفرست بالمنزل دون نقل الثلاجة،
+              وذلك عبر الخطوات الهندسية التالية:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>الفحص والتشخيص</h3>
+                <p>
+                  إذابة الثلج المتراكم مؤقتاً وفحص أجزاء دائرة الديفروست
+                  (السخان، الحساسات، والترموفيوز).
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>تحديد القطع التالفة</h3>
+                <p>
+                  فحص التايمر أو الكارت الإلكتروني ومسارات تصريف المياه للتأكد
+                  من خلوها من أي انسداد أو تلف.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>المعالجة والاستبدال</h3>
+                <p>
+                  تغيير القطع التالفة (مثل السخان أو الحساس أو التمروفيوز) بقطع
+                  غيار أصلية ومطابقة للمواصفات.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>الاختبار والضمان</h3>
+                <p>
+                  التأكد من انتظام دورة التبريد والإذابة الآلية وإعطاء العميل
+                  شهادة ضمان معتمدة.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الأول: أجزاء دائرة النوفرست التي نقوم بصيانتها ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أجزاء دائرة النوفرست التي نقوم بصيانتها وتغييرها</h2>
+            <p>
+              نمتلك خبرة شاملة في فحص وإصلاح كافة مكونات وأجزاء نظام منع تكوين
+              الثلج للثلاجات العادية والحديثة:
+            </p>
+
+            <div class="freon-types-grid">
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-fire-flame-curved"></i> سخانات الديفروست
+                  (Defrost Heaters)
+                </h3>
+                <p>
+                  فحص واختبار سخانات إذابة الثلج واستبدال التالف منها بأنواع
+                  أصلية تتحمل درجات الحرارة العالية.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-temperature-arrow-up"></i> الحساسات
+                  والترموفيوز (Sensors & Thermal Fuses)
+                </h3>
+                <p>
+                  معالجة أعطال حساسات الحرارة والترموفيوز المسؤولة عن حماية
+                  النظام وفصل السخان عند انتهاء الإذابة.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-water"></i> مساري الصرف والمراوح (Drain
+                  & Fan Motors)
+                </h3>
+                <p>
+                  تسليك فتحات تصريف المياه المسدودة وإصلاح أو تغيير موراير توزيع
+                  الهواء البارد (الفريزر).
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثاني: علامات وأعراض عطل النوفرست ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>علامات مؤكدة تشير إلى وجود عطل في نظام النوفرست</h2>
+            <p>
+              يمكنك ملاحظة وجود مشكلة في نظام الديفروست أو النوفرست من خلال
+              الأعراض التالية:
+            </p>
+
+            <div class="signs-grid">
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>تراكم كثيف للثلج</h4>
+                  <p>
+                    تكون كتل جبلية أو طبقات سميكة من الثلج على جدران الفريزر
+                    الخلفية أو تغطية الفتحات.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-temperature-half"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>ضعف تبريد الكابينة السفلية</h4>
+                  <p>
+                    سخونة الأطعمة في الثلاجة بالأسفل نتيجة انسداد مسار هواء
+                    التبريد بسبب الثلج المتراكم.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>تسريب مياه أرضية المطبخ</h4>
+                  <p>
+                    خروج المياه من أسفل الثلاجة بسبب انسداد فتحة تصريف مياه
+                    الإذابة بفعل تكون الثلج.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>صوت احتكاك مروحة الفريزر</h4>
+                  <p>
+                    سماع صوت اصطدام أو طقطقة ناتج عن احتكاك ريشة المروحة بطبقة
+                    الثلج المتراكمة حولها.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثالث: نصائح لحماية نظام النوفرست ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح ذهبية لحماية نظام النوفرست من الأعطال المتكررة</h2>
+            <p>
+              للحفاظ على كفاءة نظام منع تكون الثلج وتجنب انسداد مسارات التبريد،
+              يُنصح باتباع الإرشادات التالية:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-box-archive"></i>
+                  <h3>عدم تكديس الأطعمة بإفراط</h3>
+                </div>
+                <p>
+                  ترك مسافات كافية بين الأوعية والأطعمة داخل الفريزر لضمان حرية
+                  دوران الهواء البارد ومنع انسداد الفتحات.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-door-closed"></i>
+                  <h3>إحكام إغلاق باب الفريزر</h3>
+                </div>
+                <p>
+                  التأكد دائماً من غلق الأبواب جيداً وعدم تركها مفتوحة لفترات
+                  طويلة لمنع دخول الرطوبة والهواء الساخن.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-broom"></i>
+                  <h3>إجراء صيانة دورية وتنظيف</h3>
+                </div>
+                <p>
+                  فصل الثلاجة وإجراء إذابة شاملة يدوية كل عدة أشهر في حال ملاحظة
+                  بداية تراكم خفيف للثلج للحفاظ على نظافة المسارات.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              ثلاجتك تعاني من تراكم الثلج أو ضعف التبريد؟
+            </h2>
+            <p style="color: #64748b">
+              اتصل بنا الآن وسيحضر إليك المهندس المتخصص لحل أعطال النوفرست
+              بالمنزل وبضمان معتمد.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

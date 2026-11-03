@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      صيانة ثلاجات القاهرة | المركز المعتمد لصيانة الثلاجات بالقاهرة
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحات المحافظات - القاهرة */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .features-list li {
+        position: relative;
+        padding-right: 30px;
+        margin-bottom: 15px;
+        color: #334155;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .features-list li i {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #198754;
+        font-size: 1.1rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة مناطق القاهرة */
+      .districts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .district-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #334155;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .district-item i {
+        color: #0d6efd;
+      }
+
+      /* شبكة الكلمات الأكثر بحثاً SEO */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      /* الخدمات في القاهرة */
+      .freon-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .freon-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .freon-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .freon-card h3 {
+        font-size: 1.15rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .freon-card p {
+        font-size: 0.92rem;
+        margin: 0;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/" class="active">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/" class="active"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمحافظة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-location-dot"></i> خدمة صيانة سريعة بالمنزل في
+            محافظة القاهرة
+          </span>
+          <h1>مركز صيانة ثلاجات القاهرة Maintanance Cairo</h1>
+          <p>
+            تغطية شاملة لجميع أحياء ومناطق القاهرة بمهندسين متخصصين وسيارات
+            مجهزة لتقديم الصيانة الفورية بالمنزل مع الضمان المعتمد.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: مقدمة مركز القاهرة ==================== -->
+            <h2>خدمة صيانة الثلاجات المعتمدة بمحافظة القاهرة</h2>
+            <p>
+              نقدم في **المركز المعتمد لصيانة الثلاجات بالقاهرة** أفضل وأسرع
+              خدمة إصلاح بالمنزل دون الحاجة لنقل الجهاز. نوفر لكم فريقاً
+              متكاملاً من المهندسين والفنيين الخبرة والمجهزين بأحدث معدات الكشف
+              الإلكتروني وأدوات قياس الضغوط واختبار الكروت، مع التزامنا التام
+              بتركيب القطع الأصلية وتوفير الضمان المعتمد بعد كل عملية صيانة.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> وصول المهندس المختص
+                خلال ساعات معدودة في أي مكان داخل نطاق القاهرة الكبرى.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> صيانة منزلية فورية
+                لجميع الماركات العالمية والمحلية دون نقل الثلاجة من منزلكم.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> قطع غيار أصلية 100% مع
+                ضمان رسمي معتمد ومكتوب على عملية الصيانة والقطع المستبدلة.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> أسعار صيانة عادلة
+                ومنافسة مع تقديم خصومات دورية لجميع سكان أحياء القاهرة.
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تنبيه لسكان
+                القاهرة:
+              </h4>
+              <p>
+                تجنب التعامل مع الورش غير المعتمدة أو الفنيين المتجولين الذين قد
+                يتسببون في تفاقم الأعطال وتلف الدوائر الإلكترونية. احرص دائماً
+                على التواصل مع الرقم المعتمد والخط الساخن لضمان جودة الخدمة
+                وسلامة ثلاجتك.
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: مناطق وتغطية خدمة صيانة القاهرة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأحياء والمناطق التي نغطيها داخل القاهرة</h2>
+            <p>
+              يمتلك المركز المعتمد أسطول سيارات مجهز ينطلق من مراكز الخدمة
+              الرئيسية بالقاهرة ليصل إليكم فوراً في مختلف الأحياء التالية:
+            </p>
+
+            <div class="districts-grid">
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات مدينة
+                نصر
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات مصر
+                الجديدة
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات المعادي
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات التجمع
+                الخامس
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات القاهرة
+                الجديدة
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات الشروق
+                والرحاب
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات مدينتي
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات شبرا
+                وبنها
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات الزيتون
+                ومصر القديمة
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات المقطم
+                والعباسية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات عين شمس
+                والظاهر
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات العاصمة
+                الإدارية
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: الكلمات الأكثر بحثاً SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الكلمات الأكثر بحثاً عن صيانة الثلاجات في القاهرة</h2>
+            <p>
+              جمعنا لكم أشهر العبارات والكلمات المفتاحية التي يبحث عنها العملاء
+              للوصول لخدمات صيانة الثلاجات الموثوقة:
+            </p>
+
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز محركات البحث
+                والعبارات الشائعة:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">صيانة ثلاجات القاهرة</span>
+                <span class="seo-tag">صيانة ثلاجات في مدينة نصر</span>
+                <span class="seo-tag">صيانة ثلاجات مصر الجديدة</span>
+                <span class="seo-tag">صيانة ثلاجات في المعادي</span>
+                <span class="seo-tag">صيانة ثلاجات التجمع الخامس</span>
+                <span class="seo-tag">تصليح ثلاجات في المنزل القاهرة</span>
+                <span class="seo-tag">الخط الساخن لصيانة الثلاجات القاهرة</span>
+                <span class="seo-tag">رقم صيانة ثلاجات توشيبا القاهرة</span>
+                <span class="seo-tag">صيانة ثلاجات شارب بالقاهرة</span>
+                <span class="seo-tag">صيانة ثلاجات LG القاهرة</span>
+                <span class="seo-tag">صيانة ثلاجات كريازي القاهرة</span>
+                <span class="seo-tag">مركز صيانة ثلاجات سامسونج القاهرة</span>
+                <span class="seo-tag">فني صيانة ثلاجات بالقاهرة</span>
+                <span class="seo-tag">شحن فريون ثلاجات القاهرة</span>
+                <span class="seo-tag">تصليح كروت ثلاجات القاهرة</span>
+                <span class="seo-tag">تغيير موتور ثلاجة القاهرة</span>
+                <span class="seo-tag">صيانة اعطال النوفرست القاهرة</span>
+                <span class="seo-tag">تغيير كاوتش ثلاجة القاهرة</span>
+                <span class="seo-tag">افضل مركز صيانة ثلاجات بالقاهرة</span>
+                <span class="seo-tag">تصليح ثلاجات الشروق والرحاب</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: الخدمات المتاحة بالقاهرة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خدمات الصيانة الشاملة المتوفرة لفرع القاهرة</h2>
+            <p>
+              يقدم فريق العمل بفرع القاهرة حلولاً فورية لكافة الأعطال الشائعة
+              والمعقدة الخاصة بمختلف الماركات:
+            </p>
+
+            <div class="freon-types-grid">
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-snowflake"></i> شحن فريون ومعالجة
+                  التسريب
+                </h3>
+                <p>
+                  فحص الضغوط بأجهزة ألكترونية، لحام التنفيس، وشحن فريون أصلي
+                  (R134a - R600a) للحصول على أفضل تبريد.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-microchip"></i> إصلاح وبث كروت البوردة
+                </h3>
+                <p>
+                  صيانة وبرمجة اللوحات الرقمية والإنفرتر وتغيير الآيسيهات والقطع
+                  التالفة بدقة متناهية.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-cubes-stacked"></i> صيانة أعطال النوفرست
+                </h3>
+                <p>
+                  إصلاح مشاكل تراكم الثلج وضعف تبريد الكابينة عبر استبدال
+                  السخانات، التايمر، والترموديسك.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-gauge"></i> تغيير الموتور (الكباس)
+                </h3>
+                <p>
+                  استبدال ضواغط الثلاجات بمواتير أصلية وبقدرات متعدية ومطابقة
+                  للشركة المصنعة مع الضمان.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-door-closed"></i> تغيير الكاوتش
+                  والجوانات
+                </h3>
+                <p>
+                  تركيب جوانات مغناطيسية جديدة لمنع تسريب الهواء البارد وتقليل
+                  استهلاك الكهرباء.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-magnifying-glass-chart"></i> الفحص
+                  الوقائي الدوري
+                </h3>
+                <p>
+                  خدمة الكشف الشامل والتنظيف للمكثف والمروحة واكتشاف الأعطال
+                  المبكرة لحماية الجهاز.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: خطوات طلب الصيانة في القاهرة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خطوات طلب خدمة الصيانة المنزلية بالقاهرة</h2>
+            <p>نضمن لكم تجربة صيانة مريحة وسريعة من خلال 4 خطوات بسيطة:</p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>الاتصال بالخدمة</h3>
+                <p>
+                  التواصل مع الخط الساخن 19580 وتسجيل بيانات العنوان والمشكلة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>تحديد الموعد</h3>
+                <p>
+                  التنسيق السريع مع الفني الأقرب لمنطقتك وتحديد الميعاد المناسب
+                  لك.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>الفحص والاصلاح</h3>
+                <p>
+                  حضور المهندس للمنزل، فحص الثلاجة، وإصلاح العطل أمام العميل
+                  مباشرة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>الضمان والمتابعة</h3>
+                <p>
+                  تسليم شهادة الضمان المعتمدة ومتابعة كفاءة التبريد من خدمة
+                  العملاء.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: نصائح خاصة بسكان القاهرة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح هامة للحفاظ على ثلاجتك داخل محافظة القاهرة</h2>
+            <p>
+              نظراً لطبيعة درجات الحرارة وتذبذب التيار الكهربائي في بعض المناطق،
+              يوصي خبراء المركز بالآتي:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <h3>منظم كهربائي (استابلايزر)</h3>
+                </div>
+                <p>
+                  يُفضل استخدام منظم فولتية لحماية كروت الثلاجة الحديثة
+                  والإنفرتر من التذبذبات الكهربائية المفاجئة.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-wind"></i>
+                  <h3>تهوية الخلفية والجوانب</h3>
+                </div>
+                <p>
+                  ترك مسافة لا تقل عن 10-15 سم بين الثلاجة والجدار لضمان التبريد
+                  الجيد للمكبس والمكثف خاصة في فصل الصيف.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-broom"></i>
+                  <h3>تنظيف الاتربة دورياً</h3>
+                </div>
+                <p>
+                  تنظيف السربنتينة والمكثف الخلفي من الغبار لإتاحة التبادل
+                  الحراري السليم وتخفيف العبء عن الضاغط.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تسكن في القاهرة وتحتاج لصيانة ثلاجتك فوراً بالمنزل؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن وسينطلق إليك فريق الصيانة المختص في أقرب وقت
+              وبأعلى جودة معتمدة.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

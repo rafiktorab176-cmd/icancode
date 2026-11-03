@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      الفحص الشامل والصيانة الوقائية | المركز المعتمد لصيانة الثلاجات
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة الفحص الشامل والصيانة الوقائية */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .features-list li {
+        position: relative;
+        padding-right: 30px;
+        margin-bottom: 15px;
+        color: #334155;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .features-list li i {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #198754;
+        font-size: 1.1rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* تنسيقات السكشنات الإضافية */
+      .freon-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .freon-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .freon-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .freon-card h3 {
+        font-size: 1.2rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .sign-item {
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .sign-icon {
+        background: #e2e8f0;
+        color: #0284c7;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .sign-info h4 {
+        margin: 0 0 5px 0;
+        font-size: 1rem;
+        color: #1e293b;
+      }
+      .sign-info p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #64748b;
+        line-height: 1.5;
+      }
+
+      /* تنسيقات سكشن النصائح الجديد */
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/" class="active">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/" class="active"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للخدمة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-stethoscope"></i> فحص دوري متكامل واكتشاف مبكر
+            للأعطال
+          </span>
+          <h1>خدمة الفحص الشامل والصيانة الوقائية للثلاجات</h1>
+          <p>
+            حماية ثلاجتك من الأعطال المفاجئة عبر تشخيص دقيق بالمنزل وصيانة دورية
+            لإطالة العمر الافتراضي وتوفير الطاقة.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <h2>لماذا تحتاج ثلاجتك إلى الفحص الشامل والصيانة الوقائية؟</h2>
+            <p>
+              الكثير من أعطال الثلاجات المكلفة تبدأ بمشكلات صغيرة غير ملاحظة
+              (مثل ضعف التبريد التدريجي، تراكم الأتربة على المكثف، أو تآكل بسيط
+              في الجوان). الصيانة الوقائية والفحص الدوري يعملان على اكتشاف هذه
+              الأعطال المبكرة ومعالجتها قبل تفاقمها. في المركز المعتمد، نقدم
+              خدمة فحص هندسي متكامل بالمنزل لضمان استقرار أداء الثلاجة وكفاءتها
+              القصوى.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> اختبار شامل لكفاءة
+                الموتور (الكباس) وقياس سحب الأمبير والقدرة الكهربائية.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> فحص دورة الفريون والبحث
+                عن أي تنفيس أو تسريب محتمل في المواسير.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> تنظيف المكثف والمروحة
+                وإزالة الأتربة والعوالق لزيادة كفاءة التبريد وتقليل استهلاك
+                الكهرباء.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> فحص الدوائر الإلكترونية
+                وحساسات الحرارة وإحكام أبواب الثلاجة.
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تنبيه هام جداً:
+              </h4>
+              <p>
+                انتظار توقف الثلاجة عن العمل تماماً قد يتسبب في تلف الأطعمة
+                المخزنة وزيادة تكلفة الإصلاح أضعافاً مضاعفة. الفحص الوقائي
+                المنتظم يوفر عليك الكثير من المال ويضمن راحة بالك.
+              </p>
+            </div>
+
+            <h2>خطوات كيف تتم عملية الفحص الشامل بالمنزل؟</h2>
+            <p>
+              نقدم خدمة الفحص والوقاية الدورية باحترافية كاملة بالمنزل دون
+              الحاجة لنقل الثلاجة، وذلك عبر الخطوات الهندسية التالية:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>فحص الدائرة الكهربائية</h3>
+                <p>
+                  قياس الفولتية، اختبار التايمر، والكارت الإلكتروني والتأكد من
+                  سلامة التوصيلات والمصادر.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>اختبار التبريد والفريون</h3>
+                <p>
+                  فحص درجات الحرارة داخل الكابينة والفريزر والتأكد من انتظام
+                  دورة غاز التبريد.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>التنظيف والصيانة الميكانيكية</h3>
+                <p>
+                  تنظيف المكثف الخلفي، فحص المراوح، والتأكد من سالكية مسارات صرف
+                  المياه.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>التقرير والضمان</h3>
+                <p>
+                  تقديم تقرير مفصل بحالة الثلاجة للعميل مع تقديم النصائح اللازمة
+                  ومنح شهادة متابعة دورية.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الأول: جوانب الفحص الشامل للثلاجة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>عناصر ومكونات الفحص الشامل والصيانة الوقائية</h2>
+            <p>
+              يشمل برنامج الفحص الدوري الذي نقدمه كافة الأجزاء الحيوية في
+              الثلاجة والديب فريزر:
+            </p>
+
+            <div class="freon-types-grid">
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-gauge-high"></i> فحص أداء الموتور
+                  والضاغط
+                </h3>
+                <p>
+                  قياس ضغط الكباس ودرجة حرارته واستهلاكه للكهرباء للتأكد من عمله
+                  ضمن المعدلات الطبيعية المصنعية.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-snowflake"></i> فحص نظام التبريد
+                  والديفروست
+                </h3>
+                <p>
+                  مراجعة كفاءة السخانات، الحساسات، والترموفيوز لمنع أي تراكم غير
+                  مرغوب للثلج بالمستقبل.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-plug-circle-check"></i> مراجعة العبوات
+                  والدوائر الكهربائية
+                </h3>
+                <p>
+                  التأكد من سلامة الكابلات، الفيش، وقواعد الحماية ضد ارتفاع
+                  التيار الكهربائي المفاجئ.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثاني: مؤشرات تدل على حاجتك للصيانة الوقائية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>متى تطلب خدمة الفحص الشامل والصيانة الوقائية؟</h2>
+            <p>
+              يُفضل إجراء فحص وقائي للثلاجة كل 6 أشهر أو في حال ظهور المؤشرات
+              البسيطة التالية:
+            </p>
+
+            <div class="signs-grid">
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-volume-low"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>صوت غريب أو اهتزاز</h4>
+                  <p>
+                    ملاحظة صدور أصوات غير معتادة أثناء عمل الموتور أو اهتزازات
+                    خفيفة في هيكل الثلاجة.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-bolt-lightning"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>ارتفاع ملحوظ بفاتورة الكهرباء</h4>
+                  <p>
+                    زيادة استهلاك الطاقة للثلاجة نتيجة تكون أتربة على المكثف أو
+                    عمل الموتور لفترات أطول.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-temperature-arrow-up"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>بطء في تبريد الأطعمة</h4>
+                  <p>
+                    استغراق الأطعمة والمشروبات وقتاً أطول من المعتاد لتصل إلى
+                    درجة البرودة المطلوبة.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>مرور فترة طويلة بلا صيانة</h4>
+                  <p>
+                    عدم إخضاع الثلاجة لأي فحص فني متخصص منذ أكثر من عام لضمان
+                    استمرار كفاءتها.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثالث: نصائح ذهبية للحفاظ على الثلاجة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح ذهبية للحفاظ على كفاءة الثلاجة بين فترات الصيانة</h2>
+            <p>
+              لضمان عمل الثلاجة بأعلى كفاءة وتجنب الأعطال المفاجئة، يُنصح باتباع
+              الإرشادات التالية:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-broom"></i>
+                  <h3>تنظيف المكثف الخلفي دورياً</h3>
+                </div>
+                <p>
+                  إزالة الأتربة والشوائب المتراكمة على شبكة المكثف الخلفية أو
+                  السفلية باستخدام فرشاة ناعمة لتحسين التبريد.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-temperature-quarter"></i>
+                  <h3>ضبط درجات الحرارة المناسبة</h3>
+                </div>
+                <p>
+                  اختيار درجات حرارة معتدلة (مثل 4 درجات للكابينة و -18 للفريزر)
+                  لتخفيف العبء عن الموتور وتوفير الطاقة.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-utensils"></i>
+                  <h3>عدم إدخال الأطعمة ساخنة</h3>
+                </div>
+                <p>
+                  ترك الأطعمة والطبخات حتى تبرد تماماً قبل وضعها داخل الثلاجة
+                  لمنع ارتفاع درجة الحرارة الداخلية.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              ترغب في الاطمئنان على حالة ثلاجتك وحمايتها من الأعطال؟
+            </h2>
+            <p style="color: #64748b">
+              اتصل بنا الآن واطلب خدمة الفحص الشامل والصيانة الوقائية بالمنزل
+              وبأفضل الأسعار.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

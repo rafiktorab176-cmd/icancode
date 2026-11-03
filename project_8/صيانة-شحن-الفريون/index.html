@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شحن الفريون ومعالجة التسريب | المركز المعتمد لصيانة الثلاجات</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة شحن الفريون */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .features-list li {
+        position: relative;
+        padding-right: 30px;
+        margin-bottom: 15px;
+        color: #334155;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .features-list li i {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #198754;
+        font-size: 1.1rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* تنسيقات السكشنات الإضافية */
+      .freon-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .freon-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .freon-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .freon-card h3 {
+        font-size: 1.2rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .sign-item {
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .sign-icon {
+        background: #e2e8f0;
+        color: #0284c7;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .sign-info h4 {
+        margin: 0 0 5px 0;
+        font-size: 1rem;
+        color: #1e293b;
+      }
+      .sign-info p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #64748b;
+        line-height: 1.5;
+      }
+
+      /* تنسيقات سكشن النصائح الجديد */
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/" class="active">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/" class="active"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للخدمة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-snowflake"></i> خدمة منزلية فورية بدون نقل
+            الثلاجة
+          </span>
+          <h1>خدمة شحن الفريون ومعالجة التسريب بالمنزل</h1>
+          <p>
+            حلول جذرية لضعف التبريد وتسريب غاز الفريون بأحدث أجهزة الكشف
+            الإلكترونية وبضمان معتمد.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <h2>لماذا يفقد الثلاجة غاز الفريون وكيف نكتشف الأعطال؟</h2>
+            <p>
+              غاز الفريون (Freon) هو عصب منظومة التبريد في الثلاجة، وهو غاز مغلق
+              بالكامل لا يُستهلك بمرور الوقت. إذا لاحظت ضعفاً تدريجياً في
+              التبريد، أو تكون ثلج غير منتظم، أو فصل الموتور واستمراره في العمل
+              دون تفصيل، فهذا يدل غالباً على وجود **تسريب في غاز الفريون** أو
+              انسداد في الدائرة.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> كشف مكان التسريب بدقة
+                باستخدام ضغط النيتروجين وأجهزة الكشف الإلكترونية الحديثة.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> معالجة مكان التسريب
+                ولحامه باحترافية تامة (سواء في المواسير الداخلية أو الخارجية).
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> تفريغ الدائرة بالكامل
+                من الرطوبة والهواء باستخدام طلمبة الفاكيوم (Vacuum) لضمان كفاءة
+                التبريد.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> شحن الثلاجة بأجود أنواع
+                غاز الفريون الأصلي المخصص لنوع الثلاجة (R134a أو R600a).
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تنبيه هام جداً:
+              </h4>
+              <p>
+                احذر من الشحن العشوائي للغاز دون إصلاح مكان التسريب! بعض الفنيين
+                غير المعسلمين يقومون بشحن الفريون مباشرة دون اختبار التسريب، مما
+                يؤدي لتبخر الغاز مرة أخرى ضياع أموالك. في المركز المعتمد، نضمن
+                إصلاح أصل العطل أولاً ثم إعادة الشحن بكفاءة مطلقة.
+              </p>
+            </div>
+
+            <h2>خطوات كيف تتم عملية الشحن بالمنزل؟</h2>
+            <p>
+              نوفر لك خدمة صيانة متكاملة بالمنزل دون الحاجة لنقل الثلاجة حفاظاً
+              عليها من التلف والخدوش، وذلك عبر الخطوات الهندسية التالية:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>الفحص والتشخيص</h3>
+                <p>
+                  فحص ضغط الدائرة والبحث عن مكان التسريب بالضغط والعدسات
+                  المتخصصة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>المعالجة واللحام</h3>
+                <p>
+                  تفريغ الشحنة المتبقية ومعالجة مكان التنفيس أو الثقب بلحام نحاس
+                  آمن ومتين.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>الفاكيوم (التفريغ)</h3>
+                <p>
+                  سحب كافة الرطوبة والهواء من المواسير لتهيئة الدائرة لاستقبال
+                  الغاز الجديد.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>الشحن والاختبار</h3>
+                <p>
+                  شحن غاز الفريون بالكمية الدقيقة حسب الأمبير والوزن، واختبار
+                  درجات التبريد.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الأول: أنواع الفريون المستخدمة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أنواع غاز الفريون الأصلي المستخدم بالمركز</h2>
+            <p>
+              نلتزم في المركز المعتمد باستخدام أنواع الغاز النقية والآمنة 100%
+              الموصى بها من الشركات المصنعة العالمية، لضمان الكفاءة وحماية
+              الموتور:
+            </p>
+
+            <div class="freon-types-grid">
+              <div class="freon-card">
+                <h3><i class="fa-solid fa-flask"></i> غاز الفريون R-134a</h3>
+                <p>
+                  يستخدم على نطاق واسع في معظم الثلاجات التقليدية والحديثة،
+                  ويتميز بكفاءته العالية في التبريد واستقراره الحراري الممتاز.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-leaf"></i> غاز الفريون R-600a
+                  (إيزوبوتان)
+                </h3>
+                <p>
+                  الغاز صديق البيئة المستخدم في الثلاجات الحديثة والإنفرتر، يوفر
+                  استهلاك الطاقة ويحتاج لتقنيات شحن ومعايرة دقيقة للغاية.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-shield-halved"></i> فريون إيطالي /
+                  أمريكي أصلي
+                </h3>
+                <p>
+                  نحرص على نقاء الفريون وخلوه من الشوائب أو الرطوبة لحماية
+                  الكباس (Compressor) من التلف وتجنب انسداد الكابيلري.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثاني: علامات وجود تسريب فريون ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>علامات مؤكدة تشير إلى وجود تسريب في غاز الفريون</h2>
+            <p>
+              يمكنك معرفة ما إذا كانت ثلاجتك تعاني من نقص أو تسريب الفريون من
+              خلال ملاحظة المؤشرات التالية:
+            </p>
+
+            <div class="signs-grid">
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-temperature-arrow-up"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>ضعف التبريد التدريجي</h4>
+                  <p>
+                    تحول التبريد في الفريزر من قوي إلى ضعيف وعدم تجميد الأطعمة
+                    كالمعتاد.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>استمرار عمل الموتور</h4>
+                  <p>
+                    عمل الموتور بشكل متواصل بدون توقف (عدم فصل الثلاجة) محاولة
+                    منه لتعويض التبريد.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-icicles"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>تكون الثلج بجزء واحد</h4>
+                  <p>
+                    ظهور كتل ثلجية في زاوية معينة من الفريزر بينما باقي الأجزاء
+                    دافئة.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-oil-can"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>بقع زيت خلف الثلاجة</h4>
+                  <p>
+                    ملاحظة آثار زيت على مواسير التبريد أو حول الكباس، وهو مؤشر
+                    صريح على ثقب التسريب.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثالث الجديد: نصائح للحفاظ على كفاءة الثلاجة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح ذهبية للحفاظ على كفاءة الثلاجة بعد شحن الفريون</h2>
+            <p>
+              لكي تضمن استمرار كفاءة التبريد لأطول فترة ممكنة بعد إجراء عملية
+              الشحن والصيانة، يُنصح باتباع الإرشادات التالية:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <h3>ترك مسافة تهوية كافية</h3>
+                </div>
+                <p>
+                  احرص على ترك مسافة لا تقل عن 10 سم بين ظهر الثلاجة والجدار
+                  لضمان التهوية الجيدة للمكثف وحماية الموتور من السخونة.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <h3>عدم استخدام أدوات حادة</h3>
+                </div>
+                <p>
+                  تجنب نهائياً استخدام السكاكين أو الأجزاء الحادة لتكسير الثلج
+                  داخل الفريزر، فهذا يسبب ثقوباً في المواسير وتسريب الفريون
+                  فوراً.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <h3>فحص الإبزيم المطاطي (الجوان)</h3>
+                </div>
+                <p>
+                  تأكد دائماً من سلامة إطار باب الثلاجة لمنع تسريب الهواء البارد
+                  للرطوبة الخارجية، مما يقلل العبء عن منظومة التبريد.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">تشتكي من ضعف التبريد في ثلاجتك؟</h2>
+            <p style="color: #64748b">
+              اتصل بنا الآن وسيحضر إليك فني الصيانة المدعوم بأحدث أجهزة كشف
+              التسريب والشحن الفوري.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

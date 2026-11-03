@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تغيير الكاوتش والجوانات | المركز المعتمد لصيانة الثلاجات</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة تغيير الكاوتش والجوانات */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .features-list li {
+        position: relative;
+        padding-right: 30px;
+        margin-bottom: 15px;
+        color: #334155;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .features-list li i {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #198754;
+        font-size: 1.1rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* تنسيقات السكشنات الإضافية */
+      .freon-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .freon-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .freon-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .freon-card h3 {
+        font-size: 1.2rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .signs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .sign-item {
+        background: #f1f5f9;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .sign-icon {
+        background: #e2e8f0;
+        color: #0284c7;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .sign-info h4 {
+        margin: 0 0 5px 0;
+        font-size: 1rem;
+        color: #1e293b;
+      }
+      .sign-info p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: #64748b;
+        line-height: 1.5;
+      }
+
+      /* تنسيقات سكشن النصائح الجديد */
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/" class="active">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/" class="active"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للخدمة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-door-closed"></i> خدمة تغيير وتركيب جوان باب
+            الثلاجة بالمنزل
+          </span>
+          <h1>خدمة تغيير الكاوتش والجوانات للثلاجات</h1>
+          <p>
+            تركيب إطار أبواب أصلي لمنع تسريب الهواء، ضمان إغلاق محكم، وتوفير
+            استهلاك الكهرباء بأعلى معايير الجودة.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <h2>لماذا يتلف كاوتش الباب وكيف يؤثر على كفاءة الثلاجة؟</h2>
+            <p>
+              جوان (كاوتش) باب الثلاجة هو خط الدفاع الأول لمنع تسرب الهواء
+              البارد إلى الخارج ودخول الهواء الساخن والرطوبة إلى الداخل. مع مرور
+              الوقت وتكرار الفتح والغلق أو تراكم الدهون، يفقد الكاوتش مرونته
+              ويحدث تشقق أو فراغات تؤدي إلى عمل الموتور بصورة مستمرة وضعف
+              التبريد. في المركز المعتمد، نوفر **جوانات أصلية مغناطيسية** تطابق
+              المقاسات الأصلية لكل ماركة بدقة متناهية.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> فحص دقيق لمستوى إغلاق
+                الباب والتأكد من قوة المغناطيس واستقامة جسم الباب.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> توريد وتركيب جوان باب
+                أصلي مصمم خصيصاً ليتحمل الاستخدام الشاق ودرجات الحرارة المنخفضة.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> ضبط ورنيش ومفاصل الباب
+                (الأبواب) لضمان تماسك الجوان والتصاقه المحكم بالإطار.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> اختبار إحكام الغلق
+                والتأكد من عدم وجود أي تسريب للهواء البارد بعد التركيب مباشرة.
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تنبيه هام جداً:
+              </h4>
+              <p>
+                تجاهل تلف كاوتش الثلاجة يجبر الموتور (الكباس) على العمل دون توقف
+                لتعويض تسريب الحرارة، مما يتسبب في استنزاف فاتورة الكهرباء
+                واحتراق الموتور على المدى الطويل! بادر بتغييره فور ملاحظة أي
+                فراغات.
+              </p>
+            </div>
+
+            <h2>خطوات كيف تتم عملية تغيير الكاوتش والجوانات بالمنزل؟</h2>
+            <p>
+              نقدم خدمة تغيير الإطارات والجوانات بالمنزل باحترافية كاملة وبدون
+              نقل الثلاجة، وذلك عبر الخطوات الهندسية التالية:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>القياس والتشخيص</h3>
+                <p>
+                  تحديد نوع ومقاس الثلاجة بدقة وفحص مدى إحكام الأبواب وتلف
+                  الإطارات القديمة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>فك الإطار القديم</h3>
+                <p>
+                  إزالة الجوان التالف وتنظيف مجرى التركيب بعناية للتخلص من أي
+                  أوساخ أو ترسبات متراكمة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>تركيب الجوان الجديد</h3>
+                <p>
+                  تثبيت الجوان الجديد المغناطيسي بدقة في مكانه المخصص وضمان
+                  استقامته وثباته التام.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>الضبط والاختبار</h3>
+                <p>
+                  ضبط ميزان الباب واختبار الإغلاق المغناطيسي ومنح العميل شهادة
+                  ضمان معتمدة.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الأول: أنواع الجوانات والكاوتش التي نوفره ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أنواع الجوانات والكاوتش التي نوفرها لمختلف الماركات</h2>
+            <p>
+              نمتلك مخزوناً متكاملاً من جوانات أبواب الثلاجات والديب فريزر
+              بمختلف المقاسات والتصاميم الأصلية:
+            </p>
+
+            <div class="freon-types-grid">
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-magnet"></i> جوانات مغناطيسية ذات جاذبية
+                  عالية
+                </h3>
+                <p>
+                  إطارات مزودة بشريط مغناطيسي قوي لضمان التصاق تام ومستمر بهيكل
+                  الثلاجة ومنع تسرب الهواء تماماً.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-arrows-split-up-and-left"></i> جوانات
+                  الكباس والباب المزدوج (Double Door)
+                </h3>
+                <p>
+                  كاوتش مخصص للثلاجات ذات البابين العلوي والسفل والديجيتال
+                  الحديثة بمقاسات دقيقة لكل ماركة.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-box"></i> جوانات الديب فريزر الأفقي
+                  والرأسي
+                </h3>
+                <p>
+                  إطارات عازلة مقاومة للبرودة الشديدة مخصصة لديب فريزر الأدراج
+                  والصناديق لمنع تكون الثلج الخارجي.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثاني: علامات تلف كاوتش باب الثلاجة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>علامات مؤكدة تشير إلى ضرورة تغيير كاوتش باب الثلاجة</h2>
+            <p>
+              يمكنك معرفة ما إذا كان كاوتش الثلاجة بحاجة إلى تغيير عاجل من خلال
+              الملاحظات التالية:
+            </p>
+
+            <div class="signs-grid">
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-water"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>تكون قطرات ماء وتكاثف</h4>
+                  <p>
+                    وجود قطرات مياه أو بخار ماء على إطار الباب من الخارج نتيجة
+                    ملامسة الهواء الساخن للبارد.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-door-open"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>عدم إغلاق الباب بإحكام</h4>
+                  <p>
+                    سهولة فتح الباب دون مقاومة أو ملاحظة وجود فجوة واضحة بين
+                    الكاوتش وهيكل الثلاجة.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>ارتفاع استهلاك الكهرباء</h4>
+                  <p>
+                    استمرار عمل الموتور لفترات طويلة جداً دون فصل، مما ينعكس على
+                    زيادة قيمة الفاتورة.
+                  </p>
+                </div>
+              </div>
+
+              <div class="sign-item">
+                <div class="sign-icon">
+                  <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <div class="sign-info">
+                  <h4>تراكم الثلج غير الطبيعي</h4>
+                  <p>
+                    تكون ثلج كثيف داخل الفريزر أو حول فتحات الباب بسبب دخول
+                    الرطوبة المستمرة للداخل.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن الثالث: نصائح للحفاظ على كاوتش الثلاجة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح ذهبية للحفاظ على كاوتش الثلاجة وإطالة عمره</h2>
+            <p>
+              لضمان بقاء إطارات الأبواب مرنة وقوية لأطول فترة ممكنة، يُنصح
+              باتباع الإرشادات التالية:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-pump-soap"></i>
+                  <h3>التنظيف المستمر بالماء الفاتر</h3>
+                </div>
+                <p>
+                  مسح وتنظيف الجوان بانتظام باستخدام قطعة قماش مبللة بماء فاتر
+                  وصابون خفيف لإزالة الدهون والأوساخ المتراكمة.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-hand-holding-hand"></i>
+                  <h3>فتح وإغلاق الباب برفق</h3>
+                </div>
+                <p>
+                  تجنب جذب الباب بقسوة أو تركه يغلق بعنف للحفاظ على استقامة
+                  مفاصل الباب وسلامة الشريط المغناطيسي.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-oil-well"></i>
+                  <h3>التحقق من مرونة الكاوتش</h3>
+                </div>
+                <p>
+                  فحص مرونة الإطار دورياً وفي حال ملاحظة جفافه أو تشققه، يُفضل
+                  استبداله مبكراً لحماية كفاءة التبريد.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              كاوتش باب الثلاجة تالف أو يسرب الهواء البارد؟
+            </h2>
+            <p style="color: #64748b">
+              اتصل بنا الآن وسيحضر إليك الفني المتخصص لتركيب جوان أصلي بالمنزل
+              وبضمان معتمد.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>
