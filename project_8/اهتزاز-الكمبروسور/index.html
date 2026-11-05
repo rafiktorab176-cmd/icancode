@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      طريقة فحص قواعد موتور الثلاجة وكاوتش الاهتزاز | موسوعة الأعطال - المركز
+      المعتمد
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة فحص قواعد موتور الثلاجة */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #0d6efd;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #198754;
+        font-weight: 700;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/" class="active">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/" class="active"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-gears"></i> دليل فحص ممتصات الاهتزاز والكباس
+          </span>
+          <h1>طريقة فحص واختبار قواعد موتور الثلاجة (كاوتش الاهتزاز)</h1>
+          <p>
+            دليل فني شامل لتشخيص تلف المساعدين وكاوتشات قواعد الموتور، علامات
+            التآكل، وكيفية التخلص من الرجة وصوت الاهتزاز المزعج.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة ==================== -->
+            <h2>ما هي قواعد موتور الثلاجة (Rubber Grommets) وما أهميتها؟</h2>
+            <p>
+              تُعتبر **قواعد الموتور (كاوتشات ممتص الصدمات / Rubber Mounts)**
+              القطع المطاطية المفصلية التي يرتكز عليها الكومبروسر (الكباس) أسفل
+              ظهر الثلاجة. وظيفتها الأساسية هي عزل الاهتزازات الميكانيكية
+              الناتجة عن حركة المكبس والملفات الداخلية للموتور منعاً لانتقالها
+              إلى جسم الثلاجة المعدني. وعند تلف هذه القواعد أو جفاف المطاط بها،
+              تحك مواسير الفريون بالبدن الخارجي وتنتقل الرجة كلياً على شكل أصوات
+              خبط وطقطقة عالية.
+            </p>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تحذير فني هام:
+              </h4>
+              <p>
+                تجاهل تلف قواعد الموتور والميل الشديد للكباس يعرض مواسير النحاس
+                للشرخ أو الكسر التام، مما يؤدي إلى تسريب غاز الفريون بالكامل
+                واحتراق الموتور نتيجة التشغيل الجاف!
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: علامات تلف القواعد ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أبرز علامات وأعراض تلف قواعد الكومبروسر المطاطية</h2>
+            <p>
+              يمكنك معرفة تلف أو تآكل كاوتشات الموتور فور ملاحظة العلامات
+              التالية:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-arrows-spin"></i> 1. رجة وهزة عنيفة عند
+                  بدء أو إيقاف الموتور
+                </h3>
+                <p>
+                  سماع صوت "دبة" أو اصطدام قوي خلف الثلاجة عند بداية عمل الموتور
+                  أو لحظة فصل الترموستات نتيجة اهتزاز الكباس بدون ممتص.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: فقدان الكاوتش
+                  لخاصية المرونة والامتصاص.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-volume-high"></i> 2. صوت طنين ورنة
+                  معدنية مستمرة
+                </h3>
+                <p>
+                  انتقال ذبذبات الموتور مباشرة لجسم الثلاجة أو الشبكة الخلفية
+                  (المكثف)، مما يسبب زنة عالية تتوقف عند ضغط الموتور بيدك.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: ملامسة جسم الموتور
+                  للرجلاش الصلب.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-truck-ramp-box"></i> 3. ميل واضح في
+                  زاوية الكومبروسر
+                </h3>
+                <p>
+                  عند النظر أسفل الثلاجة من الخلف، تلاحظ ميل الكباس لجهة واحدة
+                  بسبب هبوط أو تشقق إحدى القواعد المطاطية دون البقية.
+                </p>
+
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: تآكل طرفي بالكاوتش
+                  المطاطي.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-crutch"></i> 4. انقاطاع وقطع السوست
+                  الداخلية
+                </h3>
+                <p>
+                  في بعض الموديلات توجد سوست مساعدة خلف الكاوتش؛ تلفها يسبب
+                  ارتطام الموتور بالقاعدة المعدنية بشكل حاد عند الحركة.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: انكسار حوامل
+                  التثبيت الفرعية.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: كيفية الفحص ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>طريقة فحص وتحديد حالة قواعد الموتور خطوة بخطوة</h2>
+            <p>خطوات الفحص الظاهري والميكانيكي لقواعد الكومبروسر بالمنزل:</p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>فصل الكهرباء وإبعاد الثلاجة</h3>
+                <p>
+                  افصل قابس الكهرباء عن الثلاجة وحركها بعيداً عن الحائط للوصول
+                  الحُر لكابينة الموتور الخلفية.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>فحص حالة المطاط (الكاوتش)</h3>
+                <p>
+                  افحص القواعد الأربعة بالعين ومسها بيدك؛ إذا وجدتها جافة،
+                  متشققة، أو متفتتة كلياً فهي تالفة وتستلزم التغيير.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>اختبار مرونة الحركة والاهتزاز</h3>
+                <p>
+                  اضغط على الموتور بيديك خفيفاً في اتجاهات مختلفة؛ يجب أن يتحرك
+                  بمرونة متزنة دون الاصطدام بشاسيه الثلاجة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>مراجعة مسامير التثبيت ومسار المواسير</h3>
+                <p>
+                  تأكد من عدم ارتخاء صواميل ومسامير التثبيت الأربعة، وعدم احتكاك
+                  مواسير السحب والطراد بجسم الموتور.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: خطوات الاستبدال ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خطوات استبدال قواعد الموتور المطاطية بأخرى جديدة</h2>
+            <p>طريقة تغيير قواعد الموتور بأمان دون إتلاف مواسير الفريون:</p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+                </div>
+                <h3>1. رفع الكومبروسر بحذر</h3>
+                <p>
+                  فك صواميل التثبيت ورفع الكومبروسر مسافة قليلة جداً باستخدام
+                  رافعة خشبية دون الضغط على المواسير.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <h3>2. سحب القواعد التالفة</h3>
+                <p>
+                  إزالة الكاوتشات المطاطية المتآكلة والمتصلبة وتنظيف مكان
+                  القاعدة المعدنية من الصدأ أو الرواسب.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-shield-cat"></i>
+                </div>
+                <h3>3. تركيب الكاوتشات الأصلية الجديدة</h3>
+                <p>
+                  إدخال القواعد المطاطية الجديدة المخصصة لنفس حجم ونوع الموتور
+                  لضمان الارتفاع والتوازن الصحِيح.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-wrench"></i></div>
+                <h3>4. ربط الصواميل واختبار التشغيل</h3>
+                <p>
+                  إعادة إنزال الموتور وربط مسامير التثبيت بالتساوي ثم تشغيل
+                  الثلاجة للتأكد من اختفاء الصوت والرجة تماماً.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: كلمات البحث الرئيسية SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة عن فحص قواعد الكومبروسر (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز المصطلحات
+                الخاصة بقواعد وكاوتش الموتور:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">فحص قواعد موتور الثلاجة</span>
+                <span class="seo-tag">تغيير كاوتش اهتزاز الكباش</span>
+                <span class="seo-tag">علاج رَجّة موتور الثلاجة</span>
+                <span class="seo-tag">سبب صوت خبط الموتور عند الفصل</span>
+                <span class="seo-tag">سعر قواعد موتور الثلاجة المطاطية</span>
+                <span class="seo-tag">حل مشكلة اهتزاز الثلاجة من الخلف</span>
+                <span class="seo-tag">طريقة تثبيت كومبروسر الثلاجة</span>
+                <span class="seo-tag">سبب اهتزاز مواسير الفريون</span>
+                <span class="seo-tag">ممتص صدمات الكباس بالمنزل</span>
+                <span class="seo-tag">صيانة اهتزاز ثلاجات توشيبا وكريازي</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول قواعد وممتصات اهتزاز الموتور (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. هل يمكن إلغاء
+                  قواعد الكاوتش وتثبيت الموتور بالحديد مباشرة؟
+                </h3>
+                <p>
+                  خطر جداً! تثبيت الموتور بدون كاوتشات مطاطية ينقل كافة ذبذبات
+                  المكبس لجسم الثلاجة مما ينتج عنه ضوضاء لا تطاق وقد يؤدي لكسر
+                  مواسير الفريون النحاسية.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. ما الذي يتسبب
+                  في تلف وتآكل كاوتشات قواعد الموتور؟
+                </h3>
+                <p>
+                  العوامل الحرارية العالية خلف الثلاجة، تسرب الزيوت على المطاط،
+                  تقادم العمر الافتراضي للمادة، أو تحريك الثلاجة ونقلها بشكل
+                  خاطئ.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. هل تسبب قواعد
+                  الموتور التالفة ضعف التبريد؟
+                </h3>
+                <p>
+                  لا تؤثر على كفاءة التبريد مباشرة، ولكن الاهتزاز الشديد قد يسبب
+                  شرخاً في مواسير النحاس وتسريب الغاز وهو ما يتلف التبريد
+                  لاحقاً.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 4. هل تتطلب عملية
+                  استبدال القواعد الاستعانة بفني؟
+                </h3>
+                <p>
+                  يُفضل الاستعانة بفني مختص لرفع الموتور بحذر شديد وتفادي أي ضغط
+                  على وصلات مواسير الفريون الحساسة أثناء تغيير القواعد.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 7: نصائح الوقاية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح للحفاظ على سلامة قواعد الموتور ومنع الاهتزاز</h2>
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-soap"></i>
+                  <h3>النظافة من الزيوت والأتربة</h3>
+                </div>
+                <p>
+                  تنظيف منطقة الموتور بانتظام ومنع تراكم الزيوت والأتربة التي
+                  تسرع من جفاف وتآكل المطاط.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                  <h3>ترك مسافة تهوية جيدة</h3>
+                </div>
+                <p>
+                  ضمان تهوية ممتازة خَلف الثلاجة لتقليل درجة الحرارة المحيطة
+                  بالموتور وحماية الكاوتشات من السخونة الزائدة.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-truck-moving"></i>
+                  <h3>الحرص أثناء النقل والتكريك</h3>
+                </div>
+                <p>
+                  عند نقل الثلاجة من مكان لآخر، تجنب الصدمات العنيفة التي قد
+                  تخلع الكومبروسر من قواعده المطاطية.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تعاني من اهتزاز ورجة عالية في الموتور وتود تغيير القواعد بضمان
+              معتمد؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن عبر الخط الساخن وسيقوم الفني المعتمد بزيارتك لفحص
+              الموتور، وتغيير قواعد الكاوتش الأصلي بالمنزل فوراً.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

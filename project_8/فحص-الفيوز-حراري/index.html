@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      طريقة فحص واختبار الفيوز الحراري في الثلاجة | موسوعة الأعطال - المركز
+      المعتمد
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة فحص الفيوز الحراري */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #0d6efd;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #198754;
+        font-weight: 700;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/" class="active">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/" class="active"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-microchip"></i> دليل فحص قطع حماية النوفرست
+          </span>
+          <h1>طريقة فحص واختبار الفيوز الحراري (الترموفيوز) في الثلاجات</h1>
+          <p>
+            دليل فني مفصل يوضح وظيفه الفيوز الحراري لحماية دائرة النوفرست،
+            علامات تلفه، وكيفية اختباره بالأفوميتر بالمنزل.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة ==================== -->
+            <h2>
+              ما هو الفيوز الحراري (الترموفيوز / Thermal Fuse) وما وظيفته؟
+            </h2>
+            <p>
+              يُعد **الفيوز الحراري (Thermal Fuse / الترموفيوز)** عنصر الأمان
+              والتأمين الرئيسي الموصول على التوالي مع سخان إذابة الثلج (Defrost
+              Heater) في ثلاجات النوفرست. وظيفته الأساسية هي مراقبة درجة الحرارة
+              حول المبخر؛ فإذا حدث خلل في تايمر الإذابة أو الكارتة وظل السخان
+              يعمل لفترة أطول من المسموح به وارتفعت الحرارة للحد الخطر (عادة فوق
+              70°C إلى 76°C)، ينقطع صهر الفيوز الحراري فوراً ليفصل التيار
+              الكهربائي عن السخان كلياً، لمنع انصهار أجزاء الفريزر البلاستيكية
+              أو حدوث حريق.
+            </p>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تحذير فني هام:
+              </h4>
+              <p>
+                احذر تماماً من إلغاء الفيوز الحراري وعمل "قَفْلَة" أو توصيل
+                مباشر لسلكيه بدونه! إلغاء الفيوز الحراري يعرض الثلاجة لخطر
+                انصهار البلاستيك الداخلي بالكامل واحتراق الفريزر عند عطل التايمر
+                أو السخان.
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: علامات تلف الفيوز الحراري ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أبرز أعراض وعلامات تلف الفيوز الحراري</h2>
+            <p>
+              عند احتراق أو قطع الفيوز الحراري، تتوقف دائرة الإذابة كلياً وتظهر
+              الأعراض التالية:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-icicles"></i> 1. تراكم الثلج الشديد
+                  بداخل الفريزر
+                </h3>
+                <p>
+                  بسبب انقطاع التيار الكهربائي عن السخان، لا تتم عملية إذابة
+                  الثلج الأوتوماتيكية، فتتراكم طبقات ثلجية سميكة حول كويل
+                  المبخر.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: توقف عملية التسييح
+                  التلقائي للثلج.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-temperature-arrow-down"></i> 2. توقف
+                  التبريد في الكابينة السفلية
+                </h3>
+                <p>
+                  انسداد قنوات ومجاري الهواء بفعل كتل الثلج المتراكمة يمنع وصول
+                  التبريد لأرفف الكابينة السفلية وتفسد الأطعمة.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: انعدام التبريد
+                  بالثلاجة السفلية تماماً.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-bolt"></i> 3. توقف السخان عن العمل
+                  نهائياً
+                </h3>
+                <p>
+                  حتى عند دخول التايمر أو الكارتة في وضع الإذابة (Defrost)، يظل
+                  السخان بارداً تماماً بسبب انقطاع الدائرة عند الفيوز.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: فتح الدائرة
+                  الكهربائية المتصلة بالسخان.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-arrows-spin"></i> 4. تكرار المشكلة بعد
+                  الذوبان اليدوي
+                </h3>
+                <p>
+                  فصل الثلاجة لإذابة الثلج يحل المشكلة ليومين أو ثلاثة، ثم يعود
+                  الثلج للتراكم مجدداً بسبب استمرار انقاطاع الفيوز الحراري.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: استمرار العطل
+                  الحراري بدائرة النوفرست.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: كيفية فحص الفيوز الحراري ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>طريقة فحص واختبار الفيوز الحراري خطوة بخطوة</h2>
+            <p>
+              خطوات فحص الترموفيوز باستخدام جهاز الأفوميتر (Multimeter) بالمنزل:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>فصل التيار الكهربائي</h3>
+                <p>
+                  افصل قابس الثلاجة تماماً عن مصدر الكهرباء، وفك الغطاء الداخلي
+                  للفريزر للوصول لأسلاك المبخر.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>تحديد موقع الفيوز الحراري</h3>
+                <p>
+                  ستجد الفيوز الحراري محفوفاً بغلاف بلاستيكي عازل ومثبتاً أعلى
+                  كويل المبخر بالقرب من الترموديسك.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>ضبط الأفوميتر على وضعيّة الصفارة</h3>
+                <p>
+                  اضبط جهاز القياس على خيار فحص الاستمرارية (Continuity / Buzzer
+                  Test) أو على وضع الأوم (Ohm).
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>قياس أطراف الفيوز الحراري</h3>
+                <p>
+                  ضع مجسي القياس على طرفي الفيوز؛ إذا أطلق الجهاز صفارة وقراءة
+                  صفرية فالفيوز **سليم**، وإذا لم يعطِ أي قراءة فالفيوز **محترق
+                  وتالف**.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: خطوات استبدال الفيوز الحراري ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خطوات استبدال الترموفيوز بآخر جديد ومطابق</h2>
+            <p>
+              يتم استبدال الفيوز الحراري بسهولة مع مراعاة العزل المائي التام:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-scissors"></i></div>
+                <h3>1. قص وتعرية الأطراف</h3>
+                <p>
+                  قص أسلاك الفيوز المحترق بحذر وتعرية أطراف الأسلاك للتحضير
+                  لتوصيل الفيوز الجديد.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-link"></i></div>
+                <h3>2. ربط الفيوز الجديد الأصلي</h3>
+                <p>
+                  توصيل أطراف الفيوز الحراري الجديد المطابق لنفس درجة الحرارة
+                  المكتوبة عليه (مثلاً 72°C) بإحكام.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-shield"></i></div>
+                <h3>3. العزل الحراري والمائي التام</h3>
+                <p>
+                  استخدام أنابيب الانكماش الحراري (Heat Shrink Tubing) لمنع وصول
+                  الرطوبة والماء لنقاط التوصيل.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-thumbtacks"></i>
+                </div>
+                <h3>4. التثبيت في المكان المخصص</h3>
+                <p>
+                  إعادة تثبيت الفيوز بداخل العازل البلاستيكي وعلى أعلى كويل
+                  المبخر كما كان بحالة المصنع.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: كلمات البحث الرئيسية SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة عن فحص الفيوز الحراري (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز المصطلحات
+                الخاصة باختبار وتغيير الترموفيوز:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">طريقة فحص الفيوز الحراري للثلاجة</span>
+                <span class="seo-tag">اختبار الترموفيوز بالأفوميتر</span>
+                <span class="seo-tag">اعراض تلف الفيوز الحراري بالثلاجة</span>
+                <span class="seo-tag">مكان الفيوز الحراري في ثلاجة توشيبا</span>
+                <span class="seo-tag">تغيير فيوز التسخين بالثلاجة</span>
+                <span class="seo-tag">الفرق بين الترموديسك والترموفيوز</span>
+                <span class="seo-tag">سبب انقطاع الفيوز الحراري للثلاجة</span>
+                <span class="seo-tag">صيانة دائرة السخان بالمنزل</span>
+                <span class="seo-tag">سعر الترموفيوز الاصلي</span>
+                <span class="seo-tag">حل مشكلة تراكم الثلج في النوفرست</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول الفيوز الحراري بالثلاجات (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. ما هو الفرق
+                  الأساسي بين الترموديسك (Thermodisc) والترموفيوز (Thermal
+                  Fuse)؟
+                </h3>
+                <p>
+                  الترموديسك هو مفتاح حراري يعود للفتح والإغلاق تلقائياً مع تغير
+                  الدرجات، بينما الترموفيوز هو فيوز حماية يستجيب للحرارة الزائدة
+                  وينقطع لمرة واحدة فقط ويحتاج للاستبدال فور تلفه.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. ما الذي يتسبب
+                  في احتراق وانقطاع الفيوز الحراري؟
+                </h3>
+                <p>
+                  ارتفاع درجة حرارة السخان بشكل مفرط نتيجة ثبات التايمر أو كارتة
+                  التحكم في وضع الإذابة، أو تلف الترموديسك وعدم فصله للسخان في
+                  الوقت المناسب.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. هل يسبب تلف
+                  الفيوز الحراري توقف موتور الثلاجة؟
+                </h3>
+                <p>
+                  لا يوقف الموتور مباشرة، بل يوقف عمل السخان مما يتسبب في تراكم
+                  الثلج تدريجياً وانسداد فتحات الهواء وتوقف التبريد عن الكابينة
+                  السفلية.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 4. هل تتطلب عملية
+                  استبدال الفيوز الحراري الاستعانة بفني صيانة؟
+                </h3>
+                <p>
+                  يُفضل الاستعانة بفني مختص للتأكد من سبب احتراقه الأصلي (فحص
+                  السخان والتايمر) وضمان العزل المائي التام لأسلاك التوصيل.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 7: نصائح الوقاية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح للحفاظ على سلامة حماية النوفرست والترموفيوز</h2>
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-microchip"></i>
+                  <h3>تركيب قطع الغيار المطابقة</h3>
+                </div>
+                <p>
+                  تأكد دائماً من تركيب ترموفيوز مطابقة لدرجة الحرارة المصنعية
+                  المدونة على العبوة دون زيادة أو نقصان.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-droplet-slash"></i>
+                  <h3>العزل المائي الممتاز</h3>
+                </div>
+                <p>
+                  تأمين عزل الأسلاك جيدا بواسطة الـ Heat Shrink لتفادي وصول مياه
+                  التسييح لنقاط التوصيل الكهربائية.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <h3>فحص المكونات المرتبطة</h3>
+                </div>
+                <p>
+                  اختبار التايمر والترموديسك عند تغيير الفيوز الحراري للتأكد من
+                  عدم وجود عطل أدى لاحتراقه.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تعاني من تراكم الثلج وتود فحص واستبدال الفيوز الحراري بضمان معتمد؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن عبر الخط الساخن وسيقوم الفني المعتمد بزيارتك لفحص
+              واختبار واستبدال حماية النوفرست بالمنزل فوراً.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

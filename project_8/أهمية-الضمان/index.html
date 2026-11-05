@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      فوائد الاعتماد على مراكز الصيانة المعتمدة للثلاجات | المركز المعتمد
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة فوائد الاعتماد على مراكز الصيانة المعتمدة */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #10b981;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #10b981;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #0d6efd;
+        font-weight: 700;
+      }
+
+      .warning-box {
+        background: #e0f2fe;
+        border: 1px solid #bae6fd;
+        border-right: 5px solid #0284c7;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #0369a1;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #0c4a6e;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/" class="active">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn"
+            >_
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/" class="active"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-shield-halved"></i> الجودة، الضمان،
+            والاحترافية التقنية
+          </span>
+          <h1>فوائد الاعتماد على مراكز الصيانة المعتمدة للثلاجات</h1>
+          <p>
+            لماذا يُعد اختيار مركز صيانة معتمد الخيار الآمن والمثالي لحماية
+            جهازك، وتوفير أموالك، وضمان عمر افتراضي أطول لثلاجتك؟ إليك التفاصيل
+            الكاملة.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة ==================== -->
+            <h2>أهمية اختيار مركز صيانة معتمد وموثوق لجهازك</h2>
+            <p>
+              تُعتبر الثلاجة من أثمن وأهم الأجهزة الكهربائية داخل أي منزل،
+              ونظراً لاعتمادها الدائم على أنظمة التبريد المعقدة والدوائر الرقمية
+              الحديثة، فإن تعرضها لأي عطل يتطلب تدخلاً تقنياً دقيقاً. يلجأ البعض
+              أحياناً إلى الورش العشوائية أو الفنيين غير المعتمدين بحثاً عن
+              التوفير المؤقت، لكن النتيجة غالباً ما تكون تفاقم العطل واستنزاف
+              أموال إضافية. وهنا تتجلى القيمة الحقيقية **للإعتماد على مراكز
+              الصيانة المعتمدة**.
+            </p>
+
+            <div class="warning-box">
+              <h4><i class="fa-solid fa-circle-check"></i> قاعدة ذهبية:</h4>
+              <p>
+                الصيانة المعتمدة ليست مجرد عملية إصلاح عادية، بل هي استثمار طويل
+                الأجل يحافظ على كفاءة الطاقة، أمان العائلة، وعمر الثلاجة
+                الافتراضي.
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: الفوائد الأساسية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أبرز فوائد ومميزات التعامل مع المركز المعتمد للصيانة</h2>
+            <p>
+              مجموعة من المزايا الحصرية التي تضمن لك راحة البال والخدمة
+              الاحترافية:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-screwdriver-wrench"></i> 1. مهندسون
+                  وفنيون معتمدون وخبراء
+                </h3>
+                <p>
+                  يضم المركز نخبة من المهندسين والفنيين المدربين على أحدث تقنيات
+                  التبريد العالمية ومزودين بدورات تدريبية مستمرة لكل الماركات
+                  (توشيبا، شارب، سامسونج، إل جي، وغيرها).
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> تشخيص دقيق للأعطال بدون
+                  تخمين عشوائي.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-certificate"></i> 2. قطع غيار أصلية 100%
+                  مع الضمان
+                </h3>
+                <p>
+                  نستخدم حصرياً قطع الغيار الأصلية المعتمدة من الشركات المصنعة،
+                  مما يضمن توافقها التام مع المكونات الداخلية للثلاجة وكفاءة
+                  عملها القصوى مع شهادة ضمان معتمدة.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> ضمان حقيقي على قطع الغيار
+                  وخدمة الإصلاح.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-house-laptop"></i> 3. الصيانة المنزلية
+                  الفورية دون نقل
+                </h3>
+                <p>
+                  تتم كافة أعمال الفحص والصيانة في منزلك وأمام عينيك باستخدام
+                  أحدث أجهزة القياس والفحص، مما يعفي جهازك من مخاطر الصدمات أو
+                  الخدوش الناتجة عن النقل للورش.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> توفير الوقت، الجهد، وتكاليف
+                  النقل الإضافية.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-clock-rotate-left"></i> 4. سرعة
+                  الاستجابة وخدمة الطوارئ
+                </h3>
+                <p>
+                  نظراً لإدراكنا التام بأن تلف الأطعمة داخل الثلاجة يمثل أزمة
+                  فورية للأسرة، يوفر المركز خدمة الخط الساخن السريع وفريق طوارئ
+                  يغطي كافة المحافظات للوصول إليك في أسرع وقت.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> استجابة فورية وزيارات منزلية
+                  سريعة.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-tags"></i> 5. أسعار اقتصادية وشفافة
+                  ومحددة
+                </h3>
+                <p>
+                  نلتزم بتقديم قوائم أسعار واضحة وعادلة دون أي مصاريف خفية، مع
+                  توفير تقرير مفصل للعميل قبل بدء الإصلاح يوضح تكلفة قطع الغيار
+                  والمصنعية بكل شفافية.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> أفضل قيمة مقابل سعر مع
+                  الالتزام بالمعايير.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-headset"></i> 6. دعم فني ومتابعة دورية
+                  مابعد البيع
+                </h3>
+                <p>
+                  لا تنتهي علاقتنا بالعميل بمجرد إتمام الإصلاح، بل يتابع فريق
+                  خدمة العملاء جودة الخدمة المقدمة، مع تقديم استشارات فنية
+                  ونصائح للحفاظ على استدامة كفاءة الثلاجة.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> متابعة مستمرة ودعم هاتفي
+                  طوال الأسبوع.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: كلمات البحث الرئيسية SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة لمراكز الصيانة المعتمدة (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز المصطلحات
+                البحثية:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag"
+                  >فوائد الاعتماد على مراكز الصيانة المعتمدة</span
+                >
+                <span class="seo-tag">مميزات صيانة الثلاجات بالمنزل</span>
+                <span class="seo-tag">أهمية استخدام قطع الغيار الأصلية</span>
+                <span class="seo-tag">مركز صيانة الثلاجات المعتمد في مصر</span>
+                <span class="seo-tag">رقم الخط الساخن لصيانة الثلاجات</span>
+                <span class="seo-tag"
+                  >لماذا تختار المركز المعتمد لصيانة الأجهزة</span
+                >
+                <span class="seo-tag">فني صيانة ثلاجات معتمد</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول خدمات الصيانة المعتمدة (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. ما الفرق بين
+                  مراكز الصيانة المعتمدة والورش الخارجية؟
+                </h3>
+                <p>
+                  المراكز المعتمدة توفر قطع غيار أصلية بضمان معتمد، مهندسين
+                  متخصصين مزودين بأحدث أجهزة الفحص الرقمي، والتزاماً كاملاً
+                  بمعايير الأمان والجودة العالمية، بينما تعتمد الورش الخارجية
+                  غالباً على قطع مقلدة وعشوائية دون ضمانات حقيقية.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. هل تشمل الصيانة
+                  المنزلية ضماناً مكتوباً؟
+                </h3>
+                <p>
+                  نعم، يمنح المركز لعملائه شهادة ضمان معتمدة وموثقة على كافة
+                  أعمال الإصلاح وقطع الغيار المُستبدلة لضمان حقوق العميل
+                  الكاملة.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. كيف يمكنني طلب
+                  خدمة الصيانة المنزلية للمركز فوراً؟
+                </h3>
+                <p>
+                  يمكنك التواصل معنا بكل سهولة عبر الاتصال المباشر برقم الخط
+                  الساخن **19580** أو عبر مراسلتنا المباشرة من خلال تطبيق
+                  الواتساب وسيقوم فريقنا بتلبية طلبك فوراً.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تبحث عن خدمة صيانة معتمدة، مضمونة، وسريعة لثلاجتك بمنزلك؟
+            </h2>
+            <p style="color: #64748b">
+              نحن في المركز المعتمد جاهزون لخدمتك في جميع المحافظات بأعلى معايير
+              الجودة والاحترافية. اتصل بنا الآن!
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

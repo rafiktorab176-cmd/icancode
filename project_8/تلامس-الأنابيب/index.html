@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      طريقة معالجة تلامس مواسير التبريد في الثلاجة | موسوعة الأعطال - المركز
+      المعتمد
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة معالجة تلامس مواسير التبريد */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #0d6efd;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #198754;
+        font-weight: 700;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/" class="active">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/" class="active"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-grip-lines-vertical"></i> دليل معالجة مشاكل
+            دورة الفريون
+          </span>
+          <h1>طريقة معالجة تلامس واحتكاك مواسير التبريد في الثلاجة</h1>
+          <p>
+            دليل فني شامل لتشخيص أسباب احتكاك مواسير النحاس بالهيكل الخلفي أو
+            الموتور، وكيفية إبعادها وعزلها للتخلص من الرجة ومنع تسريب الفريون.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة ==================== -->
+            <h2>ما هي مشكلة تلامس مواسير التبريد وما أضرارها؟</h2>
+            <p>
+              تحدث مشكلة **تلامس مواسير التبريد (Copper Pipes Contact)** عندما
+              تنحني مواسير السحب أو الطرد النحاسية الموجودة خلف الثلاجة وتتلامس
+              مع بعضها البعض، أو تحتك بجسم الكومبروسر (الكباس) أو الهيكل المعدني
+              الخارجي. ومع الاهتزاز الطبيعي الناتج عن دورة عمل الموتور، ينشأ عن
+              هذا التلامس صوت طنين ورجة عالية، بالإضافة إلى الخطر الأكبر وهو ثقب
+              المواسير وتسريب غاز الفريون نتيجة التآكل المستمر.
+            </p>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تحذير فني هام:
+              </h4>
+              <p>
+                احذر تماماً من ثني مواسير النحاس بقوة أو زاوية حادة بيدك! الثني
+                العنيف قد يؤدي إلى خفس المواسير (Kinking) واختناق مجرى غاز
+                الفريون، أو ثقبها فوراً وتفريغ شحنة التبريد بالكامل.
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: أسباب التلامس ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أبرز أسباب تلامس واحتكاك مواسير التبريد الخلفية</h2>
+            <p>
+              غالباً ما تنحرف المواسير عن مسارها الصحيح وتتلامس نتيجة الأسباب
+              التالية:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-truck-ramp-box"></i> 1. تحريك الثلاجة أو
+                  نقلها بطريقة خاطئة
+                </h3>
+                <p>
+                  الضغط على خلفية الثلاجة أثناء النقل أو دفعها بقوة نحو الحائط
+                  يؤدي لانثناء المواسير واقترابها من الموتور.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: انحناء المواسير
+                  واحتكاكها بالهيكل.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-arrows-spin"></i> 2. اهتزاز الموتور
+                  العنيف عند التشغيل
+                </h3>
+                <p>
+                  تلف قواعد الكومبروسر المطاطية يسبب اهتزازاً زايداً ينقل الحركة
+                  للمواسير المجاورة ويجعلها تصطدم بالجدار.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: انتقال ذبذبات
+                  الكباس مباشرة للمواسير.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-screwdriver-wrench"></i> 3. أعمال صيانة
+                  سابقة غير دقيقة
+                </h3>
+                <p>
+                  عدم إعادة ضبط وإبعاد المواسير لشكلها الأصلي بعد عملية شحن
+                  الفريون أو تغيير الريلاي والكباس.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: ترك المواسير قريبة
+                  جداً من بعضها.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-tape"></i> 4. انفكاك عوازل وكلبسات
+                  التثبيت
+                </h3>
+                <p>
+                  تآكل أو سقوط المشابك البلاستيكية والعوازل المطاطية المصنعية
+                  التي تفصل بين مواسير السحب والراجع.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: ارتقاء المواسير
+                  وارتطامها الحر.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: كيفية الفحص ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>طريقة فحص واكتشاف نقاط تلامس المواسير خطوة بخطوة</h2>
+            <p>
+              خطوات التشخيص الظاهري لتحديد مصدر الرجة وصوت الاحتكاك خلف الثلاجة:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>فصل الكهرباء وإبعاد الثلاجة</h3>
+                <p>
+                  افصل الثلاجة وحركها بعيداً عن الجدار بمسافة كافية للوصول
+                  لكابينة الموتور والمكثف الخلفي.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>التشغيل والمراقبة بالعين</h3>
+                <p>
+                  أعد توصيل الكهرباء وراقب حركة المواسير لحظة إعطاء الموتور دفعة
+                  البدء لرؤية نقطة الاصطدام.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>اختبار اللمس الخفيف بيدك</h3>
+                <p>
+                  ضع يدك ببطء على المواسير المشتبه بها؛ إذا اختفى صوت الرجة
+                  بمجرد لمسها فهذه هي نقطة التلامس.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>فحص وجود آثار تآكل أو احتكاك</h3>
+                <p>
+                  تأكد من عدم وجود خدوش عميقة أو علامات احتكاك أسود بين مسارات
+                  النحاس لجسم الكباس.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: خطوات المعالجة والإصلاح ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خطوات معالجة وإبعاد مواسير التبريد وعزلها بالكامل</h2>
+            <p>طرق الإصلاح والعزل المعتمدة لمنع الضوضاء وحماية دورة الفريون:</p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-hands-holding"></i>
+                </div>
+                <h3>1. تعديل مسار المواسير بحذر</h3>
+                <p>
+                  إبعاد المواسير عن بعضها وعن جسم الكومبروسر برفق شديد باستخدام
+                  انحناءات دائرية واسعة باليدين.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-shield-cat"></i>
+                </div>
+                <h3>2. تركيب عازل الفوم (المكثف)</h3>
+                <p>
+                  تغليف مواسير السحب والراجع بأنابيب عازل الفوم الأسود
+                  (Armaflex) لامتصاص الاهتزاز والحرارة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-paperclip"></i>
+                </div>
+                <h3>3. تثبيت الكلبسات والمشابك</h3>
+                <p>
+                  تركيب مشابك بلاستيكية أو أفيز ضغط لربط المواسير بشاسيه الثلاجة
+                  بإحكام وعدم تركها حرة.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-check-double"></i>
+                </div>
+                <h3>4. اختبار الاهتزاز والتشغيل</h3>
+                <p>
+                  تشغيل الثلاجة ومراقبة أداء الموتور والتأكد من اختفاء الأصوات
+                  تماماً واستقرار المواسير.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: كلمات البحث الرئيسية SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة عن تلامس مواسير التبريد (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز المصطلحات
+                الخاصة بمعالجة مواسير الثلاجة:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">معالجة تلامس مواسير التبريد</span>
+                <span class="seo-tag">حل مشكلة احتكاك مواسير النحاس</span>
+                <span class="seo-tag">سبب صوت الرجة خلف الثلاجة</span>
+                <span class="seo-tag">طريقة إبعاد مواسير الفريون</span>
+                <span class="seo-tag">عزل مواسير السحب والراجع</span>
+                <span class="seo-tag">حل اهتزاز مواسير الموتور</span>
+                <span class="seo-tag">تركيب عازل الفوم لمواسير الثلاجة</span>
+                <span class="seo-tag">علاج ثقب مواسير النحاس بالثلاجة</span>
+                <span class="seo-tag">سبب زنة المواسير الخلفية</span>
+                <span class="seo-tag">صيانة اهتزاز مواسير النوفرست</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول احتكاك وتلامس مواسير التبريد (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. هل تؤدي مواسير
+                  التبريد المتلامسة إلى تسريب غاز الفريون؟
+                </h3>
+                <p>
+                  نعم بالتأكيد! الاحتكاك المستمر بين مواسير النحاس بفعل اهتزاز
+                  الموتور يعمل كالمبرد، مما يتسبب في ثقب المواسير وتسريب غاز
+                  التبريد تدريجياً.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. كيف أعزل
+                  المواسير المتلامسة بشكل آمن في المنزل؟
+                </h3>
+                <p>
+                  يمكنك وضع قطعة مطاطية صغيرة أو أنبوب فوم عازل (Armaflex) بين
+                  المادتين المتلامستين وتثبيتها بأفيز بلاستيكي لامتصاص الاهتزاز
+                  دون الحاجة لثني المواسير شديداً.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. ما العمل إذا
+                  انخفست (انسدت) ماسورة النحاس أثناء محاولة تعديلها؟
+                </h3>
+                <p>
+                  إذا انخفست الماسورة، يجب الاستعانة بفني صيانة فوراً لقص الجزء
+                  المنخفس واستبداله بماسورة جديدة ولحامها بالنحاس لمنع انسداد
+                  دورة التبريد.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 4. هل التكثيف
+                  وقطرات الماء على مواسير الراجع أمر طبيعي؟
+                </h3>
+                <p>
+                  تكون قطرات خفيفة جداً أمر طبيعي، ولكن التكثيف الشديد أو تكون
+                  ثلج على ماسورة الراجع يدل على زيادة شحنة الفريون أو ضعف
+                  التبخير ويحتاج لعزل حراري جاف.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 7: نصائح الوقاية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح لحماية مواسير التبريد ومنع احتكاكها مستقبلاً</h2>
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                  <h3>ترك مسافة آمنة عن الجدار</h3>
+                </div>
+                <p>
+                  ترك مسافة لا تقل عن 10 إلى 15 سم بين خلفية الثلاجة والحائط
+                  لمنع ضغط المواسير باتجاه الموتور.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-dolly"></i>
+                  <h3>الحذر عند تحريك ونقل الثلاجة</h3>
+                </div>
+                <p>
+                  عدم سحب أو دفع الثلاجة من أجزاء شبكة المكثف الخلفية أو
+                  المواسير لتجنب اعوجاجها.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <h3>التأكد من عزل المواسير بعد الصيانة</h3>
+                </div>
+                <p>
+                  مراجعة تثبيت المشابك والعوازل المطاطية خلف الكباس دائماً بعد
+                  أي عملية إصلاح بالثلاجة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تعاني من صوت رجة المواسير وتخشى حدوث تسريب بالفريون؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن عبر الخط الساخن وسيقوم الفني المعتمد بزيارتك لفحص
+              مواسير التبريد، تعديل المسارات، وعزلها بالكامل بالمنزل فوراً.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

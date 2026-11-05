@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صيانة ثلاجات إندست | المركز المعتمد لصيانة ثلاجات Indesit</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحات الماركات - إندست */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .features-list li {
+        position: relative;
+        padding-right: 30px;
+        margin-bottom: 15px;
+        color: #334155;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .features-list li i {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        color: #198754;
+        font-size: 1.1rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة محافظات الخدمة للماركة */
+      .districts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .district-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #334155;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .district-item i {
+        color: #0d6efd;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      /* الخدمات الخاصة بـ إندست */
+      .freon-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .freon-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .freon-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .freon-card h3 {
+        font-size: 1.15rem;
+        color: #0d6efd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .freon-card p {
+        font-size: 0.92rem;
+        margin: 0;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/" class="active">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/" class="active"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للماركة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-award"></i> مركز صيانة معتمد لثلاجات إندست
+            (Indesit)
+          </span>
+          <h1>صيانة ثلاجات إندست Indesit Refrigerator Maintenance</h1>
+          <p>
+            إصلاح وصيانة ثلاجات وديب فريزر إندست بالمنزل مع تركيب قطع الغيار
+            الأصلية المعتمدة وشهادة ضمان مكتوبة وبأعلى كفاءة في مصر.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: مقدمة مركز إندست ==================== -->
+            <h2>خدمة صيانة ثلاجات إندست المعتمدة</h2>
+            <p>
+              نقدم في **المركز المعتمد لصيانة الثلاجات** أفضل خدمات الإصلاح
+              والصيانة الفورية لجميع موديلات وأحجام ثلاجات وديب فريزر **إندست
+              (Indesit)** الإيطالية المتميزة. نعتمد على مهندسين وفنيين متخصصين
+              ومدرّبين على التكنولوجيا الحديثة لثلاجات إندست، مثل أنظمة التبريد
+              المتطورة **Low Frost / No Frost**، مواتير التحكّم الموفرة للطاقة،
+              وأنظمة التوزيع الذكي للبرودة، مع التزام تام بتركيب قطع الغيار
+              الأصلية وتقديم ضمان مكتوب بالمنزل.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> مهندسون خبراء مدربون
+                حصرياً على معالجة كافة أعطال ثلاجات إندست العادية والنوفروست
+                والديب فريزر الأفقي والرأسي.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> تركيب قطع غيار إندست
+                الأصلية 100% مع تسليم العميل شهادة ضمان معتمدة ومكتوبة.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> إنجاز كافة أعمال
+                الصيانة والإصلاح الفوري بالمنزل دون الحاجة لنقل الثلاجة نهائياً.
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> فحص دقيق بأجهزة الكشف
+                الحديثة لتحديد الأعطال بدقة تامة وسرعة في الإنجاز.
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تنبيه هام
+                لعملاء إندست (Indesit):
+              </h4>
+              <p>
+                تتميز ثلاجات وديب فريزر إندست بدوائر تبريد إيطالية دقيقة، لذا
+                نحذر من التعامل مع الفنيين غير المؤهلين لمنع حدوث تسريب في
+                الفريون أو تلف كارتة التحكم/التايمر الأصلي للجهاز.
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: الخدمات المتاحة لثلاجات إندست ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خدمات الصيانة المتاحة لثلاجات إندست</h2>
+            <p>
+              يقدم مركزنا تغطية متكاملة لكافة الأعطال والمشاكل التقنية الخاصة
+              بثلاجات وديب فريزر إندست:
+            </p>
+
+            <div class="freon-types-grid">
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-snowflake"></i> صيانة دوائر النوفرست
+                  والتايمر
+                </h3>
+                <p>
+                  علاج مشاكل توقف التبريد للكابينة أو الفريزر، وتغيير السخانات
+                  (الهيتر)، الترموديسك، والتايمر الأصلي لـ Indesit.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-microchip"></i> إصلاح اللوحات
+                  الإلكترونية والديجيتال
+                </h3>
+                <p>
+                  صيانة وبرمجة كارتات التحكم والشاشات الإلكترونية الرئيسية
+                  لثلاجات إندست بأعلى كفاءة وأمان.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-gauge"></i> شحن الفريون ومعالجة التسريب
+                </h3>
+                <p>
+                  الفحص الدقيق لدائرة التبريد واكتشاف مواضع التنفيس بدقة، مع
+                  الشحن بالضغط المصنعي وفريون أصلي متوافق.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-bolt"></i> صيانة واستبدال الضواغط
+                  (المواتير)
+                </h3>
+                <p>
+                  تركيب وفحص مواتير إندست الأصلية الموفرة للطاقة مع ضمان كفاءة
+                  التشغيل القوي والصامت.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-fan"></i> مراوح التوزيع وفلاتر التنقية
+                  الداخلية
+                </h3>
+                <p>
+                  فحص واستبدال مراوح التبريد الداخلية لضمان توزيع الهواء البارد
+                  بشكل متساوٍ في كافة أرفف الثلاجة.
+                </p>
+              </div>
+              <div class="freon-card">
+                <h3>
+                  <i class="fa-solid fa-door-closed"></i> تغيير إطارات وجوانات
+                  الأبواب
+                </h3>
+                <p>
+                  تركيب كاوتش الأبواب المغناطيسي الأصلي لثلاجات إندست لمنع تسرب
+                  البرودة وخفض استهلاك الكهرباء.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: التغطية في المحافظات ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>تغطية خدمة صيانة ثلاجات إندست بالمحافظات</h2>
+            <p>
+              نوفر سيارات صيانة متنقلة ومجهزة بالكامل لخدمة عملاء ثلاجات إندست
+              في جميع المحافظات:
+            </p>
+
+            <div class="districts-grid">
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                القاهرة
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                الجيزة
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                الإسكندرية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                الغربية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                الدقهلية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                الشرقية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                القليوبية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-dot"></i> صيانة ثلاجات إندست
+                المنوفية
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات إندست
+                البحيرة
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات إندست
+                كفر الشيخ
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات إندست
+                دمياط
+              </div>
+              <div class="district-item">
+                <i class="fa-solid fa-location-arrow"></i> صيانة ثلاجات إندست
+                دمياط الجديدة
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: كلمات البحث الرئيسية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الرئيسية عن صيانة ثلاجات إندست (SEO Tags)</h2>
+            <p>
+              إليك أبرز المصطلحات وعبارات البحث التي يستخدمها العملاء للوصول إلى
+              خدماتنا المعتمدة لإندست:
+            </p>
+
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أشهر عبارات البحث
+                الخاصة بماركة إندست:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">صيانة ثلاجات إندست</span>
+                <span class="seo-tag">رقم صيانة ثلاجة Indesit</span>
+                <span class="seo-tag">الخط الساخن صيانة إندست</span>
+                <span class="seo-tag">تصليح ثلاجة إندست بالمنزل</span>
+                <span class="seo-tag">قطع غيار ثلاجات Indesit الأصلية</span>
+                <span class="seo-tag">صيانة ديب فريزر إندست</span>
+                <span class="seo-tag">صيانة ثلاجة إندست نوفروست</span>
+                <span class="seo-tag">مركز خدمة ثلاجات Indesit</span>
+                <span class="seo-tag">تغير موتور ثلاجة إندست</span>
+                <span class="seo-tag">شحن فريون ثلاجة Indesit</span>
+                <span class="seo-tag">اعطال ثلاجة إندست</span>
+                <span class="seo-tag">تصليح كارتة ثلاجة Indesit</span>
+                <span class="seo-tag">تغيير كاوتش باب ثلاجة إندست</span>
+                <span class="seo-tag">صيانة إندست المعتمد</span>
+                <span class="seo-tag">ضمان ثلاجات Indesit</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: الأسئلة الشائعة (FAQ - 10 أسئلة) ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول صيانة ثلاجات إندست (FAQ)</h2>
+            <p>
+              إليك إجابات لأبرز 10 أسئلة شائعة تخص أعطال وصيانة ثلاجات وديب
+              فريزر إندست:
+            </p>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. ما سبب توقف
+                  التبريد في الجزء السفلي بثلاجة إندست؟
+                </h3>
+                <p>
+                  يعود ذلك غالباً لتراكم الثلج حول مبخر الفريزر نتيجة عطل في
+                  دائرة الإذابة (الهيتر أو التيرموديسك)، مما يعوق سريان الهواء
+                  البارد عبر مجاري التوزيع للكابينة.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. ماذا تعني مشكلة
+                  تكون الثلج الزائد في فريزر ثلاجة Indesit؟
+                </h3>
+                <p>
+                  تدل على وجود تسريب هواء من جوان الباب أو تلف في سخان الإذابة
+                  مما يتطلب تدقيق وفحص فني لتغيير التالف بقطع أصلية.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. كيف تتم صيانة
+                  نظام النوفرست في ثلاجات إندست؟
+                </h3>
+                <p>
+                  تتم بفحص منظم التسييح (التايمر أو الكارتة الإلكترونية)،
+                  الهيتر، والحساسات لضمان التخلص التلقائي من الثلوج المتراكمة.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 4. هل تتم صيانة
+                  وإصلاح ثلاجة إندست بالمنزل أم يلزم نقلها؟
+                </h3>
+                <p>
+                  نعم، تتم جميع أعمال الصيانة والفحص واستبدال القطع لثلاجات
+                  Indesit بالمنزل بنسبة 99% دون نقل الجهاز من مكانه.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 5. ما سبب ارتفاع
+                  صوت الموتور أو صدور ضوضاء من ثلاجة إندست؟
+                </h3>
+                <p>
+                  قد يرجع الصوت لعدم اتزان الجهاز على الأرض، أو تآكل قواعد
+                  الموتور المطاطية، أو احتكاك مروحة الفريزر بالثلج المتراكم
+                  حولها.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 6. لماذا تسرب
+                  ثلاجة إندست مياه من أسفل الأدراج؟
+                </h3>
+                <p>
+                  نتيجة انسداد ثقب التصريف الخلفي (درين المياه) بالرواسب، مما
+                  يجعل المياه الناتجة عن تسييح الثلج ترتد للداخل بدلاً من الخروج
+                  لطبق التبخير فوق الموتور.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 7. ما سبب عمل
+                  الموتور بشكل مستمر دون فصل في ثلاجة إندست؟
+                </h3>
+                <p>
+                  قد يحدث ذلك بسبب تسريب فريون التبريد، أو تلف جوان الباب وتسريب
+                  البرودة، أو خلل في الثرموستات أو الحساس المسؤول عن درجة
+                  الحرارة.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 8. كم تبلغ فترة
+                  الضمان على قطع غيار إندست المستبدلة؟
+                </h3>
+                <p>
+                  نمنح العميل ضماناً رسمياً ومعتمداً يتراوح من 6 إلى 12 شهراً
+                  على قطع الغيار الأصلية وعلى عملية الإصلاح المنفذة.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 9. هل قطع الغيار
+                  المستخدمة لثلاجات إندست أصلية معتمدة؟
+                </h3>
+                <p>
+                  نعم، نلتزم تماماً بتركيب قطع غيار إندست الأصلية 100% لضمان
+                  إرجاع الكفاءة التشغيلية الممتازة للجهاز.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 10. كيف يمكنني طلب
+                  زيارة صيانة فورية لثلاجة إندست؟
+                </h3>
+                <p>
+                  يمكنكم التواصل بالاتصال بالخط الساخن 19580 وتسجيل بيانات
+                  العطل، وسيتواصل معكم الفني لتأكيد موعد الزيارة المنزلية.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: خطوات طلب الصيانة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خطوات طلب صيانة ثلاجات إندست بالمنزل</h2>
+            <p>
+              خطوات سريعة ومبسطة للحصول على خدمة صيانة منزلية فورية لثلاجات
+              إندست:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>الاتصال وتسجيل الطلب</h3>
+                <p>
+                  الاتصال بالخط الساخن 19580 وإبلاغ ممثل خدمة العملاء بمظهر
+                  العطل وموديل ثلاجة Indesit.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>تحديد موعد الزيارة</h3>
+                <p>
+                  يتواصل معك مهندس إندست المختص لتأكيد موعد الزيارة المنزلية
+                  المناسب لجدولك.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>الفحص والإصلاح الفوري</h3>
+                <p>
+                  فحص الثلاجة بالأجهزة الحديثة، تحديد العطل وإصلاحه بتركيب القطع
+                  الأصلية بالمنزل.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>الاختبار وتسليم الضمان</h3>
+                <p>
+                  اختبار التبريد الجيد وتسليم العميل الفاتورة وشهادة الضمان
+                  المعتمدة.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 7: نصائح للحفاظ على ثلاجة إندست ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح مهندسينا للحفاظ على كفاءة ثلاجة إندست</h2>
+            <p>
+              لضمان عمل ثلاجة وديب فريزر إندست بأعلى جودة لأطول فترة ممكنة،
+              يُنصح بما يلي:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                  <h3>توفير مسافة تهوية خلفية</h3>
+                </div>
+                <p>
+                  ترك مسافة لا تقل عن 10 سم خلف الثلاجة لتسهيل تهوية الموتور
+                  والمكثف ومنع سخونة الجهاز.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-temperature-arrow-down"></i>
+                  <h3>ضبط درجات البرودة المناسبة</h3>
+                </div>
+                <p>
+                  ضبط الحرارة على الدرجات الموصى بها وعدم ضبطها على الحد الأقصى
+                  دائماً لتقليل الضغط على الموتور.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-broom"></i>
+                  <h3>تنظيف جوان الباب والمحيط الداخلي</h3>
+                </div>
+                <p>
+                  تنظيف الإطارات المطاطية بماء دافئ بشكل دوري لضمان إحكام الغلق
+                  ومنع تسريب البرودة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              لديك ثلاجة أو ديب فريزر إندست وتريد إصلاحها بالمنزل بضمان معتمد؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن عبر الخط الساخن وسيكون مهندس صيانة إندست المعتمد
+              لديك في أسرع وقت.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

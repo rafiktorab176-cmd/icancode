@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      صيانة وتغيير خراطيم فلتر المياه المدمج بالثلاجة | موسوعة الأعطال - المركز
+      المعتمد
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة صيانة خراطيم فلتر المياه المدمج */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #0d6efd;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #198754;
+        font-weight: 700;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/" class="active">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/" class="active"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-faucet-drip"></i> دليل صيانة مبرد ومحضر الثلج
+            بالثلاجة
+          </span>
+          <h1>صيانة وتغيير خراطيم فلتر المياه المدمج في الثلاجة</h1>
+          <p>
+            دليل فني شامل لكيفية فحص وصيانة خراطيم التغذية الخاصة بفلتر المياه،
+            الدسبنسر، ومصنع الثلج (Ice Maker) وعلاج التسريبات وضعف ضخ المياه.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة ==================== -->
+            <h2>ما هي خراطيم فلتر المياه المدمج وما أهميتها بالثلاجة؟</h2>
+            <p>
+              تعتمد الثلاجات الحديثة المزودة بموزع مياه خارجي (Dispenser) أو
+              صانع ثلج أوتماتيكي (Ice Maker) على شبكة دقيقة من **خراطيم البوليمر
+              البلاستيكية (Polyethylene Tubing)** المقاومة للضغط. تقوم هذه
+              الخراطيم بنقل المياه من مصدر التغذية الخارجي وتمريرها عبر الفلتر
+              المدمج لتنقيتها، ثم توزيعها إلى صمامات المياه الكهربائية ومحضر
+              الثلج وخزان التبريد الداخلي. ويتسبب تلف أو انثناء هذه الخراطيم في
+              تسريب مياه غزير خلف الثلاجة أو ضعف وتوقف ضخ المياه تماماً.
+            </p>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-triangle-exclamation"></i> تحذير فني هام:
+              </h4>
+              <p>
+                تأكد دائماً من إغلاق محبس التغذية الرئيسي للمياه الموصل بالثلاجة
+                وفصل القابس الكهربائي قبل البدء بأي أعمال صيانة أو فك لخراطيم
+                الفلتر لتفادي اندفاع المياه أو قصر الدائرة الكهربائية!
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: أسباب ومشاكل الخراطيم ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أبرز مشاكل وأعراض تلف خراطيم فلتر المياه المدمج</h2>
+            <p>
+              تظهر مشاكل خراطيم المياه بالثلاجة عبر عدة مظاهر وأعراض رئيسية
+              تشمل:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-droplet-slash"></i> 1. تسريب مياه غزير
+                  خلف أو أسفل الثلاجة
+                </h3>
+                <p>
+                  حدوث شرخ، شق، أو ثقب في الخرطوم النايلون الناتج عن الاحتكاك
+                  بالهيكل المعدني الخلفي أو تآكل خامة البلاستيك مع تقادم العمر.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: تجمع برك مياه خلف
+                  الثلاجة أثناء التعبئة.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-filter"></i> 2. ضعف شديد في ضخ المياه من
+                  الدسبنسر
+                </h3>
+                <p>
+                  انثناء الخرطوم (Kinking) خلف الثلاجة بسبب دفعها بقوة نحو
+                  الجدار، أو انسداد الخرطوم بالترسبات الكلسية والأملاح نتيجة
+                  تأخر تغيير الفلتر.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: بطء شديد في ملء
+                  الكوب وتوقف صانع الثلج.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-cubes"></i> 3. توقف مصنع الثلج (Ice
+                  Maker) عن العمل
+                </h3>
+                <p>
+                  تجمد المياه داخل الخرطوم الممتد لباب الفريزر أو كسر وصلات
+                  الربط السريعة (Quick Connectors) المغذية لقالب الثلج.
+                </p>
+
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: انقطاع امداد
+                  المياه عن وحدة مكعبات الثلج.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-vial"></i> 4. تغير طعم أو رائحة مياه
+                  الشرب
+                </h3>
+                <p>
+                  تراكم البكتيريا والفطريات داخل جدران الخراطيم القديمة نتيجة
+                  عدم التطهير وتأخير استبدال الفلتر المدمج لأكثر من 6 أشهر.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-wrench"></i> النتيجة: انبعاث روائح ونكهة
+                  بلاستيكية في المياه.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: كيفية الفحص ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>طريقة فحص وتحديد مكان عطل الخراطيم خطوة بخطوة</h2>
+            <p>
+              خطوات التشخيص الفني لتحديد مكان التسريب أو الانسداد في مسار
+              المياه:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <h3>فصل الكهرباء وترك المحبس مفتوحاً</h3>
+                <p>
+                  افصل الثلاجة عن التيار واسحبها بحذر، واترك محبس المياه مفتوحاً
+                  لتحديد نقطة تسرب قطرات الماء بالعين.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <h3>فحص وصلات الفلتر السريعة (Quick Connect)</h3>
+                <p>
+                  افحص أطراف دخول وخروج المياه بالفلتر المدمج وتأكد من ثبات حلقة
+                  الأمان وعدم تسريب الوصلات.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <h3>مراجعة مسار الخراطيم الخلفية</h3>
+                <p>
+                  تتبع الخرطوم الممتد من محبس الحائط حتى صمام المياه (Water
+                  Valve) السفلي وتأكد من عدم وجود انثناءات.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">4</div>
+                <h3>فحص وصلة مفصلة الباب السفلية</h3>
+                <p>
+                  افحص الخرطوم الممتد عبر المفصلة السفلية لباب الفريزر؛ حيث
+                  تتركز أعطال الثقب والانثناء مع كثرة الفتح والغلق.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: كيفية الصيانة والاستبدال ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>خطوات صيانة وتغيير خراطيم فلتر المياه بالمنزل</h2>
+            <p>طريقة قطع واستبدال الخراطيم والوصلات التالفة بأمان:</p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-faucet"></i></div>
+                <h3>1. إغلاق محبس المياه تماماً</h3>
+                <p>
+                  أغلق محبس التغذية الرئيسي والضغط على زر الدسبنسر لتفريغ ضغط
+                  المياه المتبقي داخل الخراطيم.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-scissors"></i></div>
+                <h3>2. قص الجزء التالف أو المشروخ</h3>
+                <p>
+                  استخدام قاطعة خراطيم خاصة (Tube Cutter) لقص الجزء التالف
+                  بزاوية مستقيمة 90 درجة دون تشويه الحواف.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-link"></i></div>
+                <h3>3. تركيب الوصلات والخرطوم الجديد</h3>
+                <p>
+                  إدخال الخرطوم الأصلي الجديد (مقاس 1/4 أو 5/16 بوصة) داخل وصلات
+                  الكبس السريعة حتى سماع صوت التثبيت.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-num">
+                  <i class="fa-solid fa-check-double"></i>
+                </div>
+                <h3>4. غسيل واختبار مسار المياه</h3>
+                <p>
+                  فتح المياه وتمرير من 4 إلى 5 لترات مياه لتفريغ الهواء ورواسب
+                  الكربون قبل الاستخدام وشرب المياه.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: كلمات البحث الرئيسية SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة عن صيانة خراطيم الفلتر (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز المصطلحات
+                الخاصة بخراطيم وفلاتر مبرد الثلاجة:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">صيانة خراطيم فلتر المياه المدمج</span>
+                <span class="seo-tag">تغيير خرطوم مبرد مياه الثلاجة</span>
+                <span class="seo-tag">حل تسريب مياه الفلتر خلف الثلاجة</span>
+                <span class="seo-tag">اصلاح خرطوم الآيس ميكر بالثلاجة</span>
+                <span class="seo-tag">تركيب وصلات فلتر ثلاجة سامسونج وLG</span>
+                <span class="seo-tag">ضعف ضخ المياه من دسبنسر الثلاجة</span>
+                <span class="seo-tag">سعر خرطوم فلتر الثلاجة الأصلي</span>
+                <span class="seo-tag">علاج انثناء خرطوم المياه الخلفي</span>
+                <span class="seo-tag"
+                  >تركيب الفلتر الداخلي والخارجي للثلاجة</span
+                >
+                <span class="seo-tag">صيانة صمام مياه الثلاجة Water Valve</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول خراطيم وفلاتر مياه الثلاجات (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. كم يبلغ المقاس
+                  القياسي لخراطيم فلتر مياه الثلاجة؟
+                </h3>
+                <p>
+                  تستخدم معظم الثلاجات خراطيم بوليثيلين بمقاس قياسي يبلغ 1/4
+                  بوصة (6.35 ملم)، وتستخدم بعض الموديلات خراطيم بمقاس 5/16 بوصة
+                  للمسارات الرئيسية.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. كم مرة يجب
+                  تغيير فلتر المياه المدمج بالثلاجة؟
+                </h3>
+                <p>
+                  يجب تغيير فلتر المياه المدمج كل 6 أشهر بانتظام، أو عند إضاءة
+                  لمبة بيان الفلتر باللوحة، لحماية الخراطيم والصمامات من التكلس
+                  والانسداد.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. لماذا تخرج مياه
+                  الدسبنسر دافئة وليست باردة؟
+                </h3>
+                <p>
+                  يحدث ذلك عند استهلاك كمية كبيرة متواصلة من المياه وتفريغ خزان
+                  التبريد الداخلي (Water Reservoir)، أو عند تجمد الخرطوم داخل
+                  الفريزر ومنع التدوير.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 4. كيف يمكنني
+                  تسييح الخرطوم إذا تجمد داخل باب الفريزر؟
+                </h3>
+                <p>
+                  يُمكن فصل الثلاجة عن الكهرباء لعدة ساعات لإذابة الثلج، وزيادة
+                  درجة حرارة كابينة الفريزر درجة واحدة لمنع تكرار التجمد داخل
+                  أنبوب التغذية.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 7: نصائح الوقاية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>نصائح للحفاظ على سلامة شبكة خراطيم الفلتر ومبرد المياه</h2>
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-arrows-left-right-to-line"></i>
+                  <h3>ترك مسافة خلفية آمنة</h3>
+                </div>
+                <p>
+                  ترك مسافة لا تقل عن 10 سم بين خلفية الثلاجة والحائط لتجنب
+                  انثناء وانشعار خراطيم المياه.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-filter-circle-check"></i>
+                  <h3>استخدام الفلاتر الأصلية</h3>
+                </div>
+                <p>
+                  شراء وتثبيت فلاتر مياه أصلية وتجنب الأنواع المقلدة التي تسبب
+                  انخفاض الضغط وتلف الصمامات.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-gauge-high"></i>
+                  <h3>ضبط ضغط المياه الخارجي</h3>
+                </div>
+                <p>
+                  التأكد من أن ضغط مياه الحائط يتراوح بين 30 إلى 120 PSI لضمان
+                  عمل الصمام والأيس ميكر بكفاءة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تعاني من تسريب المياه أو ضعف الفلتر والدسبنسر وتحتاج لمساعدة؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن عبر الخط الساخن وسيقوم الفني المعتمد بزيارتك لفحص
+              وتغيير خراطيم المياه والفلتر المدمج بالمنزل فوراً.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>

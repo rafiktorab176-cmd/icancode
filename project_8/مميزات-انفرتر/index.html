@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>هل تقنية الإنفرتر توفر الكهرباء حقاً؟ | موسوعة الأعطال - المركز المعتمد</title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات خاصة بصفحة تقنية الإنفرتر ترشيد الكهرباء */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #0d6efd;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #198754;
+        font-weight: 700;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .step-card {
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+      .step-num {
+        width: 45px;
+        height: 45px;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 800;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+      }
+      .step-card h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .step-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .warning-box {
+        background: #fff3cd;
+        border: 1px solid #ffecb5;
+        border-right: 5px solid #ffc107;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #856404;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #664d03;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* شبكة كلمات البحث الرئيسية */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition: background 0.2s, color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .tip-card {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        text-align: right;
+      }
+      .tip-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .tip-card-header i {
+        font-size: 1.5rem;
+        color: #10b981;
+      }
+      .tip-card-header h3 {
+        font-size: 1.1rem;
+        color: #1e293b;
+        margin: 0;
+        font-weight: 700;
+      }
+      .tip-card p {
+        margin: 0;
+        font-size: 0.93rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* تنسيقات قسم الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/" class="active">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/" class="active"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-microchip"></i> دليل التقنيات والتوفير
+          </span>
+          <h1>هل تقنية الإنفرتر توفر الكهرباء حقاً؟ دليل فني ومقارنة شاملة</h1>
+          <p>
+            دليل فني مفصل يوضح كيفية عمل كومبروسر الإنفرتر الذكي بالثلاجات، ونسبة التوفير الحقيقية في الفاتورة مقارنة بالمواتير العادية، وأبرز المزايا والعيوب.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة ==================== -->
+            <h2>الإجابة المباشرة: نعم، تقنية الإنفرتر توفر الكهرباء بفعالية عالية!</h2>
+            <p>
+              تُعد **تقنية الإنفرتر (Inverter Technology)** من أهم الطفرات التكنولوجية في عالم الأجهزة المنزلية، وتوفر بالفعل ما بين **30% إلى 50% من استهلاك الطاقة الكهربائية** مقارنة بالثلاجات التقليدية ذات الموتور العادي. يكمن السر في أن المحرك العادي يعتمد على التبديل بين التشغيل الكامل بأقصى طاقته والإيقاف التام (On/Off)، بينما يعمل كومبروسر الإنفرتر **بسرعات متغيرة ذكية** تتعدل تلقائياً حسب حاجة الثلاجة للفيزيائيات الحرارية.
+            </p>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-piggy-bank"></i> نسبة التوفير الحقيقية:
+              </h4>
+              <p>
+                توفير ثلاجة الإنفرتر للكهرباء لا يعتمد فقط على قدرة الموتور، بل يلغي تماماً (شرارة البدء العالية - Inrush Current) التي يسحبها الموتور العادي في كل مرة يعيد فيها التشغيل، وهي المسئولة عن القفزات الكبيرة في فاتورة الطاقة!
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: مقارنة الإنفرتر والموتور العادي ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>المقارنة الفنية بين كومبروسر الإنفرتر والموتور العادي</h2>
+            <p>
+              لتوضيح الفرق الفني وكيف تتحقق عملية توفير الطاقة، إليك مقارنة شاملة بين النظامين:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-bolt"></i> 1. الموتور العادي (On / Off Compressor)
+                </h3>
+                <p>
+                  يعمل بأقصى سرعة طوال فترة تشغيله، وعندما تصل الثلاجة للبرودة المطلوبة يفصل تماماً. وعند ارتفاع الحرارة يعيد التشغيل بنسبة 100%، مما يسبب سحباً كهربائياً مفاجئاً وكبيراً وتذوباناً طفيفاً مستمراً للأطعمة.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-xmark" style="color: #dc3545;"></i> النتيجة: استهلاك طاقة مرتفع واهتزازات متكررة.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-gauge-high"></i> 2. كومبروسر الإنفرتر (Inverter Compressor)
+                </h3>
+                <p>
+                  يعمل باستمرار لكن بسرعات متغيرة (تتراوح بين 4 إلى 7 مستويات سرعة). عند فتح الباب أو وضع أطعمة جديدة يسرع الموتور تلقائياً، وعند استقرار البرودة يهبط لسرعة منخفضة جداً تحافظ على الحرارة بأدنى استهلاك.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check" style="color: #198754;"></i> النتيجة: توفير طاقة يصل إلى 50% وتبريد هادئ ومستقر.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: مزايا تقنية الإنفرتر ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أهم مزايا وفوائد ثلاجات الإنفرتر الإضافية</h2>
+            <p>
+              لا تقتصر فوائد تقنية الإنفرتر على توفير الكهرباء فقط، بل تمتد لتشمل المزايا الفنية التالية:
+            </p>
+
+            <div class="steps-grid">
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-volume-xmark"></i></div>
+                <h3>هدوء تام وتشغيل بدون صوت</h3>
+                <p>
+                  انعدام صوت "دبة" أو طقطقة تشغيل الموتور التقليدية؛ حيث يعمل موتور الإنفرتر بسلاسة فائقة ومستويات ضوضاء شبه معدومة.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <h3>عمر افتراضي أطول للمحرك</h3>
+                <p>
+                  عدم الإيقاف والبدء المتكرر يقلل من الاحتكاك الميكانيكي وتآكل الأجزاء الداخلية؛ لذا تمنح معظم الشركات ضماناً يصل إلى 10 سنوات عليه.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-snowflake"></i></div>
+                <h3>استقرار حرارة التبريد والجودة</h3>
+                <p>
+                  تذبذب درجة الحرارة في الإنفرتر لا يتعدى 0.5 درجة مئوية، مما يضمن حفظ الخضروات والفواكه طازجة لأطول فترة ممكنة.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>مقاومة تغيرات جهد الكهرباء</h3>
+                <p>
+                  تعتمد كارتة الإنفرتر الإلكترونية على تحويل التيار المتناوب (AC) إلى مستمر (DC)، مما يحمي الموتور من تذبذب الفولت المرتفع والمنخفض.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 4: العيوب والاعتبارات ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أمور يجب معرفتها قبل شراء ثلاجة إنفرتر (العيوب والتحديات)</h2>
+            <p>
+              رغم كفاءتها العالية، هناك بعض النقاط الواجب مراعاتها عند اقتناء ثلاجات الإنفرتر:
+            </p>
+
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-tag"></i>
+                  <h3>ارتفاع السعر الأولي للشراء</h3>
+                </div>
+                <p>
+                  تكون تكلفة الشراء الأولى لثلاجات الإنفرتر أعلى بنسبة 15-25% مقارنة بالثلاجات العادية، ولكن يتم استرداد هذا الفارق من توفير فاتورة الكهرباء خلال أول عامين.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-microchip"></i>
+                  <h3>تعقيد كارتة التحكم وتكلفة الصيانة</h3>
+                </div>
+                <p>
+                  تعتمد الثلاجة على كارتة إلكترونية معقدة (Inverter Board) لتنظيم السرعات؛ وتتطلب فنيين متخصصين ومعدات فحص متطورة عند حدوث أي عطل.
+                </p>
+              </div>
+
+              <div class="tip-card">
+                <div class="tip-card-header">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <h3>قطع الغيار المخصصة</h3>
+                </div>
+                <p>
+                  قطع غيار نظام الإنفرتر (مثل حساسات الحرارة والموتور والكارتة) تكون ذات تكلفة أعلى وتتطلب توفر قطع غيار أصلية معتمدة.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: كلمات البحث SEO ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة عن تقنية الإنفرتر بالثلاجات (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span style="font-weight: 800; color: #1e293b; font-size: 1.05rem">
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز المصطلحات الخاصة بالإنفرتر وتوفير الطاقة:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">هل تقنية الإنفرتر توفر الكهرباء</span>
+                <span class="seo-tag">الفرق بين ثلاجة الإنفرتر والعادية</span>
+                <span class="seo-tag">نسبة توفير الكهرباء في ثلاجات الإنفرتر</span>
+                <span class="seo-tag">كيف يعمل كومبروسر الإنفرتر Smart Inverter</span>
+                <span class="seo-tag">عيوب ومميزات الثلاجة الإنفرتر</span>
+                <span class="seo-tag">صيانة كارتة إنفرتر الثلاجة</span>
+                <span class="seo-tag">أفضل ماركات ثلاجات إنفرتر توشيبا وLG</span>
+                <span class="seo-tag">هل تستحق ثلاجة الإنفرتر الشراء</span>
+                <span class="seo-tag">حماية موتور الثلاجة الإنفرتر من الكهرباء</span>
+                <span class="seo-tag">صيانة أعطال موتور الإنفرتر بالمنزل</span>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول تقنية الإنفرتر وتوفير الكهرباء (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. كيف أعرف أن ثلاجتي تدعم تقنية الإنفرتر؟
+                </h3>
+                <p>
+                  تجد شارة أو ملصقاً رسمياً مدوناً عليه (Inverter / Digital Inverter / Smart Inverter) على الباب الخارجي أو بجوار بطاقة كفاءة الطاقة، وتكون الفئة المدوّنة غالباً (A+) أو أعلى.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. هل يعمل كومبروسر الإنفرتر 24 ساعة بدون توقف نهائياً؟
+                </h3>
+                <p>
+                  نعم، يعمل بشكل متواصل تقريباً ولكن بقدرة منخفضة جداً (قد تصل لـ 10% إلى 20% فقط من قوته) للحفاظ على درجة الحرارة، وهذا الاستمرار بالسرعة الضعيفة يستهلك كهرباء أقل بكثير من إعادة التشغيل المفاجئ.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. هل يمكن تعديل ثلاجة عادية وتحويلها بنظام الإنفرتر؟
+                </h3>
+                <p>
+                  لا، لا يمكن تحويل الثلاجة العادية لإنفرتر؛ لأن كومبروسر الإنفرتر يعمل ببروتوكولات ونوعية تيار (DC) ودائرة إلكترونية خاصة مختلفة تماماً عن الموتور العادي.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 4. هل تؤثر انقطاعات الكهرباء المتكررة على ثلاجات الإنفرتر؟
+                </h3>
+                <p>
+                  تتميز كارتة الإنفرتر بأنها مزودة بدوائر حماية إلكترونية تمتص التذبذبات الكهربائية بشكل أفضل من الموتور العادي، ومع ذلك يُفضل استخدام مأخذ كهربائي مزود بحماية من التغير المفاجئ للفولت.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تواجه عطلاً في ثلاجة الإنفرتر أو تحتاج لفحص كارتة التحكم والموتور؟
+            </h2>
+            <p style="color: #64748b">
+              تواصل معنا الآن عبر الخط الساخن وسيقوم المهندس المتخصص بزيارتك لفحص كارتة وكومبروسر الإنفرتر بأحدث أجهزة التشخيص بالمنزل فوراً.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن: 19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>
