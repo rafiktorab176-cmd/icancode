@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      مركز صيانة ثلاجات المنصورة | اطلب الخدمة بالمنزل 19580 - المركز المعتمد
+    </title>
+    <!-- Google Fonts - Cairo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/logo.png" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* تنسيقات عامة وتوسيع السكاشن */
+      .service-details-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 40px;
+      }
+      .service-details-content h2 {
+        color: #1e293b;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .service-details-content h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .service-details-content h3.section-sub-title {
+        font-size: 1.35rem;
+        color: #0f172a;
+        margin: 30px 0 15px;
+        font-weight: 700;
+      }
+      .service-details-content p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      /* بطاقات التكنولوجيا والأنواع */
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin: 25px 0;
+      }
+      .tech-card {
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: 20px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .tech-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.1);
+      }
+      .tech-card h4 {
+        color: #0d6efd;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* شبكة الأعطال والحلول */
+      .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 25px;
+      }
+      .reason-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 25px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+      }
+      .reason-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: #0d6efd;
+      }
+      .reason-card h3 {
+        font-size: 1.15rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .reason-card h3 i {
+        color: #0d6efd;
+      }
+      .reason-card p {
+        font-size: 0.95rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.6;
+      }
+      .solution-box {
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px dashed #cbd5e1;
+        font-size: 0.9rem;
+        color: #198754;
+        font-weight: 700;
+      }
+
+      .error-badge {
+        background: #e0f2fe;
+        color: #0369a1;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        margin-left: 8px;
+      }
+
+      /* جدول التشخيص السريع */
+      .table-responsive {
+        overflow-x: auto;
+        margin: 25px 0;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: right;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      .data-table th {
+        background-color: #0d6efd;
+        color: #ffffff;
+        padding: 14px 16px;
+        font-size: 0.98rem;
+        font-weight: 700;
+      }
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #475569;
+        font-size: 0.92rem;
+      }
+      .data-table tr:hover {
+        background-color: #f1f5f9;
+      }
+
+      /* صندوق النصائح والملاحظات */
+      .warning-box {
+        background: #e0f2fe;
+        border: 1px solid #bae6fd;
+        border-right: 5px solid #0284c7;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 30px 0;
+      }
+      .warning-box h4 {
+        color: #0369a1;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .warning-box p {
+        color: #0c4a6e;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      /* SEO Tags */
+      .seo-tags-wrapper {
+        background: #f1f5f9;
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+        border: 1px dashed #cbd5e1;
+      }
+      .seo-tags-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+      .seo-tag {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        color: #475569;
+        font-weight: 600;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .seo-tag:hover {
+        background: #0d6efd;
+        color: #fff;
+        border-color: #0d6efd;
+      }
+
+      /* الأسئلة الشائعة FAQ */
+      .faq-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .faq-item {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 20px;
+        transition: background 0.2s;
+      }
+      .faq-item h3 {
+        font-size: 1.05rem;
+        color: #1e293b;
+        margin-bottom: 8px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .faq-item h3 i {
+        color: #0d6efd;
+        font-size: 1.1rem;
+      }
+      .faq-item p {
+        font-size: 0.95rem;
+        color: #475569;
+        margin: 0;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Overlay Background -->
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a
+          href="../../index.html"
+          class="logo-box"
+          style="text-decoration: none"
+        >
+          <div class="logo-icon img-logo-container">
+            <img
+              src="../../assets/logo.png"
+              alt="شعار المركز المعتمد"
+              class="brand-logo-img"
+            />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">المركز المعتمد</span>
+            <span class="logo-subtitle">لصيانة جميع أنواع الثلاجات</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="nav-links">
+          <a href="../../index.html">الرئيسية</a>
+          <a href="../../من-نحن/">من نحن</a>
+          <a href="../../خدماتنا/">خدماتنا</a>
+          <a href="../../المحافظات/" class="active">المحافظات</a>
+          <a href="../../الماركات/">الماركات</a>
+          <a href="../../المدونة/">المدونة</a>
+          <a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a>
+          <a href="../../اتصل-بنا/">اتصل بنا</a>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="header-actions">
+          <a href="tel:19580" class="hotline-btn">
+            <i class="fa-solid fa-headset"></i>
+            <div class="hotline-info">
+              <span class="small-text">الخط الساخن</span>
+              <span class="phone-num">19580</span>
+            </div>
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="menuBtn"
+            class="menu-toggle-btn"
+            aria-label="قائمة الموبايل"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Side Menu Drawer -->
+      <aside id="mobileMenu" class="mobile-side-menu">
+        <div class="mobile-menu-header">
+          <div class="logo-box">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title">المركز المعتمد</span>
+          </div>
+          <button id="closeMenuBtn" class="close-menu-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="../../index.html"
+            ><i class="fa-solid fa-house"></i> الرئيسية</a
+          >
+          <a href="../../من-نحن/"
+            ><i class="fa-solid fa-calendar-check"></i> من نحن</a
+          >
+          <a href="../../خدماتنا/"
+            ><i class="fa-solid fa-screws-wrench"></i> خدماتنا</a
+          >
+          <a href="../../المحافظات/" class="active"
+            ><i class="fa-solid fa-location-dot"></i> المحافظات</a
+          >
+          <a href="../../الماركات/"
+            ><i class="fa-solid fa-tags"></i> الماركات</a
+          >
+          <a href="../../المدونة/"
+            ><i class="fa-solid fa-newspaper"></i> المدونة</a
+          >
+          <a href="../../موسوعة-الأعطال/"
+            ><i class="fa-solid fa-book-open-reader"></i> موسوعة الأعطال</a
+          >
+          <a href="../../اتصل-بنا/"
+            ><i class="fa-solid fa-envelope"></i> اتصل بنا</a
+          >
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="tel:19580" class="mobile-call-btn">
+            <i class="fa-solid fa-phone-volume"></i> اتصل بالخط الساخن: 19580
+          </a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية للمقالة -->
+    <main>
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container text-center">
+          <span class="hero-badge">
+            <i class="fa-solid fa-location-dot"></i> خدمة صيانة ثلاجات المنصورة
+          </span>
+          <h1>مركز صيانة ثلاجات المنصورة</h1>
+          <p>
+            دليل شامل وخدمة متخصصة لإصلاح وصيانة جميع أنواع الثلاجات العادية،
+            النوفروست، الديجيتال، والإنفرتر في مدينة المنصورة وضواحيها بأحدث
+            التقنيات وأفضل مهندسي الصيانة.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content Section -->
+      <section style="padding: 60px 0; background-color: #f8f9fa">
+        <div class="container">
+          <div class="service-details-content">
+            <!-- ==================== السكشن 1: المقدمة والتغطية ==================== -->
+            <h2>خدمات صيانة الثلاجات بالمنزل في المنصورة</h2>
+            <p>
+              تعتبر مدينة **المنصورة** ومحيطها (المشاية السفلى والعليا، حي
+              الجامعة، شارع قناة السويس، شارع الجلاء، حي المختلط، والطوريل)
+              عاصمة محافظة الدقهلية وأهم مراكزها التجارية والسكنية. يوفر
+              **المركز المعتمد** فريقاً فنيًا مجهزاً بالكامل لخدمة كافة الأحياء
+              والشوارع الرئيسية والفرعية لإصلاح أعطال الثلاجات فورياً بالمنزل
+              دون نقل الجهاز نهائياً.
+            </p>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fa-solid fa-lightbulb"></i> سرعة الخدمة والكشف الدقيق:
+              </h4>
+              <p>
+                نعتمد في فحص الثلاجات على أجهزة فحص الأعطال الرقمية (Digital
+                Diagnostics) لقياس أوم الحساسات وضغط الفريون وأمبير الكباس، مما
+                يضمن تحديد المشكلة بدقة وإصلاحها في نفس اليوم.
+              </p>
+            </div>
+
+            <!-- ==================== السكشن 2: أساسيات ودليل صيانة الثلاجات العامة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>
+              دليل صيانة الثلاجات وأنظمتها الحديثة (نوفروست، ديجيتال، وإنفرتر)
+            </h2>
+            <p>
+              تتنوع تكنولوجيا الثلاجات المنزلية الحديثة، وتتطلب كل تقنية أسلوب
+              فحص وصيانة مختلف لضمان حماية الجهاز والحفاظ على كفاءة التبريد:
+            </p>
+
+            <div class="tech-grid">
+              <div class="tech-card">
+                <h4>
+                  <i class="fa-solid fa-snowflake"></i> ثلاجات النوفروست
+                  (No-Frost)
+                </h4>
+                <p>
+                  تعتمد على دورة إذابة ثلج أوتوماتيكية تتكون من **السخان
+                  (Heater)**، **الفيوز الحراري (Thermal Fuse)**،
+                  و**الترموديسك**. يكمن عطلها الأشهر في تراكم الثلج خلف الظهر
+                  وتوقف التبريد بالكابينة السفلى.
+                </p>
+              </div>
+
+              <div class="tech-card">
+                <h4>
+                  <i class="fa-solid fa-microchip"></i> الثلاجات الديجيتال
+                  (Digital)
+                </h4>
+                <p>
+                  تدار بواسطة كارت إلكتروني رئيسي (PCB) وشاشة عرض وشبكة من
+                  **حساسات الحرارة (Sensors)**. تكشف الأعطال عبر رمزي كود
+                  الأخطاء (Error Codes) وتتطلب فحصاً رقمياً لقياس الإشارة
+                  الكهربائية.
+                </p>
+              </div>
+
+              <div class="tech-card">
+                <h4>
+                  <i class="fa-solid fa-bolt"></i> تكنولوجيا الإنفرتر (Inverter)
+                </h4>
+                <p>
+                  تستخدم كباسات متغير السرعة موفرة للطاقة. تحتاج إلى خبرة متقدمة
+                  في فحص كارت الإنفرتر والتأكد من استقرار الفولتية قبل تغيير أي
+                  مكون كهربائي.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 3: جدول تشخيص الأعطال بالداتا ==================== -->
+            <h3 class="section-sub-title">
+              جدول التشخيص السريع لأشهر الأعطال وسببها الفني
+            </h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>مظهر العطل</th>
+                    <th>السبب الفني المحتمل</th>
+                    <th>طريقة الكشف والفحص</th>
+                    <th>الإجراء الموصى به</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ضعف تبريد الكابينة السفلى مع تبريد الفريزر</td>
+                    <td>انسداد مجرى الهواء أو تلف سنسر/سخان الإذابة</td>
+                    <td>قياس مقاومات السخان وحساس الديبروست بالأوميتر</td>
+                    <td>استبدال القطعة التالفة وإذابة الثلج المتراكم</td>
+                  </tr>
+                  <tr>
+                    <td>الموتور يعمل باستمرار دون فصل</td>
+                    <td>تسريب فريون أو تلف كاوتش الباب أو الترموستات</td>
+                    <td>قياس ضغط الفريون وفحص تسريب الباب بالعين</td>
+                    <td>معالجة التسريب وشحن فريون أصلي أو تغيير الكاوتش</td>
+                  </tr>
+                  <tr>
+                    <td>الثلاجة لا تعمل نهائياً والشاشة مطفأة</td>
+                    <td>تلف كارت التغذية الرئيسي أو محول الفولت</td>
+                    <td>قياس فولتية دخول الكهرباء للكارت والفيوز الرئيسي</td>
+                    <td>إصلاح كارت التغذية أو استبداله بآخر أصلي</td>
+                  </tr>
+                  <tr>
+                    <td>صوت تكتكة متكرر من الموتور مع توقفه</td>
+                    <td>تلف مجموعة التجميع (الريليه والاوفرلود) أو الكباس</td>
+                    <td>قياس أمبير السحب عند بدء التشغيل وتست الأوفرلود</td>
+                    <td>تغيير مجموعة البدء (Relay & Overload) بأخرى أصلية</td>
+                  </tr>
+                  <tr>
+                    <td>تجمع مياه أسفل أرفف الثلاجة</td>
+                    <td>انسداد فتحة وخرطوم تصريف مياه الإذابة الخلفي</td>
+                    <td>فحص ميزان الثلاجة وفتحة التصريف فوق الموتور</td>
+                    <td>تسليك خرطوم الصرف وتنظيف حوض التبخير</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ==================== السكشن 4: الأعطال الميدانية في المنصورة ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>أشهر الخدمات والأعطال التي نصلحها في المنصورة</h2>
+            <p>
+              نقدم حلولاً جذرية لكافة المشاكل الميكانيكية والكهربائية بالمنزل:
+            </p>
+
+            <div class="reasons-grid">
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-snowflake"></i>
+                  <span class="error-badge">التبريد</span> 1. شحن الفريون وإصلاح
+                  التسريب
+                </h3>
+                <p>
+                  معالجة تسريب غاز التبريد في مواسير الألومنيوم أو النحاس، ضغط
+                  الدائرة بالنيتروجين، وشحن فريون R134a أو R600a الأصلي بالوزن
+                  الموصى به.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> الحل: كشف تسريب فوري وشحن
+                  الفريون الأصلي بالمنزل.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-microchip"></i>
+                  <span class="error-badge">الكروت</span> 2. إصلاح اللوحات
+                  الإلكترونية والشاشات
+                </h3>
+                <p>
+                  معالجة تلف مكثفات ومحولات الكارت الإلكتروني، برمجة الشاشات
+                  الديجيتال، وحل مشكلة ظهور رموز الأكواد المؤقتة والدائمة.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> الحل: صيانة الكارت الرئيسي
+                  وإعادة ضبط المصنع (Reset).
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <span class="error-badge">مجموعة البدء</span> 3. تغيير الكباس
+                  والريليه
+                </h3>
+                <p>
+                  استبدال موتور الثلاجة (الكباس) التالف بآخر جديد أصلي مع تغيير
+                  المجموعات الكهربائية لحماية الموتور من ارتفاع الأمبير.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> الحل: تركيب كباس جديد أصلية
+                  مع ضمان كتابي معتمد.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-fan"></i>
+                  <span class="error-badge">المراوح</span> 4. تغيير مراوح توزيع
+                  الهواء
+                </h3>
+                <p>
+                  استبدال موتور مروحة الفريزر أو الكابينة السفلى عند توقفها عن
+                  العمل أو إصداره أصوات احتكاك مزعجة أثناء الدوران.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> الحل: تركيب مروحة جديدة
+                  صامتة مطابقة لمواصفات الشركة.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-door-closed"></i>
+                  <span class="error-badge">الجوان</span> 5. تركيب كاوتش الأبواب
+                  المغناطيسي
+                </h3>
+                <p>
+                  معالجة تسريب الهواء البارد الناتج عن تشقق كاوتش الباب، مما
+                  يتسبب في إجهاد الموتور وارتفاع استهلاك فاتورة الكهرباء.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> الحل: تركيب إطار مغناطيسي
+                  جديد يضمن الإغلاق التام.
+                </div>
+              </div>
+
+              <div class="reason-card">
+                <h3>
+                  <i class="fa-solid fa-temperature-arrow-down"></i>
+                  <span class="error-badge">الترموستات</span> 6. ضبط وتغيير
+                  الترموستات
+                </h3>
+                <p>
+                  تغيير ترموستات الثلاجة العادية والنوفروست لضبط درجات الحرارة
+                  بدقة وضمان فصل الكباس واشتغاله بانتظام.
+                </p>
+                <div class="solution-box">
+                  <i class="fa-solid fa-check"></i> الحل: معايرة درجة التبريد
+                  وتركيب ترموستات أصلي.
+                </div>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 5: نصائح إرشادات وقائية ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>5 نصائح ذهبية للحفاظ على عمر الثلاجة وتوفير الكهرباء</h2>
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-solid fa-shield-halved"></i> 1. ترك مسافة تهوية
+                  خلفية كافية
+                </h3>
+                <p>
+                  احرص على ترك مسافة لا تقل عن 10-15 سم بين ظهر الثلاجة والحائط
+                  لضمان تهوية المكثف (الشبكة) والتخلص من الحرارة الزائدة.
+                </p>
+              </div>
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-solid fa-plug-circle-bolt"></i> 2. استقرار التيار
+                  الكهربائي
+                </h3>
+                <p>
+                  عند انقطاع التيار الكهربائي، يفضل فصل فيشة الثلاجة وعدم إعادة
+                  توصيلها إلا بعد مرور 5 دقائق من عودة التيار لتجنب احتراق
+                  مجموعة البدء.
+                </p>
+              </div>
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-solid fa-broom"></i> 3. تنظيف حوض الصرف والشبكة
+                  الخلفية
+                </h3>
+                <p>
+                  قم بتنظيف شبكة التكثيف الخلفية وحوض المياه فوق الموتور كل 6
+                  أشهر من الأتربة لرفع كفاءة التبريد وتقليل أمبير الموتور.
+                </p>
+              </div>
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-solid fa-box-open"></i> 4. عدم التكدس الشديد
+                  للأطعمة
+                </h3>
+                <p>
+                  تجنب سد فتحات توزيع الهواء البارد داخل الفريزر والكابينة
+                  بالأطعمة والمأكولات لضمان دوران الهواء بشكل متناسق.
+                </p>
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 6: SEO Tags ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>كلمات البحث الشائعة لصيانة ثلاجات المنصورة (SEO Tags)</h2>
+            <div class="seo-tags-wrapper">
+              <span
+                style="font-weight: 800; color: #1e293b; font-size: 1.05rem"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> أبرز مصطلحات البحث
+                في المنصورة:
+              </span>
+              <div class="seo-tags-grid">
+                <span class="seo-tag">مركز صيانة ثلاجات المنصورة الدقهلية</span>
+                <span class="seo-tag">تصليح ثلاجات المشاية وحي الجامعة</span>
+                <span class="seo-tag">رقم صيانة توشيبا المنصورة 19580</span>
+                <span class="seo-tag"
+                  >صيانة ثلاجات شارب وسامسونج قناة السويس والطوريل</span
+                >
+                <span class="seo-tag"
+                  >فني شحن فريون ثلاجة بالمنزل المنصورة</span
+                >
+                <span class="seo-tag">تغيير كاوتش وباب الثلاجة المنصورة</span>
+                <span class="seo-tag">إصلاح كارت ثلاجة ديجيتال المنصورة</span>
+                <span class="seo-tag"
+                  >صيانة ثلاجات ال جي ونوفروست المنصورة</span
+                >
+              </div>
+            </div>
+
+            <!-- ==================== السكشن 7: الأسئلة الشائعة FAQ ==================== -->
+            <hr
+              style="
+                margin: 40px 0;
+                border: none;
+                border-top: 1px solid #e2e8f0;
+              "
+            />
+
+            <h2>الأسئلة الشائعة حول صيانة الثلاجات بـ المنصورة (FAQ)</h2>
+
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 1. ما هي سرعة
+                  الوصول إلى العميل في مناطق المنصورة المختلفة؟
+                </h3>
+                <p>
+                  نغطي كافة أحياء المنصورة (حي الجامعة، المشاية، قناة السويس،
+                  شارع الجلاء، والطوريل) من خلال سيارات صيانة متمركزة تضمن
+                  الوصول خلال ساعات قليلة من التواصل عبر الخط الساخن.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 2. هل تشمل الصيانة
+                  ضماناً رسمياً ومكتوباً؟
+                </h3>
+                <p>
+                  نعم، يحصل العميل على فاتورة وشهادة ضمان معتمدة ومختومة من
+                  المركز تسري على قطع الغيار المستبدلة وأعمال الصيانة التي تم
+                  تنفيذها.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  <i class="fa-circle-question fa-solid"></i> 3. هل تعتمدون على
+                  قطع غيار أصلية للماركات العالمية؟
+                </h3>
+                <p>
+                  نعم، نستخدم قطع غيار أصلية 100% مخصصة لماركات توشيبا، شارب،
+                  سامسونج، إل جي (LG)، كريازي، وإيديال زانوسي لضمان استعادة
+                  الأداء الأصلي للجهاز.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Box Inside Page -->
+          <div
+            class="about-cta-section text-center"
+            style="
+              background: #fff;
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+              padding: 40px;
+            "
+          >
+            <h2 style="color: #1e293b">
+              تعاني من عطل في ثلاجتك بـ المنصورة وتريد صيانة منزلية فورية؟
+            </h2>
+            <p style="color: #64748b">
+              اتصل بنا الآن عبر الخط الساخن ليصلك الفني المختص بـ المنصورة
+              لإعادة ثلاجتك للعمل كأنها جديدة مع ضمان معتمد.
+            </p>
+            <div class="hero-buttons style-center" style="margin-top: 20px">
+              <a
+                href="tel:19580"
+                class="btn btn-warning"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-solid fa-headset"></i> اطلب الخدمة بالخط الساخن:
+                19580
+              </a>
+              <a
+                href="https://wa.me/201289966660"
+                target="_blank"
+                class="btn btn-success"
+                style="padding: 12px 25px; font-weight: 700"
+              >
+                <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <!-- العمود الأول -->
+        <div class="footer-col">
+          <div class="logo-box" style="margin-bottom: 1rem">
+            <div class="logo-icon img-logo-container">
+              <img
+                src="../../assets/logo.png"
+                alt="شعار المركز المعتمد"
+                class="brand-logo-img"
+              />
+            </div>
+            <span class="logo-title" style="color: white">المركز المعتمد</span>
+          </div>
+          <p>
+            المركز المتخصص الأول في صيانة وإصلاح الثلاجات بجميع ماركاتها
+            وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات ومناطق مصر.
+          </p>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-headset"></i> الخط الساخن:
+            </span>
+            <a href="tel:19580" class="footer-hotline-box">19580</a>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
+            </span>
+            <div class="footer-landlines">
+              <a href="tel:0403456555" class="landline-num">0403456555</a>
+              <span class="separator">-</span>
+              <a href="tel:0403456137" class="landline-num">0403456137</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-box">
+            <span class="footer-contact-label">
+              <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
+            </span>
+            <a
+              href="https://wa.me/201289966660"
+              target="_blank"
+              class="footer-wa-box"
+              >01289966660</a
+            >
+            <div class="footer-contact-box" style="margin-top: 15px">
+              <span class="footer-contact-label">
+                <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
+              </span>
+              <a
+                href="mailto:info@elmoatamad-group.com"
+                class="footer-email-box"
+                >info@elmoatamad-group.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="footer-col">
+          <h4>روابط الموقع</h4>
+          <ul>
+            <li><a href="../../index.html">الرئيسية</a></li>
+            <li><a href="../../من-نحن/">من نحن</a></li>
+            <li><a href="../../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../../المدونة/">المدونة</a></li>
+            <li><a href="../../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
+            <li><a href="../../اتصل-بنا/">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث -->
+        <div class="footer-col">
+          <h4>الماركات المعتمدة</h4>
+          <ul>
+            <li><a href="../../توشيبا/">صيانة ثلاجات توشيبا</a></li>
+            <li><a href="../../شارب/">صيانة ثلاجات شارب</a></li>
+            <li><a href="../../سامسونج/">صيانة ثلاجات سامسونج</a></li>
+            <li><a href="../../إل-جي/">صيانة ثلاجات إل جي (LG)</a></li>
+            <li><a href="../../كريازي/">صيانة ثلاجات كريازي</a></li>
+            <li><a href="../../إيديال-زانوسي/">صيانة إيديال زانوسي</a></li>
+          </ul>
+        </div>
+
+        <!-- العمود الرابع -->
+        <div class="footer-col">
+          <h4>محافظات التغطية</h4>
+          <ul>
+            <li><a href="../../القاهرة/">صيانة ثلاجات القاهرة</a></li>
+            <li><a href="../../الجيزة/">صيانة ثلاجات الجيزة</a></li>
+            <li><a href="../../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
+            <li><a href="../../الغربية/">صيانة ثلاجات الغربية</a></li>
+            <li><a href="../../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../../الشرقية/">صيانة ثلاجات الشرقية</a></li>
+            <li><a href="../../القليوبية/">صيانة ثلاجات القليوبية</a></li>
+            <li><a href="../../المنوفية/">صيانة ثلاجات المنوفية</a></li>
+            <li><a href="../../البحيرة/">صيانة ثلاجات البحيرة</a></li>
+            <li><a href="../../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
+            <li><a href="../../دمياط/">صيانة ثلاجات دمياط</a></li>
+            <li><a href="../../دمياط-الجديدة/">صيانة ثلاجات دمياط ج</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          جميع الحقوق محفوظة ©️ <span id="year"></span> المركز المعتمد لصيانة
+          الثلاجات
+        </p>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="../../script.js"></script>
+  </body>
+</html>
