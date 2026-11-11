@@ -17,6 +17,60 @@
     />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- كود السكيما المعتمد (JSON-LD) للـ SEO والشركة والمراجعات -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://refrigerators-eg.com/#organization",
+            "name": "المركز المعتمد لصيانة الثلاجات",
+            "url": "https://refrigerators-eg.com/",
+            "logo": "https://refrigerators-eg.com/assets/logo.png",
+            "image": "https://refrigerators-eg.com/assets/logo.png",
+            "telephone": "19580",
+            "email": "info@elmoatamad-group.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "طنطا",
+              "addressRegion": "الغربية",
+              "addressCountry": "EG"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "19580",
+              "contactType": "customer service",
+              "areaServed": "EG",
+              "availableLanguage": "Arabic"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://refrigerators-eg.com/#website",
+            "url": "https://refrigerators-eg.com/",
+            "name": "المركز المعتمد لصيانة الثلاجات",
+            "inLanguage": "ar",
+            "publisher": {
+              "@id": "https://refrigerators-eg.com/#organization"
+            }
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "https://refrigerators-eg.com/من-نحن/#webpage",
+            "url": "https://refrigerators-eg.com/من-نحن/",
+            "name": "من نحن | المركز المعتمد لصيانة الثلاجات",
+            "isPartOf": {
+              "@id": "https://refrigerators-eg.com/#website"
+            },
+            "about": {
+              "@id": "https://refrigerators-eg.com/#organization"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Mobile Menu Overlay Background -->
@@ -25,7 +79,7 @@
     <!-- Header / Navbar -->
     <header class="navbar">
       <div class="container nav-container">
-        <!-- Logo (تم استبدال الأيقونة بصورة) -->
+        <!-- Logo -->
         <a href="../index.html" class="logo-box" style="text-decoration: none">
           <div class="logo-icon img-logo-container">
             <img
@@ -73,7 +127,7 @@
         </div>
       </div>
 
-      <!-- Mobile Side Menu Drawer (من اليمين) -->
+      <!-- Mobile Side Menu Drawer -->
       <aside id="mobileMenu" class="mobile-side-menu">
         <div class="mobile-menu-header">
           <div class="logo-box">
@@ -184,7 +238,7 @@
       </div>
     </section>
 
-    <!-- 3. Stats Section (أرقام وإحصائيات) -->
+    <!-- 3. Stats Section -->
     <section class="stats-section">
       <div class="container stats-grid">
         <div class="stat-card">
@@ -210,7 +264,7 @@
       </div>
     </section>
 
-    <!-- 4. Why Choose Us (لماذا تختارنا) -->
+    <!-- 4. Why Choose Us -->
     <section class="why-section">
       <div class="container">
         <div class="section-title">
@@ -264,7 +318,7 @@
       </div>
     </section>
 
-    <!-- 7. Testimonials Section (آراء العملاء في صفحة من نحن) -->
+    <!-- 7. Testimonials Section -->
     <section class="testimonials-section">
       <div class="container">
         <div class="section-title">
@@ -378,7 +432,7 @@
       </div>
     </section>
 
-    <!-- 5. Guarantees & Values (التزاماتنا وضمانات العمل) -->
+    <!-- 5. Guarantees & Values -->
     <section class="guarantee-section">
       <div class="container guarantee-box">
         <div class="g-text">
@@ -401,7 +455,7 @@
       </div>
     </section>
 
-    <!-- 6. CTA Section (دعوة للاتصال) -->
+    <!-- 6. CTA Section -->
     <section class="about-cta-section text-center">
       <div class="container">
         <h2>هل واجهت عطلاً مفاجئاً في ثلاجتك؟</h2>
@@ -421,10 +475,10 @@
       </div>
     </section>
 
-    <!-- Footer (محدث بالكامل ليشمل كل المحافظات والماركات والروابط بالعربي) -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container footer-grid">
-        <!-- العمود الأول: التعريف بالموقع، البريد، ووسائل التواصل -->
+        <!-- العمود الأول -->
         <div class="footer-col">
           <div class="logo-box" style="margin-bottom: 1rem">
             <div class="logo-icon img-logo-container">
@@ -441,7 +495,6 @@
             وأحجامها بالمنزل وبأعلى معايير الجودة في كافة محافظات مصر.
           </p>
 
-          <!-- الخط الساخن -->
           <div class="footer-contact-box">
             <span class="footer-contact-label">
               <i class="fa-solid fa-headset"></i> الخط الساخن:
@@ -449,7 +502,6 @@
             <a href="tel:19580" class="footer-hotline-box">19580</a>
           </div>
 
-          <!-- الأرقام الأرضية -->
           <div class="footer-contact-box">
             <span class="footer-contact-label">
               <i class="fa-solid fa-phone"></i> الأرقام الأرضية / المعتمدة:
@@ -461,7 +513,6 @@
             </div>
           </div>
 
-          <!-- الواتساب المباشر -->
           <div class="footer-contact-box">
             <span class="footer-contact-label">
               <i class="fa-brands fa-whatsapp"></i> الواتساب المباشر:
@@ -472,7 +523,6 @@
               class="footer-wa-box"
               >01289966660</a
             >
-            <!-- البريد الإلكتروني -->
             <div class="footer-contact-box" style="margin-top: 15px">
               <span class="footer-contact-label">
                 <i class="fa-solid fa-envelope"></i> البريد الإلكتروني:
@@ -486,20 +536,20 @@
           </div>
         </div>
 
-        <!-- العمود الثاني: روابط سريعة وأقسام الموقع -->
+        <!-- العمود الثاني -->
         <div class="footer-col">
           <h4>روابط الموقع</h4>
           <ul>
             <li><a href="../index.html">الرئيسية</a></li>
-            <li><a href="../من-نحن/"> من نحن</a></li>
-            <li><a href="../خدماتنا/">خدماتنا </a></li>
-            <li><a href="../المدونة/">المدونة </a></li>
+            <li><a href="../من-نحن/">من نحن</a></li>
+            <li><a href="../خدماتنا/">خدماتنا</a></li>
+            <li><a href="../المدونة/">المدونة</a></li>
             <li><a href="../موسوعة-الأعطال/">موسوعة الأعطال</a></li>
             <li><a href="../اتصل-بنا/">اتصل بنا</a></li>
           </ul>
         </div>
 
-        <!-- العمود الثالث: جميع الماركات المعتمدة -->
+        <!-- العمود الثالث -->
         <div class="footer-col">
           <h4>الماركات المعتمدة</h4>
           <ul>
@@ -512,7 +562,7 @@
           </ul>
         </div>
 
-        <!-- العمود الرابع: جميع المحافظات المغطاة -->
+        <!-- العمود الرابع -->
         <div class="footer-col">
           <h4>محافظات التغطية</h4>
           <ul>
@@ -520,14 +570,14 @@
             <li><a href="../الجيزة/">صيانة ثلاجات الجيزة</a></li>
             <li><a href="../الإسكندرية/">صيانة ثلاجات الإسكندرية</a></li>
             <li><a href="../الغربية/">صيانة ثلاجات الغربية</a></li>
-            <li><a href="..//الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
+            <li><a href="../الدقهلية/">صيانة ثلاجات الدقهلية</a></li>
             <li><a href="../الشرقية/">صيانة ثلاجات الشرقية</a></li>
             <li><a href="../القليوبية/">صيانة ثلاجات القليوبية</a></li>
             <li><a href="../المنوفية/">صيانة ثلاجات المنوفية</a></li>
             <li><a href="../البحيرة/">صيانة ثلاجات البحيرة</a></li>
             <li><a href="../كفر-الشيخ/">صيانة كفر الشيخ</a></li>
             <li><a href="../دمياط/">صيانة ثلاجات دمياط</a></li>
-            <li><a href="../دمياط-الجديدة/"> صيانة تلاجات دمياط ج</a></li>
+            <li><a href="../دمياط-الجديدة/">صيانة ثلاجات دمياط الجديدة</a></li>
           </ul>
         </div>
       </div>
